@@ -53,6 +53,8 @@ order: 3
 - Do people seek my input for non-trivial technical decisions?
 - Do I proactively prevent problems rather than react to them?
 - Am I improving the system beyond my assigned scope?
+- Have I designed a solution that others built on top of without needing my involvement?
+- Do I identify technical debt before it becomes a crisis?
 
 ---
 
@@ -78,6 +80,8 @@ order: 3
 - Do stakeholders come to me for thinking or only for updates?
 - Do discussions become clearer because I'm involved?
 - Can I handle disagreement without escalation?
+- Have I reframed a vague ask into a clear problem statement that the team acted on?
+- Do I push back on misaligned requirements, or accept them to avoid conflict?
 
 ---
 
@@ -98,6 +102,9 @@ order: 3
 
 - Do I improve how work flows through the system?
 - Do I make trade-offs visible and explicit?
+- Have I resolved a cross-team dependency without escalating it?
+- Do I anticipate delivery risks before they materialise?
+- Has the team's predictability improved because of changes I introduced?
 
 ---
 
@@ -116,6 +123,9 @@ order: 3
 
 - Have people grown because of my support?
 - Do I invest in others' growth proactively?
+- Can I point to someone whose judgment improved because of my mentoring?
+- Do I give feedback that changes behaviour, not just feedback that's heard?
+- Am I helping people develop independence, or creating dependence on me?
 
 ---
 
@@ -133,3 +143,6 @@ order: 3
 
 - Do discussions move forward because of me?
 - Can I handle tough conversations calmly?
+- Do I facilitate meetings that end with clear decisions and next steps?
+- Do people seek me out to help resolve disagreements?
+- Can I influence a decision without relying on authority or escalation?

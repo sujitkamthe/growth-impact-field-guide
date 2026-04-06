@@ -54,6 +54,8 @@ order: 2
 - Would someone unfamiliar with the code understand it easily?
 - Do I improve code quality even when not explicitly asked?
 - Can I explain why I chose this implementation?
+- Can I implement a full story end-to-end without needing someone to unblock me?
+- Do I catch my own bugs before they reach code review?
 
 ---
 
@@ -76,6 +78,8 @@ order: 2
 - Do I challenge unclear asks respectfully?
 - Can I articulate the business problem, not just the ticket?
 - Do I surface ambiguity early?
+- Do I suggest alternatives when requirements seem off, or just implement what's asked?
+- Can I explain the trade-offs behind my recommended approach?
 
 ---
 
@@ -97,6 +101,9 @@ order: 2
 
 - Can others depend on my commitments?
 - Do I manage my work or react to it?
+- Do I flag risks before they become blockers?
+- Are my estimates reasonably accurate, or do I consistently over- or under-commit?
+- Do I adjust my plan when things change, or wait for someone else to redirect me?
 
 ---
 
@@ -114,6 +121,9 @@ order: 2
 
 - Do others feel safe asking me for help?
 - Do I invest time in helping others learn?
+- When I help someone, do I explain the reasoning or just give them the answer?
+- Do newer teammates come to me for guidance without being directed to?
+- Have I helped someone avoid a mistake by sharing what I learned?
 
 ---
 
@@ -131,3 +141,6 @@ order: 2
 
 - Can I explain my thinking to non-technical audiences?
 - Do my messages reduce confusion?
+- Do I write documentation that others actually use?
+- Do I proactively share progress, or do people have to ask me?
+- When I disagree, can I articulate my position without creating friction?

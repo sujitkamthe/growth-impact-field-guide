@@ -10,6 +10,8 @@ This is a shared vocabulary for talking about growth at Sahaj. It describes **ho
 
 We intentionally do not use formal titles or grades. This guide exists to create **clarity without hierarchy**, to make growth paths visible, and to support honest conversations about expectations and feedback.
 
+<!-- explore-cards -->
+
 ## Growth Is Self-Directed
 
 Sahaj is an open field. You choose which direction to go, what skills to build, and how quickly to build them, based on your choices and the opportunities you prioritize.
@@ -28,7 +30,7 @@ This guide supports conversations, not conclusions. Use it when:
 - **Giving and receiving feedback**: Reference capability areas to make feedback specific and actionable.
 - **Reflecting on growth**: Understand where your impact shows up and where gaps might exist.
 
-This is **not a checklist**. Expectations increase in depth and scope, not simply in quantity of work.
+**This is not a checklist.** Expectations increase in depth and scope, not simply in quantity of work. Growth doesn't mean doing more of the same things. It means the nature of your impact changes. An Explorer completing ten tasks well is not demonstrating Artisan-level impact. An Artisan delivering flawlessly on their own is not demonstrating Catalyst-level impact. Each stage represents a shift in what you're trusted to own, how far your influence reaches, and whether your impact persists without your direct involvement.
 
 ### Setting Expectations Comes First
 
@@ -41,6 +43,16 @@ This is a conversation between you and your teammates. Use this guide as a refer
 Expectations may differ from the guide based on your team's context. Some areas may need more depth, others less. What matters is that expectations are **explicit and agreed**, not assumed.
 
 If expectations were never made explicit, that's a gap to address first. Implicit expectations cause trouble: during feedback, during self-assessment, and during team check.
+
+### Stretch Expectations Are Part of Growth
+
+Sometimes expectations are set ahead of where someone currently operates. This is deliberate.
+
+If someone has been in the organisation or on a project for a significant period and is still operating at the same persona level, it's reasonable to set expectations at the next level. This isn't a criticism of their current work. It's a statement of belief in what they're capable of, and what the team needs from them.
+
+> "You've been delivering well as an Artisan for a while now. We'd like to set Catalyst-level expectations for the next cycle: shaping solutions, not just building them. Let's talk about what that looks like and where you'll need support."
+
+Expectations are based on what the team needs and what the person can grow into. Setting stretch expectations should feel like an investment, not a threat. If the conversation feels punitive, the framing needs work.
 
 ### The Flow
 
@@ -89,12 +101,10 @@ In a culture with open conversations and open salaries, expectations must be exp
 
 <!-- key-truths -->
 
-- Delivery-only excellence has a **growth ceiling**
-- All five capabilities matter; **Consulting is where team check is hardest** (everyone thinks they consult; few actually do)
-- Seniority is demonstrated by **sustained impact**, not effort
-- You are not expected to excel in everything at once
-- Growth is about expanding impact across capabilities over time
-- Self-assessment is about **processing feedback**, not claiming a level
-- **Strong Technical Delivery is mandatory but insufficient** for long-term growth
-
-<!-- explore-cards -->
+- **Delivery-only excellence has a growth ceiling.** You can be the best coder on the team and still plateau. Beyond a point, growth comes from shaping solutions, enabling others, and influencing outcomes, not from writing more or better code alone.
+- **All five capabilities matter; Consulting is where team check is hardest.** Everyone thinks they consult well. Few actually do. Consulting means removing ambiguity, challenging assumptions, and helping stakeholders make better decisions. Doing what's asked without questioning unclear requirements is not consulting.
+- **Seniority is demonstrated by sustained impact, not effort.** Working long hours, being busy, or being involved in many things does not equal senior impact. What matters is whether your contributions are consistent, durable, and recognised by others over time.
+- **You are not expected to excel in everything at once.** Growth is uneven. You may be strong in Technical Delivery but still developing in Communication. That's normal. What matters is awareness of where you are and intentional progress over time.
+- **Growth is about expanding impact across capabilities over time.** Early on, Technical Delivery dominates. As you grow, Consulting, Mentorship, Communication, and Delivery Excellence become increasingly important. Ignoring them creates blind spots that limit your trajectory.
+- **Self-assessment is about processing feedback, not claiming a level.** The goal is to show that you've listened, reflected, and understood what others have observed about your work. It is not a case to argue or a level to claim.
+- **Strong Technical Delivery is mandatory but insufficient for long-term growth.** Technical skill is the foundation. Without it, nothing else stands. But it is table stakes at every stage. What differentiates growth is what you build on top of that foundation.

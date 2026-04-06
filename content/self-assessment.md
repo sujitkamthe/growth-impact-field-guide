@@ -1,5 +1,5 @@
 ---
-layout: markdown-page
+layout: self-assessment
 title: How to Do Your Self-Assessment
 ---
 
@@ -76,6 +76,10 @@ You're rating against what was agreed with your team, not against a generic pers
 - Did I raise the bar, not just meet it?
 - Would this area weaken noticeably if I stepped away?
 
+**A note on Exceeds:** Exceeding expectations at your current persona level is a genuinely positive outcome. Don't skip over it or treat it as merely a stepping stone. It means you delivered more than what was agreed, within the scope that was set. Exceeds at Artisan is not the same as Meets at Catalyst. They describe different things. One is outstanding performance within your current scope. The other is consistent performance at a broader scope. If you're exceeding expectations, that's often a signal for a growth conversation about what comes next, but you should get the recognition for what you've achieved.
+
+<!-- calibration-insert -->
+
 ## Step 4: Summarize Your Understanding
 
 For each area, briefly describe:
@@ -100,10 +104,11 @@ This feedback counts. Don't omit it just because the work lacked drama. Reflecti
 Your expectations likely span multiple capability areas. Check for patterns.
 
 - Are you consistently meeting expectations across areas, or strong in some and weak in others?
-- Persistent gaps signal a ceiling, regardless of strengths elsewhere
-- Exceeding in one area doesn't compensate for being below in another
+- Persistent gaps don't erase your strengths, but they create friction that gets harder to carry as scope expands
+- Exceeding in one area is valuable, but it doesn't remove the need to address areas where you're below expectations
+- A gap is a growth area to name and work on, not a verdict that defines your level
 
-If you notice imbalance, name it. It's useful information for the team check.
+If you notice imbalance, name it. It's useful information for the team check. Saying "I know Consulting is a gap and here's what I'm doing about it" is far more productive than hoping no one notices.
 
 ## Step 7: Share and Calibrate
 

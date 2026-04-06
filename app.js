@@ -364,6 +364,11 @@
         // Render content if not already done
         if (targetPage.innerHTML.trim() === '') {
             await renderPage(pageId, targetPage);
+            // Add layout-specific class for CSS scoping
+            const pageInfo = manifest.pages[pageId];
+            if (pageInfo?.layout) {
+                targetPage.classList.add(pageInfo.layout + '-page');
+            }
         }
 
         targetPage.classList.add('active');
@@ -400,6 +405,7 @@
         'persona-detail': renderPersonaDetailLayout,
         'capability-detail': renderCapabilityDetailLayout,
         'markdown-page': renderMarkdownPageLayout,
+        'self-assessment': renderSelfAssessmentLayout,
         'quick-reference': renderQuickReferenceLayout
     };
 
@@ -443,14 +449,13 @@
                 case 'usage':
                     html += renderUsageSection(section);
                     break;
+                case 'explore-cards':
+                    html += renderGenericSection(section);
+                    html += renderExploreCards();
+                    break;
                 default:
                     html += renderGenericSection(section);
             }
-        }
-
-        // Check for explore-cards annotation (standalone, not tied to a section)
-        if (content.body.includes('<!-- explore-cards -->')) {
-            html += renderExploreCards();
         }
 
         html += `</div>`;
@@ -871,6 +876,172 @@
             <div class="container ${cssClass}">
                 <h1>${content.title}</h1>
                 ${parseMarkdownToHtml(content.body)}
+            </div>
+        `;
+    }
+
+    async function renderSelfAssessmentLayout(content, container) {
+        const cssClass = slugify(content.title) + '-page';
+
+        // Split body at the calibration insert marker
+        const markerIndex = content.body.indexOf('<!-- calibration-insert -->');
+        let beforeMarker, afterMarker;
+        if (markerIndex !== -1) {
+            beforeMarker = content.body.substring(0, markerIndex);
+            afterMarker = content.body.substring(markerIndex + '<!-- calibration-insert -->'.length);
+        } else {
+            beforeMarker = content.body;
+            afterMarker = '';
+        }
+
+        // Load calibration examples
+        const calibrationContent = await loadContent('calibration-examples');
+
+        let html = `
+            <div class="container ${cssClass}">
+                <h1>${content.title}</h1>
+                ${parseMarkdownToHtml(beforeMarker)}
+        `;
+
+        // Insert calibration examples section
+        if (calibrationContent) {
+            html += renderCalibrationExamples(calibrationContent);
+        }
+
+        html += parseMarkdownToHtml(afterMarker);
+        html += `</div>`;
+        container.innerHTML = html;
+
+        // Tab switching via event delegation
+        container.addEventListener('click', function(e) {
+            const tab = e.target.closest('.persona-tab');
+            if (!tab) return;
+
+            const targetPersona = tab.getAttribute('data-persona');
+
+            container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
+            container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
+
+            tab.classList.add('active');
+            container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
+        });
+    }
+
+    function renderCalibrationExamples(calibrationContent) {
+        const sections = parseSections(calibrationContent.body);
+        const personaSections = {};
+
+        for (const section of sections) {
+            if (section.title.endsWith(' Calibration Examples')) {
+                const personaName = section.title.replace(' Calibration Examples', '').toLowerCase();
+                personaSections[personaName] = parseCalibrationSection(section.content);
+            }
+        }
+
+        let html = `
+            <section class="calibration-section">
+                <h2 id="calibration-examples">Calibration Examples</h2>
+                <p class="calibration-disclaimer">These are <strong>illustrative examples</strong>, not exact criteria. Use them to calibrate your thinking about what each rating level looks like in practice. Your situation will differ — what matters is whether the pattern of impact feels similar, not whether the details match.</p>
+
+                <div class="persona-tabs">
+                    ${manifest.personas.map((pId, index) => {
+                        const persona = manifest.pages[`persona-${pId}`];
+                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" data-persona="${pId}">${persona.name}</button>`;
+                    }).join('')}
+                </div>
+
+                <div class="persona-contents">
+        `;
+
+        for (let i = 0; i < manifest.personas.length; i++) {
+            const pId = manifest.personas[i];
+            const persona = manifest.pages[`persona-${pId}`];
+            const examples = personaSections[pId];
+
+            if (persona && examples) {
+                const borderStyle = getPersonaBorderStyle(pId, persona.color);
+                const borderClass = getPersonaBorderClass(pId);
+                html += `
+                    <div class="persona-content ${i === 0 ? 'active' : ''}" data-persona="${pId}">
+                        <div class="calibration-card ${borderClass}" style="${borderStyle}">
+                            <h3>${persona.name}</h3>
+
+                            ${examples.prompts.length > 0 ? `
+                            <div class="calibration-prompts">
+                                <h4>Reflection Prompts</h4>
+                                <ul>
+                                    ${examples.prompts.map(p => `<li>${parseInlineMarkdown(p)}</li>`).join('')}
+                                </ul>
+                            </div>
+                            ` : ''}
+
+                            <div class="calibration-levels">
+                                ${renderCalibrationLevel('Below Expectations', examples.below, 'below')}
+                                ${renderCalibrationLevel('Meets Expectations', examples.meets, 'meets')}
+                                ${renderCalibrationLevel('Exceeds Expectations', examples.exceeds, 'exceeds')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        html += `</div></section>`;
+        return html;
+    }
+
+    function parseCalibrationSection(content) {
+        const result = {
+            prompts: [],
+            below: [],
+            meets: [],
+            exceeds: []
+        };
+
+        // Split by H3 headings
+        const h3Regex = /^### (.+)$/gm;
+        const parts = content.split(h3Regex);
+
+        let currentSection = null;
+        for (let i = 1; i < parts.length; i += 2) {
+            const heading = parts[i]?.trim();
+            const body = parts[i + 1]?.trim() || '';
+
+            if (heading === 'Reflection Prompts') {
+                result.prompts = parseListItems(body);
+            } else if (heading === 'Below Expectations') {
+                result.below = parseExamples(body);
+            } else if (heading === 'Meets Expectations') {
+                result.meets = parseExamples(body);
+            } else if (heading === 'Exceeds Expectations') {
+                result.exceeds = parseExamples(body);
+            }
+        }
+
+        return result;
+    }
+
+    function parseExamples(content) {
+        const examples = [];
+        const exampleRegex = /\*\*Example \d+:\*\*\s*([\s\S]*?)(?=\*\*Example \d+:\*\*|$)/g;
+        let match;
+        while ((match = exampleRegex.exec(content)) !== null) {
+            examples.push(match[1].trim());
+        }
+        return examples;
+    }
+
+    function renderCalibrationLevel(title, examples, levelClass) {
+        if (!examples || examples.length === 0) return '';
+        return `
+            <div class="calibration-level calibration-level-${levelClass}">
+                <h4>${title}</h4>
+                ${examples.map((ex, i) => `
+                    <div class="calibration-example">
+                        <span class="calibration-example-label">Example ${i + 1}</span>
+                        <p>${parseInlineMarkdown(ex)}</p>
+                    </div>
+                `).join('')}
             </div>
         `;
     }

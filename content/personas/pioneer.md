@@ -58,6 +58,8 @@ A Strategist shapes direction through accounts and relationships. A Pioneer must
 - Am I pushing the boundaries of what's possible?
 - Do my innovations create paths that others follow?
 - Is Sahaj's technical reputation stronger because of my work?
+- Have I introduced a technology or approach that changed how Sahaj delivers?
+- Do my reference implementations set standards that others build on?
 
 ---
 
@@ -76,6 +78,9 @@ A Strategist shapes direction through accounts and relationships. A Pioneer must
 
 - Am I sought for problems no one else can solve?
 - Do my approaches become the standard others follow?
+- Have I defined a new way of solving problems that teams adopted without being told?
+- Do clients or the industry come to Sahaj because of ideas I've put forward?
+- Can I point to a problem space where my thinking created clarity where none existed?
 
 ---
 
@@ -93,6 +98,9 @@ A Strategist shapes direction through accounts and relationships. A Pioneer must
 
 - Am I building capability that will matter in 5 years?
 - Do my innovations translate into practical improvements?
+- Have I balanced exploration with practical applicability, or do my innovations sit unused?
+- Do teams deliver differently because of approaches I pioneered?
+- Can I point to innovations I introduced that survived beyond the initial project?
 
 ---
 
@@ -110,6 +118,9 @@ A Strategist shapes direction through accounts and relationships. A Pioneer must
 
 - Do people aspire to the standard I represent?
 - Am I making Sahaj a more attractive place for top talent?
+- Have I created learning opportunities that challenged people to grow beyond their comfort zone?
+- Do people across the organisation reference my work as an example to aspire to?
+- Has my external visibility attracted talent or opportunities to Sahaj?
 
 ---
 
@@ -127,3 +138,6 @@ A Strategist shapes direction through accounts and relationships. A Pioneer must
 
 - Am I a recognized voice in my technical domain?
 - Do my contributions shape how the industry thinks?
+- Do people outside Sahaj reference my work or ideas?
+- Has my thought leadership changed how others in the industry approach a problem?
+- Does my external contribution translate into internal impact, or is it disconnected?

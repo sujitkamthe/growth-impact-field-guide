@@ -46,6 +46,8 @@ order: 5
 - Will these decisions still be correct in several years?
 - Am I protecting the organisation from long-term technical harm?
 - Do I think beyond current clients and delivery pressures?
+- Have I set a technical direction that multiple accounts or teams have aligned to?
+- Do my architectural decisions create coherence across Sahaj, not just within one engagement?
 
 ---
 
@@ -64,6 +66,9 @@ order: 5
 
 - Am I trusted for judgment, not just expertise?
 - Do my decisions shape Sahaj's long-term reputation?
+- Do senior clients or leadership seek my counsel on strategic questions?
+- Have I shaped how Sahaj approaches an entire account or market, not just a project?
+- Can I navigate multi-stakeholder politics while keeping outcomes aligned?
 
 ---
 
@@ -81,6 +86,9 @@ order: 5
 
 - Am I optimising for short-term output or long-term health?
 - Do I think beyond individual projects?
+- Have I prevented systemic delivery dysfunction before it became visible?
+- Do my portfolio-level decisions protect team sustainability, not just client timelines?
+- Can I point to delivery practices I shaped that persist across accounts?
 
 ---
 
@@ -97,6 +105,9 @@ order: 5
 
 - Am I building capability beyond my tenure?
 - Do I think in terms of generations of talent?
+- Have I sponsored someone into a role they wouldn't have reached without my support?
+- Am I shaping Sahaj's culture in ways that outlast my direct involvement?
+- Do people across the organisation see me as someone who invests in their growth?
 
 ---
 
@@ -113,3 +124,6 @@ order: 5
 
 - Am I trusted to speak for Sahaj?
 - Do my words have long-term impact?
+- Can I handle high-stakes communication with senior clients without supervision?
+- Do my narratives align teams across accounts, not just within one?
+- Has my external presence created opportunities for Sahaj?

@@ -53,6 +53,8 @@ order: 1
 - Can I complete a small task without repeated clarification?
 - Do I understand what my code changes affect?
 - Do I rely heavily on others to debug issues?
+- Would teammates say I'm becoming more independent week over week?
+- Can I explain why my code works, not just that it works?
 
 ---
 
@@ -74,6 +76,8 @@ order: 1
 - Do I mostly wait for clarity or actively seek it?
 - Can I explain the problem in my own words?
 - Do I understand why this work matters?
+- When something is unclear, do I ask before assuming?
+- Can I describe what the user or stakeholder actually needs?
 
 ---
 
@@ -91,6 +95,9 @@ order: 1
 
 - Do I reliably finish what I commit to?
 - Do I communicate issues early or late?
+- Do I need reminders to update the team on my progress?
+- When I hit a blocker, do I flag it or wait for someone to notice?
+- Am I meeting sprint commitments without last-minute scrambles?
 
 ---
 
@@ -107,6 +114,9 @@ order: 1
 
 - Do I actively seek feedback?
 - Am I open to changing my approach?
+- When I receive critical feedback, do I act on it or dismiss it?
+- Do I ask teammates to explain their reasoning so I can learn?
+- Am I taking responsibility for my own learning or waiting to be taught?
 
 ---
 
@@ -123,3 +133,6 @@ order: 1
 
 - Do people understand me the first time?
 - Do I listen to understand?
+- Do I share updates without being prompted?
+- Can I summarise a discussion accurately after it happens?
+- Do I adjust my language when speaking to non-technical teammates?

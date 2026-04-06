@@ -41,7 +41,40 @@ This guide describes impact, not compensation. Persona levels are a vocabulary f
 
 Salary decisions involve more factors: market rates, tenure, role scope, business context. They happen in a separate conversation.
 
-If you're using this guide to justify a raise, pause. Assess your impact honestly first. Compensation follows from sustained, recognized impact, not from claiming a level.
+If you're using this guide to justify a raise, pause. Assess your impact honestly first. Compensation follows from sustained, recognised impact, not from claiming a level.
+
+### When Should Expectations Be Raised?
+
+Expectations should grow over time. If someone has been on a team or in the organisation for a significant period and is still operating at the same persona level, it's worth asking whether it's time to raise the bar.
+
+**Signals that someone is ready for higher expectations:**
+
+- They've started influencing approaches, not just executing what's defined
+- They've helped others grow, without being asked to
+- They've questioned requirements or proposed alternatives, not just implemented what was given
+- They've taken ownership beyond their immediate scope, even occasionally
+
+You don't wait for consistent behaviour at the next level before setting expectations there. The expectation is the mechanism that makes the growth intentional.
+
+> "We see you doing some of this already: shaping solutions, mentoring others, pushing back on unclear requirements. We'd like to make that explicit and set Catalyst-level expectations so we can support your growth deliberately."
+
+Setting stretch expectations should feel like an investment, not a threat. If the conversation feels punitive, the framing needs work.
+
+### Choosing the Right Persona: Edge Cases
+
+For many people, the right persona is obvious. Their scope and impact clearly map to one level. But some situations are less clear. Here are common patterns that make the choice harder, and how to think through them.
+
+**Strong in one capability, underdeveloped in others.** Someone excels in one area but hasn't developed the others expected at their current persona. The persona should reflect where they consistently operate across capabilities, not where they peak in one. A strength in one area doesn't pull the others up, but it also doesn't need to. The goal is well-rounded growth, not perfection. Name the strength, name the gaps, and set expectations that build on both.
+
+**Excelling at current level: stretch or recognise?** Someone is clearly exceeding expectations at their current persona. Does that mean they should be set to the next level? Not automatically. Exceeding means they did more than what was agreed *within that scope*. It doesn't mean they're operating at a broader scope. They should get the Exceeds recognition they've earned. Then have the growth conversation: "You're excelling here. What's next?" The next step might be broadening scope (the next persona up) or deepening impact through a different path (like the IC track). Don't force one path when the other is a better fit.
+
+**Breadth without depth.** Someone contributes across many areas (some building, some client interaction, some mentoring) but without depth or ownership in any. Breadth of activity is not the same as broader scope of impact. The question to ask: does anything change because of their involvement, or do they just participate? If impact is shallow across the board, the persona should reflect that, even if the person feels busy and involved.
+
+**Been around a long time, scope hasn't expanded.** Time in the organisation doesn't automatically mean higher persona. But it does raise the question. If someone has been on a team for years and their scope hasn't grown, it's worth understanding why. Is it a lack of opportunity, a lack of support, or a lack of stretch? This is where setting intentional expectations helps: not as punishment for staying where they are, but as a deliberate push toward what they're capable of.
+
+**Scaling impact: through people or through artifacts?** When someone is ready to scale their impact beyond their own work, there are two paths: through direct team enablement (leading, coaching, building team capability) or through artifacts (platforms, tools, standards that others adopt). The deciding factor isn't just preference. It's how their impact actually travels. If they build things others use without being told to, the IC track is likely the right fit. If they make others more effective through direct involvement, the leadership track is.
+
+**New to the org with prior experience.** Someone joins with strong experience elsewhere. Don't default to the lowest persona. Assess where their capabilities actually are. Some transfer quickly, others need adjustment to the new context. Set expectations based on what they can realistically demonstrate within a reasonable ramp-up period, not based on what level they held elsewhere or what level the team wishes they were at.
 
 ## Anti-Patterns
 

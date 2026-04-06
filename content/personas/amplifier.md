@@ -60,6 +60,8 @@ A Multiplier can delegate and direct. An Amplifier must create something good en
 - Are multiple teams benefiting from what I've built?
 - Do my platforms/tools reduce friction and enable others?
 - Can teams succeed with my work without my constant involvement?
+- Have I built something that teams chose to adopt without being told to?
+- Is what I've built still running and useful, or does it require me to maintain it?
 
 ---
 
@@ -82,6 +84,8 @@ A Multiplier can delegate and direct. An Amplifier must create something good en
 - Do teams seek my input for complex technical decisions?
 - Are my recommendations adopted because of their merit?
 - Can I help teams make better technical choices independently?
+- Do I translate business needs into platform strategies that teams actually use?
+- Have I anticipated a cross-team technical need before it became urgent?
 
 ---
 
@@ -100,6 +104,9 @@ A Multiplier can delegate and direct. An Amplifier must create something good en
 
 - Has delivery become easier because of what I've built?
 - Do teams spend less time on friction and more on value?
+- Can I measure the time or effort my tooling has saved?
+- Have I automated something that used to require manual intervention?
+- Do teams deploy or deliver more predictably because of infrastructure I created?
 
 ---
 
@@ -117,6 +124,9 @@ A Multiplier can delegate and direct. An Amplifier must create something good en
 
 - Do people learn better practices by using what I've built?
 - Am I raising the technical bar through my work?
+- Have my reference implementations or examples changed how others write code?
+- Does my documentation enable self-service, or do people still need me to explain it?
+- Can I point to someone who levelled up because of a platform or tool I created?
 
 ---
 
@@ -133,3 +143,6 @@ A Multiplier can delegate and direct. An Amplifier must create something good en
 
 - Does my technical work speak for itself?
 - Am I recognized for expertise, not authority?
+- Do people reference my work in their own decisions or proposals?
+- Have I contributed externally (talks, writing, open source) in ways that represent Sahaj?
+- Does my influence come from what I've built, or from being present in meetings?
