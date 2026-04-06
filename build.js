@@ -15,6 +15,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { parseFrontmatter } = require('./frontmatter-parser');
 
 const CONTENT_DIR = path.join(__dirname, 'content');
@@ -96,13 +97,29 @@ function build() {
     manifest.personas = personaEntries.map(p => p.id);
     manifest.capabilities = capabilityEntries.map(c => c.id);
 
+    // Generate build hash from source files
+    const hashSources = ['app.js', 'styles.css', 'frontmatter-parser.js']
+        .map(f => fs.readFileSync(path.join(__dirname, f), 'utf-8'))
+        .join('');
+    const buildHash = crypto.createHash('md5').update(hashSources + JSON.stringify(manifest)).digest('hex').slice(0, 8);
+    manifest.version = buildHash;
+
     // Write manifest.json
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(manifest, null, 2), 'utf-8');
 
-    console.log(`\nGenerated: manifest.json`);
+    // Update cache-busting params in index.html
+    const indexPath = path.join(__dirname, 'index.html');
+    let indexHtml = fs.readFileSync(indexPath, 'utf-8');
+    indexHtml = indexHtml.replace(/(href="styles\.css)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
+    indexHtml = indexHtml.replace(/(src="frontmatter-parser\.js)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
+    indexHtml = indexHtml.replace(/(src="app\.js)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
+    fs.writeFileSync(indexPath, indexHtml, 'utf-8');
+
+    console.log(`\nGenerated: manifest.json (version: ${buildHash})`);
     console.log(`  ${Object.keys(manifest.pages).length} pages indexed`);
     console.log(`  ${manifest.personas.length} personas: ${manifest.personas.join(', ')}`);
     console.log(`  ${manifest.capabilities.length} capabilities: ${manifest.capabilities.join(', ')}`);
+    console.log(`  Updated index.html with cache-busting v=${buildHash}`);
     console.log('\nBuild complete!');
 }
 
