@@ -1271,8 +1271,9 @@ blockquote p {
 }
 
 /* Self-Assessment Page */
-.self-assessment-page {
+.how-to-do-your-self-assessment-page {
     max-width: 900px;
+    margin: 0 auto;
 }
 
 /* Anti-Patterns Page */
