@@ -517,11 +517,13 @@
                 <div class="explore-grid">
                     <a href="#personas" data-page="personas" class="explore-card">
                         <h3>Personas</h3>
+                        <p class="explore-card-steer">Know your current level? Start here.</p>
                         <p>Understand how impact evolves from Explorer to Strategist</p>
                         <span class="arrow">→</span>
                     </a>
                     <a href="#capabilities" data-page="capabilities" class="explore-card">
                         <h3>Capability Areas</h3>
+                        <p class="explore-card-steer">Developing a specific skill? Start here.</p>
                         <p>Explore the five dimensions of engineering impact</p>
                         <span class="arrow">→</span>
                     </a>
@@ -730,7 +732,7 @@
             if (cap && capSection) {
                 html += `
                     <div class="capability-section collapsed">
-                        <h3>${cap.name}</h3>
+                        <h3>${cap.name} <a href="#capability-${capId}" data-page="capability-${capId}" class="cap-cross-link">→</a></h3>
                         <ul class="expectations-list">
                             ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
                         </ul>
