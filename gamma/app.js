@@ -382,6 +382,12 @@
 
         targetPage.classList.add('active');
 
+        // Hide footer on full-viewport pages (self-assessment sidebar layout)
+        const footer = document.querySelector('.main-footer');
+        if (footer) {
+            footer.style.display = pageId === 'self-assessment' ? 'none' : '';
+        }
+
         // Scroll handling
         if (sectionId) {
             const sectionElement = targetPage.querySelector('#' + sectionId) ||

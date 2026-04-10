@@ -1766,7 +1766,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    min-height: unset;
+    min-height: 0;
 }
 
 .page {
@@ -1781,11 +1781,14 @@ body {
     flex: 1;
 }
 
-/* Self-assessment page uses a sidebar layout — must be flex + no overflow */
+/* Self-assessment page uses a sidebar layout — must be flex + no overflow.
+   min-height: 0 allows the flex item to shrink below content size so
+   descendants can scroll instead of expanding the page. */
 .self-assessment-page.active {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-height: 0;
     overflow: hidden;
 }
 
@@ -1896,10 +1899,11 @@ body {
    GAMMA — Self-Assessment Accordion
    ============================================ */
 
-/* Self-assessment sidebar layout */
+/* Self-assessment sidebar layout — viewport-locked so the content panel scrolls,
+   not the page. Uses vh directly instead of relying on flex chain constraints. */
 .g-sa-layout {
     display: flex;
-    flex: 1;
+    height: calc(100vh - 72px);
     overflow: hidden;
 }
 
