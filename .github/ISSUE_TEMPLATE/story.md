@@ -16,6 +16,9 @@ about: A vertically sliced, INVEST-compliant piece of work
 ## Description
 What this is. The "what", not the "why" — one or two sentences.
 
+## Value
+What someone gains once this is done. Described from the user's perspective — what can they now do, see, or experience that they couldn't before?
+
 ## Background / Context
 Why this matters and what prompted it. The problem being solved.
 
@@ -30,7 +33,7 @@ Also capture tradeoffs: what we're giving up or risking by taking this approach.
 Unresolved decisions that must be answered before this is ready for development.
 
 ## Acceptance Criteria
-Specific, verifiable conditions that define done.
+Specific, verifiable conditions that define done. At least one criterion should directly reflect the Value above — not just technical correctness.
 
 ## Test Cases
 Scenarios to check once implemented.

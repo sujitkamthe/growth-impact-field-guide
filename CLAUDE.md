@@ -76,7 +76,9 @@ Short description #<id>
 ```
 
 **Before closing a card:**
-1. Post a comment on the issue documenting what was tested on the live/beta environment — specific URLs visited, interactions tested, what was verified
+1. Post a closing comment that includes:
+   - The value delivered (what can a user now do that they couldn't before?)
+   - Specific URLs visited and interactions tested, with enough detail to verify or spot a lie
 2. Keep the card open until that verification is done and confirmed
 3. Only close once the card does what it should and nothing else is broken
 
