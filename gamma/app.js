@@ -1006,7 +1006,7 @@
 
                         <nav class="g-sa-step-nav">
                             ${beforeYouBeginParts ? `
-                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="before-you-begin">
+                            <button class="g-sa-nav-btn g-sa-ref-btn active" data-ref="before-you-begin">
                                 <span class="g-sa-nav-label">Before you begin</span>
                             </button>
                             <div class="g-sa-nav-divider"></div>
@@ -1014,7 +1014,7 @@
                             ${stepSections.map((step, i) => {
                                 const label = step.title.replace(/^Step \d+:\s*/, '');
                                 return `
-                                    <button class="g-sa-nav-btn ${i === 0 ? 'active' : ''}" data-step="${i}">
+                                    <button class="g-sa-nav-btn" data-step="${i}">
                                         <span class="g-sa-nav-num">${i + 1}</span>
                                         <span class="g-sa-nav-label">${label}</span>
                                     </button>
@@ -1043,7 +1043,7 @@
                         const nextStep = stepSections[i + 1];
                         const nextTitle = nextStep ? nextStep.title.replace(/^Step \d+:\s*/, '') : null;
                         return `
-                            <div class="g-sa-content-step ${i === 0 ? 'active' : ''}" data-step="${i}">
+                            <div class="g-sa-content-step" data-step="${i}">
                                 <h2 class="g-sa-content-step-title">Step ${i + 1}: ${stepTitle}</h2>
                                 ${stepBodies[i]}
                                 ${nextTitle ? `
@@ -1057,7 +1057,7 @@
                         `;
                     }).join('')}
                     ${beforeYouBeginParts ? `
-                    <div class="g-sa-content-step" data-ref="before-you-begin">
+                    <div class="g-sa-content-step active" data-ref="before-you-begin">
                         <h2 class="g-sa-content-step-title">Before You Begin</h2>
                         ${parseMarkdownToHtml(beforeYouBeginParts)}
                     </div>
