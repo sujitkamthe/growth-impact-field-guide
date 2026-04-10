@@ -52,3 +52,14 @@ This watches `content/*.md` for changes, rebuilds `manifest.json` automatically,
 - In-page anchors: `#page-id/section-id` format (e.g., `#quick-reference/common-questions`)
 - Pages created dynamically on first navigation
 
+## Task Management
+
+Tasks are tracked as GitHub Issues at https://github.com/sujitkamthe/growth-impact-field-guide/issues.
+
+Use the Story issue template (`.github/ISSUE_TEMPLATE/story.md`) when creating new issues.
+
+Labels:
+- `content` — changes to guide content or framing
+- `ux` — website structure and presentation
+- `bug` — something isn't working
+

@@ -1,40 +1,29 @@
 # Agent Instructions
 
-This project uses **bd** (beads) for issue tracking. Run `bd onboard` to get started.
+This project uses **GitHub Issues** for task tracking.
+Issues: https://github.com/sujitkamthe/growth-impact-field-guide/issues
 
-## Quick Reference
+## Finding Work
 
-```bash
-bd ready              # Find available work
-bd show <id>          # View issue details
-bd update <id> --status in_progress  # Claim work
-bd close <id>         # Complete work
-bd sync               # Sync with git
-```
+Browse open issues at the link above. Filter by label:
+- `content` — changes to guide content or framing
+- `ux` — website structure and presentation
+- `bug` — something isn't working
 
-## Landing the Plane (Session Completion)
+## Session Completion
 
-**When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
+**When ending a work session**, complete ALL steps below. Work is NOT complete until `git push` succeeds.
 
-**MANDATORY WORKFLOW:**
-
-1. **File issues for remaining work** - Create issues for anything that needs follow-up
-2. **Run quality gates** (if code changed) - Tests, linters, builds
-3. **Update issue status** - Close finished work, update in-progress items
-4. **PUSH TO REMOTE** - This is MANDATORY:
+1. **File issues for remaining work** — create GitHub Issues for anything needing follow-up
+2. **Run quality gates** (if code changed) — `node build.js` to verify the build passes
+3. **PUSH TO REMOTE**:
    ```bash
    git pull --rebase
-   bd sync
    git push
    git status  # MUST show "up to date with origin"
    ```
-5. **Clean up** - Clear stashes, prune remote branches
-6. **Verify** - All changes committed AND pushed
-7. **Hand off** - Provide context for next session
+4. **Verify** — all changes committed and pushed
 
 **CRITICAL RULES:**
 - Work is NOT complete until `git push` succeeds
-- NEVER stop before pushing - that leaves work stranded locally
-- NEVER say "ready to push when you are" - YOU must push
-- If push fails, resolve and retry until it succeeds
-
+- NEVER stop before pushing — that leaves work stranded locally
