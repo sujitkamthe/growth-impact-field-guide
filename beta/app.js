@@ -729,7 +729,7 @@
 
             if (cap && capSection) {
                 html += `
-                    <div class="capability-section">
+                    <div class="capability-section collapsed">
                         <h3>${cap.name}</h3>
                         <ul class="expectations-list">
                             ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
@@ -771,6 +771,13 @@
         `;
 
         container.innerHTML = html;
+
+        // Collapse/expand capability sections on click
+        container.addEventListener('click', function(e) {
+            const h3 = e.target.closest('.capability-section h3');
+            if (!h3) return;
+            h3.closest('.capability-section').classList.toggle('collapsed');
+        });
     }
 
     async function renderCapabilityDetailLayout(content, container) {
