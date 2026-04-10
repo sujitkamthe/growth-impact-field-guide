@@ -1928,10 +1928,10 @@ body {
 }
 
 .g-sa-sidebar-inner {
-    padding: var(--space-xl) var(--space-lg);
+    padding: var(--space-md) var(--space-lg) var(--space-md);
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     flex: 1;
 }
 
@@ -2015,10 +2015,17 @@ body {
     flex: 1;
 }
 
+.g-sa-nav-divider {
+    height: 1px;
+    background: var(--color-border-light);
+    margin: var(--space-xs) 0;
+}
+
 /* Sidebar footer (Common Traps + Key Truths) */
+/* Sidebar footer — flows after step nav, not pushed to bottom */
 .g-sa-sidebar-footer {
-    margin-top: auto;
-    padding-top: var(--space-md);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
     border-top: 1px solid var(--color-border-light);
 }
 

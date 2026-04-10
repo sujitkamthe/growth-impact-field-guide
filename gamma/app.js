@@ -1004,17 +1004,13 @@
                         <h1 class="g-sa-sidebar-title">${content.title}</h1>
                         <p class="g-sa-sidebar-intro">${parseInlineMarkdown(introPart)}</p>
 
-                        ${beforeYouBeginParts ? `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>Before you begin</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(beforeYouBeginParts)}</div>
-                        </div>
-                        ` : ''}
-
                         <nav class="g-sa-step-nav">
+                            ${beforeYouBeginParts ? `
+                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="before-you-begin">
+                                <span class="g-sa-nav-label">Before you begin</span>
+                            </button>
+                            <div class="g-sa-nav-divider"></div>
+                            ` : ''}
                             ${stepSections.map((step, i) => {
                                 const label = step.title.replace(/^Step \d+:\s*/, '');
                                 return `
@@ -1060,6 +1056,12 @@
                             </div>
                         `;
                     }).join('')}
+                    ${beforeYouBeginParts ? `
+                    <div class="g-sa-content-step" data-ref="before-you-begin">
+                        <h2 class="g-sa-content-step-title">Before You Begin</h2>
+                        ${parseMarkdownToHtml(beforeYouBeginParts)}
+                    </div>
+                    ` : ''}
                     ${commonTrapsSection ? `
                     <div class="g-sa-content-step" data-ref="common-traps">
                         <h2 class="g-sa-content-step-title">Common Traps</h2>
@@ -1077,10 +1079,17 @@
         `;
 
         function setActiveStep(idx) {
-            container.querySelectorAll('.g-sa-nav-btn').forEach((btn, i) => {
+            // Clear all button states (both step and ref buttons)
+            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => {
+                btn.classList.remove('active', 'done');
+            });
+            // Set step button states (only numbered buttons, not ref buttons)
+            const stepBtns = container.querySelectorAll('.g-sa-nav-btn[data-step]');
+            stepBtns.forEach((btn, i) => {
                 btn.classList.toggle('active', i === idx);
                 btn.classList.toggle('done', i < idx);
             });
+            // Switch content panel
             container.querySelectorAll('.g-sa-content-step').forEach(step => {
                 step.classList.remove('active');
             });
