@@ -925,156 +925,127 @@
         // Pre-load calibration content
         const calibrationContent = await loadContent('calibration-examples');
 
-        // Build HTML
-        let html = `<div class="container g-sa-page"><h1>${content.title}</h1>`;
+        // Build step body HTML for each step
+        const stepBodies = stepSections.map(step => {
+            if (step.content.includes('<!-- calibration-insert -->')) {
+                const [before] = step.content.split('<!-- calibration-insert -->');
+                let html = parseMarkdownToHtml(before.trim());
+                if (calibrationContent) html += renderCalibrationExamples(calibrationContent);
+                return html;
+            }
+            return parseMarkdownToHtml(step.content);
+        });
 
-        // Intro sentence
-        html += `<p class="g-sa-intro">${parseInlineMarkdown(introPart)}</p>`;
-
-        // Collapsible context block (growth + how it works + before you begin)
-        const contextParts = [
+        // Before you begin collapsible content
+        const beforeYouBeginParts = [
             growthSection         ? '## ' + growthSection.title         + '\n\n' + growthSection.content         : '',
             howItWorksSection     ? '## ' + howItWorksSection.title     + '\n\n' + howItWorksSection.content     : '',
             beforeYouBeginSection ? '## ' + beforeYouBeginSection.title + '\n\n' + beforeYouBeginSection.content : ''
         ].filter(Boolean).join('\n\n');
 
-        if (contextParts) {
-            html += `
-                <div class="g-sa-collapsible collapsed">
-                    <button class="g-sa-collapsible-btn">
-                        <span>Before you begin &mdash; context &amp; process overview</span>
-                        <span class="g-sa-collapsible-icon"></span>
-                    </button>
-                    <div class="g-sa-collapsible-body">${parseMarkdownToHtml(contextParts)}</div>
-                </div>
-            `;
-        }
+        // Key Truths HTML
+        const keyTruthsHtml = keyTruthsSection
+            ? `<ul class="key-truths-list">${
+                parseListItems(keyTruthsSection.content.replace(/<!--\s*key-truths\s*-->/g, '').trim())
+                    .map(item => `<li>${parseInlineMarkdown(item)}</li>`)
+                    .join('')
+              }</ul>`
+            : '';
 
-        // Progress indicator
-        html += `
-            <div class="g-sa-progress" aria-label="Steps">
-                ${stepSections.map((_, i) => `
-                    <button class="g-sa-progress-dot" data-jump="${i}" title="Step ${i + 1}">
-                        <span class="g-sa-progress-num">${i + 1}</span>
-                    </button>
-                `).join('')}
+        // Sidebar + content panel layout
+        container.innerHTML = `
+            <div class="g-sa-layout">
+                <aside class="g-sa-sidebar">
+                    <div class="g-sa-sidebar-inner">
+                        <h1 class="g-sa-sidebar-title">${content.title}</h1>
+                        <p class="g-sa-sidebar-intro">${parseInlineMarkdown(introPart)}</p>
+
+                        ${beforeYouBeginParts ? `
+                        <div class="g-sa-collapsible collapsed">
+                            <button class="g-sa-collapsible-btn">
+                                <span>Before you begin</span>
+                                <span class="g-sa-collapsible-icon"></span>
+                            </button>
+                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(beforeYouBeginParts)}</div>
+                        </div>
+                        ` : ''}
+
+                        <nav class="g-sa-step-nav">
+                            ${stepSections.map((step, i) => {
+                                const label = step.title.replace(/^Step \d+:\s*/, '');
+                                return `
+                                    <button class="g-sa-nav-btn ${i === 0 ? 'active' : ''}" data-step="${i}">
+                                        <span class="g-sa-nav-num">${i + 1}</span>
+                                        <span class="g-sa-nav-label">${label}</span>
+                                    </button>
+                                `;
+                            }).join('')}
+                        </nav>
+
+                        <div class="g-sa-sidebar-footer">
+                            ${commonTrapsSection ? `
+                            <div class="g-sa-collapsible collapsed">
+                                <button class="g-sa-collapsible-btn">
+                                    <span>Common Traps</span>
+                                    <span class="g-sa-collapsible-icon"></span>
+                                </button>
+                                <div class="g-sa-collapsible-body">${parseMarkdownToHtml(commonTrapsSection.content)}</div>
+                            </div>
+                            ` : ''}
+                            ${keyTruthsSection ? `
+                            <div class="g-sa-collapsible collapsed">
+                                <button class="g-sa-collapsible-btn">
+                                    <span>Key Truths</span>
+                                    <span class="g-sa-collapsible-icon"></span>
+                                </button>
+                                <div class="g-sa-collapsible-body">${keyTruthsHtml}</div>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="g-sa-content-panel">
+                    ${stepSections.map((step, i) => {
+                        const stepTitle = step.title.replace(/^Step \d+:\s*/, '');
+                        const nextStep = stepSections[i + 1];
+                        const nextTitle = nextStep ? nextStep.title.replace(/^Step \d+:\s*/, '') : null;
+                        return `
+                            <div class="g-sa-content-step ${i === 0 ? 'active' : ''}" data-step="${i}">
+                                <h2 class="g-sa-content-step-title">Step ${i + 1}: ${stepTitle}</h2>
+                                ${stepBodies[i]}
+                                ${nextTitle ? `
+                                <div class="g-sa-step-footer">
+                                    <button class="g-sa-next-btn" data-next="${i + 1}">
+                                        Next: ${nextTitle} &rarr;
+                                    </button>
+                                </div>
+                                ` : ''}
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
             </div>
         `;
 
-        // Steps accordion (exclusive)
-        html += `<div class="g-sa-steps">`;
-
-        for (let i = 0; i < stepSections.length; i++) {
-            const step = stepSections[i];
-            const stepTitle = step.title.replace(/^Step \d+:\s*/, '');
-            const isFirst = i === 0;
-
-            // Handle calibration insert inside step 3
-            let stepBodyHtml;
-            if (step.content.includes('<!-- calibration-insert -->')) {
-                const [before] = step.content.split('<!-- calibration-insert -->');
-                stepBodyHtml = parseMarkdownToHtml(before.trim());
-                if (calibrationContent) stepBodyHtml += renderCalibrationExamples(calibrationContent);
-            } else {
-                stepBodyHtml = parseMarkdownToHtml(step.content);
-            }
-
-            const nextStep = stepSections[i + 1];
-            const nextTitle = nextStep ? nextStep.title.replace(/^Step \d+:\s*/, '') : null;
-
-            html += `
-                <div class="g-sa-step ${isFirst ? 'active' : ''}" data-step="${i}">
-                    <button class="g-sa-step-btn">
-                        <span class="g-sa-step-num">${i + 1}</span>
-                        <span class="g-sa-step-title">${stepTitle}</span>
-                        <span class="g-sa-step-chevron"></span>
-                    </button>
-                    <div class="g-sa-step-body">
-                        ${stepBodyHtml}
-                        ${nextTitle ? `
-                        <div class="g-sa-step-footer">
-                            <button class="g-sa-next-btn" data-next="${i + 1}">
-                                Next: ${nextTitle} &rarr;
-                            </button>
-                        </div>
-                        ` : ''}
-                    </div>
-                </div>
-            `;
-        }
-
-        html += `</div>`; // .g-sa-steps
-
-        // Common Traps (collapsible)
-        if (commonTrapsSection) {
-            html += `
-                <div class="g-sa-collapsible collapsed">
-                    <button class="g-sa-collapsible-btn">
-                        <span>Common Traps</span>
-                        <span class="g-sa-collapsible-icon"></span>
-                    </button>
-                    <div class="g-sa-collapsible-body">${parseMarkdownToHtml(commonTrapsSection.content)}</div>
-                </div>
-            `;
-        }
-
-        // Key Truths (collapsible, with key-truths list styling)
-        if (keyTruthsSection) {
-            const kContent = keyTruthsSection.content.replace(/<!--\s*key-truths\s*-->/g, '').trim();
-            const kItems = parseListItems(kContent);
-            html += `
-                <div class="g-sa-collapsible collapsed">
-                    <button class="g-sa-collapsible-btn">
-                        <span>Key Truths</span>
-                        <span class="g-sa-collapsible-icon"></span>
-                    </button>
-                    <div class="g-sa-collapsible-body">
-                        <ul class="key-truths-list">
-                            ${kItems.map(item => `<li>${parseInlineMarkdown(item)}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-        }
-
-        html += `</div>`; // .container
-        container.innerHTML = html;
-
-        // Update progress dots to match active step
-        function syncProgress(activeIndex) {
-            container.querySelectorAll('.g-sa-progress-dot').forEach((dot, i) => {
-                dot.classList.toggle('g-progress-active', i === activeIndex);
-                dot.classList.toggle('g-progress-done', i < activeIndex);
+        function setActiveStep(idx) {
+            container.querySelectorAll('.g-sa-nav-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === idx);
+                btn.classList.toggle('done', i < idx);
+            });
+            container.querySelectorAll('.g-sa-content-step').forEach((step, i) => {
+                step.classList.toggle('active', i === idx);
             });
         }
-        syncProgress(0);
 
         // Event delegation
         container.addEventListener('click', function(e) {
-            // Step header toggle (exclusive)
-            const stepBtn = e.target.closest('.g-sa-step-btn');
-            if (stepBtn) {
-                const clickedStep = stepBtn.closest('.g-sa-step');
-                const alreadyActive = clickedStep.classList.contains('active');
-                container.querySelectorAll('.g-sa-step').forEach(s => s.classList.remove('active'));
-                if (!alreadyActive) {
-                    clickedStep.classList.add('active');
-                    syncProgress(parseInt(clickedStep.dataset.step));
-                }
-                return;
-            }
-
-            // Progress dot jump
-            const dot = e.target.closest('.g-sa-progress-dot');
-            if (dot) {
-                const idx = parseInt(dot.dataset.jump);
-                container.querySelectorAll('.g-sa-step').forEach(s => s.classList.remove('active'));
-                const target = container.querySelectorAll('.g-sa-step')[idx];
-                if (target) {
-                    target.classList.add('active');
-                    syncProgress(idx);
-                    target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
+            // Sidebar step nav button
+            const navBtn = e.target.closest('.g-sa-nav-btn');
+            if (navBtn) {
+                const idx = parseInt(navBtn.dataset.step);
+                setActiveStep(idx);
+                container.querySelector('.g-sa-content-panel').scrollTop = 0;
                 return;
             }
 
@@ -1082,13 +1053,8 @@
             const nextBtn = e.target.closest('.g-sa-next-btn');
             if (nextBtn) {
                 const idx = parseInt(nextBtn.dataset.next);
-                container.querySelectorAll('.g-sa-step').forEach(s => s.classList.remove('active'));
-                const target = container.querySelectorAll('.g-sa-step')[idx];
-                if (target) {
-                    target.classList.add('active');
-                    syncProgress(idx);
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                setActiveStep(idx);
+                container.querySelector('.g-sa-content-panel').scrollTop = 0;
                 return;
             }
 

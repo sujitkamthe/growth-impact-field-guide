@@ -1754,20 +1754,63 @@ blockquote p {
 }
 
 /* ============================================
+   GAMMA — Layout overrides (sticky footer + viewport-fit home)
+   ============================================ */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+}
+
+.page {
+    flex: 1;
+}
+
+/* These pages need flex layout. Override must come after .page.active { display: block }
+   in cascade order. Both selectors here have equal specificity (2 classes), so position wins. */
+.home-page.active {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Self-assessment page uses a sidebar layout — must be flex + no overflow */
+.self-assessment-page.active {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.main-footer {
+    margin-top: 0;
+    padding: var(--space-md) 0;
+}
+
+/* ============================================
    GAMMA — Intent-Based Home Page
    ============================================ */
 
 .g-home {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--space-2xl) var(--space-xl) var(--space-2xl);
+    justify-content: center;
+    padding: var(--space-xl) var(--space-xl);
 }
 
 .g-hero {
     text-align: center;
-    margin-bottom: var(--space-2xl);
-    max-width: 580px;
+    margin-bottom: var(--space-xl);
+    max-width: 640px;
 }
 
 .g-hero h1 {
@@ -1787,7 +1830,7 @@ blockquote p {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
-    max-width: 960px;
+    max-width: 1100px;
     width: 100%;
 }
 
@@ -1853,17 +1896,140 @@ blockquote p {
    GAMMA — Self-Assessment Accordion
    ============================================ */
 
-.g-sa-page {
-    max-width: 780px;
-    padding-top: var(--space-2xl);
-    padding-bottom: var(--space-2xl);
+/* Self-assessment sidebar layout */
+.g-sa-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
 }
 
-.g-sa-intro {
-    color: var(--color-text-secondary);
-    font-size: 1rem;
-    line-height: 1.7;
+.g-sa-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.g-sa-sidebar-inner {
+    padding: var(--space-xl) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.g-sa-sidebar-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.g-sa-sidebar-intro {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Step navigation */
+.g-sa-step-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.g-sa-nav-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    background: none;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.3;
+    transition: background 0.1s, color 0.1s;
+    width: 100%;
+}
+
+.g-sa-nav-btn:hover {
+    background: var(--color-accent-soft);
+    color: var(--color-text);
+}
+
+.g-sa-nav-btn.active {
+    background: var(--color-accent-soft);
+    color: var(--color-accent);
+}
+
+.g-sa-nav-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-border);
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: background 0.15s, color 0.15s;
+}
+
+.g-sa-nav-btn.active .g-sa-nav-num {
+    background: var(--color-accent);
+    color: white;
+}
+
+.g-sa-nav-btn.done .g-sa-nav-num {
+    background: var(--color-accent);
+    color: white;
+    opacity: 0.6;
+}
+
+.g-sa-nav-label {
+    flex: 1;
+}
+
+/* Sidebar footer (Common Traps + Key Truths) */
+.g-sa-sidebar-footer {
+    margin-top: auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border-light);
+}
+
+/* Content panel */
+.g-sa-content-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-2xl) var(--space-2xl) var(--space-3xl);
+    max-width: 860px;
+}
+
+.g-sa-content-step {
+    display: none;
+}
+
+.g-sa-content-step.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+.g-sa-content-step-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0;
     margin-bottom: var(--space-xl);
+    color: var(--color-text);
 }
 
 /* Collapsible context / reference sections */
@@ -1917,157 +2083,6 @@ blockquote p {
     animation: fadeIn 0.2s ease;
 }
 
-/* Progress indicator */
-.g-sa-progress {
-    display: flex;
-    gap: var(--space-sm);
-    align-items: center;
-    margin: var(--space-xl) 0;
-    flex-wrap: wrap;
-}
-
-.g-sa-progress-dot {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 2px solid var(--color-border);
-    background: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    transition: border-color 0.15s, background 0.15s;
-}
-
-.g-sa-progress-dot:hover {
-    border-color: var(--color-accent);
-}
-
-.g-sa-progress-num {
-    font-size: 0.78rem;
-    font-weight: 700;
-    color: var(--color-text-muted);
-    line-height: 1;
-    transition: color 0.15s;
-}
-
-.g-sa-progress-dot.g-progress-active {
-    border-color: var(--color-accent);
-    background: var(--color-accent);
-}
-
-.g-sa-progress-dot.g-progress-active .g-sa-progress-num {
-    color: white;
-}
-
-.g-sa-progress-dot.g-progress-done {
-    border-color: var(--color-accent);
-}
-
-.g-sa-progress-dot.g-progress-done .g-sa-progress-num {
-    color: var(--color-accent);
-}
-
-/* Steps */
-.g-sa-steps {
-    margin-bottom: var(--space-xl);
-}
-
-.g-sa-step {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    margin-bottom: var(--space-sm);
-    overflow: hidden;
-    transition: border-color 0.15s ease;
-}
-
-.g-sa-step.active {
-    border-color: var(--color-accent);
-}
-
-.g-sa-step-btn {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: var(--space-md);
-    padding: var(--space-md) var(--space-lg);
-    background: none;
-    border: none;
-    border-bottom: 1px solid transparent;
-    cursor: pointer;
-    text-align: left;
-    color: inherit;
-    font-family: inherit;
-    transition: background 0.1s ease;
-}
-
-.g-sa-step.active .g-sa-step-btn {
-    border-bottom-color: var(--color-border-light);
-}
-
-.g-sa-step-btn:hover {
-    background: var(--color-surface);
-}
-
-.g-sa-step-num {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--color-border);
-    color: var(--color-text-muted);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.78rem;
-    font-weight: 700;
-    flex-shrink: 0;
-    transition: background 0.15s, color 0.15s;
-}
-
-.g-sa-step.active .g-sa-step-num {
-    background: var(--color-accent);
-    color: white;
-}
-
-.g-sa-step-title {
-    flex: 1;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: var(--color-text-muted);
-    transition: color 0.15s;
-}
-
-.g-sa-step.active .g-sa-step-title {
-    color: var(--color-text-primary);
-}
-
-.g-sa-step-chevron {
-    flex-shrink: 0;
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
-    width: 16px;
-    text-align: right;
-}
-
-.g-sa-step-chevron::after {
-    content: '+';
-}
-
-.g-sa-step.active .g-sa-step-chevron::after {
-    content: '−';
-}
-
-.g-sa-step-body {
-    display: none;
-    padding: var(--space-xl) var(--space-lg);
-    animation: fadeIn 0.2s ease;
-}
-
-.g-sa-step.active .g-sa-step-body {
-    display: block;
-}
-
 /* Next step button */
 .g-sa-step-footer {
     margin-top: var(--space-xl);
@@ -2104,5 +2119,27 @@ blockquote p {
         padding: var(--space-2xl) var(--space-lg);
         justify-content: flex-start;
         padding-top: var(--space-3xl);
+    }
+
+    .self-assessment-page,
+    .self-assessment-page.active {
+        overflow: auto;
+    }
+
+    .g-sa-layout {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .g-sa-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        overflow: visible;
+    }
+
+    .g-sa-content-panel {
+        padding: var(--space-lg);
+        overflow: visible;
     }
 }
