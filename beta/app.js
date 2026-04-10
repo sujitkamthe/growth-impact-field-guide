@@ -749,6 +749,10 @@
 
         // Navigation links
         html += `
+                <div class="self-assessment-cta">
+                    <a href="#self-assessment" data-page="self-assessment">Ready to assess yourself? &rarr; How to Do Your Self-Assessment</a>
+                </div>
+
                 <div class="nav-links-bottom">
                     ${prevPersona ? `
                     <a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}" class="nav-link-prev">
@@ -842,6 +846,10 @@
         }
 
         html += `
+                </div>
+
+                <div class="self-assessment-cta">
+                    <a href="#self-assessment" data-page="self-assessment">Ready to assess yourself? &rarr; How to Do Your Self-Assessment</a>
                 </div>
 
                 <div class="nav-links-bottom">
