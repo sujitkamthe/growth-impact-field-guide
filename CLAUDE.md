@@ -63,3 +63,25 @@ Labels:
 - `ux` — website structure and presentation
 - `bug` — something isn't working
 
+### Workflow Rules
+
+**When picking up a card:**
+```bash
+gh issue edit <id> --add-assignee javatarz
+```
+
+**Every commit for a card must reference it:**
+```
+Short description #<id>
+```
+
+**Before closing a card:**
+1. Post a comment on the issue documenting what was tested on the live/beta environment — specific URLs visited, interactions tested, what was verified
+2. Keep the card open until that verification is done and confirmed
+3. Only close once the card does what it should and nothing else is broken
+
+**Closing a card:**
+```bash
+gh issue close <id> --comment "..."
+```
+
