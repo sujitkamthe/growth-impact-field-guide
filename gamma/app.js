@@ -906,6 +906,32 @@
         `;
     }
 
+    // Splits Step 3 content into collapsible sub-sections for each rating level
+    // (Below/Meets/Exceeds) plus the intro and note paragraphs.
+    function renderRatingSubSections(markdown) {
+        const parts = markdown.split(/^(?=### )/m);
+        let html = '';
+        for (const part of parts) {
+            if (part.startsWith('### ')) {
+                const nl = part.indexOf('\n');
+                const title = part.substring(4, nl).trim();
+                const body = part.substring(nl + 1).trim();
+                html += `
+                    <div class="g-sa-collapsible collapsed">
+                        <button class="g-sa-collapsible-btn">
+                            <span>${title}</span>
+                            <span class="g-sa-collapsible-icon"></span>
+                        </button>
+                        <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
+                    </div>
+                `;
+            } else {
+                html += parseMarkdownToHtml(part.trim());
+            }
+        }
+        return html;
+    }
+
     async function renderSelfAssessmentLayout(content, container) {
         const body = content.body;
 
@@ -935,8 +961,20 @@
         const stepBodies = stepSections.map(step => {
             if (step.content.includes('<!-- calibration-insert -->')) {
                 const [before] = step.content.split('<!-- calibration-insert -->');
-                let html = parseMarkdownToHtml(before.trim());
-                if (calibrationContent) html += renderCalibrationExamples(calibrationContent);
+                // Split rating criteria into collapsible sub-sections
+                let html = renderRatingSubSections(before.trim());
+                // Wrap calibration examples in a collapsible
+                if (calibrationContent) {
+                    html += `
+                        <div class="g-sa-collapsible collapsed">
+                            <button class="g-sa-collapsible-btn">
+                                <span>Calibration Examples — see what each rating looks like in practice</span>
+                                <span class="g-sa-collapsible-icon"></span>
+                            </button>
+                            <div class="g-sa-collapsible-body">${renderCalibrationExamples(calibrationContent)}</div>
+                        </div>
+                    `;
+                }
                 return html;
             }
             return parseMarkdownToHtml(step.content);
