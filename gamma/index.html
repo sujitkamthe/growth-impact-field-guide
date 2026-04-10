@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Field Guide to Growth & Impact</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="The Field Guide to Growth & Impact - Clarity without hierarchy. Impact over titles. A framework for understanding how engineering impact evolves from Explorer to Strategist.">
+    <meta name="keywords" content="engineering competency, career growth, software engineering, competency framework, Sahaj">
+    <meta name="author" content="Sahaj Software Solutions">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Field Guide to Growth & Impact">
+    <meta property="og:description" content="Clarity without hierarchy. Impact over titles. A framework for understanding how engineering impact evolves.">
+    <meta property="og:image" content="../favicon.svg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="The Field Guide to Growth & Impact">
+    <meta name="twitter:description" content="Clarity without hierarchy. Impact over titles. A framework for understanding how engineering impact evolves.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <a href="#home" data-page="home">Field Guide</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" data-page="home" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#personas" data-page="personas">Personas</a>
+                <ul class="dropdown-menu" id="personas-dropdown">
+                    <!-- Populated dynamically from manifest.json -->
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#capabilities" data-page="capabilities">Capability Areas</a>
+                <ul class="dropdown-menu" id="capabilities-dropdown">
+                    <!-- Populated dynamically from manifest.json -->
+                </ul>
+            </li>
+            <li><a href="#self-assessment" data-page="self-assessment">Self-Assessment</a></li>
+            <li><a href="#quick-reference" data-page="quick-reference">Quick Reference</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <main id="app" class="content">
+        <!-- Pages are created dynamically by app.js based on manifest.json -->
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>The Field Guide to Growth & Impact</p>
+            <p class="footer-note">This framework supports thoughtful, self-owned conversations about growth, impact, and contribution.</p>
+        </div>
+    </footer>
+
+    <script src="../frontmatter-parser.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
