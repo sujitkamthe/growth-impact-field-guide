@@ -1028,22 +1028,14 @@
 
                         <div class="g-sa-sidebar-footer">
                             ${commonTrapsSection ? `
-                            <div class="g-sa-collapsible collapsed">
-                                <button class="g-sa-collapsible-btn">
-                                    <span>Common Traps</span>
-                                    <span class="g-sa-collapsible-icon"></span>
-                                </button>
-                                <div class="g-sa-collapsible-body">${parseMarkdownToHtml(commonTrapsSection.content)}</div>
-                            </div>
+                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="common-traps">
+                                <span class="g-sa-nav-label">Common Traps</span>
+                            </button>
                             ` : ''}
                             ${keyTruthsSection ? `
-                            <div class="g-sa-collapsible collapsed">
-                                <button class="g-sa-collapsible-btn">
-                                    <span>Key Truths</span>
-                                    <span class="g-sa-collapsible-icon"></span>
-                                </button>
-                                <div class="g-sa-collapsible-body">${keyTruthsHtml}</div>
-                            </div>
+                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="key-truths">
+                                <span class="g-sa-nav-label">Key Truths</span>
+                            </button>
                             ` : ''}
                         </div>
                     </div>
@@ -1068,6 +1060,18 @@
                             </div>
                         `;
                     }).join('')}
+                    ${commonTrapsSection ? `
+                    <div class="g-sa-content-step" data-ref="common-traps">
+                        <h2 class="g-sa-content-step-title">Common Traps</h2>
+                        ${parseMarkdownToHtml(commonTrapsSection.content)}
+                    </div>
+                    ` : ''}
+                    ${keyTruthsSection ? `
+                    <div class="g-sa-content-step" data-ref="key-truths">
+                        <h2 class="g-sa-content-step-title">Key Truths</h2>
+                        ${keyTruthsHtml}
+                    </div>
+                    ` : ''}
                 </div>
             </div>
         `;
@@ -1077,13 +1081,36 @@
                 btn.classList.toggle('active', i === idx);
                 btn.classList.toggle('done', i < idx);
             });
-            container.querySelectorAll('.g-sa-content-step').forEach((step, i) => {
-                step.classList.toggle('active', i === idx);
+            container.querySelectorAll('.g-sa-content-step').forEach(step => {
+                step.classList.remove('active');
+            });
+            const steps = container.querySelectorAll('.g-sa-content-step[data-step]');
+            if (steps[idx]) steps[idx].classList.add('active');
+        }
+
+        function showRefPanel(refId) {
+            // Deselect all step nav buttons
+            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => btn.classList.remove('active'));
+            // Highlight the ref button
+            container.querySelectorAll('.g-sa-ref-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.ref === refId);
+            });
+            // Hide all content steps, show the ref panel
+            container.querySelectorAll('.g-sa-content-step').forEach(step => {
+                step.classList.toggle('active', step.dataset.ref === refId);
             });
         }
 
         // Event delegation
         container.addEventListener('click', function(e) {
+            // Sidebar ref buttons (Common Traps, Key Truths)
+            const refBtn = e.target.closest('.g-sa-ref-btn');
+            if (refBtn) {
+                showRefPanel(refBtn.dataset.ref);
+                container.querySelector('.g-sa-content-panel').scrollTop = 0;
+                return;
+            }
+
             // Sidebar step nav button
             const navBtn = e.target.closest('.g-sa-nav-btn');
             if (navBtn) {

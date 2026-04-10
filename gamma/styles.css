@@ -1592,6 +1592,17 @@ blockquote p {
     border-bottom: 1px solid var(--color-border);
 }
 
+/* When calibration is inside a collapsible, strip outer chrome */
+.g-sa-collapsible-body .calibration-section {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.g-sa-collapsible-body .calibration-section > h2 {
+    display: none;
+}
+
 .calibration-disclaimer {
     color: var(--color-text-secondary);
     font-style: italic;
@@ -2015,8 +2026,7 @@ body {
 .g-sa-content-panel {
     flex: 1;
     overflow-y: auto;
-    padding: var(--space-2xl) var(--space-2xl) var(--space-3xl);
-    max-width: 860px;
+    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
 }
 
 .g-sa-content-step {
