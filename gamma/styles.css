@@ -1792,10 +1792,9 @@ body {
     flex: 1;
 }
 
-/* Self-assessment page uses a sidebar layout — must be flex + no overflow.
-   min-height: 0 allows the flex item to shrink below content size so
-   descendants can scroll instead of expanding the page. */
-.self-assessment-page.active {
+/* Sidebar-layout pages — flex + no overflow so content panel scrolls internally */
+.self-assessment-page.active,
+.persona-detail-page.active {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -2139,6 +2138,195 @@ body {
     color: white;
 }
 
+/* ============================================
+   GAMMA — Persona Detail Sidebar Layout
+   ============================================ */
+
+.g-pd-layout {
+    display: flex;
+    height: calc(100vh - 72px);
+    overflow: hidden;
+}
+
+.g-pd-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--color-border);
+    overflow-y: auto;
+}
+
+.g-pd-sidebar-inner {
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.g-pd-identity {
+    border-left: 3px solid var(--color-accent);
+    padding-left: var(--space-md);
+}
+
+.g-pd-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.g-pd-tagline {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: var(--space-xs) 0 0;
+}
+
+.g-pd-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: var(--space-xs);
+}
+
+.g-pd-sidebar-footer {
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+    border-top: 1px solid var(--color-border-light);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.g-pd-cta {
+    font-size: 0.85rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.g-pd-cta:hover {
+    text-decoration: underline;
+}
+
+.g-pd-persona-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.g-pd-persona-nav a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+
+.g-pd-persona-nav a:hover {
+    color: var(--color-accent);
+}
+
+/* Content panel */
+.g-pd-content-panel {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
+}
+
+.g-pd-panel {
+    display: none;
+}
+
+.g-pd-panel.active {
+    display: block;
+    animation: fadeIn 0.2s ease;
+}
+
+/* Overview panel */
+.g-pd-quote {
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg);
+    background: var(--color-surface-elevated);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border-light);
+}
+
+.g-pd-quote .detail-mindset {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.g-pd-question {
+    margin: var(--space-md) 0 0;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+}
+
+.g-pd-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.g-pd-impact-block h4 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+}
+
+.g-pd-impact-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.g-pd-impact-block li {
+    padding: var(--space-xs) 0;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+}
+
+/* Capability panels */
+.g-pd-cap-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: var(--space-xl);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-md);
+}
+
+.g-pd-cap-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+
+.g-pd-cap-link:hover {
+    color: var(--color-accent);
+}
+
+.g-pd-prompts {
+    margin-top: var(--space-xl);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.g-pd-prompts h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.g-pd-prompts li {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .g-intent-grid {
@@ -2170,6 +2358,28 @@ body {
     }
 
     .g-sa-content-panel {
+        padding: var(--space-lg);
+        overflow: visible;
+    }
+
+    .persona-detail-page,
+    .persona-detail-page.active {
+        overflow: auto;
+    }
+
+    .g-pd-layout {
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+    }
+
+    .g-pd-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .g-pd-content-panel {
         padding: var(--space-lg);
         overflow: visible;
     }

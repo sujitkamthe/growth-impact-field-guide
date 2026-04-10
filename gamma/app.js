@@ -382,10 +382,11 @@
 
         targetPage.classList.add('active');
 
-        // Hide footer on full-viewport pages (self-assessment sidebar layout)
+        // Hide footer on full-viewport sidebar pages
         const footer = document.querySelector('.main-footer');
         if (footer) {
-            footer.style.display = pageId === 'self-assessment' ? 'none' : '';
+            const sidebarPage = pageId === 'self-assessment' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
+            footer.style.display = sidebarPage ? 'none' : '';
         }
 
         // Scroll handling
@@ -681,105 +682,109 @@
         const successLooksLike = extractListSection(content.body, 'Success Looks Like');
         const explicitExpectation = extractListSection(content.body, 'Explicit Expectation');
 
-        const borderStyle = getPersonaBorderStyle(personaId, content.color);
         const borderClass = getPersonaBorderClass(personaId);
-
-        let html = `
-            <div class="container">
-                <div class="detail-header ${borderClass}" style="${borderStyle} padding-left: var(--space-lg);">
-                    <div class="persona-scope">${getScopeWithTrack(personaId, content.scope)}</div>
-                    <h1>${content.name}</h1>
-                    <p class="detail-subtitle">${content.tagline}</p>
-                    <p class="detail-mindset">"${mindset}"</p>
-                    ${trustedQuestion ? `<p class="detail-trusted-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
-                </div>
-
-                <div class="impact-info">
-                    <div class="impact-block">
-                        <h4>Nature of Impact</h4>
-                        <ul>
-                            ${natureOfImpact.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                    ${successLooksLike.length > 0 ? `
-                    <div class="impact-block">
-                        <h4>Success Looks Like</h4>
-                        <ul>
-                            ${successLooksLike.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                    ` : ''}
-                    ${explicitExpectation.length > 0 ? `
-                    <div class="impact-block">
-                        <h4>Explicit Expectation</h4>
-                        <ul>
-                            ${explicitExpectation.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                    ` : ''}
-                </div>
-
-                <h2>Expectations by Capability Area</h2>
-        `;
-
-        // Extract capability sections
         const capabilitySections = extractCapabilitySections(content.body);
 
-        for (const capId of manifest.capabilities) {
+        // Build capability panels
+        const capPanels = manifest.capabilities.map(capId => {
             const cap = manifest.pages[`capability-${capId}`];
             const capSection = capabilitySections[cap.name];
+            if (!cap || !capSection) return null;
+            return { capId, cap, capSection };
+        }).filter(Boolean);
 
-            if (cap && capSection) {
-                html += `
-                    <div class="capability-section collapsed">
-                        <h3><span>${cap.name} <a href="#capability-${capId}" data-page="capability-${capId}" class="cap-cross-link">→</a></span></h3>
-                        <ul class="expectations-list">
-                            ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                        ${capSection.selfAssessment.length > 0 ? `
-                        <div class="self-assessment">
-                            <h4>Self-Assessment Prompts</h4>
-                            <ul>
-                                ${capSection.selfAssessment.map(item => `<li>${item}</li>`).join('')}
-                            </ul>
+        container.innerHTML = `
+            <div class="g-pd-layout">
+                <aside class="g-pd-sidebar">
+                    <div class="g-pd-sidebar-inner">
+                        <div class="g-pd-identity ${borderClass}">
+                            <div class="persona-scope">${getScopeWithTrack(personaId, content.scope)}</div>
+                            <h1 class="g-pd-name">${content.name}</h1>
+                            <p class="g-pd-tagline">${content.tagline}</p>
                         </div>
-                        ` : ''}
+
+                        <nav class="g-pd-nav">
+                            <button class="g-sa-nav-btn active" data-panel="overview">
+                                <span class="g-sa-nav-label">Overview</span>
+                            </button>
+                            <div class="g-sa-nav-divider"></div>
+                            ${capPanels.map(({ capId, cap }) => `
+                                <button class="g-sa-nav-btn" data-panel="cap-${capId}">
+                                    <span class="g-sa-nav-label">${cap.name}</span>
+                                </button>
+                            `).join('')}
+                        </nav>
+
+                        <div class="g-pd-sidebar-footer">
+                            <a href="#self-assessment" data-page="self-assessment" class="g-pd-cta">Assess yourself &rarr;</a>
+                            <div class="g-pd-persona-nav">
+                                ${prevPersona ? `<a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}">&larr; ${prevPersona.name}</a>` : '<span></span>'}
+                                ${nextPersona ? `<a href="#persona-${nextPersona.id}" data-page="persona-${nextPersona.id}">${nextPersona.name} &rarr;</a>` : ''}
+                            </div>
+                        </div>
                     </div>
-                `;
-            }
-        }
+                </aside>
 
-        // Navigation links
-        html += `
-                <div class="self-assessment-cta">
-                    <a href="#self-assessment" data-page="self-assessment">Ready to assess yourself? &rarr; How to Do Your Self-Assessment</a>
-                </div>
+                <div class="g-pd-content-panel">
+                    <div class="g-pd-panel active" data-panel="overview">
+                        <div class="g-pd-quote">
+                            <p class="detail-mindset">"${mindset}"</p>
+                            ${trustedQuestion ? `<p class="g-pd-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
+                        </div>
+                        <div class="g-pd-impact-grid">
+                            <div class="g-pd-impact-block">
+                                <h4>Nature of Impact</h4>
+                                <ul>${natureOfImpact.map(item => `<li>${item}</li>`).join('')}</ul>
+                            </div>
+                            ${successLooksLike.length > 0 ? `
+                            <div class="g-pd-impact-block">
+                                <h4>Success Looks Like</h4>
+                                <ul>${successLooksLike.map(item => `<li>${item}</li>`).join('')}</ul>
+                            </div>
+                            ` : ''}
+                            ${explicitExpectation.length > 0 ? `
+                            <div class="g-pd-impact-block">
+                                <h4>Explicit Expectation</h4>
+                                <ul>${explicitExpectation.map(item => `<li>${item}</li>`).join('')}</ul>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
 
-                <div class="nav-links-bottom">
-                    ${prevPersona ? `
-                    <a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}" class="nav-link-prev">
-                        <span class="nav-link-label">Previous</span>
-                        <span class="nav-link-title">${prevPersona.name}</span>
-                    </a>
-                    ` : '<div></div>'}
-                    ${nextPersona ? `
-                    <a href="#persona-${nextPersona.id}" data-page="persona-${nextPersona.id}" class="nav-link-next">
-                        <span class="nav-link-label">Next</span>
-                        <span class="nav-link-title">${nextPersona.name}</span>
-                    </a>
-                    ` : ''}
+                    ${capPanels.map(({ capId, cap, capSection }) => `
+                        <div class="g-pd-panel" data-panel="cap-${capId}">
+                            <h2 class="g-pd-cap-title">
+                                ${cap.name}
+                                <a href="#capability-${capId}" data-page="capability-${capId}" class="g-pd-cap-link">View full capability &rarr;</a>
+                            </h2>
+                            <ul class="expectations-list">
+                                ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                            ${capSection.selfAssessment.length > 0 ? `
+                            <div class="g-pd-prompts">
+                                <h3>Self-Assessment Prompts</h3>
+                                <ul>${capSection.selfAssessment.map(item => `<li>${item}</li>`).join('')}</ul>
+                            </div>
+                            ` : ''}
+                        </div>
+                    `).join('')}
                 </div>
             </div>
         `;
 
-        container.innerHTML = html;
-
-        // Collapse/expand capability sections on click (skip if clicking the cross-link)
+        // Event delegation — capability nav switching
         container.addEventListener('click', function(e) {
-            if (e.target.closest('.cap-cross-link')) return;
-            const h3 = e.target.closest('.capability-section h3');
-            if (!h3) return;
-            h3.closest('.capability-section').classList.toggle('collapsed');
+            const navBtn = e.target.closest('.g-sa-nav-btn[data-panel]');
+            if (navBtn) {
+                const panelId = navBtn.dataset.panel;
+                container.querySelectorAll('.g-sa-nav-btn[data-panel]').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.panel === panelId);
+                });
+                container.querySelectorAll('.g-pd-panel').forEach(panel => {
+                    panel.classList.toggle('active', panel.dataset.panel === panelId);
+                });
+                container.querySelector('.g-pd-content-panel').scrollTop = 0;
+            }
         });
     }
 
