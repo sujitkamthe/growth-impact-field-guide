@@ -67,7 +67,7 @@ Labels:
 
 **When picking up a card:**
 ```bash
-gh issue edit <id> --add-assignee javatarz
+gh issue edit <id> --add-assignee @me
 ```
 
 **Every commit for a card must reference it:**
