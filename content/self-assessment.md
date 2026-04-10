@@ -5,6 +5,14 @@ title: How to Do Your Self-Assessment
 
 This guide is designed to support **honest reflection**, not optimistic self-rating. The goal is to summarize your understanding of feedback you've received, not to claim a level or build a case.
 
+## Growth Is Self-Directed
+
+Sahaj is an open field. You choose which direction to go, what skills to build, and how quickly to build them, based on your choices and the opportunities you prioritize.
+
+Some people struggle to see the field. Some struggle to see the paths others have already cut through the grass. This guide attempts to show those paths: common patterns of growth that have worked for others.
+
+But this is not the only way to grow. All paths that create impact are valued. Use this as a starting point if you can't see a path forward, not as a constraint on where you can go.
+
 ## How This Process Works
 
 Your self-assessment is a starting point, not a conclusion.
@@ -17,7 +25,38 @@ Everyone in your office sees these assessments. This transparency means overstat
 
 ## Before You Begin
 
-Self-assessment depends on expectations that were set earlier. If you and your teammates haven't discussed what's expected of you, [do that first](#home/setting-expectations-comes-first). Without clear expectations, self-assessment becomes guesswork.
+Self-assessment depends on expectations that were set earlier. If you and your teammates haven't discussed what's expected of you, [do that first](#self-assessment/setting-expectations-comes-first). Without clear expectations, self-assessment becomes guesswork.
+
+### Setting Expectations Comes First
+
+Before feedback or self-assessment can happen, **expectations must be set**.
+
+This is a conversation between you and your teammates. Use this guide as a reference point, not a rigid template:
+
+> "I'm expecting you to own stories end-to-end, ask why behind the work (not just how), and flag risks early, which is roughly what I'm visualising as an Artisan for our team."
+
+Expectations may differ from the guide based on your team's context. Some areas may need more depth, others less. What matters is that expectations are **explicit and agreed**, not assumed.
+
+If expectations were never made explicit, that's a gap to address first. Implicit expectations cause trouble: during feedback, during self-assessment, and during team check.
+
+### Stretch Expectations Are Part of Growth
+
+Sometimes expectations are set ahead of where someone currently operates. This is deliberate.
+
+If someone has been in the organisation or on a project for a significant period and is still operating at the same persona level, it's reasonable to set expectations at the next level. This isn't a criticism of their current work. It's a statement of belief in what they're capable of, and what the team needs from them.
+
+> "You've been delivering well as an Artisan for a while now. We'd like to set Catalyst-level expectations for the next cycle: shaping solutions, not just building them. Let's talk about what that looks like and where you'll need support."
+
+Expectations are based on what the team needs and what the person can grow into. Setting stretch expectations should feel like an investment, not a threat. If the conversation feels punitive, the framing needs work.
+
+### The Flow
+
+1. **Expectations are set**: using this guide as a reference
+2. **Work happens**: with ongoing feedback against those expectations
+3. **Self-assessment**: you reflect on feedback and summarize your understanding
+4. **Team check**: teammates confirm, correct, or add perspective
+
+Each step depends on the previous one. Self-assessment without clear expectations is guesswork. Feedback without shared vocabulary is inconsistent.
 
 ## Step 1: Recall Your Expectations
 
@@ -156,3 +195,15 @@ When reviewing others, it's natural to anchor on work you directly observed. But
 If a self-assessment mentions contributions you didn't witness, that's not a red flag. It's an invitation to ask. "I didn't see this directly, can you tell me more?" is better than silent skepticism.
 
 For teammates who've been on the project a while, consistent calm may reflect more skill than repeated rescues. If fires keep happening, ask why. Don't just credit whoever puts them out.
+
+## Key Truths
+
+<!-- key-truths -->
+
+- **Delivery-only excellence has a growth ceiling.** You can be the best coder on the team and still plateau. Beyond a point, growth comes from shaping solutions, enabling others, and influencing outcomes, not from writing more or better code alone.
+- **All five capabilities matter; Consulting is where team check is hardest.** Everyone thinks they consult well. Few actually do. Consulting means removing ambiguity, challenging assumptions, and helping stakeholders make better decisions. Doing what's asked without questioning unclear requirements is not consulting.
+- **Seniority is demonstrated by sustained impact, not effort.** Working long hours, being busy, or being involved in many things does not equal senior impact. What matters is whether your contributions are consistent, durable, and recognised by others over time.
+- **You are not expected to excel in everything at once.** Growth is uneven. You may be strong in Technical Delivery but still developing in Communication. That's normal. What matters is awareness of where you are and intentional progress over time.
+- **Growth is about expanding impact across capabilities over time.** Early on, Technical Delivery dominates. As you grow, Consulting, Mentorship, Communication, and Delivery Excellence become increasingly important. Ignoring them creates blind spots that limit your trajectory.
+- **Self-assessment is about processing feedback, not claiming a level.** The goal is to show that you've listened, reflected, and understood what others have observed about your work. It is not a case to argue or a level to claim.
+- **Strong Technical Delivery is mandatory but insufficient for long-term growth.** Technical skill is the foundation. Without it, nothing else stands. But it is table stakes at every stage. What differentiates growth is what you build on top of that foundation.

@@ -63,7 +63,8 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const response = await fetch(BASE_PATH + pageInfo.file + versionParam);
+            const file = (pageId === 'home') ? 'content/beta-home.md' : pageInfo.file;
+            const response = await fetch(BASE_PATH + file + versionParam);
             if (!response.ok) {
                 console.error(`Failed to load ${pageInfo.file}: ${response.status}`);
                 return null;
