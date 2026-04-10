@@ -732,7 +732,7 @@
             if (cap && capSection) {
                 html += `
                     <div class="capability-section collapsed">
-                        <h3>${cap.name} <a href="#capability-${capId}" data-page="capability-${capId}" class="cap-cross-link">→</a></h3>
+                        <h3><span>${cap.name} <a href="#capability-${capId}" data-page="capability-${capId}" class="cap-cross-link">→</a></span></h3>
                         <ul class="expectations-list">
                             ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
                         </ul>
@@ -774,8 +774,9 @@
 
         container.innerHTML = html;
 
-        // Collapse/expand capability sections on click
+        // Collapse/expand capability sections on click (skip if clicking the cross-link)
         container.addEventListener('click', function(e) {
+            if (e.target.closest('.cap-cross-link')) return;
             const h3 = e.target.closest('.capability-section h3');
             if (!h3) return;
             h3.closest('.capability-section').classList.toggle('collapsed');
