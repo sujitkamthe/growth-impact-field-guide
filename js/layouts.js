@@ -95,7 +95,7 @@
                     const body = part.substring(nl + 1).trim();
                     sectionBody += `
                         <div class="collapsible collapsed">
-                            <button class="collapsible-btn">
+                            <button class="collapsible-btn" aria-expanded="false">
                                 <span>${title}</span>
                                 <span class="collapsible-icon"></span>
                             </button>
@@ -129,7 +129,7 @@
                     const body = part.substring(nl + 1).trim();
                     html += `
                         <div class="collapsible collapsed">
-                            <button class="collapsible-btn">
+                            <button class="collapsible-btn" aria-expanded="false">
                                 <span>${title}</span>
                                 <span class="collapsible-icon"></span>
                             </button>
@@ -212,11 +212,11 @@
                             <h1 class="sidebar-title">Anti-Patterns</h1>
                             ${introHtml}
                         </div>
-                        <nav class="pd-nav">
+                        <nav class="pd-nav" aria-label="Anti-patterns navigation">
                             ${G.manifest.personas.map((pId, index) => {
                                 const persona = G.manifest.pages[`persona-${pId}`];
                                 return `
-                                    <button class="sidebar-nav-btn${index === 0 ? ' active' : ''}" data-panel="persona-${pId}">
+                                    <button class="sidebar-nav-btn${index === 0 ? ' active' : ''}" aria-current="${index === 0}" data-panel="persona-${pId}">
                                         <span class="sidebar-nav-label">${persona.name}</span>
                                     </button>
                                 `;
@@ -503,8 +503,8 @@
                             <p class="pd-tagline">${content.tagline}</p>
                         </div>
 
-                        <nav class="pd-nav">
-                            <button class="sidebar-nav-btn active" data-panel="overview">
+                        <nav class="pd-nav" aria-label="Persona sections">
+                            <button class="sidebar-nav-btn active" aria-current="true" data-panel="overview">
                                 <span class="sidebar-nav-label">Overview</span>
                             </button>
                             <div class="sidebar-nav-divider"></div>
@@ -595,10 +595,10 @@
 
                 <h2>Expectations by Persona</h2>
 
-                <div class="persona-tabs">
+                <div class="persona-tabs" role="tablist">
                     ${G.manifest.personas.map((pId, index) => {
                         const persona = G.manifest.pages[`persona-${pId}`];
-                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" data-persona="${pId}">${persona.name}</button>`;
+                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" role="tab" aria-selected="${index === 0}" data-persona="${pId}">${persona.name}</button>`;
                     }).join('')}
                 </div>
 
@@ -620,7 +620,7 @@
                 const pBorderStyle = G.getPersonaBorderStyle(pId, persona.color);
                 const pBorderClass = G.getPersonaBorderClass(pId);
                 html += `
-                    <div class="persona-content ${i === 0 ? 'active' : ''}" data-persona="${pId}">
+                    <div class="persona-content ${i === 0 ? 'active' : ''}" role="tabpanel" data-persona="${pId}">
                         <div class="capability-section cap-persona-section ${pBorderClass}" style="${pBorderStyle}">
                             <div class="cap-persona-header">
                                 <h3 class="cap-persona-name">${persona.name}</h3>
@@ -694,7 +694,7 @@
                 const body = part.substring(nl + 1).trim();
                 html += `
                     <div class="collapsible collapsed">
-                        <button class="collapsible-btn">
+                        <button class="collapsible-btn" aria-expanded="false">
                             <span>${title}</span>
                             <span class="collapsible-icon"></span>
                         </button>
@@ -743,7 +743,7 @@
                 if (calibrationContent) {
                     html += `
                         <div class="collapsible collapsed">
-                            <button class="collapsible-btn">
+                            <button class="collapsible-btn" aria-expanded="false">
                                 <span>Calibration Examples — see what each rating looks like in practice</span>
                                 <span class="collapsible-icon"></span>
                             </button>
@@ -780,9 +780,9 @@
                         <h1 class="sidebar-title">${content.title}</h1>
                         <p class="sidebar-intro">${G.parseInlineMarkdown(introPart)}</p>
 
-                        <nav class="step-nav">
+                        <nav class="step-nav" aria-label="Assessment steps">
                             ${beforeYouBeginParts ? `
-                            <button class="sidebar-nav-btn sidebar-ref-btn active" data-ref="before-you-begin">
+                            <button class="sidebar-nav-btn sidebar-ref-btn active" aria-current="true" data-ref="before-you-begin">
                                 <span class="sidebar-nav-label">Before you begin</span>
                             </button>
                             <div class="sidebar-nav-divider"></div>
@@ -873,10 +873,10 @@
                 <h2 id="calibration-examples">Calibration Examples</h2>
                 <p class="calibration-disclaimer">These are <strong>illustrative examples</strong>, not exact criteria. Use them to calibrate your thinking about what each rating level looks like in practice. Your situation will differ — what matters is whether the pattern of impact feels similar, not whether the details match.</p>
 
-                <div class="persona-tabs">
+                <div class="persona-tabs" role="tablist">
                     ${G.manifest.personas.map((pId, index) => {
                         const persona = G.manifest.pages[`persona-${pId}`];
-                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" data-persona="${pId}">${persona.name}</button>`;
+                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" role="tab" aria-selected="${index === 0}" data-persona="${pId}">${persona.name}</button>`;
                     }).join('')}
                 </div>
 
@@ -892,7 +892,7 @@
                 const borderStyle = G.getPersonaBorderStyle(pId, persona.color);
                 const borderClass = G.getPersonaBorderClass(pId);
                 html += `
-                    <div class="persona-content ${i === 0 ? 'active' : ''}" data-persona="${pId}">
+                    <div class="persona-content ${i === 0 ? 'active' : ''}" role="tabpanel" data-persona="${pId}">
                         <div class="calibration-card ${borderClass}" style="${borderStyle}">
                             <h3>${persona.name}</h3>
 

@@ -185,7 +185,9 @@
         document.getElementById('app').addEventListener('click', function(e) {
             const collBtn = e.target.closest('.collapsible-btn');
             if (collBtn) {
-                collBtn.closest('.collapsible').classList.toggle('collapsed');
+                const collapsible = collBtn.closest('.collapsible');
+                collapsible.classList.toggle('collapsed');
+                collBtn.setAttribute('aria-expanded', !collapsible.classList.contains('collapsed'));
                 return;
             }
 
@@ -194,9 +196,13 @@
                 const container = tab.closest('.persona-tabs')?.parentElement;
                 if (!container) return;
                 const targetPersona = tab.getAttribute('data-persona');
-                container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
+                container.querySelectorAll('.persona-tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
                 container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
                 tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
                 container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
                 return;
             }
@@ -206,9 +212,13 @@
                 const layout = navBtn.closest('.sidebar-layout');
                 if (!layout) return;
                 const panelId = navBtn.getAttribute('data-panel');
-                layout.querySelectorAll('.sidebar-nav-btn').forEach(b => b.classList.remove('active'));
+                layout.querySelectorAll('.sidebar-nav-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.setAttribute('aria-current', 'false');
+                });
                 layout.querySelectorAll('.sidebar-panel').forEach(p => p.classList.remove('active'));
                 navBtn.classList.add('active');
+                navBtn.setAttribute('aria-current', 'true');
                 const panel = layout.querySelector(`.sidebar-panel[data-panel="${panelId}"]`);
                 if (panel) panel.classList.add('active');
                 const content = layout.querySelector('.sidebar-content');
@@ -319,6 +329,7 @@
         if (mobileMenuBtn && navLinks) {
             mobileMenuBtn.addEventListener('click', function() {
                 navLinks.classList.toggle('active');
+                mobileMenuBtn.setAttribute('aria-expanded', navLinks.classList.contains('active'));
             });
             navLinks.addEventListener('click', function(e) {
                 if (e.target.closest('a')) navLinks.classList.remove('active');
