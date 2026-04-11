@@ -63,7 +63,7 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const file = (pageId === 'home') ? 'content/beta-home.md' : pageInfo.file;
+            const file = pageInfo.file;
             const response = await fetch(BASE_PATH + file + versionParam);
             if (!response.ok) {
                 console.error(`Failed to load ${pageInfo.file}: ${response.status}`);
@@ -441,6 +441,50 @@
     }
 
     async function renderHomeLayout(content, container) {
+        const sections = parseSections(content.body);
+
+        // Build below-fold content from markdown sections
+        let belowFoldHtml = '';
+        for (const section of sections) {
+            if (section.title === 'Key Truths') continue; // Already in self-assessment
+
+            if (section.annotation?.type === 'cards') {
+                belowFoldHtml += renderCardsSection(section);
+                continue;
+            }
+            {
+                // Render as prose section, with H3 sub-sections as accordions
+                const parts = section.content
+                    .replace(/<!--[^>]*-->/g, '') // strip annotations
+                    .split(/^(?=### )/m);
+                let sectionBody = '';
+                for (const part of parts) {
+                    if (part.startsWith('### ')) {
+                        const nl = part.indexOf('\n');
+                        const title = part.substring(4, nl).trim();
+                        const body = part.substring(nl + 1).trim();
+                        sectionBody += `
+                            <div class="g-sa-collapsible collapsed">
+                                <button class="g-sa-collapsible-btn">
+                                    <span>${title}</span>
+                                    <span class="g-sa-collapsible-icon"></span>
+                                </button>
+                                <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
+                            </div>
+                        `;
+                    } else if (part.trim()) {
+                        sectionBody += parseMarkdownToHtml(part.trim());
+                    }
+                }
+                belowFoldHtml += `
+                    <section class="g-home-section">
+                        <h2>${section.title}</h2>
+                        ${sectionBody}
+                    </section>
+                `;
+            }
+        }
+
         container.innerHTML = `
             <div class="g-home">
                 <div class="g-hero">
@@ -467,8 +511,19 @@
                         <span class="g-intent-cta">Start Self-Assessment &rarr;</span>
                     </a>
                 </div>
+                <div class="g-home-content">
+                    ${belowFoldHtml}
+                </div>
             </div>
         `;
+
+        // Accordion toggles for How to Use This Guide sub-sections
+        container.addEventListener('click', function(e) {
+            const collBtn = e.target.closest('.g-sa-collapsible-btn');
+            if (collBtn) {
+                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
+            }
+        });
     }
 
     function renderCardsSection(section) {
@@ -1317,10 +1372,31 @@
         // Render generic sections (FAQ, intro text, etc.) before the tabs
         for (const section of genericSections) {
             const sectionId = slugify(section.title);
+            // Split content on ### headers and render as accordions
+            const parts = section.content.split(/^(?=### )/m);
+            let sectionHtml = '';
+            for (const part of parts) {
+                if (part.startsWith('### ')) {
+                    const nl = part.indexOf('\n');
+                    const title = part.substring(4, nl).trim();
+                    const body = part.substring(nl + 1).trim();
+                    sectionHtml += `
+                        <div class="g-sa-collapsible collapsed">
+                            <button class="g-sa-collapsible-btn">
+                                <span>${title}</span>
+                                <span class="g-sa-collapsible-icon"></span>
+                            </button>
+                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
+                        </div>
+                    `;
+                } else if (part.trim()) {
+                    sectionHtml += parseMarkdownToHtml(part.trim());
+                }
+            }
             html += `
                 <section class="reference-section">
                     ${renderHeading(2, section.title, sectionId)}
-                    ${parseMarkdownToHtml(section.content)}
+                    ${sectionHtml}
                 </section>
             `;
         }
@@ -1402,8 +1478,16 @@
         html += `</div>`;
         container.innerHTML = html;
 
-        // Tab switching via event delegation (single listener, survives re-renders)
+        // Event delegation (single listener, survives re-renders)
         container.addEventListener('click', function(e) {
+            // Accordion toggles
+            const collBtn = e.target.closest('.g-sa-collapsible-btn');
+            if (collBtn) {
+                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
+                return;
+            }
+
+            // Tab switching
             const tab = e.target.closest('.persona-tab');
             if (!tab) return;
 

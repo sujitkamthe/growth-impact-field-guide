@@ -907,7 +907,7 @@ blockquote p {
 /* Detail Pages */
 .persona-detail-page .container,
 .capability-detail-page .container {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .detail-header {
@@ -1340,7 +1340,7 @@ blockquote p {
 
 /* Self-Assessment Page */
 .how-to-do-your-self-assessment-page {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -1903,6 +1903,30 @@ body {
     font-weight: 500;
     color: var(--color-accent);
     margin-top: var(--space-xs, 4px);
+}
+
+/* ============================================
+   GAMMA — Home Page Below-Fold Content
+   ============================================ */
+
+.g-home-content {
+    max-width: 1200px;
+    margin: var(--space-3xl) auto 0;
+    padding: 0 var(--space-lg);
+}
+
+.g-home-section {
+    margin-bottom: var(--space-2xl);
+}
+
+.g-home-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+}
+
+.g-home-section p {
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
 }
 
 /* ============================================
