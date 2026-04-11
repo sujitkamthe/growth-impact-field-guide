@@ -34,6 +34,7 @@
 
             // Initialize UI
             populateNavDropdowns();
+            populateFooter();
             initNavigation();
             initDarkMode();
 
@@ -283,6 +284,30 @@
                 return `<li><a href="#capability-${id}" data-page="capability-${id}" class="capability-link">${page.name}</a></li>`;
             }).join('');
         }
+
+        // Reference sub-pages (virtual pages with a sourcePageId, excluding the parent)
+        const referenceDropdown = document.getElementById('reference-dropdown');
+        if (referenceDropdown) {
+            referenceDropdown.innerHTML = Object.entries(virtualPages)
+                .filter(([id, vp]) => vp.sourcePageId && id !== 'quick-reference')
+                .map(([id, vp]) => `<li><a href="#${id}" data-page="${id}">${vp.title}</a></li>`)
+                .join('');
+        }
+    }
+
+    function populateFooter() {
+        const homePage = manifest.pages['home'];
+        if (!homePage) return;
+
+        const footer = document.querySelector('.main-footer .container');
+        if (footer) {
+            const title = homePage.title || '';
+            const note = homePage.footer_note || '';
+            footer.innerHTML = `
+                <p>${escapeHtml(title)}</p>
+                ${note ? `<p class="footer-note">${escapeHtml(note)}</p>` : ''}
+            `;
+        }
     }
 
     function initNavigation() {
@@ -434,13 +459,13 @@
         'persona-detail': renderPersonaDetailLayout,
         'capability-detail': renderCapabilityDetailLayout,
         'markdown-page': renderMarkdownPageLayout,
-        'self-assessment': renderSelfAssessmentLayout,
-        'quick-reference': renderQuickReferenceLayout
+        'self-assessment': renderSelfAssessmentLayout
     };
 
     // Virtual pages — rendered from sections of existing content files
     const virtualPages = {
         'quick-reference': {
+            sourcePageId: 'quick-reference',
             renderer: renderQuickReferenceOverview,
             title: 'Quick Reference'
         },
@@ -490,7 +515,52 @@
         }
     }
 
+    // Parse intent cards from markdown content between annotation markers.
+    // Format: H3 title, followed by key: value metadata lines, then description paragraph.
+    function parseIntentCards(content, annotation) {
+        const regex = new RegExp(`<!--\\s*${annotation}\\s*-->([\\s\\S]*?)(?=<!--|\\n## |$)`);
+        const match = content.match(regex);
+        if (!match) return [];
+
+        const section = match[1];
+        const cards = [];
+        const parts = section.split(/^(?=### )/m);
+
+        for (const part of parts) {
+            if (!part.startsWith('### ')) continue;
+            const lines = part.split('\n');
+            const title = lines[0].substring(4).trim();
+            const card = { title, eyebrow: '', link: '', cta: '', description: '' };
+
+            const descLines = [];
+            for (let i = 1; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line.startsWith('eyebrow:')) card.eyebrow = line.substring(8).trim();
+                else if (line.startsWith('link:')) card.link = line.substring(5).trim();
+                else if (line.startsWith('cta:')) card.cta = line.substring(4).trim();
+                else if (line) descLines.push(line);
+            }
+            card.description = descLines.join(' ');
+            cards.push(card);
+        }
+        return cards;
+    }
+
+    function renderIntentCardHtml(card) {
+        return `
+            <a href="#${card.link}" data-page="${card.link}" class="g-intent-card">
+                <div class="g-intent-eyebrow">${escapeHtml(card.eyebrow)}</div>
+                <h2>${escapeHtml(card.title)}</h2>
+                <p>${escapeHtml(card.description)}</p>
+                <span class="g-intent-cta">${escapeHtml(card.cta)} &rarr;</span>
+            </a>
+        `;
+    }
+
     async function renderHomeLayout(content, container) {
+        const primaryCards = parseIntentCards(content.body, 'intent-cards');
+        const secondaryCards = parseIntentCards(content.body, 'intent-cards-secondary');
+
         container.innerHTML = `
             <div class="g-home">
                 <div class="g-hero">
@@ -498,39 +568,13 @@
                     <p class="g-tagline">${content.tagline}</p>
                 </div>
                 <div class="g-intent-grid">
-                    <a href="#personas" data-page="personas" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Growth Stage</div>
-                        <h2>Where am I in my growth?</h2>
-                        <p>Find your persona and understand what's expected at your level.</p>
-                        <span class="g-intent-cta">Explore Personas &rarr;</span>
-                    </a>
-                    <a href="#capabilities" data-page="capabilities" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Capabilities</div>
-                        <h2>What skill should I develop?</h2>
-                        <p>Browse the five capability areas and see expectations at each level.</p>
-                        <span class="g-intent-cta">Explore Capabilities &rarr;</span>
-                    </a>
-                    <a href="#self-assessment" data-page="self-assessment" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Self-Assessment</div>
-                        <h2>Time to reflect on my growth</h2>
-                        <p>Process your feedback, rate yourself, and prepare for your team check.</p>
-                        <span class="g-intent-cta">Start Self-Assessment &rarr;</span>
-                    </a>
+                    ${primaryCards.map(renderIntentCardHtml).join('')}
                 </div>
+                ${secondaryCards.length > 0 ? `
                 <div class="g-intent-grid g-intent-grid-secondary">
-                    <a href="#about" data-page="about" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Reference</div>
-                        <h2>About this guide</h2>
-                        <p>What this guide is for, who it's designed for, and how to use it.</p>
-                        <span class="g-intent-cta">Read More &rarr;</span>
-                    </a>
-                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
-                        <div class="g-intent-eyebrow">FAQ</div>
-                        <h2>Common questions</h2>
-                        <p>Personas, salary, domain switches, and choosing the right level.</p>
-                        <span class="g-intent-cta">Browse Questions &rarr;</span>
-                    </a>
+                    ${secondaryCards.map(renderIntentCardHtml).join('')}
                 </div>
+                ` : ''}
             </div>
         `;
     }
@@ -541,29 +585,15 @@
 
     // Quick Reference overview — card-based landing for reference sub-pages
     async function renderQuickReferenceOverview(content, container) {
+        const introText = content ? getIntroText(content.body) : '';
+        const refCards = content ? parseIntentCards(content.body, 'ref-cards') : [];
+
         container.innerHTML = `
             <div class="container reference-page-content">
-                <h1>Quick Reference</h1>
-                <p class="page-intro">Guides, common questions, and calibration tools to help you use the framework effectively.</p>
+                <h1>${content?.title || 'Quick Reference'}</h1>
+                ${introText ? `<p class="page-intro">${parseInlineMarkdown(introText)}</p>` : ''}
                 <div class="g-intent-grid g-ref-grid">
-                    <a href="#about" data-page="about" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Guide</div>
-                        <h2>About This Guide</h2>
-                        <p>What this guide is for, who it's designed for, and how to use it.</p>
-                        <span class="g-intent-cta">Read More &rarr;</span>
-                    </a>
-                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
-                        <div class="g-intent-eyebrow">FAQ</div>
-                        <h2>Common Questions</h2>
-                        <p>Personas, salary, domain switches, and choosing the right level.</p>
-                        <span class="g-intent-cta">Browse Questions &rarr;</span>
-                    </a>
-                    <a href="#anti-patterns" data-page="anti-patterns" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Calibration</div>
-                        <h2>Anti-Patterns</h2>
-                        <p>Warning signs that expectations may be too high, plus a final self-check.</p>
-                        <span class="g-intent-cta">Review Patterns &rarr;</span>
-                    </a>
+                    ${refCards.map(renderIntentCardHtml).join('')}
                 </div>
             </div>
         `;
@@ -589,7 +619,10 @@
             }
 
             // Render prose with H3 sub-sections as accordions
-            const cleanContent = section.content.replace(/<!--[^>]*-->/g, '');
+            // Strip intent-card and ref-card blocks (annotation + H3 card definitions)
+            const cleanContent = section.content
+                .replace(/<!--\s*(?:intent-cards|intent-cards-secondary|ref-cards)\s*-->[\s\S]*?(?=<!--|\\n## |$)/g, '')
+                .replace(/<!--[^>]*-->/g, '');
             const parts = cleanContent.split(/^(?=### )/m);
             let sectionBody = '';
             for (const part of parts) {
@@ -804,27 +837,6 @@
         `;
     }
 
-    function renderExploreCards() {
-        return `
-            <section class="explore-section">
-                <h2>Explore the Guide</h2>
-                <div class="explore-grid">
-                    <a href="#personas" data-page="personas" class="explore-card">
-                        <h3>Personas</h3>
-                        <p class="explore-card-steer">Know your current level? Start here.</p>
-                        <p>Understand how impact evolves from Explorer to Strategist</p>
-                        <span class="arrow">→</span>
-                    </a>
-                    <a href="#capabilities" data-page="capabilities" class="explore-card">
-                        <h3>Capability Areas</h3>
-                        <p class="explore-card-steer">Developing a specific skill? Start here.</p>
-                        <p>Explore the five dimensions of engineering impact</p>
-                        <span class="arrow">→</span>
-                    </a>
-                </div>
-            </section>
-        `;
-    }
 
     async function renderPersonasOverviewLayout(content, container) {
         let html = `
@@ -852,10 +864,10 @@
 
         // Check for persona-cards annotation
         if (content.body.includes('<!-- persona-cards -->')) {
-            // Group personas by level
-            const foundation = ['explorer', 'artisan', 'catalyst'];
-            const teamLevel = ['multiplier', 'amplifier'];
-            const orgLevel = ['strategist', 'pioneer'];
+            // Group personas by level (from manifest metadata)
+            const foundation = manifest.personaGroups.foundation || [];
+            const teamLevel = manifest.personaGroups.team || [];
+            const orgLevel = manifest.personaGroups.org || [];
 
             // Helper to render a persona card
             const renderPersonaCard = async (personaId) => {
@@ -1573,172 +1585,6 @@
         `;
     }
 
-    async function renderQuickReferenceLayout(content, container) {
-        // Get intro text (before first H2)
-        const introText = getIntroText(content.body);
-
-        // Parse all H2 sections
-        const sections = parseSections(content.body);
-
-        // Categorize sections: persona anti-patterns, known special sections, and generic sections
-        const personaSections = {};
-        const genericSections = [];
-        let universalWarnings = null;
-        let finalSelfCheck = null;
-
-        for (const section of sections) {
-            if (section.title.endsWith(' Anti-Patterns')) {
-                // Extract persona name (e.g., "Explorer Anti-Patterns" -> "explorer")
-                const personaName = section.title.replace(' Anti-Patterns', '').toLowerCase();
-                personaSections[personaName] = parseAntiPatternSection(section.content);
-            } else if (section.title === 'Universal Warning Signs') {
-                universalWarnings = section.content;
-            } else if (section.title === 'Final Self-Check') {
-                finalSelfCheck = section.content;
-            } else {
-                // Generic sections render as regular markdown before the tabs
-                genericSections.push(section);
-            }
-        }
-
-        let html = `
-            <div class="container anti-patterns-page">
-                <h1>${content.title}</h1>
-                <p class="page-intro">${parseInlineMarkdown(introText)}</p>
-        `;
-
-        // Render generic sections (FAQ, intro text, etc.) before the tabs
-        for (const section of genericSections) {
-            const sectionId = slugify(section.title);
-            // Split content on ### headers and render as accordions
-            const parts = section.content.split(/^(?=### )/m);
-            let sectionHtml = '';
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    sectionHtml += `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>${title}</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    sectionHtml += parseMarkdownToHtml(part.trim());
-                }
-            }
-            html += `
-                <section class="reference-section">
-                    ${renderHeading(2, section.title, sectionId)}
-                    ${sectionHtml}
-                </section>
-            `;
-        }
-
-        html += `
-                <div class="persona-tabs">
-                    ${manifest.personas.map((pId, index) => {
-                        const persona = manifest.pages[`persona-${pId}`];
-                        return `<button class="persona-tab ${index === 0 ? 'active' : ''}" data-persona="${pId}">${persona.name}</button>`;
-                    }).join('')}
-                </div>
-
-                <div class="persona-contents">
-        `;
-
-        // Render each persona's anti-patterns
-        for (let i = 0; i < manifest.personas.length; i++) {
-            const pId = manifest.personas[i];
-            const persona = manifest.pages[`persona-${pId}`];
-            const antiPatterns = personaSections[pId];
-
-            if (persona && antiPatterns) {
-                const apBorderStyle = getPersonaBorderStyle(pId, persona.color);
-                const apBorderClass = getPersonaBorderClass(pId);
-                html += `
-                    <div class="persona-content ${i === 0 ? 'active' : ''}" data-persona="${pId}">
-                        <div class="anti-pattern-card ${apBorderClass}" style="${apBorderStyle}">
-                            <div class="anti-pattern-header">
-                                <h3>${persona.name}</h3>
-                                <span class="anti-pattern-motto">${antiPatterns.motto}</span>
-                            </div>
-
-                            <div class="anti-pattern-grid">
-                                <div class="anti-pattern-section">
-                                    <h4>⚠️ Signs expectations may be too high</h4>
-                                    <ul>
-                                        ${antiPatterns.signs.map(s => `<li>${parseInlineMarkdown(s)}</li>`).join('')}
-                                    </ul>
-                                </div>
-
-                                <div class="anti-pattern-section red-flags">
-                                    <h4>🚩 Red flags</h4>
-                                    <ul>
-                                        ${antiPatterns.redFlags.map(r => `<li>${parseInlineMarkdown(r)}</li>`).join('')}
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="anti-pattern-signal">
-                                <strong>Signal:</strong> ${parseInlineMarkdown(antiPatterns.signal)}
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        html += `</div>`;
-
-        // Add universal sections
-        if (universalWarnings) {
-            html += `
-                <section class="universal-warnings">
-                    <h2>Universal Warning Signs</h2>
-                    ${parseMarkdownToHtml(universalWarnings)}
-                </section>
-            `;
-        }
-
-        if (finalSelfCheck) {
-            html += `
-                <section class="final-self-check">
-                    <h2>Final Self-Check</h2>
-                    ${parseMarkdownToHtml(finalSelfCheck)}
-                </section>
-            `;
-        }
-
-        html += `</div>`;
-        container.innerHTML = html;
-
-        // Event delegation (single listener, survives re-renders)
-        container.addEventListener('click', function(e) {
-            // Accordion toggles
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-                return;
-            }
-
-            // Tab switching
-            const tab = e.target.closest('.persona-tab');
-            if (!tab) return;
-
-            const targetPersona = tab.getAttribute('data-persona');
-
-            container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
-            container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
-
-            tab.classList.add('active');
-            container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
-        });
-    }
-
     function parseAntiPatternSection(content) {
         const result = {
             motto: '',
@@ -2029,9 +1875,10 @@
         return colors[personaId] || '#888';
     }
 
-    // Check if a persona is on the IC track
+    // Check if a persona is on the IC track (from manifest metadata)
     function isIcTrack(personaId) {
-        return personaId === 'amplifier' || personaId === 'pioneer';
+        const page = manifest.pages[`persona-${personaId}`];
+        return page?.track === 'ic';
     }
 
     // Get border style for persona (inline style for TL, class-based for IC)
@@ -2050,9 +1897,11 @@
         return '';
     }
 
-    // Check if a persona is on the Tech Leadership track
+    // Check if a persona is on the Tech Leadership track (from manifest metadata)
     function isTechLeadershipTrack(personaId) {
-        return personaId === 'multiplier' || personaId === 'strategist';
+        const page = manifest.pages[`persona-${personaId}`];
+        // TL track = in team or org group but not IC track
+        return !isIcTrack(personaId) && (page?.group === 'team' || page?.group === 'org');
     }
 
     // Get scope label with track suffix for forked personas
@@ -2148,10 +1997,20 @@
         const cy = 200;
 
         // Foundation personas (shared path) - these get full rings
-        const foundationIds = ['explorer', 'artisan', 'catalyst'];
-        // Post-fork personas - shown as paired labels
-        const teamLevelPair = { mgmt: 'multiplier', ic: 'amplifier' };
-        const orgLevelPair = { mgmt: 'strategist', ic: 'pioneer' };
+        const foundationIds = manifest.personaGroups.foundation || [];
+        // Post-fork personas - split by track (from manifest metadata)
+        const teamIds = manifest.personaGroups.team || [];
+        const orgIds = manifest.personaGroups.org || [];
+
+        // Helper: split a group into { mgmt, ic } based on track field
+        function splitByTrack(ids) {
+            const mgmtId = ids.find(id => manifest.pages[`persona-${id}`]?.track !== 'ic');
+            const icId = ids.find(id => manifest.pages[`persona-${id}`]?.track === 'ic');
+            return { mgmt: mgmtId, ic: icId };
+        }
+
+        const teamLevelPair = splitByTrack(teamIds);
+        const orgLevelPair = splitByTrack(orgIds);
 
         const baseRadius = 32;
         const radiusStep = 24;
@@ -2169,22 +2028,27 @@
         });
 
         // Build post-fork ring data (rings 4 and 5)
-        const teamLevelRadius = baseRadius + (3 * radiusStep);
-        const orgLevelRadius = baseRadius + (4 * radiusStep);
+        const teamLevelRadius = baseRadius + (foundationIds.length * radiusStep);
+        const orgLevelRadius = baseRadius + ((foundationIds.length + 1) * radiusStep);
 
-        const teamMgmt = manifest.pages[`persona-${teamLevelPair.mgmt}`];
-        const teamIc = manifest.pages[`persona-${teamLevelPair.ic}`];
-        const orgMgmt = manifest.pages[`persona-${orgLevelPair.mgmt}`];
-        const orgIc = manifest.pages[`persona-${orgLevelPair.ic}`];
+        const teamMgmt = teamLevelPair.mgmt ? manifest.pages[`persona-${teamLevelPair.mgmt}`] : null;
+        const teamIc = teamLevelPair.ic ? manifest.pages[`persona-${teamLevelPair.ic}`] : null;
+        const orgMgmt = orgLevelPair.mgmt ? manifest.pages[`persona-${orgLevelPair.mgmt}`] : null;
+        const orgIc = orgLevelPair.ic ? manifest.pages[`persona-${orgLevelPair.ic}`] : null;
 
         let html = '';
 
-        // Title
+        // Title (from personas page frontmatter)
+        const personasPage = manifest.pages['personas'] || {};
+        const diagramTitle = personasPage.diagram_title || '';
+        const diagramSubtitle = personasPage.diagram_subtitle || '';
+        const diagramFooter = personasPage.diagram_footer || '';
+
         html += `<text x="290" y="28" text-anchor="middle" font-size="13" fill="${colors.text}" font-weight="600" font-family="Inter, sans-serif">
-            SAHAJ GROWTH PATHS
+            ${escapeHtml(diagramTitle).toUpperCase()}
         </text>`;
         html += `<text x="290" y="46" text-anchor="middle" font-size="11" fill="${colors.textMuted}" font-family="Inter, sans-serif">
-            Foundation → Two Tracks
+            ${escapeHtml(diagramSubtitle)}
         </text>`;
 
         // Draw outer rings for the forked levels (using blended/neutral colors)
@@ -2255,16 +2119,16 @@
         </text>`;
         html += `<text x="${labelX}" y="${orgLabelY + 10}" text-anchor="start" font-size="10" fill="${colors.textMuted}" font-family="Inter, sans-serif">Org-level</text>`;
 
-        // Legend for tracks
+        // Legend for tracks (colors from first TL and IC persona in team group)
         html += `<text x="290" y="345" text-anchor="middle" font-size="10" fill="${colors.textMuted}" font-family="Inter, sans-serif">
-            <tspan fill="${getPersonaColor('multiplier')}">TL Track</tspan>
+            <tspan fill="${teamLevelPair.mgmt ? getPersonaColor(teamLevelPair.mgmt) : colors.textMuted}">TL Track</tspan>
             <tspan> / </tspan>
-            <tspan fill="${getPersonaColor('amplifier')}">IC Track</tspan>
+            <tspan fill="${teamLevelPair.ic ? getPersonaColor(teamLevelPair.ic) : colors.textMuted}">IC Track</tspan>
         </text>`;
 
-        // Footer
+        // Footer (from personas page frontmatter)
         html += `<text x="290" y="365" text-anchor="middle" font-size="10" fill="${colors.textMuted}" font-style="italic" font-family="Inter, sans-serif">
-            Two paths to scale impact. Both equally valued.
+            ${escapeHtml(diagramFooter)}
         </text>`;
 
         svg.innerHTML = html;

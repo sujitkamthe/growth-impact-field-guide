@@ -516,7 +516,6 @@ li {
 .intro-section,
 .values-section,
 .usage-section,
-.explore-section,
 .balance-section {
     margin-bottom: var(--space-2xl);
 }
@@ -621,51 +620,6 @@ blockquote p {
 [data-theme="dark"] blockquote {
     background: var(--color-surface);
     border-left-color: var(--color-accent);
-}
-
-/* Explore Grid */
-.explore-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-xl);
-}
-
-.explore-card {
-    display: block;
-    background: var(--color-surface);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-xl);
-    text-align: center;
-    transition: all var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.explore-card:hover {
-    border-color: var(--color-accent);
-    box-shadow: var(--shadow-md);
-}
-
-.explore-card h3 {
-    color: var(--color-accent);
-    margin-bottom: var(--space-sm);
-    font-size: 1.35rem;
-}
-
-.explore-card p {
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-md);
-}
-
-.explore-card .arrow {
-    font-size: 1.75rem;
-    color: var(--color-accent);
-    transition: transform var(--transition);
-}
-
-.explore-card:hover .arrow {
-    color: var(--color-accent-light);
 }
 
 /* Personas Grid */
@@ -1058,13 +1012,6 @@ blockquote p {
     opacity: 1;
 }
 
-.explore-card-steer {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: var(--color-text-muted);
-    margin-bottom: var(--space-sm);
-}
-
 .expectations-list {
     margin-bottom: var(--space-lg);
 }
@@ -1304,8 +1251,7 @@ blockquote p {
 
     .values-grid,
     .personas-grid,
-    .capabilities-grid,
-    .explore-grid {
+    .capabilities-grid {
         grid-template-columns: 1fr;
     }
 
