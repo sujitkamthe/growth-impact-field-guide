@@ -5,12 +5,6 @@
     'use strict';
 
     // ============================================
-    // Configuration
-    // ============================================
-
-    const BASE_PATH = '../';
-
-    // ============================================
     // State
     // ============================================
 
@@ -26,7 +20,7 @@
     async function init() {
         try {
             // Load manifest
-            const response = await fetch(BASE_PATH + 'manifest.json?_t=' + Date.now());
+            const response = await fetch('../manifest.json?_t=' + Date.now());
             if (!response.ok) {
                 throw new Error(`Failed to load manifest: ${response.status}`);
             }
@@ -63,8 +57,7 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const file = pageInfo.file;
-            const response = await fetch(BASE_PATH + file + versionParam);
+            const response = await fetch('../' + pageInfo.file + versionParam);
             if (!response.ok) {
                 console.error(`Failed to load ${pageInfo.file}: ${response.status}`);
                 return null;
@@ -91,7 +84,7 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const response = await fetch(BASE_PATH + 'content/' + iconPath + versionParam);
+            const response = await fetch('../content/' + iconPath + versionParam);
             if (!response.ok) {
                 console.warn(`Icon not found: ${iconPath}`);
                 iconCache[iconPath] = '';
@@ -353,14 +346,10 @@
             page.classList.remove('active');
         });
 
-        // Update nav links — virtual pages highlight their parent dropdown
-        const isRefPage = !!virtualPages[pageId];
+        // Update nav links
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.classList.remove('active');
-            const linkPage = link.getAttribute('data-page');
-            if (linkPage === pageId) {
-                link.classList.add('active');
-            } else if (isRefPage && linkPage === 'quick-reference' && link.closest('.dropdown') && !link.closest('.dropdown-menu')) {
+            if (link.getAttribute('data-page') === pageId) {
                 link.classList.add('active');
             }
         });
@@ -381,20 +370,10 @@
             const pageInfo = manifest.pages[pageId];
             if (pageInfo?.layout) {
                 targetPage.classList.add(pageInfo.layout + '-page');
-            } else if (virtualPages[pageId]) {
-                targetPage.classList.add('reference-page');
             }
         }
 
         targetPage.classList.add('active');
-
-        // Hide footer and lock viewport on full-viewport sidebar pages
-        const sidebarPage = pageId === 'self-assessment' || pageId === 'anti-patterns' || pageId.startsWith('persona-');
-        const footer = document.querySelector('.main-footer');
-        if (footer) {
-            footer.style.display = sidebarPage ? 'none' : '';
-        }
-        document.body.classList.toggle('sidebar-active', sidebarPage);
 
         // Scroll handling
         if (sectionId) {
@@ -432,44 +411,7 @@
         'quick-reference': renderQuickReferenceLayout
     };
 
-    // Virtual pages — rendered from sections of existing content files
-    const virtualPages = {
-        'quick-reference': {
-            renderer: renderQuickReferenceOverview,
-            title: 'Quick Reference'
-        },
-        'about': {
-            sourcePageId: 'home',
-            renderer: renderAboutPage,
-            title: 'About This Guide'
-        },
-        'common-questions': {
-            sourcePageId: 'quick-reference',
-            renderer: renderCommonQuestionsPage,
-            title: 'Common Questions'
-        },
-        'anti-patterns': {
-            sourcePageId: 'quick-reference',
-            renderer: renderAntiPatternsPage,
-            title: 'Anti-Patterns'
-        }
-    };
-
     async function renderPage(pageId, container) {
-        // Check virtual pages first
-        const vp = virtualPages[pageId];
-        if (vp) {
-            if (!vp.sourcePageId) {
-                await vp.renderer(null, container);
-                return;
-            }
-            const sourceContent = await loadContent(vp.sourcePageId);
-            if (sourceContent) {
-                await vp.renderer(sourceContent, container);
-                return;
-            }
-        }
-
         const content = await loadContent(pageId);
         if (!content) {
             container.innerHTML = '<div class="container"><h1>Page Not Found</h1></div>';
@@ -485,277 +427,41 @@
     }
 
     async function renderHomeLayout(content, container) {
-        container.innerHTML = `
-            <div class="g-home">
-                <div class="g-hero">
-                    <h1>${content.title}</h1>
-                    <p class="g-tagline">${content.tagline}</p>
-                </div>
-                <div class="g-intent-grid">
-                    <a href="#personas" data-page="personas" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Growth Stage</div>
-                        <h2>Where am I in my growth?</h2>
-                        <p>Find your persona and understand what's expected at your level.</p>
-                        <span class="g-intent-cta">Explore Personas &rarr;</span>
-                    </a>
-                    <a href="#capabilities" data-page="capabilities" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Capabilities</div>
-                        <h2>What skill should I develop?</h2>
-                        <p>Browse the five capability areas and see expectations at each level.</p>
-                        <span class="g-intent-cta">Explore Capabilities &rarr;</span>
-                    </a>
-                    <a href="#self-assessment" data-page="self-assessment" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Self-Assessment</div>
-                        <h2>Time to reflect on my growth</h2>
-                        <p>Process your feedback, rate yourself, and prepare for your team check.</p>
-                        <span class="g-intent-cta">Start Self-Assessment &rarr;</span>
-                    </a>
-                </div>
-                <div class="g-intent-grid g-intent-grid-secondary">
-                    <a href="#about" data-page="about" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Reference</div>
-                        <h2>About this guide</h2>
-                        <p>What this guide is for, who it's designed for, and how to use it.</p>
-                        <span class="g-intent-cta">Read More &rarr;</span>
-                    </a>
-                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
-                        <div class="g-intent-eyebrow">FAQ</div>
-                        <h2>Common questions</h2>
-                        <p>Personas, salary, domain switches, and choosing the right level.</p>
-                        <span class="g-intent-cta">Browse Questions &rarr;</span>
-                    </a>
-                </div>
+        let html = `
+            <div class="hero">
+                <h1>${content.title}</h1>
+                <p class="tagline">${content.tagline}</p>
             </div>
+            <div class="container">
         `;
-    }
 
-    // ============================================
-    // Virtual Page Renderers
-    // ============================================
-
-    // Quick Reference overview — card-based landing for reference sub-pages
-    async function renderQuickReferenceOverview(content, container) {
-        container.innerHTML = `
-            <div class="container reference-page-content">
-                <h1>Quick Reference</h1>
-                <p class="page-intro">Guides, common questions, and calibration tools to help you use the framework effectively.</p>
-                <div class="g-intent-grid g-ref-grid">
-                    <a href="#about" data-page="about" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Guide</div>
-                        <h2>About This Guide</h2>
-                        <p>What this guide is for, who it's designed for, and how to use it.</p>
-                        <span class="g-intent-cta">Read More &rarr;</span>
-                    </a>
-                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
-                        <div class="g-intent-eyebrow">FAQ</div>
-                        <h2>Common Questions</h2>
-                        <p>Personas, salary, domain switches, and choosing the right level.</p>
-                        <span class="g-intent-cta">Browse Questions &rarr;</span>
-                    </a>
-                    <a href="#anti-patterns" data-page="anti-patterns" class="g-intent-card">
-                        <div class="g-intent-eyebrow">Calibration</div>
-                        <h2>Anti-Patterns</h2>
-                        <p>Warning signs that expectations may be too high, plus a final self-check.</p>
-                        <span class="g-intent-cta">Review Patterns &rarr;</span>
-                    </a>
-                </div>
-            </div>
-        `;
-    }
-
-    // About This Guide — combines What This Guide Is For, Growth Is Self-Directed,
-    // How to Use This Guide, Who This Guide Is For, and What We Value from home.md
-    async function renderAboutPage(content, container) {
+        // Parse sections from body (now includes annotation info)
         const sections = parseSections(content.body);
-        const includeSections = [
-            'What This Guide Is For', 'Growth Is Self-Directed',
-            'How to Use This Guide', 'Who This Guide Is For', 'What We Value'
-        ];
-
-        let html = '<div class="container reference-page-content"><h1>About This Guide</h1>';
 
         for (const section of sections) {
-            if (!includeSections.includes(section.title)) continue;
+            const annotationType = section.annotation?.type;
 
-            if (section.annotation?.type === 'cards') {
-                html += renderCardsSection(section);
-                continue;
+            switch (annotationType) {
+                case 'cards':
+                    html += renderCardsSection(section);
+                    break;
+                case 'key-truths':
+                    html += renderKeyTruthsSection(section);
+                    break;
+                case 'usage':
+                    html += renderUsageSection(section);
+                    break;
+                case 'explore-cards':
+                    html += renderGenericSection(section);
+                    html += renderExploreCards();
+                    break;
+                default:
+                    html += renderGenericSection(section);
             }
-
-            // Render prose with H3 sub-sections as accordions
-            const cleanContent = section.content.replace(/<!--[^>]*-->/g, '');
-            const parts = cleanContent.split(/^(?=### )/m);
-            let sectionBody = '';
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    sectionBody += `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>${title}</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    sectionBody += parseMarkdownToHtml(part.trim());
-                }
-            }
-            html += `<section class="g-home-section"><h2>${section.title}</h2>${sectionBody}</section>`;
         }
 
-        html += '</div>';
+        html += `</div>`;
         container.innerHTML = html;
-
-        container.addEventListener('click', function(e) {
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-            }
-        });
-    }
-
-    // Common Questions — FAQ section from quick-reference.md as accordions
-    async function renderCommonQuestionsPage(content, container) {
-        const sections = parseSections(content.body);
-        const faqSection = sections.find(s => s.title === 'Common Questions');
-
-        let html = '<div class="container reference-page-content"><h1>Common Questions</h1>';
-
-        if (faqSection) {
-            const parts = faqSection.content.split(/^(?=### )/m);
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    html += `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>${title}</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    html += parseMarkdownToHtml(part.trim());
-                }
-            }
-        }
-
-        html += '</div>';
-        container.innerHTML = html;
-
-        container.addEventListener('click', function(e) {
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-            }
-        });
-    }
-
-    // Anti-Patterns — sidebar layout with persona nav + warning signs + self-check
-    async function renderAntiPatternsPage(content, container) {
-        const sections = parseSections(content.body);
-        const personaSections = {};
-        let antiPatternsIntro = null;
-        let universalWarnings = null;
-        let finalSelfCheck = null;
-
-        for (const section of sections) {
-            if (section.title.endsWith(' Anti-Patterns')) {
-                const personaName = section.title.replace(' Anti-Patterns', '').toLowerCase();
-                personaSections[personaName] = parseAntiPatternSection(section.content);
-            } else if (section.title === 'Anti-Patterns') {
-                antiPatternsIntro = section.content;
-            } else if (section.title === 'Universal Warning Signs') {
-                universalWarnings = section.content;
-            } else if (section.title === 'Final Self-Check') {
-                finalSelfCheck = section.content;
-            }
-        }
-
-        // Build persona panels
-        var personaPanels = '';
-        for (var i = 0; i < manifest.personas.length; i++) {
-            var pId = manifest.personas[i];
-            var persona = manifest.pages['persona-' + pId];
-            var antiPatterns = personaSections[pId];
-
-            if (persona && antiPatterns) {
-                var apBorderStyle = getPersonaBorderStyle(pId, persona.color);
-                var apBorderClass = getPersonaBorderClass(pId);
-                personaPanels += '<div class="g-sidebar-panel' + (i === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
-                    '<div class="anti-pattern-card ' + apBorderClass + '" style="' + apBorderStyle + '">' +
-                        '<div class="anti-pattern-header">' +
-                            '<h3>' + persona.name + '</h3>' +
-                            '<span class="anti-pattern-motto">' + antiPatterns.motto + '</span>' +
-                        '</div>' +
-                        '<div class="anti-pattern-grid">' +
-                            '<div class="anti-pattern-section">' +
-                                '<h4>⚠️ Signs expectations may be too high</h4>' +
-                                '<ul>' + antiPatterns.signs.map(function(s) { return '<li>' + parseInlineMarkdown(s) + '</li>'; }).join('') + '</ul>' +
-                            '</div>' +
-                            '<div class="anti-pattern-section red-flags">' +
-                                '<h4>🚩 Red flags</h4>' +
-                                '<ul>' + antiPatterns.redFlags.map(function(r) { return '<li>' + parseInlineMarkdown(r) + '</li>'; }).join('') + '</ul>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="anti-pattern-signal">' +
-                            '<strong>Signal:</strong> ' + parseInlineMarkdown(antiPatterns.signal) +
-                        '</div>' +
-                    '</div>' +
-                '</div>';
-            }
-        }
-
-        container.innerHTML =
-            '<div class="g-sidebar-layout">' +
-                '<aside class="g-sidebar">' +
-                    '<div class="g-sidebar-inner">' +
-                        '<div>' +
-                            '<h1 class="g-sa-sidebar-title">Anti-Patterns</h1>' +
-                            (antiPatternsIntro ? '<p class="g-sa-sidebar-intro">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0]) + '</p>' : '') +
-                        '</div>' +
-                        '<nav class="g-pd-nav">' +
-                            manifest.personas.map(function(pId, index) {
-                                var persona = manifest.pages['persona-' + pId];
-                                return '<button class="g-sa-nav-btn' + (index === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
-                                    '<span class="g-sa-nav-label">' + persona.name + '</span>' +
-                                '</button>';
-                            }).join('') +
-                            '<div class="g-sa-nav-divider"></div>' +
-                            '<button class="g-sa-nav-btn" data-panel="warning-signs">' +
-                                '<span class="g-sa-nav-label">Universal Warning Signs</span>' +
-                            '</button>' +
-                            '<button class="g-sa-nav-btn" data-panel="self-check">' +
-                                '<span class="g-sa-nav-label">Final Self-Check</span>' +
-                            '</button>' +
-                        '</nav>' +
-                    '</div>' +
-                '</aside>' +
-                '<div class="g-sidebar-content">' +
-                    personaPanels +
-                    (universalWarnings ? '<div class="g-sidebar-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</div>' : '') +
-                    (finalSelfCheck ? '<div class="g-sidebar-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</div>' : '') +
-                '</div>' +
-            '</div>';
-
-        // Sidebar nav click handler
-        container.addEventListener('click', function(e) {
-            var btn = e.target.closest('.g-sa-nav-btn');
-            if (!btn) return;
-            var panelId = btn.getAttribute('data-panel');
-            container.querySelectorAll('.g-sa-nav-btn').forEach(function(b) { b.classList.remove('active'); });
-            container.querySelectorAll('.g-sidebar-panel').forEach(function(p) { p.classList.remove('active'); });
-            btn.classList.add('active');
-            var panel = container.querySelector('.g-sidebar-panel[data-panel="' + panelId + '"]');
-            if (panel) panel.classList.add('active');
-        });
     }
 
     function renderCardsSection(section) {
@@ -805,13 +511,11 @@
                 <div class="explore-grid">
                     <a href="#personas" data-page="personas" class="explore-card">
                         <h3>Personas</h3>
-                        <p class="explore-card-steer">Know your current level? Start here.</p>
                         <p>Understand how impact evolves from Explorer to Strategist</p>
                         <span class="arrow">→</span>
                     </a>
                     <a href="#capabilities" data-page="capabilities" class="explore-card">
                         <h3>Capability Areas</h3>
-                        <p class="explore-card-steer">Developing a specific skill? Start here.</p>
                         <p>Explore the five dimensions of engineering impact</p>
                         <span class="arrow">→</span>
                     </a>
@@ -969,110 +673,94 @@
         const successLooksLike = extractListSection(content.body, 'Success Looks Like');
         const explicitExpectation = extractListSection(content.body, 'Explicit Expectation');
 
+        const borderStyle = getPersonaBorderStyle(personaId, content.color);
         const borderClass = getPersonaBorderClass(personaId);
+
+        let html = `
+            <div class="container">
+                <div class="detail-header ${borderClass}" style="${borderStyle} padding-left: var(--space-lg);">
+                    <div class="persona-scope">${getScopeWithTrack(personaId, content.scope)}</div>
+                    <h1>${content.name}</h1>
+                    <p class="detail-subtitle">${content.tagline}</p>
+                    <p class="detail-mindset">"${mindset}"</p>
+                    ${trustedQuestion ? `<p class="detail-trusted-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
+                </div>
+
+                <div class="impact-info">
+                    <div class="impact-block">
+                        <h4>Nature of Impact</h4>
+                        <ul>
+                            ${natureOfImpact.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    ${successLooksLike.length > 0 ? `
+                    <div class="impact-block">
+                        <h4>Success Looks Like</h4>
+                        <ul>
+                            ${successLooksLike.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    ` : ''}
+                    ${explicitExpectation.length > 0 ? `
+                    <div class="impact-block">
+                        <h4>Explicit Expectation</h4>
+                        <ul>
+                            ${explicitExpectation.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    ` : ''}
+                </div>
+
+                <h2>Expectations by Capability Area</h2>
+        `;
+
+        // Extract capability sections
         const capabilitySections = extractCapabilitySections(content.body);
 
-        // Build capability panels
-        const capPanels = manifest.capabilities.map(capId => {
+        for (const capId of manifest.capabilities) {
             const cap = manifest.pages[`capability-${capId}`];
             const capSection = capabilitySections[cap.name];
-            if (!cap || !capSection) return null;
-            return { capId, cap, capSection };
-        }).filter(Boolean);
 
-        container.innerHTML = `
-            <div class="g-sidebar-layout">
-                <aside class="g-sidebar">
-                    <div class="g-sidebar-inner">
-                        <div class="g-pd-identity ${borderClass}">
-                            <div class="persona-scope">${getScopeWithTrack(personaId, content.scope)}</div>
-                            <h1 class="g-pd-name">${content.name}</h1>
-                            <p class="g-pd-tagline">${content.tagline}</p>
-                        </div>
-
-                        <nav class="g-pd-nav">
-                            <button class="g-sa-nav-btn active" data-panel="overview">
-                                <span class="g-sa-nav-label">Overview</span>
-                            </button>
-                            <div class="g-sa-nav-divider"></div>
-                            ${capPanels.map(({ capId, cap }) => `
-                                <button class="g-sa-nav-btn" data-panel="cap-${capId}">
-                                    <span class="g-sa-nav-label">${cap.name}</span>
-                                </button>
-                            `).join('')}
-                        </nav>
-
-                        <div class="g-sidebar-footer">
-                            <a href="#self-assessment" data-page="self-assessment" class="g-pd-cta">Assess yourself &rarr;</a>
-                            <div class="g-pd-persona-nav">
-                                ${prevPersona ? `<a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}">&larr; ${prevPersona.name}</a>` : '<span></span>'}
-                                ${nextPersona ? `<a href="#persona-${nextPersona.id}" data-page="persona-${nextPersona.id}">${nextPersona.name} &rarr;</a>` : ''}
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-
-                <div class="g-sidebar-content">
-                    <div class="g-sidebar-panel active" data-panel="overview">
-                        <div class="g-pd-quote">
-                            <p class="detail-mindset">"${mindset}"</p>
-                            ${trustedQuestion ? `<p class="g-pd-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
-                        </div>
-                        <div class="g-pd-impact-grid">
-                            <div class="g-pd-impact-block">
-                                <h4>Nature of Impact</h4>
-                                <ul>${natureOfImpact.map(item => `<li>${item}</li>`).join('')}</ul>
-                            </div>
-                            ${successLooksLike.length > 0 ? `
-                            <div class="g-pd-impact-block">
-                                <h4>Success Looks Like</h4>
-                                <ul>${successLooksLike.map(item => `<li>${item}</li>`).join('')}</ul>
-                            </div>
-                            ` : ''}
-                            ${explicitExpectation.length > 0 ? `
-                            <div class="g-pd-impact-block">
-                                <h4>Explicit Expectation</h4>
-                                <ul>${explicitExpectation.map(item => `<li>${item}</li>`).join('')}</ul>
-                            </div>
-                            ` : ''}
-                        </div>
-                    </div>
-
-                    ${capPanels.map(({ capId, cap, capSection }) => `
-                        <div class="g-sidebar-panel" data-panel="cap-${capId}">
-                            <h2 class="g-pd-cap-title">
-                                ${cap.name}
-                                <a href="#capability-${capId}" data-page="capability-${capId}" class="g-pd-cap-link">View full capability &rarr;</a>
-                            </h2>
-                            <ul class="expectations-list">
-                                ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
+            if (cap && capSection) {
+                html += `
+                    <div class="capability-section">
+                        <h3>${cap.name}</h3>
+                        <ul class="expectations-list">
+                            ${capSection.expectations.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                        ${capSection.selfAssessment.length > 0 ? `
+                        <div class="self-assessment">
+                            <h4>Self-Assessment Prompts</h4>
+                            <ul>
+                                ${capSection.selfAssessment.map(item => `<li>${item}</li>`).join('')}
                             </ul>
-                            ${capSection.selfAssessment.length > 0 ? `
-                            <div class="g-pd-prompts">
-                                <h3>Self-Assessment Prompts</h3>
-                                <ul>${capSection.selfAssessment.map(item => `<li>${item}</li>`).join('')}</ul>
-                            </div>
-                            ` : ''}
                         </div>
-                    `).join('')}
+                        ` : ''}
+                    </div>
+                `;
+            }
+        }
+
+        // Navigation links
+        html += `
+                <div class="nav-links-bottom">
+                    ${prevPersona ? `
+                    <a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}" class="nav-link-prev">
+                        <span class="nav-link-label">Previous</span>
+                        <span class="nav-link-title">${prevPersona.name}</span>
+                    </a>
+                    ` : '<div></div>'}
+                    ${nextPersona ? `
+                    <a href="#persona-${nextPersona.id}" data-page="persona-${nextPersona.id}" class="nav-link-next">
+                        <span class="nav-link-label">Next</span>
+                        <span class="nav-link-title">${nextPersona.name}</span>
+                    </a>
+                    ` : ''}
                 </div>
             </div>
         `;
 
-        // Event delegation — capability nav switching
-        container.addEventListener('click', function(e) {
-            const navBtn = e.target.closest('.g-sa-nav-btn[data-panel]');
-            if (navBtn) {
-                const panelId = navBtn.dataset.panel;
-                container.querySelectorAll('.g-sa-nav-btn[data-panel]').forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.panel === panelId);
-                });
-                container.querySelectorAll('.g-sidebar-panel').forEach(panel => {
-                    panel.classList.toggle('active', panel.dataset.panel === panelId);
-                });
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-            }
-        });
+        container.innerHTML = html;
     }
 
     async function renderCapabilityDetailLayout(content, container) {
@@ -1091,8 +779,8 @@
                 <div class="detail-header">
                     <h1>${content.name}</h1>
                     <p class="detail-subtitle">${content.question}</p>
-                    <div style="color: var(--color-text-secondary);">${parseMarkdownToHtml(intro)}</div>
-                    ${note ? `<div class="highlight-box" style="margin-top: var(--space-lg);">${parseMarkdownToHtml(note)}</div>` : ''}
+                    <p style="color: var(--color-text-secondary);">${intro}</p>
+                    ${note ? `<p class="highlight-box" style="margin-top: var(--space-lg);">${note}</p>` : ''}
                 </div>
 
                 <h2>Expectations by Persona</h2>
@@ -1150,10 +838,6 @@
         html += `
                 </div>
 
-                <div class="self-assessment-cta">
-                    <a href="#self-assessment" data-page="self-assessment">Ready to assess yourself? &rarr; How to Do Your Self-Assessment</a>
-                </div>
-
                 <div class="nav-links-bottom">
                     ${prevCap ? `
                     <a href="#capability-${prevCap.id}" data-page="capability-${prevCap.id}" class="nav-link-prev">
@@ -1198,251 +882,48 @@
         `;
     }
 
-    // Splits Step 3 content into collapsible sub-sections for each rating level
-    // (Below/Meets/Exceeds) plus the intro and note paragraphs.
-    function renderRatingSubSections(markdown) {
-        const parts = markdown.split(/^(?=### )/m);
-        let html = '';
-        for (const part of parts) {
-            if (part.startsWith('### ')) {
-                const nl = part.indexOf('\n');
-                const title = part.substring(4, nl).trim();
-                const body = part.substring(nl + 1).trim();
-                html += `
-                    <div class="g-sa-collapsible collapsed">
-                        <button class="g-sa-collapsible-btn">
-                            <span>${title}</span>
-                            <span class="g-sa-collapsible-icon"></span>
-                        </button>
-                        <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                    </div>
-                `;
-            } else {
-                html += parseMarkdownToHtml(part.trim());
-            }
-        }
-        return html;
-    }
-
     async function renderSelfAssessmentLayout(content, container) {
-        const body = content.body;
+        const cssClass = slugify(content.title) + '-page';
 
-        // Split on ## headers (lookahead keeps ## attached to each part)
-        const rawParts = body.split(/^(?=## )/m);
-        const introPart = rawParts[0].trim();
+        // Split body at the calibration insert marker
+        const markerIndex = content.body.indexOf('<!-- calibration-insert -->');
+        let beforeMarker, afterMarker;
+        if (markerIndex !== -1) {
+            beforeMarker = content.body.substring(0, markerIndex);
+            afterMarker = content.body.substring(markerIndex + '<!-- calibration-insert -->'.length);
+        } else {
+            beforeMarker = content.body;
+            afterMarker = '';
+        }
 
-        const allSections = rawParts.slice(1).map(part => {
-            const nl = part.indexOf('\n');
-            return {
-                title: part.substring(3, nl).trim(),   // skip "## "
-                content: part.substring(nl + 1).trim()
-            };
-        });
-
-        const growthSection         = allSections.find(s => s.title === 'Growth Is Self-Directed');
-        const howItWorksSection     = allSections.find(s => s.title === 'How This Process Works');
-        const beforeYouBeginSection = allSections.find(s => s.title === 'Before You Begin');
-        const stepSections          = allSections.filter(s => /^Step \d+:/.test(s.title));
-        const commonTrapsSection    = allSections.find(s => s.title === 'Common Traps');
-        const keyTruthsSection      = allSections.find(s => s.title === 'Key Truths');
-
-        // Pre-load calibration content
+        // Load calibration examples
         const calibrationContent = await loadContent('calibration-examples');
 
-        // Build step body HTML for each step
-        const stepBodies = stepSections.map(step => {
-            if (step.content.includes('<!-- calibration-insert -->')) {
-                const [before] = step.content.split('<!-- calibration-insert -->');
-                // Split rating criteria into collapsible sub-sections
-                let html = renderRatingSubSections(before.trim());
-                // Wrap calibration examples in a collapsible
-                if (calibrationContent) {
-                    html += `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>Calibration Examples — see what each rating looks like in practice</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${renderCalibrationExamples(calibrationContent)}</div>
-                        </div>
-                    `;
-                }
-                return html;
-            }
-            return parseMarkdownToHtml(step.content);
-        });
-
-        // Before you begin collapsible content
-        const beforeYouBeginParts = [
-            growthSection         ? '## ' + growthSection.title         + '\n\n' + growthSection.content         : '',
-            howItWorksSection     ? '## ' + howItWorksSection.title     + '\n\n' + howItWorksSection.content     : '',
-            beforeYouBeginSection ? '## ' + beforeYouBeginSection.title + '\n\n' + beforeYouBeginSection.content : ''
-        ].filter(Boolean).join('\n\n');
-
-        // Key Truths HTML
-        const keyTruthsHtml = keyTruthsSection
-            ? `<ul class="key-truths-list">${
-                parseListItems(keyTruthsSection.content.replace(/<!--\s*key-truths\s*-->/g, '').trim())
-                    .map(item => `<li>${parseInlineMarkdown(item)}</li>`)
-                    .join('')
-              }</ul>`
-            : '';
-
-        // Sidebar + content panel layout
-        container.innerHTML = `
-            <div class="g-sidebar-layout">
-                <aside class="g-sidebar">
-                    <div class="g-sidebar-inner">
-                        <h1 class="g-sidebar-title">${content.title}</h1>
-                        <p class="g-sidebar-intro">${parseInlineMarkdown(introPart)}</p>
-
-                        <nav class="g-sa-step-nav">
-                            ${beforeYouBeginParts ? `
-                            <button class="g-sa-nav-btn g-sa-ref-btn active" data-ref="before-you-begin">
-                                <span class="g-sa-nav-label">Before you begin</span>
-                            </button>
-                            <div class="g-sa-nav-divider"></div>
-                            ` : ''}
-                            ${stepSections.map((step, i) => {
-                                const label = step.title.replace(/^Step \d+:\s*/, '');
-                                return `
-                                    <button class="g-sa-nav-btn" data-step="${i}">
-                                        <span class="g-sa-nav-num">${i + 1}</span>
-                                        <span class="g-sa-nav-label">${label}</span>
-                                    </button>
-                                `;
-                            }).join('')}
-                        </nav>
-
-                        <div class="g-sidebar-footer">
-                            ${commonTrapsSection ? `
-                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="common-traps">
-                                <span class="g-sa-nav-label">Common Traps</span>
-                            </button>
-                            ` : ''}
-                            ${keyTruthsSection ? `
-                            <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="key-truths">
-                                <span class="g-sa-nav-label">Key Truths</span>
-                            </button>
-                            ` : ''}
-                        </div>
-                    </div>
-                </aside>
-
-                <div class="g-sidebar-content">
-                    ${stepSections.map((step, i) => {
-                        const stepTitle = step.title.replace(/^Step \d+:\s*/, '');
-                        const nextStep = stepSections[i + 1];
-                        const nextTitle = nextStep ? nextStep.title.replace(/^Step \d+:\s*/, '') : null;
-                        return `
-                            <div class="g-sa-content-step" data-step="${i}">
-                                <h2 class="g-sa-content-step-title">Step ${i + 1}: ${stepTitle}</h2>
-                                ${stepBodies[i]}
-                                ${nextTitle ? `
-                                <div class="g-sa-step-footer">
-                                    <button class="g-sa-next-btn" data-next="${i + 1}">
-                                        Next: ${nextTitle} &rarr;
-                                    </button>
-                                </div>
-                                ` : ''}
-                            </div>
-                        `;
-                    }).join('')}
-                    ${beforeYouBeginParts ? `
-                    <div class="g-sa-content-step active" data-ref="before-you-begin">
-                        <h2 class="g-sa-content-step-title">Before You Begin</h2>
-                        ${parseMarkdownToHtml(beforeYouBeginParts)}
-                    </div>
-                    ` : ''}
-                    ${commonTrapsSection ? `
-                    <div class="g-sa-content-step" data-ref="common-traps">
-                        <h2 class="g-sa-content-step-title">Common Traps</h2>
-                        ${parseMarkdownToHtml(commonTrapsSection.content)}
-                    </div>
-                    ` : ''}
-                    ${keyTruthsSection ? `
-                    <div class="g-sa-content-step" data-ref="key-truths">
-                        <h2 class="g-sa-content-step-title">Key Truths</h2>
-                        ${keyTruthsHtml}
-                    </div>
-                    ` : ''}
-                </div>
-            </div>
+        let html = `
+            <div class="container ${cssClass}">
+                <h1>${content.title}</h1>
+                ${parseMarkdownToHtml(beforeMarker)}
         `;
 
-        function setActiveStep(idx) {
-            // Clear all button states (both step and ref buttons)
-            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => {
-                btn.classList.remove('active', 'done');
-            });
-            // Set step button states (only numbered buttons, not ref buttons)
-            const stepBtns = container.querySelectorAll('.g-sa-nav-btn[data-step]');
-            stepBtns.forEach((btn, i) => {
-                btn.classList.toggle('active', i === idx);
-                btn.classList.toggle('done', i < idx);
-            });
-            // Switch content panel
-            container.querySelectorAll('.g-sa-content-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            const steps = container.querySelectorAll('.g-sa-content-step[data-step]');
-            if (steps[idx]) steps[idx].classList.add('active');
+        // Insert calibration examples section
+        if (calibrationContent) {
+            html += renderCalibrationExamples(calibrationContent);
         }
 
-        function showRefPanel(refId) {
-            // Deselect all step nav buttons
-            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => btn.classList.remove('active'));
-            // Highlight the ref button
-            container.querySelectorAll('.g-sa-ref-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.ref === refId);
-            });
-            // Hide all content steps, show the ref panel
-            container.querySelectorAll('.g-sa-content-step').forEach(step => {
-                step.classList.toggle('active', step.dataset.ref === refId);
-            });
-        }
+        html += parseMarkdownToHtml(afterMarker);
+        html += `</div>`;
+        container.innerHTML = html;
 
-        // Event delegation
+        // Tab switching via event delegation
         container.addEventListener('click', function(e) {
-            // Sidebar ref buttons (Common Traps, Key Truths)
-            const refBtn = e.target.closest('.g-sa-ref-btn');
-            if (refBtn) {
-                showRefPanel(refBtn.dataset.ref);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // Sidebar step nav button
-            const navBtn = e.target.closest('.g-sa-nav-btn');
-            if (navBtn) {
-                const idx = parseInt(navBtn.dataset.step);
-                setActiveStep(idx);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // "Next step" button
-            const nextBtn = e.target.closest('.g-sa-next-btn');
-            if (nextBtn) {
-                const idx = parseInt(nextBtn.dataset.next);
-                setActiveStep(idx);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // Collapsible sections
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-                return;
-            }
-
-            // Calibration persona tabs
             const tab = e.target.closest('.persona-tab');
             if (!tab) return;
+
             const targetPersona = tab.getAttribute('data-persona');
+
             container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
             container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
+
             tab.classList.add('active');
             container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
         });
@@ -1604,31 +1085,10 @@
         // Render generic sections (FAQ, intro text, etc.) before the tabs
         for (const section of genericSections) {
             const sectionId = slugify(section.title);
-            // Split content on ### headers and render as accordions
-            const parts = section.content.split(/^(?=### )/m);
-            let sectionHtml = '';
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    sectionHtml += `
-                        <div class="g-sa-collapsible collapsed">
-                            <button class="g-sa-collapsible-btn">
-                                <span>${title}</span>
-                                <span class="g-sa-collapsible-icon"></span>
-                            </button>
-                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    sectionHtml += parseMarkdownToHtml(part.trim());
-                }
-            }
             html += `
                 <section class="reference-section">
                     ${renderHeading(2, section.title, sectionId)}
-                    ${sectionHtml}
+                    ${parseMarkdownToHtml(section.content)}
                 </section>
             `;
         }
@@ -1710,16 +1170,8 @@
         html += `</div>`;
         container.innerHTML = html;
 
-        // Event delegation (single listener, survives re-renders)
+        // Tab switching via event delegation (single listener, survives re-renders)
         container.addEventListener('click', function(e) {
-            // Accordion toggles
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-                return;
-            }
-
-            // Tab switching
             const tab = e.target.closest('.persona-tab');
             if (!tab) return;
 
@@ -1929,7 +1381,7 @@
     function extractIntroduction(body) {
         const match = body.match(/## Introduction\s*\n([\s\S]*?)(?=\n## |$)/);
         if (!match) return '';
-        return match[1].trim();
+        return match[1].trim().replace(/\n\n/g, ' ').replace(/\n/g, ' ');
     }
 
     function extractNote(body) {
