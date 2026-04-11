@@ -249,10 +249,17 @@ li {
 }
 
 .nav-brand a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-weight: 700;
     font-size: 1.15rem;
     color: var(--color-text);
     letter-spacing: -0.02em;
+}
+
+.nav-logo {
+    flex-shrink: 0;
 }
 
 .nav-links {
