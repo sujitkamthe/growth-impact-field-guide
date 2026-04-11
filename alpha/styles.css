@@ -1765,7 +1765,7 @@ blockquote p {
 }
 
 /* ============================================
-   GAMMA — Layout overrides (sticky footer + viewport-fit home)
+   ALPHA — Layout overrides (sticky footer + viewport-fit home)
    ============================================ */
 
 body {
@@ -1808,7 +1808,7 @@ body {
 }
 
 /* ============================================
-   GAMMA — Intent-Based Home Page
+   ALPHA — Intent-Based Home Page
    ============================================ */
 
 .g-home {
@@ -1906,7 +1906,7 @@ body {
 }
 
 /* ============================================
-   GAMMA — Home Page Below-Fold Content
+   ALPHA — Home Page Below-Fold Content
    ============================================ */
 
 .g-home-content {
@@ -1930,7 +1930,7 @@ body {
 }
 
 /* ============================================
-   GAMMA — Self-Assessment Accordion
+   ALPHA — Self-Assessment Accordion
    ============================================ */
 
 /* Self-assessment sidebar layout — viewport-locked so the content panel scrolls,
@@ -2163,7 +2163,7 @@ body {
 }
 
 /* ============================================
-   GAMMA — Persona Detail Sidebar Layout
+   ALPHA — Persona Detail Sidebar Layout
    ============================================ */
 
 .g-pd-layout {
