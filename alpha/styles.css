@@ -1937,6 +1937,10 @@ body.sidebar-active {
     margin-bottom: var(--space-md);
 }
 
+.g-ref-grid {
+    margin-top: var(--space-xl);
+}
+
 /* Reference pages (About, Common Questions, Anti-Patterns) */
 .reference-page-content {
     max-width: 1200px;

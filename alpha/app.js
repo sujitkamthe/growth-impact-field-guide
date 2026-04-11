@@ -360,7 +360,7 @@
             const linkPage = link.getAttribute('data-page');
             if (linkPage === pageId) {
                 link.classList.add('active');
-            } else if (isRefPage && linkPage === 'about' && link.closest('.dropdown') && !link.closest('.dropdown-menu')) {
+            } else if (isRefPage && linkPage === 'quick-reference' && link.closest('.dropdown') && !link.closest('.dropdown-menu')) {
                 link.classList.add('active');
             }
         });
@@ -434,6 +434,10 @@
 
     // Virtual pages — rendered from sections of existing content files
     const virtualPages = {
+        'quick-reference': {
+            renderer: renderQuickReferenceOverview,
+            title: 'Quick Reference'
+        },
         'about': {
             sourcePageId: 'home',
             renderer: renderAboutPage,
@@ -455,6 +459,10 @@
         // Check virtual pages first
         const vp = virtualPages[pageId];
         if (vp) {
+            if (!vp.sourcePageId) {
+                await vp.renderer(null, container);
+                return;
+            }
             const sourceContent = await loadContent(vp.sourcePageId);
             if (sourceContent) {
                 await vp.renderer(sourceContent, container);
@@ -524,6 +532,36 @@
     // ============================================
     // Virtual Page Renderers
     // ============================================
+
+    // Quick Reference overview — card-based landing for reference sub-pages
+    async function renderQuickReferenceOverview(content, container) {
+        container.innerHTML = `
+            <div class="container reference-page-content">
+                <h1>Quick Reference</h1>
+                <p class="page-intro">Guides, common questions, and calibration tools to help you use the framework effectively.</p>
+                <div class="g-intent-grid g-ref-grid">
+                    <a href="#about" data-page="about" class="g-intent-card">
+                        <div class="g-intent-eyebrow">Guide</div>
+                        <h2>About This Guide</h2>
+                        <p>What this guide is for, who it's designed for, and how to use it.</p>
+                        <span class="g-intent-cta">Read More &rarr;</span>
+                    </a>
+                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
+                        <div class="g-intent-eyebrow">FAQ</div>
+                        <h2>Common Questions</h2>
+                        <p>Personas, salary, domain switches, and choosing the right level.</p>
+                        <span class="g-intent-cta">Browse Questions &rarr;</span>
+                    </a>
+                    <a href="#anti-patterns" data-page="anti-patterns" class="g-intent-card">
+                        <div class="g-intent-eyebrow">Calibration</div>
+                        <h2>Anti-Patterns</h2>
+                        <p>Warning signs that expectations may be too high, plus a final self-check.</p>
+                        <span class="g-intent-cta">Review Patterns &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        `;
+    }
 
     // About This Guide — combines What This Guide Is For, Growth Is Self-Directed,
     // How to Use This Guide, Who This Guide Is For, and What We Value from home.md
