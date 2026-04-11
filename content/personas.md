@@ -1,6 +1,9 @@
 ---
 layout: personas-overview
 title: Personas
+diagram_title: Sahaj Growth Paths
+diagram_subtitle: "Foundation → Two Tracks"
+diagram_footer: Two paths to scale impact. Both equally valued.
 ---
 
 These personas explain **how Sahaj expects impact to evolve**, not what someone is "allowed" to do. Growth is about expanding reach across capability areas. No single straight path. Different areas mature at different speeds.
