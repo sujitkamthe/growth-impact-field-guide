@@ -389,7 +389,7 @@
         targetPage.classList.add('active');
 
         // Hide footer and lock viewport on full-viewport sidebar pages
-        const sidebarPage = pageId === 'self-assessment' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
+        const sidebarPage = pageId === 'self-assessment' || pageId === 'anti-patterns' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
         const footer = document.querySelector('.main-footer');
         if (footer) {
             footer.style.display = sidebarPage ? 'none' : '';
@@ -658,7 +658,7 @@
         });
     }
 
-    // Anti-Patterns — persona anti-pattern tabs + Universal Warning Signs + Final Self-Check
+    // Anti-Patterns — sidebar layout with persona nav + warning signs + self-check
     async function renderAntiPatternsPage(content, container) {
         const sections = parseSections(content.body);
         const personaSections = {};
@@ -679,29 +679,17 @@
             }
         }
 
-        let html = '<div class="container reference-page-content">' +
-            '<h1>Anti-Patterns</h1>';
-
-        if (antiPatternsIntro) {
-            html += '<p class="page-intro">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim()) + '</p>';
-        }
-
-        html += '<div class="persona-tabs">';
-        manifest.personas.forEach((pId, index) => {
-            const persona = manifest.pages['persona-' + pId];
-            html += '<button class="persona-tab' + (index === 0 ? ' active' : '') + '" data-persona="' + pId + '">' + persona.name + '</button>';
-        });
-        html += '</div><div class="persona-contents">';
-
-        for (let i = 0; i < manifest.personas.length; i++) {
-            const pId = manifest.personas[i];
-            const persona = manifest.pages['persona-' + pId];
-            const antiPatterns = personaSections[pId];
+        // Build persona panels
+        var personaPanels = '';
+        for (var i = 0; i < manifest.personas.length; i++) {
+            var pId = manifest.personas[i];
+            var persona = manifest.pages['persona-' + pId];
+            var antiPatterns = personaSections[pId];
 
             if (persona && antiPatterns) {
-                const apBorderStyle = getPersonaBorderStyle(pId, persona.color);
-                const apBorderClass = getPersonaBorderClass(pId);
-                html += '<div class="persona-content' + (i === 0 ? ' active' : '') + '" data-persona="' + pId + '">' +
+                var apBorderStyle = getPersonaBorderStyle(pId, persona.color);
+                var apBorderClass = getPersonaBorderClass(pId);
+                personaPanels += '<div class="g-pd-panel' + (i === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
                     '<div class="anti-pattern-card ' + apBorderClass + '" style="' + apBorderStyle + '">' +
                         '<div class="anti-pattern-header">' +
                             '<h3>' + persona.name + '</h3>' +
@@ -725,27 +713,48 @@
             }
         }
 
-        html += '</div>';
+        container.innerHTML =
+            '<div class="g-pd-layout">' +
+                '<aside class="g-pd-sidebar">' +
+                    '<div class="g-pd-sidebar-inner">' +
+                        '<div class="g-ap-identity">' +
+                            '<h1 class="g-pd-name">Anti-Patterns</h1>' +
+                            (antiPatternsIntro ? '<p class="g-pd-tagline">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0]) + '</p>' : '') +
+                        '</div>' +
+                        '<nav class="g-pd-nav">' +
+                            manifest.personas.map(function(pId, index) {
+                                var persona = manifest.pages['persona-' + pId];
+                                return '<button class="g-sa-nav-btn' + (index === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
+                                    '<span class="g-sa-nav-label">' + persona.name + '</span>' +
+                                '</button>';
+                            }).join('') +
+                            '<div class="g-sa-nav-divider"></div>' +
+                            '<button class="g-sa-nav-btn" data-panel="warning-signs">' +
+                                '<span class="g-sa-nav-label">Universal Warning Signs</span>' +
+                            '</button>' +
+                            '<button class="g-sa-nav-btn" data-panel="self-check">' +
+                                '<span class="g-sa-nav-label">Final Self-Check</span>' +
+                            '</button>' +
+                        '</nav>' +
+                    '</div>' +
+                '</aside>' +
+                '<div class="g-pd-content-panel">' +
+                    personaPanels +
+                    (universalWarnings ? '<div class="g-pd-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</div>' : '') +
+                    (finalSelfCheck ? '<div class="g-pd-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</div>' : '') +
+                '</div>' +
+            '</div>';
 
-        if (universalWarnings) {
-            html += '<section class="universal-warnings"><h2>Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</section>';
-        }
-        if (finalSelfCheck) {
-            html += '<section class="final-self-check"><h2>Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</section>';
-        }
-
-        html += '</div>';
-        container.innerHTML = html;
-
+        // Sidebar nav click handler
         container.addEventListener('click', function(e) {
-            const tab = e.target.closest('.persona-tab');
-            if (!tab) return;
-            const targetPersona = tab.getAttribute('data-persona');
-            container.querySelectorAll('.persona-tab').forEach(function(t) { t.classList.remove('active'); });
-            container.querySelectorAll('.persona-content').forEach(function(c) { c.classList.remove('active'); });
-            tab.classList.add('active');
-            var target = container.querySelector('.persona-content[data-persona="' + targetPersona + '"]');
-            if (target) target.classList.add('active');
+            var btn = e.target.closest('.g-sa-nav-btn');
+            if (!btn) return;
+            var panelId = btn.getAttribute('data-panel');
+            container.querySelectorAll('.g-sa-nav-btn').forEach(function(b) { b.classList.remove('active'); });
+            container.querySelectorAll('.g-pd-panel').forEach(function(p) { p.classList.remove('active'); });
+            btn.classList.add('active');
+            var panel = container.querySelector('.g-pd-panel[data-panel="' + panelId + '"]');
+            if (panel) panel.classList.add('active');
         });
     }
 
