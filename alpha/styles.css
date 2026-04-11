@@ -1798,12 +1798,14 @@ body.sidebar-active {
 
 /* Sidebar-layout pages — flex + no overflow so content panel scrolls internally */
 .self-assessment-page.active,
-.persona-detail-page.active {
+.persona-detail-page.active,
+.reference-page.active {
     display: flex;
     flex-direction: column;
     flex: 1;
     min-height: 0;
     overflow: hidden;
+    padding: 0;
 }
 
 .main-footer {
@@ -1954,15 +1956,15 @@ body.sidebar-active {
    ALPHA — Self-Assessment Accordion
    ============================================ */
 
-/* Self-assessment sidebar layout — viewport-locked so the content panel scrolls,
+/* Shared sidebar layout — viewport-locked so the content panel scrolls,
    not the page. Uses vh directly instead of relying on flex chain constraints. */
-.g-sa-layout {
+.g-sidebar-layout {
     display: flex;
     height: calc(100vh - 72px);
     overflow: hidden;
 }
 
-.g-sa-sidebar {
+.g-sidebar {
     width: 300px;
     flex-shrink: 0;
     border-right: 1px solid var(--color-border);
@@ -1971,13 +1973,28 @@ body.sidebar-active {
     flex-direction: column;
 }
 
-.g-sa-sidebar-inner {
-    padding: var(--space-md) var(--space-lg) var(--space-md);
+.g-sidebar-inner {
+    padding: var(--space-md) var(--space-lg);
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    flex: 1;
 }
+
+.g-sidebar-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
+}
+
+.g-sidebar-panel {
+    display: none;
+    animation: fadeIn 0.2s ease;
+}
+
+.g-sidebar-panel.active {
+    display: block;
+}
+
 
 .g-sa-sidebar-title {
     font-size: 1.05rem;
@@ -2073,12 +2090,6 @@ body.sidebar-active {
     border-top: 1px solid var(--color-border-light);
 }
 
-/* Content panel */
-.g-sa-content-panel {
-    flex: 1;
-    overflow-y: auto;
-    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
-}
 
 .g-sa-content-step {
     display: none;
@@ -2187,25 +2198,6 @@ body.sidebar-active {
    ALPHA — Persona Detail Sidebar Layout
    ============================================ */
 
-.g-pd-layout {
-    display: flex;
-    height: calc(100vh - 72px);
-    overflow: hidden;
-}
-
-.g-pd-sidebar {
-    width: 300px;
-    flex-shrink: 0;
-    border-right: 1px solid var(--color-border);
-    overflow-y: auto;
-}
-
-.g-pd-sidebar-inner {
-    padding: var(--space-md) var(--space-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm);
-}
 
 .g-pd-identity {
     border-left: 3px solid var(--color-accent);
@@ -2267,21 +2259,6 @@ body.sidebar-active {
     color: var(--color-accent);
 }
 
-/* Content panel */
-.g-pd-content-panel {
-    flex: 1;
-    overflow-y: auto;
-    padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
-}
-
-.g-pd-panel {
-    display: none;
-}
-
-.g-pd-panel.active {
-    display: block;
-    animation: fadeIn 0.2s ease;
-}
 
 /* Overview panel */
 .g-pd-quote {
@@ -2390,19 +2367,20 @@ body.sidebar-active {
         overflow: auto;
     }
 
-    .g-sa-layout {
+    .g-sidebar-layout {
         flex-direction: column;
         overflow: visible;
+        height: auto;
     }
 
-    .g-sa-sidebar {
+    .g-sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--color-border);
         overflow: visible;
     }
 
-    .g-sa-content-panel {
+    .g-sidebar-content {
         padding: var(--space-lg);
         overflow: visible;
     }
@@ -2410,22 +2388,5 @@ body.sidebar-active {
     .persona-detail-page,
     .persona-detail-page.active {
         overflow: auto;
-    }
-
-    .g-pd-layout {
-        flex-direction: column;
-        overflow: visible;
-        height: auto;
-    }
-
-    .g-pd-sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--color-border);
-    }
-
-    .g-pd-content-panel {
-        padding: var(--space-lg);
-        overflow: visible;
     }
 }

@@ -689,7 +689,7 @@
             if (persona && antiPatterns) {
                 var apBorderStyle = getPersonaBorderStyle(pId, persona.color);
                 var apBorderClass = getPersonaBorderClass(pId);
-                personaPanels += '<div class="g-pd-panel' + (i === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
+                personaPanels += '<div class="g-sidebar-panel' + (i === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
                     '<div class="anti-pattern-card ' + apBorderClass + '" style="' + apBorderStyle + '">' +
                         '<div class="anti-pattern-header">' +
                             '<h3>' + persona.name + '</h3>' +
@@ -714,12 +714,12 @@
         }
 
         container.innerHTML =
-            '<div class="g-pd-layout">' +
-                '<aside class="g-pd-sidebar">' +
-                    '<div class="g-pd-sidebar-inner">' +
-                        '<div class="g-ap-identity">' +
-                            '<h1 class="g-pd-name">Anti-Patterns</h1>' +
-                            (antiPatternsIntro ? '<p class="g-pd-tagline">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0]) + '</p>' : '') +
+            '<div class="g-sidebar-layout">' +
+                '<aside class="g-sidebar">' +
+                    '<div class="g-sidebar-inner">' +
+                        '<div>' +
+                            '<h1 class="g-sa-sidebar-title">Anti-Patterns</h1>' +
+                            (antiPatternsIntro ? '<p class="g-sa-sidebar-intro">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0]) + '</p>' : '') +
                         '</div>' +
                         '<nav class="g-pd-nav">' +
                             manifest.personas.map(function(pId, index) {
@@ -738,10 +738,10 @@
                         '</nav>' +
                     '</div>' +
                 '</aside>' +
-                '<div class="g-pd-content-panel">' +
+                '<div class="g-sidebar-content">' +
                     personaPanels +
-                    (universalWarnings ? '<div class="g-pd-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</div>' : '') +
-                    (finalSelfCheck ? '<div class="g-pd-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</div>' : '') +
+                    (universalWarnings ? '<div class="g-sidebar-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</div>' : '') +
+                    (finalSelfCheck ? '<div class="g-sidebar-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</div>' : '') +
                 '</div>' +
             '</div>';
 
@@ -751,9 +751,9 @@
             if (!btn) return;
             var panelId = btn.getAttribute('data-panel');
             container.querySelectorAll('.g-sa-nav-btn').forEach(function(b) { b.classList.remove('active'); });
-            container.querySelectorAll('.g-pd-panel').forEach(function(p) { p.classList.remove('active'); });
+            container.querySelectorAll('.g-sidebar-panel').forEach(function(p) { p.classList.remove('active'); });
             btn.classList.add('active');
-            var panel = container.querySelector('.g-pd-panel[data-panel="' + panelId + '"]');
+            var panel = container.querySelector('.g-sidebar-panel[data-panel="' + panelId + '"]');
             if (panel) panel.classList.add('active');
         });
     }
@@ -981,9 +981,9 @@
         }).filter(Boolean);
 
         container.innerHTML = `
-            <div class="g-pd-layout">
-                <aside class="g-pd-sidebar">
-                    <div class="g-pd-sidebar-inner">
+            <div class="g-sidebar-layout">
+                <aside class="g-sidebar">
+                    <div class="g-sidebar-inner">
                         <div class="g-pd-identity ${borderClass}">
                             <div class="persona-scope">${getScopeWithTrack(personaId, content.scope)}</div>
                             <h1 class="g-pd-name">${content.name}</h1>
@@ -1002,7 +1002,7 @@
                             `).join('')}
                         </nav>
 
-                        <div class="g-pd-sidebar-footer">
+                        <div class="g-sidebar-footer">
                             <a href="#self-assessment" data-page="self-assessment" class="g-pd-cta">Assess yourself &rarr;</a>
                             <div class="g-pd-persona-nav">
                                 ${prevPersona ? `<a href="#persona-${prevPersona.id}" data-page="persona-${prevPersona.id}">&larr; ${prevPersona.name}</a>` : '<span></span>'}
@@ -1012,8 +1012,8 @@
                     </div>
                 </aside>
 
-                <div class="g-pd-content-panel">
-                    <div class="g-pd-panel active" data-panel="overview">
+                <div class="g-sidebar-content">
+                    <div class="g-sidebar-panel active" data-panel="overview">
                         <div class="g-pd-quote">
                             <p class="detail-mindset">"${mindset}"</p>
                             ${trustedQuestion ? `<p class="g-pd-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
@@ -1039,7 +1039,7 @@
                     </div>
 
                     ${capPanels.map(({ capId, cap, capSection }) => `
-                        <div class="g-pd-panel" data-panel="cap-${capId}">
+                        <div class="g-sidebar-panel" data-panel="cap-${capId}">
                             <h2 class="g-pd-cap-title">
                                 ${cap.name}
                                 <a href="#capability-${capId}" data-page="capability-${capId}" class="g-pd-cap-link">View full capability &rarr;</a>
@@ -1067,10 +1067,10 @@
                 container.querySelectorAll('.g-sa-nav-btn[data-panel]').forEach(btn => {
                     btn.classList.toggle('active', btn.dataset.panel === panelId);
                 });
-                container.querySelectorAll('.g-pd-panel').forEach(panel => {
+                container.querySelectorAll('.g-sidebar-panel').forEach(panel => {
                     panel.classList.toggle('active', panel.dataset.panel === panelId);
                 });
-                container.querySelector('.g-pd-content-panel').scrollTop = 0;
+                container.querySelector('.g-sidebar-content').scrollTop = 0;
             }
         });
     }
@@ -1290,11 +1290,11 @@
 
         // Sidebar + content panel layout
         container.innerHTML = `
-            <div class="g-sa-layout">
-                <aside class="g-sa-sidebar">
-                    <div class="g-sa-sidebar-inner">
-                        <h1 class="g-sa-sidebar-title">${content.title}</h1>
-                        <p class="g-sa-sidebar-intro">${parseInlineMarkdown(introPart)}</p>
+            <div class="g-sidebar-layout">
+                <aside class="g-sidebar">
+                    <div class="g-sidebar-inner">
+                        <h1 class="g-sidebar-title">${content.title}</h1>
+                        <p class="g-sidebar-intro">${parseInlineMarkdown(introPart)}</p>
 
                         <nav class="g-sa-step-nav">
                             ${beforeYouBeginParts ? `
@@ -1314,7 +1314,7 @@
                             }).join('')}
                         </nav>
 
-                        <div class="g-sa-sidebar-footer">
+                        <div class="g-sidebar-footer">
                             ${commonTrapsSection ? `
                             <button class="g-sa-nav-btn g-sa-ref-btn" data-ref="common-traps">
                                 <span class="g-sa-nav-label">Common Traps</span>
@@ -1329,7 +1329,7 @@
                     </div>
                 </aside>
 
-                <div class="g-sa-content-panel">
+                <div class="g-sidebar-content">
                     ${stepSections.map((step, i) => {
                         const stepTitle = step.title.replace(/^Step \d+:\s*/, '');
                         const nextStep = stepSections[i + 1];
@@ -1408,7 +1408,7 @@
             const refBtn = e.target.closest('.g-sa-ref-btn');
             if (refBtn) {
                 showRefPanel(refBtn.dataset.ref);
-                container.querySelector('.g-sa-content-panel').scrollTop = 0;
+                container.querySelector('.g-sidebar-content').scrollTop = 0;
                 return;
             }
 
@@ -1417,7 +1417,7 @@
             if (navBtn) {
                 const idx = parseInt(navBtn.dataset.step);
                 setActiveStep(idx);
-                container.querySelector('.g-sa-content-panel').scrollTop = 0;
+                container.querySelector('.g-sidebar-content').scrollTop = 0;
                 return;
             }
 
@@ -1426,7 +1426,7 @@
             if (nextBtn) {
                 const idx = parseInt(nextBtn.dataset.next);
                 setActiveStep(idx);
-                container.querySelector('.g-sa-content-panel').scrollTop = 0;
+                container.querySelector('.g-sidebar-content').scrollTop = 0;
                 return;
             }
 
