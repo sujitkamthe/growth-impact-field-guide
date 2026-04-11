@@ -20,13 +20,16 @@ content/
 ├── personas.md                # Personas overview page
 ├── capabilities.md            # Capabilities overview page
 ├── self-assessment.md         # Self-assessment guide
-├── anti-patterns.md           # Anti-patterns guide
+├── quick-reference.md         # Quick reference guide
+├── calibration-examples.md    # Calibration examples
 ├── personas/
 │   ├── explorer.md
 │   ├── artisan.md
 │   ├── catalyst.md
 │   ├── multiplier.md
-│   └── strategist.md
+│   ├── amplifier.md
+│   ├── strategist.md
+│   └── pioneer.md
 ├── capabilities/
 │   ├── technical-delivery.md
 │   ├── consulting.md
@@ -102,16 +105,20 @@ order: 1
 Use HTML comments to trigger special rendering:
 
 - `<!-- cards -->` - Render following h3 sections as cards
+- `<!-- key-truths -->` - Render section as key truths list
+- `<!-- usage -->` - Render section as usage guide
+- `<!-- explore-cards -->` - Insert explore cards (links to Personas/Capabilities)
+- `<!-- balance -->` - Render section with balance styling
 - `<!-- diagram: impact-rings -->` - Insert impact rings diagram
 - `<!-- diagram: capability-radar -->` - Insert capability radar diagram
 - `<!-- persona-cards -->` - Insert persona cards grid
 - `<!-- capability-cards -->` - Insert capability cards grid
-- `<!-- explore-cards -->` - Insert explore cards (links to Personas/Capabilities)
+- `<!-- tracks-intro -->` - Render intro text before persona cards
+- `<!-- calibration-insert -->` - Insert calibration examples content
 
 ## File Structure
 
 ```
-website/
 ├── index.html      # Minimal HTML shell
 ├── styles.css      # Styling (minimalistic theme)
 ├── manifest.json   # Generated metadata (don't edit directly)
