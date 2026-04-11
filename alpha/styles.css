@@ -1853,7 +1853,7 @@ body.sidebar-active {
 .g-intent-grid-secondary {
     grid-template-columns: repeat(2, 1fr);
     max-width: 740px;
-    margin-top: var(--space-sm);
+    margin-top: var(--space-xl);
 }
 
 .g-intent-card {
