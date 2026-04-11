@@ -389,7 +389,7 @@
         targetPage.classList.add('active');
 
         // Hide footer and lock viewport on full-viewport sidebar pages
-        const sidebarPage = pageId === 'self-assessment' || pageId === 'anti-patterns' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
+        const sidebarPage = pageId === 'self-assessment' || pageId === 'anti-patterns' || pageId.startsWith('persona-');
         const footer = document.querySelector('.main-footer');
         if (footer) {
             footer.style.display = sidebarPage ? 'none' : '';
