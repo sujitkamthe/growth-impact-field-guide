@@ -2,6 +2,7 @@
 layout: home
 title: The Field Guide to Growth & Impact
 tagline: Clarity without hierarchy. Impact over titles.
+footer_note: This framework supports thoughtful, self-owned conversations about growth, impact, and contribution.
 ---
 
 ## What This Guide Is For
@@ -10,7 +11,39 @@ This is a shared vocabulary for talking about growth at Sahaj. It describes **ho
 
 We intentionally do not use formal titles or grades. This guide exists to create **clarity without hierarchy**, to make growth paths visible, and to support honest conversations about expectations and feedback.
 
-<!-- explore-cards -->
+<!-- intent-cards -->
+
+### Where am I in my growth?
+eyebrow: Growth Stage
+link: personas
+cta: Explore Personas
+Find your persona and understand what's expected at your level.
+
+### What skill should I develop?
+eyebrow: Capabilities
+link: capabilities
+cta: Explore Capabilities
+Browse the five capability areas and see expectations at each level.
+
+### Time to reflect on my growth
+eyebrow: Self-Assessment
+link: self-assessment
+cta: Start Self-Assessment
+Process your feedback, rate yourself, and prepare for your team check.
+
+<!-- intent-cards-secondary -->
+
+### About this guide
+eyebrow: Reference
+link: about
+cta: Read More
+What this guide is for, who it's designed for, and how to use it.
+
+### Common questions
+eyebrow: FAQ
+link: common-questions
+cta: Browse Questions
+Personas, salary, domain switches, and choosing the right level.
 
 ## Growth Is Self-Directed
 
