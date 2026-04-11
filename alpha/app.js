@@ -382,12 +382,13 @@
 
         targetPage.classList.add('active');
 
-        // Hide footer on full-viewport sidebar pages
+        // Hide footer and lock viewport on full-viewport sidebar pages
+        const sidebarPage = pageId === 'self-assessment' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
         const footer = document.querySelector('.main-footer');
         if (footer) {
-            const sidebarPage = pageId === 'self-assessment' || pageId.startsWith('persona-') || pageId.startsWith('capability-');
             footer.style.display = sidebarPage ? 'none' : '';
         }
+        document.body.classList.toggle('sidebar-active', sidebarPage);
 
         // Scroll handling
         if (sectionId) {
@@ -859,8 +860,8 @@
                 <div class="detail-header">
                     <h1>${content.name}</h1>
                     <p class="detail-subtitle">${content.question}</p>
-                    <p style="color: var(--color-text-secondary);">${intro}</p>
-                    ${note ? `<p class="highlight-box" style="margin-top: var(--space-lg);">${note}</p>` : ''}
+                    <div style="color: var(--color-text-secondary);">${parseMarkdownToHtml(intro)}</div>
+                    ${note ? `<div class="highlight-box" style="margin-top: var(--space-lg);">${parseMarkdownToHtml(note)}</div>` : ''}
                 </div>
 
                 <h2>Expectations by Persona</h2>

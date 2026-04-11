@@ -1773,6 +1773,11 @@ body {
     flex-direction: column;
 }
 
+body.sidebar-active {
+    height: 100vh;
+    overflow: hidden;
+}
+
 .content {
     flex: 1;
     display: flex;
