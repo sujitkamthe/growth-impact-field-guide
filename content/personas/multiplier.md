@@ -6,6 +6,7 @@ scope: Team-level impact
 tagline: Scaling impact via others
 color: "#e17055"
 order: 4
+group: team
 ---
 
 ## Mindset

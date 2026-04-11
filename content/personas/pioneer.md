@@ -7,6 +7,7 @@ tagline: Opening new territories
 color: "#6a7a8a"
 order: 5.5
 track: ic
+group: org
 ---
 
 ## Mindset

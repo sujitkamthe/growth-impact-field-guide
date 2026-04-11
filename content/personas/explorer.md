@@ -6,6 +6,7 @@ scope: Task-level impact
 tagline: Learning the terrain
 color: "#6c5ce7"
 order: 1
+group: foundation
 ---
 
 ## Mindset

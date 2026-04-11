@@ -68,7 +68,7 @@ function build() {
         if (relativePath.startsWith('personas/')) {
             // Persona detail pages: personas/explorer.md -> persona-explorer
             pageId = `persona-${frontmatter.id}`;
-            personaEntries.push({ id: frontmatter.id, order: frontmatter.order });
+            personaEntries.push({ id: frontmatter.id, order: frontmatter.order, group: frontmatter.group });
         } else if (relativePath.startsWith('capabilities/')) {
             // Capability detail pages: capabilities/consulting.md -> capability-consulting
             pageId = `capability-${frontmatter.id}`;
@@ -96,6 +96,17 @@ function build() {
 
     manifest.personas = personaEntries.map(p => p.id);
     manifest.capabilities = capabilityEntries.map(c => c.id);
+
+    // Build persona groups from explicit frontmatter group field
+    manifest.personaGroups = {};
+    for (const entry of personaEntries) {
+        if (entry.group) {
+            if (!manifest.personaGroups[entry.group]) {
+                manifest.personaGroups[entry.group] = [];
+            }
+            manifest.personaGroups[entry.group].push(entry.id);
+        }
+    }
 
     // Generate build hash from source files
     const hashSources = ['app.js', 'styles.css', 'frontmatter-parser.js']

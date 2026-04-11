@@ -6,6 +6,7 @@ scope: Org-level impact
 tagline: Shaping the long-term vision
 color: "#2d3436"
 order: 5
+group: org
 ---
 
 ## Mindset

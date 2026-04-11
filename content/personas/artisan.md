@@ -6,6 +6,7 @@ scope: Feature-level impact
 tagline: Mastering the craft
 color: "#00b894"
 order: 2
+group: foundation
 ---
 
 ## Mindset

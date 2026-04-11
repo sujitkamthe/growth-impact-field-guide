@@ -7,6 +7,7 @@ tagline: Scaling impact via artifacts
 color: "#e8a050"
 order: 4.5
 track: ic
+group: team
 ---
 
 ## Mindset

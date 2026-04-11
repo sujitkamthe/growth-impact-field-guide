@@ -6,6 +6,7 @@ scope: Project-level impact
 tagline: Sparking change & unblocking
 color: "#0984e3"
 order: 3
+group: foundation
 ---
 
 ## Mindset
