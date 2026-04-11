@@ -327,6 +327,12 @@
             }
         });
 
+        window.addEventListener('hashchange', function() {
+            const hash = window.location.hash.slice(1) || 'home';
+            const [pageId, sectionId] = hash.split('/');
+            navigateTo(pageId, false, sectionId);
+        });
+
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
 

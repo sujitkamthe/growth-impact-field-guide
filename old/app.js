@@ -320,6 +320,12 @@
             }
         });
 
+        window.addEventListener('hashchange', function() {
+            var hash = window.location.hash.slice(1) || 'home';
+            var parts = hash.split('/');
+            navigateTo(parts[0], false, parts[1]);
+        });
+
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
 
