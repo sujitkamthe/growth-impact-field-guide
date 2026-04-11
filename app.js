@@ -36,6 +36,7 @@
             populateNavDropdowns();
             populateFooter();
             initNavigation();
+            initInteractivePatterns();
             initDarkMode();
 
             // Handle initial page from URL hash
@@ -308,6 +309,109 @@
                 ${note ? `<p class="footer-note">${escapeHtml(note)}</p>` : ''}
             `;
         }
+    }
+
+    // Single delegated handler for interactive UI patterns:
+    // collapsibles, persona tabs, sidebar nav, and "next step" buttons.
+    function initInteractivePatterns() {
+        document.getElementById('app').addEventListener('click', function(e) {
+            // Collapsible toggle
+            const collBtn = e.target.closest('.g-sa-collapsible-btn');
+            if (collBtn) {
+                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
+                return;
+            }
+
+            // Persona tab switching
+            const tab = e.target.closest('.persona-tab');
+            if (tab) {
+                const container = tab.closest('.persona-tabs')?.parentElement;
+                if (!container) return;
+                const targetPersona = tab.getAttribute('data-persona');
+                container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
+                container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
+                return;
+            }
+
+            // Sidebar nav panel switching
+            const navBtn = e.target.closest('.g-sa-nav-btn[data-panel]');
+            if (navBtn) {
+                const layout = navBtn.closest('.g-sidebar-layout');
+                if (!layout) return;
+                const panelId = navBtn.getAttribute('data-panel');
+                layout.querySelectorAll('.g-sa-nav-btn').forEach(b => b.classList.remove('active'));
+                layout.querySelectorAll('.g-sidebar-panel').forEach(p => p.classList.remove('active'));
+                navBtn.classList.add('active');
+                const panel = layout.querySelector(`.g-sidebar-panel[data-panel="${panelId}"]`);
+                if (panel) panel.classList.add('active');
+                const content = layout.querySelector('.g-sidebar-content');
+                if (content) content.scrollTop = 0;
+                return;
+            }
+
+            // Self-assessment step nav
+            const stepBtn = e.target.closest('.g-sa-nav-btn[data-step]');
+            if (stepBtn) {
+                const layout = stepBtn.closest('.g-sidebar-layout');
+                if (!layout) return;
+                const idx = parseInt(stepBtn.dataset.step);
+                setActiveStep(layout, idx);
+                return;
+            }
+
+            // Self-assessment ref nav (Before You Begin, Common Traps, Key Truths)
+            const refBtn = e.target.closest('.g-sa-ref-btn[data-ref]');
+            if (refBtn) {
+                const layout = refBtn.closest('.g-sidebar-layout');
+                if (!layout) return;
+                showRefPanel(layout, refBtn.dataset.ref);
+                return;
+            }
+
+            // Next step button
+            const nextBtn = e.target.closest('.g-sa-next-btn');
+            if (nextBtn) {
+                const layout = nextBtn.closest('.g-sidebar-layout');
+                if (!layout) return;
+                const idx = parseInt(nextBtn.dataset.next);
+                setActiveStep(layout, idx);
+                return;
+            }
+        });
+    }
+
+    // Helper: activate a numbered step in a sidebar layout
+    function setActiveStep(layout, idx) {
+        layout.querySelectorAll('.g-sa-nav-btn').forEach(btn => {
+            btn.classList.remove('active', 'done');
+        });
+        const stepBtns = layout.querySelectorAll('.g-sa-nav-btn[data-step]');
+        stepBtns.forEach((btn, i) => {
+            btn.classList.toggle('active', i === idx);
+            btn.classList.toggle('done', i < idx);
+        });
+        layout.querySelectorAll('.g-sa-content-step').forEach(step => {
+            step.classList.remove('active');
+        });
+        const steps = layout.querySelectorAll('.g-sa-content-step[data-step]');
+        if (steps[idx]) steps[idx].classList.add('active');
+        const content = layout.querySelector('.g-sidebar-content');
+        if (content) content.scrollTop = 0;
+    }
+
+    // Helper: show a reference panel in a sidebar layout
+    function showRefPanel(layout, refId) {
+        layout.querySelectorAll('.g-sa-nav-btn').forEach(btn => btn.classList.remove('active'));
+        layout.querySelectorAll('.g-sa-ref-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.ref === refId);
+        });
+        layout.querySelectorAll('.g-sa-content-step').forEach(step => {
+            step.classList.toggle('active', step.dataset.ref === refId);
+        });
+        const content = layout.querySelector('.g-sidebar-content');
+        if (content) content.scrollTop = 0;
     }
 
     function initNavigation() {
@@ -648,13 +752,6 @@
 
         html += '</div>';
         container.innerHTML = html;
-
-        container.addEventListener('click', function(e) {
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-            }
-        });
     }
 
     // Common Questions — FAQ section from quick-reference.md as accordions
@@ -688,13 +785,6 @@
 
         html += '</div>';
         container.innerHTML = html;
-
-        container.addEventListener('click', function(e) {
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-            }
-        });
     }
 
     // Anti-Patterns — sidebar layout with persona nav + warning signs + self-check
@@ -790,17 +880,6 @@
             </div>
         `;
 
-        // Sidebar nav click handler
-        container.addEventListener('click', e => {
-            const btn = e.target.closest('.g-sa-nav-btn');
-            if (!btn) return;
-            const panelId = btn.getAttribute('data-panel');
-            container.querySelectorAll('.g-sa-nav-btn').forEach(b => b.classList.remove('active'));
-            container.querySelectorAll('.g-sidebar-panel').forEach(p => p.classList.remove('active'));
-            btn.classList.add('active');
-            const panel = container.querySelector(`.g-sidebar-panel[data-panel="${panelId}"]`);
-            if (panel) panel.classList.add('active');
-        });
     }
 
     function renderCardsSection(section) {
@@ -1083,20 +1162,6 @@
             </div>
         `;
 
-        // Event delegation — capability nav switching
-        container.addEventListener('click', function(e) {
-            const navBtn = e.target.closest('.g-sa-nav-btn[data-panel]');
-            if (navBtn) {
-                const panelId = navBtn.dataset.panel;
-                container.querySelectorAll('.g-sa-nav-btn[data-panel]').forEach(btn => {
-                    btn.classList.toggle('active', btn.dataset.panel === panelId);
-                });
-                container.querySelectorAll('.g-sidebar-panel').forEach(panel => {
-                    panel.classList.toggle('active', panel.dataset.panel === panelId);
-                });
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-            }
-        });
     }
 
     async function renderCapabilityDetailLayout(content, container) {
@@ -1196,20 +1261,6 @@
         `;
 
         container.innerHTML = html;
-
-        // Tab switching via event delegation (single listener, survives re-renders)
-        container.addEventListener('click', function(e) {
-            const tab = e.target.closest('.persona-tab');
-            if (!tab) return;
-
-            const targetPersona = tab.getAttribute('data-persona');
-
-            container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
-            container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
-
-            tab.classList.add('active');
-            container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
-        });
     }
 
     async function renderMarkdownPageLayout(content, container) {
@@ -1394,82 +1445,7 @@
             </div>
         `;
 
-        function setActiveStep(idx) {
-            // Clear all button states (both step and ref buttons)
-            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => {
-                btn.classList.remove('active', 'done');
-            });
-            // Set step button states (only numbered buttons, not ref buttons)
-            const stepBtns = container.querySelectorAll('.g-sa-nav-btn[data-step]');
-            stepBtns.forEach((btn, i) => {
-                btn.classList.toggle('active', i === idx);
-                btn.classList.toggle('done', i < idx);
-            });
-            // Switch content panel
-            container.querySelectorAll('.g-sa-content-step').forEach(step => {
-                step.classList.remove('active');
-            });
-            const steps = container.querySelectorAll('.g-sa-content-step[data-step]');
-            if (steps[idx]) steps[idx].classList.add('active');
-        }
-
-        function showRefPanel(refId) {
-            // Deselect all step nav buttons
-            container.querySelectorAll('.g-sa-nav-btn').forEach(btn => btn.classList.remove('active'));
-            // Highlight the ref button
-            container.querySelectorAll('.g-sa-ref-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.ref === refId);
-            });
-            // Hide all content steps, show the ref panel
-            container.querySelectorAll('.g-sa-content-step').forEach(step => {
-                step.classList.toggle('active', step.dataset.ref === refId);
-            });
-        }
-
-        // Event delegation
-        container.addEventListener('click', function(e) {
-            // Sidebar ref buttons (Common Traps, Key Truths)
-            const refBtn = e.target.closest('.g-sa-ref-btn');
-            if (refBtn) {
-                showRefPanel(refBtn.dataset.ref);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // Sidebar step nav button
-            const navBtn = e.target.closest('.g-sa-nav-btn');
-            if (navBtn) {
-                const idx = parseInt(navBtn.dataset.step);
-                setActiveStep(idx);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // "Next step" button
-            const nextBtn = e.target.closest('.g-sa-next-btn');
-            if (nextBtn) {
-                const idx = parseInt(nextBtn.dataset.next);
-                setActiveStep(idx);
-                container.querySelector('.g-sidebar-content').scrollTop = 0;
-                return;
-            }
-
-            // Collapsible sections
-            const collBtn = e.target.closest('.g-sa-collapsible-btn');
-            if (collBtn) {
-                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
-                return;
-            }
-
-            // Calibration persona tabs
-            const tab = e.target.closest('.persona-tab');
-            if (!tab) return;
-            const targetPersona = tab.getAttribute('data-persona');
-            container.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
-            container.querySelectorAll('.persona-content').forEach(c => c.classList.remove('active'));
-            tab.classList.add('active');
-            container.querySelector(`.persona-content[data-persona="${targetPersona}"]`)?.classList.add('active');
-        });
+        // All click handling is done by the shared initInteractivePatterns() listener.
     }
 
     function renderCalibrationExamples(calibrationContent) {
