@@ -142,7 +142,8 @@
             document.getElementById('app').appendChild(targetPage);
         }
 
-        if (targetPage.innerHTML.trim() === '') {
+        if (targetPage.innerHTML.trim() === '' || targetPage.querySelector('.page-loading')) {
+            targetPage.innerHTML = '<div class="page-loading"><div class="spinner"></div></div>';
             await renderPage(pageId, targetPage);
             const pageInfo = G.manifest.pages[pageId];
             if (pageInfo?.layout) {
