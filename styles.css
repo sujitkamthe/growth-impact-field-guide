@@ -2383,10 +2383,14 @@ body.sidebar-active {
     font-size: 0.95rem;
 }
 
-/* Mobile */
+/* Tablet */
 @media (max-width: 768px) {
     .g-intent-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .g-intent-grid-secondary {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .g-home {
@@ -2422,5 +2426,12 @@ body.sidebar-active {
     .persona-detail-page,
     .persona-detail-page.active {
         overflow: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .g-intent-grid,
+    .g-intent-grid-secondary {
+        grid-template-columns: 1fr;
     }
 }
