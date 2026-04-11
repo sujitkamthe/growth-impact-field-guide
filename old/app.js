@@ -20,7 +20,7 @@
     async function init() {
         try {
             // Load manifest
-            const response = await fetch('../manifest.json?_t=' + Date.now());
+            const response = await fetch('manifest.json?_t=' + Date.now());
             if (!response.ok) {
                 throw new Error(`Failed to load manifest: ${response.status}`);
             }
@@ -57,7 +57,7 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const response = await fetch('../' + pageInfo.file + versionParam);
+            const response = await fetch(pageInfo.file + versionParam);
             if (!response.ok) {
                 console.error(`Failed to load ${pageInfo.file}: ${response.status}`);
                 return null;
@@ -84,7 +84,7 @@
 
         try {
             const versionParam = manifest.version ? '?v=' + manifest.version : '';
-            const response = await fetch('../content/' + iconPath + versionParam);
+            const response = await fetch('content/' + iconPath + versionParam);
             if (!response.ok) {
                 console.warn(`Icon not found: ${iconPath}`);
                 iconCache[iconPath] = '';
