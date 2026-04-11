@@ -517,7 +517,6 @@ li {
 .page-intro {
     font-size: 1.1rem;
     color: var(--color-text-secondary);
-    max-width: 800px;
     margin-bottom: var(--space-2xl);
 }
 
