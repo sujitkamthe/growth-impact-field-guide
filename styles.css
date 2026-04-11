@@ -1620,13 +1620,13 @@ blockquote p {
 }
 
 /* When calibration is inside a collapsible, strip outer chrome */
-.g-sa-collapsible-body .calibration-section {
+.collapsible-body .calibration-section {
     margin: 0;
     padding: 0;
     border: none;
 }
 
-.g-sa-collapsible-body .calibration-section > h2 {
+.collapsible-body .calibration-section > h2 {
     display: none;
 }
 
@@ -1792,7 +1792,7 @@ blockquote p {
 }
 
 /* ============================================
-   ALPHA — Layout overrides (sticky footer + viewport-fit home)
+   Layout overrides (sticky footer + viewport-fit home)
    ============================================ */
 
 body {
@@ -1842,36 +1842,36 @@ body.sidebar-active {
 }
 
 /* ============================================
-   ALPHA — Intent-Based Home Page
+   Intent-Based Home Page
    ============================================ */
 
-.g-home {
+.home-layout {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 var(--space-xl);
 }
 
-.g-hero {
+.hero-section {
     text-align: center;
     margin-bottom: var(--space-xl);
     max-width: 640px;
 }
 
-.g-hero h1 {
+.hero-section h1 {
     font-size: clamp(1.8rem, 4vw, 2.75rem);
     font-weight: 700;
     line-height: 1.15;
     margin-bottom: var(--space-md);
 }
 
-.g-tagline {
+.hero-tagline {
     font-size: 1.1rem;
     color: var(--color-text-secondary);
     margin: 0;
 }
 
-.g-intent-grid {
+.intent-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--space-lg);
@@ -1879,13 +1879,13 @@ body.sidebar-active {
     width: 100%;
 }
 
-.g-intent-grid-secondary {
+.intent-grid-secondary {
     grid-template-columns: repeat(2, 1fr);
     max-width: 740px;
     margin-top: var(--space-xl);
 }
 
-.g-intent-card {
+.intent-card {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
@@ -1898,7 +1898,7 @@ body.sidebar-active {
     transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.g-intent-card:hover {
+.intent-card:hover {
     border-color: var(--color-accent);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     transform: translateY(-3px);
@@ -1906,11 +1906,11 @@ body.sidebar-active {
     text-decoration: none;
 }
 
-[data-theme="dark"] .g-intent-card:hover {
+[data-theme="dark"] .intent-card:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
 }
 
-.g-intent-eyebrow {
+.intent-eyebrow {
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1918,7 +1918,7 @@ body.sidebar-active {
     color: var(--color-accent);
 }
 
-.g-intent-card h2 {
+.intent-card h2 {
     font-size: 1.05rem;
     font-weight: 600;
     margin: 0;
@@ -1928,7 +1928,7 @@ body.sidebar-active {
     padding: 0;
 }
 
-.g-intent-card p {
+.intent-card p {
     font-size: 0.875rem;
     color: var(--color-text-muted);
     line-height: 1.6;
@@ -1936,7 +1936,7 @@ body.sidebar-active {
     margin: 0;
 }
 
-.g-intent-cta {
+.intent-cta {
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--color-accent);
@@ -1944,30 +1944,30 @@ body.sidebar-active {
 }
 
 /* ============================================
-   ALPHA — Home Page Below-Fold Content
+   Home Page Below-Fold Content
    ============================================ */
 
-.g-home-content {
+.home-content {
     max-width: 1200px;
     margin: var(--space-3xl) auto 0;
     padding: 0 var(--space-lg);
 }
 
-.g-home-section {
+.home-section {
     margin-bottom: var(--space-2xl);
 }
 
-.g-home-section h2 {
+.home-section h2 {
     font-size: 1.5rem;
     margin-bottom: var(--space-md);
 }
 
-.g-home-section p {
+.home-section p {
     line-height: 1.7;
     margin-bottom: var(--space-md);
 }
 
-.g-ref-grid {
+.ref-grid {
     margin-top: var(--space-xl);
 }
 
@@ -1981,18 +1981,18 @@ body.sidebar-active {
 }
 
 /* ============================================
-   ALPHA — Self-Assessment Accordion
+   Self-Assessment & Sidebar Layouts
    ============================================ */
 
 /* Shared sidebar layout — viewport-locked so the content panel scrolls,
    not the page. Uses vh directly instead of relying on flex chain constraints. */
-.g-sidebar-layout {
+.sidebar-layout {
     display: flex;
     height: calc(100vh - 72px);
     overflow: hidden;
 }
 
-.g-sidebar {
+.sidebar {
     width: 300px;
     flex-shrink: 0;
     border-right: 1px solid var(--color-border);
@@ -2001,30 +2001,30 @@ body.sidebar-active {
     flex-direction: column;
 }
 
-.g-sidebar-inner {
+.sidebar-inner {
     padding: var(--space-md) var(--space-lg);
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
 }
 
-.g-sidebar-content {
+.sidebar-content {
     flex: 1;
     overflow-y: auto;
     padding: var(--space-xl) var(--space-2xl) var(--space-3xl);
 }
 
-.g-sidebar-panel {
+.sidebar-panel {
     display: none;
     animation: fadeIn 0.2s ease;
 }
 
-.g-sidebar-panel.active {
+.sidebar-panel.active {
     display: block;
 }
 
 
-.g-sa-sidebar-title {
+.sidebar-title {
     font-size: 1.05rem;
     font-weight: 700;
     color: var(--color-text);
@@ -2032,7 +2032,7 @@ body.sidebar-active {
     line-height: 1.3;
 }
 
-.g-sa-sidebar-intro {
+.sidebar-intro {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin: 0;
@@ -2040,13 +2040,13 @@ body.sidebar-active {
 }
 
 /* Step navigation */
-.g-sa-step-nav {
+.step-nav {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
 
-.g-sa-nav-btn {
+.sidebar-nav-btn {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
@@ -2064,17 +2064,17 @@ body.sidebar-active {
     width: 100%;
 }
 
-.g-sa-nav-btn:hover {
+.sidebar-nav-btn:hover {
     background: var(--color-accent-soft);
     color: var(--color-text);
 }
 
-.g-sa-nav-btn.active {
+.sidebar-nav-btn.active {
     background: var(--color-accent-soft);
     color: var(--color-accent);
 }
 
-.g-sa-nav-num {
+.sidebar-nav-num {
     width: 24px;
     height: 24px;
     border-radius: 50%;
@@ -2089,22 +2089,22 @@ body.sidebar-active {
     transition: background 0.15s, color 0.15s;
 }
 
-.g-sa-nav-btn.active .g-sa-nav-num {
+.sidebar-nav-btn.active .sidebar-nav-num {
     background: var(--color-accent);
     color: white;
 }
 
-.g-sa-nav-btn.done .g-sa-nav-num {
+.sidebar-nav-btn.done .sidebar-nav-num {
     background: var(--color-accent);
     color: white;
     opacity: 0.6;
 }
 
-.g-sa-nav-label {
+.sidebar-nav-label {
     flex: 1;
 }
 
-.g-sa-nav-divider {
+.sidebar-nav-divider {
     height: 1px;
     background: var(--color-border-light);
     margin: var(--space-xs) 0;
@@ -2112,23 +2112,23 @@ body.sidebar-active {
 
 /* Sidebar footer (Common Traps + Key Truths) */
 /* Sidebar footer — flows after step nav, not pushed to bottom */
-.g-sa-sidebar-footer {
+.sidebar-footer {
     margin-top: var(--space-sm);
     padding-top: var(--space-sm);
     border-top: 1px solid var(--color-border-light);
 }
 
 
-.g-sa-content-step {
+.content-step {
     display: none;
 }
 
-.g-sa-content-step.active {
+.content-step.active {
     display: block;
     animation: fadeIn 0.2s ease;
 }
 
-.g-sa-content-step-title {
+.content-step-title {
     font-size: 1.4rem;
     font-weight: 700;
     margin-top: 0;
@@ -2137,24 +2137,24 @@ body.sidebar-active {
 }
 
 /* Normalize headings inside the content panel to avoid size jumps */
-.g-sa-content-step h2 {
+.content-step h2 {
     font-size: 1.4rem;
     margin-top: var(--space-xl);
 }
 
-.g-sa-content-step h3 {
+.content-step h3 {
     font-size: 1.15rem;
 }
 
 /* Collapsible context / reference sections */
-.g-sa-collapsible {
+.collapsible {
     border: 1px solid var(--color-border-light);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-md);
     overflow: hidden;
 }
 
-.g-sa-collapsible-btn {
+.collapsible-btn {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -2171,40 +2171,40 @@ body.sidebar-active {
     transition: color 0.1s ease, background 0.1s ease;
 }
 
-.g-sa-collapsible-btn:hover {
+.collapsible-btn:hover {
     color: var(--color-text-primary);
     background: var(--color-surface);
 }
 
-.g-sa-collapsible-icon::after {
+.collapsible-icon::after {
     content: '+';
     font-size: 1rem;
     color: var(--color-text-muted);
     line-height: 1;
 }
 
-.g-sa-collapsible:not(.collapsed) .g-sa-collapsible-icon::after {
+.collapsible:not(.collapsed) .collapsible-icon::after {
     content: '−';
 }
 
-.g-sa-collapsible-body {
+.collapsible-body {
     display: none;
     padding: 0 var(--space-lg) var(--space-xl);
 }
 
-.g-sa-collapsible:not(.collapsed) .g-sa-collapsible-body {
+.collapsible:not(.collapsed) .collapsible-body {
     display: block;
     animation: fadeIn 0.2s ease;
 }
 
 /* Next step button */
-.g-sa-step-footer {
+.step-footer {
     margin-top: var(--space-xl);
     padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border-light);
 }
 
-.g-sa-next-btn {
+.next-step-btn {
     background: none;
     border: 1px solid var(--color-accent);
     color: var(--color-accent);
@@ -2217,42 +2217,42 @@ body.sidebar-active {
     transition: background 0.15s, color 0.15s;
 }
 
-.g-sa-next-btn:hover {
+.next-step-btn:hover {
     background: var(--color-accent);
     color: white;
 }
 
 /* ============================================
-   ALPHA — Persona Detail Sidebar Layout
+   Persona Detail Sidebar Layout
    ============================================ */
 
 
-.g-pd-identity {
+.pd-identity {
     border-left: 3px solid var(--color-accent);
     padding-left: var(--space-md);
 }
 
-.g-pd-name {
+.pd-name {
     font-size: 1.3rem;
     font-weight: 700;
     margin: 0;
     line-height: 1.2;
 }
 
-.g-pd-tagline {
+.pd-tagline {
     font-size: 0.85rem;
     color: var(--color-text-muted);
     margin: var(--space-xs) 0 0;
 }
 
-.g-pd-nav {
+.pd-nav {
     display: flex;
     flex-direction: column;
     gap: 2px;
     margin-top: var(--space-xs);
 }
 
-.g-pd-sidebar-footer {
+.pd-sidebar-footer {
     margin-top: var(--space-sm);
     padding-top: var(--space-sm);
     border-top: 1px solid var(--color-border-light);
@@ -2261,35 +2261,35 @@ body.sidebar-active {
     gap: var(--space-sm);
 }
 
-.g-pd-cta {
+.pd-cta {
     font-size: 0.85rem;
     color: var(--color-accent);
     text-decoration: none;
     font-weight: 500;
 }
 
-.g-pd-cta:hover {
+.pd-cta:hover {
     text-decoration: underline;
 }
 
-.g-pd-persona-nav {
+.pd-persona-nav {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
 }
 
-.g-pd-persona-nav a {
+.pd-persona-nav a {
     color: var(--color-text-muted);
     text-decoration: none;
 }
 
-.g-pd-persona-nav a:hover {
+.pd-persona-nav a:hover {
     color: var(--color-accent);
 }
 
 
 /* Overview panel */
-.g-pd-quote {
+.pd-quote {
     margin-bottom: var(--space-xl);
     padding: var(--space-lg);
     background: var(--color-surface-elevated);
@@ -2297,26 +2297,26 @@ body.sidebar-active {
     border: 1px solid var(--color-border-light);
 }
 
-.g-pd-quote .detail-mindset {
+.pd-quote .detail-mindset {
     font-style: italic;
     font-size: 1.1rem;
     margin: 0;
     line-height: 1.6;
 }
 
-.g-pd-question {
+.pd-question {
     margin: var(--space-md) 0 0;
     font-size: 0.95rem;
     color: var(--color-text-secondary);
 }
 
-.g-pd-impact-grid {
+.pd-impact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--space-lg);
 }
 
-.g-pd-impact-block h4 {
+.pd-impact-block h4 {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -2324,20 +2324,20 @@ body.sidebar-active {
     margin-bottom: var(--space-sm);
 }
 
-.g-pd-impact-block ul {
+.pd-impact-block ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.g-pd-impact-block li {
+.pd-impact-block li {
     padding: var(--space-xs) 0;
     font-size: 0.95rem;
     color: var(--color-text-secondary);
 }
 
 /* Capability panels */
-.g-pd-cap-title {
+.pd-cap-title {
     font-size: 1.4rem;
     font-weight: 700;
     margin-top: 0;
@@ -2347,24 +2347,24 @@ body.sidebar-active {
     gap: var(--space-md);
 }
 
-.g-pd-cap-link {
+.pd-cap-link {
     font-size: 0.8rem;
     font-weight: 500;
     color: var(--color-text-muted);
     text-decoration: none;
 }
 
-.g-pd-cap-link:hover {
+.pd-cap-link:hover {
     color: var(--color-accent);
 }
 
-.g-pd-prompts {
+.pd-prompts {
     margin-top: var(--space-xl);
     padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border-light);
 }
 
-.g-pd-prompts h3 {
+.pd-prompts h3 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -2372,22 +2372,22 @@ body.sidebar-active {
     margin-bottom: var(--space-md);
 }
 
-.g-pd-prompts li {
+.pd-prompts li {
     color: var(--color-text-secondary);
     font-size: 0.95rem;
 }
 
 /* Tablet */
 @media (max-width: 768px) {
-    .g-intent-grid {
+    .intent-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .g-intent-grid-secondary {
+    .intent-grid-secondary {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .g-home {
+    .home-layout {
         min-height: auto;
         padding: var(--space-2xl) var(--space-lg);
         justify-content: flex-start;
@@ -2399,20 +2399,20 @@ body.sidebar-active {
         overflow: auto;
     }
 
-    .g-sidebar-layout {
+    .sidebar-layout {
         flex-direction: column;
         overflow: visible;
         height: auto;
     }
 
-    .g-sidebar {
+    .sidebar {
         width: 100%;
         border-right: none;
         border-bottom: 1px solid var(--color-border);
         overflow: visible;
     }
 
-    .g-sidebar-content {
+    .sidebar-content {
         padding: var(--space-lg);
         overflow: visible;
     }
@@ -2424,8 +2424,8 @@ body.sidebar-active {
 }
 
 @media (max-width: 480px) {
-    .g-intent-grid,
-    .g-intent-grid-secondary {
+    .intent-grid,
+    .intent-grid-secondary {
         grid-template-columns: 1fr;
     }
 }

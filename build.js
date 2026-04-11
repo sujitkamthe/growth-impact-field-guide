@@ -109,7 +109,9 @@ function build() {
     }
 
     // Generate build hash from source files
-    const hashSources = ['app.js', 'styles.css', 'frontmatter-parser.js']
+    const jsModules = ['frontmatter-parser.js', 'js/markdown.js', 'js/content.js', 'js/personas.js',
+                       'js/diagrams.js', 'js/theme.js', 'js/router.js', 'js/layouts.js', 'js/app.js'];
+    const hashSources = [...jsModules, 'styles.css']
         .map(f => fs.readFileSync(path.join(__dirname, f), 'utf-8'))
         .join('');
     const buildHash = crypto.createHash('md5').update(hashSources + JSON.stringify(manifest)).digest('hex').slice(0, 8);
@@ -122,8 +124,7 @@ function build() {
     const indexPath = path.join(__dirname, 'index.html');
     let indexHtml = fs.readFileSync(indexPath, 'utf-8');
     indexHtml = indexHtml.replace(/(href="styles\.css)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
-    indexHtml = indexHtml.replace(/(src="frontmatter-parser\.js)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
-    indexHtml = indexHtml.replace(/(src="app\.js)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
+    indexHtml = indexHtml.replace(/(src="[^"]+\.js)(\?v=[a-f0-9]+)?(")/g, `$1?v=${buildHash}$3`);
     fs.writeFileSync(indexPath, indexHtml, 'utf-8');
 
     console.log(`\nGenerated: manifest.json (version: ${buildHash})`);
