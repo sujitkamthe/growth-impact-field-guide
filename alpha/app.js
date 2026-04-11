@@ -353,10 +353,14 @@
             page.classList.remove('active');
         });
 
-        // Update nav links
+        // Update nav links — virtual pages highlight their parent dropdown
+        const isRefPage = !!virtualPages[pageId];
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.classList.remove('active');
-            if (link.getAttribute('data-page') === pageId) {
+            const linkPage = link.getAttribute('data-page');
+            if (linkPage === pageId) {
+                link.classList.add('active');
+            } else if (isRefPage && linkPage === 'about' && link.closest('.dropdown') && !link.closest('.dropdown-menu')) {
                 link.classList.add('active');
             }
         });
@@ -377,6 +381,8 @@
             const pageInfo = manifest.pages[pageId];
             if (pageInfo?.layout) {
                 targetPage.classList.add(pageInfo.layout + '-page');
+            } else if (virtualPages[pageId]) {
+                targetPage.classList.add('reference-page');
             }
         }
 
@@ -426,7 +432,36 @@
         'quick-reference': renderQuickReferenceLayout
     };
 
+    // Virtual pages — rendered from sections of existing content files
+    const virtualPages = {
+        'about': {
+            sourcePageId: 'home',
+            renderer: renderAboutPage,
+            title: 'About This Guide'
+        },
+        'common-questions': {
+            sourcePageId: 'quick-reference',
+            renderer: renderCommonQuestionsPage,
+            title: 'Common Questions'
+        },
+        'anti-patterns': {
+            sourcePageId: 'quick-reference',
+            renderer: renderAntiPatternsPage,
+            title: 'Anti-Patterns'
+        }
+    };
+
     async function renderPage(pageId, container) {
+        // Check virtual pages first
+        const vp = virtualPages[pageId];
+        if (vp) {
+            const sourceContent = await loadContent(vp.sourcePageId);
+            if (sourceContent) {
+                await vp.renderer(sourceContent, container);
+                return;
+            }
+        }
+
         const content = await loadContent(pageId);
         if (!content) {
             container.innerHTML = '<div class="container"><h1>Page Not Found</h1></div>';
@@ -442,50 +477,6 @@
     }
 
     async function renderHomeLayout(content, container) {
-        const sections = parseSections(content.body);
-
-        // Build below-fold content from markdown sections
-        let belowFoldHtml = '';
-        for (const section of sections) {
-            if (section.title === 'Key Truths') continue; // Already in self-assessment
-
-            if (section.annotation?.type === 'cards') {
-                belowFoldHtml += renderCardsSection(section);
-                continue;
-            }
-            {
-                // Render as prose section, with H3 sub-sections as accordions
-                const parts = section.content
-                    .replace(/<!--[^>]*-->/g, '') // strip annotations
-                    .split(/^(?=### )/m);
-                let sectionBody = '';
-                for (const part of parts) {
-                    if (part.startsWith('### ')) {
-                        const nl = part.indexOf('\n');
-                        const title = part.substring(4, nl).trim();
-                        const body = part.substring(nl + 1).trim();
-                        sectionBody += `
-                            <div class="g-sa-collapsible collapsed">
-                                <button class="g-sa-collapsible-btn">
-                                    <span>${title}</span>
-                                    <span class="g-sa-collapsible-icon"></span>
-                                </button>
-                                <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
-                            </div>
-                        `;
-                    } else if (part.trim()) {
-                        sectionBody += parseMarkdownToHtml(part.trim());
-                    }
-                }
-                belowFoldHtml += `
-                    <section class="g-home-section">
-                        <h2>${section.title}</h2>
-                        ${sectionBody}
-                    </section>
-                `;
-            }
-        }
-
         container.innerHTML = `
             <div class="g-home">
                 <div class="g-hero">
@@ -512,18 +503,211 @@
                         <span class="g-intent-cta">Start Self-Assessment &rarr;</span>
                     </a>
                 </div>
-                <div class="g-home-content">
-                    ${belowFoldHtml}
+                <div class="g-intent-grid g-intent-grid-secondary">
+                    <a href="#about" data-page="about" class="g-intent-card">
+                        <div class="g-intent-eyebrow">Reference</div>
+                        <h2>About this guide</h2>
+                        <p>What this guide is for, who it's designed for, and how to use it.</p>
+                        <span class="g-intent-cta">Read More &rarr;</span>
+                    </a>
+                    <a href="#common-questions" data-page="common-questions" class="g-intent-card">
+                        <div class="g-intent-eyebrow">FAQ</div>
+                        <h2>Common questions</h2>
+                        <p>Personas, salary, domain switches, and choosing the right level.</p>
+                        <span class="g-intent-cta">Browse Questions &rarr;</span>
+                    </a>
                 </div>
             </div>
         `;
+    }
 
-        // Accordion toggles for How to Use This Guide sub-sections
+    // ============================================
+    // Virtual Page Renderers
+    // ============================================
+
+    // About This Guide — combines What This Guide Is For, Growth Is Self-Directed,
+    // How to Use This Guide, Who This Guide Is For, and What We Value from home.md
+    async function renderAboutPage(content, container) {
+        const sections = parseSections(content.body);
+        const includeSections = [
+            'What This Guide Is For', 'Growth Is Self-Directed',
+            'How to Use This Guide', 'Who This Guide Is For', 'What We Value'
+        ];
+
+        let html = '<div class="container reference-page-content"><h1>About This Guide</h1>';
+
+        for (const section of sections) {
+            if (!includeSections.includes(section.title)) continue;
+
+            if (section.annotation?.type === 'cards') {
+                html += renderCardsSection(section);
+                continue;
+            }
+
+            // Render prose with H3 sub-sections as accordions
+            const cleanContent = section.content.replace(/<!--[^>]*-->/g, '');
+            const parts = cleanContent.split(/^(?=### )/m);
+            let sectionBody = '';
+            for (const part of parts) {
+                if (part.startsWith('### ')) {
+                    const nl = part.indexOf('\n');
+                    const title = part.substring(4, nl).trim();
+                    const body = part.substring(nl + 1).trim();
+                    sectionBody += `
+                        <div class="g-sa-collapsible collapsed">
+                            <button class="g-sa-collapsible-btn">
+                                <span>${title}</span>
+                                <span class="g-sa-collapsible-icon"></span>
+                            </button>
+                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
+                        </div>
+                    `;
+                } else if (part.trim()) {
+                    sectionBody += parseMarkdownToHtml(part.trim());
+                }
+            }
+            html += `<section class="g-home-section"><h2>${section.title}</h2>${sectionBody}</section>`;
+        }
+
+        html += '</div>';
+        container.innerHTML = html;
+
         container.addEventListener('click', function(e) {
             const collBtn = e.target.closest('.g-sa-collapsible-btn');
             if (collBtn) {
                 collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
             }
+        });
+    }
+
+    // Common Questions — FAQ section from quick-reference.md as accordions
+    async function renderCommonQuestionsPage(content, container) {
+        const sections = parseSections(content.body);
+        const faqSection = sections.find(s => s.title === 'Common Questions');
+
+        let html = '<div class="container reference-page-content"><h1>Common Questions</h1>';
+
+        if (faqSection) {
+            const parts = faqSection.content.split(/^(?=### )/m);
+            for (const part of parts) {
+                if (part.startsWith('### ')) {
+                    const nl = part.indexOf('\n');
+                    const title = part.substring(4, nl).trim();
+                    const body = part.substring(nl + 1).trim();
+                    html += `
+                        <div class="g-sa-collapsible collapsed">
+                            <button class="g-sa-collapsible-btn">
+                                <span>${title}</span>
+                                <span class="g-sa-collapsible-icon"></span>
+                            </button>
+                            <div class="g-sa-collapsible-body">${parseMarkdownToHtml(body)}</div>
+                        </div>
+                    `;
+                } else if (part.trim()) {
+                    html += parseMarkdownToHtml(part.trim());
+                }
+            }
+        }
+
+        html += '</div>';
+        container.innerHTML = html;
+
+        container.addEventListener('click', function(e) {
+            const collBtn = e.target.closest('.g-sa-collapsible-btn');
+            if (collBtn) {
+                collBtn.closest('.g-sa-collapsible').classList.toggle('collapsed');
+            }
+        });
+    }
+
+    // Anti-Patterns — persona anti-pattern tabs + Universal Warning Signs + Final Self-Check
+    async function renderAntiPatternsPage(content, container) {
+        const sections = parseSections(content.body);
+        const personaSections = {};
+        let antiPatternsIntro = null;
+        let universalWarnings = null;
+        let finalSelfCheck = null;
+
+        for (const section of sections) {
+            if (section.title.endsWith(' Anti-Patterns')) {
+                const personaName = section.title.replace(' Anti-Patterns', '').toLowerCase();
+                personaSections[personaName] = parseAntiPatternSection(section.content);
+            } else if (section.title === 'Anti-Patterns') {
+                antiPatternsIntro = section.content;
+            } else if (section.title === 'Universal Warning Signs') {
+                universalWarnings = section.content;
+            } else if (section.title === 'Final Self-Check') {
+                finalSelfCheck = section.content;
+            }
+        }
+
+        let html = '<div class="container reference-page-content">' +
+            '<h1>Anti-Patterns</h1>';
+
+        if (antiPatternsIntro) {
+            html += '<p class="page-intro">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim()) + '</p>';
+        }
+
+        html += '<div class="persona-tabs">';
+        manifest.personas.forEach((pId, index) => {
+            const persona = manifest.pages['persona-' + pId];
+            html += '<button class="persona-tab' + (index === 0 ? ' active' : '') + '" data-persona="' + pId + '">' + persona.name + '</button>';
+        });
+        html += '</div><div class="persona-contents">';
+
+        for (let i = 0; i < manifest.personas.length; i++) {
+            const pId = manifest.personas[i];
+            const persona = manifest.pages['persona-' + pId];
+            const antiPatterns = personaSections[pId];
+
+            if (persona && antiPatterns) {
+                const apBorderStyle = getPersonaBorderStyle(pId, persona.color);
+                const apBorderClass = getPersonaBorderClass(pId);
+                html += '<div class="persona-content' + (i === 0 ? ' active' : '') + '" data-persona="' + pId + '">' +
+                    '<div class="anti-pattern-card ' + apBorderClass + '" style="' + apBorderStyle + '">' +
+                        '<div class="anti-pattern-header">' +
+                            '<h3>' + persona.name + '</h3>' +
+                            '<span class="anti-pattern-motto">' + antiPatterns.motto + '</span>' +
+                        '</div>' +
+                        '<div class="anti-pattern-grid">' +
+                            '<div class="anti-pattern-section">' +
+                                '<h4>⚠️ Signs expectations may be too high</h4>' +
+                                '<ul>' + antiPatterns.signs.map(function(s) { return '<li>' + parseInlineMarkdown(s) + '</li>'; }).join('') + '</ul>' +
+                            '</div>' +
+                            '<div class="anti-pattern-section red-flags">' +
+                                '<h4>🚩 Red flags</h4>' +
+                                '<ul>' + antiPatterns.redFlags.map(function(r) { return '<li>' + parseInlineMarkdown(r) + '</li>'; }).join('') + '</ul>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="anti-pattern-signal">' +
+                            '<strong>Signal:</strong> ' + parseInlineMarkdown(antiPatterns.signal) +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }
+        }
+
+        html += '</div>';
+
+        if (universalWarnings) {
+            html += '<section class="universal-warnings"><h2>Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</section>';
+        }
+        if (finalSelfCheck) {
+            html += '<section class="final-self-check"><h2>Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</section>';
+        }
+
+        html += '</div>';
+        container.innerHTML = html;
+
+        container.addEventListener('click', function(e) {
+            const tab = e.target.closest('.persona-tab');
+            if (!tab) return;
+            const targetPersona = tab.getAttribute('data-persona');
+            container.querySelectorAll('.persona-tab').forEach(function(t) { t.classList.remove('active'); });
+            container.querySelectorAll('.persona-content').forEach(function(c) { c.classList.remove('active'); });
+            tab.classList.add('active');
+            var target = container.querySelector('.persona-content[data-persona="' + targetPersona + '"]');
+            if (target) target.classList.add('active');
         });
     }
 

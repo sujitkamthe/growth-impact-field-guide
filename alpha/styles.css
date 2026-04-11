@@ -1852,6 +1852,12 @@ body.sidebar-active {
     width: 100%;
 }
 
+.g-intent-grid-secondary {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 740px;
+    margin-top: 0;
+}
+
 .g-intent-card {
     display: flex;
     flex-direction: column;
@@ -1932,6 +1938,15 @@ body.sidebar-active {
 .g-home-section p {
     line-height: 1.7;
     margin-bottom: var(--space-md);
+}
+
+/* Reference pages (About, Common Questions, Anti-Patterns) */
+.reference-page-content {
+    max-width: 1200px;
+}
+
+.reference-page-content h1 {
+    margin-bottom: var(--space-lg);
 }
 
 /* ============================================
