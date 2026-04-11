@@ -1929,7 +1929,7 @@
     function extractIntroduction(body) {
         const match = body.match(/## Introduction\s*\n([\s\S]*?)(?=\n## |$)/);
         if (!match) return '';
-        return match[1].trim().replace(/\n\n/g, ' ').replace(/\n/g, ' ');
+        return match[1].trim();
     }
 
     function extractNote(body) {
