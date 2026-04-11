@@ -1344,9 +1344,9 @@ blockquote p {
     margin: 0 auto;
 }
 
-/* Anti-Patterns Page */
+/* Anti-Patterns / Quick Reference Page */
 .anti-patterns-page {
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 /* Reference Sections (FAQ, intro text before tabs) */
