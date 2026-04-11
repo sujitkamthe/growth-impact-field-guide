@@ -5,6 +5,26 @@ title: Quick Reference
 
 This page collects common questions about how the guide works, plus warning signs that expectations may be set too high.
 
+<!-- ref-cards -->
+
+### About This Guide
+eyebrow: Guide
+link: about
+cta: Read More
+What this guide is for, who it's designed for, and how to use it.
+
+### Common Questions
+eyebrow: FAQ
+link: common-questions
+cta: Browse Questions
+Personas, salary, domain switches, and choosing the right level.
+
+### Anti-Patterns
+eyebrow: Calibration
+link: anti-patterns
+cta: Review Patterns
+Warning signs that expectations may be too high, plus a final self-check.
+
 ## Common Questions
 
 ### Are Personas Assigned to Me?
