@@ -1276,36 +1276,18 @@ blockquote p {
         margin-top: 64px;
     }
 
+    .nav-brand a {
+        font-size: 1rem;
+    }
+
+    .nav-links > li > a {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+        white-space: nowrap;
+    }
+
     .nav-links {
-        position: fixed;
-        top: 64px;
-        left: 0;
-        right: 0;
-        background: var(--color-surface);
-        flex-direction: column;
-        padding: var(--space-md);
-        border-bottom: 1px solid var(--color-border);
-        box-shadow: var(--shadow-md);
-        display: none;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .mobile-menu-btn {
-        display: flex;
-    }
-
-    .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        border: none;
-        padding-left: var(--space-lg);
-        background: transparent;
+        gap: 2px;
     }
 
     .hero {
@@ -1341,6 +1323,51 @@ blockquote p {
         overflow-x: auto;
         flex-wrap: nowrap;
         padding-bottom: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-brand a {
+        font-size: 1.15rem;
+    }
+
+    .nav-links > li > a {
+        font-size: 0.95rem;
+        padding: var(--space-sm) var(--space-md);
+        white-space: normal;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--color-surface);
+        flex-direction: column;
+        padding: var(--space-md);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-md);
+        display: none;
+        gap: var(--space-xs);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding-left: var(--space-lg);
+        background: transparent;
     }
 }
 
