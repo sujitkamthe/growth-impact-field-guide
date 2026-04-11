@@ -719,80 +719,86 @@
         }
 
         // Build persona panels
-        var personaPanels = '';
-        for (var i = 0; i < manifest.personas.length; i++) {
-            var pId = manifest.personas[i];
-            var persona = manifest.pages['persona-' + pId];
-            var antiPatterns = personaSections[pId];
+        const personaPanels = manifest.personas.map((pId, i) => {
+            const persona = manifest.pages[`persona-${pId}`];
+            const antiPatterns = personaSections[pId];
+            if (!persona || !antiPatterns) return '';
 
-            if (persona && antiPatterns) {
-                var apBorderStyle = getPersonaBorderStyle(pId, persona.color);
-                var apBorderClass = getPersonaBorderClass(pId);
-                personaPanels += '<div class="g-sidebar-panel' + (i === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
-                    '<div class="anti-pattern-card ' + apBorderClass + '" style="' + apBorderStyle + '">' +
-                        '<div class="anti-pattern-header">' +
-                            '<h3>' + persona.name + '</h3>' +
-                            '<span class="anti-pattern-motto">' + antiPatterns.motto + '</span>' +
-                        '</div>' +
-                        '<div class="anti-pattern-grid">' +
-                            '<div class="anti-pattern-section">' +
-                                '<h4>⚠️ Signs expectations may be too high</h4>' +
-                                '<ul>' + antiPatterns.signs.map(function(s) { return '<li>' + parseInlineMarkdown(s) + '</li>'; }).join('') + '</ul>' +
-                            '</div>' +
-                            '<div class="anti-pattern-section red-flags">' +
-                                '<h4>🚩 Red flags</h4>' +
-                                '<ul>' + antiPatterns.redFlags.map(function(r) { return '<li>' + parseInlineMarkdown(r) + '</li>'; }).join('') + '</ul>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div class="anti-pattern-signal">' +
-                            '<strong>Signal:</strong> ' + parseInlineMarkdown(antiPatterns.signal) +
-                        '</div>' +
-                    '</div>' +
-                '</div>';
-            }
-        }
+            const apBorderStyle = getPersonaBorderStyle(pId, persona.color);
+            const apBorderClass = getPersonaBorderClass(pId);
+            return `
+                <div class="g-sidebar-panel${i === 0 ? ' active' : ''}" data-panel="persona-${pId}">
+                    <div class="anti-pattern-card ${apBorderClass}" style="${apBorderStyle}">
+                        <div class="anti-pattern-header">
+                            <h3>${persona.name}</h3>
+                            <span class="anti-pattern-motto">${antiPatterns.motto}</span>
+                        </div>
+                        <div class="anti-pattern-grid">
+                            <div class="anti-pattern-section">
+                                <h4>⚠️ Signs expectations may be too high</h4>
+                                <ul>${antiPatterns.signs.map(s => `<li>${parseInlineMarkdown(s)}</li>`).join('')}</ul>
+                            </div>
+                            <div class="anti-pattern-section red-flags">
+                                <h4>🚩 Red flags</h4>
+                                <ul>${antiPatterns.redFlags.map(r => `<li>${parseInlineMarkdown(r)}</li>`).join('')}</ul>
+                            </div>
+                        </div>
+                        <div class="anti-pattern-signal">
+                            <strong>Signal:</strong> ${parseInlineMarkdown(antiPatterns.signal)}
+                        </div>
+                    </div>
+                </div>
+            `;
+        }).join('');
 
-        container.innerHTML =
-            '<div class="g-sidebar-layout">' +
-                '<aside class="g-sidebar">' +
-                    '<div class="g-sidebar-inner">' +
-                        '<div>' +
-                            '<h1 class="g-sa-sidebar-title">Anti-Patterns</h1>' +
-                            (antiPatternsIntro ? '<p class="g-sa-sidebar-intro">' + parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0]) + '</p>' : '') +
-                        '</div>' +
-                        '<nav class="g-pd-nav">' +
-                            manifest.personas.map(function(pId, index) {
-                                var persona = manifest.pages['persona-' + pId];
-                                return '<button class="g-sa-nav-btn' + (index === 0 ? ' active' : '') + '" data-panel="persona-' + pId + '">' +
-                                    '<span class="g-sa-nav-label">' + persona.name + '</span>' +
-                                '</button>';
-                            }).join('') +
-                            '<div class="g-sa-nav-divider"></div>' +
-                            '<button class="g-sa-nav-btn" data-panel="warning-signs">' +
-                                '<span class="g-sa-nav-label">Universal Warning Signs</span>' +
-                            '</button>' +
-                            '<button class="g-sa-nav-btn" data-panel="self-check">' +
-                                '<span class="g-sa-nav-label">Final Self-Check</span>' +
-                            '</button>' +
-                        '</nav>' +
-                    '</div>' +
-                '</aside>' +
-                '<div class="g-sidebar-content">' +
-                    personaPanels +
-                    (universalWarnings ? '<div class="g-sidebar-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>' + parseMarkdownToHtml(universalWarnings) + '</div>' : '') +
-                    (finalSelfCheck ? '<div class="g-sidebar-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>' + parseMarkdownToHtml(finalSelfCheck) + '</div>' : '') +
-                '</div>' +
-            '</div>';
+        const introHtml = antiPatternsIntro
+            ? `<p class="g-sa-sidebar-intro">${parseInlineMarkdown(antiPatternsIntro.replace(/<!--[^>]*-->/g, '').trim().split('\n')[0])}</p>`
+            : '';
+
+        container.innerHTML = `
+            <div class="g-sidebar-layout">
+                <aside class="g-sidebar">
+                    <div class="g-sidebar-inner">
+                        <div>
+                            <h1 class="g-sa-sidebar-title">Anti-Patterns</h1>
+                            ${introHtml}
+                        </div>
+                        <nav class="g-pd-nav">
+                            ${manifest.personas.map((pId, index) => {
+                                const persona = manifest.pages[`persona-${pId}`];
+                                return `
+                                    <button class="g-sa-nav-btn${index === 0 ? ' active' : ''}" data-panel="persona-${pId}">
+                                        <span class="g-sa-nav-label">${persona.name}</span>
+                                    </button>
+                                `;
+                            }).join('')}
+                            <div class="g-sa-nav-divider"></div>
+                            <button class="g-sa-nav-btn" data-panel="warning-signs">
+                                <span class="g-sa-nav-label">Universal Warning Signs</span>
+                            </button>
+                            <button class="g-sa-nav-btn" data-panel="self-check">
+                                <span class="g-sa-nav-label">Final Self-Check</span>
+                            </button>
+                        </nav>
+                    </div>
+                </aside>
+                <div class="g-sidebar-content">
+                    ${personaPanels}
+                    ${universalWarnings ? `<div class="g-sidebar-panel" data-panel="warning-signs"><h2 class="g-sa-content-step-title">Universal Warning Signs</h2>${parseMarkdownToHtml(universalWarnings)}</div>` : ''}
+                    ${finalSelfCheck ? `<div class="g-sidebar-panel" data-panel="self-check"><h2 class="g-sa-content-step-title">Final Self-Check</h2>${parseMarkdownToHtml(finalSelfCheck)}</div>` : ''}
+                </div>
+            </div>
+        `;
 
         // Sidebar nav click handler
-        container.addEventListener('click', function(e) {
-            var btn = e.target.closest('.g-sa-nav-btn');
+        container.addEventListener('click', e => {
+            const btn = e.target.closest('.g-sa-nav-btn');
             if (!btn) return;
-            var panelId = btn.getAttribute('data-panel');
-            container.querySelectorAll('.g-sa-nav-btn').forEach(function(b) { b.classList.remove('active'); });
-            container.querySelectorAll('.g-sidebar-panel').forEach(function(p) { p.classList.remove('active'); });
+            const panelId = btn.getAttribute('data-panel');
+            container.querySelectorAll('.g-sa-nav-btn').forEach(b => b.classList.remove('active'));
+            container.querySelectorAll('.g-sidebar-panel').forEach(p => p.classList.remove('active'));
             btn.classList.add('active');
-            var panel = container.querySelector('.g-sidebar-panel[data-panel="' + panelId + '"]');
+            const panel = container.querySelector(`.g-sidebar-panel[data-panel="${panelId}"]`);
             if (panel) panel.classList.add('active');
         });
     }
@@ -1109,8 +1115,8 @@
                 <div class="detail-header">
                     <h1>${content.name}</h1>
                     <p class="detail-subtitle">${content.question}</p>
-                    <div style="color: var(--color-text-secondary);">${parseMarkdownToHtml(intro)}</div>
-                    ${note ? `<div class="highlight-box" style="margin-top: var(--space-lg);">${parseMarkdownToHtml(note)}</div>` : ''}
+                    <div class="cap-detail-intro">${parseMarkdownToHtml(intro)}</div>
+                    ${note ? `<div class="highlight-box cap-detail-note">${parseMarkdownToHtml(note)}</div>` : ''}
                 </div>
 
                 <h2>Expectations by Persona</h2>
@@ -1141,13 +1147,13 @@
                 const pBorderClass = getPersonaBorderClass(pId);
                 html += `
                     <div class="persona-content ${i === 0 ? 'active' : ''}" data-persona="${pId}">
-                        <div class="capability-section ${pBorderClass}" style="${pBorderStyle} margin-left: 0; border-radius: 0 var(--radius-lg) var(--radius-lg) 0;">
-                            <div style="display: flex; align-items: baseline; gap: var(--space-md); margin-bottom: var(--space-lg);">
-                                <h3 style="border: none; padding: 0; margin: 0;">${persona.name}</h3>
-                                <span style="color: var(--color-text-muted); font-size: 0.9rem;">${getScopeWithTrack(pId, persona.scope)}</span>
+                        <div class="capability-section cap-persona-section ${pBorderClass}" style="${pBorderStyle}">
+                            <div class="cap-persona-header">
+                                <h3 class="cap-persona-name">${persona.name}</h3>
+                                <span class="cap-persona-scope">${getScopeWithTrack(pId, persona.scope)}</span>
                             </div>
-                            <p style="font-style: italic; color: var(--color-text-secondary); margin-bottom: ${trustedQuestion ? 'var(--space-sm)' : 'var(--space-lg)'};">"${mindset}"</p>
-                            ${trustedQuestion ? `<p style="color: var(--color-text-secondary); margin-bottom: var(--space-lg); font-size: 0.9rem;"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
+                            <p class="cap-persona-mindset${trustedQuestion ? ' has-question' : ''}">"${mindset}"</p>
+                            ${trustedQuestion ? `<p class="cap-persona-question"><strong>The question you're trusted to answer:</strong> "${trustedQuestion}"</p>` : ''}
                             <ul class="expectations-list">
                                 ${expectations.expectations.map(item => `<li>${item}</li>`).join('')}
                             </ul>
