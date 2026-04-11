@@ -1817,12 +1817,10 @@ body.sidebar-active {
    ============================================ */
 
 .g-home {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: var(--space-xl) var(--space-xl);
+    padding: var(--space-3xl) var(--space-xl) var(--space-2xl);
 }
 
 .g-hero {
@@ -1855,14 +1853,14 @@ body.sidebar-active {
 .g-intent-grid-secondary {
     grid-template-columns: repeat(2, 1fr);
     max-width: 740px;
-    margin-top: 0;
+    margin-top: var(--space-sm);
 }
 
 .g-intent-card {
     display: flex;
     flex-direction: column;
     gap: var(--space-sm);
-    padding: var(--space-2xl);
+    padding: var(--space-lg) var(--space-xl);
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-xl);
