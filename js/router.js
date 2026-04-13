@@ -166,8 +166,7 @@
             // inside a hidden panel and scrollIntoView lands on nothing visible.
             activateSidebarSection(targetPage, sectionId);
 
-            const sectionElement = targetPage.querySelector('#' + sectionId) ||
-                targetPage.querySelector('[id="' + sectionId + '"]');
+            const sectionElement = targetPage.querySelector('[id="' + sectionId + '"]');
             if (sectionElement) {
                 setTimeout(() => sectionElement.scrollIntoView({ behavior: 'smooth' }), 50);
             } else {
@@ -217,18 +216,8 @@
             if (navBtn) {
                 const layout = navBtn.closest('.sidebar-layout');
                 if (!layout) return;
-                const panelId = navBtn.getAttribute('data-panel');
-                layout.querySelectorAll('.sidebar-nav-btn').forEach(b => {
-                    b.classList.remove('active');
-                    b.setAttribute('aria-current', 'false');
-                });
-                layout.querySelectorAll('.sidebar-panel').forEach(p => p.classList.remove('active'));
-                navBtn.classList.add('active');
-                navBtn.setAttribute('aria-current', 'true');
-                const panel = layout.querySelector(`.sidebar-panel[data-panel="${panelId}"]`);
-                if (panel) panel.classList.add('active');
-                const content = layout.querySelector('.sidebar-content');
-                if (content) content.scrollTop = 0;
+                showDataPanel(layout, navBtn.getAttribute('data-panel'));
+                updateHashForSection(navBtn.getAttribute('data-panel'));
                 return;
             }
 
@@ -289,17 +278,32 @@
         if (content) content.scrollTop = 0;
     }
 
+    // data-panel pattern (persona detail, anti-patterns)
+    function showDataPanel(layout, panelId) {
+        layout.querySelectorAll('.sidebar-nav-btn').forEach(b => {
+            const isActive = b.getAttribute('data-panel') === panelId;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+        layout.querySelectorAll('.sidebar-panel').forEach(p => {
+            p.classList.toggle('active', p.getAttribute('data-panel') === panelId);
+        });
+        const content = layout.querySelector('.sidebar-content');
+        if (content) content.scrollTop = 0;
+    }
+
     // Given a section id from the URL hash (e.g. "common-traps", "step-3",
-    // "overstating"), activate the sidebar panel that contains it. Returns the
-    // panel element, or null if the page isn't a sidebar layout or no match.
+    // "overstating", "cap-technical"), activate the sidebar panel that contains
+    // it. Returns the panel element, or null if the page isn't a sidebar layout
+    // or no match.
     function activateSidebarSection(targetPage, sectionId) {
         const layout = targetPage.querySelector('.sidebar-layout');
         if (!layout) return null;
 
-        // Direct match on a panel's data-ref
+        // Direct match on a content-step panel's data-ref (self-assessment refs)
         let panel = layout.querySelector('.content-step[data-ref="' + sectionId + '"]');
 
-        // step-N (1-indexed) maps to data-step="N-1"
+        // step-N (1-indexed) maps to content-step[data-step="N-1"]
         if (!panel) {
             const m = sectionId.match(/^step-(\d+)$/);
             if (m) {
@@ -307,16 +311,23 @@
             }
         }
 
+        // Direct match on a sidebar-panel's data-panel (persona detail, anti-patterns)
+        if (!panel) {
+            panel = layout.querySelector('.sidebar-panel[data-panel="' + sectionId + '"]');
+        }
+
         // Fallback: the section id refers to an element (e.g. a heading)
         // inside one of the panels — activate its containing panel.
         if (!panel) {
             const el = targetPage.querySelector('[id="' + sectionId + '"]');
-            if (el) panel = el.closest('.content-step');
+            if (el) panel = el.closest('.content-step, .sidebar-panel');
         }
 
         if (!panel) return null;
 
-        if (panel.dataset.ref) {
+        if (panel.classList.contains('sidebar-panel') && panel.dataset.panel) {
+            showDataPanel(layout, panel.dataset.panel);
+        } else if (panel.dataset.ref) {
             showRefPanel(layout, panel.dataset.ref);
         } else if (panel.dataset.step !== undefined && panel.dataset.step !== '') {
             setActiveStep(layout, parseInt(panel.dataset.step));
@@ -353,11 +364,15 @@
                     const hash = href.slice(1);
                     const [pageId, sectionId] = hash.split('/');
 
+                    // Only look up a same-page target for simple hashes (no "/")
+                    // — "#<pageId>/<sectionId>" always routes through navigateTo.
+                    // Using `#` + hash directly in a selector also crashes on slashes.
                     const activePage = document.querySelector('.page.active');
-                    const targetElement = activePage?.querySelector('#' + hash) ||
-                                         activePage?.querySelector('[id="' + hash + '"]');
+                    const targetElement = !sectionId
+                        ? activePage?.querySelector('[id="' + hash + '"]')
+                        : null;
 
-                    if (targetElement && !sectionId) {
+                    if (targetElement) {
                         targetElement.scrollIntoView({ behavior: 'smooth' });
                         const currentPageId = activePage?.id?.replace('page-', '') || 'home';
                         history.pushState({ page: currentPageId, section: hash }, '', '#' + currentPageId + '/' + hash);
