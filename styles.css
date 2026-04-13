@@ -1906,6 +1906,34 @@ body.sidebar-active {
     margin-top: var(--space-xl);
 }
 
+.intent-grid-secondary .intent-card {
+    background: transparent;
+    border-color: var(--color-border-subtle, var(--color-border));
+    padding: var(--space-md) var(--space-lg);
+}
+
+.intent-grid-secondary .intent-eyebrow {
+    color: var(--color-text-muted);
+}
+
+.intent-grid-secondary .intent-card h2 {
+    font-size: 0.95rem;
+}
+
+.intent-grid-secondary .intent-cta {
+    color: var(--color-text-secondary);
+}
+
+.intent-grid-secondary .intent-card:hover {
+    border-color: var(--color-accent);
+    background: var(--color-surface);
+}
+
+.intent-grid-secondary .intent-card:hover .intent-eyebrow,
+.intent-grid-secondary .intent-card:hover .intent-cta {
+    color: var(--color-accent);
+}
+
 .intent-card {
     display: flex;
     flex-direction: column;
