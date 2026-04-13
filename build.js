@@ -110,7 +110,10 @@ function build() {
 
     // Generate build hash from source files
     const jsModules = ['frontmatter-parser.js', 'js/markdown.js', 'js/content.js', 'js/personas.js',
-                       'js/diagrams.js', 'js/theme.js', 'js/router.js', 'js/layouts.js', 'js/app.js'];
+                       'js/diagrams.js', 'js/theme.js', 'js/router.js',
+                       'js/layouts/_shared.js', 'js/layouts/home.js', 'js/layouts/personas.js',
+                       'js/layouts/capabilities.js', 'js/layouts/self-assessment.js',
+                       'js/app.js'];
     const hashSources = [...jsModules, 'styles.css']
         .map(f => fs.readFileSync(path.join(__dirname, f), 'utf-8'))
         .join('');
