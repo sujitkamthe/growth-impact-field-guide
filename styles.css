@@ -1272,11 +1272,11 @@ blockquote p {
     font-weight: 500;
 }
 
-.footer-note {
-    margin-top: var(--space-sm) !important;
-    font-size: 0.9rem !important;
-    color: var(--color-text-muted) !important;
-    font-weight: 400 !important;
+.main-footer .footer-note {
+    margin-top: var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 400;
 }
 
 /* Responsive */
