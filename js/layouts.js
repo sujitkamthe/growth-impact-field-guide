@@ -549,9 +549,18 @@
                             </div>
                             ` : ''}
                         </div>
+                        ${capPanels[0] ? `
+                        <div class="pd-panel-footer">
+                            <a href="#persona-${personaId}/cap-${capPanels[0].capId}" class="next-panel-btn">
+                                Next: ${capPanels[0].cap.name} &rarr;
+                            </a>
+                        </div>
+                        ` : ''}
                     </div>
 
-                    ${capPanels.map(({ capId, cap, capSection }) => `
+                    ${capPanels.map(({ capId, cap, capSection }, i) => {
+                        const nextCap = capPanels[i + 1];
+                        return `
                         <div class="sidebar-panel" data-panel="cap-${capId}">
                             <h2 class="pd-cap-title">
                                 ${cap.name}
@@ -566,8 +575,16 @@
                                 <ul>${capSection.selfAssessment.map(item => `<li>${item}</li>`).join('')}</ul>
                             </div>
                             ` : ''}
+                            ${nextCap ? `
+                            <div class="pd-panel-footer">
+                                <a href="#persona-${personaId}/cap-${nextCap.capId}" class="next-panel-btn">
+                                    Next: ${nextCap.cap.name} &rarr;
+                                </a>
+                            </div>
+                            ` : ''}
                         </div>
-                    `).join('')}
+                        `;
+                    }).join('')}
                 </div>
             </div>
         `;
