@@ -16,6 +16,39 @@
         `;
     }
 
+    // Shared collapsible/accordion template. Single source of truth for markup,
+    // ARIA, and initial state. Toggle handler lives in router.js.
+    function renderCollapsible(title, bodyHtml, { collapsed = true } = {}) {
+        return `
+            <div class="collapsible${collapsed ? ' collapsed' : ''}">
+                <button class="collapsible-btn" aria-expanded="${!collapsed}">
+                    <span>${title}</span>
+                    <span class="collapsible-icon"></span>
+                </button>
+                <div class="collapsible-body">${bodyHtml}</div>
+            </div>
+        `;
+    }
+
+    // Splits markdown on H3 boundaries, wraps each H3 subsection as a collapsible,
+    // renders intro/trailing prose inline. Used by About, Common Questions,
+    // and Self-Assessment rating sections.
+    function renderMarkdownAsCollapsibles(markdown) {
+        const parts = markdown.split(/^(?=### )/m);
+        let html = '';
+        for (const part of parts) {
+            if (part.startsWith('### ')) {
+                const nl = part.indexOf('\n');
+                const title = part.substring(4, nl).trim();
+                const body = part.substring(nl + 1).trim();
+                html += renderCollapsible(title, G.parseMarkdownToHtml(body));
+            } else if (part.trim()) {
+                html += G.parseMarkdownToHtml(part.trim());
+            }
+        }
+        return html;
+    }
+
     // ============================================
     // Layout Renderers
     // ============================================
@@ -86,26 +119,7 @@
             const cleanContent = section.content
                 .replace(/<!--\s*(?:intent-cards|intent-cards-secondary|ref-cards)\s*-->[\s\S]*?(?=<!--|\\n## |$)/g, '')
                 .replace(/<!--[^>]*-->/g, '');
-            const parts = cleanContent.split(/^(?=### )/m);
-            let sectionBody = '';
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    sectionBody += `
-                        <div class="collapsible collapsed">
-                            <button class="collapsible-btn" aria-expanded="false">
-                                <span>${title}</span>
-                                <span class="collapsible-icon"></span>
-                            </button>
-                            <div class="collapsible-body">${G.parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    sectionBody += G.parseMarkdownToHtml(part.trim());
-                }
-            }
+            const sectionBody = renderMarkdownAsCollapsibles(cleanContent);
             html += `<section class="home-section"><h2>${section.title}</h2>${sectionBody}</section>`;
         }
 
@@ -121,25 +135,7 @@
         let html = '<div class="container reference-page-content"><h1>Common Questions</h1>';
 
         if (faqSection) {
-            const parts = faqSection.content.split(/^(?=### )/m);
-            for (const part of parts) {
-                if (part.startsWith('### ')) {
-                    const nl = part.indexOf('\n');
-                    const title = part.substring(4, nl).trim();
-                    const body = part.substring(nl + 1).trim();
-                    html += `
-                        <div class="collapsible collapsed">
-                            <button class="collapsible-btn" aria-expanded="false">
-                                <span>${title}</span>
-                                <span class="collapsible-icon"></span>
-                            </button>
-                            <div class="collapsible-body">${G.parseMarkdownToHtml(body)}</div>
-                        </div>
-                    `;
-                } else if (part.trim()) {
-                    html += G.parseMarkdownToHtml(part.trim());
-                }
-            }
+            html += renderMarkdownAsCollapsibles(faqSection.content);
         }
 
         html += '</div>';
@@ -699,32 +695,6 @@
         `;
     }
 
-    // Splits Step 3 content into collapsible sub-sections for each rating level
-    // (Below/Meets/Exceeds) plus the intro and note paragraphs.
-    function renderRatingSubSections(markdown) {
-        const parts = markdown.split(/^(?=### )/m);
-        let html = '';
-        for (const part of parts) {
-            if (part.startsWith('### ')) {
-                const nl = part.indexOf('\n');
-                const title = part.substring(4, nl).trim();
-                const body = part.substring(nl + 1).trim();
-                html += `
-                    <div class="collapsible collapsed">
-                        <button class="collapsible-btn" aria-expanded="false">
-                            <span>${title}</span>
-                            <span class="collapsible-icon"></span>
-                        </button>
-                        <div class="collapsible-body">${G.parseMarkdownToHtml(body)}</div>
-                    </div>
-                `;
-            } else {
-                html += G.parseMarkdownToHtml(part.trim());
-            }
-        }
-        return html;
-    }
-
     async function renderSelfAssessmentLayout(content, container) {
         const body = content.body;
 
@@ -755,18 +725,13 @@
             if (step.content.includes('<!-- calibration-insert -->')) {
                 const [before] = step.content.split('<!-- calibration-insert -->');
                 // Split rating criteria into collapsible sub-sections
-                let html = renderRatingSubSections(before.trim());
+                let html = renderMarkdownAsCollapsibles(before.trim());
                 // Wrap calibration examples in a collapsible
                 if (calibrationContent) {
-                    html += `
-                        <div class="collapsible collapsed">
-                            <button class="collapsible-btn" aria-expanded="false">
-                                <span>Calibration Examples — see what each rating looks like in practice</span>
-                                <span class="collapsible-icon"></span>
-                            </button>
-                            <div class="collapsible-body">${renderCalibrationExamples(calibrationContent)}</div>
-                        </div>
-                    `;
+                    html += renderCollapsible(
+                        'Calibration Examples — see what each rating looks like in practice',
+                        renderCalibrationExamples(calibrationContent)
+                    );
                 }
                 return html;
             }
