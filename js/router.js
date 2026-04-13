@@ -252,45 +252,49 @@
         });
     }
 
-    function setActiveStep(layout, idx) {
-        layout.querySelectorAll('.sidebar-nav-btn').forEach(btn => btn.classList.remove('active', 'done'));
-        const stepBtns = layout.querySelectorAll('.sidebar-nav-btn[data-step]');
-        stepBtns.forEach((btn, i) => {
-            btn.classList.toggle('active', i === idx);
-            btn.classList.toggle('done', i < idx);
+    // Unified sidebar panel activator. `attr` is one of 'panel' | 'ref' | 'step'.
+    // - 'panel' → persona detail, anti-patterns. Panel class: .sidebar-panel. Sets aria-current.
+    // - 'ref'   → self-assessment ref panels (before-you-begin, common-traps, key-truths).
+    // - 'step'  → self-assessment numbered steps. Marks earlier steps .done.
+    function showPanel(layout, attr, value) {
+        const attrName = 'data-' + attr;
+        const panelSelector = attr === 'panel' ? '.sidebar-panel' : '.content-step';
+
+        // Clear all nav button states
+        layout.querySelectorAll('.sidebar-nav-btn').forEach(btn => {
+            btn.classList.remove('active', 'done');
+            if (attr === 'panel') btn.setAttribute('aria-current', 'false');
         });
-        layout.querySelectorAll('.content-step').forEach(step => step.classList.remove('active'));
-        const steps = layout.querySelectorAll('.content-step[data-step]');
-        if (steps[idx]) steps[idx].classList.add('active');
+
+        // Activate matching button(s)
+        if (attr === 'step') {
+            const idx = parseInt(value);
+            layout.querySelectorAll('.sidebar-nav-btn[data-step]').forEach((btn, i) => {
+                btn.classList.toggle('active', i === idx);
+                btn.classList.toggle('done', i < idx);
+            });
+        } else {
+            const btn = layout.querySelector('.sidebar-nav-btn[' + attrName + '="' + value + '"]');
+            if (btn) {
+                btn.classList.add('active');
+                if (attr === 'panel') btn.setAttribute('aria-current', 'true');
+            }
+        }
+
+        // Activate matching panel
+        layout.querySelectorAll(panelSelector).forEach(p => {
+            p.classList.toggle('active', p.getAttribute(attrName) === String(value));
+        });
+
+        // Reset scroll
         const content = layout.querySelector('.sidebar-content');
         if (content) content.scrollTop = 0;
     }
 
-    function showRefPanel(layout, refId) {
-        layout.querySelectorAll('.sidebar-nav-btn').forEach(btn => btn.classList.remove('active'));
-        layout.querySelectorAll('.sidebar-ref-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.ref === refId);
-        });
-        layout.querySelectorAll('.content-step').forEach(step => {
-            step.classList.toggle('active', step.dataset.ref === refId);
-        });
-        const content = layout.querySelector('.sidebar-content');
-        if (content) content.scrollTop = 0;
-    }
-
-    // data-panel pattern (persona detail, anti-patterns)
-    function showDataPanel(layout, panelId) {
-        layout.querySelectorAll('.sidebar-nav-btn').forEach(b => {
-            const isActive = b.getAttribute('data-panel') === panelId;
-            b.classList.toggle('active', isActive);
-            b.setAttribute('aria-current', isActive ? 'true' : 'false');
-        });
-        layout.querySelectorAll('.sidebar-panel').forEach(p => {
-            p.classList.toggle('active', p.getAttribute('data-panel') === panelId);
-        });
-        const content = layout.querySelector('.sidebar-content');
-        if (content) content.scrollTop = 0;
-    }
+    // Thin named wrappers preserve the external API used by activateSidebarSection.
+    function setActiveStep(layout, idx)    { showPanel(layout, 'step', idx); }
+    function showRefPanel(layout, refId)   { showPanel(layout, 'ref', refId); }
+    function showDataPanel(layout, panelId) { showPanel(layout, 'panel', panelId); }
 
     // Given a section id from the URL hash (e.g. "common-traps", "step-3",
     // "overstating", "cap-technical"), activate the sidebar panel that contains
