@@ -2198,11 +2198,34 @@ body.sidebar-active {
 
 /* Collapsible context / reference sections */
 .collapsible {
+    background: var(--color-surface-elevated);
     border: 1px solid var(--color-border-light);
     border-radius: var(--radius-md);
     margin-bottom: var(--space-md);
     overflow: hidden;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
+
+.collapsible::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: var(--color-border-light);
+}
+
+.collapsible:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Step 3 — rating-semantic colored rails (data-step is zero-indexed; "Step 3" = data-step="2") */
+[data-step="2"] .collapsible:nth-of-type(1)::before { background: #dc2626; } /* Below Expectations */
+[data-step="2"] .collapsible:nth-of-type(2)::before { background: #d97706; } /* Meets Expectations */
+[data-step="2"] .collapsible:nth-of-type(3)::before { background: #16a34a; } /* Exceeds Expectations */
+[data-step="2"] .collapsible:nth-of-type(4)::before { background: #94a3b8; } /* Calibration */
 
 .collapsible-btn {
     width: 100%;
@@ -2210,6 +2233,7 @@ body.sidebar-active {
     justify-content: space-between;
     align-items: center;
     padding: var(--space-md) var(--space-lg);
+    padding-left: calc(var(--space-lg) + 4px);
     background: none;
     border: none;
     cursor: pointer;
@@ -2217,7 +2241,7 @@ body.sidebar-active {
     color: var(--color-text-secondary);
     font-family: inherit;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: color 0.1s ease, background 0.1s ease;
 }
 
@@ -2226,15 +2250,36 @@ body.sidebar-active {
     background: var(--color-surface);
 }
 
+.collapsible-btn:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+    border-radius: var(--radius-md);
+}
+
+/* Chevron icon (replaces +/−) */
+.collapsible-icon {
+    width: 12px;
+    height: 12px;
+    position: relative;
+    flex: none;
+}
+
 .collapsible-icon::after {
-    content: '+';
-    font-size: 1rem;
-    color: var(--color-text-muted);
-    line-height: 1;
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-text-muted);
+    border-bottom: 2px solid var(--color-text-muted);
+    transform: rotate(45deg);
+    transform-origin: 50% 50%;
+    transition: transform 0.2s ease;
 }
 
 .collapsible:not(.collapsed) .collapsible-icon::after {
-    content: '−';
+    transform: rotate(-135deg);
 }
 
 .collapsible-body {
