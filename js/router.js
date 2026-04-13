@@ -161,6 +161,11 @@
         document.body.classList.toggle('sidebar-active', sidebarPage);
 
         if (sectionId) {
+            // For sidebar-layout pages, switch to the panel that owns this section
+            // before attempting to scroll. Without this, the target element may be
+            // inside a hidden panel and scrollIntoView lands on nothing visible.
+            activateSidebarSection(targetPage, sectionId);
+
             const sectionElement = targetPage.querySelector('#' + sectionId) ||
                 targetPage.querySelector('[id="' + sectionId + '"]');
             if (sectionElement) {
@@ -231,7 +236,9 @@
             if (stepBtn) {
                 const layout = stepBtn.closest('.sidebar-layout');
                 if (!layout) return;
-                setActiveStep(layout, parseInt(stepBtn.dataset.step));
+                const idx = parseInt(stepBtn.dataset.step);
+                setActiveStep(layout, idx);
+                updateHashForSection('step-' + (idx + 1));
                 return;
             }
 
@@ -240,6 +247,7 @@
                 const layout = refBtn.closest('.sidebar-layout');
                 if (!layout) return;
                 showRefPanel(layout, refBtn.dataset.ref);
+                updateHashForSection(refBtn.dataset.ref);
                 return;
             }
 
@@ -247,7 +255,9 @@
             if (nextBtn) {
                 const layout = nextBtn.closest('.sidebar-layout');
                 if (!layout) return;
-                setActiveStep(layout, parseInt(nextBtn.dataset.next));
+                const idx = parseInt(nextBtn.dataset.next);
+                setActiveStep(layout, idx);
+                updateHashForSection('step-' + (idx + 1));
                 return;
             }
         });
@@ -277,6 +287,49 @@
         });
         const content = layout.querySelector('.sidebar-content');
         if (content) content.scrollTop = 0;
+    }
+
+    // Given a section id from the URL hash (e.g. "common-traps", "step-3",
+    // "overstating"), activate the sidebar panel that contains it. Returns the
+    // panel element, or null if the page isn't a sidebar layout or no match.
+    function activateSidebarSection(targetPage, sectionId) {
+        const layout = targetPage.querySelector('.sidebar-layout');
+        if (!layout) return null;
+
+        // Direct match on a panel's data-ref
+        let panel = layout.querySelector('.content-step[data-ref="' + sectionId + '"]');
+
+        // step-N (1-indexed) maps to data-step="N-1"
+        if (!panel) {
+            const m = sectionId.match(/^step-(\d+)$/);
+            if (m) {
+                panel = layout.querySelector('.content-step[data-step="' + (parseInt(m[1]) - 1) + '"]');
+            }
+        }
+
+        // Fallback: the section id refers to an element (e.g. a heading)
+        // inside one of the panels — activate its containing panel.
+        if (!panel) {
+            const el = targetPage.querySelector('[id="' + sectionId + '"]');
+            if (el) panel = el.closest('.content-step');
+        }
+
+        if (!panel) return null;
+
+        if (panel.dataset.ref) {
+            showRefPanel(layout, panel.dataset.ref);
+        } else if (panel.dataset.step !== undefined && panel.dataset.step !== '') {
+            setActiveStep(layout, parseInt(panel.dataset.step));
+        }
+        return panel;
+    }
+
+    // Push a hash like #<activePageId>/<sectionId> so sidebar clicks are deep-linkable.
+    function updateHashForSection(sectionId) {
+        const activePage = document.querySelector('.page.active');
+        if (!activePage) return;
+        const pageId = activePage.id.replace(/^page-/, '');
+        history.pushState({ page: pageId, section: sectionId }, '', '#' + pageId + '/' + sectionId);
     }
 
     // ============================================
@@ -316,7 +369,7 @@
         });
 
         window.addEventListener('popstate', function(e) {
-            if (e.state && e.state.page) showPage(e.state.page, false);
+            if (e.state && e.state.page) showPage(e.state.page, false, e.state.section || null);
         });
 
         window.addEventListener('hashchange', function() {
