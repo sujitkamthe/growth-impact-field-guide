@@ -57,6 +57,8 @@
     --shadow-glow: 0 0 0 3px var(--color-accent-soft);
 
     --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 0.15s ease;
+    --transition-snap: 0.1s ease;
 }
 
 /* Dark Mode */
@@ -1944,7 +1946,7 @@ body.sidebar-active {
     border-radius: var(--radius-xl);
     text-decoration: none;
     color: inherit;
-    transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
 }
 
 .intent-card:hover {
@@ -2110,7 +2112,7 @@ body.sidebar-active {
     color: var(--color-text-muted);
     font-size: 0.875rem;
     line-height: 1.3;
-    transition: background 0.1s, color 0.1s;
+    transition: background var(--transition-snap), color var(--transition-snap);
     width: 100%;
 }
 
@@ -2136,7 +2138,7 @@ body.sidebar-active {
     font-size: 0.72rem;
     font-weight: 700;
     flex-shrink: 0;
-    transition: background 0.15s, color 0.15s;
+    transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .sidebar-nav-btn.active .sidebar-nav-num {
@@ -2205,7 +2207,7 @@ body.sidebar-active {
     overflow: hidden;
     position: relative;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.05);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .collapsible::before {
@@ -2242,7 +2244,7 @@ body.sidebar-active {
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 600;
-    transition: color 0.1s ease, background 0.1s ease;
+    transition: color var(--transition-snap), background var(--transition-snap);
 }
 
 .collapsible-btn:hover {
@@ -2275,7 +2277,7 @@ body.sidebar-active {
     border-bottom: 2px solid var(--color-text-muted);
     transform: rotate(45deg);
     transform-origin: 50% 50%;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .collapsible:not(.collapsed) .collapsible-icon::after {
@@ -2309,7 +2311,7 @@ body.sidebar-active {
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: background 0.15s, color 0.15s;
+    transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .next-step-btn:hover {
@@ -2401,7 +2403,7 @@ body.sidebar-active {
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    transition: background 0.15s, color 0.15s;
+    transition: background var(--transition-fast), color var(--transition-fast);
 }
 
 .next-panel-btn:hover {
