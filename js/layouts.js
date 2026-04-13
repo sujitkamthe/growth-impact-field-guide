@@ -344,7 +344,7 @@
         if (content.body.includes('<!-- diagram: impact-rings -->')) {
             html += `
                 <div class="diagram-container">
-                    <svg id="impact-rings" viewBox="0 0 580 400" class="impact-rings-svg"></svg>
+                    <svg id="impact-rings" viewBox="0 0 580 375" class="impact-rings-svg"></svg>
                 </div>
             `;
         }
