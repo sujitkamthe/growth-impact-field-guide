@@ -1,8 +1,5 @@
 /* The Sahaj Field Guide to Growth & Impact - Vibrant & Approachable Theme */
 
-/* Modern Font - Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
     /* Warm, inviting backgrounds */
     --color-bg: #F8F6F3;
@@ -12,7 +9,7 @@
     /* Rich, readable text */
     --color-text: #2D3142;
     --color-text-secondary: #4F5565;
-    --color-text-muted: #7A7F8E;
+    --color-text-muted: #6c7180;
 
     /* Soft borders */
     --color-border: #E4E2DF;
@@ -68,7 +65,7 @@
     --color-surface-elevated: #2D2E3A;
     --color-text: #F0F0F2;
     --color-text-secondary: #B8B9C3;
-    --color-text-muted: #8385A0;
+    --color-text-muted: #898BA6;
     --color-border: #3A3B48;
     --color-border-light: #2F303A;
     --color-accent: #9580E0;
