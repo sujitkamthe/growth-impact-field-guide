@@ -29,6 +29,12 @@ jobs:
       - name: Build manifest.json
         run: node build.js
 
+      - name: Bundle and minify JS
+        run: |
+          node bundle.js
+          npm exec -- esbuild app.bundle.js --minify --outfile=app.bundle.min.js
+          rm app.bundle.js
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 

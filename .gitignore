@@ -24,6 +24,8 @@ npm-debug.log*
 # Generated files (built by CI)
 data.js
 manifest.json
+app.bundle.js
+app.bundle.min.js
 
 # Baseline screenshots for visual regression testing
 baseline-screenshots/
