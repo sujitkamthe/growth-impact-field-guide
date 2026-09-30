@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "build": "node build.js",
-    "dev": "npx concurrently --kill-others \"npx nodemon --watch content -e md --exec 'node build.js'\" \"npx live-server --watch=manifest.json\""
+    "dev": "npx concurrently --kill-others \"npx nodemon --watch content -e md --exec 'node build.js'\" \"npx live-server --watch=manifest.json\"",
+    "dev:v2": "npx live-server --watch=v2 --open=/v2/"
   },
   "devDependencies": {
     "playwright": "^1.58.0"

@@ -28,6 +28,10 @@ npm run dev
 
 This watches `content/*.md` for changes, rebuilds `manifest.json` automatically, and serves the site at `http://localhost:8080` with live reload.
 
+### Field Guide V2
+
+A second version lives in `v2/` and is served at `/v2/`, beside V1 which stays unchanged. It has no build step: run `npm run dev:v2`. Its model, decisions and content conventions are in `v2/README.md`.
+
 ## Architecture
 
 **Content Pipeline:**
