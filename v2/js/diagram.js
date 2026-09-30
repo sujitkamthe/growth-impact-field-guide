@@ -82,3 +82,29 @@ export function modelDiagram(content, { scope, stretch = [], size = 240, labels 
     const label = `${scope.name} scope across all three areas` + (next && stretched.length ? `, stretching into ${next.name} in ${stretched.join(' and ')}` : '');
     return `<svg class="model" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${esc(label)}">${shapes}${text}</svg>`;
 }
+
+// How far each scope reaches: nested circles resting on one point, so each scope
+// visibly contains the ones inside it. Outlines only, so it reads as reach, not rank.
+// items: [{ name, text }] from the inner scope outwards.
+export function reachDiagram(items, { step = 52 } = {}) {
+    const outer = step * items.length;
+    const size = outer * 2 + 4;
+    const cx = size / 2;
+    const bottom = size - 2;
+    const top = r => bottom - 2 * r;
+
+    const rings = items.map((_, i) => {
+        const r = step * (i + 1);
+        return `<circle class="rd-ring" cx="${cx}" cy="${bottom - r}" r="${r}"/>`;
+    }).reverse().join('');
+
+    const labels = items.map((item, i) => {
+        const r = step * (i + 1);
+        const mid = i === 0 ? bottom - r : (top(r) + top(r - step)) / 2;
+        return `<text class="rd-name" x="${cx}" y="${mid - 3}">${esc(item.name)}</text>
+            <text class="rd-text" x="${cx}" y="${mid + 15}">${esc(item.text)}</text>`;
+    }).join('');
+
+    const label = items.map(i => `${i.name}: ${i.text}`).join('; ');
+    return `<svg class="reach-diagram" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="${esc(label)}">${rings}${labels}</svg>`;
+}

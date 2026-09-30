@@ -1,8 +1,8 @@
-// All expectations: four scopes by three areas. Compact by default so the whole
+// Expectations: every scope by area. Compact by default so the whole
 // framework fits on one screen; the viewer's scope and the next one are marked.
 
 import { esc, list, storageGet, storageSet } from '../ui.js';
-import { savedScope, nextScope } from './_parts.js';
+import { savedScope, nextScope, viewTabs } from './_parts.js';
 
 export function render(content) {
     const mine = savedScope(content);
@@ -31,12 +31,12 @@ export function render(content) {
     }).join('');
 
     return {
-        title: 'All expectations',
+        title: 'Expectations',
         html: `<section class="page">
             <header class="page-head">
-                <h1>All expectations</h1>
-                <p class="lede">Four scopes across three areas. Each cell's first line is the core of that expectation; show the full
-                statements when you need the detail. Your scope is ${esc(mine.name)}; change it on the <a href="#home">home page</a>.</p>
+                <h1>Expectations</h1>
+                ${viewTabs('all')}
+                <p class="lede">Each row is a scope and each column an area. Your scope, ${esc(mine.name)}, is highlighted; you can change it on the <a href="#home">home page</a>.</p>
                 <button type="button" class="button quiet" data-toggle aria-pressed="${full}">${full ? 'Show core statements only' : 'Show full expectations'}</button>
             </header>
             <div class="matrix${full ? '' : ' compact'}" role="table" aria-label="Expectations by scope and area">

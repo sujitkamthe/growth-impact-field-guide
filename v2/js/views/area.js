@@ -1,7 +1,14 @@
 // One area across all scopes: how it grows first, then what it covers and its notes.
 
 import { esc, md, list } from '../ui.js';
-import { breadcrumb, sideList } from './_parts.js';
+
+// Each scope's own examples, side by side, so the step between scopes is visible.
+function waysByScope(content, area) {
+    return `<div class="ways-by-scope">${content.scopes.map(s => `<div>
+        <h3><a href="#scope/${s.id}/${area.id}">${esc(s.name)}</a></h3>
+        ${list(s.areas[area.id].ways, 'plain-list secondary')}
+    </div>`).join('')}</div>`;
+}
 
 export function render(content, [id]) {
     const area = content.area(id);
@@ -22,11 +29,9 @@ export function render(content, [id]) {
 
     return {
         title: area.name,
-        html: `<div class="with-side">
-            ${sideList(content, { areaId: area.id })}
-            <article class="page-main" data-area="${area.key}">
-                ${breadcrumb([{ href: '#expectations', label: 'All expectations' }, { label: area.name }])}
+        html: `<article class="page area-page" data-area="${area.key}">
                 <header class="page-head area-head">
+                    <p class="eyebrow"><a href="#expectations">Expectations</a></p>
                     <h1>${esc(area.name)}</h1>
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
@@ -43,10 +48,9 @@ export function render(content, [id]) {
                     <div class="facets">${area.facets.map(f => `<div><h3>${esc(f.title)}</h3>${md(f.body)}</div>`).join('')}</div>
                 </section>
                 ${area.sections.map(s => `<section class="prose section-${s.slug}" id="${s.slug}">
-                    <h2>${esc(s.title)}</h2>${md(s.body)}
+                    <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'ways-to-contribute' ? waysByScope(content, area) : ''}
                 </section>`).join('')}
-            </article>
-        </div>`,
+            </article>`,
         mount(root) {
             root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
                 e.preventDefault();

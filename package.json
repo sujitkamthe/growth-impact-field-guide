@@ -4,9 +4,11 @@
   "scripts": {
     "build": "node build.js",
     "dev": "npx concurrently --kill-others \"npx nodemon --watch content -e md --exec 'node build.js'\" \"npx live-server --watch=manifest.json\"",
-    "dev:v2": "npx live-server --watch=v2 --open=/v2/"
+    "dev:v2": "npx live-server --watch=v2 --open=/v2/",
+    "templates:v2": "node v2/scripts/build_doc_templates.js"
   },
   "devDependencies": {
+    "docx": "^9.8.1",
     "playwright": "^1.58.0"
   },
   "dependencies": {

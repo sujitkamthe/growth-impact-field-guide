@@ -3,6 +3,7 @@ id: direct
 name: Direct
 order: 1
 radius: Impact through work directly in your hands, such as the stories and features you own end to end
+reaches: Stories · features you own
 mindset: I can be trusted with my work, end to end.
 question: What's the right way to build this?
 v1: Artisan, and the later end of Explorer
@@ -10,11 +11,11 @@ v1: Artisan, and the later end of Explorer
 
 ## Summary
 
-This is where everyone's expectations start, including experienced hires once ramp-up is over. Direct describes where your impact comes from, not how big or how junior it is. It means trusted and independent, not junior: you take a piece of work from an unclear ask to production without someone steering each step, and you understand enough of its context to question it.
+Direct is the first scope. It means you are trusted and independent: you take a piece of work from an unclear ask to production without someone steering each step, and you understand enough of its context to question it.
 
 ## What changes
 
-There is no scope below this one. If you are new to Sahaj, you may spend a few weeks operating below it in unfamiliar areas such as a new stack, a new domain or our ways of working. That is ramp-up, and it is not a growth stage.
+This is the first scope. If you're new to Sahaj, your first few weeks go into learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
 
 ## Client & Delivery
 
@@ -23,7 +24,7 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 ### Expectations
 
 - Takes stories from an unclear ask to production, breaking them down without needing someone to unblock each step
-- Writes clean, tested, maintainable code by default and owns the defects it introduces
+- Writes clean, tested, maintainable code by default and follows problems in their changes through to resolution
 - Asks "why" behind the work, flags gaps and ambiguity early, and suggests alternatives when an ask looks wrong
 - Delivers predictably: estimates sensibly, keeps progress visible and raises risks before they become blockers
 
@@ -32,7 +33,7 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 - Stories you took from vague requirements to production across the cycle, and the questions you routinely asked on the way
 - Requirement gaps you caught before they were built, often enough that the team now expects it of you
 - Risks you raised early as a habit, and what they changed
-- Review feedback getting lighter over the cycle, or teammates describing your work as easy to pick up
+- Reviews of your work that focus on trade-offs and improvements rather than basic correctness, testing or maintainability
 
 ### Self-check
 
@@ -48,14 +49,14 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 
 ## People & Team
 
-> I make the people around me better to work with.
+> I am a dependable, constructive teammate.
 
 ### Expectations
 
 - Communicates progress, blockers and decisions without being chased
 - Gives specific, useful feedback in reviews and pairing, and visibly acts on feedback received
 - Helps newer teammates onboard, explaining the reasoning rather than handing over answers
-- Is someone others feel safe asking for help
+- Responds constructively when teammates ask for help, including when the question is basic or the timing inconvenient
 
 ### Evidence
 
@@ -72,7 +73,7 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 ### Not yet
 
 - Helpful when asked, invisible otherwise
-- Review comments are mostly about style rather than substance
+- Feedback points out problems but rarely helps the other person understand the reasoning or decide better next time
 - Feedback is heard but nothing is different by the next cycle
 
 ## Org & Community
@@ -81,9 +82,9 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 
 ### Expectations
 
-- Picks at least one avenue of contribution beyond project work and sustains it through the cycle
+- Makes a meaningful, sustained contribution beyond immediate delivery, in ways they choose
 - Understands and upholds Sahaj's culture and values in everyday behaviour
-- Takes part in org activities such as DevDays, interviewing and knowledge-sharing sessions, and is welcome to lead them
+- Follows through on the organisation commitments they take on, and raises constraints early when they can't
 
 ### Evidence
 
@@ -98,8 +99,16 @@ There is no scope below this one. If you are new to Sahaj, you may spend a few w
 
 ### Not yet
 
-- "My project didn't leave time" is raised for the first time at assessment
 - Attending things is described as contributing to them
+- Commitments taken on beyond the project quietly lapse
+
+### Ways to contribute
+
+- Interviewing regularly, with feedback other interviewers can use
+- Sharing what your team learned, through sessions or write-ups
+- Contributing steadily to an org initiative, capability track or community of practice
+- Fixing a small internal tool or process that wastes people's time
+- Helping new joiners settle in, beyond your own team
 
 ## Examples
 

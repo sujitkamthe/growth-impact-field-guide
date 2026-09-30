@@ -1,7 +1,7 @@
 // Compare two scopes area by area. Defaults to your scope and the one above it.
 
 import { esc, md, list } from '../ui.js';
-import { savedScope, nextScope } from './_parts.js';
+import { savedScope, nextScope, viewTabs } from './_parts.js';
 
 function select(content, name, selected, label) {
     return `<label class="field inline">
@@ -34,8 +34,9 @@ export function render(content, [fromId, toId]) {
         title: `Compare ${from.name} and ${to.name}`,
         html: `<section class="page">
             <header class="page-head">
-                <h1>Compare scopes</h1>
-                <p class="lede">See exactly what changes between two scopes, area by area.</p>
+                <h1>Expectations</h1>
+                ${viewTabs('compare')}
+                <p class="lede">See what changes between two scopes, area by area.</p>
                 <form class="cmp-pick">
                     ${select(content, 'from', from.id, 'From')}
                     ${select(content, 'to', to.id, 'To')}

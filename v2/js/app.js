@@ -8,20 +8,16 @@ import * as matrix from './views/matrix.js';
 import * as scope from './views/scope.js';
 import * as area from './views/area.js';
 import * as compare from './views/compare.js';
-import * as sheet from './views/sheet.js';
-import * as assess from './views/assess.js';
 import * as faq from './views/faq.js';
 
 const ROUTES = [
     { pattern: /^(home)?$/, view: home, nav: 'home' },
-    { pattern: /^how-it-works$/, view: how, nav: 'how-it-works' },
+    { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works' },
     { pattern: /^teammates$/, view: teammates, nav: 'how-it-works' },
     { pattern: /^expectations$/, view: matrix, nav: 'expectations' },
     { pattern: /^scope\/([\w-]+)(?:\/([\w-]+))?$/, view: scope, nav: 'expectations' },
     { pattern: /^area\/([\w-]+)$/, view: area, nav: 'expectations' },
-    { pattern: /^compare(?:\/([\w-]+)\/([\w-]+))?$/, view: compare, nav: 'compare' },
-    { pattern: /^set-expectations(?:\/([\w-]+))?$/, view: sheet, nav: 'set-expectations' },
-    { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: assess, nav: 'self-assessment' },
+    { pattern: /^compare(?:\/([\w-]+)\/([\w-]+))?$/, view: compare, nav: 'expectations' },
     { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq' },
 ];
 
@@ -78,6 +74,19 @@ function render(content) {
     app.focus({ preventScroll: true });
 }
 
+// Printing shows everything: folded sections open for the print and close again after.
+function initPrint() {
+    let opened = [];
+    window.addEventListener('beforeprint', () => {
+        opened = [...app.querySelectorAll('details:not([open])')];
+        opened.forEach(d => { d.open = true; });
+    });
+    window.addEventListener('afterprint', () => {
+        opened.forEach(d => { d.open = false; });
+        opened = [];
+    });
+}
+
 // The theme follows the system unless someone has chosen one with the toggle.
 function initTheme() {
     const root = document.documentElement;
@@ -95,6 +104,7 @@ function initTheme() {
 
 async function boot() {
     initTheme();
+    initPrint();
     menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
     let content;
     try {

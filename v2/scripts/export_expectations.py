@@ -30,12 +30,12 @@ The full content behind the growth framework, exported from the site.
 
 ## How the model works
 
-- **Four scopes of impact**, one per person: Direct, Extended, Team, Wider. A scope describes how far your impact reaches, not a title.
-- **Three areas** at every scope: Client & Delivery, People & Team, Org & Community. The scope is the same in all three; strength within it is rated Below / Meets / Exceeds per area.
-- **Reference scope**: the scope shown consistently across all three areas, confirmed at the team check. It sets expectations and anchors compensation (open salaries).
-- **Stretch**: once a scope is established, some of the next scope's responsibilities are taken on in one or more areas. A stretch adds to current expectations and doesn't change pay by itself.
-- **Org & Community is mandatory**: people choose how they contribute, not whether. A scope is a floor, not a ceiling.
-- **At most four expectations per area**, deliberately, and **evidence is a pattern, not an instance**.
+- **Scopes of impact**, one per person: Direct, Extended, Team, Wider. A scope describes how far your impact reaches, not a title.
+- **Areas**, the same at every scope: Client & Delivery, People & Team, Org & Community. The scope is the same in all three; strength within it is rated Below / Meets / Exceeds per area.
+- **Reference scope**: the scope shown consistently across all three areas, confirmed at the team check. It sets the expectations in every area.
+- **Stretch**: once a scope is established, some of the next scope's responsibilities are taken on in one or more areas. A stretch adds to current expectations.
+- **Org & Community is mandatory**: people choose how they contribute, and anyone can go beyond their scope.
+- **At most four expectations per area**, deliberately, and **evidence is a pattern** across the cycle, not a single example.
 
 ## What to check
 

@@ -32,19 +32,11 @@ There is no required blog, talk or number of initiatives. What is expected is so
 
 ## Ways to contribute
 
-- **Capability development**: running, teaching or building a capability track
-- **Mentoring beyond your team**: Emerge, a mentoring programme, or people in other offices
-- **Initiatives**: owning or contributing to an org initiative, from DevDays to an internal product
-- **Hiring and onboarding**: interviewing, or making the hiring process and first weeks better
-- **Culture**: sustaining a cultural initiative, or naming and fixing a cultural problem
-- **Internal tools and processes**: fixing something that wastes many people's time
-- **Knowledge sharing**: internal sessions, write-ups, communities of practice
-- **External community**: talks, blogs, meetups, open source
-- **Something else**: anything that makes Sahaj stronger beyond your own delivery
+Each scope has its own examples to choose from, and they show the kind of contribution expected there. Anything else counts too, judged by what it changed.
 
 ## What counts
 
-Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. The expected reach grows with your scope: taking part at Direct, driving something at Extended, creating or sustaining something that benefits a wider group at Team, and shaping capability, culture or reputation at Wider. That progression is a floor, not a ceiling: anyone can contribute beyond it, and it counts.
+Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. A low-profile fix that removes recurring friction for many people can be worth more than a highly visible contribution, so judge the change rather than the size of the audience. The expected reach grows with your scope: contributing at Direct, driving something at Extended, building something others can sustain at Team, and shaping capability, culture or reputation at Wider. That progression is a floor, not a ceiling: anyone can contribute beyond it, and it counts.
 
 ## How it is assessed
 

@@ -8,7 +8,7 @@ question: Do the people around you become more effective?
 
 ## Summary
 
-Growing others and building trust are core to how impact scales at Sahaj, not extras. This area covers the people you work with directly: your team, your project and, at wider scopes, the people you coach and sponsor across the organisation.
+Growing others and building trust are core to how impact scales at Sahaj, not extras. This area covers the people you work with directly: your team, your project and, at wider scopes, the people whose growth you shape beyond your team.
 
 ## Facets
 
@@ -26,4 +26,4 @@ Keeping people informed, driving discussions to decisions and handling disagreem
 
 ## Where does mentoring count?
 
-Mentoring can show up in two areas, so use one rule of thumb: ask where the impact landed. Mentoring people on your own team or project belongs here in People & Team. Mentoring through an org mechanism, such as an Emerge cohort, a capability track or someone in another office, is a contribution beyond your delivery and belongs in Org & Community. Count each piece of work once.
+Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through something Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Org & Community, and so is designing or running the programme itself. Count each piece of work once.

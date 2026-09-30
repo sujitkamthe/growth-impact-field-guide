@@ -43,21 +43,3 @@ export async function copyText(text, button) {
         setTimeout(() => { button.textContent = original; }, 1600);
     }
 }
-
-// Expectation sheets travel as a URL-safe base64 blob so they can be shared as a link.
-export function encodeSheet(sheet) {
-    const bytes = new TextEncoder().encode(JSON.stringify(sheet));
-    let binary = '';
-    bytes.forEach(b => { binary += String.fromCharCode(b); });
-    return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-
-export function decodeSheet(code) {
-    try {
-        const binary = atob(code.replace(/-/g, '+').replace(/_/g, '/'));
-        const bytes = Uint8Array.from(binary, ch => ch.charCodeAt(0));
-        return JSON.parse(new TextDecoder().decode(bytes));
-    } catch {
-        return null;
-    }
-}

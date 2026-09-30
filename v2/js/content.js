@@ -1,10 +1,10 @@
 // Loads the markdown in content/ and turns its conventions into structured data.
 // Scope files: frontmatter + "## <Area name>" sections, each with a "> core" line
-// and "### Expectations / Evidence / Self-check / Not yet" lists.
+// and "### Expectations / Evidence / Self-check / Not yet" lists, plus "### Ways to contribute" under Org & Community.
 
 export const SCOPE_IDS = ['direct', 'extended', 'team', 'wider'];
 export const AREA_IDS = ['client-delivery', 'people-team', 'org-community'];
-const PAGE_IDS = ['home', 'how-it-works', 'teammates', 'set-expectations', 'self-assessment', 'faq'];
+const PAGE_IDS = ['home', 'how-it-works', 'teammates', 'faq'];
 
 export function slugify(text) {
     return text.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -57,6 +57,7 @@ function parseAreaBlock(body) {
         evidence: lists['evidence'] || [],
         selfCheck: lists['self-check'] || [],
         notYet: lists['not-yet'] || [],
+        ways: lists['ways-to-contribute'] || [],
     };
 }
 
@@ -79,17 +80,11 @@ function parseScope(text) {
 function parseArea(text) {
     const { data, body } = parseFrontmatter(text);
     const { sections } = splitSections(body, 2);
-    const area = { ...data, summary: '', facets: [], sections: [], avenues: [] };
+    const area = { ...data, summary: '', facets: [], sections: [] };
     for (const s of sections) {
         if (s.slug === 'summary') area.summary = s.body;
         else if (s.slug === 'facets') area.facets = splitSections(s.body, 3).sections;
         else area.sections.push(s);
-        if (s.slug === 'ways-to-contribute') {
-            area.avenues = listItems(s.body).map(item => {
-                const m = item.match(/^\*\*(.+?)\*\*:?\s*(.*)$/);
-                return m ? { label: m[1], detail: m[2] } : { label: item, detail: '' };
-            });
-        }
     }
     return area;
 }
