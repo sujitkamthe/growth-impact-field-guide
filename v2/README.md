@@ -2,6 +2,8 @@
 
 V2 sits beside V1 rather than replacing it. V1 (the repo root) is unchanged and still served at `/`; V2 is self-contained in this folder and served at `/v2/`. The existing Pages workflow uploads the whole repo, so no CI change is needed.
 
+Where the work stands, what needs sign-off and what's still open is in [HANDOFF.md](HANDOFF.md).
+
 ## Run it
 
 ```bash
