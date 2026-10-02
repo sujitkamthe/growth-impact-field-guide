@@ -12,17 +12,21 @@ Growing others and building trust are core to how impact scales at Sahaj, not ex
 
 ## Facets
 
-### Mentoring and coaching
+### Growing others
 
-Helping others build their own judgment rather than depend on yours. The measure is what they can do without you.
+Mentoring, coaching and onboarding that help others build their own judgment rather than depend on yours. The measure is what they can do without you.
 
-### Feedback
+### Feedback and trust
 
-Giving feedback that changes behaviour and receiving it in a way people can see. Both directions count.
+Giving feedback that changes behaviour, receiving it in a way people can see, and building the trust that makes both possible. Both directions count.
 
 ### Communication and collaboration
 
 Keeping people informed, driving discussions to decisions and handling disagreement well. Communication runs through all three areas; it lives here because this is where its effect on others is most visible.
+
+## How facets are rated
+
+Like Client & Delivery, this area lists each scope's expectations by facet, and all three count toward one rating, so a clear gap in one makes the area below expectations. A team that grows because of you but never hears hard feedback from you has a gap, and so does one that gets clear feedback from someone nobody would ask for help.
 
 ## Where does mentoring count?
 

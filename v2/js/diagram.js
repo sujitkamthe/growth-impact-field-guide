@@ -1,5 +1,5 @@
-// The two pictures of the model. Both show reach, never rank: a scope is one
-// band of the circle, not a meter that fills up.
+// The two pictures of the model, and the area icons. The pictures show reach, never rank:
+// a scope is one band of the circle, not a meter that fills up.
 
 import { esc } from './ui.js';
 
@@ -108,3 +108,18 @@ export function reachDiagram(items, { step = 52 } = {}) {
     const label = items.map(i => `${i.name}: ${i.text}`).join('; ');
     return `<svg class="reach-diagram" viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" role="img" aria-label="${esc(label)}">${rings}${labels}</svg>`;
 }
+
+// One stroke icon per area, so an area is recognisable by shape as well as colour (colour alone
+// fails some readers and disappears in print). Drawn in currentColor, so it takes the area's colour.
+const AREA_ICONS = {
+    // Client & Delivery: a package, the work delivered.
+    cd: '<path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/>',
+    // People & Team: two people.
+    pt: '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 14.2c.5-.1.9-.2 1.4-.2 2.5 0 4.5 2 4.5 4.5"/>',
+    // Org & Community: people connected.
+    oc: '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M10.9 6.9 6.1 16.1M13.1 6.9l4.8 9.2M7.2 18h9.6"/>',
+};
+
+export const areaIcon = key => AREA_ICONS[key]
+    ? `<svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${AREA_ICONS[key]}</svg>`
+    : '';

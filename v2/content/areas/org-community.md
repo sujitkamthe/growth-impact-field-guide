@@ -10,29 +10,32 @@ question: Is Sahaj stronger because you're here?
 
 A flat organisation runs on people choosing to build it. This area covers what you contribute beyond your immediate delivery: culture, initiatives, capability and the wider community.
 
-## Facets
+## Routes
 
-### Culture and values
+Unlike the facets in the other two areas, nobody is expected to show all three.
 
-Upholding how we work, and speaking up when something doesn't fit it.
+### Culture and organisational health
+
+Upholding how we work, speaking up when something doesn't fit it, and fixing what wears people down.
 
 ### Initiatives and capability
 
 Contributing to, driving and eventually designing the things that make Sahaj better, such as capability development, hiring, onboarding and internal tools.
 
-### Community
+### Community and external contribution
 
 Giving back inside and outside Sahaj through sessions, writing, talks and open source.
 
 ## Contribution is part of the job
 
+<!-- band -->
 What you contribute is your choice. Whether you contribute is not.
 
-There is no required blog, talk or number of initiatives. What is expected is some meaningful, sustained contribution you can point to. The reason is structural: a flat organisation has no separate team building culture and capability on everyone else's behalf, so if some people opt out, others carry the load.
+There is no required blog, talk or number of initiatives. What is expected is some meaningful, sustained contribution you can point to, made in working time: your team makes room for it rather than leaving it for evenings. The reason is structural: a flat organisation has no separate team building culture and capability on everyone else's behalf, so if some people opt out, others carry the load.
 
 ## Ways to contribute
 
-Each scope has its own examples to choose from, and they show the kind of contribution expected there. Anything else counts too, judged by what it changed.
+Each scope has its own examples to choose from, grouped by route, and they show the kind of contribution expected there. Anything else counts too, judged by what it changed.
 
 ## What counts
 
@@ -40,4 +43,9 @@ Contribution is judged on what changed, not on how visible it was, and it has to
 
 ## How it is assessed
 
-No meaningful contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like. If your project genuinely leaves no room, raise it during the cycle so it can be addressed, not at assessment as an explanation.
+<!-- callout -->
+No meaningful contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like.
+
+If your project genuinely leaves no room, raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised then, it can still be addressed, which it can't be at assessment. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+
+Like every area, Org & Community counts toward a raise in scope: you need consistent next-scope impact here as well as in the other two.

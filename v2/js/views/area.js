@@ -1,6 +1,10 @@
-// One area across all scopes: how it grows first, then what it covers and its notes.
+// One area: what it covers (facets that all count, or routes to choose from), then how it
+// grows across the scopes, then its notes. Linkable to a section as #area/<area>/<section>.
 
 import { esc, md, list } from '../ui.js';
+import { GRAMMAR, expectationGroups, savedScope, EXPLORING } from './_parts.js';
+import { areaIcon } from '../diagram.js';
+import { BAND } from './prose.js';
 
 // Each scope's own examples, side by side, so the step between scopes is visible.
 function waysByScope(content, area) {
@@ -10,50 +14,62 @@ function waysByScope(content, area) {
     </div>`).join('')}</div>`;
 }
 
-export function render(content, [id]) {
+export function render(content, [id, open]) {
     const area = content.area(id);
     if (!area) return null;
 
+    const mine = savedScope(content);
     const thread = content.scopes.map(s => {
         const block = s.areas[area.id];
-        return `<li class="thread-step">
-            <a class="thread-scope" href="#scope/${s.id}/${area.id}"><span>${esc(s.name)}</span></a>
+        const exploring = s.id === mine?.id;
+        return `<li class="thread-step${exploring ? ' is-mine' : ''}">
+            <div class="thread-scope-cell">
+                <a class="thread-scope" href="#scope/${s.id}/${area.id}"><span>${esc(s.name)}</span></a>
+                ${exploring ? EXPLORING : ''}
+            </div>
             <div>
                 <p class="core">${esc(block.core)}</p>
-                ${list(block.expectations, 'plain-list')}
+                ${expectationGroups(block)}
             </div>
         </li>`;
     }).join('');
 
-    const onPage = [{ slug: 'how-it-grows', title: 'How it grows' }, { slug: 'what-it-covers', title: 'What it covers' }, ...area.sections];
+    const routes = area.groupKind === 'routes';
+    const covers = routes ? 'Routes' : 'What it covers';
+    const onPage = [{ slug: 'what-it-covers', title: covers }, { slug: 'how-it-grows', title: 'How it grows' }, ...area.sections];
 
     return {
         title: area.name,
+        keepScroll: Boolean(open),
         html: `<article class="page area-page" data-area="${area.key}">
                 <header class="page-head area-head">
                     <p class="eyebrow"><a href="#expectations">Expectations</a></p>
-                    <h1>${esc(area.name)}</h1>
+                    <h1 class="area-title">${areaIcon(area.key)}${esc(area.name)}</h1>
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
                 </header>
                 <nav class="on-page" aria-label="On this page">
                     ${onPage.map(s => `<a href="#area/${area.id}" data-jump="${s.slug}">${esc(s.title)}</a>`).join('')}
                 </nav>
+                <section id="what-it-covers">
+                    <h2>${covers}</h2>
+                    <p class="kind">${routes ? GRAMMAR.routes : GRAMMAR.facets}</p>
+                    ${area.groupIntro ? `<div class="prose">${md(area.groupIntro)}</div>` : ''}
+                    <div class="facets">${area.facets.map(f => `<div><h3>${esc(f.title)}</h3>${md(f.body)}</div>`).join('')}</div>
+                </section>
                 <section id="how-it-grows">
                     <h2>How it grows</h2>
                     <ol class="thread">${thread}</ol>
                 </section>
-                <section id="what-it-covers">
-                    <h2>What it covers</h2>
-                    <div class="facets">${area.facets.map(f => `<div><h3>${esc(f.title)}</h3>${md(f.body)}</div>`).join('')}</div>
-                </section>
-                ${area.sections.map(s => `<section class="prose section-${s.slug}" id="${s.slug}">
+                ${area.sections.map(s => `<section class="prose section-${s.slug}${BAND.test(s.body) ? ' band' : ''}" id="${s.slug}">
                     <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'ways-to-contribute' ? waysByScope(content, area) : ''}
                 </section>`).join('')}
             </article>`,
         mount(root) {
+            if (open) requestAnimationFrame(() => root.querySelector(`#${CSS.escape(open)}`)?.scrollIntoView({ block: 'start' }));
             root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
                 e.preventDefault();
+                history.replaceState(null, '', `#area/${area.id}/${a.dataset.jump}`);
                 root.querySelector(`#${CSS.escape(a.dataset.jump)}`)?.scrollIntoView({ block: 'start' });
             }));
         },

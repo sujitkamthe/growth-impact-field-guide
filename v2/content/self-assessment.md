@@ -1,30 +1,62 @@
 ---
-title: Rating guide
-lede: The rating guidance carried in the expectations and self-assessment doc templates (scripts/build_doc_templates.js). Not a page on the site.
+title: Self-assessment
+lede: Write it at the end of the cycle, in your expectations doc, drawing on the feedback notes you kept. Work through it one area at a time.
 ---
 
-## Below expectations
+## Before you start
 
-A meaningful part of what your scope expects in this area isn't yet shown consistently. Impact depended on favourable conditions, or others compensated for gaps you had not closed.
+1. **Open your doc**: assess against your scope's expectations and anything specific you noted at the start of the cycle.
+2. **Read your feedback notes**: start from the feedback you gathered during the cycle rather than from memory. One good example shows you can, while consistency, and others relying on it, shows you do.
+3. **Take one area at a time**: answer the prompts below for each area, then rate it.
 
-## Meets expectations
+## The prompts
 
-You delivered what was agreed, consistently and across varied conditions. Teammates would depend on you here without checking.
+- **What changed because of you?**: name outcomes rather than activities. In Client & Delivery and People & Team, cover each facet, because a clear gap in one is a gap in the area. In Org & Community, say which route you chose and what it changed.
+- **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
+- **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
-## Exceeds expectations
+## Choosing a rating
 
-Your impact was materially stronger, broader or more durable than your scope expects, with no real gap elsewhere in the area. Others learned from you, or a problem stopped recurring because of you.
+<!-- scale -->
+- **Below expectations**: a meaningful part of what your scope expects in this area isn't yet shown consistently. Impact depended on favourable conditions, or others compensated for gaps you had not closed.
+- **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Teammates would depend on you here without checking.
+- **Exceeds expectations**: your impact was materially stronger, broader or more durable than your scope expects, with no real gap elsewhere in the area. Others learned from you, or a problem stopped recurring because of you.
 
-Doing some next-scope work now and then is a stretch, not automatically exceeding, so rate the area on the impact rather than on which scope the work belonged to. Exceeding at one scope is not the same as meeting the next one; it is a strong result in its own right, and a good prompt for a growth conversation. Consistent next-scope impact across all three areas is the signal that your reference scope may need to change.
+<!-- callout -->
+Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: that happens when your next-scope impact is consistent in all three areas.
 
-## Stretch expectations
+Exceeds in one area is a strong result on its own, and a good start for a conversation about growth.
 
-An area marked as a stretch is taking on some of the next scope's responsibilities. Rate it against your reference scope like every other area, then reflect separately on how far you got with the stretch. Sustaining a stretch is the clearest signal that your reference scope should be raised at the team check; falling short of one is normal and is not a step backwards.
+## A worked example
+
+One area, written by someone at Team scope. It is an illustration that follows the same situation as the [In practice](#scope/team) story, not a template to copy.
+
+> **Client & Delivery**
+>
+> **What changed because of you?** Payment releases had slipped twice because integrations were tested late. I worked with the team on how we plan, test and review integrations, two teammates now run the review, and the next two releases landed on time. For technical craft, the contract tests we agreed are what the team now builds on. For consulting, I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. For delivery, the testing risk now comes up at planning rather than at release.
+>
+> **What did you take from the feedback?** A teammate said I made the integration decisions on my own at first. I started bringing options to the team before deciding, and the review practice came out of that.
+>
+> **Rating: Meets.** It held across the cycle and others now rely on it, but the practice is new and hasn't yet been through a harder release.
+
+## Stretch
+
+If you agreed a stretch, rate that area against your reference scope like every other area, then say how far you got with it. A stretch you sustained, so that others now rely on it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once that holds in all three areas, and falling short of a stretch is normal.
 
 ## Describing a shortfall
 
-When an area falls short, say why, because each reason calls for a different response from the team. Having had no chance to show it, and having raised that during the cycle, is an opportunity for the team to create. Having the chance and not taking it is a growth area. Taking the chance and finding it hard is a development need, and support is the right response.
+When an area falls short, say why, because each reason calls for a different response from the team.
+
+<!-- list -->
+- **You had no chance, and raised it during the cycle**: an opportunity for the team to create.
+- **The chance was there and you didn't take it**: a growth area to plan for.
+- **You took the chance and found it hard**: a development need, where support is the right response.
 
 ## Common traps
 
-Overstating does not survive an open team check, because your teammates know your work. The most common form is counting a single good instance as evidence: one example shows you can, while a pattern across the cycle, and others relying on it, shows you do. Understating creates work for them too. If you find yourself building a case rather than reflecting, pause and return to the evidence.
+The most common trap is treating a single good instance as a pattern, which overstates what you do consistently. Understating is the other, and it helps nobody, because your teammates then have to argue you up. Writing from your feedback notes rather than from memory avoids both, and lets the team check start from what you wrote rather than from corrections. If you notice yourself building a case rather than reflecting, go back to the evidence.
+
+## At the team check
+
+<!-- band -->
+You can present your doc, or others can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and your reviewers confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.

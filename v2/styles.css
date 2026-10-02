@@ -1,5 +1,5 @@
 /* Growth & Impact at Sahaj (Field Guide V2)
-   Documentation-style: text on white, colour only where it means something.
+   Editorial field guide: text on white, colour only where it means something.
    Interaction is graphite ink; the three area colours mark areas and are the only colour on the page. */
 
 :root {
@@ -16,9 +16,9 @@
     --accent-soft: #F4F4F5;
     --accent-ink: #FFFFFF;
 
-    --cd: #0F6E62;
-    --pt: #3257A8;
-    --oc: #7A5A1E;
+    --cd: #087A6B;
+    --pt: #315FAF;
+    --oc: #95620B;
 
     --positive: #2F7D52;
     --warning: #B54708;
@@ -38,7 +38,7 @@
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         --bg: #14151B; --surface: #1C1D25; --text: #ECEDF2; --text-2: #B9BCC9; --muted: #9498AD;
-        --line: #2E3040; --control: #6B6F84; --notice: #23252F;
+        --line: #3A3D4E; --control: #6B6F84; --notice: #23252F;
         --accent: #FAFAFA; --accent-soft: #27272A; --accent-ink: #14151B;
         --cd: #4CC3AE; --pt: #86A9F2; --oc: #D9A95B;
         --positive: #5BC08A; --warning: #F0A36B; --critical: #F28B82;
@@ -50,7 +50,7 @@
 
 :root[data-theme="dark"] {
     --bg: #14151B; --surface: #1C1D25; --text: #ECEDF2; --text-2: #B9BCC9; --muted: #9498AD;
-    --line: #2E3040; --control: #6B6F84; --notice: #23252F;
+    --line: #3A3D4E; --control: #6B6F84; --notice: #23252F;
     --accent: #FAFAFA; --accent-soft: #27272A; --accent-ink: #14151B;
     --cd: #4CC3AE; --pt: #86A9F2; --oc: #D9A95B;
     --positive: #5BC08A; --warning: #F0A36B; --critical: #F28B82;
@@ -60,6 +60,15 @@
 [data-area="cd"] { --area: var(--cd); }
 [data-area="pt"] { --area: var(--pt); }
 [data-area="oc"] { --area: var(--oc); }
+
+/* Areas are marked by a short bar in their colour on a hairline, so colour labels
+   the area without a full-width rule competing with the text. */
+.home-area, .page > .scope-area, .area-head, .cmp-area { position: relative; border-top: 1px solid var(--line); }
+.home-area::before, .page > .scope-area::before, .area-head::before, .cmp-area::before, .mx-col-head::before {
+    content: ""; position: absolute; top: -2px; left: 0; width: 40px; height: 3px; border-radius: 2px; background: var(--area);
+}
+.mx-col-head { position: relative; }
+.mx-col-head::before { top: 0; left: 16px; }
 
 /* Base */
 
@@ -81,7 +90,8 @@ body {
 
 h1, h2, h3, h4 { font-weight: 600; margin: 0 0 0.5em; }
 h1 { font-size: clamp(28px, 24px + 1.2vw, 36px); line-height: 1.2; letter-spacing: -0.01em; }
-h2 { font-size: 24px; line-height: 1.3; }
+h2 { font-size: 26px; line-height: 1.3; letter-spacing: -0.01em; }
+@media (max-width: 760px) { h2 { font-size: 23px; } }
 h3 { font-size: 18px; line-height: 1.4; }
 h4 { font-size: 15px; line-height: 1.4; margin-top: 1em; }
 p { margin: 0 0 1em; }
@@ -127,6 +137,33 @@ strong { font-weight: 600; }
 }
 .nav-links a:hover { color: var(--text); }
 .nav-links a[aria-current] { color: var(--accent); border-bottom-color: var(--accent); }
+/* The scope being explored: a dropdown set apart from the page links by a hairline. */
+.nav-scope { position: relative; display: flex; margin-right: 8px; padding-right: 8px; border-right: 1px solid var(--line); }
+.scope-menu-button {
+    display: flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px;
+    background: none; border: 0; font: inherit; font-size: 15px; color: var(--text-2); cursor: pointer; white-space: nowrap;
+}
+.scope-menu-button:hover { color: var(--text); }
+.scope-menu-button strong { color: var(--text); font-weight: 600; }
+.scope-menu-button .glyph { flex-shrink: 0; }
+.scope-menu-button .chevron { transition: transform 0.15s; }
+.scope-menu-button[aria-expanded="true"] .chevron { transform: rotate(180deg); }
+.scope-menu {
+    position: absolute; top: calc(100% + 8px); left: 0; z-index: 30; width: 340px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px;
+}
+.scope-menu-note { font-size: 14px; color: var(--muted); line-height: 1.45; margin: 2px 4px 10px; }
+.scope-menu-options { display: grid; gap: 2px; }
+.scope-menu-options [role="radio"] {
+    display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; padding: 10px;
+    background: none; border: 0; border-radius: var(--radius-control); font: inherit; color: var(--text); cursor: pointer;
+}
+.scope-menu-options [role="radio"]:hover { background: var(--notice); }
+.scope-menu-options [aria-checked="true"] { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); }
+.scope-menu-options .glyph { flex-shrink: 0; margin-top: 2px; }
+.scope-menu-options strong { display: block; font-weight: 600; line-height: 1.3; }
+.scope-menu-options span span { display: block; font-size: 14px; color: var(--text-2); line-height: 1.4; }
+.scope-menu-read { display: inline-block; margin: 10px 4px 2px; font-size: 15px; }
 
 .menu-button {
     display: none; margin-left: auto; min-height: 44px; padding: 0 14px; font: inherit; font-weight: 500;
@@ -137,10 +174,16 @@ strong { font-weight: 600; }
     width: 44px; height: 44px; border-radius: var(--radius-control); display: grid; place-items: center; cursor: pointer; flex-shrink: 0;
 }
 .theme-toggle .moon-icon { display: none; }
+/* The narrowest phones: brand, Menu and theme toggle only just fit beside each other. */
+@media (max-width: 360px) {
+    .main-nav { gap: 8px; }
+    .brand { gap: 6px; }
+    .menu-button { padding: 0 10px; }
+}
 :root[data-theme="dark"] .theme-toggle .sun-icon { display: none; }
 :root[data-theme="dark"] .theme-toggle .moon-icon { display: block; }
 
-@media (max-width: 960px) {
+@media (max-width: 1100px) {
     .main-nav { gap: 12px; }
     .menu-button { display: block; }
     .nav-links {
@@ -151,6 +194,9 @@ strong { font-weight: 600; }
     .nav-links.open { display: flex; }
     .nav-links a { border-bottom: 0; border-left: 2px solid transparent; }
     .nav-links a[aria-current] { border-left-color: var(--accent); }
+    .nav-scope { flex-direction: column; align-items: stretch; margin: 0 0 4px; padding: 0 0 4px; border-right: 0; border-bottom: 1px solid var(--line); }
+    .scope-menu-button { padding-left: 14px; }
+    .scope-menu { position: static; width: auto; border: 0; padding: 0 0 8px; background: none; }
 }
 
 .site-footer {
@@ -169,6 +215,48 @@ strong { font-weight: 600; }
 .eyebrow a { color: var(--muted); text-decoration: none; }
 .eyebrow a:hover { color: var(--accent); text-decoration: underline; }
 .prose { max-width: var(--measure); }
+
+/* Reading pages: each section starts on a hairline with a short ink bar, the same motif the
+   areas use in their own colour, so a section boundary is visible without relying on space. */
+.page.narrow > section.prose, .area-page > section {
+    position: relative; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line);
+}
+.page.narrow > section.prose::before, .area-page > section::before {
+    content: ""; position: absolute; top: -2px; left: 0; width: 40px; height: 3px; border-radius: 2px; background: var(--accent);
+}
+@media (max-width: 760px) { .page.narrow > section.prose, .area-page > section { margin-top: 44px; } }
+
+/* One section per page whose register changes sits on a tinted band instead of a rule. */
+.page.narrow > section.prose.band, .area-page > section.band {
+    border-top: 0; background: var(--notice); border-radius: var(--radius);
+    padding: 28px 24px 12px; margin-inline: calc(-1 * min(24px, var(--gutter)));
+    max-width: calc(var(--measure) + 2 * min(24px, var(--gutter)));
+}
+.page.narrow > section.prose.band::before, .area-page > section.band::before { content: none; }
+@media (max-width: 760px) { .page.narrow > section.prose.band, .area-page > section.band { border-radius: 0; padding-inline: var(--gutter); } }
+
+/* A rule readers must not miss: neutral ink, so it reads as the rule rather than a warning. */
+.callout {
+    max-width: var(--measure); margin: 4px 0 20px; padding: 2px 0 2px 18px;
+    border-left: 3px solid var(--accent); color: var(--text); font-size: 18px; font-weight: 500; line-height: 1.55;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+/* Glossary terms in running text: a dotted underline, so they read as "defined here" rather
+   than as a link to another page. */
+a.term { color: inherit; text-decoration: underline dotted; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
+a.term:hover { text-decoration-style: solid; }
+.glossary { margin: 0; }
+.glossary-term { padding: 18px 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
+.glossary-term:last-child { border-bottom: 1px solid var(--line); }
+.glossary dt { font-size: 19px; font-weight: 600; margin-bottom: 4px; }
+.glossary dd { margin: 0; color: var(--text-2); }
+.glossary dd p:last-child { margin-bottom: 0; }
+.glossary-term.is-target { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); padding-left: 16px; padding-right: 16px; }
+
+/* Area icons sit before the area name and take the area's colour. */
+.area-icon { width: 0.95em; height: 0.95em; vertical-align: -0.14em; margin-right: 0.4em; color: var(--area); flex-shrink: 0; }
+.area-title .area-icon { width: 0.8em; height: 0.8em; vertical-align: -0.08em; }
 .prose li { margin-bottom: 6px; }
 .prose ul, .prose ol { padding-left: 1.2em; }
 
@@ -254,7 +342,16 @@ strong { font-weight: 600; }
 
 .home-hero .lede { margin-bottom: 0; }
 .page.home > .home-section { margin-top: 40px; }
-.home-note { max-width: 64ch; margin: 12px 0 32px; }
+.page.home > .home-section > h2 { font-size: 20px; margin-bottom: 4px; }
+.home-note { max-width: 64ch; margin: 0 0 16px; }
+.home-section [data-scope-now] { margin-top: 32px; }
+
+/* Start here: one row per reader task, linking to the page for it. */
+.home-tasks { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
+.home-tasks li { border-top: 1px solid var(--line); padding: 12px 0; }
+.home-tasks a { display: block; font-weight: 600; }
+.home-tasks span { display: block; color: var(--text-2); font-size: 15px; line-height: 1.45; margin-top: 2px; }
+@media (max-width: 760px) { .home-tasks { grid-template-columns: 1fr; } }
 
 /* The four scopes, inner to outer; choosing one shows its expectations below. */
 .scope-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
@@ -269,9 +366,22 @@ strong { font-weight: 600; }
 .scope-step-mindset { font-weight: 500; line-height: 1.45; }
 .scope-step-reach { margin-top: auto; color: var(--muted); font-size: 14px; line-height: 1.5; }
 @media (max-width: 900px) { .scope-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .scope-steps { grid-template-columns: 1fr; } }
+/* Phones: a compact row of names; the chosen scope's mindset shows in the panel below. */
+.scope-now-mindset, .scope-none { max-width: 64ch; }
+.scope-now-mindset { display: none; }
+.scope-none { color: var(--text-2); }
+@media (max-width: 520px) {
+    .scope-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+    .scope-step { align-items: center; padding: 10px 4px; text-align: center; }
+    .scope-step[aria-checked="true"] { padding: 9px 3px; }
+    .scope-step-name { flex-direction: column; gap: 6px; font-size: 14px; }
+    .scope-step-mindset, .scope-step-reach { display: none; }
+    .scope-now-mindset { display: block; margin: 0 0 24px; }
+    .scope-now-mindset span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .home-section [data-scope-now] { margin-top: 20px; }
+}
 
-.home-area { border-top: 2px solid var(--area); padding-top: 16px; }
+.home-area { padding-top: 16px; }
 .home-growth { max-width: 64ch; }
 .home-growth h2 { font-size: 20px; }
 .home-growth p { color: var(--text-2); }
@@ -284,12 +394,18 @@ strong { font-weight: 600; }
 .mx-row { display: grid; grid-template-columns: 190px repeat(3, minmax(0, 1fr)); }
 .mx-row + .mx-row { border-top: 1px solid var(--line); }
 .mx-head { position: sticky; top: var(--header-h); z-index: 2; background: var(--surface); border-radius: var(--radius) var(--radius) 0 0; }
-.mx-col-head { padding: 14px 16px 12px; border-top: 2px solid var(--area); }
+.mx-col-head { padding: 14px 16px 12px; }
 .mx-col-head a { display: block; color: var(--area); font-weight: 600; text-decoration: none; }
 .mx-col-head span { display: block; color: var(--muted); font-size: 14px; line-height: 1.4; margin-top: 2px; }
 .mx-row-head { padding: 16px; }
 .mx-row-head a { display: flex; align-items: center; gap: 8px; color: var(--text); font-weight: 600; font-size: 18px; text-decoration: none; }
 .mx-row-head a:hover span { text-decoration: underline; }
+/* Scope and area names open their pages; the arrow makes that visible without hovering. */
+.mx-row-head a::after, .mx-col-head a::after {
+    content: "→" / ""; display: inline-block; margin-left: 6px; font-weight: 400; color: var(--muted); transition: transform 0.15s;
+}
+.mx-row-head a::after { margin-left: -2px; }
+.mx-row-head a:hover::after, .mx-col-head a:hover::after { transform: translateX(3px); color: inherit; }
 .mx-marker { font-size: 14px; font-weight: 500; color: var(--accent); margin: 6px 0 0; }
 .mx-question { color: var(--muted); font-size: 14px; line-height: 1.4; margin: 6px 0 0; }
 .mx-cell { padding: 16px 16px 4px; border-left: 1px solid var(--line); }
@@ -298,6 +414,15 @@ strong { font-weight: 600; }
 .mx-cell-area { display: none; }
 .matrix.compact .mx-detail { display: none; }
 .mx-row.is-mine { background: var(--accent-soft); }
+.mx-row.is-mine .mx-row-head { box-shadow: inset 3px 0 0 var(--accent); }
+.exploring-tag {
+    display: inline-block; vertical-align: middle; font-size: 13px; font-weight: 600; line-height: 1.4; letter-spacing: 0.02em;
+    color: var(--accent); border: 1px solid var(--accent); border-radius: var(--radius-control); padding: 1px 8px;
+}
+h1 .exploring-tag { vertical-align: 0.35em; margin-left: 6px; }
+.mx-marker .exploring-tag { margin: 0; }
+.thread-scope-cell { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.thread-step.is-mine { background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); padding-left: 14px; padding-right: 14px; }
 @media (max-width: 900px) {
     .mx-head { display: none; }
     .mx-row { grid-template-columns: 1fr; }
@@ -311,6 +436,15 @@ strong { font-weight: 600; }
 .scope-head h1 { margin-bottom: 4px; }
 .scope-head .mindset { margin-bottom: 12px; }
 .scope-head .lede p { margin-bottom: 8px; }
+/* Nature of impact: three short answers side by side, under the mindset. */
+.nature { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 28px; margin: 20px 0 24px; }
+.nature div { border-top: 2px solid var(--accent); padding-top: 10px; }
+.nature dt { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px; }
+.nature dd { margin: 0; font-size: 16px; line-height: 1.5; color: var(--text); }
+@media (max-width: 760px) { .nature { grid-template-columns: 1fr; gap: 14px; } }
+.cmp-nature { margin-bottom: 40px; }
+.cmp-nature h2 { font-size: 20px; }
+.cmp-nature .cmp-cols p:not(.cmp-scope) { margin: 0; color: var(--text); }
 .sticky-bar {
     position: sticky; top: var(--header-h); z-index: 5;
     display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px;
@@ -325,7 +459,7 @@ strong { font-weight: 600; }
     .sticky-title { display: none; }
     .sticky-bar nav { gap: 4px 16px; }
 }
-.page > .scope-area { margin-top: 40px; border-top: 2px solid var(--area); padding-top: 16px; }
+.page > .scope-area { margin-top: 40px; padding-top: 16px; }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 @media (hover: hover) {
     .copy-section { opacity: 0; transition: opacity 0.15s; }
@@ -352,7 +486,7 @@ strong { font-weight: 600; }
 
 /* Area page */
 
-.area-head { border-top: 2px solid var(--area); padding-top: 20px; }
+.area-head { padding-top: 20px; }
 .area-question { font-size: 20px; font-weight: 600; }
 .area-head p { max-width: 65ch; color: var(--text-2); }
 .thread { list-style: none; margin: 0; padding: 0; }
@@ -393,7 +527,7 @@ details > summary:hover { color: var(--accent); }
 .cmp-shift { margin-bottom: 40px; }
 .cmp-shift .q { font-size: 20px; font-weight: 600; margin: 0; }
 .cmp-scope { color: var(--muted); font-size: 14px; font-weight: 500; margin-bottom: 4px; }
-.cmp-area { margin-top: 40px; border-top: 2px solid var(--area); padding-top: 16px; }
+.cmp-area { margin-top: 40px; padding-top: 16px; }
 .cmp-area h2 { font-size: 20px; }
 .page > .what-changes { margin-top: 0; }
 @media (max-width: 760px) { .cmp-cols { grid-template-columns: 1fr; } }
@@ -417,6 +551,110 @@ select {
 select:hover { border-color: var(--text); }
 select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
 
+/* Expectation grammar: facets all count, routes are chosen from. The label says which,
+   so nobody has to infer whether a group is required. */
+
+.kind { color: var(--muted); font-size: 14px; margin: 4px 0 12px; }
+.facet-groups, .route-groups { display: grid; gap: 14px; margin-bottom: 12px; }
+.facet { border-left: 2px solid var(--line); padding-left: 14px; }
+.facet-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--area, var(--muted)); margin: 0 0 4px; }
+.facet .plain-list { margin-bottom: 0; }
+.routes { margin: 24px 0 8px; }
+.routes h3 { font-size: 16px; margin-bottom: 0; }
+.route-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 28px; }
+@media (max-width: 760px) { .route-groups { grid-template-columns: 1fr; } }
+.mx-cell .facet-groups { gap: 8px; }
+.mx-cell .facet { border-left: 0; padding-left: 0; }
+.mx-cell .facet-label { font-size: 12px; }
+.thread .facet-groups { gap: 10px; }
+
+/* In practice: one illustration per scope, on a neutral panel so it reads as a story,
+   not as expectations. */
+
+.practice { margin-top: 56px; padding: 24px 28px; background: var(--notice); border-radius: var(--radius); }
+.practice .eyebrow { color: var(--muted); }
+.practice h2 { font-size: 22px; margin-bottom: 8px; }
+.practice-situation { font-size: 19px; line-height: 1.5; color: var(--text); max-width: 60ch; }
+.practice-steps { display: grid; gap: 12px; margin: 16px 0; }
+.practice-steps div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; }
+.practice-steps dt { font-weight: 600; }
+.practice-steps dd { margin: 0; color: var(--text-2); max-width: 62ch; }
+.practice .hint { margin-bottom: 0; }
+@media (max-width: 600px) {
+    .practice { padding: 20px 16px; }
+    .practice-steps div { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* Home: the same situation stepped through each scope, by hand. */
+
+.practice-stepper .practice-situation { margin: 4px 0 16px; }
+.stepper-tabs { display: flex; flex-wrap: wrap; gap: 4px 20px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
+.stepper-tabs [role="tab"] {
+    font: inherit; font-weight: 500; color: var(--text-2); background: none; cursor: pointer;
+    border: 0; border-bottom: 2px solid transparent; padding: 10px 0; margin-bottom: -1px;
+}
+.stepper-tabs [role="tab"]:hover { color: var(--text); }
+.stepper-tabs [aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.step { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 28px; align-items: start; }
+.step[hidden] { display: none; }
+.step-name { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+.step-name span { display: block; font-size: 16px; font-weight: 400; color: var(--text-2); }
+.stepper-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; margin: 0; }
+@media (max-width: 600px) {
+    .step { grid-template-columns: 1fr; gap: 8px; }
+    .step-ring .glyph { width: 64px; height: 64px; }
+}
+
+/* Compare: what changes in each area, then the facets side by side. */
+
+.cmp-change { font-size: 17px; color: var(--text); max-width: 64ch; margin: 4px 0 16px; padding-left: 14px; border-left: 3px solid var(--accent); }
+.cmp-facet { margin-top: 20px; }
+.cmp-facet .facet-label { margin-bottom: 6px; }
+@media (min-width: 761px) { .cmp-facet .cmp-scope { display: none; } }
+.cmp-toggle { display: none; }
+@media (max-width: 760px) {
+    .cmp-toggle { display: inline-flex; margin-top: 16px; }
+    .cmp-only-to .cmp-facet .cmp-cols > div:first-child { display: none; }
+}
+
+/* Worksheet pages: numbered steps, prompt cards and example panels. */
+
+.worksheet .page-head .eyebrow { color: var(--muted); }
+.ws-scope { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 14px 16px; background: var(--notice); border-radius: var(--radius); margin: 16px 0 8px; }
+.ws-links { display: flex; flex-wrap: wrap; gap: 6px 20px; margin: 0; color: var(--muted); font-size: 15px; }
+.ws-steps, .ws-cards { list-style: none; padding: 0 !important; margin: 12px 0 20px; display: grid; gap: 12px; }
+.ws-steps { counter-reset: ws; }
+.ws-steps li { counter-increment: ws; display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 14px; margin: 0; }
+.ws-steps li::before {
+    content: counter(ws); grid-row: span 2; width: 28px; height: 28px; border-radius: 50%;
+    border: 1px solid var(--control); display: grid; place-items: center; font-weight: 600; font-size: 14px;
+}
+.ws-steps strong, .ws-cards strong { display: block; color: var(--text); }
+.ws-steps span, .ws-cards span { color: var(--text-2); }
+.ws-cards li { border: 1px solid var(--line); border-radius: var(--radius); padding: 14px 16px; margin: 0; }
+/* The ratings as a scale: three points on one line, stacking to a vertical line on phones. */
+.ws-scale {
+    list-style: none; padding: 0 !important; margin: 28px 0 24px; display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid var(--text-2);
+}
+.ws-scale li { position: relative; margin: 0; padding: 20px 24px 0 0; }
+.ws-scale li::before {
+    content: ""; position: absolute; top: -9px; left: 0; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--bg); border: 2px solid var(--text);
+}
+.ws-scale strong { display: block; color: var(--text); }
+.ws-scale span { display: block; color: var(--text-2); font-size: 16px; margin-top: 4px; }
+@media (max-width: 760px) {
+    .ws-scale { grid-template-columns: 1fr; border-top: 0; border-left: 2px solid var(--text-2); margin-left: 8px; }
+    .ws-scale li { padding: 0 0 20px 22px; }
+    .ws-scale li:last-child { padding-bottom: 0; }
+    .ws-scale li::before { top: 4px; left: -9px; }
+}
+.ws-example { margin: 16px 0 20px; padding: 18px 20px; background: var(--notice); border-radius: var(--radius); }
+.ws-example .eyebrow { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; }
+.ws-example p { color: var(--text-2); }
+.ws-example p:last-child { margin-bottom: 0; }
+
 /* Print: a scope page or any reading page */
 
 @media print {
@@ -424,5 +662,11 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .actions, .inline-links, .link-button, .on-page, .v1-note, .view-tabs { display: none !important; }
     body { background: #fff; color: #000; font-size: 12pt; }
     .scope-area { break-inside: avoid; }
+    .step[hidden] { display: grid; }
+    .stepper-tabs, .stepper-nav, .ws-scope, .cmp-toggle { display: none !important; }
+    .cmp-only-to .cmp-facet .cmp-cols > div:first-child { display: block !important; }
+    .page.narrow > section.prose.band, .area-page > section.band { background: none; border-top: 1px solid #000; border-radius: 0; padding-inline: 0; margin-inline: 0; }
+    .page.narrow > section.prose::before, .area-page > section::before { content: none; }
+    .callout { border-left-color: #000; }
     .page { padding-top: 0; }
 }

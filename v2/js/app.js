@@ -1,24 +1,30 @@
 // Boots V2: loads content, wires the theme toggle and mobile menu, and routes hash changes to views.
 
 import { loadContent } from './content.js';
+import { initScopeMenu } from './scope-menu.js';
 import * as home from './views/home.js';
 import * as how from './views/how.js';
 import * as teammates from './views/teammates.js';
+import * as selfAssessment from './views/self-assessment.js';
 import * as matrix from './views/matrix.js';
 import * as scope from './views/scope.js';
 import * as area from './views/area.js';
 import * as compare from './views/compare.js';
 import * as faq from './views/faq.js';
+import * as glossary from './views/glossary.js';
+import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
-    { pattern: /^(home)?$/, view: home, nav: 'home' },
-    { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works' },
-    { pattern: /^teammates$/, view: teammates, nav: 'how-it-works' },
+    { pattern: /^(?:home(?:\/([\w-]+))?)?$/, view: home, nav: 'home', terms: true },
+    { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works', terms: true },
+    { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'teammates', terms: true },
     { pattern: /^expectations$/, view: matrix, nav: 'expectations' },
     { pattern: /^scope\/([\w-]+)(?:\/([\w-]+))?$/, view: scope, nav: 'expectations' },
-    { pattern: /^area\/([\w-]+)$/, view: area, nav: 'expectations' },
+    { pattern: /^area\/([\w-]+)(?:\/([\w-]+))?$/, view: area, nav: 'expectations', terms: true },
     { pattern: /^compare(?:\/([\w-]+)\/([\w-]+))?$/, view: compare, nav: 'expectations' },
-    { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq' },
+    { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: selfAssessment, nav: 'self-assessment', terms: true },
+    { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq', terms: true },
+    { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'faq' },
 ];
 
 const SITE = 'Growth & Impact at Sahaj';
@@ -48,7 +54,9 @@ function pageError(err) {
     };
 }
 
-function render(content) {
+// keep: re-render in place (the explored scope changed), holding the scroll position and menu.
+function render(content, { keep = false } = {}) {
+    const scrollY = window.scrollY;
     const hash = decodeURIComponent(location.hash.replace(/^#\/?/, ''));
     const route = ROUTES.find(r => r.pattern.test(hash));
     const params = route ? hash.match(route.pattern).slice(1) : [];
@@ -64,14 +72,37 @@ function render(content) {
     document.querySelectorAll('.nav-links a').forEach(a => {
         a.toggleAttribute('aria-current', a.dataset.nav === route?.nav);
     });
-    setMenu(false);
-    if (!result.keepScroll) window.scrollTo(0, 0);
+    if (!keep) setMenu(false);
+    if (keep) window.scrollTo(0, scrollY);
+    else if (!result.keepScroll) window.scrollTo(0, 0);
+    // Reading pages link their glossary terms; lists of expectations stay unlinked.
+    if (route?.terms) linkTerms(app, glossaryTerms(content));
     try {
         if (result.mount) result.mount(app);
     } catch (err) {
         app.innerHTML = pageError(err).html;
     }
-    app.focus({ preventScroll: true });
+    // An in-place re-render leaves focus in the dropdown, and undoes any scroll a view's mount
+    // queues (it runs after the view's own frame).
+    if (keep) requestAnimationFrame(() => window.scrollTo(0, scrollY));
+    else app.focus({ preventScroll: true });
+}
+
+// A new explored scope. Pages that are about one scope follow it: a scope page opens the new
+// scope (at the same area, if one was open), and Compare compares it with the next scope up.
+// Every other page re-renders in place, so its highlights update where the reader is.
+function scopeChanged(content, id) {
+    const hash = location.hash.replace(/^#\/?/, '');
+    const onScope = hash.match(/^scope\/[\w-]+(\/[\w-]+)?$/);
+    if (onScope) {
+        location.hash = `scope/${id}${onScope[1] || ''}`;
+    } else if (/^compare(\/|$)/.test(hash)) {
+        const scope = content.scope(id);
+        const next = content.scopes.find(s => s.order === scope.order + 1);
+        location.hash = next ? `compare/${id}/${next.id}` : `compare/${content.scopes[content.scopes.length - 2].id}/${id}`;
+    } else {
+        render(content, { keep: true });
+    }
 }
 
 // Printing shows everything: folded sections open for the print and close again after.
@@ -115,7 +146,11 @@ async function boot() {
             (for example <code>npm run dev:v2</code>) rather than as a file.</p></section>`;
         return;
     }
+    // The version a cycle's doc records, so a doc can be matched to the guide it was agreed against.
+    const version = content.pages.home.version;
+    if (version) document.querySelector('[data-version]').textContent = `Guide version ${version} · `;
     window.addEventListener('hashchange', () => render(content));
+    initScopeMenu(content, { onChange: id => scopeChanged(content, id) });
     render(content);
 }
 

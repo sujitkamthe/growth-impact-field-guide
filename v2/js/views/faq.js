@@ -32,6 +32,7 @@ export function render(content, [open]) {
             if (open) requestAnimationFrame(() => root.querySelector(`#${CSS.escape(open)}`)?.scrollIntoView({ block: 'start' }));
             root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
                 e.preventDefault();
+                history.replaceState(null, '', `#faq/${a.dataset.jump}`);
                 root.querySelector(`#${CSS.escape(a.dataset.jump)}`)?.scrollIntoView({ block: 'start' });
             }));
         },

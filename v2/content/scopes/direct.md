@@ -2,9 +2,11 @@
 id: direct
 name: Direct
 order: 1
-radius: Impact through work directly in your hands, such as the stories and features you own end to end
-reaches: Stories · features you own
-mindset: I can be trusted with my work, end to end.
+reach: The stories and features you own end to end
+how: Your own work, taken from an unclear ask to production without someone steering each step
+lasts: Work that holds up in production and that others can change safely
+reaches: Stories · features
+mindset: I can be trusted with the work in my hands.
 question: What's the right way to build this?
 v1: Artisan, and the later end of Explorer
 ---
@@ -15,7 +17,15 @@ Direct is the first scope. It means you are trusted and independent: you take a 
 
 ## What changes
 
-This is the first scope. If you're new to Sahaj, your first few weeks go into learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
+Direct is the first scope, and the one every other scope builds on: the impact sits in the work you own yourself. Like every scope, it reflects the impact you show, not how long you have been at Sahaj.
+
+## In practice
+
+A client asks the team to add a second payment provider to its checkout. Payment changes have slipped in each of the last two releases.
+
+- **What you did**: You took the provider integration from a loose ask to production. You asked why the client wanted a second provider, learned it was about failed payments at peak times, and spotted that refunds would break before anyone built them.
+- **What changed**: The integration shipped on the date you gave, and the refund gap became a story rather than an incident.
+- **Why it's Direct**: The impact sits in work you owned end to end. Designing how everyone else's payment work fits together would be Extended.
 
 ## Client & Delivery
 
@@ -23,10 +33,20 @@ This is the first scope. If you're new to Sahaj, your first few weeks go into le
 
 ### Expectations
 
-- Takes stories from an unclear ask to production, breaking them down without needing someone to unblock each step
-- Writes clean, tested, maintainable code by default and follows problems in their changes through to resolution
-- Asks "why" behind the work, flags gaps and ambiguity early, and suggests alternatives when an ask looks wrong
-- Delivers predictably: estimates sensibly, keeps progress visible and raises risks before they become blockers
+#### Technical craft
+
+- Writes clean, tested, secure code across the stack, applying sound design principles by default
+- Debugs issues independently and owns how their changes behave in production, including defects they introduce
+
+#### Consulting
+
+- Asks why behind the work, and connects their stories to the feature and business context around them
+- Flags gaps, contradictions and ambiguity early, and suggests alternatives when an ask looks wrong
+
+#### Delivery
+
+- Takes stories from an unclear ask to production, breaking them down and estimating sensibly
+- Delivers predictably, keeps progress visible, raises risks early and adjusts plans when reality changes
 
 ### Evidence
 
@@ -34,12 +54,14 @@ This is the first scope. If you're new to Sahaj, your first few weeks go into le
 - Requirement gaps you caught before they were built, often enough that the team now expects it of you
 - Risks you raised early as a habit, and what they changed
 - Reviews of your work that focus on trade-offs and improvements rather than basic correctness, testing or maintainability
+- Problems in your changes that you followed through after release, without being asked
 
 ### Self-check
 
 - Would the team hand me an unclear story and trust it to reach production without someone directing me?
 - Can I explain the business problem behind my work, not just the ticket?
 - Do my commitments hold, and when they don't, do people hear it from me first?
+- Would someone unfamiliar with my code understand it easily?
 
 ### Not yet
 
@@ -53,10 +75,18 @@ This is the first scope. If you're new to Sahaj, your first few weeks go into le
 
 ### Expectations
 
-- Communicates progress, blockers and decisions without being chased
-- Gives specific, useful feedback in reviews and pairing, and visibly acts on feedback received
-- Helps newer teammates onboard, explaining the reasoning rather than handing over answers
-- Responds constructively when teammates ask for help, including when the question is basic or the timing inconvenient
+#### Growing others
+
+- Helps newer teammates onboard, sharing knowledge generously and explaining the reasoning rather than handing over answers
+
+#### Feedback and trust
+
+- Reviews peers' work with specific, actionable feedback, and visibly acts on feedback received
+- Helps constructively when asked, including when the question is basic or the timing inconvenient
+
+#### Communication and collaboration
+
+- Communicates clearly for the audience, in writing and in person, and shares progress and blockers without being chased
 
 ### Evidence
 
@@ -82,15 +112,14 @@ This is the first scope. If you're new to Sahaj, your first few weeks go into le
 
 ### Expectations
 
-- Makes a meaningful, sustained contribution beyond immediate delivery, in ways they choose
-- Understands and upholds Sahaj's culture and values in everyday behaviour
-- Follows through on the organisation commitments they take on, and raises constraints early when they can't
+- Makes a meaningful, sustained contribution beyond immediate delivery, through a route they choose
+- Upholds Sahaj's culture in everyday behaviour, follows through on the commitments they take on, and raises constraints early
 
 ### Evidence
 
 - The avenue you chose and what you did in it across the cycle, with rough dates
 - Something that exists, or works better, because you kept contributing
-- Feedback from the people it helped
+- What the people it helped now do differently
 
 ### Self-check
 
@@ -104,11 +133,21 @@ This is the first scope. If you're new to Sahaj, your first few weeks go into le
 
 ### Ways to contribute
 
-- Interviewing regularly, with feedback other interviewers can use
-- Sharing what your team learned, through sessions or write-ups
-- Contributing steadily to an org initiative, capability track or community of practice
-- Fixing a small internal tool or process that wastes people's time
+#### Culture and organisational health
+
 - Helping new joiners settle in, beyond your own team
+- Speaking up when something doesn't fit how we work, and suggesting what would
+
+#### Initiatives and capability
+
+- Interviewing regularly, with feedback other interviewers can use
+- Contributing steadily to an org initiative or capability track
+- Fixing a small internal tool or process that wastes people's time
+
+#### Community and external contribution
+
+- Sharing what your team learned, through sessions or write-ups
+- Contributing to a community of practice
 
 ## Examples
 
@@ -118,4 +157,4 @@ You picked up feature stories, broke them down yourself and delivered them with 
 
 ### Below expectations
 
-Your stories often needed significant rework after review, and when a requirement was ambiguous you built your own assumption without checking. People found out about blockers when they asked. You attended DevDays but contributed nothing beyond the project, and "no time" appeared for the first time in your self-assessment.
+Your stories often needed significant rework after review, and when a requirement was ambiguous you built your own assumption without checking. People found out about blockers when they asked. Beyond the project you attended events but didn't contribute to any, and the reason first came up in your self-assessment rather than during the cycle.

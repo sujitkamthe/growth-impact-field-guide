@@ -4,7 +4,10 @@ export const esc = value => String(value ?? '').replace(/[&<>"']/g, c => (
     { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
 ));
 
-export const md = text => window.marked.parse(text || '');
+// "<!-- callout -->" before a paragraph marks it as a rule readers must not miss.
+const CALLOUT = /^<!-- callout -->\n+((?:.+\n?)+)/gm;
+export const md = text => window.marked.parse((text || '').replace(CALLOUT,
+    (_, para) => `<div class="callout">\n\n${para.trim()}\n\n</div>\n\n`));
 export const mdInline = text => window.marked.parseInline(text || '');
 
 export const list = (items, cls = '') =>

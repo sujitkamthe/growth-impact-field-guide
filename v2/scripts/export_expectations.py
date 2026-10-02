@@ -35,7 +35,7 @@ The full content behind the growth framework, exported from the site.
 - **Reference scope**: the scope shown consistently across all three areas, confirmed at the team check. It sets the expectations in every area.
 - **Stretch**: once a scope is established, some of the next scope's responsibilities are taken on in one or more areas. A stretch adds to current expectations.
 - **Org & Community is mandatory**: people choose how they contribute, and anyone can go beyond their scope.
-- **At most four expectations per area**, deliberately, and **evidence is a pattern** across the cycle, not a single example.
+- **Expectations are grouped**: Client & Delivery and People & Team by three facets that all count toward one rating, one or two statements each; Org & Community by shared expectations plus routes people choose from. **Evidence is a pattern** across the cycle, not a single example.
 
 ## What to check
 
@@ -80,16 +80,22 @@ def export():
         meta, body = parse(CONTENT / 'scopes' / f'{name}.md')
         secs = dict(sections(body, 2)[1])
         doc.append(f"# {meta['name']} scope\n")
-        doc.append(f"**Reach:** {meta['radius']}  ")
+        doc.append(f"**Reach:** {meta['reach']}  ")
+        doc.append(f"**How:** {meta['how']}  ")
+        doc.append(f"**What lasts:** {meta['lasts']}  ")
         doc.append(f"**Mindset:** \"{meta['mindset']}\"  ")
         doc.append(f"**Trusted to answer:** {meta['question']}\n")
         doc.append(secs.get('Summary', '') + '\n')
         doc.append(f"**What changes from the scope below:** {secs.get('What changes', '')}\n")
+        if 'In practice' in secs:
+            doc.append(f"**In practice (an illustration):** {secs['In practice']}\n")
         for area in AREAS:
             intro, subs = sections(secs[area], 3)
             core = re.search(r'^> (.+)$', intro, re.M).group(1)
             doc.append(f"## {meta['name']}: {area}\n\n> {core}\n")
             for title, content in subs:
+                # Facet and route groups ("#### Title") read as labels in the export.
+                content = re.sub(r'^#### (.+)$', r'*\1*', content, flags=re.M)
                 doc.append(f"**{LABELS.get(title, title)}**\n\n{content}\n")
         if 'Examples' in secs:
             doc.append(f"## {meta['name']}: examples\n")
@@ -109,9 +115,10 @@ def export():
         meta, body = parse(CONTENT / 'areas' / f'{name}.md')
         doc.append(f"## {meta['name']}\n\n*{meta['question']}*\n")
         for title, content in sections(body, 2)[1]:
-            if title == 'Facets':
-                facets = sections(content, 3)[1]
-                doc.append('**What it covers**\n\n' + '\n'.join(f'- **{t}**: {c}' for t, c in facets) + '\n')
+            if title in ('Facets', 'Routes'):
+                intro, facets = sections(content, 3)
+                label = 'What it covers (all facets count)' if title == 'Facets' else 'Routes (choose one or more)'
+                doc.append(f'**{label}**\n\n' + (intro + '\n\n' if intro else '') + '\n'.join(f'- **{t}**: {c}' for t, c in facets) + '\n')
             elif title == 'Summary':
                 doc.append(content + '\n')
             else:

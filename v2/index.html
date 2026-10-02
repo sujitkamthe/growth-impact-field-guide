@@ -27,8 +27,14 @@
             </a>
             <button class="menu-button" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
             <ul class="nav-links" id="nav-links">
+                <li class="nav-scope">
+                    <button type="button" class="scope-menu-button" data-scope-button aria-expanded="false" aria-controls="scope-menu">Explore a scope</button>
+                    <div class="scope-menu" id="scope-menu" hidden></div>
+                </li>
                 <li><a href="#how-it-works" data-nav="how-it-works">How it works</a></li>
                 <li><a href="#expectations" data-nav="expectations">Expectations</a></li>
+                <li><a href="#self-assessment" data-nav="self-assessment">Self-assessment</a></li>
+                <li><a href="#teammates" data-nav="teammates">Reviewing</a></li>
                 <li><a href="#faq" data-nav="faq">Questions</a></li>
             </ul>
             <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme">
@@ -48,7 +54,7 @@
     </main>
 
     <footer class="site-footer">
-        <p><a href="../">Open the original Field Guide (V1)</a></p>
+        <p><span data-version></span><a href="#glossary">Glossary</a> · <a href="../">Open the original Field Guide (V1)</a></p>
     </footer>
 
     <script src="vendor/marked.umd.js"></script>
