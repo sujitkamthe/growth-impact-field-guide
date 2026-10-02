@@ -7,7 +7,7 @@ lede: The questions people ask most about how the guide works. For the model its
 
 ### Is this a checklist?
 
-No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet is required, because all three count toward one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. A clear gap means a facet's impact isn't shown consistently, not that one line is missing, and it makes the area below expectations. In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
+No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet counts toward the area's one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. Exceeding your scope's expectations in two facets can carry a weaker third; a facet you don't show at your scope at all makes the area below expectations. See [how the facets combine](#how-it-works/areas). In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
 
 ### What's the difference between Extended and Team?
 

@@ -26,7 +26,7 @@ Keeping people informed, driving discussions to decisions and handling disagreem
 
 ## How facets are rated
 
-Like Client & Delivery, this area lists each scope's expectations by facet, and all three count toward one rating, so a clear gap in one makes the area below expectations. A team that grows because of you but never hears hard feedback from you has a gap, and so does a team that gets clear feedback from you but would never come to you for help.
+Like Client & Delivery, this area lists each scope's expectations by facet, and the rating is one judgment across all three: exceeding your scope's expectations in two can carry a weaker third, but a missing facet makes the area below expectations. A team that grows because of you but never hears hard feedback from you is missing a facet, and so is a team that gets clear feedback from you but would never come to you for help.
 
 ## Where does mentoring count?
 

@@ -28,7 +28,7 @@ A short doc you keep for each cycle, made from one template for every scope. It 
 ## Facet
 
 <!-- matches: facets, facet -->
-One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating, so a clear gap in any facet makes the area below expectations.
+One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations.
 
 ## Raise in scope
 

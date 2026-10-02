@@ -31,7 +31,16 @@ Every scope covers the same three areas of impact, each with its own rating.
 Client & Delivery and People & Team each have three [facets](#area/client-delivery), and all three count toward the area's one rating. The lines under a facet show what it looks like at your scope; they are signs to look for, and nobody ticks them off one by one. Org & Community has [ways to contribute](#area/org-community) instead: expectations shared by everyone at your scope, and ways to contribute that you choose from to meet them.
 
 <!-- callout -->
-A clear gap in any facet makes the area below expectations, however strong the other facets are. A gap means the facet's impact isn't shown consistently at your scope, not that one line is missing.
+An area's rating is one judgment across its three facets, not a count. A missing facet, one whose impact isn't shown at your scope at all, makes the area below expectations however strong the other two are.
+
+Each facet is judged against your current scope, so exceeding never requires next-scope work. A facet can be exceeding what your scope expects, meeting it, weaker (shown, but not yet consistently at your scope) or missing. They combine like this:
+
+- **Exceeds**: all three facets exceeding.
+- **Exceeds or Meets**: two facets exceeding and the third meeting; the team check decides which.
+- **Meets**: all three facets meeting, or one exceeding and the other two meeting. Two exceeding facets can also carry a weaker third to Meets; name the weaker one as your focus for the next cycle.
+- **Below**: usually when two or more facets are weaker, even if the third is exceeding, and always when a facet is missing.
+
+One weaker facet with the other two meeting, or with one exceeding and one meeting, is a judgment for the team check.
 
 Learning has no area of its own because it runs through all three: at every scope you keep your craft and judgment current, act on feedback, and adapt when the context changes.
 

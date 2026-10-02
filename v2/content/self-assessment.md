@@ -11,16 +11,16 @@ lede: Write it at the end of the cycle, in your expectations doc, drawing on the
 
 ## The prompts
 
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet, because a clear gap in one is a gap in the area. In Org & Community, say how you chose to contribute and what it changed.
+- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
 ## Choosing a rating
 
 <!-- scale -->
-- **Below expectations**: there is a clear gap: part of what your scope expects in this area isn't yet shown consistently. Impact depended on favourable conditions, or others compensated for gaps you had not closed.
-- **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Teammates would depend on you here without checking.
-- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects, with no real gap elsewhere in the area. Others learned from you, or a problem stopped recurring because of you.
+- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all. Impact depended on favourable conditions, or others compensated for gaps you had not closed.
+- **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Two facets that exceed your scope's expectations can carry one weaker one. Teammates would depend on you here without checking.
+- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects across the area, not in one facet alone. Others learned from you, or a problem stopped recurring because of you.
 
 <!-- callout -->
 Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: that happens when your next-scope impact is consistent in all three areas.
