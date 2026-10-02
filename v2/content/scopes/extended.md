@@ -130,7 +130,7 @@ At Direct you take part in something beyond your project; at Extended you drive 
 
 ### Evidence
 
-- The initiative you drove through the cycle, what you did and what changed
+- The initiative you drove through the cycle, what you did, and what changed or what got in the way
 - Something you created or improved that people outside your project keep using
 - A problem you raised, and what happened next
 

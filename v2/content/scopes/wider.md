@@ -57,7 +57,7 @@ At Team you change how one team works; at Wider you shape direction across teams
 - Roadmaps or strategic decisions you shaped, and how they played out over time
 - Senior stakeholders who repeatedly seek your counsel on strategic questions
 - Changes in how the client's organisation works that are still in place
-- An account that grew, or a proposal that landed, because of how you shaped it, and how its teams and delivery held up
+- An account or proposal you shaped, how you shaped it, and how its teams and delivery held up
 
 ### Self-check
 
@@ -141,7 +141,7 @@ At Team you build things others sustain; at Wider you shape how Sahaj grows, wor
 ### Not yet
 
 - Recognised outside Sahaj far more than relied on inside it
-- Ideas that are admired but not adopted
+- Ideas that stay as ideas, without the effort to bring others to them
 - Innovating alone, without bringing others along
 
 ### Ways to contribute

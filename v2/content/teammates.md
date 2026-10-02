@@ -46,7 +46,7 @@ The person can present their doc, or you can read it beforehand for context. Loo
 <!-- list -->
 - **Confirm** what matches your experience of their work.
 - **Correct** where you think they misread their feedback, with the example that shows it.
-- **Add** what they left out, especially quiet work such as reviews, onboarding help or problems they prevented.
+- **Add** what they left out, especially quiet work such as reviews, onboarding help, problems they prevented, or an attempt they stayed with that didn't land for reasons outside their control.
 
 If a self-assessment mentions work you didn't see, ask about it: "I didn't see this directly, can you tell me more?" works better than silent scepticism.
 

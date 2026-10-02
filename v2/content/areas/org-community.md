@@ -39,7 +39,7 @@ Each scope has its own examples to choose from, grouped by route, and they show 
 
 ## What counts
 
-Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. A low-profile fix that removes recurring friction for many people can be worth more than a highly visible contribution, so judge the change rather than the size of the audience. The expected reach grows with your scope: contributing at Direct, driving something at Extended, building something others can sustain at Team, and shaping capability, culture or reputation at Wider. That progression is a floor, not a ceiling: anyone can contribute beyond it, and it counts.
+Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. A low-profile fix that removes recurring friction for many people can be worth more than a highly visible contribution, so judge the change rather than the size of the audience. An initiative that didn't land still counts when you took it on properly, stayed with it, and were stopped by something outside your control; say what you tried and what it left behind. One attempt dropped at the first obstacle does not count. The expected reach grows with your scope: contributing at Direct, driving something at Extended, building something others can sustain at Team, and shaping capability, culture or reputation at Wider. That progression is a floor, not a ceiling: anyone can contribute beyond it, and it counts.
 
 ## How it is assessed
 

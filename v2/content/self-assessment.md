@@ -51,6 +51,7 @@ When an area falls short, say why, because each reason calls for a different res
 - **You had no chance, and raised it during the cycle**: an opportunity for the team to create.
 - **The chance was there and you didn't take it**: a growth area to plan for.
 - **You took the chance and found it hard**: a development need, where support is the right response.
+- **You stayed with it, and something outside your control stopped it**: this still counts. Say what you tried, what got in the way and what it left behind. If you stopped at the first setback, that is the second reason, not this one.
 
 ## Common traps
 

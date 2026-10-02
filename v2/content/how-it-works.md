@@ -71,6 +71,7 @@ Anyone on the team can also review someone's expectations, discuss them and ask 
 <!-- band -->
 - **Expectations are written down first.** If they were never made explicit, that is the first gap to fix.
 - **Evidence is a pattern.** One good example shows you can; consistency, and others relying on it, shows you do.
+- **A well-made attempt counts.** If you take on a real problem and work it well, it counts even when factors outside your control stop it from succeeding. Working it well means staying with it: trying more than one approach, raising what's in the way early, bringing people along and adapting. Judge the problem you took on, how you went about it and what it left behind, such as groundwork, learning or a clear decision to stop. Giving up at the first setback, or an attempt without real effort behind it, is not impact, and neither is not taking the problem on.
 - **Roles are routes to impact.** No scope requires a particular role, and leading a team or an account doesn't set your scope.
 - **Growth means wider trust.** Doing more of the same work, or doing it better, is not the next scope.
 - **You can always go beyond your scope.** Your scope sets what's expected, never what you're allowed to do.
