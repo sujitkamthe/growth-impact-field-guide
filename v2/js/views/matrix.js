@@ -1,14 +1,16 @@
-// Expectations: every scope by area. Compact by default so the whole
-// framework fits on one screen; the viewer's scope and the next one are marked.
+// Expectations: every scope by area. Concise by default so the whole framework fits on
+// one screen; Detailed adds each area's facets. The viewer's scope and the next one are marked.
 
 import { esc, storageGet, storageSet } from '../ui.js';
-import { savedScope, nextScope, viewTabs, expectationGroups, EXPLORING } from './_parts.js';
+import { savedScope, nextScope, viewTabs, expectationGroups, bindPicker, EXPLORING } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 
 export function render(content) {
     const mine = savedScope(content);
     const next = mine && nextScope(content, mine);
     const full = storageGet('v2.matrixFull', false);
+    const option = (value, label, on) => `<button type="button" role="radio" data-value="${value}"
+        aria-checked="${on}" tabindex="${on ? 0 : -1}">${label}</button>`;
 
     const head = content.areas.map(a => `<div class="mx-col-head" role="columnheader" data-area="${a.key}">
             <a href="#area/${a.id}">${areaIcon(a.key)}${esc(a.name)}</a>
@@ -34,25 +36,25 @@ export function render(content) {
     return {
         title: 'Expectations',
         html: `<section class="page">
-            <header class="page-head">
+            <header class="page-head matrix-head">
                 <h1>Expectations</h1>
                 ${viewTabs('all')}
                 <p class="lede">Each row is a scope and each column an area. Open a scope for its full expectations and how to tell you're meeting them. ${mine ? `${esc(mine.name)}, the scope you last explored, is highlighted; you can change it on the <a href="#home">home page</a>.` : 'Choose a scope on the <a href="#home">home page</a> to highlight it here.'}</p>
-                <button type="button" class="button quiet" data-toggle aria-pressed="${full}">${full ? 'Show core statements only' : 'Show full expectations'}</button>
             </header>
+            <div class="segmented" role="radiogroup" aria-label="Level of detail">
+                ${option('concise', 'Concise', !full)}${option('detailed', 'Detailed', full)}
+            </div>
             <div class="matrix${full ? '' : ' compact'}" role="table" aria-label="Expectations by scope and area">
                 <div class="mx-row mx-head" role="row"><div class="mx-corner" role="columnheader"><span class="visually-hidden">Scope</span></div>${head}</div>
                 ${rows}
             </div>
         </section>`,
         mount(root) {
-            const button = root.querySelector('[data-toggle]');
             const matrix = root.querySelector('.matrix');
-            button.addEventListener('click', () => {
-                const showFull = matrix.classList.toggle('compact') === false;
-                storageSet('v2.matrixFull', showFull);
-                button.setAttribute('aria-pressed', showFull);
-                button.textContent = showFull ? 'Show core statements only' : 'Show full expectations';
+            bindPicker(root.querySelector('.segmented'), value => {
+                const detailed = value === 'detailed';
+                matrix.classList.toggle('compact', !detailed);
+                storageSet('v2.matrixFull', detailed);
             });
         },
     };

@@ -2,11 +2,11 @@
 id: direct
 name: Direct
 order: 1
-reach: The stories and features you own end to end
-how: Your own work, taken from an unclear ask to production without someone steering each step
-lasts: Work that holds up in production and that others can change safely
+reach: **The stories and features you own** end to end
+how: **Your own work**, taken from an unclear ask to production without someone steering each step
+lasts: Work that **holds up in production** and that others can change safely
 reaches: Stories · features
-mindset: I can be trusted with the work in my hands.
+mindset: I own my work end to end.
 question: What's the right way to build this?
 v1: Artisan, and the later end of Explorer
 ---
@@ -17,15 +17,15 @@ Direct is the first scope. It means you are trusted and independent: you take a 
 
 ## What changes
 
-Direct is the first scope, and the one every other scope builds on: the impact sits in the work you own yourself. Like every scope, it reflects the impact you show, not how long you have been at Sahaj.
+Direct is the first scope, and the one every other scope builds on: your impact is in **the work you own yourself**. Like every scope, it reflects the impact you show, not how long you have been at Sahaj.
 
 ## In practice
 
 A client asks the team to add a second payment provider to its checkout. Payment changes have slipped in each of the last two releases.
 
 - **What you did**: You took the provider integration from a loose ask to production. You asked why the client wanted a second provider, learned it was about failed payments at peak times, and spotted that refunds would break before anyone built them.
-- **What changed**: The integration shipped on the date you gave, and the refund gap became a story rather than an incident.
-- **Why it's Direct**: The impact sits in work you owned end to end. Designing how everyone else's payment work fits together would be Extended.
+- **What changed**: The integration shipped on the date you gave, and the refund gap was fixed as planned work instead of turning into a production incident.
+- **Why it's Direct**: Your impact was in work you owned end to end. Designing how everyone else's payment work fits together would be Extended.
 
 ## Client & Delivery
 
@@ -35,18 +35,18 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Technical craft
 
-- Writes clean, tested, secure code across the stack, applying sound design principles by default
-- Debugs issues independently and owns how their changes behave in production, including defects they introduce
+- Writes **clean, tested, secure code** across the stack, applying sound design principles by default
+- Debugs issues independently and **owns how their changes behave in production**, including defects they introduce
 
 #### Consulting
 
-- Asks why behind the work, and connects their stories to the feature and business context around them
-- Flags gaps, contradictions and ambiguity early, and suggests alternatives when an ask looks wrong
+- **Asks why** behind the work, and connects their stories to the feature and business context around them
+- **Flags gaps**, contradictions and ambiguity early, and suggests alternatives when an ask looks wrong
 
 #### Delivery
 
-- Takes stories from an unclear ask to production, breaking them down and estimating sensibly
-- Delivers predictably, keeps progress visible, raises risks early and adjusts plans when reality changes
+- **Takes stories** from an unclear ask to production, breaking them down and estimating sensibly
+- **Delivers predictably**, keeps progress visible, raises risks early and adjusts plans when reality changes
 
 ### Evidence
 
@@ -54,7 +54,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - Requirement gaps you caught before they were built, often enough that the team now expects it of you
 - Risks you raised early as a habit, and what they changed
 - Reviews of your work that discuss trade-offs and improvements, because correctness, tests and maintainability are already there
-- Problems in your changes that you followed through after release, without being asked
+- Problems your changes caused after release that you followed up without being asked
 
 ### Self-check
 
@@ -65,7 +65,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Not yet
 
-- Delivery is strong, but only when someone else has defined the scope tightly
+- Delivery is strong, but only when someone else has defined the work tightly
 - Asks that looked wrong were implemented without being questioned
 - Risks surface in stand-up on the day they become blockers
 
@@ -77,16 +77,16 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Growing others
 
-- Helps newer teammates onboard, sharing knowledge generously and explaining the reasoning behind the answers
+- **Helps newer teammates onboard**, sharing knowledge generously and explaining the reasoning behind the answers
 
 #### Feedback and trust
 
-- Reviews peers' work with specific, actionable feedback, and visibly acts on feedback received
-- Helps constructively when asked, including when the question is basic or the timing inconvenient
+- **Reviews peers' work** with specific, actionable feedback, and visibly acts on feedback received
+- **Helps constructively when asked**, including when the question is basic or the timing inconvenient
 
 #### Communication and collaboration
 
-- Communicates clearly for the audience, in writing and in person, and shares progress and blockers without being chased
+- **Communicates clearly for the audience**, in writing and in person, and shares progress and blockers without being chased
 
 ### Evidence
 
@@ -102,7 +102,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Not yet
 
-- Helpful when asked, invisible otherwise
+- Helps when asked, but doesn't offer help or share what they know otherwise
 - Feedback points out problems but rarely helps the other person understand the reasoning or decide better next time
 - Feedback is heard but nothing is different by the next cycle
 
@@ -112,12 +112,12 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Expectations
 
-- Contributes beyond immediate delivery through a route they choose, and keeps it up through the cycle
-- Upholds Sahaj's culture in everyday behaviour, follows through on the commitments they take on, and raises constraints early
+- Contributes beyond immediate delivery in **a way they choose**, and keeps it up through the cycle
+- Upholds Sahaj's culture **in everyday behaviour**, follows through on the commitments they take on, and raises constraints early
 
 ### Evidence
 
-- The avenue you chose and what you did in it across the cycle, with rough dates
+- The way you chose to contribute and what you did across the cycle, with rough dates
 - Something that exists, or works better, because you kept contributing
 - What the people it helped now do differently
 

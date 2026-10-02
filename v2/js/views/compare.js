@@ -3,7 +3,7 @@
 // or the first two scopes if you haven't chosen one. On a phone the pairs stack, so the
 // "from" scope's facet lists start hidden and a toggle brings them back.
 
-import { esc, md, list } from '../ui.js';
+import { esc, md, mdInline, list } from '../ui.js';
 import { savedScope, nextScope, viewTabs, NATURE } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 
@@ -40,9 +40,11 @@ export function render(content, [fromId, toId]) {
             : `<div class="cmp-facet"><p class="facet-label">Expected of everyone</p>
                 ${pair(list(f.shared, 'plain-list secondary'), list(t.shared, 'plain-list secondary'))}</div>`;
         return `<section class="cmp-area" data-area="${a.key}">
-            <h2 class="area-heading">${areaIcon(a.key)}${esc(a.name)}</h2>
-            ${adjacentUp && t.change ? `<p class="cmp-change">${esc(t.change)}</p>` : ''}
-            ${pair(`<p class="core">${esc(f.core)}</p>`, `<p class="core">${esc(t.core)}</p>`)}
+            <div class="area-intro">
+                <h2 class="area-heading">${areaIcon(a.key)}${esc(a.name)}</h2>
+                ${adjacentUp && t.change ? `<p class="cmp-change">${mdInline(t.change)}</p>` : ''}
+                ${pair(`<p class="core">${esc(f.core)}</p>`, `<p class="core">${esc(t.core)}</p>`)}
+            </div>
             ${detail}
         </section>`;
     }).join('');
@@ -67,7 +69,7 @@ export function render(content, [fromId, toId]) {
             <section class="cmp-nature" aria-labelledby="cmp-nature-head">
                 <h2 id="cmp-nature-head">Nature of impact</h2>
                 ${NATURE.map(n => `<div class="cmp-facet"><p class="facet-label">${n.label}</p>
-                    ${pair(`<p>${esc(from[n.key])}</p>`, `<p>${esc(to[n.key])}</p>`)}</div>`).join('')}
+                    ${pair(`<p>${mdInline(from[n.key])}</p>`, `<p>${mdInline(to[n.key])}</p>`)}</div>`).join('')}
             </section>
             ${adjacentUp ? `<section class="what-changes"><h2>What changes</h2>${md(to.whatChanges)}</section>` : ''}
             ${rows}

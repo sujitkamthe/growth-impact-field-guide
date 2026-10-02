@@ -1,19 +1,19 @@
 /* Growth & Impact at Sahaj (Field Guide V2)
-   Editorial field guide: text on white, colour only where it means something.
-   Interaction is graphite ink; the three area colours mark areas and are the only colour on the page. */
+   Editorial field guide: text on warm paper, colour only where it means something.
+   Interaction is ink; the three area colours mark areas and are the only colour on the page. */
 
 :root {
-    --bg: #FFFFFF;
+    --bg: #FAF9F6;
     --surface: #FFFFFF;
-    --text: #1C1F2A;
-    --text-2: #4B5163;
-    --muted: #676C7E;
-    --line: #DDE0E6;
-    --control: #7F8497;
-    --notice: #F3F4F6;
+    --text: #1D1C19;
+    --text-2: #4B4842;
+    --muted: #6A665E;
+    --line: #E2DED6;
+    --control: #87827A;
+    --notice: #F1EEE8;
 
-    --accent: #18181B;
-    --accent-soft: #F4F4F5;
+    --accent: #1C1A17;
+    --accent-soft: #F1EEE8;
     --accent-ink: #FFFFFF;
 
     --cd: #087A6B;
@@ -37,9 +37,9 @@
 
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --bg: #14151B; --surface: #1C1D25; --text: #ECEDF2; --text-2: #B9BCC9; --muted: #9498AD;
-        --line: #3A3D4E; --control: #6B6F84; --notice: #23252F;
-        --accent: #FAFAFA; --accent-soft: #27272A; --accent-ink: #14151B;
+        --bg: #161513; --surface: #1E1D1A; --text: #EDEBE7; --text-2: #BCB8B0; --muted: #9A958C;
+        --line: #3B3833; --control: #77726A; --notice: #262420;
+        --accent: #F7F5F1; --accent-soft: #2A2824; --accent-ink: #161513; --area-mix: 10%;
         --cd: #4CC3AE; --pt: #86A9F2; --oc: #D9A95B;
         --positive: #5BC08A; --warning: #F0A36B; --critical: #F28B82;
         color-scheme: dark;
@@ -49,9 +49,9 @@
 }
 
 :root[data-theme="dark"] {
-    --bg: #14151B; --surface: #1C1D25; --text: #ECEDF2; --text-2: #B9BCC9; --muted: #9498AD;
-    --line: #3A3D4E; --control: #6B6F84; --notice: #23252F;
-    --accent: #FAFAFA; --accent-soft: #27272A; --accent-ink: #14151B;
+    --bg: #161513; --surface: #1E1D1A; --text: #EDEBE7; --text-2: #BCB8B0; --muted: #9A958C;
+    --line: #3B3833; --control: #77726A; --notice: #262420;
+    --accent: #F7F5F1; --accent-soft: #2A2824; --accent-ink: #161513; --area-mix: 10%;
     --cd: #4CC3AE; --pt: #86A9F2; --oc: #D9A95B;
     --positive: #5BC08A; --warning: #F0A36B; --critical: #F28B82;
     color-scheme: dark;
@@ -62,13 +62,20 @@
 [data-area="oc"] { --area: var(--oc); }
 
 /* Areas are marked by a short bar in their colour on a hairline, so colour labels
-   the area without a full-width rule competing with the text. */
-.home-area, .page > .scope-area, .area-head, .cmp-area { position: relative; border-top: 1px solid var(--line); }
-.home-area::before, .page > .scope-area::before, .area-head::before, .cmp-area::before, .mx-col-head::before {
-    content: ""; position: absolute; top: -2px; left: 0; width: 40px; height: 3px; border-radius: 2px; background: var(--area);
+   the area without a full-width rule competing with the text. On scope pages whitespace
+   separates the three areas; on Compare and the area page the opening block also sits on
+   a faint tint of the area's colour. */
+[data-area] { --area-soft: color-mix(in srgb, var(--area) var(--area-mix, 6%), var(--bg)); }
+.home-area, .page > .scope-area { position: relative; border-top: 1px solid var(--line); }
+.home-area::before, .page > .scope-area::before, .area-intro::before, .area-head::before, .mx-col-head::before {
+    content: ""; position: absolute; top: -2px; left: 0; width: 56px; height: 3px; border-radius: 2px; background: var(--area);
 }
 .mx-col-head { position: relative; }
 .mx-col-head::before { top: 0; left: 16px; }
+.area-intro, .area-head { position: relative; background: var(--area-soft); border-radius: var(--radius); }
+.area-intro { padding: 22px 24px 6px; margin-bottom: 24px; }
+.area-intro::before, .area-head::before { top: 0; left: 24px; border-radius: 0 0 2px 2px; }
+@media (max-width: 760px) { .area-intro { padding: 18px 16px 4px; } .area-intro::before, .area-head::before { left: 16px; } }
 
 /* Base */
 
@@ -121,7 +128,7 @@ strong { font-weight: 600; }
 
 .site-header {
     position: sticky; top: 0; z-index: 20;
-    background: var(--surface);
+    background: var(--bg);
     border-bottom: 1px solid var(--line);
 }
 .main-nav {
@@ -322,6 +329,8 @@ a.term:hover { text-decoration-style: solid; }
 .plain-list { margin: 0 0 16px; padding-left: 1.1em; color: var(--text-2); }
 .plain-list li { margin-bottom: 6px; }
 .plain-list li::marker { color: var(--muted); }
+/* Bold marks the phrase that carries the scope, so it reads at full strength in grey lists. */
+.plain-list strong { color: var(--text); }
 .plain-list.secondary { font-size: 15px; }
 .area-label, .area-heading { color: var(--area); }
 .area-label { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
@@ -341,15 +350,35 @@ a.term:hover { text-decoration-style: solid; }
 /* Home */
 
 .home-hero .lede { margin-bottom: 0; }
-.page.home > .home-section { margin-top: 40px; }
-.page.home > .home-section > h2 { font-size: 20px; margin-bottom: 4px; }
-.home-note { max-width: 64ch; margin: 0 0 16px; }
-.home-section [data-scope-now] { margin-top: 32px; }
+.home-hero { margin-bottom: 56px; }
+/* Each section starts on a hairline with a short ink bar, as on reading pages, so the
+   page reads as separate stops rather than one long list. */
+.page.home > .home-section {
+    position: relative; margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--line);
+}
+.page.home > .home-hero + .home-section { margin-top: 0; }
+.page.home > .home-section::before {
+    content: ""; position: absolute; top: -2px; left: 0; width: 40px; height: 3px; border-radius: 2px; background: var(--accent);
+}
+.page.home > .home-section > h2 { font-size: 24px; margin-bottom: 6px; }
+.home-note { max-width: 64ch; margin: 0 0 20px; }
+@media (max-width: 760px) { .page.home > .home-section { margin-top: 56px; } }
+/* The chosen scope's expectations sit on the page under the cards with no shared fill, so
+   whitespace and each area's bar keep the three areas reading as separate columns. */
+.home-section [data-scope-now] { margin-top: 36px; }
+.home-section [data-scope-now] .actions { margin-top: 32px; }
+.home-section [data-scope-now] > :last-child { margin-bottom: 0; }
+/* Choosing a scope lifts its statements into place, one area after another; first render stays still. */
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+[data-scope-now][data-changed] :is(.scope-now-mindset, .home-area, .actions) { animation: rise 0.24s ease-out both; }
+[data-scope-now][data-changed] .home-area:nth-child(2) { animation-delay: 40ms; }
+[data-scope-now][data-changed] .home-area:nth-child(3) { animation-delay: 80ms; }
+[data-scope-now][data-changed] .actions { animation-delay: 120ms; }
 
 /* Start here: one row per reader task, linking to the page for it. */
 .home-tasks { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
 .home-tasks li { border-top: 1px solid var(--line); padding: 12px 0; }
-.home-tasks a { display: block; font-weight: 600; }
+.home-tasks li > a { display: block; font-weight: 600; }
 .home-tasks span { display: block; color: var(--text-2); font-size: 15px; line-height: 1.45; margin-top: 2px; }
 @media (max-width: 760px) { .home-tasks { grid-template-columns: 1fr; } }
 
@@ -359,9 +388,11 @@ a.term:hover { text-decoration-style: solid; }
     display: flex; flex-direction: column; gap: 8px; padding: 16px; text-align: left;
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
     color: var(--text); font: inherit; cursor: pointer;
+    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
 }
 .scope-step:hover { border-color: var(--accent); }
-.scope-step[aria-checked="true"] { border: 2px solid var(--accent); padding: 15px; background: var(--accent-soft); }
+/* The second pixel of the selected border is an inset shadow, so the card keeps its size and the change can ease in. */
+.scope-step[aria-checked="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
 .scope-step-name { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; color: var(--accent); }
 .scope-step-mindset { font-weight: 500; line-height: 1.45; }
 .scope-step-reach { margin-top: auto; color: var(--muted); font-size: 14px; line-height: 1.5; }
@@ -373,23 +404,40 @@ a.term:hover { text-decoration-style: solid; }
 @media (max-width: 520px) {
     .scope-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
     .scope-step { align-items: center; padding: 10px 4px; text-align: center; }
-    .scope-step[aria-checked="true"] { padding: 9px 3px; }
     .scope-step-name { flex-direction: column; gap: 6px; font-size: 14px; }
     .scope-step-mindset, .scope-step-reach { display: none; }
     .scope-now-mindset { display: block; margin: 0 0 24px; }
     .scope-now-mindset span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
-    .home-section [data-scope-now] { margin-top: 20px; }
+    .home-section [data-scope-now] { margin-top: 24px; }
 }
 
 .home-area { padding-top: 16px; }
-.home-growth { max-width: 64ch; }
-.home-growth h2 { font-size: 20px; }
-.home-growth p { color: var(--text-2); }
+.home-growth p { max-width: 64ch; color: var(--text-2); }
 .area-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
 @media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; gap: 24px; } }
 
 /* All expectations */
 
+/* Concise | Detailed: a two-option switch, right-aligned above the table it changes. */
+.matrix-head { margin-bottom: 20px; }
+.segmented {
+    position: relative; display: grid; grid-template-columns: 1fr 1fr; width: fit-content; margin: 0 0 12px auto;
+    border: 1px solid var(--control); border-radius: var(--radius-control);
+}
+/* One ink pill under the chosen option, which slides across when the choice changes;
+   the options are equal width so it only ever moves by its own width. */
+.segmented::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 50%; border-radius: 5px; background: var(--accent);
+    transition: transform 0.2s ease-out;
+}
+.segmented:has(> :last-child[aria-checked="true"])::before { transform: translateX(100%); }
+.segmented [role="radio"] {
+    position: relative; min-height: 40px; padding: 0 16px; border: 0; border-radius: 5px; background: transparent; color: var(--text-2);
+    font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; transition: color 0.2s ease-out;
+}
+.segmented [role="radio"]:not([aria-checked="true"]):hover { color: var(--text); background: var(--notice); }
+.segmented [aria-checked="true"] { color: var(--accent-ink); }
+@media (forced-colors: active) { .segmented [aria-checked="true"] { outline: 2px solid CanvasText; outline-offset: -4px; } }
 .matrix { border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .mx-row { display: grid; grid-template-columns: 190px repeat(3, minmax(0, 1fr)); }
 .mx-row + .mx-row { border-top: 1px solid var(--line); }
@@ -459,7 +507,14 @@ h1 .exploring-tag { vertical-align: 0.35em; margin-left: 6px; }
     .sticky-title { display: none; }
     .sticky-bar nav { gap: 4px 16px; }
 }
-.page > .scope-area { margin-top: 40px; padding-top: 16px; }
+.page > .scope-area { margin-top: 72px; padding-top: 24px; }
+@media (max-width: 760px) { .page > .scope-area { margin-top: 56px; } }
+/* Each area's heading and core line sit on the page; its detail (facets, ways to contribute and
+   how to tell) sits on a white reading surface, so summary and detail read as two levels. */
+.area-body { margin-top: 20px; padding: 24px 28px 20px; background: var(--surface); border-radius: 4px; }
+.area-body > .kind:first-child { margin-top: 0; }
+.area-body > :last-child { margin-bottom: 0; }
+@media (max-width: 760px) { .area-body { margin-inline: calc(-1 * var(--gutter)); padding: 20px var(--gutter) 16px; border-radius: 0; } }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 @media (hover: hover) {
     .copy-section { opacity: 0; transition: opacity 0.15s; }
@@ -486,7 +541,8 @@ h1 .exploring-tag { vertical-align: 0.35em; margin-left: 6px; }
 
 /* Area page */
 
-.area-head { padding-top: 20px; }
+.area-head { padding: 28px 28px 8px; }
+@media (max-width: 760px) { .area-head { padding: 22px 16px 4px; margin-inline: calc(-1 * var(--gutter)); border-radius: 0; } }
 .area-question { font-size: 20px; font-weight: 600; }
 .area-head p { max-width: 65ch; color: var(--text-2); }
 .thread { list-style: none; margin: 0; padding: 0; }
@@ -527,7 +583,7 @@ details > summary:hover { color: var(--accent); }
 .cmp-shift { margin-bottom: 40px; }
 .cmp-shift .q { font-size: 20px; font-weight: 600; margin: 0; }
 .cmp-scope { color: var(--muted); font-size: 14px; font-weight: 500; margin-bottom: 4px; }
-.cmp-area { margin-top: 40px; padding-top: 16px; }
+.cmp-area { margin-top: 48px; }
 .cmp-area h2 { font-size: 20px; }
 .page > .what-changes { margin-top: 0; }
 @media (max-width: 760px) { .cmp-cols { grid-template-columns: 1fr; } }
@@ -585,7 +641,7 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .practice-steps div { grid-template-columns: 1fr; gap: 2px; }
 }
 
-/* Home: the same situation stepped through each scope, by hand. */
+/* How it works: the same situation stepped through each scope, by hand. */
 
 .practice-stepper .practice-situation { margin: 4px 0 16px; }
 .stepper-tabs { display: flex; flex-wrap: wrap; gap: 4px 20px; border-bottom: 1px solid var(--line); margin-bottom: 24px; }
@@ -657,13 +713,18 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 
 /* Print: a scope page or any reading page */
 
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
 @media print {
     .site-header, .site-footer, .sticky-bar, .eyebrow, .pager,
     .actions, .inline-links, .link-button, .on-page, .v1-note, .view-tabs { display: none !important; }
     body { background: #fff; color: #000; font-size: 12pt; }
+    .area-intro, .area-head, .area-body { background: none; padding-inline: 0; margin-inline: 0; }
     .scope-area { break-inside: avoid; }
     .step[hidden] { display: grid; }
-    .stepper-tabs, .stepper-nav, .ws-scope, .cmp-toggle { display: none !important; }
+    .stepper-tabs, .stepper-nav, .ws-scope, .cmp-toggle, .segmented { display: none !important; }
     .cmp-only-to .cmp-facet .cmp-cols > div:first-child { display: block !important; }
     .page.narrow > section.prose.band, .area-page > section.band { background: none; border-top: 1px solid #000; border-radius: 0; padding-inline: 0; margin-inline: 0; }
     .page.narrow > section.prose::before, .area-page > section::before { content: none; }

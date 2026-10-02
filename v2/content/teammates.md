@@ -14,7 +14,7 @@ Anyone on the team can also review someone's expectations, discuss them and ask 
 Start from the scope they chose, and work through these before the doc is agreed.
 
 1. **Does the impact you've seen support the scope?**: say so plainly if you think it's too high or too low. A mismatch is corrected here, so the whole cycle is measured against the right scope.
-2. **Is everything their team needs written down?**: anything beyond the guide goes in their doc, under that area.
+2. **Is anything specific to their work written down?**: expectations beyond the guide, such as what this client or team needs from them, go in their doc under the area they belong to.
 3. **Is any stretch concrete?**: everyone should be able to recognise when it's happening. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check there is a stretch in all three areas.
 
 Add your inputs as comments and ask for changes where something's missing or unclear. The doc is agreed when you and the person can both point to what's expected.
@@ -46,7 +46,7 @@ The person can present their doc, or you can read it beforehand for context. Loo
 <!-- list -->
 - **Confirm** what matches your experience of their work.
 - **Correct** where you think they misread their feedback, with the example that shows it.
-- **Add** what they left out, especially work that is easy to miss, such as reviews, onboarding help, problems they prevented, or an attempt they stayed with that didn't land for reasons outside their control.
+- **Add** what they left out, especially work that is easy to miss, such as reviews, onboarding help, problems they prevented, or an attempt they stayed with that didn't succeed for reasons outside their control.
 
 If a self-assessment mentions work you didn't see, ask about it: "I didn't see this directly, can you tell me more?" works better than silent scepticism.
 
@@ -60,9 +60,9 @@ A stretch doesn't have to start with the person. If you see them already doing s
 
 Tell them what you've seen that makes you think they're ready. If the conversation starts to feel like criticism of their current work, go back to what you've seen them do well.
 
-When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: a missing opportunity is for the team to create, missing support is for you to give, and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth has a plan.
+When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: if there has been no opportunity, the team needs to make one; if support has been missing, give it; and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth has a plan.
 
 ## Raising someone's scope
 
 <!-- band -->
-Raise a reference scope at the team check when next-scope impact is consistent in all three areas and others rely on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. Look at all three areas at the current scope first, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.
+Raise a reference scope at the team check when the person shows next-scope impact consistently in all three areas and the people around them depend on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. First check they meet their current scope in all three areas, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds back a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.

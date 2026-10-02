@@ -7,7 +7,7 @@ lede: The questions people ask most about how the guide works. For the model its
 
 ### Is this a checklist?
 
-No. The statements describe the shape of impact at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet is required, because all three count toward one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. A clear gap means a facet's impact isn't shown consistently, not that one line is missing, and it makes the area below expectations. In Org & Community the groups are routes, and you choose one or more. Within a facet or route, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
+No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet is required, because all three count toward one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. A clear gap means a facet's impact isn't shown consistently, not that one line is missing, and it makes the area below expectations. In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
 
 ### What's the difference between Extended and Team?
 
@@ -15,21 +15,21 @@ At **Extended** you improve work beyond your own: a stream you lead, a design ot
 
 ### Does leading an account set my scope?
 
-No. Many Sahaj accounts have a single team, so leading one doesn't by itself bring Team or Wider expectations; what the role asks of you follows your scope. The natural way to grow in it is to build the client relationship and explore how the account could grow, and that impact, which reaches past one team's delivery, is Wider.
+No. Many Sahaj accounts have a single team, so leading one doesn't by itself bring Team or Wider expectations; you are held to your own scope's expectations, whatever the role. The natural way to grow in it is to build the client relationship and explore how the account could grow, and that impact, which reaches past one team's delivery, is Wider.
 
 ### Do I need to work across several accounts, or speak at conferences?
 
-No. Deep influence inside one client's organisation, or a capability many Sahaj teams use, counts as much as breadth across accounts. External work is one route to wide impact, never a requirement for it.
+No. Deep influence inside one client's organisation, or a capability many Sahaj teams use, counts as much as breadth across accounts. External work is one way to reach Wider scope, never a requirement for it.
 
 ### I'm new to Sahaj. Where do I start?
 
-Your scope is agreed with your reviewers from the impact your experience shows, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
+Your scope is agreed with your reviewers from the impact you showed in your previous work, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
 
 ## Growth
 
 ### How do I move to the next scope?
 
-By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities until others rely on them in all three. Strong next-scope impact in one area is rated as exceeding; your scope is raised at the team check once it holds everywhere. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
+By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them, in all three areas. Strong next-scope impact in one area is rated as exceeding; your scope is raised at the team check once you show it consistently in all three. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
 
 ### Do I have to be equally strong in all three areas?
 
@@ -37,7 +37,7 @@ No. Your strength will vary by area, and the rating captures that. Strength in o
 
 ### Can I grow without leading a team?
 
-Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. Each route still needs impact in People & Team and Org & Community.
+Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. Whichever way you take, you still need impact in People & Team and Org & Community.
 
 ## Contribution
 
@@ -55,7 +55,7 @@ Not by itself. A talk counts for its depth and for what it led to, such as peopl
 
 ### What if my project gives me no room to contribute or grow?
 
-Raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. It can still be addressed then, which it can't at assessment. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+Raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised during the cycle, it can still be fixed; raised for the first time in your self-assessment, it's too late to change anything. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
 
 ## The process
 

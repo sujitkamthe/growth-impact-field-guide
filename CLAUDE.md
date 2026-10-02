@@ -32,6 +32,19 @@ This watches `content/*.md` for changes, rebuilds `manifest.json` automatically,
 
 A second version lives in `v2/` and is served at `/v2/`, beside V1 which stays unchanged. It has no build step: run `npm run dev:v2`. Its model, decisions and content conventions are in `v2/README.md`.
 
+#### Writing guide content: clarity over ambiguity
+
+People read the guide to find out what is expected of them, so every sentence must be one a new joiner can act on without asking what it means. When writing or editing anything in `v2/content/`:
+
+- **Name who does what.** Say "the people around you", "your reviewers" or "the team", not "others"; say who relies on what. "Until others rely on them" became "keeping them up until the people around you depend on you for them".
+- **Give every pronoun one obvious referent.** If "it", "them" or "that" could point at two things, name the thing: "before it became the norm" became "before the long hours became the norm".
+- **State the observable outcome, not a shorthand verb.** Avoid "holds", "lands", "sticks", "scales", "shows up" and "is addressed"; say what someone would see, such as "you show it consistently in all three areas", "shipped on time", "the team keeps it up without being made to".
+- **Keep the guide's terms to their defined meanings.** "Scope" means only Direct, Extended, Team or Wider, never the size of a piece of work; Org & Community's groups are "ways to contribute"; don't use "route", "level" or "persona" as framework terms.
+- **Avoid delivery jargon that reads two ways.** "Story" (ticket or narrative), "contract" (legal or API), "land" (ship or succeed): pick the plain word.
+- **Prefer a full clause to a compressed one.** "It can still be addressed then, which it can't at assessment" became "Raised during the cycle, it can still be fixed; raised for the first time in your self-assessment, it's too late to change anything."
+
+Changing a core statement, mindset or other framework wording is the user's decision: propose the rewrite and say why before applying it.
+
 ## Architecture
 
 **Content Pipeline:**

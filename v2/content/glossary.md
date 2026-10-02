@@ -33,7 +33,7 @@ One of the three parts of Client & Delivery or of People & Team, such as consult
 ## Raise in scope
 
 <!-- matches: reference scope is raised, raising someone's scope, raise a reference scope, scope should be raised, scope is raised, raise in scope, scope moves up -->
-Moving your reference scope to the next one. It is decided at the team check once your next-scope impact is consistent, and others rely on it, in all three areas. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
+Moving your reference scope to the next one. It is decided at the team check once you show next-scope impact consistently in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
 
 ## Rating
 
@@ -50,15 +50,10 @@ The scope you show consistently across all three areas, agreed in your expectati
 <!-- matches: reviewers -->
 The people who review your expectations and confirm your ratings: the seniors on your team; for a senior, their account lead or seniors from other teams; for an account lead, seniors or leads from other accounts in the office. Anyone on the team can also ask for changes.
 
-## Route
-
-<!-- matches: routes, route -->
-A way to contribute in Org & Community: culture and organisational health, initiatives and capability, or community and external contribution. You choose one or more. At Team and Wider, the guide also calls the different ways to create impact, such as leading a team or deep expertise, routes.
-
 ## Scope
 
 <!-- matches: scopes -->
-How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope includes the work of the ones inside it.
+How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope still includes the ones inside it, so your own work keeps counting as your scope grows.
 
 ## Seniors
 
@@ -74,3 +69,8 @@ Some of the next scope's responsibilities, added to your expectations for a cycl
 
 <!-- matches: team checks, team check -->
 The conversation at the end of a cycle in which teammates confirm, correct or add to your self-assessment, your reviewers confirm your ratings, and any raise in scope is decided.
+
+## Ways to contribute
+
+<!-- matches: ways to contribute, way to contribute -->
+The three groups in Org & Community: culture and organisational health, initiatives and capability, and community and external contribution. Unlike facets, you choose one or more rather than showing all three.

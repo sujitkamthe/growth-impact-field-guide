@@ -110,13 +110,13 @@ function parseScope(text) {
 function parseArea(text) {
     const { data, body } = parseFrontmatter(text);
     const { sections } = splitSections(body, 2);
-    // Facets all count toward the rating; routes (Org & Community) are chosen from.
+    // Facets all count toward the rating; Org & Community's ways to contribute are chosen from.
     const area = { ...data, summary: '', facets: [], groupKind: 'facets', groupIntro: '', sections: [] };
     for (const s of sections) {
         if (s.slug === 'summary') area.summary = s.body;
-        else if (s.slug === 'facets' || s.slug === 'routes') {
+        else if (s.slug === 'facets' || s.slug === 'ways-to-contribute') {
             const { intro, sections: groups } = splitSections(s.body, 3);
-            Object.assign(area, { facets: groups, groupKind: s.slug, groupIntro: intro });
+            Object.assign(area, { facets: groups, groupKind: s.slug === 'facets' ? 'facets' : 'routes', groupIntro: intro });
         } else area.sections.push(s);
     }
     return area;

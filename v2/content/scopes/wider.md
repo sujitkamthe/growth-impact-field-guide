@@ -2,9 +2,9 @@
 id: wider
 name: Wider
 order: 4
-reach: Beyond one team: the account, the client's organisation, Sahaj or the wider community
-how: Direction, capability and relationships that several teams take up
-lasts: Change that holds after you've moved on
+reach: **Beyond one team**: the account, the client's organisation, Sahaj or the wider community
+how: Direction, capability and relationships **that several teams take up**
+lasts: Change that **holds after you've moved on**
 reaches: Account · client organisation · Sahaj · community
 mindset: My impact reaches beyond one team.
 question: Where should this go next, and how do we get there sustainably?
@@ -13,11 +13,11 @@ v1: Strategist and Pioneer
 
 ## Summary
 
-Your impact reaches past the team you work in. For most people that means the account as a whole, whether it has one team or several, or the client's organisation; it can also mean Sahaj itself or the wider community. These sit side by side rather than one above another, and you are not expected to cover all of them: a person with deep influence inside one client's organisation, or on capability across Sahaj, meets this scope as fully as someone known in the wider community. Your impact has to land somewhere beyond one team and last after you step back. One talk, one DevDay or one blog post is not Wider impact on its own; a capability adopted across Sahaj, changed engineering practice across a client's organisation, or an account grown and kept healthy can be.
+Your impact reaches past the team you work in. For most people that means the account as a whole, whether it has one team or several, or the client's organisation; it can also mean Sahaj itself or the wider community. These sit side by side rather than one above another, and you are not expected to cover all of them: a person with deep influence inside one client's organisation, or on capability across Sahaj, meets this scope as fully as someone known in the wider community. Your impact has to make a difference somewhere beyond one team and last after you step back. One talk, one DevDay or one blog post is not Wider impact on its own; a capability adopted across Sahaj, changed engineering practice across a client's organisation, or an account grown and kept healthy can be.
 
 ## What changes
 
-At Team you change how one team operates. At Wider your impact crosses the team boundary, into the account as a whole, the client's organisation, Sahaj or the wider community, and it lasts beyond your involvement.
+At Team you change how one team operates. At Wider your impact **crosses the team boundary**, into the account as a whole, the client's organisation, Sahaj or the wider community, and it lasts beyond your involvement.
 
 ## In practice
 
@@ -33,24 +33,24 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### What changes
 
-At Team you change how one team works; at Wider you shape direction across teams or a client's organisation.
+At Team you change how one team works; at Wider you shape direction **across teams or a client's organisation**.
 
 ### Expectations
 
 #### Technical craft
 
-- Shapes long-term architecture beyond one team, making hard-to-reverse decisions responsibly
-- Anticipates technology and industry shifts, and invests in Sahaj's long-term technical capability
+- Shapes long-term architecture **beyond one team**, making hard-to-reverse decisions responsibly
+- **Anticipates technology and industry shifts**, and invests in Sahaj's long-term technical capability
 
 #### Consulting
 
-- Earns the trust of senior stakeholders, at a client or across Sahaj, and advises them on multi-year, multi-stakeholder problems
-- Raises the bar for how Sahaj frames problems and engages clients
+- **Earns the trust of senior stakeholders**, at a client or across Sahaj, and advises them on multi-year, multi-stakeholder problems
+- **Raises the bar** for how Sahaj frames problems and engages clients
 
 #### Delivery
 
-- Shapes direction across several teams or part of a client's organisation, aligning technical, delivery and business priorities
-- Keeps delivery healthy as the work grows, fixing problems before they spread across teams
+- Shapes direction **across several teams** or part of a client's organisation, aligning technical, delivery and business priorities
+- Keeps delivery healthy as the work grows, fixing problems **before they spread across teams**
 
 ### Evidence
 
@@ -76,26 +76,26 @@ At Team you change how one team works; at Wider you shape direction across teams
 
 ## People & Team
 
-> I scale how people grow beyond my own team.
+> I improve how people grow beyond my own team.
 
 ### What changes
 
-At Team you grow the people on your team; at Wider you grow mentors and leaders, and how people grow across teams.
+At Team you grow the people on your team; at Wider you grow **mentors and leaders**, and how people grow across teams.
 
 ### Expectations
 
 #### Growing others
 
-- Develops other mentors, coaches and leads, so people grow well beyond the ones they work with directly
-- Creates growth opportunities for people beyond their own team, and sponsors people into them
+- **Develops other mentors, coaches and leads**, so people they never work with directly grow as well
+- Creates growth opportunities for people **beyond their own team**, and sponsors people into them
 
 #### Feedback and trust
 
-- Improves how people across teams learn, give feedback and grow, through practices others carry on
+- Improves how people **across teams** learn, give feedback and grow, through practices others carry on
 
 #### Communication and collaboration
 
-- Communicates direction so several teams align to it, including in high-stakes conversations
+- Communicates direction so **several teams align** to it, including in high-stakes conversations
 
 ### Evidence
 
@@ -120,12 +120,12 @@ At Team you grow the people on your team; at Wider you grow mentors and leaders,
 
 ### What changes
 
-At Team you build things others sustain; at Wider you shape how Sahaj grows, works or is seen.
+At Team you build things others sustain; at Wider you shape **how Sahaj grows, works or is seen**.
 
 ### Expectations
 
-- Sees what Sahaj needs and shapes the response, designing initiatives rather than only running them
-- Makes a lasting change to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change holds after they step back
+- Sees what Sahaj needs and **shapes the response**, designing initiatives rather than only running them
+- Makes **a lasting change** to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change holds after they step back
 
 ### Evidence
 
@@ -164,11 +164,11 @@ At Team you build things others sustain; at Wider you shape how Sahaj grows, wor
 
 ## Ways to create impact
 
-Impact at this scope travels through different routes, and most people combine more than one. The expectations above describe the impact, not the role: leading an account is one route, not a requirement. Whichever route you take, it has to show up across all three areas.
+There is more than one way to have impact at this scope, and most people combine several. The expectations above describe the impact, not the role: leading an account is one way, not a requirement. Whichever you take, the impact has to show up in all three areas.
 
 ### Leading an account
 
-You shape how Sahaj shows up at a client by building the relationship and growing the account, whether it has one team or several: the roadmap, proposals and the demand pipeline.
+You shape Sahaj's relationship with a client by building it and growing the account, whether it has one team or several: the roadmap, proposals and the demand pipeline.
 
 ### Technical direction
 
@@ -188,7 +188,7 @@ You shape how the industry thinks through writing, talks and open source. Visibi
 
 You grew an account from one team to three, kept delivery predictable and the pace sustainable as it grew, and set the architecture and delivery approach all three follow. Senior client stakeholders bring you their strategic questions, and the roadmap they are now executing is one you shaped. You sponsored two engineers into leading teams on the account, and inside Sahaj you designed a capability track on the account's domain that other offices now use.
 
-Through a different route: you led no account. The event-driven architecture you shaped is the approach three of the client's teams now follow, and the client's architecture group asks for your view on decisions you aren't part of. You grew two engineers into the people those teams turn to on it, and they now coach others. Inside Sahaj you designed how offices build capability in that domain, and others now run it.
+Without leading an account: the event-driven architecture you shaped is the approach three of the client's teams now follow, and the client's architecture group asks for your view on decisions you aren't part of. You grew two engineers into the people those teams turn to on it, and they now coach others. Inside Sahaj you designed how offices build capability in that domain, and others now run it.
 
 ### Below expectations
 

@@ -2,9 +2,9 @@
 id: team
 name: Team
 order: 3
-reach: The whole team: how it builds, delivers, grows and stays healthy
-how: The team's practices, standards and people, so the work doesn't depend on your presence
-lasts: A team that keeps working well when you're away
+reach: **The whole team**: how it builds, delivers, grows and stays healthy
+how: **The team's practices, standards and people**, so the work doesn't depend on your presence
+lasts: A team that **keeps working well when you're away**
 reaches: Architecture · delivery · people · team practices
 mindset: I make the whole team more effective.
 question: How do we make this team effective?
@@ -17,14 +17,14 @@ Your impact changes how the whole team operates, performs and grows: its technic
 
 ## What changes
 
-At Extended you improve work beyond your own. At Team you improve the system that produces the work: the architecture, the design bar, how people grow and how the team performs. Ask yourself: am I improving pieces of work, even other people's, or changing how the whole team produces its work?
+At Extended you improve work beyond your own. At Team you improve **the system that produces the work**: the architecture, the design bar, how people grow and how the team performs. Ask yourself: am I improving pieces of work, even other people's, or changing how the whole team produces its work?
 
 ## In practice
 
 A client asks the team to add a second payment provider to its checkout. Payment changes have slipped in each of the last two releases.
 
-- **What you did**: You noticed that payment changes slipped because integrations were tested late and nobody owned the contract with providers. You worked with the team on how it plans, tests and reviews integrations, and set the practice up so others now run it.
-- **What changed**: The next two releases landed on time, and the client began to trust the team's estimates for payment work.
+- **What you did**: You noticed that payment changes slipped because integrations were tested late and nobody owned the API contracts with the providers. You worked with the team on how it plans, tests and reviews integrations, and set the practice up so others now run it.
+- **What changed**: The next two releases shipped on time, and the client began to trust the team's estimates for payment work.
 - **Why it's Team**: You changed the system that produces the work, not one piece of it. Designing this one integration well would be Extended; aligning several teams on it would be Wider.
 
 ## Client & Delivery
@@ -33,24 +33,24 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### What changes
 
-At Extended you shape work across several features; at Team you change how the whole team makes technical and delivery decisions.
+At Extended you shape work across several features; at Team you change how **the whole team** makes technical and delivery decisions.
 
 ### Expectations
 
 #### Technical craft
 
-- Shapes the team's technical direction and engineering bar, with principles and standards others use to decide well alone
-- Introduces patterns, tools or practices the team chooses to adopt, preventing recurring technical debt and toil
+- Shapes **the team's technical direction and engineering bar**, with principles and standards others use to decide well alone
+- Introduces patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
 
 #### Consulting
 
-- Aligns stakeholders with conflicting priorities toward a shared direction, through explicit scope, cost and quality trade-offs
-- Builds long-term trust in the team's judgment, and coaches others in consulting and problem framing
+- **Aligns stakeholders** with conflicting priorities toward a shared direction, through explicit scope, cost and quality trade-offs
+- **Builds long-term trust** in the team's judgment, and coaches others in consulting and problem framing
 
 #### Delivery
 
-- Improves how the whole team plans and delivers, with practices that stick without enforcement
-- Surfaces systemic client or delivery risks early and drives them to a clear decision or corrective action
+- Improves how **the whole team** plans and delivers, with practices the team keeps up without being made to
+- Surfaces **systemic** client or delivery risks early and drives them to a clear decision or corrective action
 
 ### Evidence
 
@@ -79,24 +79,24 @@ At Extended you shape work across several features; at Team you change how the w
 
 ### What changes
 
-At Extended you grow individuals; at Team you build growth, feedback and health into how the team works.
+At Extended you grow individuals; at Team you build growth, feedback and health **into how the team works**.
 
 ### Expectations
 
 #### Growing others
 
-- Develops people into new responsibilities, such as client conversations and problem framing
-- Builds mentoring and learning into how the team works, and coaches others to mentor
+- **Develops people into new responsibilities**, such as client conversations and problem framing
+- Builds mentoring and learning **into how the team works**, and coaches others to mentor
 
 #### Feedback and trust
 
-- Builds a team where trust is high and hard feedback is given and heard early
-- Protects the team's sustainable pace, acting on strain before it becomes chronic
+- **Builds a team** where trust is high and hard feedback is given and heard early
+- **Protects the team's sustainable pace**, acting on strain before it becomes chronic
 
 #### Communication and collaboration
 
-- Communicates the team's direction and progress to stakeholders, aligning people without forcing consensus
-- Represents the team's thinking credibly in cross-team and client discussions
+- Communicates **the team's direction** and progress to stakeholders, aligning people without forcing consensus
+- Represents **the team's thinking** credibly in cross-team and client discussions
 
 ### Evidence
 
@@ -115,7 +115,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 - Delegates tasks without transferring context or judgment
 - Mentors individuals while the team's overall capability stays flat
-- Scales yourself by adding meetings rather than removing friction
+- Tries to reach more people by adding meetings, rather than removing what slows the team down
 - Notices strain only once people are already burning out
 
 ## Org & Community
@@ -124,12 +124,12 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 ### What changes
 
-At Extended you drive a piece of org work; at Team you build something Sahaj relies on and hand it to others.
+At Extended you drive a piece of org work; at Team you **build something Sahaj relies on** and hand it to others.
 
 ### Expectations
 
-- Creates or rebuilds something for Sahaj, and sets it up so others can run it
-- Brings other people into organisation-building work and helps them take ownership of it
+- Creates or rebuilds something for Sahaj, and **sets it up so others can run it**
+- **Brings other people into** organisation-building work and helps them take ownership of it
 
 ### Evidence
 
@@ -166,15 +166,15 @@ At Extended you drive a piece of org work; at Team you build something Sahaj rel
 
 ## Ways to create impact
 
-There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one route; it is not a requirement. Each route still needs People & Team and Org & Community impact, shown in a different way.
+There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one way; it is not a requirement. Whichever way you take, you still need impact in People & Team and Org & Community, though it shows up differently.
 
 ### Leading the team
 
-You scale through people, delivery and client trust, often as the team's lead. The team's capability is the output, and your own hands-on work matters less each quarter. Supporting proposals and demand conversations often comes with this route.
+Your impact comes through the team's people, its delivery and the client's trust, often as the team's lead. The team's capability is the output, and your own hands-on work matters less each quarter. Supporting proposals and demand conversations often comes with leading the team.
 
 ### Platforms, tools and standards
 
-You scale through things the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
+Your impact comes through things the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
 
 ### Deep expertise
 
@@ -184,9 +184,9 @@ You become the person the team relies on in a hard domain, and you share that ex
 
 ### Meets expectations
 
-The team made most technical decisions without you, using principles you had set out with them. The architecture you set is what the team builds on, and you handed the review practice you introduced to two teammates, who now run it. Two teammates now lead client conversations because you paired with them and gradually stepped back. When a long release push started wearing people down, you agreed a new plan with the client before it became the norm. You also rebuilt the office's onboarding from idea to rollout, then handed it to two people who now run it.
+The team made most technical decisions without you, using principles you had set out with them. The architecture you set is what the team builds on, and you handed the review practice you introduced to two teammates, who now run it. Two teammates now lead client conversations because you paired with them and gradually stepped back. When a long release push started wearing people down, you agreed a new plan with the client before the long hours became the norm. You also rebuilt the office's onboarding from idea to rollout, then handed it to two people who now run it.
 
-Through a different route: you led no team, but the integration test framework you built with two teammates is what your team, and two others, now use for every provider change. You agreed the principles behind it with the team and handed its upkeep to them, so decisions about it no longer wait for you. You paired with a teammate until they could design contract tests alone, and you told a senior colleague, early and kindly, that the way they reviewed was slowing the team down. Inside Sahaj you rebuilt how the office onboards engineers into testing, and handed it to two people who now run it.
+Without leading the team: the integration test framework you built with two teammates is what your team, and two others, now use for every provider change. You agreed the principles behind it with the team and handed its upkeep to them, so decisions about it no longer wait for you. You paired with a teammate until they could design contract tests alone, and you told a senior colleague, early and kindly, that the way they reviewed was slowing the team down. Inside Sahaj you rebuilt how the office onboards engineers into testing, and handed it to two people who now run it.
 
 ### Below expectations
 

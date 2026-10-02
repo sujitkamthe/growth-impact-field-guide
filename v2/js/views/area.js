@@ -1,4 +1,4 @@
-// One area: what it covers (facets that all count, or routes to choose from), then how it
+// One area: what it covers (facets that all count, or ways to contribute to choose from), then how it
 // grows across the scopes, then its notes. Linkable to a section as #area/<area>/<section>.
 
 import { esc, md, list } from '../ui.js';
@@ -35,7 +35,7 @@ export function render(content, [id, open]) {
     }).join('');
 
     const routes = area.groupKind === 'routes';
-    const covers = routes ? 'Routes' : 'What it covers';
+    const covers = routes ? 'Ways to contribute' : 'What it covers';
     const onPage = [{ slug: 'what-it-covers', title: covers }, { slug: 'how-it-grows', title: 'How it grows' }, ...area.sections];
 
     return {
@@ -62,7 +62,7 @@ export function render(content, [id, open]) {
                     <ol class="thread">${thread}</ol>
                 </section>
                 ${area.sections.map(s => `<section class="prose section-${s.slug}${BAND.test(s.body) ? ' band' : ''}" id="${s.slug}">
-                    <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'ways-to-contribute' ? waysByScope(content, area) : ''}
+                    <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'examples-at-each-scope' ? waysByScope(content, area) : ''}
                 </section>`).join('')}
             </article>`,
         mount(root) {

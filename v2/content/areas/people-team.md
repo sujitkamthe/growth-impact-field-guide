@@ -8,7 +8,7 @@ question: Do the people around you become more effective?
 
 ## Summary
 
-Growing others and building trust are core to how impact scales at Sahaj, not extras. This area covers the people you work with directly: your team, your project and, at wider scopes, the people whose growth you shape beyond your team.
+Growing others and building trust are how most impact at Sahaj reaches beyond one person, so they are not extras. This area covers the people you work with directly: your team, your project and, at wider scopes, the people whose growth you shape beyond your team.
 
 ## Facets
 
@@ -18,7 +18,7 @@ Mentoring, coaching and onboarding that help others build judgment of their own.
 
 ### Feedback and trust
 
-Giving feedback that changes behaviour, receiving it in a way people can see, and building the trust that makes both possible.
+Giving feedback that changes behaviour, visibly acting on feedback you receive, and building the trust that makes both possible.
 
 ### Communication and collaboration
 
@@ -26,7 +26,7 @@ Keeping people informed, driving discussions to decisions and handling disagreem
 
 ## How facets are rated
 
-Like Client & Delivery, this area lists each scope's expectations by facet, and all three count toward one rating, so a clear gap in one makes the area below expectations. A team that grows because of you but never hears hard feedback from you has a gap, and so does one that gets clear feedback from someone nobody would ask for help.
+Like Client & Delivery, this area lists each scope's expectations by facet, and all three count toward one rating, so a clear gap in one makes the area below expectations. A team that grows because of you but never hears hard feedback from you has a gap, and so does a team that gets clear feedback from you but would never come to you for help.
 
 ## Where does mentoring count?
 

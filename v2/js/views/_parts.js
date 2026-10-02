@@ -1,7 +1,7 @@
 // Pieces several views share: scope marks, the picker behaviour, scope navigation and
 // the grammar for expectation subgroups.
 
-import { esc, list, storageGet, storageSet } from '../ui.js';
+import { esc, mdInline, list, storageGet, storageSet } from '../ui.js';
 import { scopeGlyph } from '../diagram.js';
 
 export const scopeMark = (scope, size = 22) =>
@@ -21,6 +21,7 @@ export function saveScope(id) {
 export const EXPLORING = '<span class="exploring-tag">Exploring</span>';
 
 // Radio-group behaviour: click to choose, arrow keys to move, as a native radio set would.
+// Each option carries its value in data-value.
 export function bindPicker(picker, onChange) {
     const buttons = [...picker.querySelectorAll('[role="radio"]')];
     const select = (button, focus) => {
@@ -30,7 +31,7 @@ export function bindPicker(picker, onChange) {
             b.tabIndex = on ? 0 : -1;
         });
         if (focus) button.focus();
-        onChange(button.dataset.scope);
+        onChange(button.dataset.value);
     };
     buttons.forEach((button, i) => {
         button.addEventListener('click', () => select(button, false));
@@ -65,7 +66,7 @@ export const NATURE = [
 ];
 
 export const natureOf = scope => `<dl class="nature" aria-label="Nature of impact at ${esc(scope.name)}">
-    ${NATURE.map(n => `<div><dt>${n.label}</dt><dd>${esc(scope[n.key])}</dd></div>`).join('')}
+    ${NATURE.map(n => `<div><dt>${n.label}</dt><dd>${mdInline(scope[n.key])}</dd></div>`).join('')}
 </dl>`;
 
 // What each kind of subgroup means, said on the page wherever it appears so nobody
@@ -73,7 +74,7 @@ export const natureOf = scope => `<dl class="nature" aria-label="Nature of impac
 export const GRAMMAR = {
     facets: 'All three facets count toward one rating',
     shared: scope => `Expected of everyone at ${scope.name}`,
-    routes: 'Choose one or more routes',
+    routes: 'Choose one or more',
     evidence: 'Signs that the impact is real and lasting',
     examples: 'Illustrations of what each rating can look like',
 };
@@ -86,7 +87,7 @@ export function expectationGroups(block, cls = 'plain-list') {
     </div>`).join('')}</div>`;
 }
 
-// Org & Community's routes, each with this scope's examples.
+// Org & Community's ways to contribute, each with this scope's examples.
 export const routeGroups = (block, cls = 'plain-list secondary') => `<div class="route-groups">${block.routes.map(r => `<div class="facet">
         <p class="facet-label">${esc(r.title)}</p>${list(r.items, cls)}
     </div>`).join('')}</div>`;

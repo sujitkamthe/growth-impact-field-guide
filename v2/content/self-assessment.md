@@ -11,7 +11,7 @@ lede: Write it at the end of the cycle, in your expectations doc, drawing on the
 
 ## The prompts
 
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet, because a clear gap in one is a gap in the area. In Org & Community, say which route you chose and what it changed.
+- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet, because a clear gap in one is a gap in the area. In Org & Community, say how you chose to contribute and what it changed.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
@@ -33,22 +33,22 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 
 > **Client & Delivery**
 >
-> **What changed because of you?** Payment releases had slipped twice because integrations were tested late. I worked with the team on how we plan, test and review integrations, two teammates now run the review, and the next two releases landed on time. For technical craft, the contract tests we agreed are what the team now builds on. For consulting, I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. For delivery, the testing risk now comes up at planning, before release.
+> **What changed because of you?** Payment releases had slipped twice because integrations were tested late. I worked with the team on how we plan, test and review integrations, two teammates now run the review, and the next two releases shipped on time. For technical craft, the contract tests we agreed are what the team now builds on. For consulting, I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. For delivery, the testing risk now comes up at planning, before release.
 >
 > **What did you take from the feedback?** A teammate said I made the integration decisions on my own at first. I started bringing options to the team before deciding, and the review practice came out of that.
 >
-> **Rating: Meets.** It held across the cycle and others now rely on it, but the practice is new and hasn't yet been through a harder release.
+> **Rating: Meets.** The review practice held across the cycle and the team now runs it without me, but it is new and hasn't yet been through a harder release.
 
 ## Stretch
 
-If you agreed a stretch, rate that area against your reference scope like every other area, then say how far you got with it. A stretch you sustained, so that others now rely on it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once that holds in all three areas, and falling short of a stretch is normal.
+If you agreed a stretch, rate that area against your reference scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
 
 ## Describing a shortfall
 
 When an area falls short, say why, because each reason calls for a different response from the team.
 
 <!-- list -->
-- **You had no chance, and raised it during the cycle**: an opportunity for the team to create.
+- **You had no chance, and raised it during the cycle**: the team needs to make room for you.
 - **The chance was there and you didn't take it**: a growth area to plan for.
 - **You took the chance and found it hard**: a development need, where support is the right response.
 - **You stayed with it, and something outside your control stopped it**: this still counts. Say what you tried, what got in the way and what it left behind. If you stopped at the first setback, that is the second reason, not this one.

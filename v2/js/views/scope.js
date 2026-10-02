@@ -1,5 +1,5 @@
 // One scope in depth. Deep-linkable to an area: #scope/<scope>/<area>.
-// Each area's expectations by facet (or, for Org & Community, shared expectations and routes)
+// Each area's expectations by facet (or, for Org & Community, shared expectations and ways to contribute)
 // come first, since that is what people open the page for; a short illustration follows them,
 // and evidence, self-checks, examples and ways to create impact open on demand.
 
@@ -15,7 +15,7 @@ function practice(scope) {
         <h2 id="practice-head">In practice</h2>
         <p class="practice-situation">${esc(p.situation)}</p>
         <dl class="practice-steps">${p.items.map(i => `<div><dt>${esc(i.name)}</dt><dd>${mdInline(i.text)}</dd></div>`).join('')}</dl>
-        <p class="hint">This follows Client & Delivery only; ${esc(scope.name)} expects impact in all three areas. <a href="#home/practice">See the same situation at every scope</a></p>
+        <p class="hint">This follows Client & Delivery only; ${esc(scope.name)} expects impact in all three areas. <a href="#how-it-works/scopes-in-practice">See the same situation at every scope</a></p>
     </section>`;
 }
 
@@ -26,6 +26,7 @@ function areaSection(scope, prev, area, block) {
             <button type="button" class="link-button small copy-section" data-copy-area="${area.id}">Copy link</button>
         </div>
         <p class="core large">${esc(block.core)}</p>
+        <div class="area-body">
         <p class="kind">${block.facets.length ? GRAMMAR.facets : GRAMMAR.shared(scope)}</p>
         ${expectationGroups(block, 'plain-list expect')}
         ${block.routes.length ? `<div class="routes">
@@ -35,13 +36,14 @@ function areaSection(scope, prev, area, block) {
         </div>` : ''}
         <details class="how-to-tell">
             <summary>How to tell you're meeting it</summary>
-            <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; consistency, and others relying on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better reference scope.` : ''}</p>
+            <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; doing it consistently, so that people come to depend on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better reference scope.` : ''}</p>
             <div class="tell-cols">
                 <div><h3>Signs of impact</h3>${list(block.evidence, 'plain-list secondary')}</div>
                 <div><h3>Ask yourself</h3>${list(block.selfCheck, 'plain-list secondary')}</div>
                 <div><h3>Not there yet</h3>${list(block.notYet, 'plain-list secondary')}</div>
             </div>
         </details>
+        </div>
     </section>`;
 }
 
