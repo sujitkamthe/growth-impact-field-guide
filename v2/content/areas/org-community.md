@@ -24,7 +24,7 @@ Contributing to, driving and eventually designing the things that make Sahaj bet
 
 ### Community and external contribution
 
-Giving back inside and outside Sahaj through sessions, writing, talks and open source.
+Giving back inside and outside Sahaj through sessions, events such as DevDay, writing, talks and open source.
 
 ## Contribution is part of the job
 

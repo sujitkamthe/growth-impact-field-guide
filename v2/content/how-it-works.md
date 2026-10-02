@@ -5,7 +5,7 @@ lede: How scopes, areas, ratings and stretch fit together, and how a cycle runs.
 
 ## Overview
 
-Everyone has one scope, which describes how far their impact is expected to reach. The scope sets what is expected of you in three areas of work, and you grow by taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them.
+Everyone has one scope, which describes how far their impact is expected to reach. The scope sets what is expected of you in three areas of impact, and you grow by taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them.
 
 ## Scopes
 
@@ -21,6 +21,8 @@ A wider scope still includes the ones inside it: at Team, your own work and your
 One piece of client work, handled at each scope. The example is made up, and it follows Client & Delivery only; every scope expects impact in all three areas.
 
 ## Areas
+
+Every scope covers the same three areas of impact, each with its own rating.
 
 - **Client & Delivery**: building the right thing, building it well and delivering it reliably.
 - **People & Team**: helping the people around you become more effective.

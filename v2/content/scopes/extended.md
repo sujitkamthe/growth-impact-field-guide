@@ -153,20 +153,20 @@ At Direct you take part in something beyond your project; at Extended you **driv
 #### Initiatives and capability
 
 - Owning part of an org initiative or capability track and carrying it through
-- Improving part of hiring, such as an interview exercise or how feedback is written
 - Building or improving an internal tool that people beyond your project use
 - Mentoring through a programme and helping improve how it runs
 
 #### Community and external contribution
 
 - Running a community of practice or a regular learning forum
-- Writing or speaking about your work, and following up with the people it reached
+- Writing a blog post or giving a conference talk about your work, and following up with the people it reached
+- Organising a DevDay and carrying it through, from choosing the speakers to following up afterwards
 
 ## Examples
 
 ### Meets expectations
 
-You led the stream for a new payments flow. You turned a vague ask into a clear problem, laid out two options with their trade-offs, and three teammates built their features on your design without needing you. You paired regularly with a newer teammate, who now handles similar design work alone. You also took responsibility for rebuilding the office's interview exercise and carried it through to the version interviewers now use.
+You led the stream for a new payments flow. You turned a vague ask into a clear problem, laid out two options with their trade-offs, and three teammates built their features on your design without needing you. You paired regularly with a newer teammate, who now handles similar design work alone. You also took on organising the office's DevDay and carried it through, from choosing the speakers to following up on what teams said they would try.
 
 ### Below expectations
 

@@ -140,13 +140,14 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Initiatives and capability
 
-- Interviewing regularly, with feedback other interviewers can use
 - Contributing steadily to an org initiative or capability track
 - Fixing a small internal tool or process that wastes people's time
 
 #### Community and external contribution
 
-- Sharing what your team learned, through sessions or write-ups
+- Sharing what your team learned, through internal sessions, write-ups or a blog post
+- Giving a talk at a meetup or conference about something you built or learned
+- Helping organise a DevDay, or speaking at one
 - Contributing to a community of practice
 
 ## Examples

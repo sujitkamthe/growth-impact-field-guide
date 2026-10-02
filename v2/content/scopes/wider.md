@@ -161,6 +161,8 @@ At Team you build things others sustain; at Wider you shape **how Sahaj grows, w
 #### Community and external contribution
 
 - Leading Sahaj's thinking in a domain, inside and outside, in a way that changes how teams work or brings in work
+- Speaking at major industry conferences or publishing writing that changes how others in the industry work, or brings people or work to Sahaj
+- Shaping Sahaj's flagship DevDay so it changes how Sahaj is seen and brings in people, clients or work
 
 ## Ways to create impact
 

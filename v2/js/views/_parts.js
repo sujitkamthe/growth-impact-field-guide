@@ -72,7 +72,7 @@ export const natureOf = scope => `<dl class="nature" aria-label="Nature of impac
 // What each kind of subgroup means, said on the page wherever it appears so nobody
 // has to infer whether a group is required.
 export const GRAMMAR = {
-    facets: 'All three facets count toward one rating',
+    facets: 'All three facets are expected',
     shared: scope => `Expected of everyone at ${scope.name}`,
     routes: 'Choose one or more',
     evidence: 'Signs that the impact is real and lasting',

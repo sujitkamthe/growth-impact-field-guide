@@ -29,9 +29,9 @@ const PORTAL = 'https://sujitkamthe.github.io/growth-impact-field-guide/v2/';
 
 const SCOPES = [['Direct', 'direct'], ['Extended', 'extended'], ['Team', 'team'], ['Wider', 'wider']];
 const AREAS = [
-    { name: 'Client & Delivery', color: '087A6B', hint: 'What matters most in your work and for your client' },
-    { name: 'People & Team', color: '315FAF', hint: 'What matters most for your team' },
-    { name: 'Org & Community', color: '95620B', hint: "Where you'd like to contribute beyond your immediate work" },
+    { name: 'Client & Delivery', color: '087A6B', hint: "Your client's priorities, and anything your project needs from you" },
+    { name: 'People & Team', color: '315FAF', hint: 'What your team needs from you, such as onboarding or mentoring someone' },
+    { name: 'Org & Community', color: '95620B', hint: 'How you plan to contribute beyond your project' },
 ];
 const INK = '18181B';
 const TEXT = '27272A';
@@ -95,15 +95,15 @@ function build() {
         p(t(title, { bold: true, size: 19, color: INK }), { spacing: { after: 10 } }),
         ...(hint ? [p(muted(hint, { size: 16 }), { spacing: { after: 0 } })] : []),
     ], { width, fill: LABEL_FILL });
-    // The self-rating stays small at the foot of the reflection, so the page reads as reflection first.
-    const myView = p([muted('My view:  ', { size: 16 }), ...['Below', 'Meets', 'Exceeds'].map(r => muted(`☐ ${r}    `, { size: 16 }))], { spacing: { before: 60, after: 0 } });
+    // The rating stays small at the foot of the self-assessment, so the page reads as reflection first.
+    const myView = p([muted('My rating:  ', { size: 16 }), ...['Below', 'Meets', 'Exceeds'].map(r => muted(`☐ ${r}    `, { size: 16 }))], { spacing: { before: 60, after: 0 } });
     const page = table([A, C, C], [
-        row([head('', '', A), head('My expectations', 'At the start: what matters most this cycle', C), head('Self-assessment', 'At the end: what changed, and your part in it', C)]),
+        row([head('', '', A), head('My expectations', 'Start of the cycle: what you will focus on, beyond what your scope expects', C), head('Self-assessment', 'End of the cycle: what changed because of you, with examples', C)]),
         ...AREAS.map(a => row([nameCell(a.name, a.color, a.hint, A), cell(gap(900), { width: C }), cell([gap(900), myView], { width: C })], 1900)),
         row([
             nameCell('Growth', INK, '', A),
-            cell([p(muted("Where I want to grow: next-scope responsibilities I'd like to take on (optional)", { size: 16 })), gap(700)], { width: C }),
-            cell([p(muted('Where I grew, and what next', { size: 16 })), gap(700)], { width: C }),
+            cell([p(muted('Next-scope responsibilities you want to take on this cycle, if any', { size: 16 })), gap(700)], { width: C }),
+            cell([p(muted('How far you got with them, and what you want to take on next cycle', { size: 16 })), gap(700)], { width: C }),
         ], 1700),
     ]);
 
@@ -115,9 +115,9 @@ function build() {
             properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1000, bottom: 1000, left: 1100, right: 1100 } } },
             children: [
                 h1('Expectations'),
-                p(muted('What matters for you this cycle, and later, what happened. Fill in the middle column at the start and the right one at the end. This is not a running log: keep your notes wherever suits you.'), { spacing: { after: 160 } }),
+                p(muted('Fill in My expectations at the start of the cycle and your self-assessment at the end. Keep your feedback notes wherever you usually keep notes; they don\'t go in this doc.'), { spacing: { after: 160 } }),
                 details,
-                p([muted('What your scope expects is in the guide: '), ...scopeLinks, muted('. Add here only what is specific to you. '), link('How to write a self-assessment', `${PORTAL}#self-assessment`)], { spacing: { before: 140, after: 200 } }),
+                p([muted('Your scope\'s expectations are in the guide: '), ...scopeLinks, muted('. Write here only what goes beyond them for your work this cycle, such as what your client or team needs from you. Before you write your self-assessment, read '), link('how to write one', `${PORTAL}#self-assessment`), muted('.')], { spacing: { before: 140, after: 200 } }),
                 page,
             ],
         }],

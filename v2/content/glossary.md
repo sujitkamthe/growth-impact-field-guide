@@ -13,7 +13,7 @@ Sahaj's work with one client, whether it has one team or several. The account le
 
 ## Area
 
-One of the three kinds of work every scope covers: [Client & Delivery](#area/client-delivery), [People & Team](#area/people-team) and [Org & Community](#area/org-community). Each area gets one rating.
+One of the three areas of impact that every scope covers: [Client & Delivery](#area/client-delivery), [People & Team](#area/people-team) and [Org & Community](#area/org-community). Each area gets one rating.
 
 ## Cycle
 

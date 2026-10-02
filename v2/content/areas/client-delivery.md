@@ -26,6 +26,6 @@ Predictable, sustainable delivery: planning, visible progress, early risks and t
 
 ## How facets are rated
 
-Merging three capabilities into one area makes the guide easier to hold in your head, but it also makes it easier to hide a gap, so every scope lists its expectations by facet. All three facets count toward one rating: strong technical craft cannot average out weak consulting. When you set expectations or assess against this area, name each facet, and treat a clear gap in one of them, meaning its impact isn't shown consistently at your scope, as making the area below expectations.
+Combining technical craft, consulting and delivery in one area makes the guide easier to hold in your head, but it also makes it easier to hide a gap, so every scope lists its expectations by facet. All three facets count toward one rating: strong technical craft cannot average out weak consulting. When you set expectations or assess against this area, name each facet, and treat a clear gap in one of them, meaning its impact isn't shown consistently at your scope, as making the area below expectations.
 
 Consulting deserves particular care, because it is where self-assessment is least reliable. Almost everyone believes they consult well, so ask what changed because of how you framed a problem; the meetings you attended don't show that.

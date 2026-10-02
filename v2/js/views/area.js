@@ -34,6 +34,9 @@ export function render(content, [id, open]) {
         </li>`;
     }).join('');
 
+    // The neighbouring areas, in order, so a reader can move across without going back to Expectations.
+    const i = content.areas.findIndex(a => a.id === area.id);
+    const [prev, next] = [content.areas[i - 1], content.areas[i + 1]];
     const routes = area.groupKind === 'routes';
     const covers = routes ? 'Ways to contribute' : 'What it covers';
     const onPage = [{ slug: 'what-it-covers', title: covers }, { slug: 'how-it-grows', title: 'How it grows' }, ...area.sections];
@@ -43,7 +46,7 @@ export function render(content, [id, open]) {
         keepScroll: Boolean(open),
         html: `<article class="page area-page" data-area="${area.key}">
                 <header class="page-head area-head">
-                    <p class="eyebrow"><a href="#expectations">Expectations</a></p>
+                    <p class="eyebrow"><a class="back-link" href="#expectations">Expectations</a></p>
                     <h1 class="area-title">${areaIcon(area.key)}${esc(area.name)}</h1>
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
@@ -64,6 +67,10 @@ export function render(content, [id, open]) {
                 ${area.sections.map(s => `<section class="prose section-${s.slug}${BAND.test(s.body) ? ' band' : ''}" id="${s.slug}">
                     <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'examples-at-each-scope' ? waysByScope(content, area) : ''}
                 </section>`).join('')}
+                <nav class="pager" aria-label="Other areas">
+                    ${prev ? `<a href="#area/${prev.id}"><span>Previous</span>${esc(prev.name)}</a>` : '<span></span>'}
+                    ${next ? `<a class="pager-next" href="#area/${next.id}"><span>Next</span>${esc(next.name)}</a>` : ''}
+                </nav>
             </article>`,
         mount(root) {
             if (open) requestAnimationFrame(() => root.querySelector(`#${CSS.escape(open)}`)?.scrollIntoView({ block: 'start' }));

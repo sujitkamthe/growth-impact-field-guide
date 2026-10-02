@@ -156,6 +156,7 @@ At Extended you drive a piece of org work; at Team you **build something Sahaj r
 #### Initiatives and capability
 
 - Building or rebuilding an org initiative or capability track, and handing it to people who now run it
+- Interviewing regularly, with feedback other interviewers can use
 - Redesigning part of hiring or onboarding for an office
 - Building an internal system many people rely on, with owners besides you
 - Contributing your team's expertise to proposals and demand conversations, where a client explores what work it may need next
@@ -163,6 +164,8 @@ At Extended you drive a piece of org work; at Team you **build something Sahaj r
 #### Community and external contribution
 
 - Growing a community of practice until others lead it
+- Writing a blog post or giving a conference talk on an approach your team developed, in enough depth that other teams can apply it
+- Running Sahaj's flagship DevDay, and setting it up so others can run the next one
 
 ## Ways to create impact
 

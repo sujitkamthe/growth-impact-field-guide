@@ -80,7 +80,7 @@ export function render(content, [id, areaId]) {
         keepScroll: Boolean(areaId),
         html: `<article class="page scope-page">
             <header class="scope-head">
-                <p class="eyebrow"><a href="#expectations">Expectations</a></p>
+                <p class="eyebrow"><a class="back-link" href="#expectations">Expectations</a></p>
                 <h1>${esc(scope.name)}${savedScope(content)?.id === scope.id ? ` ${EXPLORING}` : ''}</h1>
                 <p class="mindset">${esc(scope.mindset)}</p>
                 ${natureOf(scope)}
