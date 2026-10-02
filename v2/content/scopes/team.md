@@ -3,7 +3,7 @@ id: team
 name: Team
 order: 3
 reach: The whole team: how it builds, delivers, grows and stays healthy
-how: The team's practices, standards and people, rather than your own presence
+how: The team's practices, standards and people, so the work doesn't depend on your presence
 lasts: A team that keeps working well when you're away
 reaches: Architecture · delivery · people · team practices
 mindset: I make the whole team more effective.
@@ -13,11 +13,11 @@ v1: Multiplier and Amplifier
 
 ## Summary
 
-Your impact changes how the whole team operates, performs and grows, rather than improving one part of its work: its technical direction, how it delivers, how its people develop and how healthy it stays. Your leverage comes from people, systems and standards rather than from your presence, so a good test is whether you have given the team what it needs to work well without you.
+Your impact changes how the whole team operates, performs and grows: its technical direction, how it delivers, how its people develop and how healthy it stays. You work through people, systems and standards more than through your own presence, so a good test is whether you have given the team what it needs to work well without you.
 
 ## What changes
 
-At Extended you improve work beyond your own. At Team you improve the system that produces the work: the architecture, the design bar, how people grow and how the team performs. A useful test is whether you are changing how the team works, or only the stories you touch.
+At Extended you improve work beyond your own. At Team you improve the system that produces the work: the architecture, the design bar, how people grow and how the team performs. Ask yourself: am I improving pieces of work, even other people's, or changing how the whole team produces its work?
 
 ## In practice
 
@@ -69,7 +69,7 @@ At Extended you shape work across several features; at Team you change how the w
 ### Not yet
 
 - The single point of contact for every decision
-- Sets standards for the team rather than with it, and relies on enforcing them
+- Sets standards alone, and relies on enforcing them
 - Involved in many things, but owning few outcomes end to end
 - Tools or standards that solve your own problems, or that people use only when told to
 
@@ -128,7 +128,7 @@ At Extended you drive a piece of org work; at Team you build something Sahaj rel
 
 ### Expectations
 
-- Creates or significantly strengthens something for Sahaj, and sets it up so others can run it
+- Creates or rebuilds something for Sahaj, and sets it up so others can run it
 - Brings other people into organisation-building work and helps them take ownership of it
 
 ### Evidence
@@ -166,19 +166,19 @@ At Extended you drive a piece of org work; at Team you build something Sahaj rel
 
 ## Ways to create impact
 
-There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one route; it is not a requirement. None of the routes is the easier path: each still needs People & Team and Org & Community impact, expressed through a different mechanism.
+There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one route; it is not a requirement. Each route still needs People & Team and Org & Community impact, shown in a different way.
 
 ### Leading the team
 
-You scale through people, delivery and client trust, often as the team's lead. The team's capability is the output, and your own contribution matters less each quarter. Supporting proposals and demand conversations often comes with this route.
+You scale through people, delivery and client trust, often as the team's lead. The team's capability is the output, and your own hands-on work matters less each quarter. Supporting proposals and demand conversations often comes with this route.
 
 ### Platforms, tools and standards
 
-You scale through things the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher, not lower: the artefact has to solve a real problem and explain itself. This was the Amplifier persona in V1.
+You scale through things the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
 
 ### Deep expertise
 
-You become the person the team relies on in a hard domain, and you make that expertise transferable rather than a bottleneck. It is often what clients and proposals draw on too.
+You become the person the team relies on in a hard domain, and you share that expertise so others can learn it and you don't become a bottleneck. It is often what clients and proposals draw on too.
 
 ## Examples
 

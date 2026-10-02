@@ -31,7 +31,7 @@ Giving back inside and outside Sahaj through sessions, writing, talks and open s
 <!-- band -->
 What you contribute is your choice. Whether you contribute is not.
 
-There is no required blog, talk or number of initiatives. What is expected is some meaningful, sustained contribution you can point to, made in working time: your team makes room for it rather than leaving it for evenings. The reason is structural: a flat organisation has no separate team building culture and capability on everyone else's behalf, so if some people opt out, others carry the load.
+There is no required blog, talk or number of initiatives. The expectation is a contribution you keep up through the cycle and can point to, made in working time: your team makes room for it, so it doesn't spill into your evenings. Sahaj is flat: there is no separate team building culture and capability on everyone else's behalf, so if some people opt out, others carry the load.
 
 ## Ways to contribute
 
@@ -39,13 +39,13 @@ Each scope has its own examples to choose from, grouped by route, and they show 
 
 ## What counts
 
-Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. A low-profile fix that removes recurring friction for many people can be worth more than a highly visible contribution, so judge the change rather than the size of the audience. An initiative that didn't land still counts when you took it on properly, stayed with it, and were stopped by something outside your control; say what you tried and what it left behind. One attempt dropped at the first obstacle does not count. The expected reach grows with your scope: contributing at Direct, driving something at Extended, building something others can sustain at Team, and shaping capability, culture or reputation at Wider. That progression is a floor, not a ceiling: anyone can contribute beyond it, and it counts.
+Contribution is judged on what changed, not on how visible it was, and it has to be sustained through the cycle. A low-profile fix that removes recurring friction for many people can be worth more than a highly visible contribution. An initiative that didn't land still counts when you took it on properly, stayed with it, and were stopped by something outside your control; say what you tried and what it left behind. One attempt dropped at the first obstacle does not count. The expected reach grows with your scope: contributing at Direct, driving something at Extended, building something others can sustain at Team, and shaping capability, culture or reputation at Wider. Anyone can contribute beyond that, and it counts.
 
 ## How it is assessed
 
 <!-- callout -->
-No meaningful contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like.
+No sustained contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like.
 
-If your project genuinely leaves no room, raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised then, it can still be addressed, which it can't be at assessment. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+If your project leaves no room, raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised then, it can still be addressed, which it can't be at assessment. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
 
 Like every area, Org & Community counts toward a raise in scope: you need consistent next-scope impact here as well as in the other two.

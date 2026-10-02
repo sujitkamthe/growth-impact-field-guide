@@ -7,11 +7,11 @@ lede: The questions people ask most about how the guide works. For the model its
 
 ### Is this a checklist?
 
-No. The statements describe the shape of impact at each scope, and nobody is expected to tick every line. They are grouped in two ways, and the difference matters. In Client & Delivery and People & Team the groups are facets. Every facet is required, because all three count toward one rating, but the lines under a facet are signs of what it looks like at your scope rather than separate requirements. A clear gap means a facet's impact isn't shown consistently, not that one line is missing, and it makes the area below expectations. In Org & Community the groups are routes, and you choose one or more. Within a facet or route, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
+No. The statements describe the shape of impact at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet is required, because all three count toward one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. A clear gap means a facet's impact isn't shown consistently, not that one line is missing, and it makes the area below expectations. In Org & Community the groups are routes, and you choose one or more. Within a facet or route, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
 
 ### What's the difference between Extended and Team?
 
-At **Extended** you improve work beyond your own: a stream you lead, a design others build on, a teammate you helped succeed. At **Team** you improve the system that produces the work: the architecture, the design bar, how people's judgment develops and how the team performs. The test: are you changing how the team works, or only the stories you touch?
+At **Extended** you improve work beyond your own: a stream you lead, a design others build on, a teammate you helped succeed. At **Team** you improve the system that produces the work: the architecture, the design bar, how people's judgment develops and how the team performs. The test: are you improving pieces of work, even other people's, or changing how the whole team produces its work?
 
 ### Does leading an account set my scope?
 
@@ -33,17 +33,17 @@ By sustaining impact at your scope across all three areas, then taking on some o
 
 ### Do I have to be equally strong in all three areas?
 
-No. Your strength will vary by area, and the rating captures that. What doesn't work is meeting your scope in one area while falling well short in another: that is below expectations in the area that fell short, whatever your strengths elsewhere.
+No. Your strength will vary by area, and the rating captures that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere.
 
 ### Can I grow without leading a team?
 
-Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. None is easier, and each still needs impact in People & Team and Org & Community.
+Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. Each route still needs impact in People & Team and Org & Community.
 
 ## Contribution
 
 ### Is Org & Community really mandatory?
 
-Yes. What you contribute is your choice; whether you contribute is not. It happens in working time, and your team makes room for it. No meaningful contribution beyond your delivery means Org & Community is below expectations, unless you raised during the cycle that there was no room and nothing changed; then you're rated on what was reasonably available to you.
+Yes. You choose what to contribute, and every scope expects you to contribute something. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless you raised during the cycle that there was no room and nothing changed; then you're rated on what was reasonably available to you.
 
 ### Can I contribute beyond my scope?
 

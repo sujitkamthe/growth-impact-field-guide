@@ -14,11 +14,11 @@ Growing others and building trust are core to how impact scales at Sahaj, not ex
 
 ### Growing others
 
-Mentoring, coaching and onboarding that help others build their own judgment rather than depend on yours. The measure is what they can do without you.
+Mentoring, coaching and onboarding that help others build judgment of their own. The measure is what they can do without you.
 
 ### Feedback and trust
 
-Giving feedback that changes behaviour, receiving it in a way people can see, and building the trust that makes both possible. Both directions count.
+Giving feedback that changes behaviour, receiving it in a way people can see, and building the trust that makes both possible.
 
 ### Communication and collaboration
 

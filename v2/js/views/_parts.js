@@ -74,7 +74,7 @@ export const GRAMMAR = {
     facets: 'All three facets count toward one rating',
     shared: scope => `Expected of everyone at ${scope.name}`,
     routes: 'Choose one or more routes',
-    evidence: 'Evidence: signs the impact is real and sustained',
+    evidence: 'Signs that the impact is real and lasting',
     examples: 'Illustrations of what each rating can look like',
 };
 

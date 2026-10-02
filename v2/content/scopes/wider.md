@@ -13,7 +13,7 @@ v1: Strategist and Pioneer
 
 ## Summary
 
-Your impact reaches past the team you work in. For most people that means the account as a whole, whether it has one team or several, or the client's organisation; it can also mean Sahaj itself or the wider community. These sit side by side rather than one above another, and you are not expected to cover all of them: a person with deep influence inside one client's organisation, or on capability across Sahaj, meets this scope as fully as someone known in the wider community. What matters is that your impact lands somewhere beyond one team, is sustained, and is built to last beyond your involvement. One talk, one DevDay or one blog post is not Wider impact on its own; a capability adopted across Sahaj, changed engineering practice across a client's organisation, or an account grown and kept healthy can be.
+Your impact reaches past the team you work in. For most people that means the account as a whole, whether it has one team or several, or the client's organisation; it can also mean Sahaj itself or the wider community. These sit side by side rather than one above another, and you are not expected to cover all of them: a person with deep influence inside one client's organisation, or on capability across Sahaj, meets this scope as fully as someone known in the wider community. Your impact has to land somewhere beyond one team and last after you step back. One talk, one DevDay or one blog post is not Wider impact on its own; a capability adopted across Sahaj, changed engineering practice across a client's organisation, or an account grown and kept healthy can be.
 
 ## What changes
 
@@ -50,7 +50,7 @@ At Team you change how one team works; at Wider you shape direction across teams
 #### Delivery
 
 - Shapes direction across several teams or part of a client's organisation, aligning technical, delivery and business priorities
-- Protects long-term delivery capability, preventing systemic dysfunction as the work grows
+- Keeps delivery healthy as the work grows, fixing problems before they spread across teams
 
 ### Evidence
 
@@ -61,10 +61,10 @@ At Team you change how one team works; at Wider you shape direction across teams
 
 ### Self-check
 
-- Will these decisions still look right in a few years?
+- Which of my decisions would be hard to reverse, and did I treat them that way?
 - Do senior clients seek my judgment, or my team's output?
 - Am I trusted for judgment, not just expertise?
-- Do my decisions protect the teams' sustainability, not just client timelines?
+- When client deadlines and the teams' pace pull apart, which one do my decisions protect?
 
 ### Not yet
 
@@ -86,7 +86,7 @@ At Team you grow the people on your team; at Wider you grow mentors and leaders,
 
 #### Growing others
 
-- Develops other mentors, coaches and leads, so people capability scales beyond their direct relationships
+- Develops other mentors, coaches and leads, so people grow well beyond the ones they work with directly
 - Creates growth opportunities for people beyond their own team, and sponsors people into them
 
 #### Feedback and trust
@@ -125,7 +125,7 @@ At Team you build things others sustain; at Wider you shape how Sahaj grows, wor
 ### Expectations
 
 - Sees what Sahaj needs and shapes the response, designing initiatives rather than only running them
-- Creates durable impact on Sahaj's capability, culture, reputation or growth that holds without them
+- Makes a lasting change to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change holds after they step back
 
 ### Evidence
 
@@ -180,7 +180,7 @@ You design how Sahaj builds capability, hires, onboards and looks after its cult
 
 ### External thought leadership
 
-You shape how the industry thinks through writing, talks and open source. Visibility alone is not evidence of impact, so look for what it led to: adoption, changed practice, stronger capability at Sahaj, reputation that brings work, or opportunities created. This was the Pioneer persona in V1.
+You shape how the industry thinks through writing, talks and open source. Visibility alone isn't impact, so look for what it led to: adoption, changed practice, stronger capability at Sahaj, reputation that brings work, or opportunities created. This was the Pioneer persona in V1.
 
 ## Examples
 
@@ -192,4 +192,4 @@ Through a different route: you led no account. The event-driven architecture you
 
 ### Below expectations
 
-You led the account well, but your impact stopped at its edge: strong decisions for your client, nothing shaped beyond it. The direction you set lived mostly in conversations and decks, teams interpreted it differently, and under delivery pressure it was quietly dropped.
+You led the account well, but your impact stopped at its edge: strong decisions for your client, nothing shaped beyond it. The direction you set lived mostly in conversations and decks, teams interpreted it differently, and under delivery pressure it was dropped without anyone deciding to drop it.

@@ -18,7 +18,7 @@ Your scope describes how far your impact is expected to reach. Pick one to see w
 
 ## Scopes in practice
 
-One piece of client work, handled at each scope. It is an illustration rather than a real case, and it follows Client & Delivery only; every scope expects impact in all three areas.
+One piece of client work, handled at each scope. The example is made up, and it follows Client & Delivery only; every scope expects impact in all three areas.
 
 ## How growth happens
 

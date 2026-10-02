@@ -53,7 +53,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - Stories you took from vague requirements to production across the cycle, and the questions you routinely asked on the way
 - Requirement gaps you caught before they were built, often enough that the team now expects it of you
 - Risks you raised early as a habit, and what they changed
-- Reviews of your work that focus on trade-offs and improvements rather than basic correctness, testing or maintainability
+- Reviews of your work that discuss trade-offs and improvements, because correctness, tests and maintainability are already there
 - Problems in your changes that you followed through after release, without being asked
 
 ### Self-check
@@ -77,7 +77,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Growing others
 
-- Helps newer teammates onboard, sharing knowledge generously and explaining the reasoning rather than handing over answers
+- Helps newer teammates onboard, sharing knowledge generously and explaining the reasoning behind the answers
 
 #### Feedback and trust
 
@@ -91,7 +91,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 ### Evidence
 
 - Feedback you received, and what you have consistently done differently since
-- Teammates who come back to you for the reasoning, not just the answer
+- Teammates who come back to you to understand the reasoning
 - Newer teammates who ramped up faster with your help
 
 ### Self-check
@@ -112,7 +112,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Expectations
 
-- Makes a meaningful, sustained contribution beyond immediate delivery, through a route they choose
+- Contributes beyond immediate delivery through a route they choose, and keeps it up through the cycle
 - Upholds Sahaj's culture in everyday behaviour, follows through on the commitments they take on, and raises constraints early
 
 ### Evidence
@@ -129,7 +129,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 ### Not yet
 
 - Attending things is described as contributing to them
-- Commitments taken on beyond the project quietly lapse
+- Commitments taken on beyond the project lapse without a word
 
 ### Ways to contribute
 
@@ -157,4 +157,4 @@ You picked up feature stories, broke them down yourself and delivered them with 
 
 ### Below expectations
 
-Your stories often needed significant rework after review, and when a requirement was ambiguous you built your own assumption without checking. People found out about blockers when they asked. Beyond the project you attended events but didn't contribute to any, and the reason first came up in your self-assessment rather than during the cycle.
+Most of your stories needed rework after review, and when a requirement was ambiguous you built your own assumption without checking. People found out about blockers when they asked. Beyond the project you attended events but didn't contribute to any, and the reason first came up in your self-assessment rather than during the cycle.

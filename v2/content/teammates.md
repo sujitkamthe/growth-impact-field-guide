@@ -14,16 +14,16 @@ Anyone on the team can also review someone's expectations, discuss them and ask 
 Start from the scope they chose, and work through these before the doc is agreed.
 
 1. **Does the impact you've seen support the scope?**: say so plainly if you think it's too high or too low. A mismatch is corrected here, so the whole cycle is measured against the right scope.
-2. **Is everything their team needs written down?**: anything beyond the guide goes in the team notes for that area.
+2. **Is everything their team needs written down?**: anything beyond the guide goes in their doc, under that area.
 3. **Is any stretch concrete?**: everyone should be able to recognise when it's happening. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check there is a stretch in all three areas.
 
 Add your inputs as comments and ask for changes where something's missing or unclear. The doc is agreed when you and the person can both point to what's expected.
 
 ## Giving feedback during the cycle
 
-Each person gathers feedback from the people they work with and keeps their own notes of it, so your part is to give it in a form they can write down. Give it when the moment happens, rather than saving it for the team check, and when someone asks you for feedback, answer soon and specifically: "all good" gives them nothing to record. Each piece needs three things.
+Each person gathers feedback from the people they work with and keeps their own notes of it, so your part is to give it in a form they can write down. Give it when the moment happens, because feedback saved up for the team check comes too late to act on, and when someone asks you for feedback, answer soon and specifically: "all good" gives them nothing to record. Each piece needs three things.
 
-- **What you saw**: the specific situation, rather than a general impression.
+- **What you saw**: the specific moment, so they can recall it.
 - **What it changed**: for the team, the client or the work.
 - **Which expectation it relates to**: the area, and the facet where there is one.
 
@@ -37,32 +37,32 @@ Constructive feedback has the same shape, and adds what you'd suggest trying ins
 >
 > When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes. It unblocked them, but they still don't know why it failed, and they were stuck on the same thing again on Wednesday. Next time, could you pair with them on it, even if it takes longer? People & Team, growing others.
 
-Feedback they note down this way is the evidence their self-assessment starts from.
+Feedback they note down this way is what their self-assessment starts from.
 
 ## Taking part in the team check
 
-The person can present their doc, or you can read it beforehand for context. Look at the evidence first, then the rating. For each area, respond in one of three ways:
+The person can present their doc, or you can read it beforehand for context. Look at what they did first, then the rating. For each area, respond in one of three ways:
 
 <!-- list -->
 - **Confirm** what matches your experience of their work.
 - **Correct** where you think they misread their feedback, with the example that shows it.
-- **Add** what they left out, especially quiet work such as reviews, onboarding help, problems they prevented, or an attempt they stayed with that didn't land for reasons outside their control.
+- **Add** what they left out, especially work that is easy to miss, such as reviews, onboarding help, problems they prevented, or an attempt they stayed with that didn't land for reasons outside their control.
 
 If a self-assessment mentions work you didn't see, ask about it: "I didn't see this directly, can you tell me more?" works better than silent scepticism.
 
 ## When you disagree
 
-Disagreements usually mean you saw different slices of someone's work. Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern rather than pick a winner. Disagreements are discussed privately; resulting changes are shared openly. If the person and their reviewers still disagree after that, about the scope or a rating, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
+Disagreements usually mean you saw different slices of someone's work. Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern. Discuss a disagreement in private, and if it changes a scope or a rating, tell the person why. If the person and their reviewers still disagree after that, about the scope or a rating, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
 
 ## Proposing a stretch
 
 A stretch doesn't have to start with the person. If you see them already doing some of the next scope's work, or they have been at the same scope for a long time, suggest one when you review their expectations or as you look ahead at the team check. Name what you've seen, what taking it on would involve and what support they'll need. Usually they decide whether to take it on, and write it into their doc.
 
-Frame it as a statement of belief in what they can grow into. If the conversation starts to feel like criticism of their current work, the framing needs work.
+Tell them what you've seen that makes you think they're ready. If the conversation starts to feel like criticism of their current work, go back to what you've seen them do well.
 
-When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: a missing opportunity is for the team to create, missing support is for you to give, and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth is planned rather than left to chance.
+When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: a missing opportunity is for the team to create, missing support is for you to give, and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth has a plan.
 
 ## Raising someone's scope
 
 <!-- band -->
-Raise a reference scope at the team check when next-scope impact is consistent in all three areas and others rely on it, rather than after a single strong instance. It doesn't have to have started as an agreed stretch. Look for evidence across all three areas at the current scope first, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.
+Raise a reference scope at the team check when next-scope impact is consistent in all three areas and others rely on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. Look at all three areas at the current scope first, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.

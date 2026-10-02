@@ -37,7 +37,7 @@ function areaSection(scope, prev, area, block) {
             <summary>How to tell you're meeting it</summary>
             <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; consistency, and others relying on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better reference scope.` : ''}</p>
             <div class="tell-cols">
-                <div><h3>Evidence</h3>${list(block.evidence, 'plain-list secondary')}</div>
+                <div><h3>Signs of impact</h3>${list(block.evidence, 'plain-list secondary')}</div>
                 <div><h3>Ask yourself</h3>${list(block.selfCheck, 'plain-list secondary')}</div>
                 <div><h3>Not there yet</h3>${list(block.notYet, 'plain-list secondary')}</div>
             </div>

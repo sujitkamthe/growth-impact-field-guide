@@ -84,7 +84,7 @@ At Direct you are a dependable teammate; at Extended other people's work and jud
 
 #### Growing others
 
-- Mentors consistently over time, so others build their own judgment rather than borrow it
+- Mentors consistently over time, so others build judgment of their own
 - Helps others succeed on their features through design reviews, pairing and unblocking, without taking the work over
 
 #### Feedback and trust
@@ -95,7 +95,7 @@ At Direct you are a dependable teammate; at Extended other people's work and jud
 #### Communication and collaboration
 
 - Facilitates discussions and workshops to clear decisions, summarising options and next steps
-- Handles disagreement constructively, influencing through clarity and reasoning rather than escalation
+- Handles disagreement constructively, influencing through clear reasoning, and escalating only when that fails
 
 ### Evidence
 
@@ -112,7 +112,7 @@ At Direct you are a dependable teammate; at Extended other people's work and jud
 ### Not yet
 
 - Answers questions without teaching the reasoning behind them
-- Helps by taking the work over rather than helping the person grow
+- Helps by taking the work over, so the person doesn't grow
 - The go-to person for doing the work, rather than for making others better at it
 
 ## Org & Community
@@ -125,7 +125,7 @@ At Direct you take part in something beyond your project; at Extended you drive 
 
 ### Expectations
 
-- Takes responsibility for a meaningful piece of org work and carries it through, rather than only taking part
+- Takes responsibility for a piece of org work that matters beyond their project, and carries it through
 - Creates or improves something that people beyond their project benefit from
 
 ### Evidence
