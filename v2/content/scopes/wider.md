@@ -39,18 +39,18 @@ At Team you change how one team works; at Wider you shape direction **across tea
 
 #### Technical craft
 
-- Shapes long-term architecture **beyond one team**, making hard-to-reverse decisions responsibly
-- **Anticipates technology and industry shifts**, and invests in Sahaj's long-term technical capability
+- I shape long-term architecture **beyond one team**, making hard-to-reverse decisions responsibly
+- I **anticipate technology and industry shifts**, and invest in Sahaj's long-term technical capability
 
 #### Consulting
 
-- **Earns the trust of senior stakeholders**, at a client or across Sahaj, and advises them on multi-year, multi-stakeholder problems
-- **Raises the bar** for how Sahaj frames problems and engages clients
+- I **earn the trust of senior stakeholders**, at a client or across Sahaj, and advise them on multi-year, multi-stakeholder problems
+- I **raise the bar** for how Sahaj frames problems and engages clients
 
 #### Delivery
 
-- Shapes direction **across several teams** or part of a client's organisation, aligning technical, delivery and business priorities
-- Keeps delivery healthy as the work grows, fixing problems **before they spread across teams**
+- I shape direction **across several teams** or part of a client's organisation, aligning technical, delivery and business priorities
+- I keep delivery healthy as the work grows, fixing problems **before they spread across teams**
 
 ### Evidence
 
@@ -86,16 +86,16 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 
 #### Growing others
 
-- **Develops other mentors, coaches and leads**, so people they never work with directly grow as well
-- Creates growth opportunities for people **beyond their own team**, and sponsors people into them
+- I **develop other mentors, coaches and leads**, so people I never work with directly grow as well
+- I create growth opportunities for people **beyond my own team**, and sponsor people into them
 
 #### Feedback and trust
 
-- Improves how people **across teams** learn, give feedback and grow, through practices others carry on
+- I improve how people **across teams** learn, give feedback and grow, through practices other people carry on
 
 #### Communication and collaboration
 
-- Communicates direction so **several teams align** to it, including in high-stakes conversations
+- I communicate direction so **several teams align** to it, including in high-stakes conversations
 
 ### Evidence
 
@@ -124,8 +124,8 @@ At Team you build things others sustain; at Wider you shape **how Sahaj grows, w
 
 ### Expectations
 
-- Sees what Sahaj needs and **shapes the response**, designing initiatives rather than only running them
-- Makes **a lasting change** to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change holds after they step back
+- I see what Sahaj needs and **shape the response**, designing initiatives rather than only running them
+- I make **a lasting change** to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change stays in place after I step back
 
 ### Evidence
 

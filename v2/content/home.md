@@ -12,10 +12,6 @@ version: 2026-10-02
 - [Write your self-assessment](#self-assessment): Look back on the cycle and rate each area
 - [Review a teammate](#teammates): Review their expectations, give feedback through the cycle and take part in their team check
 
-## Your scope
-
-Your scope describes how far your impact is expected to reach. Pick one to see what it asks of you; the scope you're held to is the one agreed in your expectations doc.
-
 ## How growth happens
 
 You grow by taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them. Strong next-scope impact in one area is recognised as exceeding along the way, and your scope is raised once you show that impact consistently in all three areas.

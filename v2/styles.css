@@ -66,8 +66,8 @@
    separates the three areas; on Compare and the area page the opening block also sits on
    a faint tint of the area's colour. */
 [data-area] { --area-soft: color-mix(in srgb, var(--area) var(--area-mix, 6%), var(--bg)); }
-.home-area, .page > .scope-area { position: relative; border-top: 1px solid var(--line); }
-.home-area::before, .page > .scope-area::before, .area-intro::before, .area-head::before, .mx-col-head::before {
+.page > .scope-area { position: relative; border-top: 1px solid var(--line); }
+.page > .scope-area::before, .area-intro::before, .area-head::before, .mx-col-head::before {
     content: ""; position: absolute; top: -2px; left: 0; width: 56px; height: 3px; border-radius: 2px; background: var(--area);
 }
 .mx-col-head { position: relative; }
@@ -351,74 +351,20 @@ a.term:hover { text-decoration-style: solid; }
 .what-changes h2 { font-size: 18px; margin-bottom: 8px; }
 .what-changes p { color: var(--text-2); }
 
-/* Home */
+/* Expectations, the landing page: the task links above the grid and how growth works below it. */
 
-.home-hero .lede { margin-bottom: 0; }
-.home-hero { margin-bottom: 56px; }
-/* Each section starts on a hairline with a short ink bar, as on reading pages, so the
-   page reads as separate stops rather than one long list. */
-.page.home > .home-section {
-    position: relative; margin-top: 72px; padding-top: 28px; border-top: 1px solid var(--line);
-}
-.page.home > .home-hero + .home-section { margin-top: 0; }
-.page.home > .home-section::before {
-    content: ""; position: absolute; top: -2px; left: 0; width: 40px; height: 3px; border-radius: 2px; background: var(--accent);
-}
-.page.home > .home-section > h2 { font-size: 24px; margin-bottom: 6px; }
-.home-note { max-width: 64ch; margin: 0 0 20px; }
-@media (max-width: 760px) { .page.home > .home-section { margin-top: 56px; } }
-/* The chosen scope's expectations sit on the page under the cards with no shared fill, so
-   whitespace and each area's bar keep the three areas reading as separate columns. */
-.home-section [data-scope-now] { margin-top: 36px; }
-.home-section [data-scope-now] .actions { margin-top: 32px; }
-.home-section [data-scope-now] > :last-child { margin-bottom: 0; }
-/* Choosing a scope lifts its statements into place, one area after another; first render stays still. */
-@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
-[data-scope-now][data-changed] :is(.scope-now-mindset, .home-area, .actions) { animation: rise 0.24s ease-out both; }
-[data-scope-now][data-changed] .home-area:nth-child(2) { animation-delay: 40ms; }
-[data-scope-now][data-changed] .home-area:nth-child(3) { animation-delay: 80ms; }
-[data-scope-now][data-changed] .actions { animation-delay: 120ms; }
-
-/* Start here: one row per reader task, linking to the page for it. */
-.home-tasks { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 40px; }
-.home-tasks li { border-top: 1px solid var(--line); padding: 12px 0; }
-.home-tasks li > a { display: block; font-weight: 600; }
-.home-tasks span { display: block; color: var(--text-2); font-size: 15px; line-height: 1.45; margin-top: 2px; }
-@media (max-width: 760px) { .home-tasks { grid-template-columns: 1fr; } }
-
-/* The four scopes, inner to outer; choosing one shows its expectations below. */
-.scope-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-.scope-step {
-    display: flex; flex-direction: column; gap: 8px; padding: 16px; text-align: left;
-    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
-    color: var(--text); font: inherit; cursor: pointer;
-    transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
-}
-.scope-step:hover { border-color: var(--accent); }
-/* The second pixel of the selected border is an inset shadow, so the card keeps its size and the change can ease in. */
-.scope-step[aria-checked="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); background: var(--accent-soft); }
-.scope-step-name { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; color: var(--accent); }
-.scope-step-mindset { font-weight: 500; line-height: 1.45; }
-.scope-step-reach { margin-top: auto; color: var(--muted); font-size: 14px; line-height: 1.5; }
-@media (max-width: 900px) { .scope-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-/* Phones: a compact row of names; the chosen scope's mindset shows in the panel below. */
-.scope-now-mindset, .scope-none { max-width: 64ch; }
-.scope-now-mindset { display: none; }
-.scope-none { color: var(--text-2); }
-@media (max-width: 520px) {
-    .scope-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
-    .scope-step { align-items: center; padding: 10px 4px; text-align: center; }
-    .scope-step-name { flex-direction: column; gap: 6px; font-size: 14px; }
-    .scope-step-mindset, .scope-step-reach { display: none; }
-    .scope-now-mindset { display: block; margin: 0 0 24px; }
-    .scope-now-mindset span { display: block; color: var(--muted); font-size: 14px; margin-top: 4px; }
-    .home-section [data-scope-now] { margin-top: 24px; }
-}
-
-.home-area { padding-top: 16px; }
-.home-growth p { max-width: 64ch; color: var(--text-2); }
-.area-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; align-items: start; }
-@media (max-width: 900px) { .area-grid { grid-template-columns: 1fr; gap: 24px; } }
+.start-here { margin: 20px 0 28px; }
+.start-here-label { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.start-here ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 24px; }
+.start-here li { border-top: 1px solid var(--line); padding: 10px 0 4px; }
+.start-here li > a { display: block; font-weight: 600; }
+.start-here span { display: block; color: var(--text-2); font-size: 14px; line-height: 1.45; margin-top: 2px; }
+@media (max-width: 900px) { .start-here ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .start-here ul { grid-template-columns: 1fr; } }
+.matrix-hint { max-width: 72ch; margin: 0; }
+.matrix-growth { margin-top: 56px; max-width: 64ch; }
+.matrix-growth h2 { font-size: 20px; }
+.matrix-growth p { color: var(--text-2); }
 
 /* All expectations */
 
@@ -459,7 +405,8 @@ a.term:hover { text-decoration-style: solid; }
 .mx-row-head a::after { margin-left: -2px; }
 .mx-row-head a:hover::after, .mx-col-head a:hover::after { transform: translateX(3px); color: inherit; }
 .mx-marker { font-size: 14px; font-weight: 500; color: var(--accent); margin: 6px 0 0; }
-.mx-question { color: var(--muted); font-size: 14px; line-height: 1.4; margin: 6px 0 0; }
+.mx-mindset { color: var(--text-2); font-size: 15px; line-height: 1.45; margin: 6px 0 0; }
+.mx-reach { color: var(--muted); font-size: 13px; line-height: 1.45; margin: 6px 0 0; }
 .mx-cell { padding: 16px 16px 4px; border-left: 1px solid var(--line); }
 .mx-cell .core { font-size: 16px; margin-bottom: 10px; }
 .mx-cell .plain-list { font-size: 15px; }

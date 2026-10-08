@@ -39,18 +39,18 @@ At Extended you shape work across several features; at Team you change how **the
 
 #### Technical craft
 
-- Shapes **the team's technical direction and engineering bar**, with principles and standards others use to decide well alone
-- Introduces patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
+- I shape **the team's technical direction and engineering bar**, with principles and standards the team uses to decide well without me
+- I introduce patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
 
 #### Consulting
 
-- **Aligns stakeholders** with conflicting priorities toward a shared direction, through explicit scope, cost and quality trade-offs
-- **Builds long-term trust** in the team's judgment, and coaches others in consulting and problem framing
+- I **align stakeholders** with conflicting priorities toward a shared direction, through explicit scope, cost and quality trade-offs
+- I **build long-term trust** in the team's judgment, and coach teammates in consulting and problem framing
 
 #### Delivery
 
-- Improves how **the whole team** plans and delivers, with practices the team keeps up without being made to
-- Surfaces **systemic** client or delivery risks early and drives them to a clear decision or corrective action
+- I improve how **the whole team** plans and delivers, with practices the team keeps up without being made to
+- I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
 
 ### Evidence
 
@@ -85,18 +85,18 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 #### Growing others
 
-- **Develops people into new responsibilities**, such as client conversations and problem framing
-- Builds mentoring and learning **into how the team works**, and coaches others to mentor
+- I **develop people into new responsibilities**, such as client conversations and problem framing
+- I build mentoring and learning **into how the team works**, and coach teammates to mentor
 
 #### Feedback and trust
 
-- **Builds a team** where trust is high and hard feedback is given and heard early
-- **Protects the team's sustainable pace**, acting on strain before it becomes chronic
+- I **build a team** where trust is high and hard feedback is given and heard early
+- I **protect the team's sustainable pace**, acting on strain before it becomes chronic
 
 #### Communication and collaboration
 
-- Communicates **the team's direction** and progress to stakeholders, aligning people without forcing consensus
-- Represents **the team's thinking** credibly in cross-team and client discussions
+- I communicate **the team's direction** and progress to stakeholders, aligning people without forcing consensus
+- I represent **the team's thinking** credibly in cross-team and client discussions
 
 ### Evidence
 
@@ -128,8 +128,8 @@ At Extended you drive a piece of org work; at Team you **build something Sahaj r
 
 ### Expectations
 
-- Creates or rebuilds something for Sahaj, and **sets it up so others can run it**
-- **Brings other people into** organisation-building work and helps them take ownership of it
+- I create or rebuild something for Sahaj, and **set it up so other people can run it**
+- I **bring other people into** organisation-building work and help them take ownership of it
 
 ### Evidence
 

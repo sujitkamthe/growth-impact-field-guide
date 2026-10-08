@@ -35,18 +35,18 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Technical craft
 
-- Writes **clean, tested, secure code** across the stack, applying sound design principles by default
-- Debugs issues independently and **owns how their changes behave in production**, including defects they introduce
+- I write **clean, tested, secure code** across the stack, applying sound design principles by default
+- I debug issues independently and **own how my changes behave in production**, including defects I introduce
 
 #### Consulting
 
-- **Asks why** behind the work, and connects their stories to the feature and business context around them
-- **Flags gaps**, contradictions and ambiguity early, and suggests alternatives when an ask looks wrong
+- I **ask why** behind the work, and connect my stories to the feature and business context around them
+- I **flag gaps**, contradictions and ambiguity early, and suggest alternatives when an ask looks wrong
 
 #### Delivery
 
-- **Takes stories** from an unclear ask to production, breaking them down and estimating sensibly
-- **Delivers predictably**, keeps progress visible, raises risks early and adjusts plans when reality changes
+- I **take stories** from an unclear ask to production, breaking them down and estimating sensibly
+- I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
 
 ### Evidence
 
@@ -77,16 +77,16 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Growing others
 
-- **Helps newer teammates onboard**, sharing knowledge generously and explaining the reasoning behind the answers
+- I **help newer teammates onboard**, sharing knowledge generously and explaining the reasoning behind the answers
 
 #### Feedback and trust
 
-- **Reviews peers' work** with specific, actionable feedback, and visibly acts on feedback received
-- **Helps constructively when asked**, including when the question is basic or the timing inconvenient
+- I **review peers' work** with specific, actionable feedback, and visibly act on feedback I receive
+- I **help constructively when asked**, including when the question is basic or the timing inconvenient
 
 #### Communication and collaboration
 
-- **Communicates clearly for the audience**, in writing and in person, and shares progress and blockers without being chased
+- I **communicate clearly for the audience**, in writing and in person, and share progress and blockers without being chased
 
 ### Evidence
 
@@ -112,8 +112,8 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Expectations
 
-- Contributes beyond immediate delivery in **a way they choose**, and keeps it up through the cycle
-- Upholds Sahaj's culture **in everyday behaviour**, follows through on the commitments they take on, and raises constraints early
+- I contribute beyond my immediate delivery in **a way I choose**, and keep it up through the cycle
+- I uphold Sahaj's culture **in everyday behaviour**, follow through on the commitments I take on, and raise constraints early
 
 ### Evidence
 

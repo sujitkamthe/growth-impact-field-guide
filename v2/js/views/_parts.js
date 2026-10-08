@@ -1,13 +1,9 @@
-// Pieces several views share: scope marks, the picker behaviour, scope navigation and
+// Pieces several views share: the picker behaviour, scope navigation and
 // the grammar for expectation subgroups.
 
 import { esc, mdInline, list, storageGet, storageSet } from '../ui.js';
-import { scopeGlyph } from '../diagram.js';
 
-export const scopeMark = (scope, size = 22) =>
-    scopeGlyph(scope.order, { size, label: `${scope.name} scope` });
-
-// The viewer's own scope, remembered from the home page picker. Null until they choose one,
+// The viewer's own scope, remembered from the header's Explore a scope menu. Null until they choose one,
 // so a first visit never presents a default as if it were their agreed scope.
 export const savedScope = content => content.scope(storageGet('v2.scope')) || null;
 

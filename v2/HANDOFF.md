@@ -61,4 +61,4 @@ These shape how people will be assessed and paid, so they need agreement from wh
 
 ## Useful context
 
-The earlier conversations that shaped V2 also compared it with an office's one-page expectation sheet (four rows by three columns). That sheet's brevity is why the matrix opens compact, showing only each area's core line, and why each facet is capped at two statements. V1's reasoning, including why consulting gets extra emphasis and why the guide avoids checklists, is in `docs/context/framework-design-decisions.md` at the repo root, and most of it still applies.
+The earlier conversations that shaped V2 also compared it with an office's one-page expectation sheet (four rows by three columns). That sheet's brevity is why each facet is capped at two statements and why the matrix has a Concise view of core lines only; after reviewers asked for the bullet view first, the matrix opens Detailed. V1's reasoning, including why consulting gets extra emphasis and why the guide avoids checklists, is in `docs/context/framework-design-decisions.md` at the repo root, and most of it still applies.

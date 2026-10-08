@@ -39,18 +39,18 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 #### Technical craft
 
-- Designs solutions for **complex or cross-cutting requirements**, making deliberate trade-offs across performance, cost and reliability
-- Anticipates edge cases, failure modes and technical debt, improving test strategy and observability **for the work they shape**, before problems surface
+- I design solutions for **complex or cross-cutting requirements**, making deliberate trade-offs across performance, cost and reliability
+- I anticipate edge cases, failure modes and technical debt, improving test strategy and observability **for the work I shape**, before problems surface
 
 #### Consulting
 
-- **Reframes vague asks** into clear problems, separating symptoms from root causes, and proposes options with their trade-offs
-- Acts as a **thought partner** rather than an order-taker, pushing back on misaligned or risky asks while keeping trust
+- I **reframe vague asks** into clear problems, separating symptoms from root causes, and propose options with their trade-offs
+- I act as a **thought partner** rather than an order-taker, pushing back on misaligned or risky asks while keeping trust
 
 #### Delivery
 
-- **Owns a stream or epic** of work, including its cross-feature dependencies and delivery risk
-- Makes scope, time and quality **trade-offs explicit**, and improves how work flows across their stream
+- I **own a stream or epic** of work, including its cross-feature dependencies and delivery risk
+- I make scope, time and quality **trade-offs explicit**, and improve how work flows across my stream
 
 ### Evidence
 
@@ -84,18 +84,18 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 
 #### Growing others
 
-- **Mentors consistently over time**, so others build judgment of their own
-- Helps others succeed **on their features** through design reviews, pairing and unblocking, without taking the work over
+- I **mentor consistently over time**, so the people I mentor build judgment of their own
+- I help teammates succeed **on their features** through design reviews, pairing and unblocking, without taking the work over
 
 #### Feedback and trust
 
-- Gives timely, specific feedback on things that matter, **including hard feedback, and follows it up**
-- **Resolves conflicts constructively**, so the people involved keep working well together
+- I give timely, specific feedback on things that matter, **including hard feedback, and follow it up**
+- I **resolve conflicts constructively**, so the people involved keep working well together
 
 #### Communication and collaboration
 
-- **Facilitates discussions and workshops** to clear decisions, summarising options and next steps
-- **Handles disagreement constructively**, influencing through clear reasoning, and escalating only when that fails
+- I **facilitate discussions and workshops** to clear decisions, summarising options and next steps
+- I **handle disagreement constructively**, influencing through clear reasoning, and escalating only when that fails
 
 ### Evidence
 
@@ -125,8 +125,8 @@ At Direct you take part in something beyond your project; at Extended you **driv
 
 ### Expectations
 
-- **Takes responsibility for a piece of org work** that matters beyond their project, and carries it through
-- Creates or improves something that **people beyond their project** benefit from
+- I **take responsibility for a piece of org work** that matters beyond my project, and carry it through
+- I create or improve something that **people beyond my project** benefit from
 
 ### Evidence
 
