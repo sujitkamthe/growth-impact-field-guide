@@ -1,5 +1,5 @@
 {
-  "name": "sahaj-competency-framework-site",
+  "name": "sahaj-growth-impact-guide-site",
   "private": true,
   "scripts": {
     "build": "node build.js",

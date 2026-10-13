@@ -1,6 +1,6 @@
 # Framework Design Decisions & Context
 
-This document captures design decisions and organizational context for the Sahaj competency framework. Not part of the public website.
+This document captures design decisions and organizational context for the Sahaj Growth & Impact Guide. Not part of the public website.
 
 ## What Sahaj Is
 

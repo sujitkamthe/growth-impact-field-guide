@@ -1,6 +1,6 @@
-# Sahaj Engineering Competency Framework Website
+# Sahaj Growth & Impact Guide Website
 
-A minimalistic, single-page website for the Sahaj Engineering Competency Framework.
+A minimalistic, single-page website for the Sahaj Growth & Impact Guide.
 
 ## Quick Start
 

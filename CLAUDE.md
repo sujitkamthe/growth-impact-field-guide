@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A static single-page website for "The Sahaj Field Guide to Growth & Impact" - an engineering competency framework. The site presents personas (growth stages) and capability areas with self-assessment guidance.
+A static single-page website for "The Sahaj Field Guide to Growth & Impact" - an engineering growth and impact guide. The site presents personas (growth stages) and capability areas with self-assessment guidance.
 
 ## Build Command
 
