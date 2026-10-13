@@ -28,7 +28,7 @@ function areaSection(scope, prev, area, block) {
         <p class="core large">${esc(block.core)}</p>
         <div class="area-body">
         <p class="kind">${block.facets.length ? GRAMMAR.facets : GRAMMAR.shared(scope)}</p>
-        ${expectationGroups(block, 'plain-list expect')}
+        ${expectationGroups(block, 'plain-list expect', 'detailed')}
         ${block.routes.length ? `<div class="routes">
             <h3>Ways to contribute</h3>
             <p class="kind">${GRAMMAR.routes}. These are examples at ${esc(scope.name)}; anything else counts too, judged by what it changed.</p>

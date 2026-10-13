@@ -336,6 +336,19 @@ a.term:hover { text-decoration-style: solid; }
 /* Bold marks the phrase that carries the scope, so it reads at full strength in grey lists. */
 .plain-list strong { color: var(--text); }
 .plain-list.secondary { font-size: 15px; }
+/* An expectation: "Handle: sentence" in Concise; in Detailed the handle heads the bullets that
+   unpack it, so the sentence and the bullets never show together. The matrix switches in place. */
+.ex-handle { font-weight: 600; color: var(--text); }
+.ex-detail { margin: 4px 0 0; padding-left: 1.1em; list-style: disc; color: var(--text-2); }
+.ex-detail li { margin-bottom: 3px; }
+.ex-concise .ex-detail, .matrix.compact .ex-detail { display: none; }
+.ex-detailed .has-detail { list-style: none; margin-left: -1.1em; }
+.ex-detailed .has-detail + li, .ex-detailed li + .has-detail { margin-top: 10px; }
+.ex-detailed .has-detail > .ex-sentence { display: none; }
+/* Concise on the grid lists only the handles, like a one-page sheet; Detailed expands each one. */
+.matrix.compact .has-detail { list-style: inherit; margin: 0 0 4px; }
+.matrix.compact .ex-handle { font-weight: 400; }
+.matrix.compact .mx-detail.no-concise { display: none; }
 .area-label, .area-heading { color: var(--area); }
 .area-label { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
 .area-label a { color: inherit; text-decoration: none; }
@@ -362,6 +375,15 @@ a.term:hover { text-decoration-style: solid; }
 @media (max-width: 900px) { .start-here ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .start-here ul { grid-template-columns: 1fr; } }
 .matrix-hint { max-width: 72ch; margin: 0; }
+/* Above the grid: show one level or all on the left, Concise | Detailed on the right. */
+.matrix-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-bottom: 12px; }
+.matrix-controls .segmented { margin: 0 0 0 auto; }
+/* One level: only the explored scope's row, without the highlight it needs among the others. */
+.matrix.one-level .mx-row:not(.mx-head):not(.is-mine) { display: none; }
+.matrix.one-level .mx-row.is-mine { background: none; }
+.matrix.one-level .mx-row.is-mine .mx-row-head { box-shadow: none; }
+.matrix-next { display: none; margin: 12px 0 0; }
+.matrix.one-level + .matrix-next { display: block; }
 .matrix-growth { margin-top: 56px; max-width: 64ch; }
 .matrix-growth h2 { font-size: 20px; }
 .matrix-growth p { color: var(--text-2); }
@@ -411,7 +433,6 @@ a.term:hover { text-decoration-style: solid; }
 .mx-cell .core { font-size: 16px; margin-bottom: 10px; }
 .mx-cell .plain-list { font-size: 15px; }
 .mx-cell-area { display: none; }
-.matrix.compact .mx-detail { display: none; }
 .mx-row.is-mine { background: var(--accent-soft); }
 .mx-row.is-mine .mx-row-head { box-shadow: inset 3px 0 0 var(--accent); }
 .exploring-tag {
@@ -675,7 +696,7 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .area-intro, .area-head, .area-body { background: none; padding-inline: 0; margin-inline: 0; }
     .scope-area { break-inside: avoid; }
     .step[hidden] { display: grid; }
-    .stepper-tabs, .stepper-nav, .ws-scope, .cmp-toggle, .segmented { display: none !important; }
+    .stepper-tabs, .stepper-nav, .ws-scope, .cmp-toggle, .segmented, .matrix-levels { display: none !important; }
     .cmp-only-to .cmp-facet .cmp-cols > div:first-child { display: block !important; }
     .page.narrow > section.prose.band, .area-page > section.band { background: none; border-top: 1px solid #000; border-radius: 0; padding-inline: 0; margin-inline: 0; }
     .page.narrow > section.prose::before, .area-page > section::before { content: none; }

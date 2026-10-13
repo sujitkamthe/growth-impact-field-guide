@@ -3,6 +3,7 @@
 // "### What changes" sentence and "### Expectations / Evidence / Self-check / Not yet" lists.
 // Expectations are grouped by "#### <facet>" in Client & Delivery and People & Team; Org & Community
 // has shared expectations, and its "### Ways to contribute" are grouped by "#### <route>".
+// Each expectation is "- **Handle**: one sentence", with indented "- " bullets that unpack it.
 
 export const SCOPE_IDS = ['direct', 'extended', 'team', 'wider'];
 export const AREA_IDS = ['client-delivery', 'people-team', 'org-community'];
@@ -49,11 +50,24 @@ function listItems(md) {
     return md.split('\n').filter(l => /^- /.test(l)).map(l => l.slice(2).trim());
 }
 
+// Expectation lines as { handle, text, details }: the handle and sentence are what Concise shows,
+// the indented bullets what Detailed shows. A line without a handle or bullets is just its sentence.
+function expectationItems(md) {
+    const items = [];
+    for (const line of md.split('\n')) {
+        const top = line.match(/^- (?:\*\*(.+?)\*\*:\s*)?(.+)$/);
+        const sub = line.match(/^\s+- (.+)$/);
+        if (top) items.push({ handle: top[1] || '', text: top[2].trim(), details: [] });
+        else if (sub && items.length) items[items.length - 1].details.push(sub[1].trim());
+    }
+    return items;
+}
+
 // A list that may be split into "#### <title>" groups: ungrouped items, the groups, and every item.
-function groupedList(md = '') {
+function groupedList(md = '', items = listItems) {
     const { intro, sections } = splitSections(md, 4);
-    const groups = sections.map(s => ({ title: s.title, slug: s.slug, items: listItems(s.body) }));
-    const loose = listItems(intro);
+    const groups = sections.map(s => ({ title: s.title, slug: s.slug, items: items(s.body) }));
+    const loose = items(intro);
     return { loose, groups, all: [...loose, ...groups.flatMap(g => g.items)] };
 }
 
@@ -62,7 +76,7 @@ function parseAreaBlock(body) {
     const core = (intro.match(/^> (.+)$/m) || [])[1] || '';
     const bodies = Object.fromEntries(sections.map(s => [s.slug, s.body]));
     const lists = Object.fromEntries(sections.map(s => [s.slug, listItems(s.body)]));
-    const expectations = groupedList(bodies['expectations']);
+    const expectations = groupedList(bodies['expectations'], expectationItems);
     const ways = groupedList(bodies['ways-to-contribute']);
     return {
         core,

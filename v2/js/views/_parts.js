@@ -75,11 +75,24 @@ export const GRAMMAR = {
     examples: 'Illustrations of what each rating can look like',
 };
 
+// One expectation in both forms: Concise is "Handle: sentence", Detailed is the handle over the
+// bullets that unpack it. The list's view class picks which shows; a line with no bullets keeps
+// its sentence in both.
+function expectation(e) {
+    const line = e.handle
+        ? `<strong class="ex-handle">${esc(e.handle)}</strong><span class="ex-sentence">: ${mdInline(e.text)}</span>`
+        : mdInline(e.text);
+    return `<li class="ex${e.details.length ? ' has-detail' : ''}">${line}${list(e.details, 'ex-detail')}</li>`;
+}
+
+export const expectationList = (items, cls = 'plain-list', view = 'concise') =>
+    items.length ? `<ul class="${cls} ex-${view}">${items.map(expectation).join('')}</ul>` : '';
+
 // An area's expectations: labelled facet groups, or Org & Community's shared lines.
-export function expectationGroups(block, cls = 'plain-list') {
-    if (!block.facets.length) return list(block.shared, cls);
+export function expectationGroups(block, cls = 'plain-list', view = 'concise') {
+    if (!block.facets.length) return expectationList(block.shared, cls, view);
     return `<div class="facet-groups">${block.facets.map(f => `<div class="facet">
-        <p class="facet-label">${esc(f.title)}</p>${list(f.items, cls)}
+        <p class="facet-label">${esc(f.title)}</p>${expectationList(f.items, cls, view)}
     </div>`).join('')}</div>`;
 }
 

@@ -3,8 +3,8 @@
 // or the first two scopes if you haven't chosen one. On a phone the pairs stack, so the
 // "from" scope's facet lists start hidden and a toggle brings them back.
 
-import { esc, md, mdInline, list } from '../ui.js';
-import { savedScope, nextScope, viewTabs, NATURE } from './_parts.js';
+import { esc, md, mdInline } from '../ui.js';
+import { savedScope, nextScope, viewTabs, NATURE, expectationList } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 
 function select(content, name, selected, label) {
@@ -35,10 +35,10 @@ export function render(content, [fromId, toId]) {
         const detail = t.facets.length
             ? t.facets.map(tf => `<div class="cmp-facet">
                 <p class="facet-label">${esc(tf.title)}</p>
-                ${pair(list(f.facets.find(ff => ff.slug === tf.slug)?.items || [], 'plain-list secondary'), list(tf.items, 'plain-list secondary'))}
+                ${pair(expectationList(f.facets.find(ff => ff.slug === tf.slug)?.items || [], 'plain-list secondary'), expectationList(tf.items, 'plain-list secondary'))}
             </div>`).join('')
             : `<div class="cmp-facet"><p class="facet-label">Expected of everyone</p>
-                ${pair(list(f.shared, 'plain-list secondary'), list(t.shared, 'plain-list secondary'))}</div>`;
+                ${pair(expectationList(f.shared, 'plain-list secondary'), expectationList(t.shared, 'plain-list secondary'))}</div>`;
         return `<section class="cmp-area" data-area="${a.key}">
             <div class="area-intro">
                 <h2 class="area-heading">${areaIcon(a.key)}${esc(a.name)}</h2>

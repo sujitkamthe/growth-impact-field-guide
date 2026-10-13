@@ -35,18 +35,33 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Technical craft
 
-- I write **clean, tested, secure code** across the stack, applying sound design principles by default
-- I debug issues independently and **own how my changes behave in production**, including defects I introduce
+- **Write clean, tested code**: I write **clean, tested, secure code** across the stack, applying sound design principles by default
+  - **Write tests alongside code**, so changes are safe to make
+  - Follow **secure coding practices** without being reminded
+  - Keep code **easy for the next person** to understand and change
+- **Own changes in production**: I debug issues independently and **own how my changes behave in production**, including defects I introduce
+  - Check that my changes **work as intended once they are released**
+  - **Debug issues on my own**, and ask for help once I have narrowed the problem down
+  - **Fix the defects I introduce**, and find out what let them through
 
 #### Consulting
 
-- I **ask why** behind the work, and connect my stories to the feature and business context around them
-- I **flag gaps**, contradictions and ambiguity early, and suggest alternatives when an ask looks wrong
+- **Ask why**: I **ask why** behind the work, and connect my work to the feature and business context around it
+  - Find out **what problem a piece of work solves** before I start it
+  - Understand **how my work fits the feature** and what the client gains from it
+- **Flag gaps early**: I **flag gaps**, contradictions and ambiguity early, and suggest alternatives when an ask looks wrong
+  - Raise missing details, contradictions and unclear requirements **as soon as I notice them**
+  - **Suggest an alternative** when an ask looks wrong, rather than building it as written
 
 #### Delivery
 
-- I **take stories** from an unclear ask to production, breaking them down and estimating sensibly
-- I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
+- **Take work from ask to production**: I **take stories** from an unclear ask to production, breaking them down and estimating sensibly
+  - Break unclear work into **small pieces** I can estimate and deliver
+  - Take each piece **all the way to production**, not only to "code complete"
+- **Deliver predictably**: I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
+  - **Deliver what I committed to** when I said I would, or say early that I can't
+  - Keep **progress visible** to the team without being asked
+  - **Adjust my plan** when things change, and tell the people affected
 
 ### Evidence
 
@@ -77,16 +92,24 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Growing others
 
-- I **help newer teammates onboard**, sharing knowledge generously and explaining the reasoning behind the answers
+- **Help new teammates settle in**: I **help newer teammates onboard**, sharing knowledge generously and explaining the reasoning behind the answers
+  - Help new teammates **find their way around** the codebase, the team and the client
+  - Share what I know, and **explain why** as well as what
 
 #### Feedback and trust
 
-- I **review peers' work** with specific, actionable feedback, and visibly act on feedback I receive
-- I **help constructively when asked**, including when the question is basic or the timing inconvenient
+- **Review peers' work**: I **review peers' work** with specific, actionable feedback, and visibly act on feedback I receive
+  - **Review my peers' code and designs**, with specific comments they can act on
+  - **Act on feedback I receive**, so the person who gave it can see what changed
+- **Help when asked**: I **help constructively when asked**, including when the question is basic or the timing inconvenient
+  - **Help teammates who ask**, without making them feel the question was too basic
+  - **Agree a better time** when the timing is bad, rather than brushing people off
 
 #### Communication and collaboration
 
-- I **communicate clearly for the audience**, in writing and in person, and share progress and blockers without being chased
+- **Communicate clearly**: I **communicate clearly for the audience**, in writing and in person, and share progress and blockers without being chased
+  - **Adjust what I say and write** to who it is for, whether a teammate or the client
+  - Share progress and blockers **before anyone has to ask**
 
 ### Evidence
 
@@ -112,8 +135,13 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Expectations
 
-- I contribute beyond my immediate delivery in **a way I choose**, and keep it up through the cycle
-- I uphold Sahaj's culture **in everyday behaviour**, follow through on the commitments I take on, and raise constraints early
+- **Contribute beyond delivery**: I contribute beyond my immediate delivery in **a way I choose**, and keep it up through the cycle
+  - **Choose a way to contribute** beyond my project work, from the ways to contribute or an idea of my own
+  - **Keep it up through the cycle**, rather than doing it once at the start or the end
+- **Uphold the culture**: I uphold Sahaj's culture **in everyday behaviour**, follow through on the commitments I take on, and raise constraints early
+  - **Act on Sahaj's values** in everyday work, with the team and with the client
+  - **Follow through** on the commitments I take on beyond my project
+  - **Say early** when I can't keep a commitment, so someone else can pick it up
 
 ### Evidence
 

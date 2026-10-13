@@ -39,18 +39,33 @@ At Extended you shape work across several features; at Team you change how **the
 
 #### Technical craft
 
-- I shape **the team's technical direction and engineering bar**, with principles and standards the team uses to decide well without me
-- I introduce patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
+- **Set the team's technical direction**: I shape **the team's technical direction and engineering bar**, with principles and standards the team uses to decide well without me
+  - Set **the team's technical direction** together with the team, and write down the principles behind it
+  - Agree engineering standards the team uses to make good decisions **when I'm not in the room**
+  - Update the principles and standards **as the team learns** what works
+- **Introduce practices the team adopts**: I introduce patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
+  - Notice technical debt and repetitive manual work that **keep coming back**
+  - Introduce a pattern, tool or practice that stops them, and **help the team try it**
+  - **The team keeps using it** because it helps, not because I insist
 
 #### Consulting
 
-- I **align stakeholders** with conflicting priorities toward a shared direction, through explicit scope, cost and quality trade-offs
-- I **build long-term trust** in the team's judgment, and coach teammates in consulting and problem framing
+- **Align stakeholders**: I **align stakeholders** with conflicting priorities toward a shared direction, through explicit trade-offs between features, cost and quality
+  - Bring stakeholders with conflicting priorities to **a direction they all agree to**
+  - Make the **trade-offs between features, cost and quality** explicit, so they decide knowing them
+  - Keep them aligned **as priorities change**, not only at the start
+- **Build trust in the team's judgment**: I **build long-term trust** in the team's judgment, and coach teammates in consulting and problem framing
+  - Build the client's trust in **the team's judgment**, not only in mine
+  - **Coach teammates** to frame problems and advise the client, so the client trusts them too
 
 #### Delivery
 
-- I improve how **the whole team** plans and delivers, with practices the team keeps up without being made to
-- I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
+- **Improve how the team delivers**: I improve how **the whole team** plans and delivers, with practices the team keeps up without being made to
+  - Find where **the team's planning and delivery** break down, and work with the team on the fixes
+  - The team keeps up the practices we agree **without being made to**
+- **Drive systemic risks to a decision**: I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
+  - Spot risks that affect **the whole engagement**, not only one stream
+  - Raise them early **with the client and with Sahaj**, and drive each one to a clear decision or action
 
 ### Evidence
 
@@ -85,18 +100,30 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 #### Growing others
 
-- I **develop people into new responsibilities**, such as client conversations and problem framing
-- I build mentoring and learning **into how the team works**, and coach teammates to mentor
+- **Grow people into new responsibilities**: I **develop people into new responsibilities**, such as client conversations and problem framing
+  - Give people **responsibilities they haven't had before**, such as leading a client conversation, and support them while they learn
+  - **Step back** as they become able, so the responsibility becomes theirs
+- **Build mentoring into the team**: I build mentoring and learning **into how the team works**, and coach teammates to mentor
+  - Make pairing, mentoring and learning part of **how the team plans its work**
+  - **Coach teammates to mentor others**, so mentoring on the team doesn't depend on me
 
 #### Feedback and trust
 
-- I **build a team** where trust is high and hard feedback is given and heard early
-- I **protect the team's sustainable pace**, acting on strain before it becomes chronic
+- **Build a high-trust team**: I **build a team** where trust is high and hard feedback is given and heard early
+  - **Set the example** by asking for feedback and acting on it
+  - Make it safe for **anyone on the team** to raise a problem or give hard feedback early
+- **Protect a sustainable pace**: I **protect the team's sustainable pace**, acting on strain before it becomes chronic
+  - Notice **when people are stretched**, such as working long hours or skipping leave
+  - Act on it with the team and the client **before the long hours become the norm**
 
 #### Communication and collaboration
 
-- I communicate **the team's direction** and progress to stakeholders, aligning people without forcing consensus
-- I represent **the team's thinking** credibly in cross-team and client discussions
+- **Communicate the team's direction**: I communicate **the team's direction** and progress to stakeholders, aligning people without forcing consensus
+  - Keep stakeholders informed about **where the team is going** and how it is progressing
+  - Bring people to **a decision they can commit to**, without needing everyone to agree on every point
+- **Represent the team**: I represent **the team's thinking** credibly in cross-team and client discussions
+  - Present **the team's view** accurately in cross-team and client discussions, including parts I argued against
+  - **Bring back what was decided**, so the team knows where it stands
 
 ### Evidence
 
@@ -128,8 +155,12 @@ At Extended you drive a piece of org work; at Team you **build something Sahaj r
 
 ### Expectations
 
-- I create or rebuild something for Sahaj, and **set it up so other people can run it**
-- I **bring other people into** organisation-building work and help them take ownership of it
+- **Build something others can run**: I create or rebuild something for Sahaj, and **set it up so other people can run it**
+  - Build or rebuild **something Sahaj needs**, such as a programme, a forum or an internal tool
+  - Write down how it works and **hand parts of it to other people**, so it keeps running without me
+- **Bring other people into org work**: I **bring other people into** organisation-building work and help them take ownership of it
+  - **Invite people into org work** they wouldn't have joined on their own
+  - Help them **take ownership** of a part of it, and step back as they do
 
 ### Evidence
 
