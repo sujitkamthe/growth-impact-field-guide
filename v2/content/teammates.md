@@ -5,9 +5,7 @@ lede: For the people who review someone's expectations, give them feedback and t
 
 ## Who reviews
 
-The seniors on a team review everyone else's expectations, and confirm their ratings at the team check. A senior's expectations and ratings are reviewed by their account lead or by seniors from other teams, and an account lead's by seniors or leads from other accounts in the office, so nobody goes unreviewed.
-
-Anyone on the team can also review someone's expectations, discuss them and ask for changes; you don't need to be senior to see something that's missing.
+Everyone on a team reviews everyone else, whatever their scope. Anyone can comment on someone's expectations and ask for changes, give them feedback through the cycle, and confirm, correct or add to their self-assessment at the team check. You don't need to be senior to spot an expectation that's missing, and the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
 ## Reviewing someone's expectations
 
@@ -17,7 +15,7 @@ Start from the scope they chose, and work through these before the doc is agreed
 2. **Is anything specific to their work written down?**: expectations beyond the guide, such as what this client or team needs from them, go in their doc under the area they belong to.
 3. **Is any stretch concrete?**: everyone should be able to recognise when it's happening. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check there is a stretch in all three areas.
 
-Add your inputs as comments and ask for changes where something's missing or unclear. The doc is agreed when you and the person can both point to what's expected.
+Add your inputs as comments and ask for changes where an expectation is missing or unclear. The doc is agreed when you and the person can both point to what's expected.
 
 ## Giving feedback during the cycle
 
@@ -35,7 +33,7 @@ Constructive feedback has the same shape, and adds what you'd suggest trying ins
 
 > **When something could go better**
 >
-> When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes. It unblocked them, but they still don't know why it failed, and they were stuck on the same thing again on Wednesday. Next time, could you pair with them on it, even if it takes longer? People & Team, growing others.
+> When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes. It unblocked them, but they still don't know why it failed, and they were stuck on the same test again on Wednesday. Next time, could you pair with them on it, even if it takes longer? People & Team, growing others.
 
 Feedback they note down this way is what their self-assessment starts from.
 
@@ -52,7 +50,7 @@ If a self-assessment mentions work you didn't see, ask about it: "I didn't see t
 
 ## When you disagree
 
-Disagreements usually mean you saw different slices of someone's work. Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern. Discuss a disagreement in private, and if it changes a scope or a rating, tell the person why. If the person and their reviewers still disagree after that, about the scope or a rating, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
+Disagreements usually mean you saw different slices of someone's work. Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern. Discuss a disagreement in private, and if it changes a scope or a rating, tell the person why. If the person and the people reviewing their work still disagree after that, about the scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
 
 ## Proposing a stretch
 

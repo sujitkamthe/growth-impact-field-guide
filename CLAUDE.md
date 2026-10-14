@@ -37,6 +37,7 @@ A second version lives in `v2/` and is served at `/v2/`, beside V1 which stays u
 People read the guide to find out what is expected of them, so every sentence must be one a new joiner can act on without asking what it means. When writing or editing anything in `v2/content/`:
 
 - **Name who does what.** Say "the people around you", "your reviewers" or "the team", not "others"; say who relies on what. "Until others rely on them" became "keeping them up until the people around you depend on you for them".
+- **Name the thing.** Avoid "things", "something" and "stuff" where a noun can be named: "I build things for Sahaj" became "I build a programme, forum or tool Sahaj needs"; "Build something others use" became "Contribute to the community". "Growing others" stays only as a facet name.
 - **Give every pronoun one obvious referent.** If "it", "them" or "that" could point at two things, name the thing: "before it became the norm" became "before the long hours became the norm".
 - **State the observable outcome, not a shorthand verb.** Avoid "holds", "lands", "sticks", "scales", "shows up" and "is addressed"; say what someone would see, such as "you show it consistently in all three areas", "shipped on time", "the team keeps it up without being made to".
 - **Keep the guide's terms to their defined meanings.** "Scope" means only Direct, Extended, Team or Wider, never the size of a piece of work; Org & Community's groups are "ways to contribute"; don't use "route", "level" or "persona" as framework terms.

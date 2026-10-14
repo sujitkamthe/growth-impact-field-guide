@@ -8,7 +8,7 @@ question: Do clients get good outcomes because of you?
 
 ## Summary
 
-This is the work we are paid for: building the right thing, building it well and delivering it reliably. It covers technical craft, consulting and delivery together, because on a client engagement they depend on each other.
+This is the work we are paid for: building what the client needs, building it well and delivering it reliably. It covers technical craft, consulting and delivery together, because on a client engagement they depend on each other.
 
 ## Facets
 

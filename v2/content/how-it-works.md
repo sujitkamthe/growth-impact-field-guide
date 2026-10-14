@@ -24,7 +24,7 @@ One piece of client work, handled at each scope. The example is made up, and it 
 
 Every scope covers the same three areas of impact, each with its own rating.
 
-- **Client & Delivery**: building the right thing, building it well and delivering it reliably.
+- **Client & Delivery**: building what the client needs, building it well and delivering it reliably.
 - **People & Team**: helping the people around you become more effective.
 - **Org & Community**: contributing to Sahaj beyond your immediate delivery. You choose how, but contributing is part of the job.
 
@@ -46,7 +46,7 @@ Learning has no area of its own because it runs through all three: at every scop
 
 ## Your reference scope
 
-Your reference scope is the scope you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your reviewers have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
+Your reference scope is the scope you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your teammates have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
 
 You will be stronger in some areas than others, and the rating captures that: below, meets or exceeds expectations in each area. Exceeds means impact clearly stronger, broader or more durable than your scope expects.
 
@@ -62,7 +62,7 @@ Exceeds is judged against your current scope, and it doesn't change your scope: 
 
 A stretch adds some of the next scope's responsibilities on top of your current expectations. It usually starts in one area, and consistent next-scope impact there is rated as exceeding. Your scope is raised once you show that impact consistently in all three areas, because your reference scope is the one you show everywhere. It doesn't need every next-scope expectation met perfectly, only a pattern the people around you depend on; a single strong instance isn't enough, and there is no fixed number of cycles.
 
-A stretch is the usual way to grow, but you don't need one on record to be raised: impact that is already consistent at the next scope counts however it started. If you are growing quickly, you can take on next-scope responsibilities as soon as you're ready, in one area or more. If you have been at the same scope for a long time, or your scope is below what your experience suggests, your reviewers set a stretch with you in all three areas, so that your growth has a plan.
+A stretch is the usual way to grow, but you don't need one on record to be raised: impact that is already consistent at the next scope counts however it started. If you are growing quickly, you can take on next-scope responsibilities as soon as you're ready, in one area or more. If you have been at the same scope for a long time, or your scope is below what your experience suggests, a stretch is set with you in all three areas, so that your growth has a plan.
 
 ## The cycle
 
@@ -71,15 +71,13 @@ A stretch is the usual way to grow, but you don't need one on record to be raise
 - **Gather feedback**: ask for it often, and keep notes
 - **Self-assess**: write it in the doc, then discuss it at the team check
 
-You drive your own doc, a short one made from [the template](doc-templates/expectations.docx): your scope, anything specific to your work, where you want to grow, and later your self-assessment. The expectations themselves stay in this guide, so the doc only notes your scope. Upload it to Google Drive to work on it as a Google Doc and share it with your reviewers. [Reviewing and feedback](#teammates) is the guide for the people who review it. Through the cycle you ask the people you work with for feedback, often and while the work is fresh, and keep notes of what they tell you, wherever you keep notes. That way your [self-assessment](#self-assessment) starts from what you wrote down at the time. The cycle ends with the team check, a conversation in which teammates from your project and office confirm, correct or add to your self-assessment; you can present the doc there, or let others read it beforehand for context. A raise in scope is decided there too, and the next cycle's doc is written at the new scope.
+You drive your own doc, a short one made from [the template](doc-templates/expectations.docx): your scope, anything specific to your work, where you want to grow, and later your self-assessment. The expectations themselves stay in this guide, so the doc only notes your scope. Upload it to Google Drive to work on it as a Google Doc and share it with your team. [Reviewing and feedback](#teammates) is the guide for the people who review it. Through the cycle you ask the people you work with for feedback, often and while the work is fresh, and keep notes of what they tell you, wherever you keep notes. That way your [self-assessment](#self-assessment) starts from what you wrote down at the time. The cycle ends with the team check, a conversation in which teammates from your project and office confirm, correct or add to your self-assessment; you can present the doc there, or let your teammates read it beforehand for context. A raise in scope is decided there too, and the next cycle's doc is written at the new scope.
 
 ## Who reviews and decides
 
-- **Everyone except seniors and account leads**: the team's seniors review their expectations, and confirm their ratings at the team check
-- **Seniors**: their account lead, or seniors from other teams, review their expectations and confirm their ratings
-- **Account leads**: seniors or leads from other accounts in the office review their expectations and confirm their ratings
+Anyone on your team can review your expectations, discuss them and ask for changes, whatever their scope, and at the team check your teammates confirm, correct or add to your self-assessment and confirm your ratings. Review goes in every direction: the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
-Anyone on the team can also review someone's expectations, discuss them and ask for changes. If you and your reviewers still disagree after discussing it, about your scope or a rating, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
+If you and your teammates still disagree after discussing it, about your scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
 
 ## Principles
 

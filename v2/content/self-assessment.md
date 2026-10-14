@@ -18,9 +18,9 @@ lede: Write it at the end of the cycle, in your expectations doc, drawing on the
 ## Choosing a rating
 
 <!-- scale -->
-- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all. Impact depended on favourable conditions, or others compensated for gaps you had not closed.
+- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all. Impact depended on favourable conditions, or teammates compensated for gaps you had not closed.
 - **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Two facets that exceed your scope's expectations can carry one weaker one. Teammates would depend on you here without checking.
-- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects across the area, not in one facet alone. Others learned from you, or a problem stopped recurring because of you.
+- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects across the area, not in one facet alone. Teammates learned from you, or a problem stopped recurring because of you.
 
 <!-- callout -->
 Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: that happens when your next-scope impact is consistent in all three areas.
@@ -51,7 +51,7 @@ When an area falls short, say why, because each reason calls for a different res
 - **You had no chance, and raised it during the cycle**: the team needs to make room for you.
 - **The chance was there and you didn't take it**: a growth area to plan for.
 - **You took the chance and found it hard**: a development need, where support is the right response.
-- **You stayed with it, and something outside your control stopped it**: this still counts. Say what you tried, what got in the way and what it left behind. If you stopped at the first setback, that is the second reason, not this one.
+- **You stayed with it, and a cause outside your control stopped it**: this still counts. Say what you tried, what got in the way and what it left behind. If you stopped at the first setback, that is the second reason, not this one.
 
 ## Common traps
 
@@ -60,4 +60,4 @@ The most common trap is treating a single good instance as a pattern, which over
 ## At the team check
 
 <!-- band -->
-You can present your doc, or others can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and your reviewers confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
+You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.

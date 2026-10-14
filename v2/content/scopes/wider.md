@@ -42,6 +42,7 @@ At Team you change how one team works; at Wider you shape direction **across tea
 - **Shape architecture beyond one team**: I shape long-term architecture **beyond one team**, making hard-to-reverse decisions responsibly
   - Shape architecture that **several teams, or a client's wider systems**, depend on
   - Involve the people affected in decisions that are **hard to reverse**, weigh the options and record why we chose
+  - Shape **the account's technical roadmap**, and help the client prioritise its larger technical initiatives
 - **Anticipate technology shifts**: I **anticipate technology and industry shifts**, and invest in Sahaj's long-term technical capability
   - Follow changes in technology and the industry, and judge **which ones matter to our clients**
   - Help Sahaj build **the skills it will need** before clients ask for them
@@ -54,19 +55,26 @@ At Team you change how one team works; at Wider you shape direction **across tea
 - **Improve how Sahaj consults**: I **improve how Sahaj frames problems** and engages clients
   - Share how I frame problems and work with clients, so **people across Sahaj** can use it
   - Help **teams I don't lead** through hard client situations
+- **Change how the client's organisation works**: I **help the client change how its organisation works**, such as how its teams are structured or its engineering culture
+  - Show the client's leaders **where structure or culture slows delivery**, with evidence
+  - Work with them on the change **until their teams work the new way**
+- **Lead proposals**: I **lead proposals and demand conversations**, from framing the client's problem to the approach and team we propose
+  - Frame **the client's problem** before proposing a solution
+  - Propose **only what Sahaj's teams can deliver well**, so winning the work doesn't set them up to struggle
 
 #### Delivery
 
-- **Set direction across teams**: I shape direction **across several teams** or part of a client's organisation, aligning technical, delivery and business priorities
-  - Set direction for **several teams**, or for part of a client's organisation
+- **Shape the account's direction**: I shape direction **for the account or across several teams**, or for part of a client's organisation, aligning technical, delivery and business priorities
+  - Set direction for **the account as a whole**, for several teams, or for part of a client's organisation
   - Align **technical, delivery and business priorities**, so the teams don't pull against each other
 - **Keep delivery healthy as it grows**: I keep delivery healthy as the work grows, fixing problems **before they spread across teams**
   - Watch **delivery across teams**, and notice problems that could spread
   - Fix them **before they spread**, and change what caused them
-- **Start up an account**: I **set up a new account** so its first teams start well and the client relationship can grow
+- **Start up or grow an account**: I **set up a new account, or grow an existing one**, so its teams start and keep working well and the client relationship grows
   - Shape the **first engagement** with the client: the problem, the approach and the team
   - Set up **the first teams** and how they work with the client
   - Build the relationship with the client, so the account can grow **beyond its first team**
+  - Look after **an existing account as a whole**: its teams, its delivery and the client relationship
 
 ### Evidence
 
@@ -103,8 +111,9 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 #### Growing others
 
 - **Develop mentors and leads**: I **develop other mentors, coaches and leads**, so people I never work with directly grow as well
-  - Coach **the people who mentor, coach or lead others**
+  - Coach **the people who mentor, coach or lead their teams**
   - **People I never work with directly** grow because of the mentors and leads I developed
+  - Mentor and coach **people across Sahaj**, not only on my own team or account
 - **Sponsor people across teams**: I create growth opportunities for people **beyond my own team**, and sponsor people into them
   - Create opportunities, such as a new role or a stretch assignment, for people **beyond my own team**
   - **Put people forward** for them, and back them while they grow into them
@@ -125,13 +134,13 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 
 - People you sponsored into new responsibilities, and where they are now
 - Mentors or leads who grew while working with you, and the people they now develop
-- A practice or forum for growing people across teams that you set up and handed to others
+- A practice or forum for growing people across teams that you set up and handed to people who now run it
 - Direction you set that several teams understood the same way and acted on
 
 ### Self-check
 
 - Am I building capability that will outlast me?
-- Are the people I develop now developing others?
+- Are the people I develop now growing people themselves?
 
 ### Not yet
 
@@ -144,7 +153,7 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 
 ### What changes
 
-At Team you build things others sustain; at Wider you shape **how Sahaj grows, works or is seen**.
+At Team you build programmes and tools that other people keep running; at Wider you shape **how Sahaj grows, works or is seen**.
 
 ### Expectations
 
@@ -154,6 +163,7 @@ At Team you build things others sustain; at Wider you shape **how Sahaj grows, w
 - **Make a lasting change**: I make **a lasting change** to how Sahaj builds capability, looks after its culture, is seen or wins work, and the change stays in place after I step back
   - Change **how Sahaj** builds capability, looks after its culture, is seen or wins work
   - The change **stays in place** after I step back
+  - Where my reach is the wider community, change how **engineers outside Sahaj** work, and become someone they learn from
 
 ### Evidence
 
@@ -163,14 +173,14 @@ At Team you build things others sustain; at Wider you shape **how Sahaj grows, w
 
 ### Self-check
 
-- Have I set up what I shaped so others can carry it on?
+- Have I set up what I shaped so it carries on without me?
 - Is what I designed used beyond my own office or account?
 
 ### Not yet
 
 - Recognised outside Sahaj far more than relied on inside it
-- Ideas that stay as ideas, without the effort to bring others to them
-- Innovating alone, without bringing others along
+- Ideas that stay as ideas, without the effort to win over the people needed to make them happen
+- Innovating alone, without bringing along the people it affects
 
 ### Ways to contribute
 
@@ -182,14 +192,14 @@ At Team you build things others sustain; at Wider you shape **how Sahaj grows, w
 
 - Designing how Sahaj builds a capability across offices
 - Shaping how Sahaj hires or onboards, beyond one office
-- Setting up a model or programme others run, such as how mentoring works across Sahaj
+- Setting up a model or programme that other offices or teams run, such as how mentoring works across Sahaj
 - Shaping proposals or pitches for new clients or other accounts, from framing the problem to the approach
 - Taking what you learned in Emerge into how Sahaj works, or shaping how the programme runs
 
 #### Community and external contribution
 
 - Leading Sahaj's thinking in a domain, inside and outside, in a way that changes how teams work or brings in work
-- Speaking at major industry conferences or publishing writing that changes how others in the industry work, or brings people or work to Sahaj
+- Speaking at major industry conferences or publishing writing that changes how engineers in the industry work, or brings people or work to Sahaj
 - Shaping Sahaj's flagship DevDay so it changes how Sahaj is seen and brings in people, clients or work
 
 ## Ways to create impact
@@ -202,7 +212,7 @@ You shape Sahaj's relationship with a client by building it and growing the acco
 
 ### Technical direction
 
-You set direction the account, or teams across Sahaj, align to, and you protect Sahaj's technical reputation. Other teams using something you built isn't enough on its own: it is Wider when it shapes how those teams decide and work, and lasts beyond your involvement.
+You set direction the account, or teams across Sahaj, align to, and you protect Sahaj's technical reputation. Other teams using a tool or practice you built isn't enough on its own: it is Wider when it shapes how those teams decide and work, and lasts beyond your involvement.
 
 ### Capability and culture
 
@@ -218,7 +228,7 @@ You shape how the industry thinks through writing, talks and open source. Visibi
 
 You grew an account from one team to three, kept delivery predictable and the pace sustainable as it grew, and set the architecture and delivery approach all three follow. Senior client stakeholders bring you their strategic questions, and the roadmap they are now executing is one you shaped. You sponsored two engineers into leading teams on the account, and inside Sahaj you designed a capability track on the account's domain that other offices now use.
 
-Without leading an account: the event-driven architecture you shaped is the approach three of the client's teams now follow, and the client's architecture group asks for your view on decisions you aren't part of. You grew two engineers into the people those teams turn to on it, and they now coach others. Inside Sahaj you designed how offices build capability in that domain, and others now run it.
+Without leading an account: the event-driven architecture you shaped is the approach three of the client's teams now follow, and the client's architecture group asks for your view on decisions you aren't part of. You grew two engineers into the people those teams turn to on it, and they now coach people on those teams. Inside Sahaj you designed how offices build capability in that domain, and people in those offices now run it.
 
 ### Below expectations
 

@@ -4,7 +4,7 @@ name: Direct
 order: 1
 reach: **The stories and features you own** end to end
 how: **Your own work**, taken from an unclear ask to production without someone steering each step
-lasts: Work that **holds up in production** and that others can change safely
+lasts: Work that **runs reliably in production** and that your teammates can change safely
 reaches: Stories · features
 mindset: I own my work end to end.
 question: What's the right way to build this?
@@ -43,6 +43,9 @@ A client asks the team to add a second payment provider to its checkout. Payment
   - Check that my changes **work as intended once they are released**
   - **Debug issues on my own**, and ask for help once I have narrowed the problem down
   - **Fix the defects I introduce**, and find out what let them through
+- **Keep learning**: I **keep learning** what my work needs, and improve how I work from what I learn
+  - Learn **what the work needs next**, such as a new framework or part of the client's domain, without waiting to be taught
+  - Try a better way of working when I find one, and **share it with the team**
 
 #### Consulting
 
@@ -55,13 +58,17 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Delivery
 
-- **Take work from ask to production**: I **take stories** from an unclear ask to production, breaking them down and estimating sensibly
+- **Take work from ask to production**: I **take work from an unclear ask to production on my own**, breaking it down and estimating sensibly
   - Break unclear work into **small pieces** I can estimate and deliver
   - Take each piece **all the way to production**, not only to "code complete"
+  - Deliver **without a teammate guiding each step**, and ask for help once I'm genuinely stuck
 - **Deliver predictably**: I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
   - **Deliver what I committed to** when I said I would, or say early that I can't
   - Keep **progress visible** to the team without being asked
-  - **Adjust my plan** when things change, and tell the people affected
+  - **Adjust my plan** when priorities, estimates or requirements change, and tell the people affected
+- **Follow our delivery practices**: I follow **Sahaj's engineering and delivery practices**, such as writing tests first, pairing and releasing in small steps
+  - Keep **the board, the build and my branches** up to date, so the team sees the real state of the work
+  - Keep to the team's practices **when a deadline is close**, and say so when I think one should change
 
 ### Evidence
 
@@ -110,12 +117,17 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - **Communicate clearly**: I **communicate clearly for the audience**, in writing and in person, and share progress and blockers without being chased
   - **Adjust what I say and write** to who it is for, whether a teammate or the client
   - Share progress and blockers **before anyone has to ask**
+- **Question the approach**: I **question requirements, acceptance criteria and designs** when I see a problem, and back the question with reasons
+  - Ask questions that **test the requirement and its acceptance criteria**, not only how to build it
+  - **Challenge an approach or design**, including a more senior teammate's, and explain what I think is wrong with it
+  - Go with the team's decision once it is made, and **raise it again only with new evidence**
 
 ### Evidence
 
 - Feedback you received, and what you have consistently done differently since
 - Teammates who come back to you to understand the reasoning
 - Newer teammates who ramped up faster with your help
+- A question or challenge you raised that changed a requirement, an acceptance criterion or a design
 
 ### Self-check
 
@@ -142,11 +154,12 @@ A client asks the team to add a second payment provider to its checkout. Payment
   - **Act on Sahaj's values** in everyday work, with the team and with the client
   - **Follow through** on the commitments I take on beyond my project
   - **Say early** when I can't keep a commitment, so someone else can pick it up
+  - Behave in a way **newer colleagues can learn from**, such as admitting mistakes openly and giving credit
 
 ### Evidence
 
 - The way you chose to contribute and what you did across the cycle, with rough dates
-- Something that exists, or works better, because you kept contributing
+- An event, initiative or tool that exists, or works better, because you kept contributing
 - What the people it helped now do differently
 
 ### Self-check
@@ -156,7 +169,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Not yet
 
-- Attending things is described as contributing to them
+- Attending events or sessions is described as contributing to them
 - Commitments taken on beyond the project lapse without a word
 
 ### Ways to contribute
@@ -164,7 +177,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 #### Culture and organisational health
 
 - Helping new joiners settle in, beyond your own team
-- Speaking up when something doesn't fit how we work, and suggesting what would
+- Speaking up when a practice or decision doesn't fit how we work, and suggesting what would
 
 #### Initiatives and capability
 
@@ -174,7 +187,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 #### Community and external contribution
 
 - Sharing what your team learned, through internal sessions, write-ups or a blog post
-- Giving a talk at a meetup or conference about something you built or learned
+- Giving a talk at a meetup or conference about a tool you built or a technique you learned
 - Helping organise a DevDay, or speaking at one
 - Contributing to a community of practice
 

@@ -11,7 +11,7 @@ No. The statements describe what impact looks like at each scope, and nobody is 
 
 ### What's the difference between Extended and Team?
 
-At **Extended** you improve work beyond your own: a stream you lead, a design others build on, a teammate you helped succeed. At **Team** you improve the system that produces the work: the architecture, the design bar, how people's judgment develops and how the team performs. The test: are you improving pieces of work, even other people's, or changing how the whole team produces its work?
+At **Extended** you improve work beyond your own: a stream you lead, a design your teammates build on, a teammate you helped succeed. At **Team** you improve the system that produces the work: the architecture, the design bar, how people's judgment develops and how the team performs. The test: are you improving pieces of work, even other people's, or changing how the whole team produces its work?
 
 ### Does leading an account set my scope?
 
@@ -23,7 +23,7 @@ No. Deep influence inside one client's organisation, or a capability many Sahaj 
 
 ### I'm new to Sahaj. Where do I start?
 
-Your scope is agreed with your reviewers from the impact you showed in your previous work, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
+Your scope is agreed with your team from the impact you showed in your previous work, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
 
 ## Growth
 
@@ -43,7 +43,7 @@ Yes. At Team and Wider scope there are several ways to create impact, including 
 
 ### Is Org & Community really mandatory?
 
-Yes. You choose what to contribute, and every scope expects you to contribute something. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless you raised during the cycle that there was no room and nothing changed; then you're rated on what was reasonably available to you.
+Yes. You choose what to contribute, and every scope expects you to contribute in at least one way. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless you raised during the cycle that there was no room and nothing changed; then you're rated on what was reasonably available to you.
 
 ### Can I contribute beyond my scope?
 
@@ -61,11 +61,11 @@ Raise it during the cycle with the seniors on your team, or with your account le
 
 ### Who sets my expectations?
 
-You do. At the start of the cycle you choose your scope, write your expectations doc and share it for review. The seniors on your team review it; a senior's doc is reviewed by their account lead or seniors from other teams, and an account lead's by seniors or leads from other accounts in the office. Anyone on the team can also ask for changes. See [Who reviews and decides](#how-it-works/who-reviews-and-decides).
+You do. At the start of the cycle you choose your scope, write your expectations doc and share it with your team. Anyone on the team can review it and ask for changes, whatever their scope. See [Who reviews and decides](#how-it-works/who-reviews-and-decides).
 
 ### What if the scope I choose doesn't match my impact?
 
-Your reviewers will say so, and the scope is corrected during the review, before your doc is agreed. That way your feedback and self-assessment are measured against the right scope. If you still disagree after discussing it, the account lead decides, or, when it is an account lead's own doc, a founder or the region's managing director.
+The people reviewing it will say so, and the scope is corrected during the review, before your doc is agreed. That way your feedback and self-assessment are measured against the right scope. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
 
 ### What if my expectations were never set?
 

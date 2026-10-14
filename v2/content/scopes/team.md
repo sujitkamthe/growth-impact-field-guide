@@ -23,7 +23,7 @@ At Extended you improve work beyond your own. At Team you improve **the system t
 
 A client asks the team to add a second payment provider to its checkout. Payment changes have slipped in each of the last two releases.
 
-- **What you did**: You noticed that payment changes slipped because integrations were tested late and nobody owned the API contracts with the providers. You worked with the team on how it plans, tests and reviews integrations, and set the practice up so others now run it.
+- **What you did**: You noticed that payment changes slipped because integrations were tested late and nobody owned the API contracts with the providers. You worked with the team on how it plans, tests and reviews integrations, and set the practice up so the team now runs it without you.
 - **What changed**: The next two releases shipped on time, and the client began to trust the team's estimates for payment work.
 - **Why it's Team**: You changed the system that produces the work, not one piece of it. Designing this one integration well would be Extended; aligning several teams on it would be Wider.
 
@@ -47,6 +47,9 @@ At Extended you shape work across several features; at Team you change how **the
   - Notice technical debt and repetitive manual work that **keep coming back**
   - Introduce a pattern, tool or practice that stops them, and **help the team try it**
   - **The team keeps using it** because it helps, not because I insist
+- **Bring deep expertise**: I build **deep expertise in an area** the team or client needs, and share it so the team doesn't depend on me for it
+  - Become the person **the team and client turn to** in an area such as security, performance or the client's domain
+  - Teach it through pairing, write-ups or sessions, **so teammates can work in the area without me**
 
 #### Consulting
 
@@ -57,6 +60,9 @@ At Extended you shape work across several features; at Team you change how **the
 - **Build trust in the team's judgment**: I **build long-term trust** in the team's judgment, and coach teammates in consulting and problem framing
   - Build the client's trust in **the team's judgment**, not only in mine
   - **Coach teammates** to frame problems and advise the client, so the client trusts them too
+- **Contribute to proposals**: I **contribute to proposals and demand conversations**, with the team's expertise and an honest view of what the work would take
+  - Help the client **explore what work it may need next**, using what the team knows about its systems
+  - Give **realistic estimates and risks**, so the work Sahaj wins can be delivered well
 
 #### Delivery
 
@@ -77,15 +83,15 @@ At Extended you shape work across several features; at Team you change how **the
 ### Self-check
 
 - What have I done so the team can decide well without me?
-- Does the client trust the team, or does everything still route through me?
+- Does the client trust the team, or does every decision still go through me?
 - Am I raising the bar for the whole team, or just doing the hardest work myself?
-- Have I built something the team chose to adopt, and does it still run without me maintaining it?
+- Have I built a practice, tool or standard the team chose to adopt, and does it still run without me maintaining it?
 
 ### Not yet
 
 - The single point of contact for every decision
 - Sets standards alone, and relies on enforcing them
-- Involved in many things, but owning few outcomes end to end
+- Involved in many decisions and discussions, but owning few outcomes end to end
 - Tools or standards that solve your own problems, or that people use only when told to
 
 ## People & Team
@@ -105,7 +111,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
   - **Step back** as they become able, so the responsibility becomes theirs
 - **Build mentoring into the team**: I build mentoring and learning **into how the team works**, and coach teammates to mentor
   - Make pairing, mentoring and learning part of **how the team plans its work**
-  - **Coach teammates to mentor others**, so mentoring on the team doesn't depend on me
+  - **Coach teammates to mentor newer teammates**, so mentoring on the team doesn't depend on me
 
 #### Feedback and trust
 
@@ -124,13 +130,18 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 - **Represent the team**: I represent **the team's thinking** credibly in cross-team and client discussions
   - Present **the team's view** accurately in cross-team and client discussions, including parts I argued against
   - **Bring back what was decided**, so the team knows where it stands
+- **Influence the team and stakeholders**: I **influence the team's direction and the client's stakeholders** on decisions that affect the whole engagement, through reasoning rather than seniority
+  - Persuade **the team** toward a better technical or delivery approach with reasons, even on decisions I could make myself
+  - Persuade **client stakeholders** to change course on priorities, scope or how the engagement runs, when the evidence says they should
+  - Make the case with **evidence they care about**, such as fewer incidents or faster releases, and win over the people who decide, not only the people who already agree
 
 ### Evidence
 
 - People who grew into new responsibilities over time, and what you did to help
-- Team rituals or forums for feedback and learning that you set up and handed to others
+- Team rituals or forums for feedback and learning that you set up and handed to teammates to run
 - How the team's health held up under pressure, and what you changed when it didn't
 - Stakeholders who understand where the team is heading without having to ask you
+- Decisions the team, the client or the client's teams changed because you persuaded them, and what convinced them
 
 ### Self-check
 
@@ -147,20 +158,23 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 ## Org & Community
 
-> I build things for Sahaj that others can sustain.
+> I build a programme, forum or tool Sahaj needs, and set it up so other people keep it running.
 
 ### What changes
 
-At Extended you drive a piece of org work; at Team you **build something Sahaj relies on** and hand it to others.
+At Extended you drive a piece of org work; at Team you **build a programme, forum or tool Sahaj relies on** and hand it to the people who will run it.
 
 ### Expectations
 
-- **Build something others can run**: I create or rebuild something for Sahaj, and **set it up so other people can run it**
-  - Build or rebuild **something Sahaj needs**, such as a programme, a forum or an internal tool
+- **Build and hand over org work**: I create or rebuild **a programme, forum or internal tool Sahaj needs**, and set it up so other people can run it
+  - Start from **the problem it solves for Sahaj**, and check it with the people who will use it
   - Write down how it works and **hand parts of it to other people**, so it keeps running without me
 - **Bring other people into org work**: I **bring other people into** organisation-building work and help them take ownership of it
   - **Invite people into org work** they wouldn't have joined on their own
   - Help them **take ownership** of a part of it, and step back as they do
+- **Raise problems and see them fixed**: I **speak up when Sahaj or the client is heading in the wrong direction**, and drive the problem to an action
+  - Raise it with **the people who can fix it**, even when the conversation is uncomfortable
+  - **Drive it to a decision or action**, rather than raising it again next cycle
 
 ### Evidence
 
@@ -194,9 +208,9 @@ At Extended you drive a piece of org work; at Team you **build something Sahaj r
 
 #### Community and external contribution
 
-- Growing a community of practice until others lead it
+- Growing a community of practice until other members lead it
 - Writing a blog post or giving a conference talk on an approach your team developed, in enough depth that other teams can apply it
-- Running Sahaj's flagship DevDay, and setting it up so others can run the next one
+- Running Sahaj's flagship DevDay, and setting it up so a new organising team can run the next one
 
 ## Ways to create impact
 
@@ -208,11 +222,11 @@ Your impact comes through the team's people, its delivery and the client's trust
 
 ### Platforms, tools and standards
 
-Your impact comes through things the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
+Your impact comes through practices, tools and standards the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
 
 ### Deep expertise
 
-You become the person the team relies on in a hard domain, and you share that expertise so others can learn it and you don't become a bottleneck. It is often what clients and proposals draw on too.
+You become the person the team relies on in a hard domain, and you share that expertise so teammates can learn it and you don't become a bottleneck. It is often what clients and proposals draw on too.
 
 ## Examples
 
@@ -220,7 +234,7 @@ You become the person the team relies on in a hard domain, and you share that ex
 
 The team made most technical decisions without you, using principles you had set out with them. The architecture you set is what the team builds on, and you handed the review practice you introduced to two teammates, who now run it. Two teammates now lead client conversations because you paired with them and gradually stepped back. When a long release push started wearing people down, you agreed a new plan with the client before the long hours became the norm. You also rebuilt the office's onboarding from idea to rollout, then handed it to two people who now run it.
 
-Without leading the team: the integration test framework you built with two teammates is what your team, and two others, now use for every provider change. You agreed the principles behind it with the team and handed its upkeep to them, so decisions about it no longer wait for you. You paired with a teammate until they could design contract tests alone, and you told a senior colleague, early and kindly, that the way they reviewed was slowing the team down. Inside Sahaj you rebuilt how the office onboards engineers into testing, and handed it to two people who now run it.
+Without leading the team: the integration test framework you built with two teammates is what your team, and two other teams, now use for every provider change. You agreed the principles behind it with the team and handed its upkeep to them, so decisions about it no longer wait for you. You paired with a teammate until they could design contract tests alone, and you told a senior colleague, early and kindly, that the way they reviewed was slowing the team down. Inside Sahaj you rebuilt how the office onboards engineers into testing, and handed it to two people who now run it.
 
 ### Below expectations
 

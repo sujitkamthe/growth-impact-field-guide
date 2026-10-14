@@ -2,12 +2,12 @@
 id: extended
 name: Extended
 order: 2
-reach: **Work beyond your own**: features others build, a stream you lead, teammates you help
+reach: **Work beyond your own**: features your teammates build, a stream you lead, teammates you help
 how: Designs, framing and decisions **that other people build on**
 lasts: **Other people's work goes better**, and they need you less for it over time
 reaches: Cross-feature work · streams · teammates
 mindset: My impact improves work beyond my own.
-question: How should these pieces fit together, and are we building the right thing?
+question: How should these pieces fit together, and are we building what the client needs?
 v1: Catalyst
 ---
 
@@ -17,7 +17,7 @@ Your impact reaches past the features you own, to work that spans features or be
 
 ## What changes
 
-At Direct you are responsible for your own stories and features. At Extended your influence reaches **work you are not building yourself**, such as a design others implement, a stream of features, or a teammate you help unblock.
+At Direct you are responsible for your own stories and features. At Extended your influence reaches **work you are not building yourself**, such as a design your teammates implement, a stream of features, or a teammate you help unblock.
 
 ## In practice
 
@@ -58,6 +58,9 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - **Say early** when an ask works against the client's goals or carries a risk they haven't seen
   - Explain my reasoning and **offer an alternative**, rather than only saying no
   - **Keep working well with the client** after a disagreement, whichever way the decision goes
+- **Talk to the client with confidence**: I **talk to the client directly and confidently** about my stream, including when the news is bad
+  - Present **my stream's progress and decisions** to the client, such as in showcases and planning
+  - Give **bad news early and plainly**, with what we propose to do about it
 
 #### Delivery
 
@@ -72,6 +75,9 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 - **Make trade-offs explicit**: I make trade-offs between features, time and quality **explicit** to the team and client
   - Tell the team and client **what each choice gives up**, instead of absorbing it quietly
   - Improve **how work moves through my stream**, removing delays I see repeat
+- **Hold the bar on delivery**: I **hold the bar on how my stream delivers**, and advocate for Sahaj's delivery approach
+  - Keep my stream's practices, such as testing and small releases, **when a deadline is close**
+  - Explain **why our delivery approach helps** in terms the client cares about, such as fewer incidents or faster releases
 
 ### Evidence
 
@@ -91,7 +97,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 - Excellent work on your own features, with little effect on anyone else's
 - Contributes solutions in design discussions but leaves the framing to someone else
-- Acts as the hub everyone routes decisions through, so things stall during absences
+- Acts as the hub everyone routes decisions through, so decisions stall when they are away
 
 ## People & Team
 
@@ -115,7 +121,7 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 
 #### Feedback and trust
 
-- **Give hard feedback and follow it up**: I give timely, specific feedback on things that matter, **including hard feedback, and follow it up**
+- **Give hard feedback and follow it up**: I give timely, specific feedback on the work and behaviour that matter, **including hard feedback, and follow it up**
   - Give feedback **soon after the moment**, with a specific example
   - Give **hard feedback** rather than avoiding it, and check later whether it helped
 - **Resolve conflicts**: I **resolve conflicts constructively**, so the people involved keep working well together
@@ -127,8 +133,9 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 - **Run discussions to a decision**: I **facilitate discussions and workshops** that end in a clear decision
   - **Prepare the options** and what needs deciding before the discussion
   - **Summarise the decision and next steps**, and share them with everyone affected
-- **Influence through reasoning**: I **handle disagreement constructively**, influencing through clear reasoning
+- **Influence the project**: I **influence decisions on my project**, within the team and with the client's teams, through clear reasoning
   - Make my case with **evidence and reasoning**, and listen to the reasoning of the people who disagree
+  - Persuade **the client's teams** to do what is right for the project, such as adopting a practice or changing an approach
   - **Escalate only** when reasoning hasn't settled it, and say openly that I am escalating
 
 ### Evidence
@@ -140,37 +147,40 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 
 ### Self-check
 
-- Can I name someone who now handles something independently because of me?
+- Can I name someone who now handles a task or decision independently because of me?
 - Am I building independence, or dependence on me?
 
 ### Not yet
 
 - Answers questions without teaching the reasoning behind them
 - Helps by taking the work over, so the person doesn't grow
-- The go-to person for doing the work, rather than for making others better at it
+- The go-to person for doing the work, rather than for making teammates better at it
 
 ## Org & Community
 
-> I drive something beyond my project, not just take part in it.
+> I drive a piece of org work beyond my project, not just take part in it.
 
 ### What changes
 
-At Direct you take part in something beyond your project; at Extended you **drive it and carry it through**.
+At Direct you take part in org work beyond your project, such as an event or an initiative; at Extended you **drive a piece of it and carry it through**.
 
 ### Expectations
 
-- **Drive an org initiative**: I **take responsibility for a piece of org work** that matters beyond my project, and carry it through
+- **Drive an org initiative**: I **own a piece of org work** that matters beyond my project, and carry it through
   - Take on a **defined piece of an org initiative**, with an outcome people can check
   - **Keep it moving** through the cycle, and say early when it is stuck
   - **Hand it over or close it properly**, rather than letting it fade
-- **Build something others use**: I create or improve something that **people beyond my project** benefit from
-  - Find out what the **people beyond my project** need before I build it
-  - **Keep improving it** from their feedback, so they keep using it
+- **Contribute to the community**: I contribute to **Sahaj's community or the wider tech community** with a talk, an article, a workshop or a shared tool that people beyond my project use
+  - Choose a topic or tool that **people beyond my project** need, not only one I find interesting
+  - **Follow it up** once people use it, by answering their questions or improving it from their feedback
+- **Speak up for the culture**: I **advocate for Sahaj's culture and values**, with the team, with the client and inside Sahaj
+  - Explain **why Sahaj works the way it does** to new joiners and to the client
+  - **Speak up** when a decision or behaviour goes against our values, and suggest what would fit them
 
 ### Evidence
 
 - The initiative you drove through the cycle, what you did, and what changed or what got in the way
-- Something you created or improved that people outside your project keep using
+- A talk, article, workshop or tool you contributed, and how people outside your project used it
 - A problem you raised, and what happened next
 
 ### Self-check

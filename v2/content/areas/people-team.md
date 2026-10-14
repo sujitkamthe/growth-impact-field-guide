@@ -14,7 +14,7 @@ Growing others and building trust are how most impact at Sahaj reaches beyond on
 
 ### Growing others
 
-Mentoring, coaching and onboarding that help others build judgment of their own. The measure is what they can do without you.
+Mentoring, coaching and onboarding that help teammates build judgment of their own. The measure is what they can do without you.
 
 ### Feedback and trust
 
@@ -22,7 +22,7 @@ Giving feedback that changes behaviour, visibly acting on feedback you receive, 
 
 ### Communication and collaboration
 
-Keeping people informed, driving discussions to decisions and handling disagreement well. Communication runs through all three areas; it lives here because this is where its effect on others is most visible.
+Keeping people informed, driving discussions to decisions and handling disagreement well. Communication runs through all three areas; it lives here because this is where its effect on the people around you is most visible.
 
 ## How facets are rated
 
@@ -30,4 +30,4 @@ Like Client & Delivery, this area lists each scope's expectations by facet, and 
 
 ## Where does mentoring count?
 
-Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through something Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Org & Community, and so is designing or running the programme itself. Count each piece of work once.
+Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through a programme Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Org & Community, and so is designing or running the programme itself. Count each piece of work once.
