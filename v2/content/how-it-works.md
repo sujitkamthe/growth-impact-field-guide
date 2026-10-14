@@ -1,14 +1,11 @@
 ---
 title: How it works
-lede: How scopes, areas, ratings and stretch fit together, and how a cycle runs.
+lede: The whole model in four parts. Start at the top, or jump to the part you need; each one opens for the detail.
 ---
-
-## Overview
-
-Everyone has one scope, which describes how far their impact is expected to reach. The scope sets what is expected of you in three areas of impact, and you grow by taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them.
 
 ## Scopes
 
+<!-- group: Scopes | How far your impact is expected to reach | scope -->
 - **Direct**: your own work
 - **Extended**: work beyond your own
 - **Team**: the whole team
@@ -20,8 +17,20 @@ A wider scope still includes the ones inside it: at Team, your own work and your
 
 One piece of client work, handled at each scope. The example is made up, and it follows Client & Delivery only; every scope expects impact in all three areas.
 
+## Your scope
+
+*Your scope is the one you have shown consistently across all three areas, and it sets what's expected of you in each.*
+
+Your scope is the one you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your teammates have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
+
+You will be stronger in some areas than others, and the rating captures that: below, meets or exceeds expectations in each area. Exceeds means impact clearly stronger, broader or more durable than your scope expects.
+
+<!-- callout -->
+Exceeds is judged against your current scope, and it doesn't change your scope: that happens only when your next-scope impact is consistent in all three areas. Being strong in one area doesn't make up for falling short in another.
+
 ## Areas
 
+<!-- group: Areas | Where your impact counts, each with its own rating | areas -->
 *Every scope covers the same three areas of impact, each with its own rating.*
 
 - **Client & Delivery**: building what the client needs, building it well and delivering it reliably.
@@ -35,30 +44,9 @@ Each area gets one rating, judged across its facets as a whole rather than count
 
 Learning has no area of its own because it runs through all three: at every scope you keep your craft and judgment current, act on feedback, and adapt when the context changes.
 
-## Your scope
-
-*Your scope is the one you have shown consistently across all three areas, and it sets what's expected of you in each.*
-
-Your scope is the one you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your teammates have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
-
-You will be stronger in some areas than others, and the rating captures that: below, meets or exceeds expectations in each area. Exceeds means impact clearly stronger, broader or more durable than your scope expects.
-
-<!-- callout -->
-Exceeds is judged against your current scope, and it doesn't change your scope: that happens only when your next-scope impact is consistent in all three areas. Being strong in one area doesn't make up for falling short in another.
-
-## Growing into the next scope
-
-- **Meet your scope**: consistently, in all three areas
-- **Take on more**: some of the next scope's responsibilities, usually as a stretch
-- **Keep it up**: until the people around you depend on you for it, in all three areas
-- **Your scope is raised**: at the team check
-
-A stretch adds some of the next scope's responsibilities on top of your current expectations. It usually starts in one area, and consistent next-scope impact there is rated as exceeding. Your scope is raised once you show that impact consistently in all three areas, because your scope is the one you show everywhere. It doesn't need every next-scope expectation met perfectly, only a pattern the people around you depend on; a single strong instance isn't enough, and there is no fixed number of cycles.
-
-A stretch is the usual way to grow, but you don't need one on record to be raised: impact that is already consistent at the next scope counts however it started. If you are growing quickly, you can take on next-scope responsibilities as soon as you're ready, in one area or more. If you have been at the same scope for a long time, or your scope is below what your experience suggests, a stretch is set with you in all three areas, so that your growth has a plan.
-
 ## The cycle
 
+<!-- group: The cycle | Set expectations, gather feedback, look back | cycle -->
 - **Write your expectations**: choose your scope and any stretch, and draft your doc
 - **Get it reviewed**: teammates ask for changes until it's agreed
 - **Gather feedback**: ask for it often, and keep notes
@@ -73,3 +61,15 @@ You drive your own doc, a short one made from [the template](doc-templates/expec
 Anyone on your team can review your expectations, discuss them and ask for changes, whatever their scope, and at the team check your teammates confirm, correct or add to your self-assessment and confirm your ratings. Review goes in every direction: the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
 If you and your teammates still disagree after discussing it, about your scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
+
+## Growing into the next scope
+
+<!-- group: Growth | Take on some of the next scope's responsibilities | growth -->
+- **Meet your scope**: consistently, in all three areas
+- **Take on more**: some of the next scope's responsibilities, usually as a stretch
+- **Keep it up**: until the people around you depend on you for it, in all three areas
+- **Your scope is raised**: at the team check
+
+A stretch adds some of the next scope's responsibilities on top of your current expectations. It usually starts in one area, and consistent next-scope impact there is rated as exceeding. Your scope is raised once you show that impact consistently in all three areas, because your scope is the one you show everywhere. It doesn't need every next-scope expectation met perfectly, only a pattern the people around you depend on; a single strong instance isn't enough, and there is no fixed number of cycles.
+
+A stretch is the usual way to grow, but you don't need one on record to be raised: impact that is already consistent at the next scope counts however it started. If you are growing quickly, you can take on next-scope responsibilities as soon as you're ready, in one area or more. If you have been at the same scope for a long time, or your scope is below what your experience suggests, a stretch is set with you in all three areas, so that your growth has a plan.

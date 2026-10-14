@@ -2,6 +2,7 @@
 // the grammar for expectation subgroups.
 
 import { esc, mdInline, list, storageGet, storageSet } from '../ui.js';
+import { iconLink } from '../icons.js';
 
 // The viewer's own scope, remembered from the header's Explore a scope menu. Null until they choose one,
 // so a first visit never presents a default as if it were their agreed scope.
@@ -117,9 +118,9 @@ export function scopeTool(content, selected, label) {
 export function scopeLinks(content, scope) {
     if (!scope) return 'Choose a scope to link its expectations here.';
     const next = nextScope(content, scope);
-    return [`<a href="#scope/${scope.id}">${esc(scope.name)} expectations</a>`,
-        next && `<a href="#compare/${scope.id}/${next.id}">Compare with ${esc(next.name)}</a>`,
-        `<a href="#scope/${scope.id}/org-community">Ways to contribute</a>`].filter(Boolean).join('');
+    return [iconLink(`#scope/${scope.id}`, `${esc(scope.name)} expectations`, 'grid'),
+        next && iconLink(`#compare/${scope.id}/${next.id}`, `Compare with ${esc(next.name)}`, 'compare'),
+        iconLink(`#scope/${scope.id}/org-community`, 'Ways to contribute', 'paths')].filter(Boolean).join('');
 }
 
 export function bindScopeTool(root, content, { save = false } = {}) {

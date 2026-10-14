@@ -8,12 +8,13 @@
 import { esc, md, mdInline, list, copyText, fold, bindFolds, openFoldAround, storageGet, storageSet } from '../ui.js';
 import { nextScope, prevScope, GRAMMAR, expectationGroups, routeGroups, savedScope, EXPLORING, natureOf, bindPicker } from './_parts.js';
 import { areaIcon } from '../diagram.js';
+import { icon, iconLink } from '../icons.js';
 
 function practice(scope) {
     const p = scope.practice;
     if (!p) return '';
     return `<details class="more" id="in-practice">
-        <summary>In practice: an example at ${esc(scope.name)}</summary>
+        <summary>${icon('example')}In practice: an example at ${esc(scope.name)}</summary>
         <div class="practice">
         <p class="eyebrow">An illustration</p>
         <p class="practice-situation">${esc(p.situation)}</p>
@@ -35,10 +36,10 @@ function areaSection(scope, prev, area, block) {
         ${expectationGroups(block, 'plain-list expect', 'detailed')}
         ${block.routes.length ? `<div class="routes">${fold(`
             <p class="kind">${GRAMMAR.routes}. These are examples at ${esc(scope.name)}; anything else counts too, judged by what it changed.</p>
-            ${routeGroups(block)}`, `Ways to contribute at ${esc(scope.name)}`)}
+            ${routeGroups(block)}`, `${icon('paths')}Ways to contribute at ${esc(scope.name)}`)}
         </div>` : ''}
         <details class="how-to-tell">
-            <summary>How to tell you're meeting it</summary>
+            <summary>${icon('check')}How to tell you're meeting it</summary>
             <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; doing it consistently, so that people come to depend on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better scope for you.` : ''}</p>
             <div class="tell-cols">
                 <div><h3>Signs of impact</h3>${list(block.evidence, 'plain-list secondary')}</div>
@@ -59,7 +60,7 @@ export function render(content, [id, areaId]) {
 
     const more = [
         scope.examples['meets-expectations'] && `<details class="more" id="examples">
-            <summary>Examples of Meets and Below</summary>
+            <summary>${icon('rating')}Examples of Meets and Below</summary>
             <p class="hint">${GRAMMAR.examples}.</p>
             <div class="two-col">
                 <div><h3>Meets expectations</h3>${md(scope.examples['meets-expectations'])}</div>
@@ -67,12 +68,12 @@ export function render(content, [id, areaId]) {
             </div>
         </details>`,
         scope.ways && `<details class="more" id="ways">
-            <summary>Ways to create impact at ${esc(scope.name)}</summary>
+            <summary>${icon('paths')}Ways to create impact at ${esc(scope.name)}</summary>
             ${scope.ways.intro ? `<div class="prose">${md(scope.ways.intro)}</div>` : ''}
             <div class="ways-grid">${scope.ways.sections.map(w => `<div><h3>${esc(w.title)}</h3>${md(w.body)}</div>`).join('')}</div>
         </details>`,
         `<details class="more" id="about">
-            <summary>More about ${esc(scope.name)}</summary>
+            <summary>${icon('info')}More about ${esc(scope.name)}</summary>
             <div class="prose">${md(scope.summary)}</div>
             <p class="v1-note">In the V1 guide this was ${esc(scope.v1)}.</p>
         </details>`,
@@ -92,7 +93,7 @@ export function render(content, [id, areaId]) {
                 <p class="mindset">${esc(scope.mindset)}</p>
                 ${natureOf(scope)}
                 <div class="lede">${md(scope.whatChanges)}</div>
-                ${next ? `<p><a href="#compare/${scope.id}/${next.id}">Compare with ${esc(next.name)}</a></p>` : ''}
+                ${next ? `<p>${iconLink(`#compare/${scope.id}/${next.id}`, `Compare with ${esc(next.name)}`, 'compare')}</p>` : ''}
             </header>
             <div class="sticky-bar">
                 <span class="sticky-title">${esc(scope.name)}</span>

@@ -7,6 +7,10 @@ import { esc, md, mdInline } from '../ui.js';
 import { reachDiagram, scopeGlyph, areaIcon } from '../diagram.js';
 import { savedScope, EXPLORING } from './_parts.js';
 import { sectionParts } from './how.js';
+import { icon, iconLink } from '../icons.js';
+
+// An icon for each task link, by where it goes.
+const TASK_ICONS = { principles: 'compass', 'how-it-works/the-cycle': 'doc', 'how-it-works/growing-into-the-next-scope': 'stretch', 'self-assessment': 'rating', teammates: 'check' };
 
 const sectionText = (page, slug) => page.sections.find(s => s.slug === slug)?.body || '';
 
@@ -15,7 +19,7 @@ function tasks(page) {
     const items = [...sectionText(page, 'where-to-go-next').matchAll(/^- \[(.+?)\]\((.+?)\):\s*(.+)$/gm)];
     return `<nav class="start-here" aria-labelledby="start-tasks-head">
         <h2 id="start-tasks-head">Where to go next</h2>
-        <ul>${items.map(([, label, href, desc]) => `<li><a href="${esc(href)}">${esc(label)}</a><span>${mdInline(desc)}</span></li>`).join('')}</ul>
+        <ul>${items.map(([, label, href, desc]) => `<li><a href="${esc(href)}">${icon(TASK_ICONS[href.slice(1)])}${esc(label)}</a><span>${mdInline(desc)}</span></li>`).join('')}</ul>
     </nav>`;
 }
 
@@ -44,13 +48,14 @@ export function render(content) {
             <header class="page-head">
                 <h1>${esc(page.headline)}</h1>
                 <p class="lede">${esc(page.lede)}</p>
+                <a class="tour-link" href="#tour">${icon('play')}Watch the guide in three minutes</a>
             </header>
             <section class="start-intro" aria-labelledby="start-intro-head">
                 <div>
                     <h2 id="start-intro-head">How the guide works</h2>
                     ${md(sectionText(page, 'how-the-guide-works'))}
                     <ul class="start-areas">${areas}</ul>
-                    <p><a href="#how-it-works">How it works, in detail</a></p>
+                    <p>${iconLink('#how-it-works', 'How it works, in detail', 'arrow')}</p>
                 </div>
                 <figure class="reach-figure">${reachDiagram(reach)}</figure>
             </section>
@@ -58,7 +63,7 @@ export function render(content) {
                 <h2 id="start-scopes-head">Find your scope</h2>
                 <p class="start-scopes-hint">${mdInline(sectionText(page, 'find-your-scope'))}</p>
                 ${scopeCards(content)}
-                <p><a href="#expectations">See every scope's expectations side by side →</a></p>
+                <p>${iconLink('#expectations', "See every scope's expectations side by side", 'grid')}</p>
             </section>
             ${tasks(page)}
         </section>`,

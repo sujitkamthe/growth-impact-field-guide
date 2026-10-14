@@ -98,7 +98,7 @@ export function render(content, [open]) {
                     <figcaption>Team scope in every area, stretching into Wider in Client & Delivery.</figcaption></figure>`,
             },
             'the-cycle': { visual: flow(cycle.items, false), more: md(cycle.rest) },
-            'scopes-in-practice': practice(content, practiceIntro, savedScope(content)),
+            'scopes-in-practice': { more: practice(content, practiceIntro, savedScope(content)), label: 'See one example at every scope' },
         },
         mount: bindStepper,
     });

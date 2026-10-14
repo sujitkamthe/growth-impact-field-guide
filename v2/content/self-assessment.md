@@ -1,16 +1,18 @@
 ---
 title: Self-assessment
-lede: Write it at the end of the cycle, in your expectations doc, drawing on the feedback notes you kept. Work through it one area at a time.
+lede: Write it at the end of the cycle, in your expectations doc. Follow the three steps; the tips below are there if you need them.
 ---
 
 ## Before you start
 
+<!-- group: Before you start | Your doc, your notes, one area at a time | start -->
 1. **Open your doc**: assess against your scope's expectations and anything specific you noted at the start of the cycle.
 2. **Read your feedback notes**: start from the feedback you gathered during the cycle; memory favours the last few weeks.
 3. **Take one area at a time**: answer the prompts below for each area, then rate it.
 
 ## The prompts
 
+<!-- group: For each area | Say what changed, then choose a rating | rating -->
 - **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
@@ -27,8 +29,16 @@ Rate each area against your current scope. Next-scope work can be part of exceed
 
 Exceeds in one area is a strong result, and the right moment to talk about a stretch.
 
+## At the team check
+
+<!-- group: At the team check | Talk it through with your teammates | team -->
+*Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
+
+You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
+
 ## A worked example
 
+<!-- tips: If you need them -->
 *One area of a self-assessment, written by someone at Team scope.*
 
 One area, written by someone at Team scope. It follows the same made-up situation as the [In practice](#scope/team) story; write yours in your own words.
@@ -41,13 +51,13 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 >
 > **Rating: Meets.** The review practice held across the cycle and the team now runs it without me, but it is new and hasn't yet been through a harder release.
 
-## Stretch
+## If you agreed a stretch
 
 *Rate a stretched area against your scope like any other, then say how far you got.*
 
 If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
 
-## Describing a shortfall
+## If an area fell short
 
 *When an area falls short, say why, because each reason calls for a different response from the team.*
 
@@ -62,10 +72,3 @@ If you agreed a stretch, rate that area against your scope like every other area
 *The most common trap is treating a single good instance as a pattern.*
 
 The most common trap is treating a single good instance as a pattern, which overstates what you do consistently. Understating is the other, and it helps nobody, because your teammates then have to argue you up. Writing from your feedback notes avoids both, and lets the team check start from what you wrote, with fewer corrections. If you notice yourself building a case for a rating, go back to your notes.
-
-## At the team check
-
-<!-- band -->
-*Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
-
-You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.

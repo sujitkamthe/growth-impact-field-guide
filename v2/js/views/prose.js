@@ -18,6 +18,7 @@
 // passing { visual, more } as a section's body.
 
 import { esc, md, mdInline, fold, bindFolds, openFoldAround } from '../ui.js';
+import { icon } from '../icons.js';
 
 const ITEM = /^(\d+\.|-) \*\*(.+?)\*\*:?\s*(.*)$/;
 const NOTE = /^<!-- (scale|list) -->$/;
@@ -28,7 +29,7 @@ const MORE = /^<!-- more -->$/m;
 // the summary; markdown before "<!-- more -->" stays in view.
 export function glance(s, render, given) {
     const short = s.short ? `<p class="glance-short">${mdInline(s.short)}</p>` : '';
-    if (given && typeof given === 'object') return short + (given.visual || '') + fold(given.more || '');
+    if (given && typeof given === 'object') return short + (given.visual || '') + fold(given.more || '', given.label);
     if (typeof given === 'string') return short + given;
     const body = s.body.replace(BAND, '');
     if (MORE.test(body)) {
@@ -74,24 +75,82 @@ function worksheetBody(body) {
     return out.join('').replace(/<blockquote>/g, '<blockquote class="ws-example"><p class="eyebrow">Example</p>');
 }
 
+// Pages read as a journey when their sections are grouped: "<!-- group: Title | one line | icon -->"
+// at the start of a section opens a numbered stage that runs until the next marker, and
+// "<!-- tips: Title -->" opens a set of optional cards. The page then leads with a map of the stages,
+// so a reader sees where to start and what they can skip. Sections before the first marker are an
+// introduction. A stage's sections keep their own ids, so links such as #how-it-works/the-cycle work.
+const GROUP = /^<!-- (group|tips): (.*?) -->\s*/;
+const slugify = text => text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+function groupSections(sections) {
+    const intro = [], groups = [];
+    let current = null;
+    for (const section of sections) {
+        const m = section.body.match(GROUP);
+        const s = m ? { ...section, body: section.body.replace(GROUP, '') } : section;
+        if (m) {
+            const [title, desc = '', iconName = ''] = m[2].split('|').map(x => x.trim());
+            current = { kind: m[1], title, desc, icon: iconName || (m[1] === 'tips' ? 'tip' : ''), slug: `part-${slugify(title)}`, sections: [] };
+            groups.push(current);
+        }
+        (current ? current.sections : intro).push(s);
+    }
+    return { intro, groups };
+}
+
+function journey(pageId, sections, part) {
+    const { intro, groups } = groupSections(sections);
+    const stages = groups.filter(g => g.kind === 'group');
+    const map = `<nav class="journey-map" aria-label="Parts of this page"><ol>
+        ${stages.map((g, i) => `<li><a href="#${pageId}/${g.slug}" data-jump="${g.slug}">
+            <span class="jm-num">${i + 1}</span>${icon(g.icon)}<strong>${esc(g.title)}</strong><span class="jm-desc">${esc(g.desc)}</span>
+        </a></li>`).join('')}
+    </ol></nav>`;
+    // A stage's own heading is enough when its only section, or its first, has the same name.
+    const sub = (g, s) => (g.sections.length === 1 || s.title.toLowerCase() === g.title.toLowerCase() ? '' : `<h3>${esc(s.title)}</h3>`);
+    const stage = (g, n) => `<section class="journey-stage" id="${g.slug}">
+        <div class="js-rail" aria-hidden="true"><span class="js-num">${n}</span></div>
+        <div class="js-body">
+            <h2>${icon(g.icon)}${esc(g.title)}</h2>
+            ${g.desc ? `<p class="js-desc">${esc(g.desc)}</p>` : ''}
+            ${g.sections.map(s => `<section class="prose js-part" id="${s.slug}">${sub(g, s)}${part(s)}</section>`).join('')}
+        </div>
+    </section>`;
+    const tips = g => `<section class="journey-tips" id="${g.slug}">
+        <h2>${icon(g.icon)}${esc(g.title)}</h2>
+        <div class="tip-grid">${g.sections.map(s => `<section class="tip-card prose" id="${s.slug}">
+            <h3>${esc(s.title)}</h3>${part(s)}
+        </section>`).join('')}</div>
+    </section>`;
+    let n = 0;
+    return `${intro.map(s => `<section class="prose journey-intro" id="${s.slug}"><h2>${esc(s.title)}</h2>${part(s)}</section>`).join('')}
+        ${map}
+        ${groups.map(g => (g.kind === 'tips' ? tips(g) : stage(g, ++n))).join('')}`;
+}
+
 export function renderProse(content, pageId, { bodies = {}, after = {}, open = null, worksheet = false, lead = '', mount: extra } = {}) {
     const page = content.pages[pageId];
     const render = text => (worksheet ? worksheetBody(text) : md(text));
     const body = s => glance(s, render, bodies[s.slug]);
     const band = s => (BAND.test(s.body) ? ' band' : '');
+    const isJourney = page.sections.some(s => GROUP.test(s.body));
+    const sections = isJourney
+        ? journey(pageId, page.sections, s => body(s) + (after[s.slug] || ''))
+        : page.sections.map(s => `<section class="prose${band(s)}" id="${s.slug}">
+                <h2>${esc(s.title)}</h2>${body(s)}${after[s.slug] || ''}
+            </section>`).join('');
     return {
         title: page.title,
         keepScroll: Boolean(open),
-        html: `<section class="page narrow${worksheet ? ' worksheet' : ''}">
+        html: `<section class="page narrow${worksheet ? ' worksheet' : ''}${isJourney ? ' journey' : ''}">
             <header class="page-head">
                 ${worksheet ? '<p class="eyebrow">Worksheet</p>' : ''}
                 <h1>${esc(page.title)}</h1>
                 <p class="lede">${esc(page.lede)}</p>
                 ${lead}
             </header>
-            ${page.sections.map(s => `<section class="prose${band(s)}" id="${s.slug}">
-                <h2>${esc(s.title)}</h2>${body(s)}${after[s.slug] || ''}
-            </section>`).join('')}
+            ${sections}
         </section>`,
         mount(root) {
             extra?.(root);
@@ -102,6 +161,11 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
                 target?.scrollIntoView({ block: 'start' });
             };
             if (open) requestAnimationFrame(() => show(open));
+            root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
+                e.preventDefault();
+                history.replaceState(null, '', `#${pageId}/${a.dataset.jump}`);
+                show(a.dataset.jump);
+            }));
         },
     };
 }

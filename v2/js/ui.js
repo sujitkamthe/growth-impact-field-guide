@@ -50,7 +50,7 @@ export async function copyText(text, button) {
 // Read more: detail folded under a section's short line or visual, so a page can be taken in at a
 // glance. Show less sits under the text it closes; printing opens every fold (see app.js).
 export const fold = (inner, label = 'Read more') => inner && inner.trim()
-    ? `<details class="fold"><summary>${label}</summary>${inner}
+    ? `<details class="fold"><summary>${label}<svg class="icon fold-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>${inner}
         <button type="button" class="fold-less" data-fold-close>Show less</button></details>`
     : '';
 

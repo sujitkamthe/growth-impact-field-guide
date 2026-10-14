@@ -8,6 +8,7 @@
 import { esc, mdInline, storageGet, storageSet } from '../ui.js';
 import { savedScope, nextScope, viewTabs, expectationGroups, bindPicker, EXPLORING } from './_parts.js';
 import { areaIcon } from '../diagram.js';
+import { iconLink } from '../icons.js';
 
 const sectionText = (page, slug) => page.sections.find(s => s.slug === slug)?.body || '';
 
@@ -50,7 +51,7 @@ export function render(content) {
         : 'Choose a scope with Explore a scope at the top of the page to see only its expectations here.';
     const levels = mine ? `<button type="button" class="button quiet matrix-levels" data-levels>
         ${oneLevel ? 'Show all levels' : `Show only ${esc(mine.name)}`}</button>` : '';
-    const compareNext = next ? `<p class="matrix-next"><a href="#compare/${mine.id}/${next.id}">See what changes at ${esc(next.name)} →</a></p>` : '';
+    const compareNext = next ? `<p class="matrix-next">${iconLink(`#compare/${mine.id}/${next.id}`, `See what changes at ${esc(next.name)}`, 'compare')}</p>` : '';
 
     return {
         title: 'Expectations',
@@ -73,7 +74,7 @@ export function render(content) {
             ${compareNext}
             <section class="matrix-growth" aria-labelledby="matrix-growth-head">
                 <h2 id="matrix-growth-head">How growth happens</h2>
-                <p>${mdInline(sectionText(page, 'how-growth-happens'))} <a href="#how-it-works/growing-into-the-next-scope">How growth works</a></p>
+                <p>${mdInline(sectionText(page, 'how-growth-happens'))} </p><p>${iconLink('#how-it-works/growing-into-the-next-scope', 'How growth works', 'growth')}</p>
             </section>
         </section>`,
         mount(root) {
