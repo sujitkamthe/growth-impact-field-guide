@@ -1,18 +1,17 @@
 # Sahaj Growth & Impact Guide Website
 
-A minimalistic, single-page website for the Sahaj Growth & Impact Guide.
+The guide is **V2**, in [`v2/`](v2/README.md) and served at `/v2/`; the site's root redirects there. The original Field Guide (**V1**) is kept for reference in `v1/` and served at `/v1/`. The rest of this file describes V1; for V2 see [`v2/README.md`](v2/README.md).
 
 ## Quick Start
 
 ```bash
-npm run dev
+npm run dev       # V2
+npm run dev:v1    # V1, with its content watched and rebuilt
 ```
-
-This starts a dev server at `http://localhost:8080` with live reload.
 
 ## Updating Content
 
-Content is stored in Markdown files in the `content/` directory:
+V1's content is stored in Markdown files in `v1/content/`:
 
 ```
 content/

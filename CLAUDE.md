@@ -4,33 +4,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A static single-page website for "The Sahaj Field Guide to Growth & Impact" - an engineering growth and impact guide. The site presents personas (growth stages) and capability areas with self-assessment guidance.
+A static website for "Growth & Impact at Sahaj", an engineering growth and impact guide, in two versions:
 
-## Build Command
+- **V2, the guide** (`v2/`, served at `/v2/`): scopes, areas and expectations, the reading and worksheet pages, and a narrated 3D tour (`#tour`). The site's root (`index.html`) redirects to it. No build step. Its model, decisions and content conventions are in `v2/README.md`; the tour's storyboard and contract are in `v2/js/tour/`.
+- **V1, the original Field Guide** (`v1/`, served at `/v1/`): personas and capability areas, kept for reference. The root redirect sends V1-style links (`#personas`, `#persona-…`, `#capability-…`, `#quick-reference`) there so shared links keep working.
 
-```bash
-node build.js
-```
-
-This scans Markdown files from `content/` and generates `manifest.json` (frontmatter + file paths). No external dependencies required.
-
-## Development Workflow
-
-1. Edit Markdown files in `content/` (personas, capabilities, or home)
-2. Run `node build.js` to regenerate `manifest.json`
-3. Run `npm run dev` to start the dev server (required - site fetches content at runtime)
-
-### Dev Server (watch + live reload)
+## Build and run
 
 ```bash
-npm run dev
+npm run dev        # V2 with live reload at /v2/ (no build step)
+npm run dev:v1     # V1: watches v1/content, rebuilds v1/manifest.json, serves /v1/
+npm run build      # V1's manifest (node v1/build.js); CI also bundles V1 in v1/
+npm run tour:voice # re-render the tour's narration audio after editing v2/js/tour/script.js
 ```
 
-This watches `content/*.md` for changes, rebuilds `manifest.json` automatically, and serves the site at `http://localhost:8080` with live reload.
+GitHub Pages deploys the whole repo on every push to `main` (`.github/workflows/deploy.yml`), building V1 inside `v1/`.
 
 ### Field Guide V2
-
-A second version lives in `v2/` and is served at `/v2/`, beside V1 which stays unchanged. It has no build step: run `npm run dev:v2`. Its model, decisions and content conventions are in `v2/README.md`.
 
 #### Writing guide content: clarity over ambiguity
 
@@ -46,10 +36,10 @@ People read the guide to find out what is expected of them, so every sentence mu
 
 Changing a core statement, mindset or other framework wording is the user's decision: propose the rewrite and say why before applying it.
 
-## Architecture
+## V1 architecture (`v1/`)
 
 **Content Pipeline:**
-- `content/*.md` → `build.js` → `manifest.json` → `app.js` fetches markdown at runtime and renders
+- `v1/content/*.md` → `v1/build.js` → `v1/manifest.json` → `app.js` fetches markdown at runtime and renders
 
 **Key Files:**
 - `build.js` - Scans markdown files, extracts frontmatter, outputs `manifest.json`

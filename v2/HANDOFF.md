@@ -4,7 +4,7 @@ V2 is a second version of the Field Guide, built beside V1 rather than replacing
 
 ## Where it stands
 
-- **Branch:** `field-guide-v2`, not yet pushed or merged. V1 at the repo root is untouched.
+- **Branch:** `field-guide-v2`, pushed but not merged. V2 is now the default: the site's root redirects to `/v2/`, and V1 has moved to `v1/` (served at `/v1/`), with old V1 links redirected there.
 - **Built and tested locally.** Every page was checked in a browser at desktop and phone width, in light and dark themes, with a clean console. 
 - **Not yet reviewed by anyone else.** The content has been through several rounds of AI review but no human review.
 

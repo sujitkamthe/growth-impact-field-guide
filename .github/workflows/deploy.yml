@@ -26,13 +26,15 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Build manifest.json
-        run: node build.js
+      # V1, the original Field Guide, lives in v1/ and is built there; V2 (v2/) has no build step.
+      - name: Build V1 manifest.json
+        run: node v1/build.js
 
-      - name: Bundle and minify JS
+      - name: Bundle and minify V1 JS
+        working-directory: v1
         run: |
           node bundle.js
-          npm exec -- esbuild app.bundle.js --minify --outfile=app.bundle.min.js
+          npm exec --yes -- esbuild app.bundle.js --minify --outfile=app.bundle.min.js
           rm app.bundle.js
 
       - name: Setup Pages

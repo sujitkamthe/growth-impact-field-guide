@@ -2,8 +2,9 @@
   "name": "sahaj-growth-impact-guide-site",
   "private": true,
   "scripts": {
-    "build": "node build.js",
-    "dev": "npx concurrently --kill-others \"npx nodemon --watch content -e md --exec 'node build.js'\" \"npx live-server --watch=manifest.json\"",
+    "build": "node v1/build.js",
+    "dev": "npx live-server --watch=v2 --open=/v2/",
+    "dev:v1": "npx concurrently --kill-others \"npx nodemon --watch v1/content -e md --exec 'node v1/build.js'\" \"npx live-server --watch=v1/manifest.json --open=/v1/\"",
     "dev:v2": "npx live-server --watch=v2 --open=/v2/",
     "templates:v2": "node v2/scripts/build_doc_templates.js",
     "tour:voice": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON v2/scripts/render-tour-voice.mjs"

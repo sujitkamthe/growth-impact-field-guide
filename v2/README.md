@@ -1,6 +1,6 @@
 # Growth & Impact at Sahaj (Field Guide V2)
 
-V2 sits beside V1 rather than replacing it. V1 (the repo root) is unchanged and still served at `/`; V2 is self-contained in this folder and served at `/v2/`. The existing Pages workflow uploads the whole repo, so no CI change is needed.
+V2 is the guide. It is self-contained in this folder and served at `/v2/`, and the site's root redirects here. The original Field Guide (V1) is kept for reference in `v1/` and served at `/v1/`; the root redirect sends V1-style links (`#personas`, `#persona-…`) there. The Pages workflow uploads the whole repo and builds V1 inside `v1/`.
 
 Where the work stands, what needs sign-off and what's still open is in [HANDOFF.md](HANDOFF.md).
 
