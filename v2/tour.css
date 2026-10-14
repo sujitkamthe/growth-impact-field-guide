@@ -1,0 +1,157 @@
+/* The guide in three minutes (#tour): laid out like a video player. The film is a 16:9 frame sized
+   to fit the screen's height, with the narration as a subtitle and a control bar over its bottom
+   edge that fades while playing; the chapter chips sit below it. The film's own controls are light
+   on a dark scrim, as on any video; the page around it follows the site's system. */
+
+.tour { max-width: calc(1280px + 2 * var(--gutter)); margin: 0 auto; padding: 16px var(--gutter) 0; }
+.tour-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 4px 20px; margin-bottom: 12px; text-align: center; }
+.tour-head h1 { font-size: 22px; margin: 0; }
+.tour-head .hint { margin: 0; font-size: 14px; }
+
+/* The film: always 16:9, as wide as the page allows but never taller than the screen leaves room
+   for (the header above and the chapter chips below). */
+.tour-film {
+    --bar-h: 64px;
+    position: relative; margin: 0 auto; aspect-ratio: 16 / 9;
+    width: min(100%, calc((100svh - var(--header-h) - 150px) * 16 / 9)); min-width: min(100%, 560px);
+    border-radius: var(--radius); overflow: hidden; background: #1c2129; color: #fff;
+    box-shadow: 0 0 0 1px var(--line);
+}
+.tour-film.is-full { width: 100vw; height: 100vh; max-width: none; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+.tour-film.is-idle { cursor: none; }
+
+.tour-stage { position: absolute; inset: 0; }
+.tour-canvas { display: block; width: 100%; height: 100%; cursor: pointer; transition: opacity 0.22s ease-out; }
+.tour-canvas.is-fading { opacity: 0; }
+/* The world draws its game HUD (quest, minimap, toasts) here; clicks pass through to the canvas. */
+.tour-hud { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+
+/* Before the tour first plays: a big but quiet Play over the first frame. */
+.tour-cover {
+    position: absolute; inset: 0; z-index: 1; display: grid; place-content: center; justify-items: center; gap: 12px;
+    background: rgba(20, 22, 28, 0.35);
+}
+.tour-start {
+    display: inline-flex; align-items: center; gap: 14px; min-height: 64px; padding: 0 28px 0 22px;
+    border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.94); color: #1d1c19;
+    font: inherit; font-size: 20px; font-weight: 600; cursor: pointer; transition: transform 0.15s;
+}
+.tour-start:hover { transform: scale(1.03); }
+.tour-start svg { width: 28px; height: 28px; }
+.tour-length { color: #6a665e; font-weight: 400; }
+.tour-cover-note { margin: 0; padding: 6px 12px; border-radius: var(--radius-control); background: rgba(255, 255, 255, 0.9); color: #4b4842; font-size: 15px; }
+.tour-start:disabled { color: #6a665e; cursor: progress; transform: none; }
+.tour-loading { width: 240px; height: 3px; border-radius: 2px; background: rgba(255, 255, 255, 0.25); overflow: hidden; }
+.tour-loading-fill { display: block; height: 100%; background: #fff; transform: scaleX(0); transform-origin: left center; transition: transform 0.2s ease-out; }
+.tour-stage:not(.is-loading) .tour-loading { display: none; }
+
+.tour-note {
+    position: absolute; left: 50%; top: 12px; z-index: 3; transform: translateX(-50%); max-width: calc(100% - 24px); margin: 0; padding: 4px 10px;
+    border-radius: var(--radius-control); background: rgba(20, 22, 28, 0.7); color: #e9e6df; font-size: 14px;
+}
+.tour-stage.is-broken .tour-note { top: 50%; transform: translate(-50%, -50%); max-width: 32ch; text-align: center; }
+
+/* The end card, over the last frame. */
+.tour-end {
+    position: absolute; left: 50%; top: 50%; z-index: 4; transform: translate(-50%, -50%);
+    width: min(520px, calc(100% - 32px)); padding: 24px 28px; text-align: center;
+    background: var(--surface); color: var(--text); border-radius: var(--radius);
+}
+.tour-end-line { font-size: 19px; font-weight: 500; margin: 0 0 18px; }
+.tour-end-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.tour-stage.is-ended .tour-canvas { cursor: default; }
+
+/* The narration: a film subtitle above the control bar, sliding down when the bar fades. */
+.tour-caption {
+    position: absolute; left: 50%; bottom: calc(var(--bar-h) + 14px); z-index: 2; transform: translateX(-50%);
+    width: max-content; max-width: min(64ch, calc(100% - 48px)); margin: 0; padding: 6px 14px;
+    border-radius: var(--radius-control); background: rgba(14, 15, 18, 0.66); color: #fff;
+    font-size: clamp(15px, 1.5vw, 20px); line-height: 1.45; text-align: center; pointer-events: none;
+    transition: bottom 0.3s ease;
+}
+.tour-film.is-idle .tour-caption { bottom: 22px; }
+.tour-film.is-ended .tour-caption { visibility: hidden; }
+
+/* The control bar: progress on top, then transport, what's playing, sound and full screen. */
+.tour-bar {
+    position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 26px 14px 10px;
+    background: linear-gradient(to top, rgba(10, 11, 14, 0.72), rgba(10, 11, 14, 0.45) 55%, transparent);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.tour-film.is-idle .tour-bar { opacity: 0; transform: translateY(8px); pointer-events: none; }
+.tour-progress { display: flex; gap: 3px; height: 4px; margin: 0 4px 8px; }
+.tour-seg { flex: 1 1 0; min-width: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.28); overflow: hidden; }
+.tour-seg-fill { display: block; height: 100%; background: #fff; transform: scaleX(0); transform-origin: left center; }
+.tour-controls { display: flex; align-items: center; gap: 6px; }
+.tour-icon {
+    display: inline-grid; place-items: center; width: 40px; height: 40px; padding: 0; flex: none;
+    border: 0; border-radius: 50%; background: transparent; color: #fff; cursor: pointer;
+}
+.tour-icon:hover { background: rgba(255, 255, 255, 0.16); }
+.tour-icon svg { width: 22px; height: 22px; }
+.tour-icon:focus-visible, .tour-voice select:focus-visible, .tour-start:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.tour-play { width: 44px; height: 44px; background: rgba(255, 255, 255, 0.95); color: #1d1c19; }
+.tour-play:hover { background: #fff; }
+.tour-icon[aria-pressed="true"] { background: rgba(255, 255, 255, 0.2); }
+.tour-now { flex: 1 1 auto; min-width: 0; margin: 0 8px; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tour-now-num { color: rgba(255, 255, 255, 0.65); font-variant-numeric: tabular-nums; margin-right: 6px; }
+.tour-now-title { font-weight: 600; }
+.tour-voice select {
+    height: 34px; max-width: 200px; padding: 0 8px; border: 1px solid rgba(255, 255, 255, 0.35); border-radius: var(--radius-control);
+    background: rgba(255, 255, 255, 0.1); color: #fff; font: inherit; font-size: 14px; cursor: pointer;
+}
+.tour-voice select option { color: #1d1c19; }
+.tour-voice select:disabled { opacity: 0.5; cursor: default; }
+
+/* Chapters, under the film: every chapter at a glance, the current one marked. */
+.tour-chapters { margin: 12px auto 0; max-width: 100%; }
+.tour-chapters ol {
+    list-style: none; margin: 0; padding: 4px; display: flex; justify-content: center; gap: 6px;
+    overflow-x: auto; scrollbar-width: thin; scroll-snap-type: x proximity;
+}
+.tour-chip {
+    min-height: 34px; padding: 0 12px; white-space: nowrap; scroll-snap-align: center;
+    border: 1px solid var(--line); border-radius: 999px; background: transparent; color: var(--text-2);
+    font: inherit; font-size: 14px; font-weight: 500; cursor: pointer;
+}
+.tour-chip:hover { border-color: var(--control); color: var(--text); }
+.tour-chip[aria-current] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+@media (forced-colors: active) {
+    .tour-chip[aria-current] { outline: 2px solid CanvasText; outline-offset: -4px; }
+    .tour-seg-fill { background: CanvasText; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .tour-bar, .tour-caption, .tour-start { transition: none; }
+}
+@media (max-width: 1100px) { .tour-chapters ol { justify-content: flex-start; } }
+
+/* Phones: a squarer film; the caption and the controls sit below it and never fade. */
+@media (max-width: 760px) {
+    .tour { padding-top: 12px; }
+    .tour-head .hint { display: none; }
+    .tour-head h1 { font-size: 20px; }
+    .tour-film { aspect-ratio: auto; width: 100%; min-width: 0; overflow: visible; background: none; box-shadow: none; color: var(--text); }
+    .tour-film.is-full { overflow: hidden; background: #1c2129; color: #fff; }
+    .tour-stage { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius); overflow: hidden; background: #1c2129; }
+    .tour-film.is-full .tour-stage { position: absolute; aspect-ratio: auto; border-radius: 0; }
+    .tour-start { min-height: 56px; font-size: 17px; padding: 0 20px 0 16px; }
+    .tour-caption {
+        position: static; transform: none; width: auto; max-width: none; min-height: calc(2 * 1.45em);
+        margin: 10px 0 0; padding: 0; background: none; color: var(--text); font-size: 17px; pointer-events: auto;
+    }
+    .tour-film.is-ended .tour-caption { visibility: visible; }
+    .tour-bar { position: static; padding: 8px 0 0; background: none; }
+    .tour-film.is-idle .tour-bar { opacity: 1; transform: none; pointer-events: auto; }
+    .tour-film.is-idle { cursor: auto; }
+    .tour-seg { background: var(--line); }
+    .tour-seg-fill { background: var(--accent); }
+    .tour-icon { color: var(--text); }
+    .tour-icon:hover { background: var(--notice); }
+    .tour-play { background: var(--accent); color: var(--accent-ink); }
+    .tour-voice { flex: 0 1 132px; min-width: 0; }
+    .tour-voice select { width: 100%; color: var(--text); background: var(--surface); border-color: var(--control); }
+    .tour-now { display: none; }
+    .tour-now { color: var(--text); }
+    .tour-now-num { color: var(--muted); }
+}

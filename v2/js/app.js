@@ -13,6 +13,7 @@ import * as area from './views/area.js';
 import * as compare from './views/compare.js';
 import * as faq from './views/faq.js';
 import * as glossary from './views/glossary.js';
+import * as tour from './views/tour.js';
 import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
@@ -28,6 +29,7 @@ const ROUTES = [
     { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: selfAssessment, nav: 'self-assessment', terms: true },
     { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq', terms: true },
     { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'faq' },
+    { pattern: /^tour$/, view: tour, nav: 'tour' },
 ];
 
 const SITE = 'Growth & Impact at Sahaj';
@@ -57,6 +59,10 @@ function pageError(err) {
     };
 }
 
+// A view can return unmount(), called before the next render, to stop what it started (the tour's
+// render loop and narration).
+let unmount = null;
+
 // keep: re-render in place (the explored scope changed), holding the scroll position and menu.
 function render(content, { keep = false } = {}) {
     const scrollY = window.scrollY;
@@ -70,6 +76,8 @@ function render(content, { keep = false } = {}) {
         result = pageError(err);
     }
 
+    try { unmount?.(); } catch (err) { console.error(err); }
+    unmount = result.unmount || null;
     app.innerHTML = result.html;
     document.title = result.title ? `${result.title} | ${SITE}` : SITE;
     document.querySelectorAll('.nav-links a').forEach(a => {

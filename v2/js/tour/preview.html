@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- Dev only: previews one tour chapter in the 3D world on a simulated timeline (beat lengths
+     estimated from the narration), with a scrubber. Open /v2/js/tour/preview.html?chapter=arrival
+     over HTTP.
+       ?t=12        start 12 s in          ?play=0     start paused
+       ?theme=dark  dark theme HUD         ?reduced=1  reduced motion (beat end states)
+     Without a chapter (or with ?chapter=none) it shows the world itself:
+       ?shot=overview   a layout.SHOTS name       ?reveals=afterScopes  a layout.REVEALS name, or "all"
+       ?hours=19        time of day              ?state=afterArrival   a layout.states name -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tour chapter preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="../../styles.css">
+<script type="importmap">
+    { "imports": { "three": "../../vendor/three.module.js", "three/addons/": "../../vendor/three-addons/" } }
+</script>
+<style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #1c2129; }
+    .stage { position: fixed; inset: 0; }
+    #c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .hud { position: absolute; inset: 0; pointer-events: none; }
+    .bar { position: fixed; left: 16px; right: 16px; bottom: 16px; display: flex; gap: 12px; align-items: center; z-index: 5;
+        background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; font: 14px var(--font); color: var(--text); }
+    .bar input[type=range] { flex: 1; }
+    .bar select { font: inherit; }
+    .caption { position: fixed; left: 50%; bottom: 76px; transform: translateX(-50%); max-width: 760px; text-align: center; z-index: 5;
+        font: 500 18px var(--font); color: #fff; background: rgba(20, 18, 14, 0.62); padding: 8px 14px; border-radius: 6px; margin: 0; }
+    .caption:empty { display: none; }
+    .loading { position: fixed; inset: 0; display: grid; place-content: center; gap: 14px; z-index: 6; color: #e9e4d8;
+        font: 500 15px var(--font); text-align: center; background: radial-gradient(circle at 50% 45%, #2c3440, #171b22); transition: opacity 0.5s; }
+    .loading.done { opacity: 0; pointer-events: none; }
+    .loading .track { width: 240px; height: 4px; border-radius: 2px; background: rgba(255, 255, 255, 0.15); overflow: hidden; }
+    .loading .fill { height: 100%; width: 0; background: #e9b26a; transition: width 0.2s; }
+    .loading .err { color: #ffb4a0; max-width: 520px; }
+</style>
+</head>
+<body>
+<div class="stage">
+    <canvas id="c"></canvas>
+    <div class="hud" id="hud"></div>
+</div>
+<p class="caption" id="cap"></p>
+<div class="bar">
+    <button id="play" class="button quiet" type="button">Pause</button>
+    <select id="pick" aria-label="Chapter"></select>
+    <input id="scrub" type="range" min="0" max="1000" value="0" aria-label="Time">
+    <span id="clock">0.0s</span>
+</div>
+<div class="loading" id="loading">
+    <div>Loading the valley…</div>
+    <div class="track"><div class="fill" id="fill"></div></div>
+</div>
+<script type="module">
+    import { createWorld } from './world.js';
+    import { CHAPTERS } from './script.js';
+
+    const q = new URLSearchParams(location.search);
+    if (q.get('theme')) document.documentElement.setAttribute('data-theme', q.get('theme'));
+    const id = q.get('chapter') || 'arrival';
+    const reduced = q.get('reduced') === '1';
+    const loading = document.getElementById('loading'), fill = document.getElementById('fill');
+    const pick = document.getElementById('pick');
+    for (const c of [{ id: 'none', title: 'The world (no chapter)' }, ...CHAPTERS]) pick.append(new Option(c.title, c.id, false, c.id === id));
+    pick.onchange = () => { q.set('chapter', pick.value); q.delete('t'); location.search = q.toString(); };
+
+    let world;
+    try {
+        world = await createWorld(document.getElementById('c'), document.getElementById('hud'), {
+            reducedMotion: reduced,
+            onProgress: k => { fill.style.width = `${Math.round(k * 100)}%`; },
+        });
+    } catch (err) {
+        loading.innerHTML = `<div class="err">The world failed to load: ${err.message}</div>`;
+        throw err;
+    }
+    loading.classList.add('done');
+    window.__world = world;
+
+    const meta = CHAPTERS.find(c => c.id === id);
+    let chapter = null, group = null;
+    if (meta) {
+        try {
+            chapter = (await import(`./chapters/${id}.js`)).default;
+            group = chapter.build(world);
+            world.scene.add(group);
+        } catch (err) {
+            console.info(`Preview: chapter "${id}" is not available (${err.message}); showing the world.`);
+            chapter = null;
+        }
+    }
+
+    // Same estimate the player uses when there is no audio: about 2.6 words a second, plus a pause.
+    const beats = chapter ? meta.beats : ['(the world)'];
+    const lengths = chapter ? beats.map(b => Math.max(2.4, b.split(/\s+/).length / 2.6 + 0.8)) : [60];
+    const beatStarts = [], beatEnds = [];
+    lengths.reduce((t, len) => { beatStarts.push(t); beatEnds.push(t + len); return t + len; }, 0);
+    const duration = beatEnds.at(-1);
+
+    // Free look: a shot, reveals and time of day from the query string.
+    function freeLook() {
+        if (q.get('state')) world.applyState(q.get('state'));
+        if (q.get('shot')) world.shot(q.get('shot'));
+        const rv = q.get('reveals');
+        if (rv === 'all') world.fog.set([{ x: 0, z: 0, r: 200 }]);
+        else if (rv) world.fog.set(world.REVEALS[rv]);
+        if (q.get('hours')) world.setTimeOfDay(Number(q.get('hours')));
+    }
+
+    addEventListener('resize', () => world.resize());
+    let t = Number(q.get('t') || 0), playing = q.get('play') !== '0', last = performance.now();
+    const scrub = document.getElementById('scrub'), clock = document.getElementById('clock');
+    const playBtn = document.getElementById('play'), cap = document.getElementById('cap');
+    playBtn.textContent = playing ? 'Pause' : 'Play';
+    playBtn.onclick = () => { playing = !playing; playBtn.textContent = playing ? 'Pause' : 'Play'; };
+    scrub.oninput = () => { t = (scrub.value / 1000) * duration; };
+
+    // Frame timing, for measuring: window.__frames holds the last 240 frame intervals in ms.
+    window.__frames = [];
+    let prevNow = performance.now();
+    function frame(now) {
+        window.__frames.push(now - prevNow);
+        if (window.__frames.length > 240) window.__frames.shift();
+        prevNow = now;
+        if (playing) t = (t + (now - last) / 1000) % duration;
+        last = now;
+        const beat = Math.max(0, beatEnds.findIndex(e => t < e));
+        const shownT = reduced ? beatEnds[beat] - 1e-3 : t;
+        const beatT = Math.min(1, (shownT - beatStarts[beat]) / lengths[beat]);
+        world.reset(shownT);
+        if (group) group.visible = true;
+        if (chapter) chapter.update(world, group, { t: shownT, duration, beat, beatT, beatStarts, beatEnds, clock: shownT });
+        freeLook();
+        world.render();
+        scrub.value = String(Math.round((t / duration) * 1000));
+        clock.textContent = `${t.toFixed(1)}s / ${duration.toFixed(1)}s · beat ${beat + 1}`;
+        cap.textContent = chapter ? beats[beat] : '';
+        requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+</script>
+</body>
+</html>

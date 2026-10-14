@@ -45,10 +45,20 @@ export function render(content) {
     return {
         title: '',
         html: `<section class="page start">
-            <header class="page-head">
-                <h1>${esc(page.headline)}</h1>
-                <p class="lede">${esc(page.lede)}</p>
-                <a class="tour-link" href="#tour">${icon('play')}Watch the guide in three minutes</a>
+            <header class="page-head start-hero">
+                <div>
+                    <h1>${esc(page.headline)}</h1>
+                    <p class="lede">${esc(page.lede)}</p>
+                </div>
+                <a class="tour-card" href="#tour">
+                    <img src="assets/tour/thumbnail.jpeg" width="1920" height="1080" alt="">
+                    <span class="tour-card-play" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
+                    <span class="tour-card-text">
+                        <strong>Watch the guide in three minutes</strong>
+                        <span>Walk a valley under fog with an explorer: the principles, the scopes, the areas and a whole cycle</span>
+                    </span>
+                    <span class="tour-card-time">3:30</span>
+                </a>
             </header>
             <section class="start-intro" aria-labelledby="start-intro-head">
                 <div>

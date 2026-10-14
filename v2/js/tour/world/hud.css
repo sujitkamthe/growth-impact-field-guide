@@ -1,0 +1,173 @@
+/* The tour world's game HUD: calm, warm panels over the 3D view, in the site's font and colours.
+   Everything sits inside .tw-hud, which fills the element the player puts over the canvas. */
+
+.tw-hud {
+    --tw-panel: color-mix(in srgb, var(--bg, #faf9f6) 93%, transparent);
+    --tw-edge: color-mix(in srgb, var(--line, #e2ded6) 85%, transparent);
+    --tw-ink: var(--text, #1d1c19);
+    --tw-ink-2: var(--text-2, #4b4842);
+    --tw-muted: var(--muted, #6a665e);
+    --tw-accent: #33357d;   /* Sahaj indigo: the film's brand accent */
+    --tw-gap: clamp(10px, 1.6vw, 18px);
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    font-family: var(--font, 'IBM Plex Sans', system-ui, sans-serif);
+    color: var(--tw-ink);
+    font-size: clamp(12px, 1.05vw, 14px);
+    line-height: 1.35;
+    z-index: 2;
+}
+.tw-panel {
+    background: var(--tw-panel);
+    border: 1px solid var(--tw-edge);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(20, 16, 10, 0.08), 0 6px 18px rgba(20, 16, 10, 0.12);
+    backdrop-filter: blur(8px) saturate(1.1);
+    -webkit-backdrop-filter: blur(8px) saturate(1.1);
+}
+.tw-hidden { opacity: 0; visibility: hidden; }
+
+/* Quest box, top left */
+.tw-left {
+    position: absolute;
+    top: var(--tw-gap);
+    left: var(--tw-gap);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: clamp(200px, 22vw, 280px);
+}
+.tw-quest { padding: 10px 14px 12px; transition: opacity 0.3s; }
+.tw-eyebrow {
+    font-size: 0.78em;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--tw-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.tw-eyebrow::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background: var(--tw-accent);
+}
+.tw-quest-title { font-weight: 600; font-size: 1.08em; margin-top: 3px; }
+.tw-quest-title.tw-changed { animation: tw-in 0.45s ease-out; }
+.tw-quest-progress { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.tw-quest-progress[hidden] { display: none; }
+.tw-segs { display: flex; gap: 3px; flex: 1; }
+.tw-segs i {
+    flex: 1;
+    height: 5px;
+    border-radius: 3px;
+    background: color-mix(in srgb, var(--tw-ink) 14%, transparent);
+    transition: background 0.35s;
+}
+.tw-segs i.on { background: var(--tw-accent); }
+.tw-count { font-variant-numeric: tabular-nums; font-weight: 600; font-size: 0.92em; color: var(--tw-ink-2); }
+
+/* Notes counter */
+.tw-notes {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px 6px 10px;
+    transition: opacity 0.3s;
+}
+.tw-notes svg { width: 16px; height: 16px; color: var(--tw-ink-2); }
+.tw-notes b { font-variant-numeric: tabular-nums; min-width: 1ch; }
+.tw-notes b.tw-changed { animation: tw-pop 0.4s ease-out; }
+
+/* Area rows */
+.tw-rows { padding: 8px 12px; display: flex; flex-direction: column; gap: 6px; }
+.tw-row { display: flex; align-items: center; gap: 10px; }
+.tw-row .tw-swatch { width: 4px; align-self: stretch; min-height: 22px; border-radius: 2px; background: var(--tw-area, #888); }
+.tw-row .tw-name { flex: 1; font-weight: 500; }
+.tw-row .tw-rating {
+    font-size: 0.86em;
+    font-weight: 600;
+    padding: 2px 9px;
+    border-radius: 999px;
+    border: 1px dashed color-mix(in srgb, var(--tw-ink) 30%, transparent);
+    color: var(--tw-muted);
+    min-width: 5.2em;
+    text-align: center;
+}
+.tw-row .tw-rating.set {
+    border-style: solid;
+    border-color: color-mix(in srgb, var(--tw-area) 55%, transparent);
+    background: color-mix(in srgb, var(--tw-area) 14%, transparent);
+    color: var(--tw-ink);
+}
+.tw-row .tw-rating.tw-changed { animation: tw-pop 0.4s ease-out; }
+
+/* Discovery toast, top centre */
+.tw-toast {
+    position: absolute;
+    top: var(--tw-gap);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 18px 9px;
+    text-align: center;
+    min-width: 200px;
+}
+.tw-toast .tw-eyebrow { justify-content: center; }
+.tw-toast-title { font-weight: 600; font-size: 1.12em; margin-top: 2px; }
+
+/* Minimap, top right */
+.tw-map {
+    position: absolute;
+    top: var(--tw-gap);
+    right: var(--tw-gap);
+    padding: 6px;
+    width: clamp(120px, 14vw, 176px);
+}
+.tw-map canvas { display: block; width: 100%; aspect-ratio: 1; border-radius: 5px; }
+.tw-map .tw-north {
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 10px;
+    font-weight: 600;
+    color: #f4efe2;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Parchment note card */
+.tw-card {
+    position: absolute;
+    right: calc(var(--tw-gap) + 8px);
+    top: 50%;
+    width: clamp(220px, 24vw, 300px);
+    padding: 16px 18px 14px;
+    background: #f7eed8;
+    color: #3a2f20;
+    border-radius: 8px;
+    border: 1px solid #e0cfa8;
+    box-shadow: 0 2px 4px rgba(40, 28, 10, 0.12), 0 12px 30px rgba(40, 28, 10, 0.22);
+    background-image: radial-gradient(120% 80% at 10% 0%, rgba(255, 255, 255, 0.5), transparent 60%),
+        repeating-linear-gradient(0deg, transparent 0 25px, rgba(150, 120, 70, 0.12) 25px 26px);
+}
+.tw-card .tw-eyebrow { color: #8a6a3a; }
+.tw-card .tw-eyebrow::before { background: #b5823c; }
+.tw-card ol { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.tw-card li { font-weight: 500; display: flex; gap: 8px; align-items: baseline; }
+.tw-card li::before { content: attr(data-n); font-size: 0.8em; color: #9a7a4a; font-weight: 600; min-width: 1.2em; }
+
+@keyframes tw-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+@keyframes tw-pop { 0% { transform: scale(1); } 40% { transform: scale(1.18); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) {
+    .tw-quest-title.tw-changed, .tw-notes b.tw-changed, .tw-row .tw-rating.tw-changed { animation: none; }
+}
+@media (max-width: 560px) {
+    .tw-left { width: 180px; }
+    .tw-card { right: 50%; transform: translateX(50%); top: auto; bottom: 90px; }
+}
