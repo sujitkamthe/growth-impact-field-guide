@@ -21,9 +21,9 @@ node_modules/
 *.log
 npm-debug.log*
 
-# Generated files (built by CI)
+# Generated files (built by CI), for V1 only: the tour's audio manifests in v2/ are committed
 data.js
-manifest.json
+/v1/manifest.json
 app.bundle.js
 app.bundle.min.js
 

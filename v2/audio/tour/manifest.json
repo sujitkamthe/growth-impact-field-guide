@@ -1,0 +1,396 @@
+{
+  "engine": "edge-tts (Microsoft neural voices, unofficial; Azure Speech offers the same voices officially)",
+  "rate": "-3%",
+  "voices": [
+    {
+      "id": "en-GB-SoniaNeural",
+      "label": "Sonia (British)"
+    },
+    {
+      "id": "en-IN-NeerjaExpressiveNeural",
+      "label": "Neerja (Indian, expressive)"
+    }
+  ],
+  "clips": {
+    "en-GB-SoniaNeural": {
+      "arrival": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/arrival-0.mp3",
+          "duration": 8.45,
+          "hash": "5bed720234a6"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/arrival-1.mp3",
+          "duration": 7.68,
+          "hash": "ae3b5859d359"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/arrival-2.mp3",
+          "duration": 1.91,
+          "hash": "bfcd21fcb9b7"
+        }
+      ],
+      "principles": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-0.mp3",
+          "duration": 6.01,
+          "hash": "c0d48bb40096"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-1.mp3",
+          "duration": 11.61,
+          "hash": "cb53cbbbd53b"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-2.mp3",
+          "duration": 8.94,
+          "hash": "93416bd7f770"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-3.mp3",
+          "duration": 9.85,
+          "hash": "96b7eace4ebd"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-4.mp3",
+          "duration": 7.28,
+          "hash": "65e310caeb42"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/principles-5.mp3",
+          "duration": 7.69,
+          "hash": "8eff7d4fe0ff"
+        }
+      ],
+      "scopes": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-0.mp3",
+          "duration": 8.27,
+          "hash": "13b310efedb1"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-1.mp3",
+          "duration": 4.86,
+          "hash": "d844c53848e1"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-2.mp3",
+          "duration": 5.96,
+          "hash": "1db46c4079bb"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-3.mp3",
+          "duration": 5.51,
+          "hash": "ed9f866aeb18"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-4.mp3",
+          "duration": 6.84,
+          "hash": "8b459ffd9c79"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/scopes-5.mp3",
+          "duration": 7.46,
+          "hash": "e7cf9a4d112c"
+        }
+      ],
+      "areas": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/areas-0.mp3",
+          "duration": 4.14,
+          "hash": "8d96acfc40b2"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/areas-1.mp3",
+          "duration": 8,
+          "hash": "f834e58e189e"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/areas-2.mp3",
+          "duration": 4.75,
+          "hash": "91cde9c0c816"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/areas-3.mp3",
+          "duration": 5.89,
+          "hash": "e6d2cdc16cc7"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/areas-4.mp3",
+          "duration": 4.87,
+          "hash": "fc0c1eb8112c"
+        }
+      ],
+      "expectations": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/expectations-0.mp3",
+          "duration": 7.58,
+          "hash": "043e2b73d9ee"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/expectations-1.mp3",
+          "duration": 5.14,
+          "hash": "c4a0f166406c"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/expectations-2.mp3",
+          "duration": 5.44,
+          "hash": "83aeeef25cfa"
+        }
+      ],
+      "feedback": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/feedback-0.mp3",
+          "duration": 6.54,
+          "hash": "fe4578c38991"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/feedback-1.mp3",
+          "duration": 5.91,
+          "hash": "760f4687cd6d"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/feedback-2.mp3",
+          "duration": 4.97,
+          "hash": "67354fc4abbf"
+        }
+      ],
+      "self-assessment": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/self-assessment-0.mp3",
+          "duration": 5.67,
+          "hash": "6bed5982201f"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/self-assessment-1.mp3",
+          "duration": 7.18,
+          "hash": "c3080982e68e"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/self-assessment-2.mp3",
+          "duration": 8.45,
+          "hash": "4a4055ae462a"
+        }
+      ],
+      "growth": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/growth-0.mp3",
+          "duration": 6.06,
+          "hash": "7e7dfef7ba30"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/growth-1.mp3",
+          "duration": 5.55,
+          "hash": "10b25d59f21b"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/growth-2.mp3",
+          "duration": 6.84,
+          "hash": "e147fb3acb8a"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/growth-3.mp3",
+          "duration": 3.99,
+          "hash": "c1880d194998"
+        }
+      ],
+      "close": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/close-0.mp3",
+          "duration": 6.07,
+          "hash": "7b0237d52733"
+        }
+      ]
+    },
+    "en-IN-NeerjaExpressiveNeural": {
+      "arrival": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/arrival-0.mp3",
+          "duration": 10.1,
+          "hash": "201f2a373c9a"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/arrival-1.mp3",
+          "duration": 8.74,
+          "hash": "9b750b9264ea"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/arrival-2.mp3",
+          "duration": 2.46,
+          "hash": "3bebdd2f43bf"
+        }
+      ],
+      "principles": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-0.mp3",
+          "duration": 7.16,
+          "hash": "08a6ed969579"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-1.mp3",
+          "duration": 13.41,
+          "hash": "42f0cc66ccf7"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-2.mp3",
+          "duration": 10.03,
+          "hash": "410a5596f9da"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-3.mp3",
+          "duration": 10.85,
+          "hash": "b6ab6f9a1ebd"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-4.mp3",
+          "duration": 8.45,
+          "hash": "708eff242990"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/principles-5.mp3",
+          "duration": 9.1,
+          "hash": "1613716fcf9a"
+        }
+      ],
+      "scopes": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-0.mp3",
+          "duration": 9.28,
+          "hash": "853952539140"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-1.mp3",
+          "duration": 5.78,
+          "hash": "cc6058a3e32a"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-2.mp3",
+          "duration": 6.61,
+          "hash": "208cbdcc09d8"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-3.mp3",
+          "duration": 6.15,
+          "hash": "825c150a1143"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-4.mp3",
+          "duration": 7.34,
+          "hash": "f17211620213"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/scopes-5.mp3",
+          "duration": 8.65,
+          "hash": "b9e1d8ad89f8"
+        }
+      ],
+      "areas": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-0.mp3",
+          "duration": 4.7,
+          "hash": "ebf357fdb9cf"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-1.mp3",
+          "duration": 8.74,
+          "hash": "cff0d9c0ee95"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-2.mp3",
+          "duration": 5.24,
+          "hash": "ecba80622583"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-3.mp3",
+          "duration": 6.61,
+          "hash": "125a2d770fff"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-4.mp3",
+          "duration": 5.54,
+          "hash": "326c11b9e807"
+        }
+      ],
+      "expectations": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-0.mp3",
+          "duration": 8.27,
+          "hash": "417f910efa60"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-1.mp3",
+          "duration": 5.75,
+          "hash": "581dd0ad7491"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-2.mp3",
+          "duration": 5.91,
+          "hash": "2fa56a5d474a"
+        }
+      ],
+      "feedback": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/feedback-0.mp3",
+          "duration": 7.67,
+          "hash": "c6a864dafdc9"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/feedback-1.mp3",
+          "duration": 6.75,
+          "hash": "1025aac33caf"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/feedback-2.mp3",
+          "duration": 5.76,
+          "hash": "0e15a5161292"
+        }
+      ],
+      "self-assessment": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/self-assessment-0.mp3",
+          "duration": 6.58,
+          "hash": "33e4e93a5f69"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/self-assessment-1.mp3",
+          "duration": 8.31,
+          "hash": "14fba8810229"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/self-assessment-2.mp3",
+          "duration": 9.46,
+          "hash": "138877e98f3a"
+        }
+      ],
+      "growth": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/growth-0.mp3",
+          "duration": 7.14,
+          "hash": "0b1c99d0c9f7"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/growth-1.mp3",
+          "duration": 6.16,
+          "hash": "092d253c90d4"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/growth-2.mp3",
+          "duration": 7.95,
+          "hash": "681d3fcc6197"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/growth-3.mp3",
+          "duration": 4.42,
+          "hash": "9f42e90baf36"
+        }
+      ],
+      "close": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/close-0.mp3",
+          "duration": 7.2,
+          "hash": "8fae9d8c7e53"
+        }
+      ]
+    }
+  }
+}
