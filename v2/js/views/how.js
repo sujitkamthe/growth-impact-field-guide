@@ -4,12 +4,13 @@
 // steps one situation through every scope, from each scope file's In practice section.
 
 import { esc, md, mdInline } from '../ui.js';
-import { modelDiagram, reachDiagram, scopeGlyph } from '../diagram.js';
+import { modelDiagram, reachDiagram, scopeGlyph, areaIcon } from '../diagram.js';
 import { savedScope } from './_parts.js';
 import { renderProse } from './prose.js';
 
-// A section's "- **Title**: text" items, and the prose after them.
-function parts(page, slug) {
+// A section's "- **Title**: text" items, and the prose after them. Start draws its reach diagram
+// from the Scopes list too.
+export function sectionParts(page, slug) {
     const lines = (page.sections.find(s => s.slug === slug)?.body || '').split('\n');
     const items = lines.filter(l => /^- /.test(l)).map(l => {
         const m = l.slice(2).match(/^\*\*(.+?)\*\*:?\s*(.*)$/);
@@ -71,22 +72,32 @@ function bindStepper(root) {
     root.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => show(Number(b.dataset.go), true)));
 }
 
+// The three areas as small tiles in their own colours, from the Areas section's list.
+const areaTiles = (content, items) => `<ul class="area-tiles">${items.map(i => {
+    const area = content.areas.find(a => a.name === i.name);
+    return `<li data-area="${area?.key || ''}">${area ? `<a href="#area/${area.id}">${areaIcon(area.key)}${esc(i.name)}</a>` : esc(i.name)}<span>${mdInline(i.text)}</span></li>`;
+}).join('')}</ul>`;
+
 export function render(content, [open]) {
     const page = content.pages['how-it-works'];
-    const scopes = parts(page, 'scopes');
-    const growth = parts(page, 'growing-into-the-next-scope');
-    const cycle = parts(page, 'the-cycle');
+    const areas = sectionParts(page, 'areas');
+    const scopes = sectionParts(page, 'scopes');
+    const growth = sectionParts(page, 'growing-into-the-next-scope');
+    const cycle = sectionParts(page, 'the-cycle');
     const team = content.scope('team');
     const practiceIntro = page.sections.find(s => s.slug === 'scopes-in-practice')?.body || '';
 
     return renderProse(content, 'how-it-works', {
         open,
         bodies: {
-            scopes: `<figure class="reach-figure">${reachDiagram(scopes.items)}</figure>${md(scopes.rest)}`,
-            'growing-into-the-next-scope': `${flow(growth.items, true)}${md(growth.rest)}
-                <figure class="diagram-figure">${modelDiagram(content, { scope: team, stretch: ['cd'], size: 170 })}
-                <figcaption>Team scope in every area, stretching into Wider in Client & Delivery.</figcaption></figure>`,
-            'the-cycle': `${flow(cycle.items, false)}${md(cycle.rest)}`,
+            scopes: `<div class="reach-row"><figure class="reach-figure">${reachDiagram(scopes.items, { step: 38 })}</figure><div>${md(scopes.rest)}</div></div>`,
+            areas: { visual: areaTiles(content, areas.items), more: md(areas.rest) },
+            'growing-into-the-next-scope': {
+                visual: flow(growth.items, true),
+                more: `${md(growth.rest)}<figure class="diagram-figure">${modelDiagram(content, { scope: team, stretch: ['cd'], size: 170 })}
+                    <figcaption>Team scope in every area, stretching into Wider in Client & Delivery.</figcaption></figure>`,
+            },
+            'the-cycle': { visual: flow(cycle.items, false), more: md(cycle.rest) },
             'scopes-in-practice': practice(content, practiceIntro, savedScope(content)),
         },
         mount: bindStepper,

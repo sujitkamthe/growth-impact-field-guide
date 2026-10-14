@@ -22,7 +22,7 @@ One piece of client work, handled at each scope. The example is made up, and it 
 
 ## Areas
 
-Every scope covers the same three areas of impact, each with its own rating.
+*Every scope covers the same three areas of impact, each with its own rating.*
 
 - **Client & Delivery**: building what the client needs, building it well and delivering it reliably.
 - **People & Team**: helping the people around you become more effective.
@@ -31,22 +31,15 @@ Every scope covers the same three areas of impact, each with its own rating.
 Client & Delivery and People & Team each have three [facets](#area/client-delivery), and all three count toward the area's one rating. The lines under a facet show what it looks like at your scope; they are signs to look for, and nobody ticks them off one by one. Org & Community has [ways to contribute](#area/org-community) instead: expectations shared by everyone at your scope, and ways to contribute that you choose from to meet them.
 
 <!-- callout -->
-An area's rating is one judgment across its three facets, not a count. A missing facet, one whose impact isn't shown at your scope at all, makes the area below expectations however strong the other two are.
-
-Each facet is judged against your current scope, so exceeding never requires next-scope work. A facet can be exceeding what your scope expects, meeting it, weaker (shown, but not yet consistently at your scope) or missing. They combine like this:
-
-- **Exceeds**: all three facets exceeding.
-- **Exceeds or Meets**: two facets exceeding and the third meeting; the team check decides which.
-- **Meets**: all three facets meeting, or one exceeding and the other two meeting. Two exceeding facets can also carry a weaker third to Meets; name the weaker one as your focus for the next cycle.
-- **Below**: usually when two or more facets are weaker, even if the third is exceeding, and always when a facet is missing.
-
-One weaker facet with the other two meeting, or with one exceeding and one meeting, is a judgment for the team check.
+Each area gets one rating, judged across its facets as a whole rather than counted. Exceeding your scope's expectations in two facets can carry a weaker third, but a facet you don't show at your scope at all makes the area below expectations.
 
 Learning has no area of its own because it runs through all three: at every scope you keep your craft and judgment current, act on feedback, and adapt when the context changes.
 
-## Your reference scope
+## Your scope
 
-Your reference scope is the scope you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your teammates have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
+*Your scope is the one you have shown consistently across all three areas, and it sets what's expected of you in each.*
+
+Your scope is the one you have shown consistently across all three areas. You choose it when you write your expectations. If it doesn't match the impact your teammates have seen, it is corrected during the review, before the doc is agreed. It sets the same expectations in every area. If you're new to Sahaj, it is agreed from the impact you showed in your previous work, and nobody expects you to meet every expectation in your first few weeks, while you learn what's new to you.
 
 You will be stronger in some areas than others, and the rating captures that: below, meets or exceeds expectations in each area. Exceeds means impact clearly stronger, broader or more durable than your scope expects.
 
@@ -60,7 +53,7 @@ Exceeds is judged against your current scope, and it doesn't change your scope: 
 - **Keep it up**: until the people around you depend on you for it, in all three areas
 - **Your scope is raised**: at the team check
 
-A stretch adds some of the next scope's responsibilities on top of your current expectations. It usually starts in one area, and consistent next-scope impact there is rated as exceeding. Your scope is raised once you show that impact consistently in all three areas, because your reference scope is the one you show everywhere. It doesn't need every next-scope expectation met perfectly, only a pattern the people around you depend on; a single strong instance isn't enough, and there is no fixed number of cycles.
+A stretch adds some of the next scope's responsibilities on top of your current expectations. It usually starts in one area, and consistent next-scope impact there is rated as exceeding. Your scope is raised once you show that impact consistently in all three areas, because your scope is the one you show everywhere. It doesn't need every next-scope expectation met perfectly, only a pattern the people around you depend on; a single strong instance isn't enough, and there is no fixed number of cycles.
 
 A stretch is the usual way to grow, but you don't need one on record to be raised: impact that is already consistent at the next scope counts however it started. If you are growing quickly, you can take on next-scope responsibilities as soon as you're ready, in one area or more. If you have been at the same scope for a long time, or your scope is below what your experience suggests, a stretch is set with you in all three areas, so that your growth has a plan.
 
@@ -75,17 +68,8 @@ You drive your own doc, a short one made from [the template](doc-templates/expec
 
 ## Who reviews and decides
 
+*Anyone on your team can review your expectations and confirm your ratings, whatever their scope.*
+
 Anyone on your team can review your expectations, discuss them and ask for changes, whatever their scope, and at the team check your teammates confirm, correct or add to your self-assessment and confirm your ratings. Review goes in every direction: the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
 If you and your teammates still disagree after discussing it, about your scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
-
-## Principles
-
-<!-- band -->
-- **Clear expectations come first.** You can only look back on a cycle against expectations you both knew at the start, so if yours were never written down, start there.
-- **Impact is demonstrated over time.** One good example shows you can; doing it consistently, so that people come to depend on it, shows you do.
-- **A well-made attempt counts.** If you take on a real problem and work it well, it counts even when factors outside your control stop it from succeeding. Working it well means staying with it: trying more than one approach, raising what's in the way early, bringing people along and adapting. Judge the problem you took on, how you went about it and what it left behind, such as groundwork, learning or a clear decision to stop. Giving up at the first setback, or an attempt without real effort behind it, is not impact, and neither is not taking the problem on.
-- **Roles don't set your scope.** No scope requires a particular role, and leading a team or an account doesn't by itself put you at Team or Wider.
-- **Growth means wider trust.** Doing more of the same work, or doing it better, is not the next scope; being trusted with problems that reach further is.
-- **You can always go beyond your scope.** Your scope sets what's expected, never what you're allowed to do.
-- **Every office uses the same guide.** "Team scope" means the same thing in Pune as in London.

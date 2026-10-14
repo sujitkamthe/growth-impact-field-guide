@@ -1,8 +1,6 @@
-// Expectations, the landing page: every scope by area. Concise by default, listing only each
-// expectation's handle so the grid reads like a one-page sheet; Detailed puts each handle over
-// the bullets that unpack it. Above the grid, "Start here" sends readers with a task to the
-// page for it; each row's heading carries the scope's mindset and reach, so the grid also
-// explains the scopes.
+// Expectations: every scope by area. Concise by default, listing only each expectation's handle
+// so the grid reads like a one-page sheet; Detailed puts each handle over the bullets that unpack
+// it. Each row's heading carries the scope's mindset and reach, so the grid also explains the scopes.
 // The explored scope (set from the header's Explore a scope menu) and the next one are marked.
 // Once someone explores a scope, the grid shows only its row, with a link to compare it with the
 // next one and a button that brings every level back; a first visit sees all four.
@@ -15,15 +13,6 @@ const sectionText = (page, slug) => page.sections.find(s => s.slug === slug)?.bo
 
 // An area whose expectations have no handles has no Concise form, so Concise shows only its core line.
 const hasHandles = block => [...block.shared, ...block.facets.flatMap(f => f.items)].some(e => e.handle);
-
-// "- [Task](#route): what it involves" lines from home.md's Start here section.
-function tasks(page) {
-    const items = [...sectionText(page, 'start-here').matchAll(/^- \[(.+?)\]\((.+?)\):\s*(.+)$/gm)];
-    return `<nav class="start-here" aria-labelledby="start-here-label">
-        <p class="start-here-label" id="start-here-label">Start here</p>
-        <ul>${items.map(([, label, href, desc]) => `<li><a href="${esc(href)}">${esc(label)}</a><span>${mdInline(desc)}</span></li>`).join('')}</ul>
-    </nav>`;
-}
 
 export function render(content) {
     const page = content.pages.home;
@@ -68,8 +57,6 @@ export function render(content) {
         html: `<section class="page">
             <header class="page-head matrix-head">
                 <h1>Expectations</h1>
-                <p class="lede">${esc(page.lede)}</p>
-                ${tasks(page)}
                 ${viewTabs('all')}
                 <p class="hint matrix-hint">Each row is a scope and each column an area. Open a scope for its full expectations and how to tell you're meeting them. ${highlight}</p>
             </header>

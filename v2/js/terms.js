@@ -1,7 +1,9 @@
 // Links glossary terms where they are mentioned: the first mention of each term on a reading
 // page becomes a link to its glossary entry, with its first sentence as a hover
 // preview. Each glossary entry lists the phrases that count as a mention ("matches:"), so a
-// phrase links only where it means the term. Headings, links, controls and diagrams are left alone.
+// phrase links only where it means the term. Headings, links, controls and diagrams are left alone,
+// and so is everything in view when a page opens: terms link only inside text a reader has opened
+// (Read more, a principle, an answer), so the first view of a page isn't dotted with links.
 
 const MATCHES = /^<!-- matches: (.*?) -->/;
 const SKIP = 'a, button, summary, label, select, h1, h2, h3, h4, svg, code, .eyebrow, .on-page, .kind, .facet-label, .ws-scope, .glossary';
@@ -15,7 +17,7 @@ export function glossaryTerms(content) {
         const text = s.body.replace(/^<!--.*?-->\s*/, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1');
         const preview = (text.match(/^[^.]*\./) || [text])[0];
         return m[1].split(',').map(p => p.trim()).filter(Boolean).map(phrase => ({ slug: s.slug, phrase, preview }));
-    // Longer phrases first, so "reference scope" is matched before anything it contains.
+    // Longer phrases first, so "raise in scope" is matched before anything it contains.
     }).sort((a, b) => b.phrase.length - a.phrase.length);
 }
 
@@ -28,7 +30,8 @@ export function linkTerms(root, terms) {
         if (linked.has(term.slug)) continue;
         const re = new RegExp(`\\b${escapeRe(term.phrase).replace(/ /g, '\\s+')}\\b`, 'i');
         const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-            acceptNode: node => (node.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+            acceptNode: node => (node.parentElement.closest(SKIP) || !node.parentElement.closest('details')
+                ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
         });
         for (let node = walker.nextNode(); node; node = walker.nextNode()) {
             const m = node.data.match(re);

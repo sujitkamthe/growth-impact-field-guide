@@ -1,4 +1,5 @@
-// Reading pages: a title, a lede, an "on this page" list and markdown sections.
+// Reading pages: a title, a lede and markdown sections. Sections are short enough to take in at a
+// glance, so there is no "on this page" list; each is still linkable as #<page>/<section>.
 // Views can replace a section's body or add content after it, keyed by the section's
 // slug, and open the page at a section (#<page>/<section>).
 //
@@ -10,12 +11,32 @@
 //
 // On every page, a section whose body starts with "<!-- band -->" is set on a tinted band:
 // one per page at most, for the section whose register changes.
+//
+// So a page can be taken in at a glance, a section with a short line (see takeShort in
+// content.js) shows only that line, and the rest opens from Read more. "<!-- more -->" in a
+// section keeps what comes before it in view and folds the rest; a view can do the same by
+// passing { visual, more } as a section's body.
 
-import { esc, md, mdInline } from '../ui.js';
+import { esc, md, mdInline, fold, bindFolds, openFoldAround } from '../ui.js';
 
 const ITEM = /^(\d+\.|-) \*\*(.+?)\*\*:?\s*(.*)$/;
 const NOTE = /^<!-- (scale|list) -->$/;
 export const BAND = /^<!-- band -->\s*/;
+const MORE = /^<!-- more -->$/m;
+
+// A section's short line, what stays in view and what folds behind Read more. The short line is
+// the summary; markdown before "<!-- more -->" stays in view.
+export function glance(s, render, given) {
+    const short = s.short ? `<p class="glance-short">${mdInline(s.short)}</p>` : '';
+    if (given && typeof given === 'object') return short + (given.visual || '') + fold(given.more || '');
+    if (typeof given === 'string') return short + given;
+    const body = s.body.replace(BAND, '');
+    if (MORE.test(body)) {
+        const [shown, folded] = body.split(MORE);
+        return short + render(shown) + fold(render(folded));
+    }
+    return s.short ? short + fold(render(body)) : render(body);
+}
 
 function worksheetBody(body) {
     const out = [];
@@ -55,7 +76,8 @@ function worksheetBody(body) {
 
 export function renderProse(content, pageId, { bodies = {}, after = {}, open = null, worksheet = false, lead = '', mount: extra } = {}) {
     const page = content.pages[pageId];
-    const body = s => bodies[s.slug] ?? (worksheet ? worksheetBody(s.body) : md(s.body));
+    const render = text => (worksheet ? worksheetBody(text) : md(text));
+    const body = s => glance(s, render, bodies[s.slug]);
     const band = s => (BAND.test(s.body) ? ' band' : '');
     return {
         title: page.title,
@@ -66,9 +88,6 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
                 <h1>${esc(page.title)}</h1>
                 <p class="lede">${esc(page.lede)}</p>
                 ${lead}
-                <nav class="on-page" aria-label="On this page">
-                    ${page.sections.map(s => `<a href="#${pageId}" data-jump="${s.slug}">${esc(s.title)}</a>`).join('')}
-                </nav>
             </header>
             ${page.sections.map(s => `<section class="prose${band(s)}" id="${s.slug}">
                 <h2>${esc(s.title)}</h2>${body(s)}${after[s.slug] || ''}
@@ -76,12 +95,13 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
         </section>`,
         mount(root) {
             extra?.(root);
-            if (open) requestAnimationFrame(() => root.querySelector(`#${CSS.escape(open)}`)?.scrollIntoView({ block: 'start' }));
-            root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
-                e.preventDefault();
-                history.replaceState(null, '', `#${pageId}/${a.dataset.jump}`);
-                root.querySelector(`#${CSS.escape(a.dataset.jump)}`)?.scrollIntoView({ block: 'start' });
-            }));
+            bindFolds(root);
+            const show = slug => {
+                const target = root.querySelector(`#${CSS.escape(slug)}`);
+                openFoldAround(target);
+                target?.scrollIntoView({ block: 'start' });
+            };
+            if (open) requestAnimationFrame(() => show(open));
         },
     };
 }

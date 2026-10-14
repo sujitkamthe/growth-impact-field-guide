@@ -46,3 +46,26 @@ export async function copyText(text, button) {
         setTimeout(() => { button.textContent = original; }, 1600);
     }
 }
+
+// Read more: detail folded under a section's short line or visual, so a page can be taken in at a
+// glance. Show less sits under the text it closes; printing opens every fold (see app.js).
+export const fold = (inner, label = 'Read more') => inner && inner.trim()
+    ? `<details class="fold"><summary>${label}</summary>${inner}
+        <button type="button" class="fold-less" data-fold-close>Show less</button></details>`
+    : '';
+
+export function bindFolds(root) {
+    root.querySelectorAll('[data-fold-close]').forEach(b => b.addEventListener('click', () => {
+        const details = b.closest('details');
+        details.open = false;
+        const summary = details.querySelector('summary');
+        summary.focus({ preventScroll: true });
+        if (summary.getBoundingClientRect().top < 0) details.scrollIntoView({ block: 'start' });
+    }));
+}
+
+// Open the fold that holds an element, so a link to a section or term inside it lands on view.
+export function openFoldAround(el) {
+    for (let d = el?.closest('details.fold'); d; d = d.parentElement?.closest('details.fold')) d.open = true;
+    el?.querySelector?.(':scope > details.fold')?.setAttribute('open', '');
+}

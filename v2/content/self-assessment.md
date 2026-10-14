@@ -29,6 +29,8 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 
 ## A worked example
 
+*One area of a self-assessment, written by someone at Team scope.*
+
 One area, written by someone at Team scope. It follows the same made-up situation as the [In practice](#scope/team) story; write yours in your own words.
 
 > **Client & Delivery**
@@ -41,11 +43,13 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 
 ## Stretch
 
-If you agreed a stretch, rate that area against your reference scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
+*Rate a stretched area against your scope like any other, then say how far you got.*
+
+If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
 
 ## Describing a shortfall
 
-When an area falls short, say why, because each reason calls for a different response from the team.
+*When an area falls short, say why, because each reason calls for a different response from the team.*
 
 <!-- list -->
 - **You had no chance, and raised it during the cycle**: the team needs to make room for you.
@@ -55,9 +59,13 @@ When an area falls short, say why, because each reason calls for a different res
 
 ## Common traps
 
+*The most common trap is treating a single good instance as a pattern.*
+
 The most common trap is treating a single good instance as a pattern, which overstates what you do consistently. Understating is the other, and it helps nobody, because your teammates then have to argue you up. Writing from your feedback notes avoids both, and lets the team check start from what you wrote, with fewer corrections. If you notice yourself building a case for a rating, go back to your notes.
 
 ## At the team check
 
 <!-- band -->
+*Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
+
 You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.

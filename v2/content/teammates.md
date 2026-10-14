@@ -5,7 +5,9 @@ lede: For the people who review someone's expectations, give them feedback and t
 
 ## Who reviews
 
-Everyone on a team reviews everyone else, whatever their scope. Anyone can comment on someone's expectations and ask for changes, give them feedback through the cycle, and confirm, correct or add to their self-assessment at the team check. You don't need to be senior to spot an expectation that's missing, and the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
+*Everyone on a team reviews everyone else, whatever their scope.*
+
+Anyone can comment on someone's expectations and ask for changes, give them feedback through the cycle, and confirm, correct or add to their self-assessment at the team check. You don't need to be senior to spot an expectation that's missing, and the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
 ## Reviewing someone's expectations
 
@@ -15,15 +17,19 @@ Start from the scope they chose, and work through these before the doc is agreed
 2. **Is anything specific to their work written down?**: expectations beyond the guide, such as what this client or team needs from them, go in their doc under the area they belong to.
 3. **Is any stretch concrete?**: everyone should be able to recognise when it's happening. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check there is a stretch in all three areas.
 
+<!-- more -->
 Add your inputs as comments and ask for changes where an expectation is missing or unclear. The doc is agreed when you and the person can both point to what's expected.
 
 ## Giving feedback during the cycle
 
-Each person gathers feedback from the people they work with and keeps their own notes of it, so your part is to give it in a form they can write down. Give it when the moment happens, because feedback saved up for the team check comes too late to act on, and when someone asks you for feedback, answer soon and specifically: "all good" gives them nothing to record. Each piece needs three things.
+*Give feedback when the moment happens, and give each piece three things.*
 
 - **What you saw**: the specific moment, so they can recall it.
 - **What it changed**: for the team, the client or the work.
 - **Which expectation it relates to**: the area, and the facet where there is one.
+
+<!-- more -->
+Each person gathers feedback from the people they work with and keeps their own notes of it, so your part is to give it in a form they can write down. Give it when the moment happens, because feedback saved up for the team check comes too late to act on, and when someone asks you for feedback, answer soon and specifically: "all good" gives them nothing to record.
 
 > **When something went well**
 >
@@ -39,6 +45,8 @@ Feedback they note down this way is what their self-assessment starts from.
 
 ## Taking part in the team check
 
+*Look at what they did first, then the rating, and for each area confirm, correct or add.*
+
 The person can present their doc, or you can read it beforehand for context. Look at what they did first, then the rating. For each area, respond in one of three ways:
 
 <!-- list -->
@@ -50,9 +58,13 @@ If a self-assessment mentions work you didn't see, ask about it: "I didn't see t
 
 ## When you disagree
 
-Disagreements usually mean you saw different slices of someone's work. Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern. Discuss a disagreement in private, and if it changes a scope or a rating, tell the person why. If the person and the people reviewing their work still disagree after that, about the scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
+*Disagreements usually mean you saw different slices of someone's work.*
+
+Name the difference and the examples behind it; there is no vote, and the aim is to understand the pattern. Discuss a disagreement in private, and if it changes a scope or a rating, tell the person why. If the person and the people reviewing their work still disagree after that, about the scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
 
 ## Proposing a stretch
+
+*Suggest a stretch when you see someone already doing some of the next scope's work.*
 
 A stretch doesn't have to start with the person. If you see them already doing some of the next scope's work, or they have been at the same scope for a long time, suggest one when you review their expectations or as you look ahead at the team check. Name what you've seen, what taking it on would involve and what support they'll need. Usually they decide whether to take it on, and write it into their doc.
 
@@ -63,4 +75,6 @@ When someone has been at the same scope for a long time, or their scope is below
 ## Raising someone's scope
 
 <!-- band -->
-Raise a reference scope at the team check when the person shows next-scope impact consistently in all three areas and the people around them depend on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. First check they meet their current scope in all three areas, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds back a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.
+*Raise someone's scope once they show next-scope impact consistently in all three areas.*
+
+Raise someone's scope at the team check when the person shows next-scope impact consistently in all three areas and the people around them depend on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. First check they meet their current scope in all three areas, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds back a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.

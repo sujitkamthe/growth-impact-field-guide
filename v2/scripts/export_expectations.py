@@ -32,7 +32,7 @@ The full content behind the growth framework, exported from the site.
 
 - **Scopes of impact**, one per person: Direct, Extended, Team, Wider. A scope describes how far your impact reaches, not a title.
 - **Areas**, the same at every scope: Client & Delivery, People & Team, Org & Community. The scope is the same in all three; strength within it is rated Below / Meets / Exceeds per area.
-- **Reference scope**: the scope shown consistently across all three areas, confirmed at the team check. It sets the expectations in every area.
+- **Your scope** is the one shown consistently across all three areas, confirmed at the team check. It sets the expectations in every area.
 - **Stretch**: once a scope is established, some of the next scope's responsibilities are taken on in one or more areas. A stretch adds to current expectations.
 - **Org & Community is mandatory**: people choose how they contribute, and anyone can go beyond their scope.
 - **Expectations are grouped**: Client & Delivery and People & Team by three facets that all count toward one rating, one or two statements each; Org & Community by shared expectations plus ways to contribute that people choose from. **Evidence is a pattern** across the cycle, not a single example.

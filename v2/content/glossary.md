@@ -32,18 +32,13 @@ One of the three parts of Client & Delivery or of People & Team, such as consult
 
 ## Raise in scope
 
-<!-- matches: reference scope is raised, raising someone's scope, raise a reference scope, scope should be raised, scope is raised, raise in scope, scope moves up -->
-Moving your reference scope to the next one. It is decided at the team check once you show next-scope impact consistently in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
+<!-- matches: raising someone's scope, raise someone's scope, scope should be raised, scope is raised, raise in scope, scope moves up -->
+Moving your scope to the next one. It is decided at the team check once you show next-scope impact consistently in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
 
 ## Rating
 
 <!-- matches: ratings, rating -->
 How you did in one area at your scope: below, meets or exceeds expectations. Exceeds is judged against your current scope and doesn't change your scope. Your teammates confirm your ratings at the team check.
-
-## Reference scope
-
-<!-- matches: reference scopes, reference scope -->
-The scope you show consistently across all three areas, agreed in your expectations doc. It sets the same expectations in every area. The guide also calls it simply your scope.
 
 ## Reviewers
 
@@ -53,7 +48,7 @@ Anyone on your team who reviews your expectations, gives you feedback or takes p
 ## Scope
 
 <!-- matches: scopes -->
-How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope still includes the ones inside it, so your own work keeps counting as your scope grows.
+How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope still includes the ones inside it, so your own work keeps counting as your scope grows. Yours is the one you show consistently across all three areas, agreed in your expectations doc, and it sets the same expectations in every area.
 
 ## Seniors
 

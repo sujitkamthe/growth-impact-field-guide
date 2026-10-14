@@ -1,22 +1,26 @@
 // One scope in depth. Deep-linkable to an area: #scope/<scope>/<area>.
 // Each area's expectations by facet (or, for Org & Community, shared expectations and ways to contribute)
-// come first, since that is what people open the page for; a short illustration follows them,
-// and evidence, self-checks, examples and ways to create impact open on demand.
+// come first, since that is what people open the page for. They open Concise, listing only each
+// expectation's handle, with a Concise | Detailed switch in the sticky bar (remembered in the
+// browser); ways to contribute, evidence, the illustration, examples and ways to create impact
+// all open on demand, so the page can be taken in at a glance.
 
-import { esc, md, mdInline, list, copyText } from '../ui.js';
-import { nextScope, prevScope, GRAMMAR, expectationGroups, routeGroups, savedScope, EXPLORING, natureOf } from './_parts.js';
+import { esc, md, mdInline, list, copyText, fold, bindFolds, openFoldAround, storageGet, storageSet } from '../ui.js';
+import { nextScope, prevScope, GRAMMAR, expectationGroups, routeGroups, savedScope, EXPLORING, natureOf, bindPicker } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 
 function practice(scope) {
     const p = scope.practice;
     if (!p) return '';
-    return `<section class="practice" aria-labelledby="practice-head">
+    return `<details class="more" id="in-practice">
+        <summary>In practice: an example at ${esc(scope.name)}</summary>
+        <div class="practice">
         <p class="eyebrow">An illustration</p>
-        <h2 id="practice-head">In practice</h2>
         <p class="practice-situation">${esc(p.situation)}</p>
         <dl class="practice-steps">${p.items.map(i => `<div><dt>${esc(i.name)}</dt><dd>${mdInline(i.text)}</dd></div>`).join('')}</dl>
         <p class="hint">This follows Client & Delivery only; ${esc(scope.name)} expects impact in all three areas. <a href="#how-it-works/scopes-in-practice">See the same situation at every scope</a></p>
-    </section>`;
+        </div>
+    </details>`;
 }
 
 function areaSection(scope, prev, area, block) {
@@ -29,14 +33,13 @@ function areaSection(scope, prev, area, block) {
         <div class="area-body">
         <p class="kind">${block.facets.length ? GRAMMAR.facets : GRAMMAR.shared(scope)}</p>
         ${expectationGroups(block, 'plain-list expect', 'detailed')}
-        ${block.routes.length ? `<div class="routes">
-            <h3>Ways to contribute</h3>
+        ${block.routes.length ? `<div class="routes">${fold(`
             <p class="kind">${GRAMMAR.routes}. These are examples at ${esc(scope.name)}; anything else counts too, judged by what it changed.</p>
-            ${routeGroups(block)}
+            ${routeGroups(block)}`, `Ways to contribute at ${esc(scope.name)}`)}
         </div>` : ''}
         <details class="how-to-tell">
             <summary>How to tell you're meeting it</summary>
-            <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; doing it consistently, so that people come to depend on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better reference scope.` : ''}</p>
+            <p class="hint">${GRAMMAR.evidence}. Look for a pattern: one example shows you can; doing it consistently, so that people come to depend on it, shows you do.${prev ? ` If several of the signs under Not there yet describe you, ${esc(prev.name)} is probably the better scope for you.` : ''}</p>
             <div class="tell-cols">
                 <div><h3>Signs of impact</h3>${list(block.evidence, 'plain-list secondary')}</div>
                 <div><h3>Ask yourself</h3>${list(block.selfCheck, 'plain-list secondary')}</div>
@@ -75,10 +78,14 @@ export function render(content, [id, areaId]) {
         </details>`,
     ].filter(Boolean).join('');
 
+    const full = storageGet('v2.scopeFull', false);
+    const option = (value, label, on) => `<button type="button" role="radio" data-value="${value}"
+        aria-checked="${on}" tabindex="${on ? 0 : -1}">${label}</button>`;
+
     return {
         title: `${scope.name} scope`,
         keepScroll: Boolean(areaId),
-        html: `<article class="page scope-page">
+        html: `<article class="page scope-page${full ? '' : ' handles-only'}">
             <header class="scope-head">
                 <p class="eyebrow"><a class="back-link" href="#expectations">Expectations</a></p>
                 <h1>${esc(scope.name)}${savedScope(content)?.id === scope.id ? ` ${EXPLORING}` : ''}</h1>
@@ -92,20 +99,29 @@ export function render(content, [id, areaId]) {
                 <nav aria-label="Sections on this page">
                     ${content.areas.map(a => `<a href="#scope/${scope.id}/${a.id}" data-jump="${a.id}">${esc(a.name)}</a>`).join('')}
                 </nav>
+                <div class="segmented" role="radiogroup" aria-label="Level of detail">
+                    ${option('concise', 'Concise', !full)}${option('detailed', 'Detailed', full)}
+                </div>
             </div>
-            ${content.areas.map(a => areaSection(scope, prev, a, scope.areas[a.id])).join('')}
-            ${practice(scope)}
-            <div class="more-group">${more}</div>
+            <div class="scope-areas">${content.areas.map(a => areaSection(scope, prev, a, scope.areas[a.id])).join('')}</div>
+            <div class="more-group">${practice(scope)}${more}</div>
             <nav class="pager" aria-label="Other scopes">
                 ${prev ? `<a href="#scope/${prev.id}"><span>Previous</span>${esc(prev.name)}</a>` : '<span></span>'}
                 ${next ? `<a class="pager-next" href="#scope/${next.id}"><span>Next</span>${esc(next.name)}</a>` : ''}
             </nav>
         </article>`,
         mount(root) {
+            const page = root.querySelector('.scope-page');
+            bindFolds(root);
+            bindPicker(root.querySelector('.sticky-bar .segmented'), value => {
+                page.classList.toggle('handles-only', value !== 'detailed');
+                storageSet('v2.scopeFull', value === 'detailed');
+            });
             const scrollTo = target => root.querySelector(`#${CSS.escape(target)}`)?.scrollIntoView({ block: 'start' });
             if (areaId) {
                 const target = root.querySelector(`#${CSS.escape(areaId)}`);
                 if (target?.tagName === 'DETAILS') target.open = true;
+                openFoldAround(target);
                 requestAnimationFrame(() => scrollTo(areaId));
             }
             root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {

@@ -1,10 +1,11 @@
 // One area: what it covers (facets that all count, or ways to contribute to choose from), then how it
-// grows across the scopes, then its notes. Linkable to a section as #area/<area>/<section>.
+// grows across the scopes, listing only each expectation's handle, then its notes, each a short line
+// with the rest behind Read more. Linkable to a section as #area/<area>/<section>.
 
-import { esc, md, list } from '../ui.js';
+import { esc, md, list, bindFolds, openFoldAround } from '../ui.js';
 import { GRAMMAR, expectationGroups, savedScope, EXPLORING } from './_parts.js';
 import { areaIcon } from '../diagram.js';
-import { BAND } from './prose.js';
+import { BAND, glance } from './prose.js';
 
 // Each scope's own examples, side by side, so the step between scopes is visible.
 function waysByScope(content, area) {
@@ -29,7 +30,7 @@ export function render(content, [id, open]) {
             </div>
             <div>
                 <p class="core">${esc(block.core)}</p>
-                ${expectationGroups(block)}
+                <div class="handles-only">${expectationGroups(block, 'plain-list', 'detailed')}</div>
             </div>
         </li>`;
     }).join('');
@@ -39,7 +40,6 @@ export function render(content, [id, open]) {
     const [prev, next] = [content.areas[i - 1], content.areas[i + 1]];
     const routes = area.groupKind === 'routes';
     const covers = routes ? 'Ways to contribute' : 'What it covers';
-    const onPage = [{ slug: 'what-it-covers', title: covers }, { slug: 'how-it-grows', title: 'How it grows' }, ...area.sections];
 
     return {
         title: area.name,
@@ -51,9 +51,6 @@ export function render(content, [id, open]) {
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
                 </header>
-                <nav class="on-page" aria-label="On this page">
-                    ${onPage.map(s => `<a href="#area/${area.id}" data-jump="${s.slug}">${esc(s.title)}</a>`).join('')}
-                </nav>
                 <section id="what-it-covers">
                     <h2>${covers}</h2>
                     <p class="kind">${routes ? GRAMMAR.routes : GRAMMAR.facets}</p>
@@ -65,7 +62,8 @@ export function render(content, [id, open]) {
                     <ol class="thread">${thread}</ol>
                 </section>
                 ${area.sections.map(s => `<section class="prose section-${s.slug}${BAND.test(s.body) ? ' band' : ''}" id="${s.slug}">
-                    <h2>${esc(s.title)}</h2>${md(s.body)}${s.slug === 'examples-at-each-scope' ? waysByScope(content, area) : ''}
+                    <h2>${esc(s.title)}</h2>${glance(s, md, s.slug === 'examples-at-each-scope'
+                        ? { more: md(s.body.replace(BAND, '')) + waysByScope(content, area) } : undefined)}
                 </section>`).join('')}
                 <nav class="pager" aria-label="Other areas">
                     ${prev ? `<a href="#area/${prev.id}"><span>Previous</span>${esc(prev.name)}</a>` : '<span></span>'}
@@ -73,12 +71,12 @@ export function render(content, [id, open]) {
                 </nav>
             </article>`,
         mount(root) {
-            if (open) requestAnimationFrame(() => root.querySelector(`#${CSS.escape(open)}`)?.scrollIntoView({ block: 'start' }));
-            root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
-                e.preventDefault();
-                history.replaceState(null, '', `#area/${area.id}/${a.dataset.jump}`);
-                root.querySelector(`#${CSS.escape(a.dataset.jump)}`)?.scrollIntoView({ block: 'start' });
-            }));
+            bindFolds(root);
+            if (open) requestAnimationFrame(() => {
+                const target = root.querySelector(`#${CSS.escape(open)}`);
+                openFoldAround(target);
+                target?.scrollIntoView({ block: 'start' });
+            });
         },
     };
 }

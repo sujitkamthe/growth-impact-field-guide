@@ -26,6 +26,8 @@ Predictable, sustainable delivery: planning, visible progress, early risks and t
 
 ## How facets are rated
 
-Combining technical craft, consulting and delivery in one area makes the guide easier to hold in your head, but it also makes it easier to hide a weak facet, so every scope lists its expectations by facet. The rating is one judgment across all three: craft and delivery that exceed your scope's expectations can carry consulting that is weaker, but not consulting that is missing. When you set expectations or assess against this area, name each facet and say how strong it was. [How it works](#how-it-works/areas) sets out how the facets combine.
+*The rating is one judgment across all three facets, so a strong facet can't hide a missing one.*
+
+Combining technical craft, consulting and delivery in one area makes the guide easier to hold in your head, but it also makes it easier to hide a weak facet, so every scope lists its expectations by facet. The rating is one judgment across all three: craft and delivery that exceed your scope's expectations can carry consulting that is weaker, but not consulting that is missing. When you set expectations or assess against this area, name each facet and say how strong it was.
 
 Consulting deserves particular care, because it is where self-assessment is least reliable. Almost everyone believes they consult well, so ask what changed because of how you framed a problem; the meetings you attended don't show that.

@@ -7,7 +7,7 @@ lede: The questions people ask most about how the guide works. For the model its
 
 ### Is this a checklist?
 
-No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet counts toward the area's one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. Exceeding your scope's expectations in two facets can carry a weaker third; a facet you don't show at your scope at all makes the area below expectations. See [how the facets combine](#how-it-works/areas). In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
+No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet counts toward the area's one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. Exceeding your scope's expectations in two facets can carry a weaker third; a facet you don't show at your scope at all makes the area below expectations. In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
 
 ### What's the difference between Extended and Team?
 
@@ -23,7 +23,7 @@ No. Deep influence inside one client's organisation, or a capability many Sahaj 
 
 ### I'm new to Sahaj. Where do I start?
 
-Your scope is agreed with your team from the impact you showed in your previous work, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do.
+Your scope is agreed with your team from the impact you showed in your previous work, not from how long you have been at Sahaj, so you can start at any scope. For the first few weeks you'll be learning what's new to you, such as our stack, the client's domain or how we work, and nobody expects you to meet every expectation while you do. Begin on [the guide's front page](#home), which explains scopes and areas and helps you find the scope that matches your work, then read that scope's page.
 
 ## Growth
 

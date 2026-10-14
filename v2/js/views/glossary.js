@@ -10,7 +10,7 @@ export function render(content, [open]) {
     return {
         title: page.title,
         keepScroll: Boolean(open),
-        html: `<section class="page narrow">
+        html: `<section class="page narrow glossary-page">
             <header class="page-head">
                 <h1>${esc(page.title)}</h1>
                 <p class="lede">${esc(page.lede)}</p>

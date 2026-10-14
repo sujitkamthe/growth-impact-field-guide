@@ -26,8 +26,12 @@ Keeping people informed, driving discussions to decisions and handling disagreem
 
 ## How facets are rated
 
+*The rating is one judgment across all three facets, so a strong facet can't hide a missing one.*
+
 Like Client & Delivery, this area lists each scope's expectations by facet, and the rating is one judgment across all three: exceeding your scope's expectations in two can carry a weaker third, but a missing facet makes the area below expectations. A team that grows because of you but never hears hard feedback from you is missing a facet, and so is a team that gets clear feedback from you but would never come to you for help.
 
 ## Where does mentoring count?
+
+*Mentoring that grows out of your work counts here; mentoring through a Sahaj programme counts in Org & Community.*
 
 Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through a programme Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Org & Community, and so is designing or running the programme itself. Count each piece of work once.

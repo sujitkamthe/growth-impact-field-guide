@@ -6,6 +6,7 @@ import * as principles from './views/principles.js';
 import * as how from './views/how.js';
 import * as teammates from './views/teammates.js';
 import * as selfAssessment from './views/self-assessment.js';
+import * as start from './views/start.js';
 import * as matrix from './views/matrix.js';
 import * as scope from './views/scope.js';
 import * as area from './views/area.js';
@@ -18,8 +19,9 @@ const ROUTES = [
     { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'principles', terms: true },
     { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works', terms: true },
     { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'teammates', terms: true },
-    // Expectations is the landing page; old #home links (and their sections) open it too.
-    { pattern: /^(?:expectations|home(?:\/[\w-]+)?)?$/, view: matrix, nav: 'expectations' },
+    // Start is the landing page, at the empty address and #home (old #home/<section> links too).
+    { pattern: /^(?:home(?:\/[\w-]+)?)?$/, view: start, nav: 'home' },
+    { pattern: /^expectations$/, view: matrix, nav: 'expectations' },
     { pattern: /^scope\/([\w-]+)(?:\/([\w-]+))?$/, view: scope, nav: 'expectations' },
     { pattern: /^area\/([\w-]+)(?:\/([\w-]+))?$/, view: area, nav: 'expectations', terms: true },
     { pattern: /^compare(?:\/([\w-]+)\/([\w-]+))?$/, view: compare, nav: 'expectations' },
@@ -37,7 +39,7 @@ function notFound() {
     return {
         title: 'Page not found',
         html: `<section class="page narrow"><h1>That page doesn't exist</h1>
-            <p>The link may be from an older version of the guide. <a href="#expectations">Go to the start</a>.</p></section>`,
+            <p>The link may be from an older version of the guide. <a href="#home">Go to the start</a>.</p></section>`,
     };
 }
 
@@ -51,7 +53,7 @@ function pageError(err) {
     return {
         title: 'Something went wrong',
         html: `<section class="page narrow"><h1>This page hit an error</h1>
-            <p>${err.message}. <a href="#expectations">Go to the start</a>, or reload the page.</p></section>`,
+            <p>${err.message}. <a href="#home">Go to the start</a>, or reload the page.</p></section>`,
     };
 }
 

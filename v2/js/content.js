@@ -46,6 +46,13 @@ export function splitSections(md, level) {
     };
 }
 
+// A section may open with a short line in italics ("*One sentence.*"), after any "<!-- … -->"
+// markers. Reading pages show it under the heading and fold the rest behind Read more.
+function takeShort(section) {
+    const m = section.body.match(/^((?:<!--.*?-->\s*\n)*)\*([^*\n][^\n]*?)\*[ \t]*(?:\n+|$)/);
+    return m ? { ...section, short: m[2], body: (m[1] + section.body.slice(m[0].length)).trim() } : section;
+}
+
 function listItems(md) {
     return md.split('\n').filter(l => /^- /.test(l)).map(l => l.slice(2).trim());
 }
@@ -131,14 +138,15 @@ function parseArea(text) {
         else if (s.slug === 'facets' || s.slug === 'ways-to-contribute') {
             const { intro, sections: groups } = splitSections(s.body, 3);
             Object.assign(area, { facets: groups, groupKind: s.slug === 'facets' ? 'facets' : 'routes', groupIntro: intro });
-        } else area.sections.push(s);
+        } else area.sections.push(takeShort(s));
     }
     return area;
 }
 
 function parsePage(text) {
     const { data, body } = parseFrontmatter(text);
-    return { ...data, ...splitSections(body, 2) };
+    const { intro, sections } = splitSections(body, 2);
+    return { ...data, intro, sections: sections.map(takeShort) };
 }
 
 async function fetchText(path) {
