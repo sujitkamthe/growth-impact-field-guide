@@ -1,9 +1,10 @@
-// Pre-renders the tour's narration (js/tour/script.js) as neural speech, one clip per beat and voice,
-// and writes audio/tour/manifest.json with each clip's duration so the player can time the beats.
+// Pre-renders every film's narration (js/tour/films.js) as neural speech, one clip per beat and
+// voice, into the film's audio folder (audio/tour/ for the guide, audio/tour/org/ for the org film),
+// and writes a manifest.json there with each clip's duration so the player can time the beats.
 // Uses edge-tts (Microsoft's neural voices through Edge's read-aloud service): free and keyless but
 // unofficial, so fine for building the site's audio; Azure Speech offers the same voices officially.
 //
-// usage: node v2/scripts/render-tour-voice.mjs [--voices=id,id] [--force]   (npm run tour:voice)
+// usage: node v2/scripts/render-tour-voice.mjs [--films=id,id] [--voices=id,id] [--force]   (npm run tour:voice)
 // env:   EDGE_TTS=/path/to/edge-tts  (default: ~/.meeting-assistant/venv/bin/edge-tts)
 //
 // Clips are cached by a hash of voice|rate|text, so a re-run only renders lines that changed.
@@ -15,11 +16,10 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const V2 = join(dirname(fileURLToPath(import.meta.url)), '..');
-const OUT = join(V2, 'audio', 'tour');
 const EDGE = process.env.EDGE_TTS ?? join(homedir(), '.meeting-assistant', 'venv', 'bin', 'edge-tts');
 const RATE = '-3%';
 
-const { CHAPTERS, VOICES } = await import(pathToFileURL(join(V2, 'js', 'tour', 'script.js')).href);
+const { FILMS } = await import(pathToFileURL(join(V2, 'js', 'tour', 'films.js')).href);
 
 if (!existsSync(EDGE)) { console.error(`edge-tts not found at ${EDGE}; set EDGE_TTS`); process.exit(1); }
 
@@ -27,22 +27,26 @@ const srtTime = s => { const [h, m, rest] = s.split(':'); const [sec, ms] = rest
 // The clip's spoken length: the end of the subtitle file's last cue.
 const srtEnd = srt => Math.max(0, ...srt.split('\n').filter(l => l.includes('-->')).map(l => srtTime(l.split('-->')[1].trim())));
 
-const manifestPath = join(OUT, 'manifest.json');
-const old = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, 'utf8')) : { clips: {} };
 const only = process.argv.find(a => a.startsWith('--voices='))?.slice(9).split(',');
+const films = process.argv.find(a => a.startsWith('--films='))?.slice(8).split(',');
 const force = process.argv.includes('--force');
-const manifest = {
-    engine: 'edge-tts (Microsoft neural voices, unofficial; Azure Speech offers the same voices officially)',
-    rate: RATE,
-    voices: VOICES,
-    clips: {},
-};
 
 // Working files (text in, subtitles out) live outside the site so only the mp3s are published.
 const work = mkdtempSync(join(tmpdir(), 'tour-voice-'));
 let made = 0, cached = 0;
 const failed = [];
-try {
+
+// One film: its clips in <audio>/<voice>/<chapter>-<beat>.mp3 and its manifest in <audio>/manifest.json.
+function renderFilm({ id, chapters: CHAPTERS, voices: VOICES, audio }) {
+    const OUT = join(V2, audio);
+    const manifestPath = join(OUT, 'manifest.json');
+    const old = existsSync(manifestPath) ? JSON.parse(readFileSync(manifestPath, 'utf8')) : { clips: {} };
+    const manifest = {
+        engine: 'edge-tts (Microsoft neural voices, unofficial; Azure Speech offers the same voices officially)',
+        rate: RATE,
+        voices: VOICES,
+        clips: {},
+    };
     for (const voice of VOICES) {
         const dir = join(OUT, voice.id);
         mkdirSync(dir, { recursive: true });
@@ -71,20 +75,24 @@ try {
                     }
                 }
                 // A missing clip stays as null, so beat indices line up; the player falls back for it.
-                if (!ok) { failed.push(`${voice.id} ${chapter.id}-${i}`); list.push(null); continue; }
+                if (!ok) { failed.push(`${id} ${voice.id} ${chapter.id}-${i}`); list.push(null); continue; }
                 const duration = Math.round(srtEnd(readFileSync(srt, 'utf8')) * 100) / 100;
-                list.push({ src: `audio/tour/${voice.id}/${name}`, duration, hash });
+                list.push({ src: `${audio}${voice.id}/${name}`, duration, hash });
                 made++;
-                process.stdout.write(`${voice.id} ${chapter.id}-${i} ${duration}s\n`);
+                process.stdout.write(`${id} ${voice.id} ${chapter.id}-${i} ${duration}s\n`);
             }
         }
         // Clips for lines that no longer exist (a beat removed) are dropped.
         for (const f of readdirSync(dir)) if (!keep.has(f)) rmSync(join(dir, f));
     }
+    writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+}
+
+try {
+    for (const film of FILMS) if (!films || films.includes(film.id)) renderFilm(film);
 } finally {
     rmSync(work, { recursive: true, force: true });
 }
 
-writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
-console.log(JSON.stringify({ voices: VOICES.length, rendered: made, cached, failed }));
+console.log(JSON.stringify({ films: FILMS.filter(f => !films || films.includes(f.id)).map(f => f.id), rendered: made, cached, failed }));
 if (failed.length) process.exit(1);

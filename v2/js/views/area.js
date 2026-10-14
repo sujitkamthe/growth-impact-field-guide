@@ -6,6 +6,8 @@ import { esc, md, list, bindFolds, openFoldAround } from '../ui.js';
 import { GRAMMAR, expectationGroups, savedScope, EXPLORING } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 import { BAND, glance } from './prose.js';
+import { filmForArea } from '../tour/films.js';
+import { filmLink } from './tour.js';
 
 // Each scope's own examples, side by side, so the step between scopes is visible.
 function waysByScope(content, area) {
@@ -40,6 +42,7 @@ export function render(content, [id, open]) {
     const [prev, next] = [content.areas[i - 1], content.areas[i + 1]];
     const routes = area.groupKind === 'routes';
     const covers = routes ? 'Ways to contribute' : 'What it covers';
+    const film = filmForArea(area.id);
 
     return {
         title: area.name,
@@ -50,6 +53,7 @@ export function render(content, [id, open]) {
                     <h1 class="area-title">${areaIcon(area.key)}${esc(area.name)}</h1>
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
+                    ${film ? filmLink(film, 'a narrated film about this area') : ''}
                 </header>
                 <section id="what-it-covers">
                     <h2>${covers}</h2>

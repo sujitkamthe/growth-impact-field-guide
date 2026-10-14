@@ -1,10 +1,10 @@
 // The tour's narrator: speaks one beat at a time and says when it has finished, so the player can
 // hold the picture until the sentence is over.
 //
-// Preferred path: the pre-rendered neural clips (scripts/render-tour-voice.mjs → audio/tour/), for
-// the chosen voice, else the default voice's clip for that beat. If neither plays, the browser's own
+// Preferred path: the pre-rendered neural clips (scripts/render-tour-voice.mjs → the film's audio
+// folder, see films.js), for the chosen voice, else the default voice's clip for that beat. If neither plays, the browser's own
 // speech synthesis reads the line; if that is missing too, the beat counts as spoken at once and the
-// player's reading-speed clock times it. Voice and mute are remembered in the browser.
+// player's reading-speed clock times it. Voice and mute are remembered in the browser, for every film.
 
 const KEY_VOICE = 'tour-voice';
 const KEY_MUTED = 'tour-muted';
@@ -44,8 +44,8 @@ function pausableTimer(ms, fn) {
     };
 }
 
-// manifest: audio/tour/manifest.json, or null when it could not be loaded.
-// voices: VOICES from script.js, the first being the default.
+// manifest: the film's manifest.json (audio/tour/ for the guide), or null when it could not be loaded.
+// voices: the film's VOICES, the first being the default.
 // onBlocked: called when the browser refuses to start audio without a click (autoplay policy).
 export function createNarrator({ manifest, voices, onBlocked = () => {} }) {
     const defaultVoice = voices[0].id;

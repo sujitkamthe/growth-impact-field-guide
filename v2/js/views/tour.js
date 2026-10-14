@@ -1,8 +1,8 @@
-// The guide in three minutes: a narrated 3D tour (js/tour/). This view lays out the stage, caption
-// and controls; js/tour/player.js runs the timeline and js/tour/narrator.js the voice.
-import { CHAPTERS, VOICES } from '../tour/script.js';
-
-const TITLE = 'The guide in three minutes';
+// The narrated 3D films (js/tour/): #tour plays the guide in three minutes, #tour/<film> another
+// film from js/tour/films.js. This view lays out the stage, caption and controls; js/tour/player.js
+// runs the timeline and js/tour/narrator.js the voice.
+import { filmAtRoute, filmMinutes } from '../tour/films.js';
+import { icon as lineIcon } from '../icons.js';
 
 const icon = {
     play: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg>',
@@ -17,14 +17,28 @@ const icon = {
 
 const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-export function render() {
+// A compact link to a film from another page: a small thumbnail with a play mark, the title and its
+// length. Without a thumbnail (none set in films.js, or it fails to load) the play mark sits on the dark tile.
+export function filmLink(film, note = 'narrated, with captions') {
+    return `<a class="film-link" href="#${film.route}">
+        <span class="film-link-thumb">${film.thumbnail ? `<img src="${esc(film.thumbnail)}" width="160" height="90" alt="" loading="lazy" onerror="this.hidden=true">` : ''}${lineIcon('play')}</span>
+        <span class="film-link-text"><strong>Watch: ${esc(film.title)}</strong><span>${filmMinutes(film)} min, ${esc(note)}</span></span>
+    </a>`;
+}
+
+export function render(content, [name]) {
+    // The film to play (inside mount, `film` is the .tour-film element).
+    const theFilm = filmAtRoute(name ? `tour/${name}` : 'tour');
+    if (!theFilm) return null;
+    const { title: TITLE, chapters: CHAPTERS, voices: VOICES } = theFilm;
+    const endLinks = theFilm.end.map(l => `<a class="button${l.quiet ? ' quiet' : ''}" href="${esc(l.href)}">${esc(l.label)}</a>`).join('');
     const chips = CHAPTERS.map((c, i) => `<li><button class="tour-chip" type="button" data-chapter="${i}">${esc(c.title)}</button></li>`).join('');
     const segments = CHAPTERS.map(() => '<span class="tour-seg"><span class="tour-seg-fill"></span></span>').join('');
     const voices = VOICES.map(v => `<option value="${esc(v.id)}">${esc(v.label)}</option>`).join('');
     const html = `
-<section class="tour" aria-labelledby="tour-title">
+<section class="tour" data-film="${esc(theFilm.id)}" aria-labelledby="tour-title">
     <div class="tour-head">
-        <h1 id="tour-title">${TITLE}</h1>
+        <h1 id="tour-title">${esc(TITLE)}</h1>
         <p class="hint">Narrated, with captions. Space plays or pauses, the arrow keys change chapter, F goes full screen.</p>
     </div>
     <div class="tour-film">
@@ -40,7 +54,7 @@ export function render() {
             <div class="tour-end" hidden>
                 <p class="tour-end-line">${esc(CHAPTERS.at(-1).beats.at(-1))}</p>
                 <div class="tour-end-actions">
-                    <a class="button" href="#home">Find your scope</a>
+                    ${endLinks}
                     <button class="button quiet" type="button" data-act="again">Watch again</button>
                 </div>
             </div>
@@ -124,7 +138,7 @@ export function render() {
             }
             if (changed('chapters')) {
                 s.chapters.forEach((c, i) => { segs[i].style.flexGrow = String(c.duration); });
-                startLabel.innerHTML = `Play the tour <span class="tour-length">(${Math.max(1, Math.round(s.total / 60))} min)</span>`;
+                startLabel.innerHTML = `${esc(theFilm.playLabel)} <span class="tour-length">(${Math.max(1, Math.round(s.total / 60))} min)</span>`;
             }
             fills.forEach((f, i) => {
                 const k = i < s.chapter ? 1 : i > s.chapter ? 0 : s.ended ? 1 : s.chapterProgress;
@@ -156,7 +170,7 @@ export function render() {
         try {
             const { createPlayer } = await import('../tour/player.js');
             if (gone) return;
-            player = await createPlayer({ canvas, hudRoot: el('.tour-hud'), onProgress, onUpdate });
+            player = await createPlayer({ film: theFilm, canvas, hudRoot: el('.tour-hud'), onProgress, onUpdate });
             if (gone) { player.dispose(); return; }
         } catch (err) {
             console.error(err);

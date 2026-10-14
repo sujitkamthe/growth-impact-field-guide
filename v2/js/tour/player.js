@@ -1,4 +1,5 @@
-// The tour's player: builds the world and every chapter, and runs one timeline through them.
+// The tour's player: builds the world and every chapter of one film (films.js), and runs one
+// timeline through them.
 //
 // Each beat lasts as long as its narration takes to say (the clip's length from the audio manifest,
 // or a reading-speed estimate when narration is off) plus a short pause. The clock also holds at
@@ -12,19 +13,20 @@
 // Under prefers-reduced-motion each beat shows only its end state, with a short crossfade of the
 // canvas between beats (the .is-fading class in tour.css).
 
-import { CHAPTERS, VOICES } from './script.js';
+import { FILMS } from './films.js';
 import { createNarrator, PAUSE_AFTER } from './narrator.js';
 
 const FADE_MS = 220;
 
-async function loadChapters(world) {
-    const modules = world ? await Promise.allSettled(CHAPTERS.map(c => import(`./chapters/${c.id}.js`))) : [];
-    return CHAPTERS.map((meta, i) => {
+async function loadChapters(world, film) {
+    // Chapter paths are relative to this file: the guide's in chapters/, another film's in films/<id>/chapters/.
+    const modules = world ? await Promise.allSettled(film.chapters.map(c => import(`${film.base}chapters/${c.id}.js`))) : [];
+    return film.chapters.map((meta, i) => {
         const chapter = { ...meta, module: null, group: null };
         if (!world) return chapter;
         const loaded = modules[i];
         if (loaded.status !== 'fulfilled' || !loaded.value.default) {
-            console.info(`Tour: chapter "${meta.id}" is not available yet; showing a plain stage.`);
+            console.info(`Tour: chapter "${film.id}/${meta.id}" is not available yet; showing a plain stage.`);
             return chapter;
         }
         try {
@@ -33,7 +35,7 @@ async function loadChapters(world) {
             world.scene.add(group);
             Object.assign(chapter, { module: loaded.value.default, group });
         } catch (err) {
-            console.error(`Tour: chapter "${meta.id}" failed to build`, err);
+            console.error(`Tour: chapter "${film.id}/${meta.id}" failed to build`, err);
         }
         return chapter;
     });
@@ -56,19 +58,20 @@ async function loadWorld(canvas, hudRoot, options) {
     }
 }
 
-// canvas: the <canvas> to draw on, inside a sized container; hudRoot: an element over it for the
+// film: an entry of FILMS (default: the guide). canvas: the <canvas> to draw on, inside a sized container; hudRoot: an element over it for the
 // world's game HUD. onProgress(k): asset loading, 0 to 1. onUpdate(state): after every rendered
 // frame and every change, for the controls to follow.
-export async function createPlayer({ canvas, hudRoot, onProgress = () => {}, onUpdate = () => {} }) {
+export async function createPlayer({ film = FILMS[0], canvas, hudRoot, onProgress = () => {}, onUpdate = () => {} }) {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const manifestLoad = fetch('audio/tour/manifest.json').then(r => (r.ok ? r.json() : null)).catch(() => null);
+    const VOICES = film.voices;
+    const manifestLoad = fetch(`${film.audio}manifest.json`).then(r => (r.ok ? r.json() : null)).catch(() => null);
     // The world reports progress as a fraction or as { loaded, total }; pass on a fraction.
     const progress = p => onProgress(Math.max(0, Math.min(1, typeof p === 'number' ? p : p?.total ? p.loaded / p.total : 0)));
     const [{ world, reason: worldMissing }, manifest] = await Promise.all([
         loadWorld(canvas, hudRoot, { reducedMotion, onProgress: progress }),
         manifestLoad,
     ]);
-    const chapters = await loadChapters(world);
+    const chapters = await loadChapters(world, film);
 
     let ci = 0;             // current chapter
     let t = 0;              // seconds into it

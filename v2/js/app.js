@@ -29,7 +29,7 @@ const ROUTES = [
     { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: selfAssessment, nav: 'self-assessment', terms: true },
     { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq', terms: true },
     { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'faq' },
-    { pattern: /^tour$/, view: tour, nav: 'tour' },
+    { pattern: /^tour(?:\/([\w-]+))?$/, view: tour, nav: 'tour' },
 ];
 
 const SITE = 'Growth & Impact at Sahaj';

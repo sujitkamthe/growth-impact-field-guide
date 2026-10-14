@@ -8,6 +8,8 @@ import { reachDiagram, scopeGlyph, areaIcon } from '../diagram.js';
 import { savedScope, EXPLORING } from './_parts.js';
 import { sectionParts } from './how.js';
 import { icon, iconLink } from '../icons.js';
+import { film } from '../tour/films.js';
+import { filmLink } from './tour.js';
 
 // An icon for each task link, by where it goes.
 const TASK_ICONS = { principles: 'compass', 'how-it-works/the-cycle': 'doc', 'how-it-works/growing-into-the-next-scope': 'stretch', 'self-assessment': 'rating', teammates: 'check' };
@@ -50,6 +52,7 @@ export function render(content) {
                     <h1>${esc(page.headline)}</h1>
                     <p class="lede">${esc(page.lede)}</p>
                 </div>
+                <div class="start-films">
                 <a class="tour-card" href="#tour">
                     <img src="assets/tour/thumbnail.jpeg" width="1920" height="1080" alt="">
                     <span class="tour-card-play" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
@@ -57,8 +60,10 @@ export function render(content) {
                         <strong>Watch the guide in three minutes</strong>
                         <span>Walk a valley under fog with an explorer: the principles, the scopes, the areas and a whole cycle</span>
                     </span>
-                    <span class="tour-card-time">3:30</span>
+                    <span class="tour-card-time">${esc(film('guide').length)}</span>
                 </a>
+                ${filmLink(film('org'), 'about the Org & Community area')}
+                </div>
             </header>
             <section class="start-intro" aria-labelledby="start-intro-head">
                 <div>
