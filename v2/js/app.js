@@ -2,6 +2,7 @@
 
 import { loadContent } from './content.js';
 import { initScopeMenu } from './scope-menu.js';
+import * as principles from './views/principles.js';
 import * as how from './views/how.js';
 import * as teammates from './views/teammates.js';
 import * as selfAssessment from './views/self-assessment.js';
@@ -14,6 +15,7 @@ import * as glossary from './views/glossary.js';
 import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
+    { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'principles', terms: true },
     { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works', terms: true },
     { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'teammates', terms: true },
     // Expectations is the landing page; old #home links (and their sections) open it too.

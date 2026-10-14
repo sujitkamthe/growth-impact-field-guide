@@ -7,6 +7,7 @@ version: 2026-10-02
 
 ## Start here
 
+- [Read the principles](#principles): What we believe about growth at Sahaj, before the scopes and areas
 - [Set your expectations](#how-it-works/the-cycle): Choose your scope and write your expectations doc
 - [Plan a stretch](#how-it-works/growing-into-the-next-scope): Take on some of the next scope's responsibilities
 - [Write your self-assessment](#self-assessment): Look back on the cycle and rate each area
