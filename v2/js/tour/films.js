@@ -19,7 +19,7 @@ export const FILMS = [
         audio: 'audio/tour/',
         thumbnail: 'assets/tour/thumbnail.jpeg',
         route: 'tour',
-        length: '4:02',
+        length: '4:04',
         playLabel: 'Play the tour',
         // The end card's links; "Watch again" is always offered after them.
         end: [{ href: '#home', label: 'Find your scope' }],

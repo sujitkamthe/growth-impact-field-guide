@@ -7,7 +7,7 @@ version: 2026-10-02
 
 ## How the guide works
 
-Sahaj has no titles, so growing means being trusted with problems that reach further. The guide describes that reach with four **scopes**, from your own work to beyond your team: each one includes the scopes inside it, so growing means reaching further rather than climbing a ladder.
+Sahaj has no titles, so growing means being trusted with problems that reach further. The guide describes that reach with four **scopes**, from your own work to beyond your team: each one includes the scopes inside it, so growing means reaching further rather than climbing a ladder. Scopes exist to make expectations clear: your scope tells you and your team what to expect of you, and you agree on it at the start of each cycle.
 
 Every scope expects impact in the same three **areas**: Client & Delivery, People & Team, and Org & Community. The expectations at each scope are signs of what impact looks like there, not a checklist to complete. The question they help answer is whether we would trust you with a problem of that reach.
 

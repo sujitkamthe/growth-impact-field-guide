@@ -18,7 +18,7 @@ export const CHAPTERS = [
         'Principle five: Honest reflection. When you look back, you say what really happened and what your feedback told you.',
     ] },
     { id: 'scopes', title: 'How far you reach', beats: [
-        'Your scope is how far your impact reaches. There are four, and in this valley, each one is how much of the field you can see.',
+        'Scopes exist to make expectations clear. Your scope is how far your impact reaches. There are four, and in this valley, each one is how much of the field you can see.',
         'The first scope is Direct: your own patch, work you own end to end.',
         'The second is Extended: work beyond your own, like helping a neighbour bring in their harvest.',
         'The third is Team: the whole village, and how it builds, delivers and grows.',
