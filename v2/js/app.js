@@ -14,6 +14,7 @@ import * as compare from './views/compare.js';
 import * as faq from './views/faq.js';
 import * as glossary from './views/glossary.js';
 import * as tour from './views/tour.js';
+import * as specialisation from './views/specialisation.js';
 import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
@@ -29,6 +30,7 @@ const ROUTES = [
     { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: selfAssessment, nav: 'self-assessment', terms: true },
     { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq', terms: true },
     { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'faq' },
+    { pattern: /^specialisation(?:\/([\w-]+))?$/, view: specialisation, nav: 'faq' },
     { pattern: /^tour(?:\/([\w-]+))?$/, view: tour, nav: 'tour' },
 ];
 

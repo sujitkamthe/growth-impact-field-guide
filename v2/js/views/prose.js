@@ -146,8 +146,9 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
         html: `<section class="page narrow${worksheet ? ' worksheet' : ''}${isJourney ? ' journey' : ''}">
             <header class="page-head">
                 ${worksheet ? '<p class="eyebrow">Worksheet</p>' : ''}
-                <h1>${esc(page.title)}</h1>
+                <h1>${esc(page.title)}${page.status === 'draft' ? ' <span class="draft-tag">Draft</span>' : ''}</h1>
                 <p class="lede">${esc(page.lede)}</p>
+                ${page.status === 'draft' ? `<p class="draft-note">${icon('info')}<span><strong>Work in progress, not finalised.</strong> This page is a view still being refined. It doesn't change the expectations set out elsewhere in the guide.</span></p>` : ''}
                 ${lead}
             </header>
             ${sections}

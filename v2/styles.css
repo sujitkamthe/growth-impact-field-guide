@@ -959,3 +959,15 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .film-link-text span { font-size: 14px; color: var(--muted); }
 .start-films .film-link { justify-self: start; }
 @media (prefers-reduced-motion: reduce) { .film-link, .film-link-thumb .icon { transition: none; } }
+
+/* Draft pages (status: draft): a tag on the title and a notice under the lede, so a working view is
+   never mistaken for agreed guidance. */
+.draft-tag { display: inline-block; vertical-align: 0.3em; margin-left: 8px; padding: 2px 8px; border: 1px solid var(--control); border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
+.draft-note { display: flex; gap: 10px; align-items: flex-start; margin: 14px 0 0; padding: 12px 14px; background: var(--notice); border-radius: var(--radius); color: var(--text-2); font-size: 15px; line-height: 1.5; max-width: var(--measure); }
+.draft-note .icon { margin-top: 0.2em; color: var(--muted); }
+.draft-note strong { color: var(--text); }
+
+/* Tables in reading pages. */
+.prose table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 15px; }
+.prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+.prose th { color: var(--muted); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
