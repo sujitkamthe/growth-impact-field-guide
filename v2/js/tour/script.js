@@ -4,57 +4,57 @@
 // The storyboard (STORYBOARD.md) says what each beat shows on screen.
 
 export const CHAPTERS = [
-    { id: 'arrival', title: 'Arrival', beats: [
-        'Welcome to Sahaj. Picture it as an open field. Most of it is still under fog, because you have not been there yet.',
-        'This is you, new to Sahaj. No title is waiting for you here, and no fixed path: you will choose your own.',
-        "Let's see what's out there.",
+    { id: 'arrival', title: 'Welcome', beats: [
+        'Welcome to Sahaj. This guide explains how we think about growth and the impact of our work.',
+        "Whether you're new here or thinking about what to take on next, the guide helps you and your team agree on expectations.",
+        "Let's start with the principles behind it.",
     ] },
     { id: 'principles', title: 'Principles', beats: [
-        'Growth at Sahaj rests on five principles. You will come across them one at a time.',
-        'Principle one: Growth is self-directed. You choose the direction, shape and pace of your growth. The guide shows paths people have already taken, not fences.',
-        'Principle two: Clarity without hierarchy. There are no titles, so growing means being trusted with problems that reach further.',
-        'Principle three: Transparency and trust. Your expectations are written down, visible and fair, and anyone on your team can review them.',
-        'Principle four: Feedback is a habit. You give it and ask for it when the moment happens, with anyone.',
-        'Principle five: Honest reflection. When you look back, you say what really happened and what your feedback told you.',
+        'Five principles shape how we approach growth at Sahaj.',
+        'Principle one: Growth is self-directed. You choose the direction, shape and pace of your growth.',
+        'Principle two: Clarity without hierarchy. Sahaj has no titles. We describe growth through the impact of your work and the responsibilities people trust you with.',
+        'Principle three: Transparency and trust. Expectations are written down and open for discussion. Anyone on your team can review them.',
+        'Principle four: Feedback is a habit. Anyone can give or ask for feedback, whatever their scope, while the work is still fresh.',
+        'Principle five: Honest reflection. You look back at what happened and what you learned from feedback, including what was difficult.',
     ] },
     { id: 'scopes', title: 'How far you reach', beats: [
-        'Scopes exist to make expectations clear. Your scope is how far your impact reaches. There are four, and in this valley, each one is how much of the field you can see.',
-        'The first scope is Direct: your own patch, work you own end to end.',
-        'The second is Extended: work beyond your own, like helping a neighbour bring in their harvest.',
-        'The third is Team: the whole village, and how it builds, delivers and grows.',
-        'The fourth is Wider: beyond the village and across the river, to the account, Sahaj and the community.',
-        'Each scope includes the ones inside it, so as you grow, your reach widens and nothing you did before stops counting.',
+        'To make those responsibilities clear, the guide uses four scopes. Your scope describes how far your impact reaches.',
+        'Direct is the work you own end to end.',
+        'Extended reaches beyond your own work, helping your teammates with theirs.',
+        'Team covers how the whole team builds, delivers and grows.',
+        'Wider reaches beyond the team, to the account, Sahaj and the community.',
+        'Each scope builds on the ones before it. Your own work and the help you give teammates still matter as your responsibilities grow.',
     ] },
     { id: 'areas', title: 'Three areas', beats: [
         'At every scope, you have impact in the same three areas.',
-        'Client and Delivery: understanding what the client needs, building it with sound technical craft, and delivering it reliably.',
+        'Client and Delivery: understanding what the client needs, building it well, and delivering it reliably.',
         'People and Team: helping the people around you get better at what they do.',
-        'Org and Community: making Sahaj better beyond your own project, in a way you choose.',
-        'Each area is looked at on its own, against what your scope expects.',
+        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute.',
+        "Each area has its own rating against your scope, so you can see where you're doing well and where you need support.",
     ] },
-    { id: 'expectations', title: 'Your quest', beats: [
-        'Every cycle starts like a new quest: you align your expectations with your team, and write them down in a short doc.',
+    { id: 'expectations', title: 'Agreeing expectations', beats: [
+        'At the start of each cycle, you write a short expectations doc to discuss with your team.',
         'You note your scope, anything specific to your work, and where you want to grow.',
-        "Your teammates read it and suggest changes until you can all point to what's expected.",
+        'Your teammates read it and suggest changes. Together, you agree on what to expect from your work.',
     ] },
     { id: 'feedback', title: 'Along the way', beats: [
-        'As the season goes on, you ask the people you work with for feedback, often and while the work is fresh.',
+        'During the cycle, ask the people you work with for feedback while the work is fresh.',
         'A useful note says what they saw, what it changed, and which expectation it relates to.',
-        'You keep the notes as you go, so the end of the cycle holds no surprises.',
+        'Keep those notes as you go, so you have examples to look back on at the end of the cycle.',
     ] },
-    { id: 'self-assessment', title: 'Around the fire', beats: [
+    { id: 'self-assessment', title: 'Looking back together', beats: [
         'At the end of the cycle, you look back one area at a time, starting from your notes.',
-        'For each area, you say what changed because of you, and you decide where it stands against what your scope expects.',
-        'Then comes the team check: around the fire, your teammates talk it through with you, confirming, correcting or adding to what you wrote.',
+        'For each area, describe what changed because of your work, what you learned from feedback, and how your impact compares with your scope.',
+        'Then you discuss your self-assessment with your teammates at the team check. They add their observations, help correct anything you missed, and confirm the ratings.',
     ] },
-    { id: 'growth', title: 'Further', beats: [
+    { id: 'growth', title: 'Growing your scope', beats: [
         "You grow by taking on some of the next scope's work, usually as a stretch you agree with your team.",
-        'When that work goes well in one area, that area exceeds what your scope expects.',
-        'Once people come to rely on you for it in all three areas, your scope gets bigger, and the fog lifts further.',
-        'Then a new season begins, with more of the field in view.',
+        'When you sustain that impact in one area, that area is rated as exceeding your current scope.',
+        'Your scope is raised at the team check when you consistently show next-scope impact in all three areas and people depend on you for it.',
+        'You then agree expectations for the next cycle at your new scope.',
     ] },
-    { id: 'close', title: 'Your turn', beats: [
-        "There's always more of the field to explore. Find your scope, and start your next quest.",
+    { id: 'close', title: 'Getting started', beats: [
+        'Start with the scope that reflects your work today, and talk with your team about where you want to grow.',
     ] },
 ];
 
