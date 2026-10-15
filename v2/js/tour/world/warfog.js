@@ -9,7 +9,7 @@
 // around them, so the shroud can deepen with distance. Every world material samples the mask at its
 // own world position (patch(material) adds this through onBeforeCompile) and mixes its lit colour
 // towards the shroud, so terrain, trees, houses, water and people are all treated alike and their
-// shadows still match. The minimap draws the same circles.
+// shadows still match.
 
 import * as THREE from 'three';
 import { clamp } from './util.js';
@@ -67,13 +67,6 @@ export function createWarFog(half) {
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = '#000';
     ctx.fillRect(0, 0, SIZE, SIZE);
-    // The minimap's layer: a dim shroud with the revealed circles punched out, darker far away.
-    const holes = document.createElement('canvas');
-    holes.width = holes.height = SIZE;
-    const hctx = holes.getContext('2d');
-    const deep = document.createElement('canvas');
-    deep.width = deep.height = SIZE;
-    const dctx = deep.getContext('2d');
     const texture = new THREE.CanvasTexture(canvas);
     texture.flipY = false;
     texture.generateMipmaps = false;
@@ -115,14 +108,6 @@ export function createWarFog(half) {
         ctx.fillStyle = '#000';
         ctx.fillRect(0, 0, SIZE, SIZE);
         ctx.globalCompositeOperation = 'lighter';
-        hctx.globalCompositeOperation = dctx.globalCompositeOperation = 'source-over';
-        hctx.clearRect(0, 0, SIZE, SIZE);
-        dctx.clearRect(0, 0, SIZE, SIZE);
-        hctx.fillStyle = 'rgba(30, 37, 50, 0.5)';
-        hctx.fillRect(0, 0, SIZE, SIZE);
-        dctx.fillStyle = 'rgba(14, 17, 24, 0.42)';
-        dctx.fillRect(0, 0, SIZE, SIZE);
-        hctx.globalCompositeOperation = dctx.globalCompositeOperation = 'destination-out';
         for (const { x, z, r } of reveals) {
             if (!(r > 0.05)) continue;
             const f = clamp(r * 0.22, 1.5, 4.5);
@@ -130,12 +115,8 @@ export function createWarFog(half) {
             // red: the revealed area itself; green: a wide halo, for how deep the shroud lies
             radial(ctx, cx, cy, Math.max(0, r - f * 0.6), r + f * 0.4, '255,0,0');
             radial(ctx, cx, cy, r * 0.85, r + NEAR, '0,255,0');
-            radial(hctx, cx, cy, Math.max(0, r - f * 0.6), r + f * 0.4, '0,0,0');
-            radial(dctx, cx, cy, r * 0.85, r + NEAR, '0,0,0');
         }
         ctx.globalCompositeOperation = 'source-over';
-        hctx.globalCompositeOperation = 'source-over';
-        hctx.drawImage(deep, 0, 0);
         texture.needsUpdate = true;
     }
 
@@ -168,7 +149,7 @@ export function createWarFog(half) {
     }
 
     return {
-        canvas, holes, texture, uniforms, set, patch,
+        canvas, texture, uniforms, set, patch,
         get reveals() { return current; },
         get key() { return key; },
         setColor(fog, light) { uniforms.uWfColor.value.copy(fog); uniforms.uWfLight.value.copy(light); },

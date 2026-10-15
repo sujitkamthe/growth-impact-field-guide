@@ -97,7 +97,7 @@ export function createTerrain() {
         return fx + fz <= 1 ? a + (b - a) * fx + (c - a) * fz : d + (c - d) * (1 - fx) + (b - d) * (1 - fz);
     }
 
-    const { canvas, mapCanvas } = paintGround(half, heightAt);
+    const canvas = paintGround(half, heightAt);
     const map = new THREE.CanvasTexture(canvas);
     map.colorSpace = THREE.SRGBColorSpace;
     map.flipY = false;
@@ -107,7 +107,7 @@ export function createTerrain() {
     const mesh = new THREE.Mesh(geo, material);
     mesh.receiveShadow = true;
     mesh.name = 'terrain';
-    return { mesh, heightAt, half, N, step, heights: H, mapCanvas };
+    return { mesh, heightAt, half, N, step, heights: H };
 }
 
 // ---- Ground painting ---------------------------------------------------------------------------
@@ -244,13 +244,7 @@ function paintGround(half, heightAt) {
     pad(L.places.market, 7, 6, 0.55);
     pad(L.places.stoneRing, 7, 7, 0.35);
 
-    // A small copy for the minimap.
-    const mapCanvas = document.createElement('canvas');
-    mapCanvas.width = mapCanvas.height = 256;
-    const mctx = mapCanvas.getContext('2d');
-    const crop = (L.MAP.half / half);
-    mctx.drawImage(canvas, SIZE * (1 - crop) / 2, SIZE * (1 - crop) / 2, SIZE * crop, SIZE * crop, 0, 0, 256, 256);
-    return { canvas, mapCanvas };
+    return canvas;
 }
 
 function roundRect(ctx, x, y, w, h, r) {

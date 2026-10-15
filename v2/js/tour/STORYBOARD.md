@@ -9,7 +9,7 @@ The narrator reads each line aloud (pre-rendered neural voices, the same edge-tt
 - **A real game world.** Low-poly but rich: rolling grass terrain with vertex-coloured variation, trees, flowers, rocks, fences, crops, a river with a bridge, a lake, a village of timber houses, a windmill and a watermill. Warm sun with soft shadows, a sky gradient, distance haze. Assets are CC0 from Kenney (Nature, Fantasy Town, Survival kits) and Quaternius (natural-proportion people with Idle, Walk, Wave and Interact animations), in `v2/assets/tour/`.
 - **Fog of war.** Unrevealed ground is covered by a soft dark-blue-grey fog with a feathered edge, exactly like an RTS. Reveals are circles that grow; they accumulate through the film.
 - **Game camera.** Mostly a high three-quarter view (pitch about 50°, telephoto lens) that follows the explorer and glides between places, with occasional lower shots for moments (the reflection in the lake, the fire). No cuts; every move eases.
-- **Game HUD** (HTML overlay, calm, in the site's font): a quest box top-left ("Discover the five principles · 3/5"), a "Discovered" toast when a landmark is found, a minimap top-right showing the revealed area, and a notes counter during feedback. Captions bottom-centre.
+- **Game HUD** (HTML overlay, calm, in the site's font): a quest box top-left ("Discover the five principles · 3/5"), a "Discovered" toast when a landmark is found, and a notes counter during feedback. Captions bottom-centre.
 - **People feel alive.** The explorer walks with real strides (no sliding), pauses, looks around, waves, kneels to work (Interact). Villagers idle, walk and wave. The faces have no expressions, so warmth comes from body language and pacing.
 - **No infographics.** Ideas are places and actions in the world, never diagrams. The three area colours (teal, blue, amber) appear only as banners and flags in the village districts.
 - **Nothing says "level up".** Growth is the fog lifting and the explorer's reach widening, never a rank or a title.
@@ -32,7 +32,7 @@ One valley, about 140 × 140 m, laid out so the story walks across it (`layout.j
 ## Chapters
 
 ### 1. Arrival (`arrival`)
-Fog covers everything but a small circle around the camp. Morning light. The explorer steps out of the tent, stretches (Idle), looks around and walks a few steps towards the fog; it parts around them. The minimap shows a single bright dot in grey. Quest box: "Explore the field".
+Fog covers everything but a small circle around the camp. Morning light. The explorer steps out of the tent, stretches (Idle), looks around and walks a few steps towards the fog; it parts around them. Quest box: "Explore the field".
 
 ### 2. Five principles (`principles`)
 The explorer walks a path; each principle is a place discovered as the fog lifts, with a "Discovered" toast and the quest box counting 1/5 to 5/5.
@@ -44,7 +44,7 @@ The explorer walks a path; each principle is a place discovered as the fog lifts
 6. Honest reflection: the **lake**. The camera comes down low; the explorer stands at the shore and the still water reflects them.
 
 ### 3. How far you reach (`scopes`)
-1. Your scope is how far you can see: the camera pulls up to show the revealed patches on the minimap and the fog beyond.
+1. Your scope is how far you can see: the camera pulls up to show the revealed patches and the fog beyond.
 2. Direct: the explorer tends **their own plot** (Interact); the fog around them is tight, just the plot.
 3. Extended: the explorer walks to a neighbour's plot and works alongside them; the fog lifts over the **neighbouring plots**.
 4. Team: the camera rises over **the whole village** as the fog clears across it: the mill turning, villagers at work.

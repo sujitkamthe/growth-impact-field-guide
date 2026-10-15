@@ -23,7 +23,7 @@
 .tour-stage { position: absolute; inset: 0; }
 .tour-canvas { display: block; width: 100%; height: 100%; cursor: pointer; transition: opacity 0.22s ease-out; }
 .tour-canvas.is-fading { opacity: 0; }
-/* The world draws its game HUD (quest, minimap, toasts) here; clicks pass through to the canvas. */
+/* The world draws its game HUD (quest, toasts, notes) here; clicks pass through to the canvas. */
 .tour-hud { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 
 /* Before the tour first plays: a big but quiet Play over the first frame. */

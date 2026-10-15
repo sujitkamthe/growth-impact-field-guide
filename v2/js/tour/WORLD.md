@@ -59,14 +59,14 @@ export default {
 **Ground**: `world.heightAt(x, z)` is the exact height of the (faceted) terrain, for placing chapter props.
 
 **Fog of war**
-- `world.fog.set(reveals)`: `reveals` is the whole list of `{ x, z, r }` circles for this frame (everything revealed so far plus anything growing now). Each circle is clear to about r and fades out over a few metres, with a faint fine drift of mist in the edge. Outside them the valley lies under a strategy game's shroud: still legible but dimmed, drained of colour and cooled, with hills, the river and lake (darker), woods and buildings as muted shapes and their shadows intact; it deepens with distance from explored land and towards the map's rim. The minimap shows the same: explored land bright, the rest dim.
+- `world.fog.set(reveals)`: `reveals` is the whole list of `{ x, z, r }` circles for this frame (everything revealed so far plus anything growing now). Each circle is clear to about r and fades out over a few metres, with a faint fine drift of mist in the edge. Outside them the valley lies under a strategy game's shroud: still legible but dimmed, drained of colour and cooled, with hills, the river and lake (darker), woods and buildings as muted shapes and their shadows intact; it deepens with distance from explored land and towards the map's rim.
 - `world.fog.between(a, b, k)`: from one cumulative list to a longer one, the extra circles growing in one after another as k goes 0 → 1.
 - `world.fog.grow(circle, k)`: one circle at eased radius `r * k`.
 - `world.fog.patch(material)`: puts a chapter prop's material (standard, lambert, basic or points) under the shroud like the world's own; call once in `build`. `{ fade: true }` makes an additive glow simply vanish under it instead.
 - `world.REVEALS`: cumulative lists at chapter ends: `start`, `afterArrival`, `afterPrinciples`, `afterScopes` (= `afterAreas`, `afterExpectations`, `afterFeedback`, `afterSelfAssessment`: the village and its edges), `afterGrowth` (across the river), `final`, and `scopeWider` (the Scopes chapter's "Wider" beat: the fog rolled back across the river for a moment; it should roll in again by the chapter's end, since the explorer first crosses the bridge in Growth).
 
 **Places**
-- `world.discover(name, k)`: raises a small red pennant at a landmark (`layout.landmarks`: `camp`, `crossroads`, `stoneRing`, `noticeBoard`, `lake`, `plot`, `neighbours`, `village`, `market`, `houses`, `bridge`, `hamlet`, `windmill`) and, while 0 < k < 1, shows the HUD's "Discovered" toast with its label. Keep calling it with k ≥ 1 in later frames to keep the pennant up (it also appears on the minimap).
+- `world.discover(name, k)`: raises a small red pennant at a landmark (`layout.landmarks`: `camp`, `crossroads`, `stoneRing`, `noticeBoard`, `lake`, `plot`, `neighbours`, `village`, `market`, `houses`, `bridge`, `hamlet`, `windmill`) and, while 0 < k < 1, shows the HUD's "Discovered" toast with its label. Keep calling it with k ≥ 1 in later frames to keep the pennant up.
 - `world.banners(areaKey, k)`: unfurls an area's banners (`cd`, `pt`, `oc`), each a moment after the last. Furled, a banner is a short roll of colour under its crossbar.
 - `world.props`:
   - `noticeSheet.show(k)` (0 hidden → 1 pinned to the board, rising from the hand) and `noticeSheet.write(k)` (0 blank → 1 four lines of writing).
@@ -83,7 +83,7 @@ export default {
 - `hud.notes(count)`: the notes counter under the quest box.
 - `hud.card(lines, k, { label = 'A note' })`: a parchment card on the right, fading in and out over k, one numbered line per entry.
 - `hud.rows(rows, k)`: area rows under the quest box; `rows` is `[{ area: 'cd', rating: 'Meets' | null }]` or `[['cd', 'Meets'], ...]`. A null rating shows an empty dashed slot; a newly set one pops.
-- `hud.clear()` (reset does it) and `hud.show(on)`. The minimap (top right) is drawn by the world: terrain, fog, discovered pennants, the explorer and the camera's view on the ground.
+- `hud.clear()` (reset does it) and `hud.show(on)`.
 
 **Lifecycle**: `world.reset(clock)`, `world.render()`, `world.resize()` (call on container resize), `world.dispose()`, and `world.applyState(name)`, which applies a `layout.states` entry (shot, explorer position and facing, reveals, time of day): handy for a chapter's first frame.
 

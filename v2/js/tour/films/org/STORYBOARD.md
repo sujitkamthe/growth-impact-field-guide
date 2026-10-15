@@ -4,7 +4,7 @@ The second film, about the Org & Community area: the contributions people make b
 
 ## Look and feel
 
-Everything from the first film applies: a high three-quarter game camera, real walking, calm eased motion, the HUD (quest box, toasts, minimap), captions, and Sahaj indigo on the explorer and the HUD. Org & Community's colour in the guide is amber, so this film leans on amber: banners in the square, lanterns, the DevDay festival. The explorer starts at Extended reach, as at the end of the first film's middle chapters (the fog lifted to the Extended ring), and the film may lift it further in "How far it reaches".
+Everything from the first film applies: a high three-quarter game camera, real walking, calm eased motion, the HUD (quest box, toasts), captions, and Sahaj indigo on the explorer and the HUD. Org & Community's colour in the guide is amber, so this film leans on amber: banners in the square, lanterns, the DevDay festival. The explorer starts at Extended reach, as at the end of the first film's middle chapters (the fog lifted to the Extended ring), and the film may lift it further in "How far it reaches".
 
 Ideas are places and actions in the village, never diagrams:
 

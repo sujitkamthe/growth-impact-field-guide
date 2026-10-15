@@ -91,7 +91,7 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
     };
     const people = createPeople({ gltfs: assets.people, heightAt: walkHeight, patch: fog.patch, scene });
 
-    const hud = createHud(hudRoot, { mapCanvas: terrain.mapCanvas, fogCanvas: fog.holes, half: layout.MAP.terrainHalf, mapHalf: layout.MAP.half });
+    const hud = createHud(hudRoot);
 
     // ---- Camera ------------------------------------------------------------------------------
     let current = { ...SHOTS.start };
@@ -138,7 +138,6 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
 
     // ---- Per-frame state ----------------------------------------------------------------------
     let clock = 0, hours = states.start.hours, reveals = REVEALS.start;
-    const discovered = new Map();
 
     const fogApi = {
         set(list) { reveals = list || []; },
@@ -162,7 +161,6 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
         people.reset(clock);
         village.reset();
         hud.clear();
-        discovered.clear();
         reveals = REVEALS.start;
         hours = states.start.hours;
         applyShot({ ...SHOTS.start });
@@ -179,16 +177,6 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
         return s;
     }
 
-    const ndc = [[-1, -1], [1, -1], [1, 1], [-1, 1]];
-    const ray = new THREE.Vector3();
-    function viewFootprint() {
-        return ndc.map(([x, y]) => {
-            ray.set(x, y, 0.5).unproject(camera).sub(camera.position).normalize();
-            const t = ray.y < -0.01 ? -camera.position.y / ray.y : 600;
-            return [camera.position.x + ray.x * Math.min(t, 600), camera.position.z + ray.z * Math.min(t, 600)];
-        });
-    }
-
     function render() {
         clockU.value = clock;
         sky.apply(hours);
@@ -200,15 +188,6 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
         sky.setHaze(current.distance);
         water.setReflect(1 - smooth(13, 24, current.pitch));
         sky.updateShadows();
-        const flagsAt = [...discovered.entries()].filter(([, k]) => k >= 0.5).map(([n]) => layout.landmarks[n].flag);
-        const e = people.explorer;
-        hud._map({
-            fogKey: fog.key,
-            explorer: e.root.visible ? [e.pos[0], e.pos[2]] : null,
-            view: viewFootprint(),
-            flags: flagsAt.map(f => f.join(':')),
-            flagsAt,
-        });
         hud.commit();
         renderer.render(scene, camera);
     }
@@ -250,7 +229,6 @@ export async function createWorld(canvas, hudRoot, { reducedMotion = false, onPr
             const lm = layout.landmarks[name];
             if (!lm) throw new Error(`Tour world: unknown landmark "${name}"`);
             village.flag(name, k);
-            discovered.set(name, Math.max(discovered.get(name) ?? 0, k));
             if (k > 0 && k < 1) hud.toast(lm.label, k, { label: 'Discovered' });
         },
         banners(key, k) { village.banners(key, k); },

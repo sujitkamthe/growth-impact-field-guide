@@ -1,13 +1,12 @@
 // The game HUD, as HTML over the canvas: a quest box (top left) with an optional notes counter and
-// area rows under it, a "Discovered" toast (top centre), a minimap with the fog of war (top right)
-// and a parchment card for an opened note. Like the 3D world it is stateless per frame: the world
+// area rows under it, a "Discovered" toast (top centre) and a parchment card for an opened note. Like the 3D world it is stateless per frame: the world
 // clears it on reset, the chapter sets what it wants, and commit() touches the DOM only where the
 // result differs from what is already shown.
 
 import { clamp01, seg, ease } from './util.js';
 
 // Versioned, so a browser that cached an older HUD stylesheet fetches the new one after a change.
-const CSS_VERSION = '2026-10-14b';
+const CSS_VERSION = '2026-10-15';
 const css = new URL(`./hud.css?v=${CSS_VERSION}`, import.meta.url).href;
 function ensureCss() {
     if (document.querySelector(`link[data-tw-hud]`)) return;
@@ -33,7 +32,7 @@ function el(tag, cls, html) {
     return e;
 }
 
-export function createHud(root, { mapCanvas, fogCanvas, half, mapHalf }) {
+export function createHud(root) {
     ensureCss();
     const hud = el('div', 'tw-hud');
     hud.setAttribute('aria-hidden', 'true');   // the captions carry the words; this is decoration
@@ -55,20 +54,15 @@ export function createHud(root, { mapCanvas, fogCanvas, half, mapHalf }) {
     const tLabel = el('div', 'tw-eyebrow', 'Discovered');
     const tTitle = el('div', 'tw-toast-title');
     toast.append(tLabel, tTitle);
-    const map = el('aside', 'tw-panel tw-map');
-    const canvas = el('canvas');
-    canvas.width = canvas.height = 352;
-    map.append(canvas, el('span', 'tw-north', 'N'));
     const card = el('article', 'tw-card');
     const cLabel = el('div', 'tw-eyebrow', 'A note');
     const cList = el('ol');
     card.append(cLabel, cList);
-    hud.append(left, toast, map, card);
+    hud.append(left, toast, card);
     root.append(hud);
 
-    const ctx = canvas.getContext('2d');
     let want, shown = {};
-    const blank = () => ({ quest: null, toast: null, notes: null, card: null, rows: null, map: true });
+    const blank = () => ({ quest: null, toast: null, notes: null, card: null, rows: null });
     want = blank();
 
     const setVisible = (node, on) => node.classList.toggle('tw-hidden', !on);
@@ -85,53 +79,6 @@ export function createHud(root, { mapCanvas, fogCanvas, half, mapHalf }) {
         }
     }
 
-    // ---- Minimap ------------------------------------------------------------------------------
-    let mapKey = '';
-    function drawMap(m) {
-        const key = `${m.fogKey}|${m.explorer?.map(v => v.toFixed(1))}|${m.view?.map(p => p.map(v => v.toFixed(0)).join(',')).join(';')}|${m.flags?.join(',')}`;
-        if (key === mapKey) return;
-        mapKey = key;
-        const W = canvas.width;
-        const toPx = v => ((v + mapHalf) / (2 * mapHalf)) * W;
-        ctx.clearRect(0, 0, W, W);
-        ctx.drawImage(mapCanvas, 0, 0, W, W);
-        // fog: the hole-punched layer, cropped from the terrain-wide mask to the map
-        const crop = mapHalf / half, F = fogCanvas.width;
-        ctx.drawImage(fogCanvas, F * (1 - crop) / 2, F * (1 - crop) / 2, F * crop, F * crop, 0, 0, W, W);
-        // discovered landmarks
-        for (const [x, z] of m.flagsAt || []) {
-            ctx.fillStyle = '#f3ead2';
-            ctx.strokeStyle = 'rgba(40,30,20,0.6)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            ctx.moveTo(toPx(x), toPx(z) - 10); ctx.lineTo(toPx(x), toPx(z) + 2);
-            ctx.stroke();
-            ctx.fillStyle = '#d4573f';
-            ctx.beginPath();
-            ctx.moveTo(toPx(x), toPx(z) - 10); ctx.lineTo(toPx(x) + 9, toPx(z) - 7); ctx.lineTo(toPx(x), toPx(z) - 4);
-            ctx.fill();
-        }
-        // the camera's view on the ground
-        if (m.view) {
-            ctx.strokeStyle = 'rgba(255, 250, 235, 0.85)';
-            ctx.lineWidth = 2;
-            ctx.beginPath();
-            m.view.forEach(([x, z], i) => (i ? ctx.lineTo(toPx(x), toPx(z)) : ctx.moveTo(toPx(x), toPx(z))));
-            ctx.closePath();
-            ctx.stroke();
-        }
-        // the explorer
-        if (m.explorer) {
-            const [x, z] = m.explorer;
-            ctx.fillStyle = 'rgba(212, 85, 60, 0.3)';
-            ctx.beginPath(); ctx.arc(toPx(x), toPx(z), 11, 0, Math.PI * 2); ctx.fill();
-            ctx.fillStyle = '#d4553c';
-            ctx.strokeStyle = '#fff8ea';
-            ctx.lineWidth = 2.5;
-            ctx.beginPath(); ctx.arc(toPx(x), toPx(z), 6, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
-        }
-    }
-
     return {
         el: hud,
         quest(title, progress = null) { want.quest = { title, progress }; },
@@ -142,9 +89,8 @@ export function createHud(root, { mapCanvas, fogCanvas, half, mapHalf }) {
         rows(list, k = 1) {
             want.rows = { list: list.map(r => (Array.isArray(r) ? { area: r[0], rating: r[1] } : r)), k };
         },
-        clear() { const m = want.mapState; want = blank(); want.mapState = m; },
+        clear() { want = blank(); },
         show(on) { hud.style.display = on ? '' : 'none'; },
-        _map(state) { want.mapState = state; },
         commit() {
             // quest
             const q = want.quest;
@@ -214,8 +160,6 @@ export function createHud(root, { mapCanvas, fogCanvas, half, mapHalf }) {
                 fadeStyle(card, c.k, 14, 0.15, 0.85);
                 card.style.transform = `translateY(-50%) rotate(${(-1.2).toFixed(1)}deg)`;
             } else fadeStyle(card, 0);
-            if (want.mapState && want.map) drawMap(want.mapState);
-            setVisible(map, !!want.map);
         },
     };
 }
