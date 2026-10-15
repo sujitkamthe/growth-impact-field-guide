@@ -1,241 +1,84 @@
 ---
 title: Specialisation
 status: draft
-lede: How depth and breadth should be recognised. A working view, still being refined.
+lede: Going deep and going broad both count. How specialists and all-rounders grow, and how both are recognised fairly.
 ---
 
 ## In short
 
-My opinion is that **someone should absolutely be allowed to grow exclusively in technology, even if they have little interest in becoming better at consulting, delivery management or mentoring.**
+You can grow by going deep. You don't have to become a consultant, a delivery lead or a people lead to grow at Sahaj, at any scope.
 
-And I would go further: **I don't think everyone needs to demonstrate impact in every area to deserve equal recognition, career growth or compensation.**
+Depth replaces breadth only above a shared floor. At your scope, everyone shows every part of the work at a professional standard, because on client work the parts you skip fall on the people around you. Above that floor, where you go deep is your choice, and you can agree much higher expectations in your strength instead of growing evenly.
 
-But there is a condition: their specialisation must create enough value to justify the responsibilities they don't take on.
+Depth is recognised by what it changes and how far it reaches, not by the choice to specialise. Choosing a speciality is a valid direction; it isn't, on its own, evidence of exceptional impact.
 
-## 1. I don't believe in forcing everyone to become an all-rounder
+## The floor everyone meets
 
-Imagine an engineer who is exceptional at distributed systems.
+These are not negotiable, whatever your speciality, because the people around you depend on them:
 
-They don't enjoy consulting. They're not particularly good at delivery management. They have no ambition to lead people.
+- **Client & Delivery**: you build well, you understand why the client needs the work and raise problems early, and you deliver what you commit to. You don't need to be strong at consulting or at running delivery, but neither can be missing at your scope. A weaker facet is a focus for your next cycle; a missing one makes the area below expectations (see [How it works](#how-it-works/areas)).
+- **People & Team**: you give and ask for feedback, help when asked, and don't leave teammates translating the client's problem or coordinating your work for you. From Extended on, you also grow other people; a specialist usually does that in their own domain.
+- **Org & Community**: you contribute beyond your project, in a way you choose. For a specialist, this is usually through the speciality: a capability track, a talk, a shared tool.
 
-But they can solve problems that ten other engineers cannot.
+## Above the floor, depth is your choice
 
-Why should I force this person to become a better consultant?
+These are negotiable, agreed with your team and written in your expectations doc:
 
-If they spend another 500 hours learning distributed systems, that might create far more value for the organisation than spending those hours developing consulting skills.
+- **Where you exceed.** You can agree much higher expectations in your strength instead of growing in every area. A distributed-systems expert might agree to take on the problems nobody else on the account can solve, rather than to lead client workshops.
+- **How you grow.** Deep expertise and technical direction are ways to reach Team and Wider scope; no scope requires a lead role (see the [Team](#scope/team) and [Wider](#scope/wider) scopes).
+- **The pace.** Strengthening a weaker facet can take several cycles, as long as the plan is written down.
 
-**Forcing breadth can come at the expense of exceptional depth.**
+## What makes depth count
 
-And organisations need both.
+Depth counts by its effect, so agree what exceptional looks like before the cycle starts. It is more than writing better code or knowing more frameworks. Exceptional depth looks like:
 
-I would even accept that this person might never become particularly good at consulting or delivery management.
+- solving problems that would otherwise need outside experts
+- cutting significant cost or risk, such as infrastructure spend or a class of production incidents
+- letting Sahaj take on work it couldn't take on before
+- technical decisions that prevent large problems later
 
-That shouldn't prevent them from growing professionally, gaining recognition or earning more.
+Depth also grows your scope the same way breadth does: by reaching further. Expertise that improves work beyond your own is Extended. When the whole team relies on it and can work in your domain without you, it is Team. When teams beyond yours shape how they decide around it, it is Wider. Expertise kept to yourself stays at your own work, however deep it is.
 
-## 2. But there's a difference between specialisation and shifting responsibility
+## Specialising without shifting the load
 
-Now consider your team of four.
+Take a team of four:
 
-| Person | Strength | Contribution |
+| Person | Strength | What they do |
 |---|---|---|
-| A | Technology | Solves difficult engineering problems |
-| B | Delivery | Ensures complex initiatives get delivered |
-| C | Consulting | Understands client problems and shapes solutions |
-| D (you) | All three | Integrates technical, consulting and delivery decisions |
+| A | Technology | Solves the hardest engineering problems |
+| B | Delivery | Gets complex work delivered |
+| C | Consulting | Understands the client's problem and shapes the solution |
+| D | All three | Resolves the conflicts between what is feasible, what was promised and what the client expects |
 
-I see nothing inherently unfair about A, B and C specialising.
+Nothing is unfair about A, B and C specialising. It becomes unfair when D quietly takes on everything that falls between their specialities, and only the specialists' work is recognised. So one rule applies to everyone:
 
-The unfairness arises when D becomes responsible for everything that falls between their specialisations.
+<!-- callout -->
+No one specialises at someone else's unacknowledged expense.
 
-For instance:
+In practice:
 
-A says, "Delivery isn't my responsibility."
+- **Integration is impact.** Resolving trade-offs between technology, delivery and the client is consulting and delivery impact, and People & Team impact when it keeps the team working together. D's reviewers name it in D's evidence, not as ordinary teamwork.
+- **Support counts on both sides.** If a specialist's work needs a teammate to translate the problem or coordinate delivery, that support is part of the picture when the specialist's impact is judged, and part of the teammate's impact too.
+- **Enabling counts too.** If A's expertise makes D's work much easier, that counts in A's favour.
 
-B says, "Technical decisions aren't my responsibility."
+## Three ways to be exceptionally valuable
 
-C says, "Implementation isn't my responsibility."
-
-Who resolves disagreements between technical feasibility, delivery commitments and client expectations?
-
-Probably D.
-
-Now D is performing an additional function: **integration and end-to-end ownership**.
-
-If the organisation recognises the three specialists but treats D's contribution as ordinary teamwork, that is unfair.
-
-However, I wouldn't solve this by forcing A, B and C to become all-rounders.
-
-**I would solve it by explicitly recognising the value of D's contribution and accounting for the dependencies the specialists create.**
-
-## 3. Should someone be allowed to negotiate significantly higher expectations in their strength instead?
-
-**Yes. Absolutely.**
-
-I think that's a reasonable arrangement.
-
-Suppose A says:
-
-"I don't want to grow in consulting or delivery. Set much higher expectations for my technical contribution instead."
-
-I would accept that proposal.
-
-But I would ask A to demonstrate something genuinely exceptional.
-
-Not simply writing better code or knowing more frameworks.
-
-Perhaps they:
-
-- Solve problems that would otherwise require expensive external expertise.
-- Reduce infrastructure costs significantly.
-- Enable the organisation to deliver a category of solutions it previously couldn't.
-- Make technical decisions that prevent substantial future problems.
-
-If A consistently creates that kind of value, I wouldn't care that they aren't great at consulting.
-
-They might deserve even greater recognition than D.
-
-But here's the other side.
-
-Suppose A is simply a very good engineer who prefers coding, while D is also a very good engineer **and** consistently takes responsibility for consulting, delivery and cross-functional decisions.
-
-Then I would expect D's broader contribution to count.
-
-**Choosing to specialise is a valid preference. It isn't automatically evidence of exceptional value.**
-
-## 4. I would separate three things
-
-This is how I would approach growth in any organisation.
-
-**Freedom to choose your growth direction**
-
-An individual decides what they want to become exceptional at.
-
-Nobody should be compelled to become a generalist.
-
-**Responsibility to the team**
-
-Everyone must meet basic professional expectations: collaborate, communicate, deliver reliable work, understand the consequences of their decisions and avoid creating unnecessary burdens for others.
-
-But I wouldn't make mentoring, client-facing consulting, delivery coordination or organisational initiatives compulsory activities for everyone.
-
-**Recognition based on actual contribution**
-
-People should be recognised for the value they create, regardless of whether it comes from depth or breadth.
-
-But that value should be evaluated in context.
-
-If an engineer needs someone else to spend substantial time translating business problems, coordinating delivery and integrating decisions, that supporting work has real value and cost.
-
-We shouldn't evaluate the specialist's contribution as though it happened independently.
-
-## 5. What about equal salaries?
-
-I don't believe equal salaries require identical responsibilities.
-
-A rare technical expert might justifiably earn more than an all-rounder.
-
-An exceptional all-rounder who independently handles complex, ambiguous situations might equally justify higher compensation than three competent specialists.
-
-The deciding factor shouldn't be how many capabilities someone possesses.
-
-It should be **the value of their contribution, including how much they enable others and how much support they require.**
-
-That last part matters.
-
-For example, imagine two engineers produce equally valuable technical solutions.
-
-One independently understands the problem, makes sound trade-offs and gets the solution delivered.
-
-The other requires significant support from colleagues to achieve the same outcome.
-
-I would generally value the first person's independent contribution more.
-
-But if the second person solves a substantially harder technical problem that the first cannot solve, the balance might reverse.
-
-There isn't a universal formula.
-
-## 6. Here's where I disagree with the idea of individual-defined growth
-
-I believe individuals should define **what they want to become**.
-
-But they shouldn't unilaterally define **what the organisation must recognise as valuable**.
-
-Growth is a choice. Recognition is a mutual agreement.
-
-For example, someone could say:
-
-"I want to spend the next three years becoming an expert in compiler design."
-
-That's completely legitimate.
-
-But if the organisation has no meaningful need for that expertise, it isn't automatically obligated to reward that development.
-
-Similarly, someone might choose to focus exclusively on technology. That's fine.
-
-But if the team needs people who can take end-to-end ownership, and the specialist's contribution doesn't sufficiently compensate for that missing capability, the organisation is justified in recognising an all-rounder's contribution more highly.
-
-**Freedom to choose a path doesn't guarantee that every path delivers equal organisational value.**
-
-## 7. The approach I would personally adopt
-
-I would recognise three equally legitimate ways to become exceptionally valuable:
-
-| Growth direction | What exceptional contribution looks like |
+| Way | What exceptional looks like |
 |---|---|
-| **Deep specialist** | Solves exceptionally difficult problems or brings rare expertise that produces substantial value |
-| **Broad practitioner** | Independently handles complex problems involving multiple capabilities and competing constraints |
-| **Multiplier** | Makes other people or teams substantially more effective through expertise, systems, guidance or coordination |
+| **Depth** | Solving problems few others can, or bringing rare expertise that changes what the team or Sahaj can do |
+| **Breadth** | Handling complex, ambiguous work that spans technology, consulting and delivery, and making the trade-offs between them |
+| **Making others effective** | Expertise, tools, practices or guidance that make other people and teams substantially better |
 
-These aren't mutually exclusive roles or a hierarchy. They're different ways people can create value.
+These are not roles or a ranking, and people move between them. None needs to become another to be recognised as exceptional.
 
-And I would allow someone to remain a deep specialist throughout their career.
+## How this works for three people
 
-They should not have to become a consultant, delivery manager or people leader to progress.
+- **A deep technical specialist** meets the floor in consulting and delivery, agrees much higher technical expectations, and exceeds in Client & Delivery through craft. Their scope grows as the team, then teams beyond it, rely on their expertise and learn from it.
+- **A strong consultant who is a weaker engineer** builds well enough that their framing turns into working software without someone rescuing it, and names technical craft as the facet to strengthen. Their scope grows as clients and teams beyond their own act on the problems they frame.
+- **A delivery-focused person who rarely consults or mentors** is below the floor where consulting is missing, or where, from Extended on, nobody grows because of them. Raising the floor comes first; after that, delivery can be where they go deep.
 
-The only common expectations I'd enforce are professionalism, trust, collaboration and responsibility for the consequences of one's own work.
+## Still open
 
-Beyond those, different contributions should be evaluated on their merits.
-
-## 8. But I would establish one very important rule
-
-**No one gets to specialise at someone else's unacknowledged expense.**
-
-Specialists can absolutely agree to divide responsibilities.
-
-A can handle architecture, B delivery and C consulting.
-
-That's legitimate teamwork.
-
-But if D is needed to integrate all three, then D is contributing something valuable that the specialists aren't.
-
-That work should be explicit, properly supported and recognised.
-
-Equally, if A's extraordinary technical expertise makes D's job dramatically easier, that should count in A's favour.
-
-Fairness doesn't require everyone to contribute equally in every area.
-
-**Fairness requires recognising the full contribution of each person, including the work that makes everyone else's contribution possible.**
-
-## My final position
-
-I would not create a universal expectation that everyone must grow in technology, consulting, delivery, people and organisational contribution.
-
-I think that risks producing a culture of reasonably competent generalists while making exceptional specialists feel unwelcome.
-
-Instead, I would establish:
-
-**Common standards of professional responsibility, but different expectations for exceptional contribution.**
-
-If someone wants to focus entirely on technical expertise, let them.
-
-If someone wants to excel across technology, consulting and delivery, encourage that too.
-
-Then assess both against the difficulty, independence, reach and actual value of their contributions.
-
-**And importantly, I would not insist that exceptional technical depth must be accompanied by equivalent impact in other areas to justify career progression.**
-
-That, to me, is a more genuine expression of individual-defined growth.
-
-The trade-off is that assessment becomes more judgment-based and less uniform. I think that's worth accepting, provided expectations are agreed openly and applied consistently.
-
-**One final thought:** I wouldn't promise that every specialist and every all-rounder deserves the same recognition. I'd promise that neither has to become the other to be considered exceptionally valuable.
+- **Who agrees "much higher" expectations**, and how they are checked across teams and offices so a specialist's doc means the same everywhere.
+- **Pay** is decided separately; this page covers expectations and recognition only.
+- **Whether Org & Community can always be met through a speciality**, or only when the speciality has an audience inside Sahaj.
