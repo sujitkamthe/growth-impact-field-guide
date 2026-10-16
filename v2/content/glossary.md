@@ -68,7 +68,7 @@ The person or people on a team who look after its people's growth. When the team
 ## Specialist agreement
 
 <!-- matches: specialist agreements, specialist agreement -->
-An agreement, at Extended scope and above, to hand one specific responsibility to a teammate who accepts it, and to make a stronger contribution through a strength the team already relies on. It is written in your expectations doc, usually holds for many cycles because it is where you want to grow, and never removes an area or a facet.
+An agreement, at Extended scope and above, to hand one specific responsibility to a teammate who accepts it, and to make a stronger contribution through a strength the team already relies on. It is written in your expectations doc and never removes an area or a facet.
 
 ## Stretch
 

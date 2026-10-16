@@ -41,7 +41,7 @@ No. Your strength will vary by area, and the rating captures that. Strength in o
 
 ### Can I hand over part of my work to focus on my strength?
 
-Sometimes. At Extended scope and above, a strength the team already relies on can support a [specialist agreement](#how-it-works/specialist-agreements): you hand one specific responsibility, such as leading the client's planning, to a teammate who accepts it, and agree a stronger contribution through your strength instead. You can't hand over a whole area or facet, and some expectations stay with everyone, such as communicating risks and keeping your commitments. An agreement is a direction you keep for many cycles, not something to renegotiate every quarter.
+Sometimes. At Extended scope and above, a strength the team already relies on can support a [specialist agreement](#how-it-works/specialist-agreements): you hand one specific responsibility, such as leading the client's planning, to a teammate who accepts it, and agree a stronger contribution through your strength instead. You can't hand over a whole area or facet, and some expectations stay with everyone, such as communicating risks and keeping your commitments.
 
 ### I'm already strong in every area. What next?
 
