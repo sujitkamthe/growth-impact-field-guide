@@ -33,19 +33,19 @@ No. Finishing your work on time is part of Client & Delivery, not all of it. The
 
 ### How do I move to the next scope?
 
-By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them, in all three areas. Strong next-scope impact in one area is rated as exceeding; your scope is raised at the team check once you show it consistently in all three. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
+By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities, or a greater contribution through your strength, and keeping it up until the people around you depend on you for it. Strong next-scope impact in one area is rated as exceeding; your scope grows at the team check once your contribution consistently reaches the next scope in all three areas. Growing doesn't only mean moving scope, though: deepening your expertise at your current scope counts too. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
 
 ### Do I have to be equally strong in all three areas?
 
 No. Your strength will vary by area, and the rating captures that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere. You can still grow by going deep in what you do best; see [Specialisation](#specialisation).
 
-### Can I hand over part of my work to focus on my strength?
+### Can I take less of some work to focus on my strength?
 
-Sometimes. At Extended scope and above, a strength the team already relies on can support a [specialist agreement](#how-it-works/specialist-agreements): you hand one specific responsibility, such as leading the client's planning, to a teammate who accepts it, and agree a stronger contribution through your strength instead. You can't hand over a whole area or facet, and some expectations stay with everyone, such as communicating risks and keeping your commitments.
+Sometimes. At Extended scope and above, depth you've already shown can support an [agreed focus](#how-it-works/agreeing-a-focus): you take less of a particular responsibility, such as leading the client's planning or formal mentoring, a teammate who has room for it takes it on, and you agree a greater contribution through your strength instead. You can't step back from a whole area, and the standards stay with everyone, such as meeting the team's engineering standards, communicating risks and keeping your commitments.
 
 ### I'm already strong in every area. What next?
 
-Talk with your team about a next challenge: a responsibility you haven't had before, a harder problem, or a stretch into the next scope. Exceeds is recorded whether or not it leads to a raise. If you often settle what falls between other people's work, that is impact of your own, so name it in your self-assessment, and don't take on every specialist's handover by default.
+Talk with your team about a next challenge: a responsibility you haven't had before, a harder problem, or a stretch into the next scope. Exceeds is recorded whether or not your scope grows. If you often settle what falls between other people's work, that is impact of your own, so name it in your self-assessment, and don't take on every handover by default.
 
 ### Can I grow without leading a team?
 
@@ -59,7 +59,7 @@ Yes. You choose what to contribute, usually through what you're good at and what
 
 ### Can I skip work I don't enjoy?
 
-You can choose a different way to contribute, but not skip the area. Someone who doesn't enjoy writing can give a talk, interview or build a tool instead; agree the alternative with your team, so there's a contribution rather than a gap. Handing over a whole responsibility, rather than one activity, needs a [specialist agreement](#how-it-works/specialist-agreements).
+You can choose a different way to contribute, but not skip the area. Someone who doesn't enjoy writing can give a talk, interview or build a tool instead; agree the alternative with your team, so there's a contribution rather than a gap. Taking less of a whole responsibility, rather than skipping one activity, needs an [agreed focus](#how-it-works/agreeing-a-focus).
 
 ### Can I contribute beyond my scope?
 

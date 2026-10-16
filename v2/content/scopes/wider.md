@@ -233,4 +233,4 @@ Without leading an account: the event-driven architecture you shaped is the appr
 
 ### Below expectations
 
-You led the account well, but your impact stopped at its edge: strong decisions for your client, nothing shaped beyond it. The direction you set lived mostly in conversations and decks, teams interpreted it differently, and under delivery pressure it was dropped without anyone deciding to drop it.
+You kept the account's immediate commitments, but didn't set direction or build capability its teams could sustain without you. The direction you set lived mostly in conversations and decks, teams interpreted it differently, and under delivery pressure it was dropped without anyone deciding to drop it.

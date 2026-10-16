@@ -102,7 +102,7 @@ function build() {
         ...AREAS.map(a => row([nameCell(a.name, a.color, a.hint, A), cell(gap(900), { width: C }), cell([gap(900), myView], { width: C })], 1900)),
         row([
             nameCell('Agreements', INK, '', A),
-            cell([p(muted('Any specialist agreement (your strength, the responsibility you hand over, the teammate who takes it, your stronger contribution) or agreed deferral, each with a date to look at it again', { size: 16 })), gap(500)], { width: C }),
+            cell([p(muted('Any agreed focus (where you contribute most, what you take less of, the teammate who takes it on, your greater contribution) or agreed deferral, each with a date to look at it again', { size: 16 })), gap(500)], { width: C }),
             cell([p(muted('How each agreement worked, for you and for the teammate involved', { size: 16 })), gap(500)], { width: C }),
         ], 1300),
         row([

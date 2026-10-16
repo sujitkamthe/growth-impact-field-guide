@@ -11,6 +11,11 @@ lede: The terms the guide uses, in plain words. Where a term first appears on a 
 <!-- matches: account leads, account lead -->
 Sahaj's work with one client, whether it has one team or several. The account lead looks after the client relationship and the account as a whole, and decides when a disagreement about someone's scope or rating remains after the team's seniors have made a judgement call.
 
+## Agreed focus
+
+<!-- matches: agreed focus -->
+An agreement, at Extended scope and above, to take less of a particular responsibility, which a teammate who has room for it takes on, and make a greater contribution through depth you've already shown. The standards stay with everyone, and it never removes an area. It is written in your expectations doc.
+
 ## Area
 
 One of the three areas of impact that every scope covers: [Client & Delivery](#area/client-delivery), [People & Team](#area/people-team) and [Org & Community](#area/org-community). Each area gets one rating.
@@ -28,22 +33,17 @@ The delivery facet of Client & Delivery: taking responsibility for commitments a
 ## Expectations doc
 
 <!-- matches: expectations docs, expectations doc -->
-A short doc you keep for each cycle, made from one template for every scope. It notes your scope, anything specific to your work, any specialist agreement or agreed deferral, where you want to grow, and at the end your self-assessment. The expectations themselves stay in the guide. You drive it; your teammates comment on it.
+A short doc you keep for each cycle, made from one template for every scope. It notes your scope, anything specific to your work, any agreed focus or agreed deferral, where you want to grow, and at the end your self-assessment. The expectations themselves stay in the guide. You drive it; your teammates comment on it.
 
 ## Facet
 
 <!-- matches: facets, facet -->
-One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations. A specialist agreement can hand one responsibility within a facet to a teammate, never the whole facet.
+One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations. With an agreed focus, a facet is judged against the responsibilities you kept in it.
 
-## Mid-cycle check
+## Growing your scope
 
-<!-- matches: mid-cycle checks, mid-cycle check -->
-A short conversation halfway through the cycle in which you and the teammates who reviewed your doc go through all three areas: what they've seen, where evidence is missing and what needs to change. It isn't a rating.
-
-## Raise in scope
-
-<!-- matches: raising someone's scope, raise someone's scope, scope should be raised, scope is raised, raise in scope, scope moves up -->
-Moving your scope to the next one. It is decided at the team check once you show next-scope impact consistently in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
+<!-- matches: someone's scope grows, scope has grown, your scope grows, scope grows -->
+Your scope moving to the next one. It is decided at the team check once your contribution consistently reaches the next scope in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
 
 ## Rating
 
@@ -60,20 +60,15 @@ How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#s
 <!-- matches: seniors -->
 The person or people on a team who look after its people's growth. When the team can't agree on someone's scope or rating, they make a judgement call.
 
-## Specialist agreement
-
-<!-- matches: specialist agreements, specialist agreement -->
-An agreement, at Extended scope and above, to hand one specific responsibility to a teammate who accepts it, and to make a stronger contribution through a strength the team already relies on. It is written in your expectations doc and never removes an area or a facet.
-
 ## Stretch
 
 <!-- matches: stretches, stretch -->
-Some of the next scope's responsibilities, added to your expectations for a cycle. It usually starts in one area. Someone who has been at the same scope for a long time has a stretch set in all three areas.
+Some of the next scope's responsibilities, added to your expectations for a cycle. It usually starts in one area. Someone who has been at the same scope for a long time agrees a development goal with their team, which can deepen their contribution or prepare them for the next scope.
 
 ## Team check
 
 <!-- matches: team checks, team check -->
-The conversation at the end of a cycle in which teammates confirm, correct or add to your self-assessment and confirm your ratings, and any raise in scope is decided.
+The conversation at the end of a cycle in which teammates confirm, correct or add to your self-assessment, confirm your ratings, decide whether your scope has grown, and look ahead with you at the next cycle.
 
 ## Ways to contribute
 

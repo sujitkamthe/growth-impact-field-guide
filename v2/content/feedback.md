@@ -43,22 +43,22 @@ People who are strong in every area also tend to pick up whatever falls between 
 
 *When someone turns down one way to contribute, ask what they will do instead.*
 
-People differ in what they enjoy doing, and the guide leaves room for that: someone who doesn't enjoy writing doesn't have to write. What they can't do is leave the area empty. When someone declines a way to contribute, accept the choice, ask what they will do instead and agree it, so the conversation ends with a contribution rather than a gap. If what they want to give up is a whole responsibility rather than one activity, that needs a [specialist agreement](#how-it-works/specialist-agreements), which takes more than a preference.
+People differ in what they enjoy doing, and the guide leaves room for that: someone who doesn't enjoy writing doesn't have to write. What they can't do is leave the area empty. When someone declines a way to contribute, accept the choice, ask what they will do instead and agree it, so the conversation ends with a contribution rather than a gap. If what they want is to take less of a whole responsibility rather than skip one activity, that needs an [agreed focus](#how-it-works/agreeing-a-focus), which takes more than a preference.
 
-## The mid-cycle check
+## Looking ahead at each team check
 
-<!-- group: Halfway through | Check all three areas while there's time to change | check -->
-*Halfway through the cycle, go through all three areas with the teammates who reviewed your expectations.*
+<!-- group: At the team check | Look ahead while there's a cycle to act | team -->
+*Feedback in the moment rarely notices what's missing, so each team check also looks ahead to the next cycle.*
 
-Feedback in the moment covers what people see. It rarely covers what's missing, because nobody has a reason to comment on work someone hasn't done. The mid-cycle check closes that gap. It is a short conversation, not a rating, and the person whose doc it is arranges it:
+Feedback in the moment covers what people see. It rarely covers what's missing, because nobody has a reason to comment on work someone hasn't done. So after confirming the cycle that has ended, the team check looks ahead, and every cycle's check counts: an expectation that matters comes up in the cycle it applies to, not saved for a later one.
 
-1. **What has each teammate seen?**: in each area, the contribution they've noticed so far.
+1. **What has each teammate seen?**: in each area, the contribution they've noticed.
 2. **Where is evidence missing?**: an area, a facet or an agreed stretch that nobody has seen yet.
-3. **What needs to change?**: different opportunities, support or time, and who will arrange them.
-4. **Record what changed**: if an expectation changes, write it in the doc now, before the self-assessment measures against it.
+3. **What changes next cycle?**: different opportunities, support or time, and who will arrange them.
+4. **Record what changed**: write any changed expectation in the next cycle's doc, so the next self-assessment measures against it.
 
 <!-- more -->
-Review any specialist agreement or Org & Community deferral here too, and change it if the team or its work has changed.
+Look at any agreed focus or Org & Community deferral here too: whether the greater contribution is happening, and whether the arrangement is still sustainable for the teammate who took on the handed-over responsibility.
 
 ## Examples
 

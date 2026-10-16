@@ -13,19 +13,19 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 ## The prompts
 
 <!-- group: For each area | Say what changed, then choose a rating | rating -->
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have a specialist agreement, say what your stronger contribution achieved.
+- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have an agreed focus, say what your greater contribution achieved.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
 ## Choosing a rating
 
 <!-- scale -->
-- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all. Impact depended on favourable conditions, or teammates compensated for gaps you had not closed.
+- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all (with an agreed focus, the responsibilities you kept in it). Impact depended on favourable conditions, or teammates compensated for gaps you had not closed.
 - **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Two facets that exceed your scope's expectations can carry one weaker one. Teammates would depend on you here without checking.
 - **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects, either across the area or through exceptional impact in one facet while you met the rest of what the area expects of you. Teammates learned from you, or a problem stopped recurring because of you.
 
 <!-- callout -->
-Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: that happens when your next-scope impact is consistent in all three areas.
+Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: your scope grows when your contribution consistently reaches the next scope in all three areas.
 
 Exceeds in one area is a strong result, and the right moment to talk about a stretch.
 
@@ -34,7 +34,7 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 <!-- group: At the team check | Talk it through with your teammates | team -->
 *Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
 
-You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
+You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. Then look ahead together: where evidence is still missing, and what changes next cycle. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
 
 ## A worked example
 
@@ -55,13 +55,13 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 
 *Rate a stretched area against your scope like any other, then say how far you got.*
 
-If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
+If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope grows at the [team check](#how-it-works/the-cycle) once your contribution consistently reaches the next scope in all three areas. Falling short of a stretch is normal.
 
-## If you have a specialist agreement
+## If you have an agreed focus
 
-*Rate the area against your scope and your agreement together.*
+*The greater contribution you agreed is required, and doing it well can earn Exceeds.*
 
-The stronger contribution you agreed is part of what Meets means for you in that area, so falling well short of it isn't Meets, even if the rest of the area went well. The responsibility you handed over isn't expected of you, but your part in it is: the estimates, risks and follow-through the teammate who took it on depended on. Say how the handover worked for them too. Exceptional depth belongs in your self-assessment whether or not it leads to a raise, so describe what it changed and who relied on it.
+Rate each area against your scope and your agreed focus together. The greater contribution is a responsibility you took on, not an optional stretch, so falling well short of it isn't Meets, even if your usual work went well. Doing it well can earn Exceeds when its impact is clearly beyond your current scope and you met the rest of what you agreed; agreeing the contribution doesn't earn a rating on its own. The responsibilities you took less of aren't expected of you, but your part in them is: the estimates, risks and follow-through the teammate who took them on depended on. Say how the arrangement worked for them too. If the team didn't give you the time or opportunity it agreed, say so, because your teammates take that into account.
 
 ## If an area fell short
 

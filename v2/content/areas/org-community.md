@@ -51,6 +51,6 @@ A low-profile fix that removes recurring friction for many people can be worth m
 
 If your project leaves no room, agree it with the seniors on your team, or with your account lead if the cause is account-wide, such as a new account being set up or a delivery crunch. If you know at the start of the cycle, record it in your doc when you agree your expectations; if it comes up later, raise it as soon as you know. Either way, agree what contribution is still possible, who will make time for it, and a date to look at the arrangement again. Raised for the first time in your self-assessment, it's too late to change anything.
 
-You're then rated on what was reasonably available to you, and the constraint is recorded in your doc. If an agreed deferral covered the whole cycle, Org & Community is recorded as not rated for that cycle, with the reason, and it doesn't count toward a raise.
+You're then rated on what was reasonably available to you, and the constraint is recorded in your doc. If an agreed deferral covered the whole cycle, Org & Community is recorded as not rated for that cycle, with the reason, and it doesn't count toward your scope growing.
 
-Like every area, Org & Community counts toward a raise in scope: you need consistent next-scope impact here as well as in the other two.
+Like every area, Org & Community counts when your scope grows: you need consistent next-scope impact here as well as in the other two.

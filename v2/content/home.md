@@ -22,8 +22,8 @@ Read the four scopes below and pick the one that sounds most like the impact of 
 - [Plan a stretch](#how-it-works/growing-into-the-next-scope): Take on some of the next scope's responsibilities
 - [Write your self-assessment](#self-assessment): Look back on the cycle and rate each area
 - [Review a teammate](#teammates): Review their expectations, give feedback through the cycle and take part in their team check
-- [Give feedback](#feedback): Cover all three areas, ask for more, and check in halfway through the cycle
+- [Give feedback](#feedback): Cover all three areas, ask for more, and look ahead at each team check
 
 ## How growth happens
 
-You grow by taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them. Strong next-scope impact in one area is recognised as exceeding along the way, and your scope is raised once you show that impact consistently in all three areas.
+You grow by deepening what you do best, by taking on some of the next scope's responsibilities, or both, and keeping it up until the people around you depend on you for it. Strong next-scope impact in one area is recognised as exceeding along the way, and your scope grows once your contribution consistently reaches the next scope in all three areas.
