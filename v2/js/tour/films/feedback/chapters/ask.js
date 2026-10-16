@@ -1,11 +1,12 @@
-// Feedback film, chapter 2, Ask first: the most experienced person on the team asks a new joiner.
+// Feedback film, chapter 2, Ask first: the most experienced person goes first, asks about their own
+// work, and thanks the critical answer.
 //
-// 1. "If you've been on the team longest, ask a new joiner for feedback first..."  Close on the two of
-//    them in the square. The explorer asks; the joiner answers at some length; the explorer nods.
-//    Toast, labelled "Ask first": "What's confusing about how we work?" Notes: 1.
-// 2. "Keep the question small..."  The explorer asks again; the joiner answers, glancing towards the
-//    hall; the explorer nods. Toast, labelled "A small question": "What's one thing I could do
-//    differently?" Notes: 2. The explorer turns to the showcase at the cart.
+// 1. "If you've been on the team the longest, go first..."  Close on the two of them in the square.
+//    The explorer asks; the joiner answers at some length; the explorer nods. Toast, labelled "Ask
+//    first": "What would you change about how I run planning?" Notes: 1.
+// 2. "When the answer is critical, thank them..."  The joiner answers, glancing towards the hall; the
+//    explorer nods. Toast, labelled "Thank them": "Thanks, that's useful. Tell me more?" Notes: 2. The
+//    explorer turns to the showcase at the cart.
 //
 // Starts where Small and often ends. Ends with the explorer facing the cart.
 
@@ -65,8 +66,8 @@ export default {
 
         world.hud.quest('Make feedback a habit', null);
         // (one toast a frame: the last call wins)
-        if (t < at(1, 0)) world.hud.toast("What's confusing about how we work?", world.util.seg(t, at(0, 0.08), at(0, 0.98)), { label: 'Ask first' });
-        else world.hud.toast("What's one thing I could do differently?", world.util.seg(t, at(1, 0.03), at(1, 0.95)), { label: 'A small question' });
+        if (t < at(1, 0)) world.hud.toast('What would you change about how I run planning?', world.util.seg(t, at(0, 0.08), at(0, 0.98)), { label: 'Ask first' });
+        else world.hud.toast("Thanks, that's useful. Tell me more?", world.util.seg(t, at(1, 0.03), at(1, 0.95)), { label: 'Thank them' });
         if (t >= at(0, 0.72)) world.hud.notes(t >= at(1, 0.6) ? 2 : 1);
     },
 };

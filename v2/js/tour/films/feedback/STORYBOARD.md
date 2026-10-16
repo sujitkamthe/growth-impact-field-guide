@@ -23,16 +23,16 @@ The cast, by villager index: 10 the new joiner, who arrives over the bridge; 4 t
 
 ### 1. Small and often (`habit`)
 Early morning.
-1. "At Sahaj, feedback is part of an ordinary day: a few words soon after the moment, from anyone to anyone."
+1. "At Sahaj, feedback is part of an ordinary day: genuine, frequent and open, a few words soon after the moment, from anyone to anyone."
    The camera comes down from high over the valley to the square. The background pairs turn to each other; at the head of the bridge road the showcase is under way, a teammate watching from the square's north side; the explorer stands in the square and glances over at it. The new joiner is walking in over the bridge.
-2. "It works when the person giving it means to help, and the person hearing it listens and acts on it."
+2. "It's for your growth, not a mark for your self-assessment: a teammate's view of what you could try next, while there's still time to try it."
    The camera settles on the explorer, who turns back as the joiner comes off the bridge and stops in front of them. Quest box: "Make feedback a habit".
 
 ### 2. Ask first (`ask`)
-1. "If you've been on the team longest, ask a new joiner for feedback first. It shows them that asking is safe."
-   Close on the two of them. The explorer asks with a small gesture; the joiner answers at some length; the explorer nods. Toast, labelled "Ask first": "What's confusing about how we work?" The notes counter appears at 1.
-2. "Keep the question small: what's one thing I could do differently next time? 'Any feedback?' usually gets 'all good', which you can't act on."
-   The explorer asks again; the joiner answers, glancing towards the hall; the explorer nods. Toast, labelled "A small question": "What's one thing I could do differently?" Notes: 2. The explorer turns to the showcase.
+1. "If you've been on the team the longest, go first: ask for feedback, including from the newest people on the team, and ask about your own work."
+   Close on the two of them. The explorer asks with a small gesture; the joiner answers at some length; the explorer nods. Toast, labelled "Ask first": "What would you change about how I run planning?" The notes counter appears at 1.
+2. "When the answer is critical, thank them, even if you disagree. Everyone watching learns from your answer whether it is safe to say it again."
+   The explorer asks again; the joiner answers, glancing towards the hall; the explorer nods. Toast, labelled "Thank them": "Thanks, that's useful. Tell me more?" Notes: 2. The explorer turns to the showcase.
 
 ### 3. The same day (`give`)
 1. "When a teammate's work goes well, tell them that day, while you both remember the moment."
@@ -41,17 +41,17 @@ Early morning.
    The explorer tells them, and the parchment card opens, labelled "Said the same day": "What I saw: your fix halved the page load", "What it changed: the client noticed it in the showcase", "Which expectation: Client & Delivery, technical craft". The teammate nods. Behind them, the teammate who watched comes over and waits their turn.
 
 ### 4. What should change (`change`)
-1. "When something should change, say so soon and in private, about the work, not the person, with one thing to try instead."
+1. "When something should change, don't hold it back to be kind. Say it soon and in private, about the work, not the person, with one thing to try instead."
    The waiting teammate asks for two minutes (toast, labelled "Soon, in private": "Got two minutes?"), and the two of them walk out of the square to the riverbank east of the bridge, while the teammate from the showcase steps back to watch the bridge.
 2. "And say why you're telling them: you expect a lot of their work because you know they can do it."
    Seen from across the river: the teammate talks it through. The card opens, labelled "In private": "What I saw: you agreed the date before showing our estimate", "What it changed: long hours, or a missed date", "Which expectation: Client & Delivery, delivery ownership", "Try next time: show both options and let the client choose".
-3. "When it's said to you, and your first instinct is to explain, ask a question instead: what would you have done?"
-   The explorer starts to explain with a gesture, stops halfway, looks out at the water for a moment, nods, and asks with a smaller gesture. Toast, labelled "Hearing it": "What would you have done?" The teammate answers.
-4. "Then thank them. Thanking someone isn't agreeing with them; you can decide later what to do with the feedback."
+3. "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?"
+   The explorer starts to explain with a gesture (toast, labelled "The first instinct": "Yes, but…"), stops halfway, looks out at the water for a moment, nods, and asks with a smaller gesture. Toast, labelled "Hearing it": "What would you have done?" The teammate answers.
+4. "Then thank them, and hear it as one moment in one piece of work, not a verdict on you. You can decide later what to do with it."
    The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
 
 ### 5. Every way, every area (`everyone`)
-1. "Feedback goes every way, whatever anyone's scope, including from the newest person on the team to the most experienced."
+1. "There are no titles at Sahaj, so how long someone has been here is never a reason to stay quiet, in either direction. Say what you see to anyone, without fear."
    The camera rises from the riverbank over the village. At the notice board the new joiner turns to the older teammate reading beside them and tells them something; they nod. The explorer sets off for the hall.
 2. "It covers more than the code too: how someone works with the client, who grew because of them, and what they gave back to Sahaj."
    The HUD's three area rows appear and fill one by one, Client & Delivery, People & Team, Org & Community, while the exchanges go on at the market, by the houses and at the notice board, where the teammate now answers the joiner. The teammate from the riverbank walks back towards the square; the explorer reaches the hall's door.
@@ -69,5 +69,5 @@ Afternoon.
 Late afternoon into golden hour.
 1. "At each team check, look for what nobody has seen yet, such as an area with no feedback, and agree who will arrange an opportunity for it next cycle."
    The team in its circle. The HUD's area rows show Client & Delivery and People & Team marked and Org & Community's slot still empty; toast, labelled "Team check": "Where is evidence missing?" The teammate from the riverbank speaks, the others nod, and the planner raises a hand to arrange it. Quest box: "Next cycle: an opportunity in Org & Community".
-2. "This week, tell one teammate what you saw them do and what it changed, and ask another what you could do differently next time."
+2. "Make it weekly. This week, tell one teammate what you saw them do and what it changed, and ask another what you could do differently next time."
    The rows go, and the camera pulls up high over the village in golden light, the pairs still turning to each other. Quest box: "This week: tell one, ask one". The player's end card follows, with "Read about feedback" and "Watch How growth works at Sahaj".

@@ -1,14 +1,14 @@
 // Feedback film, chapter 4, What should change: said soon and in private, and heard without defending.
 //
-// 1. "When something should change, say so soon and in private..."  The teammate who watched the
+// 1. "When something should change, don't hold it back to be kind..."  The teammate who watched the
 //    showcase steps up to the explorer and asks for two minutes (toast, labelled "Soon, in private":
 //    "Got two minutes?"). They walk together out of the square to the riverbank east of the bridge.
 // 2. "And say why you're telling them..."  By the water, the teammate talks it through. The card opens,
 //    labelled "In private", in the guide's form plus what to try instead.
-// 3. "When it's said to you, and your first instinct is to explain..."  The explorer starts to explain,
-//    stops halfway, looks out at the river for a moment, nods, and asks with a smaller gesture. Toast,
+// 3. "When it's said to you and you feel a 'yes, but' coming..."  The explorer starts to explain (toast,
+//    labelled "The first instinct": "Yes, but…"), stops halfway, looks out at the river for a moment, nods, and asks with a smaller gesture. Toast,
 //    labelled "Hearing it": "What would you have done?" The teammate answers.
-// 4. "Then thank them..."  The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
+// 4. "Then thank them, and hear it as one moment..."  The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
 //
 // Starts where The same day ends. Ends with the two of them facing each other on the riverbank.
 
@@ -98,6 +98,7 @@ export default {
         world.hud.quest('Make feedback a habit', null);
         world.hud.notes(t >= at(3, 0.46) ? 3 : 2);
         if (t < at(2, 0)) world.hud.toast('Got two minutes?', seg(t, at(0, 0.1), at(0, 0.7)), { label: 'Soon, in private' });
+        else if (t < at(2, 0.46)) world.hud.toast('Yes, but…', seg(t, at(2, 0.06), at(2, 0.44)), { label: 'The first instinct' });
         else world.hud.toast('What would you have done?', seg(t, at(2, 0.5), at(3, 0.25)), { label: 'Hearing it' });
         world.hud.card(NOTE, seg(t, at(1, 0.0), at(2, 0.3)), { label: 'In private' });
     },

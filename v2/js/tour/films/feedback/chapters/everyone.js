@@ -1,7 +1,7 @@
 // Feedback film, chapter 5, Every way, every area: feedback in every direction, on all three areas, and
 // for the people already doing well.
 //
-// 1. "Feedback goes every way, whatever anyone's scope..."  The camera rises from the riverbank over the
+// 1. "There are no titles at Sahaj, so how long someone has been here is never a reason to stay quiet..."  The camera rises from the riverbank over the
 //    whole village: pairs turning to each other in every district, and at the notice board the new
 //    joiner telling one of the older villagers something, who nods. The explorer sets off for the hall.
 // 2. "It covers more than the code too..."  The HUD's three area rows appear and fill one by one as

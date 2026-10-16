@@ -7,25 +7,25 @@
 
 export const CHAPTERS = [
     { id: 'habit', title: 'Small and often', beats: [
-        'At Sahaj, feedback is part of an ordinary day: a few words soon after the moment, from anyone to anyone.',
-        'It works when the person giving it means to help, and the person hearing it listens and acts on it.',
+        'At Sahaj, feedback is part of an ordinary day: genuine, frequent and open, a few words soon after the moment, from anyone to anyone.',
+        "It's for your growth, not a mark for your self-assessment: a teammate's view of what you could try next, while there's still time to try it.",
     ] },
     { id: 'ask', title: 'Ask first', beats: [
-        "If you've been on the team longest, ask a new joiner for feedback first. It shows them that asking is safe.",
-        "Keep the question small: what's one thing I could do differently next time? 'Any feedback?' usually gets 'all good', which you can't act on.",
+        "If you've been on the team the longest, go first: ask for feedback, including from the newest people on the team, and ask about your own work.",
+        'When the answer is critical, thank them, even if you disagree. Everyone watching learns from your answer whether it is safe to say it again.',
     ] },
     { id: 'give', title: 'The same day', beats: [
         "When a teammate's work goes well, tell them that day, while you both remember the moment.",
         "Say what you saw and what it changed, and, if it helps, which area it belongs to. 'Nice work' is kind, but it doesn't say what to do again.",
     ] },
     { id: 'change', title: 'What should change', beats: [
-        'When something should change, say so soon and in private, about the work, not the person, with one thing to try instead.',
+        "When something should change, don't hold it back to be kind. Say it soon and in private, about the work, not the person, with one thing to try instead.",
         "And say why you're telling them: you expect a lot of their work because you know they can do it.",
-        "When it's said to you, and your first instinct is to explain, ask a question instead: what would you have done?",
-        "Then thank them. Thanking someone isn't agreeing with them; you can decide later what to do with the feedback.",
+        "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?",
+        'Then thank them, and hear it as one moment in one piece of work, not a verdict on you. You can decide later what to do with it.',
     ] },
     { id: 'everyone', title: 'Every way, every area', beats: [
-        "Feedback goes every way, whatever anyone's scope, including from the newest person on the team to the most experienced.",
+        "There are no titles at Sahaj, so how long someone has been here is never a reason to stay quiet, in either direction. Say what you see to anyone, without fear.",
         'It covers more than the code too: how someone works with the client, who grew because of them, and what they gave back to Sahaj.',
         "Tell the people already doing well what their work changed, and ask what they'd like to take on next.",
     ] },
@@ -35,7 +35,7 @@ export const CHAPTERS = [
     ] },
     { id: 'ahead', title: 'Looking ahead', beats: [
         'At each team check, look for what nobody has seen yet, such as an area with no feedback, and agree who will arrange an opportunity for it next cycle.',
-        'This week, tell one teammate what you saw them do and what it changed, and ask another what you could do differently next time.',
+        'Make it weekly. This week, tell one teammate what you saw them do and what it changed, and ask another what you could do differently next time.',
     ] },
 ];
 

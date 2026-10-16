@@ -14,7 +14,7 @@ export const CHAPTERS = [
         'Principle one: Growth is self-directed. You choose the direction, shape and pace of your growth, and you can grow through your strengths.',
         'Principle two: Clarity without hierarchy. Sahaj has no titles. We describe growth through the impact of your work and the responsibilities people trust you with.',
         'Principle three: Transparency and trust. Expectations are written down and open for discussion. Anyone on your team can review them.',
-        'Principle four: Feedback is a habit. Anyone can give or ask for feedback, whatever their scope, and it covers all of your impact, not only the work you deliver.',
+        'Principle four: Feedback is a habit. Genuine, frequent and open, from anyone to anyone, whatever their seniority, and for your growth, not a mark.',
         'Principle five: Honest reflection. You look back at what happened and what you learned from feedback, including what was difficult.',
     ] },
     { id: 'scopes', title: 'How far you reach', beats: [
