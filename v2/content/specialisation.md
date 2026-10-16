@@ -41,6 +41,7 @@ You stay accountable for your part of what you took less of. Someone who no long
 
 *A focus raises the bar in your strength to roughly the next scope's expectations for it, turned into a result your teammates will be able to recognise.*
 
+<!-- more: See it at Extended and Team, and two agreed focuses written out -->
 | Focus | At Extended, contribute as Team would | At Team, contribute as Wider would |
 |---|---|---|
 | **Technical craft** | Set an approach the whole team uses, such as reliability, performance or security; help teammates apply it without you; end a recurring class of failure | Shape architecture or standards that teams beyond yours build on, and help Sahaj build the skills clients will need before they ask |
@@ -51,7 +52,6 @@ At Wider there's no next scope, so agree the result directly, such as a capabili
 
 A focus also raises the bar on adoption. Nobody is assigned to use what a specialist builds or recommends, so it has to be good enough that people choose it, and it has to work without you. Depth counts by its effect: solving problems that would otherwise need outside experts, cutting significant cost or risk, letting Sahaj take on work it couldn't before, or decisions that prevent large problems later. That's why an agreed focus is not the easier path.
 
-<!-- more: See two agreed focuses written out -->
 > **Extended, technical craft.** Takes less of: leading the client's planning conversations, which a teammate who wanted the experience takes on. Greater contribution: establish an approach to reliability the whole team uses, help teammates apply it without me, and stop the recurring payment-timeout incidents. Teammates will recognise it when the incidents stop and the team handles new failures without asking me.
 
 > **Team, consulting.** Takes less of: leading the architecture across the engagement, which a teammate with that depth takes on. Greater contribution: advise the client's leadership on the next two years of their platform, and lead the proposal for the work that follows. Teammates will recognise it when the client acts on the roadmap and the proposal is one the team can deliver well.

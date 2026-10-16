@@ -53,7 +53,7 @@ export function render(content, [fromId, toId]) {
         title: `Compare ${from.name} and ${to.name}`,
         html: `<section class="page cmp-only-to">
             <header class="page-head">
-                <h1>Expectations</h1>
+                <h1>Scopes</h1>
                 ${viewTabs('compare')}
                 <p class="lede">See what changes between two scopes, area by area.</p>
                 <form class="cmp-pick">

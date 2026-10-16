@@ -120,7 +120,9 @@ function worksheetBody(body) {
 // "<!-- tips: Title -->" opens a set of optional cards. The page then leads with a map of the stages,
 // so a reader sees where to start and what they can skip (on pages with more than three stages; with
 // three or fewer, the stages themselves are already in view and the map would only repeat them). A page whose frontmatter says
-// "flow: topics" has parts that aren't a sequence, so they carry their icons instead of numbers.
+// "flow: topics" has parts that aren't a sequence, so they carry their icons instead of numbers, and
+// its map becomes tabs: only the chosen part is shown, so someone looking for one answer doesn't
+// scan the other three. A link to any section opens the part that holds it.
 // Sections before the first marker are an
 // introduction. A stage's sections keep their own ids, so links such as #how-it-works/the-cycle work.
 const GROUP = /^<!-- (group|tips): (.*?) -->\s*/;
@@ -142,17 +144,20 @@ function groupSections(sections) {
     return { intro, groups };
 }
 
-function journey(pageId, sections, part, { topics = false } = {}) {
+function journey(pageId, sections, part, { topics = false, open = null } = {}) {
     const { intro, groups } = groupSections(sections);
     const stages = groups.filter(g => g.kind === 'group');
-    const map = `<nav class="journey-map" aria-label="Parts of this page"><ol>
-        ${stages.map((g, i) => `<li><a href="#${pageId}/${g.slug}" data-jump="${g.slug}">
+    const chosen = topics ? (stages.find(g => g.slug === open || g.sections.some(s => s.slug === open)) || stages[0]) : null;
+    const tab = g => (topics ? ` role="tab" id="tab-${g.slug}" aria-controls="${g.slug}" aria-selected="${g === chosen}" tabindex="${g === chosen ? 0 : -1}"` : '');
+    const map = `<nav class="journey-map" aria-label="Parts of this page"><ol${topics ? ' role="tablist"' : ''}>
+        ${stages.map((g, i) => `<li${topics ? ' role="presentation"' : ''}><a href="#${pageId}/${g.slug}" data-jump="${g.slug}"${tab(g)}>
             ${topics ? '' : `<span class="jm-num">${i + 1}</span>`}${icon(g.icon)}<strong>${esc(g.title)}</strong><span class="jm-desc">${esc(g.desc)}</span>
         </a></li>`).join('')}
     </ol></nav>`;
     // A stage's own heading is enough when its only section, or its first, has the same name.
     const sub = (g, s) => (g.sections.length === 1 || s.title.toLowerCase() === g.title.toLowerCase() ? '' : `<h3>${esc(s.title)}</h3>`);
-    const stage = (g, n) => `<section class="journey-stage" id="${g.slug}">
+    const panel = g => (topics ? ` role="tabpanel" aria-labelledby="tab-${g.slug}"${g === chosen ? '' : ' hidden'}` : '');
+    const stage = (g, n) => `<section class="journey-stage" id="${g.slug}"${panel(g)}>
         <div class="js-rail" aria-hidden="true">${topics ? `<span class="js-num js-icon">${icon(g.icon)}</span>` : `<span class="js-num">${n}</span>`}</div>
         <div class="js-body">
             <h2>${topics ? '' : icon(g.icon)}${esc(g.title)}</h2>
@@ -179,7 +184,7 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
     const band = s => (BAND.test(s.body) ? ' band' : '');
     const isJourney = page.sections.some(s => GROUP.test(s.body));
     const sections = isJourney
-        ? journey(pageId, page.sections, s => body(s) + (after[s.slug] || ''), { topics: page.flow === 'topics' })
+        ? journey(pageId, page.sections, s => body(s) + (after[s.slug] || ''), { topics: page.flow === 'topics', open })
         : page.sections.map(s => `<section class="prose${band(s)}" id="${s.slug}">
                 <h2>${esc(s.title)}</h2>${body(s)}${after[s.slug] || ''}
             </section>`).join('');
@@ -202,8 +207,17 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
         mount(root) {
             extra?.(root);
             bindFolds(root);
+            const tabs = [...root.querySelectorAll('[role="tab"][data-jump]')];
+            const choose = slug => tabs.forEach(t => {
+                const on = t.dataset.jump === slug;
+                t.setAttribute('aria-selected', on);
+                t.tabIndex = on ? 0 : -1;
+                root.querySelector(`#${CSS.escape(t.dataset.jump)}`).hidden = !on;
+            });
             const show = slug => {
                 const target = root.querySelector(`#${CSS.escape(slug)}`);
+                const hiddenPanel = target?.closest('[role="tabpanel"][hidden]');
+                if (hiddenPanel) choose(hiddenPanel.id);
                 openFoldAround(target);
                 target?.scrollIntoView({ block: 'start' });
             };
@@ -211,7 +225,18 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
             root.querySelectorAll('[data-jump]').forEach(a => a.addEventListener('click', e => {
                 e.preventDefault();
                 history.replaceState(null, '', `#${pageId}/${a.dataset.jump}`);
-                show(a.dataset.jump);
+                // A tab swaps the part in place; the map stays where the reader is looking.
+                if (tabs.length) choose(a.dataset.jump);
+                else show(a.dataset.jump);
+            }));
+            // Arrow keys move between tabs, as in any tab list.
+            tabs.forEach((t, i) => t.addEventListener('keydown', e => {
+                const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+                if (!step) return;
+                e.preventDefault();
+                const next = tabs[(i + step + tabs.length) % tabs.length];
+                next.focus();
+                next.click();
             }));
         },
     };

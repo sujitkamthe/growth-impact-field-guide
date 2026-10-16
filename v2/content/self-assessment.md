@@ -7,10 +7,10 @@ sketch: looking-back
 ## Before you start
 
 <!-- group: Before you start | Your doc, your notes, one area at a time | start -->
-<!-- row -->
-1. **Open your doc**: assess against your scope's expectations and anything specific you noted at the start of the cycle.
-2. **Read your feedback notes**: start from the feedback you gathered during the cycle; memory favours the last few weeks.
-3. **Take one area at a time**: answer the prompts below for each area, then rate it.
+<!-- checks -->
+- **Open your doc**: assess against your scope's expectations and anything specific you noted at the start of the cycle.
+- **Read your feedback notes**: start from the feedback you gathered during the cycle; memory favours the last few weeks.
+- **Take one area at a time**: answer the prompts below for each area, then rate it.
 
 ## The prompts
 
@@ -37,12 +37,16 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 
 | Row | Agreed at the start | What changed, what feedback said, and the rating |
 |---|---|---|
+| **People & Team** | Pair with a newer teammate on contract tests until they design them on their own; hand over the integration review | My newer teammate now designs contract tests on their own. Feedback said I answer questions faster than I explain them, so I'm pairing longer next cycle. **Meets** |
+
+<!-- more: See the whole doc, and how to write yours -->
+| Row | Agreed at the start | What changed, what feedback said, and the rating |
+|---|---|---|
 | **Client & Delivery** | Change how we plan, test and review integrations, so the next two releases ship on the dates we agree with the client | Two teammates now run the integration review, and the next two releases shipped on time. I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. A teammate said I made the integration decisions alone at first, so I started bringing options to the team. **Meets**: the practice is new and hasn't been through a harder release. |
 | **People & Team** | Pair with a newer teammate on contract tests until they design them on their own; hand over the integration review | My newer teammate now designs contract tests on their own. Feedback said I answer questions faster than I explain them, so I'm pairing longer next cycle. **Meets** |
 | **Org & Community** | Rebuild how the office onboards engineers into testing, and hand it over | The two teammates who built it with me ran it for the last three new joiners without me, and two other offices have asked for it. **Exceeds** |
 | **Growth** | Deepen my integration testing practice until another team on the account asks to use it | Another team on the account has asked for the review practice; next cycle I'll help them start it. |
 
-<!-- more: How to write yours -->
 It follows the same made-up situation as the [In practice](#scope/team) story. Write yours in your own words, from your feedback notes.
 
 ## At the team check

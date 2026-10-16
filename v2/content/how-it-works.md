@@ -21,6 +21,7 @@ One piece of client work, handled at each scope. The example is made up, and it 
 
 *Your scope is the one you have shown consistently across all three areas, and it sets what's expected of you in each.*
 
+<!-- more: Choosing your scope, and what Exceeds means -->
 Your scope is the one you have shown consistently across all three areas, and you choose it when you write your expectations. If your teammates have seen different impact, they say so while they read your doc, and the scope is corrected before the doc is agreed. If you're new to Sahaj, your team agrees your first scope with you from the impact you had in your previous work.
 
 You will be stronger in some areas than others, and each area's rating, below, meets or exceeds expectations, shows that. [Self-assessment](#self-assessment/choosing-a-rating) says what each rating means.
@@ -62,6 +63,7 @@ The cycle ends with the team check, a conversation in which teammates from your 
 
 *Anyone on your team can read your expectations and confirm your ratings, whatever their scope, and you ask the teammates who know your work.*
 
+<!-- more: Agreeing the doc, and settling a disagreement -->
 Anyone on your team can read your expectations, discuss them and ask for changes, whatever their scope. You ask the teammates who know your work across the three areas, and the doc is agreed when you and they can both point to what's expected. At the team check, your teammates confirm, correct or add to your self-assessment and confirm your ratings. Review goes in every direction: the people a senior's work reaches, such as the teammates they help grow, often see that impact most clearly.
 
 If you and your teammates still disagree after discussing it, about your scope or a rating, the team's seniors make a judgement call, leaving out the person whose doc it is. If that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.

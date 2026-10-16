@@ -87,7 +87,7 @@ export const GRAMMAR = {
 // its sentence in both.
 function expectation(e) {
     const line = e.handle
-        ? `<strong class="ex-handle">${esc(e.handle)}</strong><span class="ex-sentence">: ${mdInline(e.text)}</span>`
+        ? `<strong class="ex-handle">${esc(e.handle)}</strong><span class="ex-sentence"><span class="ex-colon">: </span>${mdInline(e.text)}</span>`
         : mdInline(e.text);
     return `<li class="ex${e.details.length ? ' has-detail' : ''}">${line}${list(e.details, 'ex-detail')}</li>`;
 }

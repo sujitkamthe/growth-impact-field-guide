@@ -91,13 +91,14 @@ export function render(content, [open]) {
         open,
         bodies: {
             scopes: `<div class="reach-row"><figure class="reach-figure">${reachDiagram(scopes.items, { step: 38 })}</figure><div>${md(scopes.rest)}</div></div>`,
-            areas: { visual: areaTiles(content, areas.items), more: md(areas.rest) },
+            areas: { visual: areaTiles(content, areas.items), more: md(areas.rest), label: 'Facets, ratings and choosing how you contribute' },
             'growing-into-the-next-scope': {
                 visual: flow(growth.items, true),
                 more: `${md(growth.rest)}<figure class="diagram-figure">${modelDiagram(content, { scope: team, stretch: ['cd'], size: 170 })}
                     <figcaption>Team scope in every area, stretching into Wider in Client & Delivery.</figcaption></figure>`,
+                label: 'Stretches, and other ways to grow',
             },
-            'the-cycle': { visual: flow(cycle.items, false), more: md(cycle.rest) },
+            'the-cycle': { visual: flow(cycle.items, false), more: md(cycle.rest), label: 'The doc, feedback notes and the team check' },
             'scopes-in-practice': { more: practice(content, practiceIntro, savedScope(content)), label: 'See one example at every scope' },
         },
         mount: bindStepper,

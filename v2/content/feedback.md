@@ -41,9 +41,9 @@ When something went well, say the first two and skip the suggestion: "In Tuesday
 
 *Say what you see to anyone, whatever their scope or how long they've been here.*
 
+<!-- more: Why, and what keeps it safe -->
 Sahaj has no titles and open salaries, and saying what you see, to anyone, is the everyday part of that same openness. How long someone has been here, how much they know, or how close they are to the client is never a reason to hold feedback back, in either direction: the newest person on a team often sees what everyone else has stopped noticing.
 
-<!-- more: What keeps it safe -->
 No titles doesn't mean no difference in influence: someone may still arrange client access, allocate work or take part in your team check. It stays safe because of how people respond. If you've been on the team the longest, ask for feedback about your own work, thank the person who tells you something critical even if you disagree, and share what you changed. If you react badly, they won't tell you again, and nor will anyone who saw it.
 
 ## Cover all three areas

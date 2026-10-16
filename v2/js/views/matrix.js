@@ -47,17 +47,17 @@ export function render(content) {
     }).join('');
 
     const highlight = mine
-        ? `${esc(mine.name)} is the scope you're exploring; change it with Explore a scope at the top of the page.`
-        : 'Choose a scope with Explore a scope at the top of the page to see only its expectations here.';
+        ? `${esc(mine.name)} is the scope you're exploring; change it with Exploring at the top of the page.`
+        : 'Choose a scope with Exploring at the top of the page to see only its expectations here.';
     const levels = mine ? `<button type="button" class="button quiet matrix-levels" data-levels>
-        ${oneLevel ? 'Show all levels' : `Show only ${esc(mine.name)}`}</button>` : '';
+        ${oneLevel ? 'Show all scopes' : `Show only ${esc(mine.name)}`}</button>` : '';
     const compareNext = next ? `<p class="matrix-next">${iconLink(`#compare/${mine.id}/${next.id}`, `See what changes at ${esc(next.name)}`, 'compare')}</p>` : '';
 
     return {
-        title: 'Expectations',
+        title: 'Scopes',
         html: `<section class="page">
             <header class="page-head matrix-head">
-                <h1>Expectations</h1>
+                <h1>Scopes</h1>
                 ${viewTabs('all')}
                 <p class="hint matrix-hint">Each row is a scope and each column an area. Open a scope for its full expectations and how to tell you're meeting them. ${highlight}</p>
             </header>
@@ -88,7 +88,7 @@ export function render(content) {
             levels?.addEventListener('click', () => {
                 const one = matrix.classList.toggle('one-level');
                 storageSet('v2.matrixAllLevels', !one);
-                levels.textContent = one ? 'Show all levels' : `Show only ${mine.name}`;
+                levels.textContent = one ? 'Show all scopes' : `Show only ${mine.name}`;
             });
         },
     };

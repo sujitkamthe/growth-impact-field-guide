@@ -2,12 +2,19 @@
 // grows across the scopes, listing only each expectation's handle, then its notes, each a short line
 // with the rest behind Read more. Linkable to a section as #area/<area>/<section>.
 
-import { esc, md, list, bindFolds, openFoldAround } from '../ui.js';
+import { esc, md, list, fold, bindFolds, openFoldAround } from '../ui.js';
 import { GRAMMAR, expectationGroups, savedScope, EXPLORING } from './_parts.js';
 import { areaIcon } from '../diagram.js';
 import { BAND, glance } from './prose.js';
 import { filmForArea } from '../tour/films.js';
 import { filmLink } from './tour.js';
+
+// A facet's first sentence says what it is; the rest opens from Read more, so the three facets can
+// be compared at a glance.
+function facetBody(body) {
+    const [first, ...rest] = body.trim().split(/(?<=\.)\s+(?=[A-Z])/);
+    return md(first) + fold(rest.length ? md(rest.join(' ')) : '');
+}
 
 // Each scope's own examples, side by side, so the step between scopes is visible.
 function waysByScope(content, area) {
@@ -49,7 +56,7 @@ export function render(content, [id, open]) {
         keepScroll: Boolean(open),
         html: `<article class="page area-page" data-area="${area.key}">
                 <header class="page-head area-head">
-                    <p class="eyebrow"><a class="back-link" href="#expectations">Expectations</a></p>
+                    <p class="eyebrow"><a class="back-link" href="#expectations">Scopes</a></p>
                     <h1 class="area-title">${areaIcon(area.key)}${esc(area.name)}</h1>
                     <p class="area-question">${esc(area.question)}</p>
                     ${md(area.summary)}
@@ -59,7 +66,7 @@ export function render(content, [id, open]) {
                     <h2>${covers}</h2>
                     <p class="kind">${routes ? GRAMMAR.routes : GRAMMAR.facets}</p>
                     ${area.groupIntro ? `<div class="prose">${md(area.groupIntro)}</div>` : ''}
-                    <div class="facets">${area.facets.map(f => `<div><h3>${esc(f.title)}</h3>${md(f.body)}</div>`).join('')}</div>
+                    <div class="facets">${area.facets.map(f => `<div><h3>${esc(f.title)}</h3>${facetBody(f.body)}</div>`).join('')}</div>
                 </section>
                 <section id="how-it-grows">
                     <h2>How it grows</h2>

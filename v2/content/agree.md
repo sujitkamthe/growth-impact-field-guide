@@ -7,10 +7,10 @@ sketch: notice-board
 ## Before you write
 
 <!-- group: Before you write | Your scope and what it expects | scope -->
-<!-- row -->
-1. **Confirm your scope**: the one you've shown consistently across all three areas. New to Sahaj? Agree your first scope with your team from your previous work.
-2. **Read your scope's page**: each line says what impact looks like at your scope. They're signs to look for, not a checklist.
-3. **Copy the template**: download it from the top of this page, and copy it into Google Drive.
+<!-- checks -->
+- **Confirm your scope**: the one you've shown consistently across all three areas. New to Sahaj? Agree your first scope with your team from your previous work.
+- **Read your scope's page**: each line says what impact looks like at your scope. They're signs to look for, not a checklist.
+- **Copy the template**: download it from the top of this page, and copy it into Google Drive.
 
 ## Write your doc
 
