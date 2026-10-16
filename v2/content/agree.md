@@ -24,7 +24,7 @@ lede: At the start of each cycle, set your expectations together with your team,
 | **Growth** | A stretch into some of the next scope's work, or a strength you want to deepen; if this cycle is about settling in, say that | Deepen my integration testing practice to the point where another team on the account asks to use it. |
 
 <!-- more: When the ordinary doc doesn't fit -->
-The same person's self-assessment at the end of this cycle is on [Self-assessment](#self-assessment/a-worked-example). Two arrangements are for when the ordinary doc doesn't fit: if you want to take less of a particular responsibility and contribute more through a strength, see [Agreed focus](#specialisation); if your project leaves no room for Org & Community, see [How it is assessed](#area/org-community). Most docs need neither.
+The same person's self-assessment at the end of this cycle is on [Self-assessment](#self-assessment/a-worked-example). Two arrangements are for when the ordinary doc doesn't fit: if you've already shown real depth in a strength and want to make it your main contribution, see [Agreed focus](#specialisation); if your project leaves no room for Org & Community, see [How it is assessed](#area/org-community). Most docs need neither.
 
 ## Get it agreed
 
