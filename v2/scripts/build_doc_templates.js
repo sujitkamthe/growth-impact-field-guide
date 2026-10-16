@@ -101,6 +101,11 @@ function build() {
         row([head('', '', A), head('My expectations', 'Start of the cycle: what you will focus on, beyond what your scope expects', C), head('Self-assessment', 'End of the cycle: what changed because of you, with examples', C)]),
         ...AREAS.map(a => row([nameCell(a.name, a.color, a.hint, A), cell(gap(900), { width: C }), cell([gap(900), myView], { width: C })], 1900)),
         row([
+            nameCell('Agreements', INK, '', A),
+            cell([p(muted('Any specialist agreement (your strength, the responsibility you hand over, the teammate who takes it, your stronger contribution) or agreed deferral, each with a review date', { size: 16 })), gap(500)], { width: C }),
+            cell([p(muted('How each agreement worked, for you and for the teammate involved', { size: 16 })), gap(500)], { width: C }),
+        ], 1300),
+        row([
             nameCell('Growth', INK, '', A),
             cell([p(muted('Next-scope responsibilities you want to take on this cycle, if any', { size: 16 })), gap(700)], { width: C }),
             cell([p(muted('How far you got with them, and what you want to take on next cycle', { size: 16 })), gap(700)], { width: C }),
@@ -117,7 +122,7 @@ function build() {
                 h1('Expectations'),
                 p(muted('Fill in My expectations at the start of the cycle and your self-assessment at the end. Keep your feedback notes wherever you usually keep notes; they don\'t go in this doc.'), { spacing: { after: 160 } }),
                 details,
-                p([muted('Your scope\'s expectations are in the guide: '), ...scopeLinks, muted('. Write here only what goes beyond them for your work this cycle, such as what your client or team needs from you. Before you write your self-assessment, read '), link('how to write one', `${PORTAL}#self-assessment`), muted('.')], { spacing: { before: 140, after: 200 } }),
+                p([muted('Your scope\'s expectations are in the guide: '), ...scopeLinks, muted('. Write here only what goes beyond them for your work this cycle, such as what your client or team needs from you, and any agreement that changes them. Before you write your self-assessment, read '), link('how to write one', `${PORTAL}#self-assessment`), muted('.')], { spacing: { before: 140, after: 200 } }),
                 page,
             ],
         }],

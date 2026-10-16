@@ -27,13 +27,25 @@ Your scope is agreed with your team from the impact you showed in your previous 
 
 ## Growth
 
+### Is delivering my work on time enough?
+
+No. Finishing your work on time is part of Client & Delivery, not all of it. The area also covers building the work well, framing the client's problem with them, and owning commitments: questioning a date you don't believe in, keeping the client's expectations realistic and going back to them when something changes. Beyond that area, every scope expects impact in People & Team and Org & Community too. See [Client & Delivery](#area/client-delivery).
+
 ### How do I move to the next scope?
 
 By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities and keeping them up until the people around you depend on you for them, in all three areas. Strong next-scope impact in one area is rated as exceeding; your scope is raised at the team check once you show it consistently in all three. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
 
 ### Do I have to be equally strong in all three areas?
 
-No. Your strength will vary by area, and the rating captures that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere.
+No. Your strength will vary by area, and the rating captures that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere. You can still grow by going deep in what you do best; see [Specialisation](#specialisation).
+
+### Can I hand over part of my work to focus on my strength?
+
+Sometimes. At Extended scope and above, a strength the team already relies on can support a [specialist agreement](#how-it-works/specialist-agreements): you hand one specific responsibility, such as leading the client's planning, to a teammate who accepts it, and agree a stronger contribution through your strength instead. You can't hand over a whole area or facet, and some expectations stay with everyone, such as communicating risks and keeping your commitments.
+
+### I'm already strong in every area. What next?
+
+Talk with your team about a next challenge: a responsibility you haven't had before, a harder problem, or a stretch into the next scope. Exceeds is recorded whether or not it leads to a raise. If you often settle what falls between other people's work, that is impact of your own, so name it in your self-assessment, and don't take on every specialist's handover by default.
 
 ### Can I grow without leading a team?
 
@@ -43,7 +55,11 @@ Yes. At Team and Wider scope there are several ways to create impact, including 
 
 ### Is Org & Community really mandatory?
 
-Yes. You choose what to contribute, and every scope expects you to contribute in at least one way. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless you raised during the cycle that there was no room and nothing changed; then you're rated on what was reasonably available to you.
+Yes. You choose what to contribute, usually through what you're good at and what motivates you, and every scope expects you to contribute in at least one way. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless your team agreed there was no room; then you're rated on what was reasonably available to you, and if the agreement covered the whole cycle, the area isn't rated that cycle.
+
+### Can I skip work I don't enjoy?
+
+You can choose a different way to contribute, but not skip the area. Someone who doesn't enjoy writing can give a talk, interview or build a tool instead; agree the alternative with your team, so there's a contribution rather than a gap. Handing over a whole responsibility, rather than one activity, needs a [specialist agreement](#how-it-works/specialist-agreements).
 
 ### Can I contribute beyond my scope?
 
@@ -55,7 +71,7 @@ Not by itself. A talk counts for its depth and for what it led to, such as peopl
 
 ### What if my project gives me no room to contribute or grow?
 
-Raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised during the cycle, it can still be fixed; raised for the first time in your self-assessment, it's too late to change anything. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+Agree it with the seniors on your team, or with your account lead if the cause is account-wide, such as a new account being set up or a delivery crunch. If you know at the start of the cycle, record it in your doc then; if it comes up later, raise it as soon as you know. Agree what is still possible, who will make time for it and when to look at it again. Raised for the first time in your self-assessment, it's too late to change anything. You're rated on what was reasonably available to you, and the constraint is recorded in your doc.
 
 ## The process
 

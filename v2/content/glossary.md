@@ -20,15 +20,25 @@ One of the three areas of impact that every scope covers: [Client & Delivery](#a
 <!-- matches: cycles, cycle -->
 The period one expectations doc covers, usually a quarter. It starts with writing your expectations and ends with the team check.
 
+## Delivery ownership
+
+<!-- matches: delivery ownership -->
+The delivery facet of Client & Delivery: taking responsibility for commitments and outcomes, not only finishing your work on time. It includes agreeing what can realistically be delivered, managing the client's expectations, and holding your position, with reasons and an alternative, when a date, scope or pace isn't safe.
+
 ## Expectations doc
 
 <!-- matches: expectations docs, expectations doc -->
-A short doc you keep for each cycle, made from one template for every scope. It notes your scope, anything specific to your work, where you want to grow, and at the end your self-assessment. The expectations themselves stay in the guide. You drive it; your teammates comment on it.
+A short doc you keep for each cycle, made from one template for every scope. It notes your scope, anything specific to your work, any specialist agreement or agreed deferral, where you want to grow, and at the end your self-assessment. The expectations themselves stay in the guide. You drive it; your teammates comment on it.
 
 ## Facet
 
 <!-- matches: facets, facet -->
-One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations.
+One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations. A specialist agreement can hand one responsibility within a facet to a teammate, never the whole facet.
+
+## Mid-cycle check
+
+<!-- matches: mid-cycle checks, mid-cycle check -->
+A short conversation halfway through the cycle in which you and the teammates who reviewed your doc go through all three areas: what they've seen, where evidence is missing and what needs to change. It isn't a rating.
 
 ## Raise in scope
 
@@ -38,7 +48,7 @@ Moving your scope to the next one. It is decided at the team check once you show
 ## Rating
 
 <!-- matches: ratings, rating -->
-How you did in one area at your scope: below, meets or exceeds expectations. Exceeds is judged against your current scope and doesn't change your scope. Your teammates confirm your ratings at the team check.
+How you did in one area at your scope: below, meets or exceeds expectations. Exceeds is judged against your current scope and doesn't change your scope. Your teammates confirm your ratings at the team check. Org & Community is recorded as not rated for a cycle only when an agreed deferral covered all of it.
 
 ## Reviewers
 
@@ -54,6 +64,11 @@ How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#s
 
 <!-- matches: seniors -->
 The person or people on a team who look after its people's growth. When the team can't agree on someone's scope or rating, they make a judgement call.
+
+## Specialist agreement
+
+<!-- matches: specialist agreements, specialist agreement -->
+An agreement, at Extended scope and above, to hand one specific responsibility to a teammate who accepts it, and to make a stronger contribution through a strength the team already relies on. It is written in your expectations doc and never removes an area or a facet.
 
 ## Stretch
 
