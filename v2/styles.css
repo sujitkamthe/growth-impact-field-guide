@@ -976,3 +976,69 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .prose table { width: 100%; border-collapse: collapse; margin: 8px 0 20px; font-size: 15px; }
 .prose th, .prose td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
 .prose th { color: var(--muted); font-weight: 600; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; }
+
+/* ---- Worksheets shaped by their task ------------------------------------------------------------
+   Worksheets run wider than reading pages so short cards can sit side by side, while running text
+   keeps the reading measure. */
+.page.narrow.worksheet { max-width: calc(940px + 2 * var(--gutter)); }
+.worksheet .js-part { max-width: none; }
+.worksheet .js-part > p, .worksheet .js-part > .glance-short, .worksheet .js-desc,
+.worksheet .js-part > .fold p, .worksheet .page-head .lede, .worksheet .journey-intro { max-width: var(--measure); }
+
+/* Two to four short cards side by side; four make a two-by-two. */
+.ws-cards.n-2, .ws-cards.n-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ws-cards.n-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.ws-cards li { background: var(--surface); }
+/* An area's card carries the area's colour as a short bar, the guide's area motif. */
+.ws-cards li.area-card { position: relative; padding-top: 20px; }
+.ws-cards li.area-card::before { content: ""; position: absolute; top: -1px; left: 16px; width: 40px; height: 3px; background: var(--area); border-radius: 0 0 2px 2px; }
+.ws-cards li.area-card strong { color: var(--area); }
+
+/* Steps that sit in a row: a short sequence read left to right. */
+.ws-steps.row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 20px; }
+.ws-steps.row.n-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.ws-steps.row.n-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+/* A checklist: what the teammates reading your doc look for, in no particular order. */
+.ws-checks { list-style: none; padding: 0 !important; margin: 12px 0 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 24px; }
+.ws-checks li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; margin: 0; }
+.ws-checks .icon { width: 22px; height: 22px; color: var(--positive); margin-top: 1px; }
+.ws-checks strong { display: block; color: var(--text); }
+.ws-checks span { color: var(--text-2); }
+
+/* The expectations doc on the page: the template's rows, each area with its colour. */
+.prose table.doc-sheet { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); border-collapse: separate; border-spacing: 0; overflow: hidden; margin: 14px 0 20px; font-size: 15.5px; line-height: 1.5; }
+.prose .doc-sheet th { text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--muted); background: var(--notice); padding: 10px 16px; border-bottom: 1px solid var(--line); }
+.prose .doc-sheet td { padding: 14px 16px; border-bottom: 1px solid var(--line); color: var(--text-2); }
+.prose .doc-sheet tr:last-child td { border-bottom: 0; }
+.prose .doc-sheet td:first-child { width: 172px; color: var(--text); box-shadow: inset 3px 0 0 var(--area, var(--control)); }
+.prose .doc-sheet td:first-child strong { color: var(--area, var(--text)); }
+.prose .doc-sheet td:last-child { color: var(--text); }
+.prose .doc-sheet td strong { color: var(--text); }
+
+/* One feedback note with its parts labelled: the shape of useful feedback, shown rather than listed. */
+.ws-note { margin: 16px 0 20px; padding: 6px 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.ws-note p { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; margin: 0; padding: 12px 18px; color: var(--text); }
+.ws-note p + p { border-top: 1px dashed var(--line); }
+.ws-note p strong { color: var(--muted); font-weight: 600; font-size: 14px; padding-top: 1px; }
+
+/* Parts that aren't a sequence carry their icon on the rail instead of a number. */
+.topics .js-num.js-icon { background: var(--surface); border: 1.5px solid var(--line); color: var(--text-2); }
+.topics .js-num.js-icon .icon { width: 20px; height: 20px; }
+/* Without numbers, a map item puts the part's icon where the number was. */
+.topics .journey-map .icon { display: block; grid-row: 1 / 3; width: 22px; height: 22px; color: var(--text-2); margin-top: 1px; }
+.topics .journey-map strong { grid-column: 2; }
+.ws-steps.row li { align-content: start; }
+
+@media (max-width: 760px) {
+    .ws-cards.n-2, .ws-cards.n-3, .ws-cards.n-4, .ws-steps.row, .ws-steps.row.n-2, .ws-steps.row.n-4, .ws-checks { grid-template-columns: 1fr; }
+    .ws-note p { grid-template-columns: 1fr; gap: 2px; }
+    /* On a phone each row of the doc reads as a card of labelled lines. */
+    .prose table.doc-sheet, .prose .doc-sheet tbody, .prose .doc-sheet tr, .prose .doc-sheet td { display: block; width: auto; }
+    .prose .doc-sheet thead { display: none; }
+    .prose .doc-sheet tr { border-bottom: 1px solid var(--line); box-shadow: inset 3px 0 0 var(--area, var(--control)); padding: 4px 0; }
+    .prose .doc-sheet tr:last-child { border-bottom: 0; }
+    .prose .doc-sheet td { border-bottom: 0; padding: 6px 16px; box-shadow: none !important; }
+    .prose .doc-sheet td:first-child { width: auto; padding-top: 12px; }
+    .prose .doc-sheet td:not(:first-child)::before { content: attr(data-label); display: block; font-size: 13px; font-weight: 600; color: var(--muted); }
+}

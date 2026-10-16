@@ -6,6 +6,7 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 ## Before you start
 
 <!-- group: Before you start | Your doc, your notes, one area at a time | start -->
+<!-- row -->
 1. **Open your doc**: assess against your scope's expectations and anything specific you noted at the start of the cycle.
 2. **Read your feedback notes**: start from the feedback you gathered during the cycle; memory favours the last few weeks.
 3. **Take one area at a time**: answer the prompts below for each area, then rate it.
@@ -13,7 +14,7 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 ## The prompts
 
 <!-- group: For each area | Say what changed, then choose a rating | rating -->
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have an [agreed focus](#specialisation/rating-an-agreed-focus), say what your greater contribution achieved.
+- **What changed because of you?**: outcomes, not a list of activities. Cover each facet and say which was strongest and which weaker; with an [agreed focus](#specialisation/rating-an-agreed-focus), say what your greater contribution achieved.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
@@ -29,6 +30,20 @@ Rate each area against your current scope. Next-scope work can be part of exceed
 
 Exceeds in one area is a strong result, and the right moment to talk about a stretch.
 
+## A worked example
+
+*The doc from [Agree your expectations](#agree/write-your-doc), at the end of the cycle, with its self-assessment filled in.*
+
+| Row | Agreed at the start | What changed, what feedback said, and the rating |
+|---|---|---|
+| **Client & Delivery** | Change how we plan, test and review integrations, so the next two releases ship on the dates we agree with the client | Two teammates now run the integration review, and the next two releases shipped on time. I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. A teammate said I made the integration decisions alone at first, so I started bringing options to the team. **Meets**: the practice is new and hasn't been through a harder release. |
+| **People & Team** | Pair with a newer teammate on contract tests until they design them on their own; hand over the integration review | My newer teammate now designs contract tests on their own. Feedback said I answer questions faster than I explain them, so I'm pairing longer next cycle. **Meets** |
+| **Org & Community** | Rebuild how the office onboards engineers into testing, and hand it over | The two teammates who built it with me ran it for the last three new joiners without me, and two other offices have asked for it. **Exceeds** |
+| **Growth** | Deepen my integration testing practice until another team on the account asks to use it | Another team on the account has asked for the review practice; next cycle I'll help them start it. |
+
+<!-- more -->
+It follows the same made-up situation as the [In practice](#scope/team) story. Write yours in your own words, from your feedback notes.
+
 ## At the team check
 
 <!-- group: At the team check | Talk it through with your teammates | team -->
@@ -36,27 +51,9 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 
 You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing a teammate](#teammates) is their guide. Then look ahead together: where evidence is still missing, and what changes next cycle. If you still disagree after discussing it, see [Who reviews and decides](#how-it-works/who-reviews-and-decides).
 
-## A worked example
-
-<!-- tips: If you need them -->
-*A self-assessment by someone at Team scope, against the doc on [Agree your expectations](#agree/a-finished-doc).*
-
-Written by someone at Team scope, at the end of the cycle whose doc is on [Agree your expectations](#agree/a-finished-doc). It follows the same made-up situation as the [In practice](#scope/team) story; write yours in your own words.
-
-> **Client & Delivery**
->
-> **What changed because of you?** Payment releases had slipped twice because integrations were tested late. I worked with the team on how we plan, test and review integrations, two teammates now run the review, and the next two releases shipped on time. For technical craft, the contract tests we agreed are what the team now builds on. For consulting, I took the client through the trade-off between adding the provider now and integrating it cleanly a sprint later, and they chose the later date knowing why. For delivery, the testing risk now comes up at planning, before release.
->
-> **What did you take from the feedback?** A teammate said I made the integration decisions on my own at first. I started bringing options to the team before deciding, and the review practice came out of that.
->
-> **Rating: Meets.** The team ran the review practice all cycle and now runs it without me, but it is new and hasn't yet been through a harder release.
->
-> **People & Team**: My newer teammate now designs contract tests on their own, and two teammates run the integration review. Feedback said I still answer questions faster than I explain them, so I'm pairing longer next cycle. **Rating: Meets.**
->
-> **Org & Community**: We rebuilt how the office onboards engineers into testing, and the two teammates who built it with me ran it for the last three new joiners without me. **Rating: Exceeds.** It now runs without me and other offices have asked for it.
-
 ## If you agreed a stretch
 
+<!-- tips: If you need them -->
 *Rate a stretched area against your scope like any other, then say how far you got.*
 
 If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, counts toward Exceeds in that area. Your scope grows at the [team check](#how-it-works/the-cycle) once your contribution consistently reaches the next scope in all three areas. Falling short of a stretch is normal.
