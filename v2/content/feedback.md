@@ -14,7 +14,7 @@ A piece of feedback is a teammate's view of what you could try next, while there
 
 - **Soon after the moment**: after a demo, a review, a pairing session or a client conversation, while you both remember it. A hard conversation can wait until you can talk in private.
 - **Every week**: give one teammate an observation and ask one a small question. If you've been on the team the longest, start the conversation, including with the newest people.
-- **In a retro or a development conversation**: talk about patterns, whose view is missing, and whether earlier feedback helped.
+- **In a one-to-one now and then**: a longer conversation with a teammate about patterns, whose view is missing, and whether earlier feedback helped.
 
 <!-- more: Why not save it up -->
 Saving observations for the end of the month, or for the weeks before your self-assessment, turns them into a batch of verdicts that arrive too late to act on. A monthly look at patterns can add to feedback given as work happens, but it can't replace it. There's no count of feedback to reach and no weekly note to file: the habit is the point. Someone who never gives or asks for feedback hears about it during the cycle, because giving it is part of People & Team.
@@ -22,19 +22,21 @@ Saving observations for the end of the month, or for the weeks before your self-
 ## Giving it
 
 <!-- group: Give feedback | Soon after the moment, specific, about the work | feedback -->
-*Say what you saw and what it changed, soon after the moment, and talk about the work, not the person.*
+*Say what you saw and what it changed, ask how they saw it, agree one thing to try, and come back to it.*
 
 <!-- note -->
 > **What you saw** When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes.
 >
 > **What it changed** It unblocked them, but they still don't know why it failed, and they were stuck on the same test again on Wednesday.
 >
-> **What you'd suggest** Next time, could you pair with them on it, even if it takes longer?
+> **How they saw it** "I was trying to get them going before the demo. I didn't know they'd hit it again."
 >
-> **How did you see it?** Then ask, because you may have missed something they knew.
+> **What you agree** Next time you'll pair with the new joiner on it, even if it takes longer, and say early when a demo is squeezing the time.
+>
+> **A week later** "I paired with the new joiner on Tuesday's build failure. They fixed the next one on their own."
 
 <!-- more: When it went well, naming the area, and who to say it to -->
-When something went well, say the first two and skip the suggestion: "In Tuesday's design review you laid out two options for the refund flow with their costs, and the client decided in the meeting rather than a week later." You don't need the answer to raise a problem: "this made it hard for me to join in" is useful even if you don't know the fix. If it helps, name the area or facet, such as "that's consulting", so they know which area to keep growing in. Give praise where others can hear it if they're comfortable with that, and anything critical in private. Say it to the person it's about, not to someone else about them, wherever that feels safe; if it doesn't, see When it feels difficult.
+Talk about the work, not the person, and ask how they saw it before you settle on what to try, because you may have missed something they knew. When something went well, say the first two and skip the rest: "In Tuesday's design review you laid out two options for the refund flow with their costs, and the client decided in the meeting rather than a week later." You don't need the answer to raise a problem: "this made it hard for me to join in" is useful even if you don't know the fix. If it helps, name the area or facet, such as "that's consulting", so they know which area to keep growing in. Give praise where others can hear it if they're comfortable with that, and anything critical in private. Say it to the person it's about, not to someone else about them, wherever that feels safe; if it doesn't, see When it feels difficult.
 
 ## Anyone to anyone, without fear
 
@@ -117,7 +119,7 @@ This is a spread of views, not a list to ask everyone; people should only commen
 4. **Record what changed**: in the next cycle's doc.
 
 <!-- more: Agreed focus and deferrals at the team check -->
-Don't wait for the team check to find that nobody has talked about someone's People & Team or Org & Community contribution: in a retro or development conversation during the cycle, ask whose view is missing. Look at any agreed focus or Org & Community deferral here too: whether the greater contribution is happening, and whether the arrangement is still sustainable for the teammate who took on the work.
+Don't wait for the team check to find that nobody has talked about someone's People & Team or Org & Community contribution: in a one-to-one during the cycle, ask whose view is missing. Look at any agreed focus or Org & Community deferral here too: whether the greater contribution is happening, and whether the arrangement is still sustainable for the teammate who took on the work.
 
 ## When it feels difficult
 

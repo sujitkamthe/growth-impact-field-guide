@@ -1077,3 +1077,18 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .guide-menu a span { display: none; }
 }
 .nav-links .guide-menu a { white-space: normal; }
+
+/* Agreed focus: the team diagram, in the ink line style of the guide's other drawings. */
+.focus-team { margin: 14px 0 18px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); }
+.focus-team svg { display: block; width: 100%; height: auto; }
+.focus-team .ft-tall { display: none; max-width: 360px; margin: 0 auto; }
+.ft-node rect { fill: var(--bg); stroke: var(--text-2); stroke-width: 1.2; }
+.ft-title { font: 600 14px var(--font); fill: var(--text); }
+.ft-sub { font: 12.5px var(--font); fill: var(--muted); }
+.ft-label { font: 12.5px var(--font); fill: var(--text-2); }
+.ft-arrow { fill: none; stroke: var(--text); stroke-width: 1.4; }
+.ft-head { fill: var(--text); }
+@media (max-width: 640px) {
+    .focus-team .ft-wide { display: none; }
+    .focus-team .ft-tall { display: block; }
+}

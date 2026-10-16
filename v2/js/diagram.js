@@ -123,3 +123,44 @@ const AREA_ICONS = {
 export const areaIcon = key => AREA_ICONS[key]
     ? `<svg class="area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${AREA_ICONS[key]}</svg>`
     : '';
+
+// Agreed focus: a team where one person (A) takes less of a responsibility, a teammate (B) chooses
+// to take it on, A's greater contribution goes to the whole team, and the all-rounder (D) settles
+// the trade-offs as impact of their own. Ink only, so no colour reads as an area; a wide drawing for
+// most screens and a tall one for phones, so the labels stay readable.
+export function focusTeamDiagram() {
+    const box = (x, y, w, h, title, sub) => `<g class="ft-node">
+        <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="8"/>
+        <text x="${x + 14}" y="${y + (sub ? 24 : h / 2 + 5)}" class="ft-title">${title}</text>
+        ${sub ? `<text x="${x + 14}" y="${y + 43}" class="ft-sub">${sub}</text>` : ''}
+    </g>`;
+    // each drawing has its own marker: a marker inside the hidden drawing would never render
+    const arrow = (d, id) => `<path class="ft-arrow" d="${d}" marker-end="url(#${id})"/>`;
+    const label = (x, y, lines, anchor = 'middle') => `<text class="ft-label" text-anchor="${anchor}" x="${x}" y="${y}">${lines.map((l, i) => `<tspan x="${x}" dy="${i ? 16 : 0}">${l}</tspan>`).join('')}</text>`;
+    const defs = id => `<defs><marker id="${id}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="ft-head"/></marker></defs>`;
+    const wide = `<svg class="ft-wide" viewBox="0 0 680 250" role="img" aria-labelledby="ft-wide-t">
+        <title id="ft-wide-t">A takes less of leading the client's planning, which B chooses to take on and which counts for B; A's reliability approach goes to the whole team; D's work settling trade-offs counts as D's own impact.</title>
+        ${defs('ft-head-wide')}
+        ${box(18, 97, 178, 56, 'A · Technology', 'has an agreed focus')}
+        ${box(470, 18, 192, 56, 'B · Delivery ownership', 'chose it · counts for B too')}
+        ${box(470, 110, 192, 40, 'The whole team')}
+        ${box(470, 178, 192, 56, 'D · All three', 'trade-offs count as D’s impact')}
+        ${arrow('M196 110 C 250 56, 350 46, 464 46', 'ft-head-wide')}
+        ${arrow('M196 134 L 464 132', 'ft-head-wide')}
+        ${label(306, 34, ["Leading the client’s planning"])}
+        ${label(330, 122, ['A reliability approach the team uses'])}
+    </svg>`;
+    const tall = `<svg class="ft-tall" viewBox="0 0 360 360" role="img" aria-labelledby="ft-tall-t">
+        <title id="ft-tall-t">A takes less of leading the client's planning, which B chooses to take on and which counts for B; A's reliability approach goes to the whole team; D's work settling trade-offs counts as D's own impact.</title>
+        ${defs('ft-head-tall')}
+        ${box(95, 8, 170, 56, 'A · Technology', 'has an agreed focus')}
+        ${box(6, 176, 168, 56, 'B · Delivery', 'chose it · counts for B')}
+        ${box(186, 176, 168, 56, 'The whole team', 'uses A’s approach')}
+        ${box(95, 290, 170, 56, 'D · All three', 'trade-offs: D’s impact')}
+        ${arrow('M150 64 C 130 110, 100 130, 90 170', 'ft-head-tall')}
+        ${arrow('M210 64 C 230 110, 260 130, 270 170', 'ft-head-tall')}
+        ${label(54, 106, ['Leading the', 'client’s planning'])}
+        ${label(306, 106, ['A reliability', 'approach'])}
+    </svg>`;
+    return `<figure class="focus-team">${wide}${tall}</figure>`;
+}
