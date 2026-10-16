@@ -8,6 +8,7 @@
 
 import * as guide from './script.js';
 import * as org from './films/org/script.js';
+import * as feedback from './films/feedback/script.js';
 
 export const FILMS = [
     {
@@ -41,6 +42,22 @@ export const FILMS = [
         area: 'org-community',
         end: [
             { href: '#area/org-community', label: 'Read Org & Community' },
+            { href: '#tour', label: 'Watch How growth works at Sahaj', quiet: true },
+        ],
+    },
+    {
+        id: 'feedback',
+        title: 'Feedback, every day',
+        chapters: feedback.CHAPTERS,
+        voices: feedback.VOICES,
+        base: './films/feedback/',
+        audio: 'audio/tour/feedback/',
+        thumbnail: 'assets/tour/thumbnail-feedback.jpeg',
+        route: 'tour/feedback',
+        length: '2:10',
+        playLabel: 'Play the film',
+        end: [
+            { href: '#feedback', label: 'Read about feedback' },
             { href: '#tour', label: 'Watch How growth works at Sahaj', quiet: true },
         ],
     },
