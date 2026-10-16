@@ -210,9 +210,12 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
             const tabs = [...root.querySelectorAll('[role="tab"][data-jump]')];
             const choose = slug => tabs.forEach(t => {
                 const on = t.dataset.jump === slug;
+                const panel = root.querySelector(`#${CSS.escape(t.dataset.jump)}`);
                 t.setAttribute('aria-selected', on);
                 t.tabIndex = on ? 0 : -1;
-                root.querySelector(`#${CSS.escape(t.dataset.jump)}`).hidden = !on;
+                // The newly chosen part fades in, so the swap below the tabs registers.
+                if (on && panel.hidden) { panel.classList.remove('panel-in'); void panel.offsetWidth; panel.classList.add('panel-in'); }
+                panel.hidden = !on;
             });
             const show = slug => {
                 const target = root.querySelector(`#${CSS.escape(slug)}`);

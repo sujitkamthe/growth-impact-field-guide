@@ -124,6 +124,15 @@ function scopeChanged(content, id) {
     }
 }
 
+// Folds animate only when a reader opens one, so a fold opened by a link, by a view or for
+// printing is already in place when the page scrolls to it. The class is set in the capture phase,
+// before the toggle, so the opening is the first state it applies to.
+function initFoldMotion() {
+    document.addEventListener('click', e => {
+        e.target.closest('summary')?.closest('details')?.classList.add('animate');
+    }, true);
+}
+
 // Printing shows everything: folded sections open for the print and close again after.
 function initPrint() {
     let opened = [];
@@ -155,6 +164,7 @@ function initTheme() {
 async function boot() {
     initTheme();
     initPrint();
+    initFoldMotion();
     menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
     let content;
     try {

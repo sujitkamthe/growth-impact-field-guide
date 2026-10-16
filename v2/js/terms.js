@@ -78,6 +78,8 @@ function open(a) {
     pop.innerHTML = `<p class="term-pop-title">${esc(term.title)}</p><p>${esc(term.definition)}</p>
         <a class="term-pop-more" href="${esc(term.more.href)}">${esc(term.more.label)}</a>`;
     pop.hidden = false;
+    // Restart the entrance even when moving straight from one term to another.
+    pop.classList.remove('pop-in'); void pop.offsetWidth; pop.classList.add('pop-in');
     const r = a.getBoundingClientRect();
     const width = pop.offsetWidth;
     pop.style.top = `${r.bottom + window.scrollY + 8}px`;

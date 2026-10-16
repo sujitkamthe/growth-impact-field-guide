@@ -267,6 +267,18 @@ a.term:hover { text-decoration-style: solid; }
 .term-pop .term-pop-title { margin-bottom: 2px; font-weight: 600; color: var(--text); }
 .term-pop-more { font-size: 14px; font-weight: 500; }
 @media print { .term-pop { display: none; } }
+
+/* Motion explains a change the reader made, and nothing plays on its own. What a reader opens in
+   a fold fades up into place, a Feedback tab's part fades in, and a term's definition rises into
+   place; all under 200ms, and off under Reduce Motion (above). Folds opened by a link, a view or
+   for printing appear at once, so a page never scrolls to text that is still moving. */
+@keyframes fold-in { from { opacity: 0; transform: translateY(4px); } }
+details.animate[open] > :not(summary) { animation: fold-in 0.2s ease-out; }
+@media print { details > *, .panel-in { animation: none !important; } }
+@keyframes panel-in { from { opacity: 0; transform: translateY(4px); } }
+.panel-in { animation: panel-in 0.18s ease-out; }
+@keyframes pop-in { from { opacity: 0; transform: translateY(-4px); } }
+.term-pop.pop-in { animation: pop-in 0.15s ease-out; }
 .glossary { margin: 0; }
 .glossary-term { padding: 18px 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
 .glossary-term:last-child { border-bottom: 1px solid var(--line); }
