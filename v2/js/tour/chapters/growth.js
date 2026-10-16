@@ -1,4 +1,4 @@
-// Chapter 8, Further: growing into the next scope, told with the reach rings from Scopes.
+// Chapter 9, Further: growing into the next scope, told with the reach rings from Scopes.
 //
 // 1. "You grow by taking on some of the next scope's responsibilities, usually as a stretch."  The
 //    fire's evening ends: everyone heads home and the camera rises over the village as dusk turns into

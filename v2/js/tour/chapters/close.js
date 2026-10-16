@@ -1,4 +1,4 @@
-// Chapter 9, Your turn: the camera rises high over the valley.
+// Chapter 10, Your turn: the camera rises high over the valley.
 //
 // 1. "There's always more of the field to explore..."  A slow pull up from the hamlet to the whole
 //    valley: everything revealed so far, villagers going about their day on both banks and out at

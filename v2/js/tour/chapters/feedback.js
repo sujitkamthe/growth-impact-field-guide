@@ -1,4 +1,4 @@
-// Chapter 6, Along the way: feedback through the season, while the sun crosses the sky.
+// Chapter 7, Along the way: feedback through the season, while the sun crosses the sky.
 //
 // 1. "As the season goes on, you ask the people you work with for feedback..."  At the board the
 //    two teammates who agreed the expectations each hand the explorer a note, then go on their way;

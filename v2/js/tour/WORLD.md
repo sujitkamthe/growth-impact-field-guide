@@ -90,7 +90,7 @@ export default {
 ## Rules
 
 - Chapters only choreograph: they place people, move the camera, set reveals and the time of day, and call the HUD. Anything a chapter builds itself goes in its own group (use `world.heightAt` to stand it on the ground). Its materials are not shrouded unless you pass them through `world.fog.patch(material)`, so either do that or keep chapter props inside revealed areas.
-- Chapter boundaries join up: each chapter's first frame matches the previous chapter's last (camera shot, explorer position, reveals, time of day). The joins are `layout.states` (`start`, `afterArrival`, `afterPrinciples`, `afterScopes`, `afterAreas`, `afterExpectations`, `afterFeedback`, `afterSelfAssessment`, `afterGrowth`, `end`); start a chapter from the previous state and end on your own.
+- Chapter boundaries join up: each chapter's first frame matches the previous chapter's last (camera shot, explorer position, reveals, time of day). The joins are `layout.states` (`start`, `afterArrival`, `afterPrinciples`, `afterScopes`, `afterAreas`, `afterExpectations`, `afterFeedback`, `afterSelfAssessment`, `afterGrowth`, `end`); start a chapter from the previous state and end on your own. Your strengths (`strengths`) sits between Areas and Your quest and starts and ends on `afterAreas`, so it has no state of its own.
 - Calm, game-like motion: eased camera glides, real walking speeds (about 1.4 m/s), no snapping. No "level up" language or effects.
 
 ## Performance notes

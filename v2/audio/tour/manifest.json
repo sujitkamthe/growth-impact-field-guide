@@ -117,8 +117,35 @@
         },
         {
           "src": "audio/tour/en-GB-SoniaNeural/areas-4.mp3",
-          "duration": 10.98,
-          "hash": "86c05fb43c25"
+          "duration": 6.56,
+          "hash": "ce7ef1301539"
+        }
+      ],
+      "strengths": [
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/strengths-0.mp3",
+          "duration": 8.26,
+          "hash": "3f646d31f692"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/strengths-1.mp3",
+          "duration": 7.52,
+          "hash": "9d6d3812dc51"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/strengths-2.mp3",
+          "duration": 7.56,
+          "hash": "42d456defbf9"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/strengths-3.mp3",
+          "duration": 6.82,
+          "hash": "33e349788862"
+        },
+        {
+          "src": "audio/tour/en-GB-SoniaNeural/strengths-4.mp3",
+          "duration": 8.3,
+          "hash": "e1c23efe02ec"
         }
       ],
       "expectations": [
@@ -129,8 +156,8 @@
         },
         {
           "src": "audio/tour/en-GB-SoniaNeural/expectations-1.mp3",
-          "duration": 11.1,
-          "hash": "ead19b75f24b"
+          "duration": 6.78,
+          "hash": "bf951497a8d9"
         },
         {
           "src": "audio/tour/en-GB-SoniaNeural/expectations-2.mp3",
@@ -307,8 +334,35 @@
         },
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/areas-4.mp3",
-          "duration": 12.26,
-          "hash": "ca7af7c74dae"
+          "duration": 7.09,
+          "hash": "2c72ca16e1fd"
+        }
+      ],
+      "strengths": [
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/strengths-0.mp3",
+          "duration": 9.04,
+          "hash": "43f8a918407d"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/strengths-1.mp3",
+          "duration": 8.22,
+          "hash": "8fbdfc0d9683"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/strengths-2.mp3",
+          "duration": 8.61,
+          "hash": "a6394dcba139"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/strengths-3.mp3",
+          "duration": 7.34,
+          "hash": "b1774b1e0393"
+        },
+        {
+          "src": "audio/tour/en-IN-NeerjaExpressiveNeural/strengths-4.mp3",
+          "duration": 9.57,
+          "hash": "0a79a6a5344a"
         }
       ],
       "expectations": [
@@ -319,8 +373,8 @@
         },
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-1.mp3",
-          "duration": 12.49,
-          "hash": "af22277ce117"
+          "duration": 7.61,
+          "hash": "2afa4b137183"
         },
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-2.mp3",

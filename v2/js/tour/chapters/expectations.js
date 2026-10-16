@@ -1,4 +1,4 @@
-// Chapter 5, Your quest: the explorer writes down what they will take on and the team agrees it.
+// Chapter 6, Your quest: the explorer writes down what they will take on and the team agrees it.
 //
 // 1. "Every cycle begins like a new quest..."  A new quest in the HUD, "Write your expectations".
 //    The explorer turns from the fountain and walks across the square to the notice board, the

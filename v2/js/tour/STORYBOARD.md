@@ -58,29 +58,37 @@ The explorer walks a path; each principle is a place discovered as the fog lifts
 4. Org & Community: glide to the square; amber banners unfurl around the fountain; villagers gather.
 5. Each area rated on its own: three small flags rise on poles in the square, one per area, in the area colours, to show each area is judged separately (no scores or numbers).
 
-### 5. Your quest (`expectations`)
+### 5. Your strengths (`strengths`)
+Noon in the square, straight on from Areas, and back to the same spot at the end, so Your quest starts as Areas left it.
+1. Deciding where to go deep, as a direction you keep: the explorer walks to the square's east edge and looks out to the market; Client & Delivery's name stays bright while the other two dim. Quest box: "Agree where you go deep".
+2. All three areas stay part of the job: the other two names come back up as the explorer looks round at each district in turn.
+3. Handing one responsibility to a teammate who accepts it: the villager watching from the square's south side walks over; the explorer hands something over (Interact), they take it (Interact) and nod. A parchment card opens in the HUD, "Specialist agreement", its lines appearing as the narrator names them: a strength your team relies on, one responsibility accepted by a teammate.
+4. A stronger contribution in return: the teammate heads back; the explorer turns to the market and works, the market lit while it is shown (as in Areas, a moment's light, not reach). The card's third line: a stronger contribution through your strength.
+5. No one specialises at a teammate's unacknowledged expense: the explorer walks back to the fountain, the teammate nods from their spot, and the quest box ticks: "Agreement made".
+
+### 6. Your quest (`expectations`)
 1. A new cycle, a new quest: the explorer walks to the **notice board** and pins up a sheet (Interact). Quest box: "Write your expectations".
 2. Scope, specifics, growth: close shot of the board; the sheet fills with three lines of writing.
 3. Teammates review: villagers walk up and read it; one points at the sheet (Interact), the explorer adjusts it (Interact), and they all wave. Quest box ticks: "Expectations agreed".
 
-### 6. Along the way (`feedback`)
+### 7. Along the way (`feedback`)
 Time passes: the sun moves across the sky over the chapter.
 1. Ask for feedback often: a montage-like glide following the explorer between the market, a house and the square; at each, a villager walks up and hands over a note (Interact). The HUD notes counter goes 1, 2, 3.
 2. Saw, changed, relates to: one note opens briefly as a small parchment card in the HUD with three short lines: "What I saw", "What it changed", "Which expectation".
 3. You keep every note, and check all three areas halfway through: the notes counter settles at 6.
 
-### 7. Around the fire (`self-assessment`)
+### 8. Around the fire (`self-assessment`)
 Dusk. A campfire in the square, the windmill silhouetted.
 1. Look back one area at a time: the explorer sits by the fire (Idle) reading their notes; the HUD shows three area rows.
 2. Rate each area: the HUD rows fill in: Client & Delivery "Meets", People & Team "Exceeds", Org & Community "Meets".
 3. Teammates confirm, correct or add: villagers come and stand around the fire; one by one they nod (a small dip) and one adds a note.
 
-### 8. Further (`growth`)
+### 9. Further (`growth`)
 Morning again.
 1. A stretch: the explorer crosses **the bridge** for the first time and starts working in the hamlet beyond the river.
 2. Exceeding in one area: fog lifts a little across the river around that work.
 3. Scope raised: as the explorer works in all three districts, the fog rolls back further and stays back: the revealed area is now wider than before. Quest box: "Your reach has grown".
 4. A new season begins: sunrise light sweeps across the valley; the quest box resets to a new quest.
 
-### 9. Your turn (`close`)
+### 10. Your turn (`close`)
 The camera rises high over the valley: everything the explorer has revealed, villagers going about their day, fog still at the far edges because there is always more to explore. The player shows "Find your scope" and "Watch again".

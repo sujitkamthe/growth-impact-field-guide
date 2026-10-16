@@ -19,7 +19,7 @@ export const FILMS = [
         audio: 'audio/tour/',
         thumbnail: 'assets/tour/thumbnail.jpeg',
         route: 'tour',
-        length: '4:04',
+        length: '5:12',
         playLabel: 'Play the tour',
         // The end card's links; "Watch again" is always offered after them.
         end: [{ href: '#home', label: 'Find your scope' }],
@@ -35,7 +35,7 @@ export const FILMS = [
         // a play mark on a plain tile (null avoids a 404 on every page that links here).
         thumbnail: 'assets/tour/thumbnail-org.jpeg',
         route: 'tour/org',
-        length: '2:13',
+        length: '2:17',
         playLabel: 'Play the film',
         // The area page that links to this film (views/area.js).
         area: 'org-community',

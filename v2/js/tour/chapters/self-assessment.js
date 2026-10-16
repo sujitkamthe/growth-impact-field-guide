@@ -1,4 +1,4 @@
-// Chapter 7, Around the fire: dusk, the evening fire in the square, and looking back.
+// Chapter 8, Around the fire: dusk, the evening fire in the square, and looking back.
 //
 // 1. "At the end of the cycle, you look back one area at a time..."  The explorer walks from the
 //    fountain to a seat by the fire spot while teammates take their places around it; one kneels and
