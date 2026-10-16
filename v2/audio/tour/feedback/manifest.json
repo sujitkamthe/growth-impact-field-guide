@@ -1,0 +1,218 @@
+{
+  "engine": "edge-tts (Microsoft neural voices, unofficial; Azure Speech offers the same voices officially)",
+  "rate": "-3%",
+  "voices": [
+    {
+      "id": "en-GB-SoniaNeural",
+      "label": "Sonia (British)"
+    },
+    {
+      "id": "en-IN-NeerjaExpressiveNeural",
+      "label": "Neerja (Indian, expressive)"
+    }
+  ],
+  "clips": {
+    "en-GB-SoniaNeural": {
+      "habit": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/habit-0.mp3",
+          "duration": 7.36,
+          "hash": "84f246c87ad7"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/habit-1.mp3",
+          "duration": 6.16,
+          "hash": "70a91fdbf773"
+        }
+      ],
+      "ask": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/ask-0.mp3",
+          "duration": 7.29,
+          "hash": "ef882c975c23"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/ask-1.mp3",
+          "duration": 9.07,
+          "hash": "44cc83f729a6"
+        }
+      ],
+      "give": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/give-0.mp3",
+          "duration": 5.57,
+          "hash": "46e1b5db6177"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/give-1.mp3",
+          "duration": 8.88,
+          "hash": "49605989a0cc"
+        }
+      ],
+      "change": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/change-0.mp3",
+          "duration": 7.92,
+          "hash": "ad77d1a1397d"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/change-1.mp3",
+          "duration": 5.42,
+          "hash": "c0d63ef20e3e"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/change-2.mp3",
+          "duration": 6.85,
+          "hash": "3a2bbebab059"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/change-3.mp3",
+          "duration": 7.05,
+          "hash": "9f253467e53f"
+        }
+      ],
+      "everyone": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/everyone-0.mp3",
+          "duration": 7.72,
+          "hash": "096ead354946"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/everyone-1.mp3",
+          "duration": 7.59,
+          "hash": "c59226243bca"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/everyone-2.mp3",
+          "duration": 6.08,
+          "hash": "8c0a706eaf14"
+        }
+      ],
+      "loop": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/loop-0.mp3",
+          "duration": 5.94,
+          "hash": "560bfb10e5c4"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/loop-1.mp3",
+          "duration": 4.38,
+          "hash": "09e96233916a"
+        }
+      ],
+      "ahead": [
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/ahead-0.mp3",
+          "duration": 9.21,
+          "hash": "7af15b5c37f9"
+        },
+        {
+          "src": "audio/tour/feedback/en-GB-SoniaNeural/ahead-1.mp3",
+          "duration": 7.43,
+          "hash": "0f437ae5b010"
+        }
+      ]
+    },
+    "en-IN-NeerjaExpressiveNeural": {
+      "habit": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/habit-0.mp3",
+          "duration": 8.45,
+          "hash": "9a3ce925c7bd"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/habit-1.mp3",
+          "duration": 6.64,
+          "hash": "1d041d2207cc"
+        }
+      ],
+      "ask": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/ask-0.mp3",
+          "duration": 8.65,
+          "hash": "8cf22e0764a9"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/ask-1.mp3",
+          "duration": 10.54,
+          "hash": "5322285079a5"
+        }
+      ],
+      "give": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/give-0.mp3",
+          "duration": 6.43,
+          "hash": "5a750ccbc714"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/give-1.mp3",
+          "duration": 10.62,
+          "hash": "6ab228046e94"
+        }
+      ],
+      "change": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-0.mp3",
+          "duration": 9.07,
+          "hash": "5043abdf1778"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-1.mp3",
+          "duration": 6.35,
+          "hash": "45d33da8fd74"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-2.mp3",
+          "duration": 7.63,
+          "hash": "a91c9febdbad"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-3.mp3",
+          "duration": 8.72,
+          "hash": "244bf26fd73b"
+        }
+      ],
+      "everyone": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/everyone-0.mp3",
+          "duration": 8.54,
+          "hash": "8ec36f757f7d"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/everyone-1.mp3",
+          "duration": 8.84,
+          "hash": "a8db6a683abf"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/everyone-2.mp3",
+          "duration": 6.78,
+          "hash": "17e37840482f"
+        }
+      ],
+      "loop": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/loop-0.mp3",
+          "duration": 7.03,
+          "hash": "1965c7c74acd"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/loop-1.mp3",
+          "duration": 5.02,
+          "hash": "320ead9c44b7"
+        }
+      ],
+      "ahead": [
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/ahead-0.mp3",
+          "duration": 10.95,
+          "hash": "3a567895c1cf"
+        },
+        {
+          "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/ahead-1.mp3",
+          "duration": 8.44,
+          "hash": "6559f1fb932f"
+        }
+      ]
+    }
+  }
+}
