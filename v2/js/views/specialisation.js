@@ -1,6 +1,6 @@
-// Specialisation: a draft view on how depth and breadth should be recognised, linkable as
-// #specialisation/<section>. Marked as a draft (status: draft in its frontmatter), so the page says
-// it isn't agreed and doesn't change the expectations elsewhere in the guide.
+// Specialisation: how specialists and all-rounders grow and are recognised, including specialist
+// agreements, linkable as #specialisation/<section>. A page with status: draft in its frontmatter
+// would show the draft notice; this one is agreed.
 
 import { renderProse } from './prose.js';
 
