@@ -62,7 +62,7 @@ At Team you change how one team works; at Wider you shape direction **across tea
   - Frame **the client's problem** before proposing a solution
   - Propose **only what Sahaj's teams can deliver well**, so winning the work doesn't set them up to struggle
 
-#### Delivery
+#### Delivery ownership
 
 - **Shape the account's direction**: I shape direction **for the account or across several teams**, or for part of a client's organisation, aligning technical, delivery and business priorities
   - Set direction for **the account as a whole**, for several teams, or for part of a client's organisation
@@ -70,6 +70,7 @@ At Team you change how one team works; at Wider you shape direction **across tea
 - **Keep delivery healthy as it grows**: I keep delivery healthy as the work grows, fixing problems **before they spread across teams**
   - Watch **delivery across teams**, and notice problems that could spread
   - Fix them **before they spread**, and change what caused them
+  - Agree **commitments across teams** with senior client stakeholders that the teams can keep, settling the conflicts between commercial, technical and delivery pressures that one team can't settle alone
 - **Start up or grow an account**: I **set up a new account, or grow an existing one**, so its teams start and keep working well and the client relationship grows
   - Shape the **first engagement** with the client: the problem, the approach and the team
   - Set up **the first teams** and how they work with the client

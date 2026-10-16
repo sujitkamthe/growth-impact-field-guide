@@ -56,15 +56,15 @@ A client asks the team to add a second payment provider to its checkout. Payment
   - Raise missing details, contradictions and unclear requirements **as soon as I notice them**
   - **Suggest an alternative** when an ask looks wrong, rather than building it as written
 
-#### Delivery
+#### Delivery ownership
 
 - **Take work from ask to production**: I **take work from an unclear ask to production on my own**, breaking it down and estimating sensibly
   - Break unclear work into **small pieces** I can estimate and deliver
   - Take each piece **all the way to production**, not only to "code complete"
   - Deliver **without a teammate guiding each step**, and ask for help once I'm genuinely stuck
 - **Deliver predictably**: I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
+  - **Question a date or estimate** I don't believe in, including one given on my behalf, before it becomes a promise
   - **Deliver what I committed to** when I said I would, or say early that I can't
-  - Keep **progress visible** to the team without being asked
   - **Adjust my plan** when priorities, estimates or requirements change, and tell the people affected
 - **Follow our delivery practices**: I follow **Sahaj's engineering and delivery practices**, such as writing tests first, pairing and releasing in small steps
   - Keep **the board, the build and my branches** up to date, so the team sees the real state of the work
@@ -90,6 +90,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - Delivery is strong, but only when someone else has defined the work tightly
 - Asks that looked wrong were implemented without being questioned
 - Risks surface in stand-up on the day they become blockers
+- Dates are accepted without question, then missed or met through long hours
 
 ## People & Team
 

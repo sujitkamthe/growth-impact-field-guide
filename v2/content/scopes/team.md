@@ -64,7 +64,7 @@ At Extended you shape work across several features; at Team you change how **the
   - Help the client **explore what work it may need next**, using what the team knows about its systems
   - Give **realistic estimates and risks**, so the work Sahaj wins can be delivered well
 
-#### Delivery
+#### Delivery ownership
 
 - **Improve how the team delivers**: I improve how **the whole team** plans and delivers, with practices the team keeps up without being made to
   - Find where **the team's planning and delivery** break down, and work with the team on the fixes
@@ -72,6 +72,10 @@ At Extended you shape work across several features; at Team you change how **the
 - **Drive systemic risks to a decision**: I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
   - Spot risks that affect **the whole engagement**, not only one stream
   - Raise them early **with the client and with Sahaj**, and drive each one to a clear decision or action
+- **Agree commitments the team can keep**: I agree **the team's commitments** with the client, and hold the team's position when a date, scope or quality target isn't safe
+  - Agree dates and scope **the team believes it can meet**, with the risks stated, rather than accepting the first date the client asks for
+  - When pressure would mean **overpromising, cutting quality or long hours**, explain the consequences, recommend what to do instead and stay with it while the evidence supports it
+  - **Go back to the client** when circumstances change, such as technical debt the team accepted for a deadline that now needs paying down
 
 ### Evidence
 
@@ -79,12 +83,14 @@ At Extended you shape work across several features; at Team you change how **the
 - Architecture or design decisions the team still builds on
 - Practices or standards you built with the team rather than for it, and how you handed them over
 - Risks you raised that changed course, and how the client's trust in the team changed over the cycle
+- Commitments you agreed or renegotiated with the client, and how the team met them without long hours
 
 ### Self-check
 
 - What have I done so the team can decide well without me?
 - Does the client trust the team, or does every decision still go through me?
 - Am I raising the bar for the whole team, or just doing the hardest work myself?
+- When the client pushed for a date the team didn't believe in, what did I do?
 - Have I built a practice, tool or standard the team chose to adopt, and does it still run without me maintaining it?
 
 ### Not yet
@@ -93,6 +99,7 @@ At Extended you shape work across several features; at Team you change how **the
 - Sets standards alone, and relies on enforcing them
 - Involved in many decisions and discussions, but owning few outcomes end to end
 - Tools or standards that solve your own problems, or that people use only when told to
+- Accepts the dates and scope the client asks for, and leaves the team to absorb the difference
 
 ## People & Team
 
@@ -107,6 +114,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 #### Growing others
 
 - **Grow people into new responsibilities**: I **develop people into new responsibilities**, such as client conversations and problem framing
+  - Talk with each teammate about **what they're strong at and want to grow in**, including the people already doing well, before choosing what to hand them
   - Give people **responsibilities they haven't had before**, such as leading a client conversation, and support them while they learn
   - **Step back** as they become able, so the responsibility becomes theirs
 - **Build mentoring into the team**: I build mentoring and learning **into how the team works**, and coach teammates to mentor
@@ -147,6 +155,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 - Am I growing people who can lead, or keeping the leading to myself?
 - Do I invest in the people who need it most, or only in the ones who ask?
+- Do the people already doing well on the team have a next challenge, or have they stopped growing?
 - Could the team keep its pace, and stay healthy, while I'm away?
 
 ### Not yet

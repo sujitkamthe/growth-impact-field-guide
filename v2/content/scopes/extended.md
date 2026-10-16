@@ -45,7 +45,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - Go through the design **with the people who will build on it** before they start
 - **Catch problems early**: I find edge cases, failure modes and technical debt in **the work I shape** before they cause problems
   - Look for edge cases and failure modes **while designing**, not after release
-  - **Name the technical debt** a design creates, and agree with the team when it will be paid down
+  - **Name the technical debt** a design creates, and agree with the team, and with the client where it affects them, when it will be paid down
   - Improve the **tests and monitoring** for the work I shape, so the next problem is caught sooner
 
 #### Consulting
@@ -62,7 +62,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - Present **my stream's progress and decisions** to the client, such as in showcases and planning
   - Give **bad news early and plainly**, with what we propose to do about it
 
-#### Delivery
+#### Delivery ownership
 
 - **Own a stream**: I **own a stream or epic** of work, including its dependencies on other features and its delivery risk
   - Own the stream **from start to finish**, so the team and client know to come to me about it
@@ -72,12 +72,14 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - Shape the **first backlog**, so the people joining have clear work from the first week
   - Agree with the team how the work will be done and **who works on what**
   - Bring the people joining **up to speed** on the client and the problem
-- **Make trade-offs explicit**: I make trade-offs between features, time and quality **explicit** to the team and client
+- **Agree realistic commitments**: I agree **my stream's commitments** with the team and client, and make trade-offs between features, time and quality explicit
+  - Agree dates and scope for **my stream** that the team believes it can meet, and say early when that changes
   - Tell the team and client **what each choice gives up**, instead of absorbing it quietly
-  - Improve **how work moves through my stream**, removing delays I see repeat
+  - Resolve **mismatched expectations** with the people affected, such as a client expecting more than was agreed, instead of covering the gap with longer hours
 - **Hold the bar on delivery**: I **hold the bar on how my stream delivers**, and advocate for Sahaj's delivery approach
   - Keep my stream's practices, such as testing and small releases, **when a deadline is close**
   - Explain **why our delivery approach helps** in terms the client cares about, such as fewer incidents or faster releases
+  - Improve **how work moves through my stream**, removing delays I see repeat
 
 ### Evidence
 
@@ -85,6 +87,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 - Designs other people built their features on without needing you
 - Vague asks you reframed, and whether the team now brings ambiguous work to you
 - Times you pushed back with the client, and what changed as a result
+- Commitments you agreed or renegotiated for your stream, and how they held up
 
 ### Self-check
 
@@ -92,12 +95,14 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 - Do stakeholders come to me for thinking, or only for updates?
 - Have I shared enough context that my stream can move without me?
 - Do I push back on misaligned requirements, or accept them to avoid conflict?
+- When a date for my stream looked unrealistic, did I say so, or did the team absorb it?
 
 ### Not yet
 
 - Excellent work on your own features, with little effect on anyone else's
 - Contributes solutions in design discussions but leaves the framing to someone else
 - Acts as the hub everyone routes decisions through, so decisions stall when they are away
+- Agrees to every date the client asks for, and the stream makes up the difference in long hours
 
 ## People & Team
 
