@@ -33,11 +33,11 @@ export const CHAPTERS = [
         "Each area has its own rating against your scope, so you can see where you're strong and where you need support.",
     ] },
     { id: 'strengths', title: 'Your strengths', beats: [
-        'Deciding your own growth includes choosing where to go deep, so you can grow through what you do best.',
-        "All three areas stay part of what's expected of you, but within each you choose how you contribute, so you can lean on what you do best.",
+        'Deciding your own growth also means you can grow through what you do best.',
+        "All three areas stay part of what's expected of you, but within each you choose how you contribute.",
         'When your team already relies on a strength of yours, you can agree to hand one responsibility to a teammate who accepts it.',
         'In return, you agree a stronger contribution through that strength: what it will achieve, and who it will help.',
-        "Nobody specialises at a teammate's unacknowledged expense: the agreement is written down, and the responsibility your teammate takes on counts toward their growth too.",
+        "Your teammate chose to take it on, so it's never extra work quietly left with them, and it counts toward their growth too.",
     ] },
     { id: 'expectations', title: 'Agreeing expectations', beats: [
         'At the start of each cycle, you write a short expectations doc to discuss with your team.',

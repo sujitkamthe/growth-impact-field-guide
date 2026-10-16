@@ -1,6 +1,6 @@
 // Chapter 5, Your strengths: going deep in what you do best, with every area still part of what's expected.
 //
-// 1. "Deciding your own growth includes deciding where to go deep."  The explorer leaves the fountain
+// 1. "Deciding your own growth also means you can grow through what you do best."  The explorer leaves the fountain
 //    for the square's east edge and looks out to the market; Client & Delivery's name stays bright
 //    while the other two dim. Quest: "Agree where you go deep".
 // 2. "All three areas stay part of what's expected of you..."  The other two names come back up as the explorer
@@ -10,7 +10,7 @@
 //    The HUD's parchment card opens on the agreement, a line at a time.
 // 4. "In return, you take on a stronger contribution..."  The teammate heads back; the explorer turns
 //    to the market and gets to work, the market lit while it's shown (as in Areas, it isn't reach).
-// 5. "Nobody specialises at a teammate's unacknowledged expense..."  The explorer walks back to the
+// 5. "Your teammate chose to take it on..."  The explorer walks back to the
 //    fountain, the teammate nods from their spot, and the quest ticks: "Agreement made". Ends on
 //    layout.states.afterAreas again, so Your quest starts exactly as it did after Areas.
 //
