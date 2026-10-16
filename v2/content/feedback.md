@@ -42,7 +42,7 @@ When something went well, say the first two and skip the suggestion: "In Tuesday
 Sahaj has no titles and open salaries, and saying what you see, to anyone, is the everyday part of that same openness. How long someone has been here, how much they know, or how close they are to the client is never a reason to hold feedback back, in either direction: the newest person on a team often sees what everyone else has stopped noticing.
 
 <!-- more: What makes it safe -->
-It stays safe because of how people respond. If you've been on the team the longest, ask for feedback about your own work, and thank the person who tells you something critical, even if you disagree; the people around you judge from your answer whether it's safe to do it again. A critical note never counts against the person who gave it.
+It stays safe because of how people respond. If you've been on the team the longest, ask for feedback about your own work, and thank the person who tells you something critical, even if you disagree. If you react badly, they won't tell you again, and nor will anyone who saw it. A critical note never counts against the person who gave it.
 
 ## Cover all three areas
 
@@ -71,7 +71,7 @@ It stays safe because of how people respond. If you've been on the team the long
 <!-- group: Asking for it | Ask small and often, and show what you changed | check -->
 *Ask a small, specific question often, listen without defending, and show what you changed.*
 
-Hear feedback as being for your growth, not as a judgement of you: it's about one piece of work, and you can hear it and still be good at what you do.
+Hear feedback as being for your growth, not as a judgement of you: it's about something you did, not who you are, and you can hear it and still be good at what you do.
 
 - **Ask small and specific**: "What's one thing I could do differently in the next demo?" gets a usable answer, where "any feedback?" usually gets "all good".
 - **Listen before you explain**: if it stings, or you feel a "yes, but" coming, pause and ask "What did you see?" or "What would you have done?" before deciding what you think of it.
@@ -79,7 +79,7 @@ Hear feedback as being for your growth, not as a judgement of you: it's about on
 - **Thank them, and close the loop**: say what you'll try, and later show what changed. If you decide not to act on something, say why, so they keep telling you.
 
 <!-- more: Who to ask -->
-Ask the teammate most likely to see it differently, not only the one who'll be kind. The more experienced you get, the more useful it is to hear what isn't working yet, and how the team receives its first critical note decides whether the next one is given at all.
+Ask the teammate most likely to see it differently, not only the one who'll be kind. The more experienced you get, the more useful it is to hear what isn't working yet. If people get a defence when they tell you something critical, they stop telling you.
 
 ## The people already doing well
 

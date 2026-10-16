@@ -15,12 +15,13 @@
 
 import { FILMS } from './films.js';
 import { createNarrator, PAUSE_AFTER } from './narrator.js';
+import { versioned } from '../build.js';
 
 const FADE_MS = 220;
 
 async function loadChapters(world, film) {
     // Chapter paths are relative to this file: the guide's in chapters/, another film's in films/<id>/chapters/.
-    const modules = world ? await Promise.allSettled(film.chapters.map(c => import(`${film.base}chapters/${c.id}.js`))) : [];
+    const modules = world ? await Promise.allSettled(film.chapters.map(c => import(versioned(`${film.base}chapters/${c.id}.js`)))) : [];
     return film.chapters.map((meta, i) => {
         const chapter = { ...meta, module: null, group: null };
         if (!world) return chapter;
@@ -64,7 +65,7 @@ async function loadWorld(canvas, hudRoot, options) {
 export async function createPlayer({ film = FILMS[0], canvas, hudRoot, onProgress = () => {}, onUpdate = () => {} }) {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const VOICES = film.voices;
-    const manifestLoad = fetch(`${film.audio}manifest.json`).then(r => (r.ok ? r.json() : null)).catch(() => null);
+    const manifestLoad = fetch(versioned(`${film.audio}manifest.json`)).then(r => (r.ok ? r.json() : null)).catch(() => null);
     // The world reports progress as a fraction or as { loaded, total }; pass on a fraction.
     const progress = p => onProgress(Math.max(0, Math.min(1, typeof p === 'number' ? p : p?.total ? p.loaded / p.total : 0)));
     const [{ world, reason: worldMissing }, manifest] = await Promise.all([

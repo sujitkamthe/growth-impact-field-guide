@@ -26,7 +26,12 @@ jobs:
         with:
           node-version: '20'
 
-      # V1, the original Field Guide, lives in v1/ and is built there; V2 (v2/) has no build step.
+      # V2 has no build step; this only stamps the commit into its URLs, so browsers fetch the files a
+      # deploy changed instead of reusing cached copies (v2/scripts/stamp-build.mjs).
+      - name: Stamp V2 build
+        run: node v2/scripts/stamp-build.mjs "${GITHUB_SHA:0:8}"
+
+      # V1, the original Field Guide, lives in v1/ and is built there.
       - name: Build V1 manifest.json
         run: node v1/build.js
 

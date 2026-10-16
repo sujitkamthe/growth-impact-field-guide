@@ -4,7 +4,7 @@
 // 1. "If you've been on the team the longest, go first..."  Close on the two of them in the square.
 //    The explorer asks; the joiner answers at some length; the explorer nods. Toast, labelled "Ask
 //    first": "What would you change about how I run planning?" Notes: 1.
-// 2. "When the answer is critical, thank them..."  The joiner answers, glancing towards the hall; the
+// 2. "If what they tell you is critical, thank them..."  The joiner answers, glancing towards the hall; the
 //    explorer nods. Toast, labelled "Thank them": "Thanks, that's useful. Tell me more?" Notes: 2. The
 //    explorer turns to the showcase at the cart.
 //

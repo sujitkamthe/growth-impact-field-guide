@@ -12,7 +12,7 @@ export const CHAPTERS = [
     ] },
     { id: 'ask', title: 'Ask first', beats: [
         "If you've been on the team the longest, go first: ask for feedback, including from the newest people on the team, and ask about your own work.",
-        'When the answer is critical, thank them, even if you disagree. Everyone watching learns from your answer whether it is safe to say it again.',
+        "If what they tell you is critical, thank them, even if you disagree. That's what makes them, and the rest of the team, willing to tell you next time.",
     ] },
     { id: 'give', title: 'The same day', beats: [
         "When a teammate's work goes well, tell them that day, while you both remember the moment.",
@@ -22,7 +22,7 @@ export const CHAPTERS = [
         "When something should change, don't hold it back to be kind. Say it soon and in private, about the work, not the person, with one thing to try instead.",
         "And say why you're telling them: you expect a lot of their work because you know they can do it.",
         "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?",
-        'Then thank them, and hear it as one moment in one piece of work, not a verdict on you. You can decide later what to do with it.',
+        "Then thank them. It's feedback about something you did, not about who you are, and you can decide later what to do with it.",
     ] },
     { id: 'everyone', title: 'Every way, every area', beats: [
         "There are no titles at Sahaj, so how long someone has been here is never a reason to stay quiet, in either direction. Say what you see to anyone, without fear.",

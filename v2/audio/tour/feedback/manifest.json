@@ -33,8 +33,8 @@
         },
         {
           "src": "audio/tour/feedback/en-GB-SoniaNeural/ask-1.mp3",
-          "duration": 8.78,
-          "hash": "29475532d119"
+          "duration": 9.24,
+          "hash": "142fe4284d87"
         }
       ],
       "give": [
@@ -67,8 +67,8 @@
         },
         {
           "src": "audio/tour/feedback/en-GB-SoniaNeural/change-3.mp3",
-          "duration": 8.39,
-          "hash": "f888c8616a8c"
+          "duration": 7.81,
+          "hash": "2d2182bf0052"
         }
       ],
       "everyone": [
@@ -134,8 +134,8 @@
         },
         {
           "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/ask-1.mp3",
-          "duration": 10.46,
-          "hash": "4686c5230fcf"
+          "duration": 11.04,
+          "hash": "f006821ec207"
         }
       ],
       "give": [
@@ -168,8 +168,8 @@
         },
         {
           "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-3.mp3",
-          "duration": 10.23,
-          "hash": "3e586486cadf"
+          "duration": 9.33,
+          "hash": "f9ebe51e67ed"
         }
       ],
       "everyone": [

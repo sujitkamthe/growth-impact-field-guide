@@ -5,6 +5,8 @@
 // has shared expectations, and its "### Ways to contribute" are grouped by "#### <route>".
 // Each expectation is "- **Handle**: one sentence", with indented "- " bullets that unpack it.
 
+import { versioned } from './build.js';
+
 export const SCOPE_IDS = ['direct', 'extended', 'team', 'wider'];
 export const AREA_IDS = ['client-delivery', 'people-team', 'org-community'];
 const PAGE_IDS = ['home', 'principles', 'how-it-works', 'teammates', 'self-assessment', 'faq', 'glossary', 'specialisation', 'feedback', 'agree'];
@@ -150,7 +152,7 @@ function parsePage(text) {
 }
 
 async function fetchText(path) {
-    const res = await fetch(path);
+    const res = await fetch(versioned(path));
     if (!res.ok) throw new Error(`Could not load ${path} (${res.status})`);
     return res.text();
 }

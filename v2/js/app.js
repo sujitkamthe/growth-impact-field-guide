@@ -2,6 +2,7 @@
 
 import { loadContent } from './content.js';
 import { initScopeMenu } from './scope-menu.js';
+import { initGuideMenu, markGuideMenu } from './guide-menu.js';
 import * as principles from './views/principles.js';
 import * as how from './views/how.js';
 import * as teammates from './views/teammates.js';
@@ -20,9 +21,9 @@ import * as agree from './views/agree.js';
 import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
-    { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'how-it-works', terms: true },
+    { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'principles', terms: true },
     { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works', terms: true },
-    { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'feedback', terms: true },
+    { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'teammates', terms: true },
     { pattern: /^feedback(?:\/([\w-]+))?$/, view: feedback, nav: 'feedback', terms: true },
     { pattern: /^agree(?:\/([\w-]+))?$/, view: agree, nav: 'agree', terms: true },
     // Start is the landing page, at the empty address and #home (old #home/<section> links too).
@@ -33,8 +34,8 @@ const ROUTES = [
     { pattern: /^compare(?:\/([\w-]+)\/([\w-]+))?$/, view: compare, nav: 'expectations' },
     { pattern: /^self-assessment(?:\/([\w-]+))?$/, view: selfAssessment, nav: 'self-assessment', terms: true },
     { pattern: /^faq(?:\/([\w-]+))?$/, view: faq, nav: 'faq', terms: true },
-    { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'faq' },
-    { pattern: /^specialisation(?:\/([\w-]+))?$/, view: specialisation, nav: 'faq' },
+    { pattern: /^glossary(?:\/([\w-]+))?$/, view: glossary, nav: 'glossary' },
+    { pattern: /^specialisation(?:\/([\w-]+))?$/, view: specialisation, nav: 'specialisation' },
     { pattern: /^tour(?:\/([\w-]+))?$/, view: tour, nav: 'tour' },
 ];
 
@@ -89,6 +90,7 @@ function render(content, { keep = false } = {}) {
     document.querySelectorAll('.nav-links a').forEach(a => {
         a.toggleAttribute('aria-current', a.dataset.nav === route?.nav);
     });
+    markGuideMenu();
     if (!keep) setMenu(false);
     if (keep) window.scrollTo(0, scrollY);
     else if (!result.keepScroll) window.scrollTo(0, 0);
@@ -168,6 +170,7 @@ async function boot() {
     if (version) document.querySelector('[data-version]').textContent = `Guide version ${version} · `;
     window.addEventListener('hashchange', () => render(content));
     initScopeMenu(content, { onChange: id => scopeChanged(content, id) });
+    initGuideMenu();
     render(content);
 }
 

@@ -73,6 +73,8 @@ export function createNarrator({ manifest, voices, onBlocked = () => {} }) {
         return [mine, fallback].filter((c, k, all) => c && all.indexOf(c) === k);
     };
     const url = src => new URL(src, document.baseURI).href;
+    // Each clip's content hash, so a re-rendered line is fetched afresh though its file name stays the same.
+    const clipUrl = clip => `${url(clip.src)}${clip.hash ? `?h=${clip.hash}` : ''}`;
 
     // Seconds the line takes to say: the clip's length, or the reading-speed estimate when narration
     // is off or there is no clip.
@@ -124,7 +126,7 @@ export function createNarrator({ manifest, voices, onBlocked = () => {} }) {
                 current.detach = detach;
                 audio.addEventListener('ended', onEnded);
                 audio.addEventListener('error', onError);
-                audio.src = url(clips[k].src);
+                audio.src = clipUrl(clips[k]);
                 if (!paused) playClip(my);
             };
             const trySpeech = async () => {
@@ -168,7 +170,7 @@ export function createNarrator({ manifest, voices, onBlocked = () => {} }) {
     function preload(chapterId, i) {
         if (muted) return;
         const clip = clipsFor(chapterId, i)[0];
-        if (clip && preloader.src !== url(clip.src)) preloader.src = url(clip.src);
+        if (clip && preloader.src !== clipUrl(clip)) preloader.src = clipUrl(clip);
     }
 
     function pause() {

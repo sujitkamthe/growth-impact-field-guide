@@ -31,7 +31,7 @@ Early morning.
 ### 2. Ask first (`ask`)
 1. "If you've been on the team the longest, go first: ask for feedback, including from the newest people on the team, and ask about your own work."
    Close on the two of them. The explorer asks with a small gesture; the joiner answers at some length; the explorer nods. Toast, labelled "Ask first": "What would you change about how I run planning?" The notes counter appears at 1.
-2. "When the answer is critical, thank them, even if you disagree. Everyone watching learns from your answer whether it is safe to say it again."
+2. "If what they tell you is critical, thank them, even if you disagree. That's what makes them, and the rest of the team, willing to tell you next time."
    The explorer asks again; the joiner answers, glancing towards the hall; the explorer nods. Toast, labelled "Thank them": "Thanks, that's useful. Tell me more?" Notes: 2. The explorer turns to the showcase.
 
 ### 3. The same day (`give`)
@@ -47,7 +47,7 @@ Early morning.
    Seen from across the river: the teammate talks it through. The card opens, labelled "In private": "What I saw: you agreed the date before showing our estimate", "What it changed: long hours, or a missed date", "Which expectation: Client & Delivery, delivery ownership", "Try next time: show both options and let the client choose".
 3. "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?"
    The explorer starts to explain with a gesture (toast, labelled "The first instinct": "Yes, but…"), stops halfway, looks out at the water for a moment, nods, and asks with a smaller gesture. Toast, labelled "Hearing it": "What would you have done?" The teammate answers.
-4. "Then thank them, and hear it as one moment in one piece of work, not a verdict on you. You can decide later what to do with it."
+4. "Then thank them. It's feedback about something you did, not about who you are, and you can decide later what to do with it."
    The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
 
 ### 5. Every way, every area (`everyone`)

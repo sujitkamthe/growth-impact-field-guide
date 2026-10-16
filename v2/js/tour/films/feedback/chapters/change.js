@@ -8,7 +8,7 @@
 // 3. "When it's said to you and you feel a 'yes, but' coming..."  The explorer starts to explain (toast,
 //    labelled "The first instinct": "Yes, but…"), stops halfway, looks out at the river for a moment, nods, and asks with a smaller gesture. Toast,
 //    labelled "Hearing it": "What would you have done?" The teammate answers.
-// 4. "Then thank them, and hear it as one moment..."  The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
+// 4. "Then thank them. It's feedback about something you did..."  The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.
 //
 // Starts where The same day ends. Ends with the two of them facing each other on the riverbank.
 
