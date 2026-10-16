@@ -63,6 +63,7 @@ export function render(content) {
                     <span class="tour-card-time">${esc(film('guide').length)}</span>
                 </a>
                 ${filmLink(film('org'), 'about the Org & Community area')}
+                ${filmLink(film('feedback'), 'about giving and asking for feedback')}
                 </div>
             </header>
             <section class="start-intro" aria-labelledby="start-intro-head">
