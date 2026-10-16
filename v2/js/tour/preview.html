@@ -4,6 +4,7 @@
      over HTTP. ?film=org previews the Org & Community film (films/org/).
        ?t=12        start 12 s in          ?play=0     start paused
        ?theme=dark  dark theme HUD         ?reduced=1  reduced motion (beat end states)
+       ?audio=1     beat lengths from the film's narration (default voice) instead of an estimate
      Without a chapter (or with ?chapter=none) it shows the world itself:
        ?shot=overview   a layout.SHOTS name       ?reveals=afterScopes  a layout.REVEALS name, or "all"
        ?hours=19        time of day              ?state=afterArrival   a layout.states name -->
@@ -96,8 +97,16 @@
     }
 
     // Same estimate the player uses when there is no audio: about 2.6 words a second, plus a pause.
+    // ?audio=1 times the beats from the film's narration instead (the default voice's clips, plus the
+    // player's 0.6 s pause), when its manifest is there.
     const beats = chapter ? meta.beats : ['(the world)'];
-    const lengths = chapter ? beats.map(b => Math.max(2.4, b.split(/\s+/).length / 2.6 + 0.8)) : [60];
+    let lengths = chapter ? beats.map(b => Math.max(2.4, b.split(/\s+/).length / 2.6 + 0.8)) : [60];
+    if (chapter && q.get('audio') === '1') {
+        const audio = film ? `../../audio/tour/${film}/` : '../../audio/tour/';
+        const manifest = await fetch(`${audio}manifest.json`).then(r => (r.ok ? r.json() : null)).catch(() => null);
+        const clips = manifest?.clips?.[manifest.voices?.[0]?.id]?.[id];
+        if (clips) lengths = lengths.map((len, i) => (clips[i]?.duration ? clips[i].duration + 0.6 : len));
+    }
     const beatStarts = [], beatEnds = [];
     lengths.reduce((t, len) => { beatStarts.push(t); beatEnds.push(t + len); return t + len; }, 0);
     const duration = beatEnds.at(-1);
