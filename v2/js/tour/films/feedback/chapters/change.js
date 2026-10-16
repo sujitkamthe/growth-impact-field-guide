@@ -1,4 +1,4 @@
-// Feedback film, chapter 4, What should change: said soon and in private, and heard without defending.
+// Feedback film, chapter 4, What should change: said soon and in private, and heard with a question before any explanation.
 //
 // 1. "When something should change, don't hold it back to be kind..."  The teammate who watched the
 //    showcase steps up to the explorer and asks for two minutes (toast, labelled "Soon, in private":

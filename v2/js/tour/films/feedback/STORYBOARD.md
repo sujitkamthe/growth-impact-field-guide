@@ -25,7 +25,7 @@ The cast, by villager index: 10 the new joiner, who arrives over the bridge; 4 t
 Early morning.
 1. "At Sahaj, feedback is part of an ordinary day: genuine, frequent and open, a few words soon after the moment, from anyone to anyone."
    The camera comes down from high over the valley to the square. The background pairs turn to each other; at the head of the bridge road the showcase is under way, a teammate watching from the square's north side; the explorer stands in the square and glances over at it. The new joiner is walking in over the bridge.
-2. "It's for your growth, not a mark for your self-assessment: a teammate's view of what you could try next, while there's still time to try it."
+2. "It's for your growth: each piece is a teammate's view of what you could try next, while there's still time to try it, not a rating."
    The camera settles on the explorer, who turns back as the joiner comes off the bridge and stops in front of them. Quest box: "Make feedback a habit".
 
 ### 2. Ask first (`ask`)
@@ -45,7 +45,7 @@ Early morning.
    The waiting teammate asks for two minutes (toast, labelled "Soon, in private": "Got two minutes?"), and the two of them walk out of the square to the riverbank east of the bridge, while the teammate from the showcase steps back to watch the bridge.
 2. "And say why you're telling them: you expect a lot of their work because you know they can do it."
    Seen from across the river: the teammate talks it through. The card opens, labelled "In private": "What I saw: you agreed the date before showing our estimate", "What it changed: long hours, or a missed date", "Which expectation: Client & Delivery, delivery ownership", "Try next time: show both options and let the client choose".
-3. "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?"
+3. "When it's said to you and you feel a 'yes, but' coming, ask a question first: what would you have done? Then add any context they didn't have."
    The explorer starts to explain with a gesture (toast, labelled "The first instinct": "Yes, but…"), stops halfway, looks out at the water for a moment, nods, and asks with a smaller gesture. Toast, labelled "Hearing it": "What would you have done?" The teammate answers.
 4. "Then thank them. It's feedback about something you did, not about who you are, and you can decide later what to do with it."
    The explorer nods and raises a hand in thanks; the teammate nods back. Notes: 3.

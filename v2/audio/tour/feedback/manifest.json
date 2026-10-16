@@ -21,8 +21,8 @@
         },
         {
           "src": "audio/tour/feedback/en-GB-SoniaNeural/habit-1.mp3",
-          "duration": 8,
-          "hash": "d2b558c05df8"
+          "duration": 7.61,
+          "hash": "759aeed9322c"
         }
       ],
       "ask": [
@@ -62,8 +62,8 @@
         },
         {
           "src": "audio/tour/feedback/en-GB-SoniaNeural/change-2.mp3",
-          "duration": 6.4,
-          "hash": "b893dc74fb24"
+          "duration": 9.2,
+          "hash": "34c6850c1ff8"
         },
         {
           "src": "audio/tour/feedback/en-GB-SoniaNeural/change-3.mp3",
@@ -122,8 +122,8 @@
         },
         {
           "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/habit-1.mp3",
-          "duration": 8.97,
-          "hash": "43e51ff9b0a1"
+          "duration": 8.66,
+          "hash": "7eae51c9f7bf"
         }
       ],
       "ask": [
@@ -163,8 +163,8 @@
         },
         {
           "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-2.mp3",
-          "duration": 7.68,
-          "hash": "8eb20fe89799"
+          "duration": 11.04,
+          "hash": "b2a46c561c30"
         },
         {
           "src": "audio/tour/feedback/en-IN-NeerjaExpressiveNeural/change-3.mp3",

@@ -54,7 +54,7 @@ export const FILMS = [
         audio: 'audio/tour/feedback/',
         thumbnail: 'assets/tour/thumbnail-feedback.jpeg',
         route: 'tour/feedback',
-        length: '2:24',
+        length: '2:26',
         playLabel: 'Play the film',
         end: [
             { href: '#feedback', label: 'Read about feedback' },

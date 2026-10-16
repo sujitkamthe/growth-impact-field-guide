@@ -8,7 +8,7 @@
 export const CHAPTERS = [
     { id: 'habit', title: 'Small and often', beats: [
         'At Sahaj, feedback is part of an ordinary day: genuine, frequent and open, a few words soon after the moment, from anyone to anyone.',
-        "It's for your growth, not a mark for your self-assessment: a teammate's view of what you could try next, while there's still time to try it.",
+        "It's for your growth: each piece is a teammate's view of what you could try next, while there's still time to try it, not a rating.",
     ] },
     { id: 'ask', title: 'Ask first', beats: [
         "If you've been on the team the longest, go first: ask for feedback, including from the newest people on the team, and ask about your own work.",
@@ -21,7 +21,7 @@ export const CHAPTERS = [
     { id: 'change', title: 'What should change', beats: [
         "When something should change, don't hold it back to be kind. Say it soon and in private, about the work, not the person, with one thing to try instead.",
         "And say why you're telling them: you expect a lot of their work because you know they can do it.",
-        "When it's said to you and you feel a 'yes, but' coming, ask a question instead: what would you have done?",
+        "When it's said to you and you feel a 'yes, but' coming, ask a question first: what would you have done? Then add any context they didn't have.",
         "Then thank them. It's feedback about something you did, not about who you are, and you can decide later what to do with it.",
     ] },
     { id: 'everyone', title: 'Every way, every area', beats: [
