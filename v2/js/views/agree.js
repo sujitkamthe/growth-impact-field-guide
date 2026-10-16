@@ -8,6 +8,6 @@ import { scopeTool, bindScopeTool } from './_parts.js';
 export const render = (content, [open]) => renderProse(content, 'agree', {
     open,
     worksheet: true,
-    lead: scopeTool(content, null, 'Writing expectations at'),
+    lead: `<p class="ws-actions"><a class="button" href="doc-templates/expectations.docx" download>Download the template</a><span>One page, a row per area. Copy it into Google Drive to work on it with your team.</span></p>${scopeTool(content, null, 'Writing expectations at')}`,
     mount: root => bindScopeTool(root, content),
 });

@@ -1042,3 +1042,7 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .prose .doc-sheet td:first-child { width: auto; padding-top: 12px; }
     .prose .doc-sheet td:not(:first-child)::before { content: attr(data-label); display: block; font-size: 13px; font-weight: 600; color: var(--muted); }
 }
+
+/* A worksheet's main action, above its tools. */
+.ws-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 18px 0 4px; }
+.ws-actions span { color: var(--muted); font-size: 15px; }

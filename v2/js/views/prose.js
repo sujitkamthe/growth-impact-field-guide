@@ -27,7 +27,9 @@ const ITEM = /^(\d+\.|-) \*\*(.+?)\*\*:?\s*(.*)$/;
 const NOTE = /^<!-- (scale|list|row|checks|note) -->$/;
 const AREA_KEY = { 'Client & Delivery': 'cd', 'People & Team': 'pt', 'Org & Community': 'oc' };
 export const BAND = /^<!-- band -->\s*/;
-const MORE = /^<!-- more -->$/m;
+// "<!-- more -->" or "<!-- more: See a finished example -->": the label names what opens, so a
+// reader can tell whether they need it without opening it.
+const MORE = /^<!-- more(?::\s*(.*?))? -->$/m;
 
 // A section's short line, what stays in view and what folds behind Read more. The short line is
 // the summary; markdown before "<!-- more -->" stays in view.
@@ -36,9 +38,10 @@ export function glance(s, render, given) {
     if (given && typeof given === 'object') return short + (given.visual || '') + fold(given.more || '', given.label);
     if (typeof given === 'string') return short + given;
     const body = s.body.replace(BAND, '');
-    if (MORE.test(body)) {
-        const [shown, folded] = body.split(MORE);
-        return short + render(shown) + fold(render(folded));
+    const more = body.match(MORE);
+    if (more) {
+        const shown = body.slice(0, more.index), folded = body.slice(more.index + more[0].length);
+        return short + (shown.trim() ? render(shown) : '') + fold(render(folded), more[1] ? esc(more[1]) : undefined);
     }
     return s.short ? short + fold(render(body)) : render(body);
 }
@@ -164,7 +167,7 @@ function journey(pageId, sections, part, { topics = false } = {}) {
     </section>`;
     let n = 0;
     return `${intro.map(s => `<section class="prose journey-intro" id="${s.slug}"><h2>${esc(s.title)}</h2>${part(s)}</section>`).join('')}
-        ${stages.length > 3 ? map : ''}
+        ${stages.length > 3 || topics ? map : ''}
         ${groups.map(g => (g.kind === 'tips' ? tips(g) : stage(g, ++n))).join('')}`;
 }
 

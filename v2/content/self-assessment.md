@@ -41,7 +41,7 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 | **Org & Community** | Rebuild how the office onboards engineers into testing, and hand it over | The two teammates who built it with me ran it for the last three new joiners without me, and two other offices have asked for it. **Exceeds** |
 | **Growth** | Deepen my integration testing practice until another team on the account asks to use it | Another team on the account has asked for the review practice; next cycle I'll help them start it. |
 
-<!-- more -->
+<!-- more: How to write yours -->
 It follows the same made-up situation as the [In practice](#scope/team) story. Write yours in your own words, from your feedback notes.
 
 ## At the team check
@@ -49,6 +49,7 @@ It follows the same made-up situation as the [In practice](#scope/team) story. W
 <!-- group: At the team check | Talk it through with your teammates | team -->
 *Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
 
+<!-- more: How the team check runs -->
 You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing a teammate](#teammates) is their guide. Then look ahead together: where evidence is still missing, and what changes next cycle. If you still disagree after discussing it, see [Who reviews and decides](#how-it-works/who-reviews-and-decides).
 
 ## If you agreed a stretch
@@ -56,24 +57,28 @@ You can present your doc, or your teammates can read it beforehand for context. 
 <!-- tips: If you need them -->
 *Rate a stretched area against your scope like any other, then say how far you got.*
 
+<!-- more: How to rate a stretch -->
 If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, counts toward Exceeds in that area. Your scope grows at the [team check](#how-it-works/the-cycle) once your contribution consistently reaches the next scope in all three areas. Falling short of a stretch is normal.
 
 ## Your first cycle at Sahaj
 
 *Assess your first cycle against what you agreed for it, while you were settling in.*
 
+<!-- more: How a first cycle is rated -->
 Your first cycle is rated like any other, against the doc you agreed for it. If that doc said the cycle was about settling in, such as learning the client's domain or how the team works, your teammates take that into account. A gap that remains becomes something to plan for in your next doc, not a surprise.
 
 ## If you have no feedback notes
 
 *Say so, and ask for feedback before the team check.*
 
+<!-- more: What to do before the team check -->
 If you have no notes, say so in your self-assessment, and before the team check ask two of the people you worked with for feedback on each area. A cycle without feedback is something the whole team looks at, because giving it is expected of everyone.
 
 ## If an area fell short
 
 *When an area falls short, say why, because each reason calls for a different response from the team.*
 
+<!-- more: The four reasons, and what each needs -->
 <!-- list -->
 - **You had no chance, and raised it during the cycle**: the team needs to make room for you.
 - **The chance was there and you didn't take it**: a growth area to plan for.
@@ -86,4 +91,5 @@ If you agreed support with your team for a skill you are building, describe the 
 
 *The most common trap is treating a single good instance as a pattern.*
 
+<!-- more: Both traps, and how to avoid them -->
 The most common trap is treating a single good instance as a pattern, which overstates what you do consistently. Understating is the other, and it helps nobody, because your teammates then have to argue you up. Writing from your feedback notes avoids both, and lets the team check start from what you wrote, with fewer corrections. If you notice yourself building a case for a rating, go back to your notes.
