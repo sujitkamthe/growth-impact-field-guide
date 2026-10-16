@@ -151,8 +151,8 @@
       "expectations": [
         {
           "src": "audio/tour/en-GB-SoniaNeural/expectations-0.mp3",
-          "duration": 5.66,
-          "hash": "f608af2da7e9"
+          "duration": 6.44,
+          "hash": "e4d3289256c6"
         },
         {
           "src": "audio/tour/en-GB-SoniaNeural/expectations-1.mp3",
@@ -161,8 +161,8 @@
         },
         {
           "src": "audio/tour/en-GB-SoniaNeural/expectations-2.mp3",
-          "duration": 6.93,
-          "hash": "c42317897b33"
+          "duration": 5.49,
+          "hash": "eb4691ef68a7"
         }
       ],
       "feedback": [
@@ -368,8 +368,8 @@
       "expectations": [
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-0.mp3",
-          "duration": 6.7,
-          "hash": "b33298c487ea"
+          "duration": 7.55,
+          "hash": "d7f112a12f65"
         },
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-1.mp3",
@@ -378,8 +378,8 @@
         },
         {
           "src": "audio/tour/en-IN-NeerjaExpressiveNeural/expectations-2.mp3",
-          "duration": 7.93,
-          "hash": "fd396bfbf6cd"
+          "duration": 5.9,
+          "hash": "7c172e785ae4"
         }
       ],
       "feedback": [

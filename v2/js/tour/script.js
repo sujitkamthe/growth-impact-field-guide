@@ -40,9 +40,9 @@ export const CHAPTERS = [
         "Your teammate chose to take it on, so it's never extra work quietly left with them, and it counts toward their growth too.",
     ] },
     { id: 'expectations', title: 'Agreeing expectations', beats: [
-        'At the start of each cycle, you write a short expectations doc to discuss with your team.',
+        'At the start of each cycle, you and your team discuss your expectations, align on them and capture them.',
         'You note your scope, anything specific to your work, any agreement with your team, and where you want to grow.',
-        'Your teammates read it and suggest changes. Together, you agree on what to expect from your work.',
+        'Your teammates suggest changes until you all agree on what to expect from your work.',
     ] },
     { id: 'feedback', title: 'Along the way', beats: [
         'During the cycle, ask the people you work with for feedback on all of your impact, not only the work you deliver.',
