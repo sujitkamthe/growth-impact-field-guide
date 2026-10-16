@@ -33,7 +33,7 @@ export const CHAPTERS = [
         "Each area has its own rating against your scope, so you can see where you're strong and where you need support.",
     ] },
     { id: 'strengths', title: 'Your strengths', beats: [
-        'Deciding your own growth includes choosing where to go deep: a direction you keep for many quarters, because it is where you want to grow.',
+        "Deciding your own growth includes choosing where to go deep. If you're great at something and make it your main focus, your expectations are set around it.",
         "All three areas stay part of what's expected of you, but within each you choose how you contribute, so you can lean on what you do best.",
         'When your team already relies on a strength of yours, you can agree to hand one responsibility to a teammate who accepts it.',
         'In return, you take on a stronger contribution through that strength, one your teammates will be able to see.',
