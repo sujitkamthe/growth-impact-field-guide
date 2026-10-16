@@ -1,6 +1,6 @@
 ---
-title: Agree your expectations
-lede: At the start of each cycle, agree with your team what's expected of you, and write it in a one-page doc.
+title: Set your expectations
+lede: At the start of each cycle, set your expectations together with your team, and write them in a one-page doc.
 ---
 
 ## Before you write

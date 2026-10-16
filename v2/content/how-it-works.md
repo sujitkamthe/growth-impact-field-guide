@@ -54,7 +54,7 @@ Learning has no area of its own because it runs through all three: at every scop
 - **Gather feedback**: ask for it often, and keep notes
 - **Self-assess**: write it in the doc, then discuss it at the team check
 
-[Agree your expectations](#agree) walks you through the doc, with a finished example. Through the cycle, ask the people you work with for feedback while the work is fresh, and keep notes of what they tell you, so your [self-assessment](#self-assessment) starts from what you wrote down at the time; [Feedback](#feedback) explains how to give and ask for it.
+[Set your expectations](#agree) walks you through the doc, with a finished example. Through the cycle, ask the people you work with for feedback while the work is fresh, and keep notes of what they tell you, so your [self-assessment](#self-assessment) starts from what you wrote down at the time; [Feedback](#feedback) explains how to give and ask for it.
 
 The cycle ends with the team check, a conversation in which teammates from your project and office confirm, correct or add to your self-assessment, confirm your ratings and decide whether your scope has grown. Each team check also looks ahead: where evidence is missing, and what changes next cycle, so an expectation comes up in the cycle it applies to rather than later.
 

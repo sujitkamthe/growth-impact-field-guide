@@ -1,6 +1,6 @@
 // The Guide menu at the end of the nav: the reference pages (How it works, Principles, Agreed
 // focus, Reviewing a teammate, Questions, Glossary), kept out of the way of the three everyday
-// tasks and All scopes, which the nav leads with. It opens from its button, closes on Escape, a click outside
+// tasks and Scopes, which the nav leads with. It opens from its button, closes on Escape, a click outside
 // or a change of page, and its button shows as current when the page is one of its links. On a
 // phone it is part of the open menu, already expanded.
 

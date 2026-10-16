@@ -13,7 +13,7 @@ Anyone can comment on someone's expectations and ask for changes, give them feed
 ## Reviewing someone's expectations
 
 <!-- group: At the start of the cycle | Read their doc before it's agreed | doc -->
-*Read their doc against the scope they chose, using the four checks on [Agree your expectations](#agree/get-it-agreed).*
+*Read their doc against the scope they chose, using the four checks on [Set your expectations](#agree/get-it-agreed).*
 
 <!-- more: Comments, and a long stay at one scope -->
 Add your inputs as comments and ask for changes where an expectation is missing or unclear. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check they have agreed a development goal. The doc is agreed when you and the person can both point to what's expected.

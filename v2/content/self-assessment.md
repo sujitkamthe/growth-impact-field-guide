@@ -32,7 +32,7 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 
 ## A worked example
 
-*The doc from [Agree your expectations](#agree/write-your-doc), at the end of the cycle, with its self-assessment filled in.*
+*The doc from [Set your expectations](#agree/write-your-doc), at the end of the cycle, with its self-assessment filled in.*
 
 | Row | Agreed at the start | What changed, what feedback said, and the rating |
 |---|---|---|

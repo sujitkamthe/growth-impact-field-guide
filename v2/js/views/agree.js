@@ -1,4 +1,4 @@
-// Agree your expectations: confirm your scope, write the doc, get it agreed, with a finished doc,
+// Set your expectations: confirm your scope, write the doc, get it agreed, with a finished doc,
 // as a worksheet, linkable as #agree/<section>. The scope tool links the expectations being written
 // against.
 

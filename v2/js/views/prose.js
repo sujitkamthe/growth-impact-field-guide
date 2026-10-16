@@ -3,7 +3,7 @@
 // Views can replace a section's body or add content after it, keyed by the section's
 // slug, and open the page at a section (#<page>/<section>).
 //
-// Worksheet pages (Agree your expectations, Feedback, Self-assessment, Reviewing a teammate) also
+// Worksheet pages (Set your expectations, Feedback, Self-assessment, Reviewing a teammate) also
 // turn runs of "1. **Step**: text" into numbered steps, "- **Title**: text" into cards (side by side
 // when there are two to four, and in an area's colour when titled with an area's name), blockquotes
 // into example panels and tables into doc sheets (the expectations doc, a row per area), and can put

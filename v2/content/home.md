@@ -17,7 +17,7 @@ Read the four scopes below and pick the one your recent work has shown consisten
 
 ## Where to go next
 
-- [Agree your expectations](#agree): Confirm your scope and write your doc for the cycle
+- [Set your expectations](#agree): Confirm your scope and write your doc for the cycle
 - [Give and ask for feedback](#feedback): Cover all three areas, and look ahead at each team check
 - [Write your self-assessment](#self-assessment): Look back on the cycle and rate each area
 - [Review a teammate](#teammates): Read their doc, and take part in their team check
