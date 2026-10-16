@@ -81,7 +81,16 @@ Answering questions helpfully is expected of everyone, but on its own it isn't T
 <!-- group: Fairness | Specialists and all-rounders, both recognised | team -->
 *When you take less of something, a teammate chooses to take it on, and it counts for them too.*
 
-Specialising becomes unfair when an all-rounder like D quietly takes on whatever falls between the specialists, and only the specialists' work is recognised. So nobody is the default person for a handover, settling the trade-offs between technology, delivery and the client counts as D's own impact, and support counts on both sides: if A's expertise makes D's work much easier, that counts for A.
+Take a team of four:
+
+| Person | Strength | What they do |
+|---|---|---|
+| A | Technology | Solves the hardest engineering problems |
+| B | Delivery ownership | Gets complex work delivered, and keeps the client's commitments realistic |
+| C | Consulting | Understands the client's problem and shapes the solution |
+| D | All three | Resolves the conflicts between what is feasible, what was promised and what the client expects |
+
+Nothing is unfair about A, B and C specialising. It becomes unfair when D quietly takes on everything that falls between their specialities, and only the specialists' work is recognised. So an all-rounder isn't the default person for every handover, and resolving the trade-offs between technology, delivery and the client counts as D's own impact, named in D's evidence. Support counts on both sides: if a specialist's work needs a teammate to translate the problem or coordinate delivery, that is part of the teammate's impact too, and if A's expertise makes D's work much easier, that counts in A's favour.
 
 ## Recognising depth and breadth
 

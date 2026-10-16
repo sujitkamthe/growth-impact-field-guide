@@ -22,21 +22,19 @@ Saving observations for the end of the month, or for the weeks before your self-
 ## Giving it
 
 <!-- group: Give feedback | Soon after the moment, specific, about the work | feedback -->
-*Say what you saw and what it changed, ask how they saw it, agree one thing to try, and come back to it.*
+*Say what you saw and what it changed, soon after the moment, and talk about the work, not the person.*
 
 <!-- note -->
 > **What you saw** When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes.
 >
 > **What it changed** It unblocked them, but they still don't know why it failed, and they were stuck on the same test again on Wednesday.
 >
-> **How they saw it** "I was trying to get them going before the demo. I didn't know they'd hit it again."
+> **What you'd suggest** Next time, could you pair with them on it, even if it takes longer?
 >
-> **What you agree** Next time you'll pair with the new joiner on it, even if it takes longer, and say early when a demo is squeezing the time.
->
-> **A week later** "I paired with the new joiner on Tuesday's build failure. They fixed the next one on their own."
+> **How did you see it?** Then ask, because you may have missed something they knew.
 
 <!-- more: When it went well, naming the area, and who to say it to -->
-Talk about the work, not the person, and ask how they saw it before you settle on what to try, because you may have missed something they knew. When something went well, say the first two and skip the rest: "In Tuesday's design review you laid out two options for the refund flow with their costs, and the client decided in the meeting rather than a week later." You don't need the answer to raise a problem: "this made it hard for me to join in" is useful even if you don't know the fix. If it helps, name the area or facet, such as "that's consulting", so they know which area to keep growing in. Give praise where others can hear it if they're comfortable with that, and anything critical in private. Say it to the person it's about, not to someone else about them, wherever that feels safe; if it doesn't, see When it feels difficult.
+When something went well, say the first two and skip the suggestion: "In Tuesday's design review you laid out two options for the refund flow with their costs, and the client decided in the meeting rather than a week later." You don't need the answer to raise a problem: "this made it hard for me to join in" is useful even if you don't know the fix. If it helps, name the area or facet, such as "that's consulting", so they know which area to keep growing in. Give praise where others can hear it if they're comfortable with that, and anything critical in private. Say it to the person it's about, not to someone else about them, wherever that feels safe; if it doesn't, see When it feels difficult.
 
 ## Anyone to anyone, without fear
 
