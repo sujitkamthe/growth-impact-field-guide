@@ -13,7 +13,7 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 ## The prompts
 
 <!-- group: For each area | Say what changed, then choose a rating | rating -->
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed.
+- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have a specialist agreement, say what your stronger contribution achieved.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
@@ -22,7 +22,7 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 <!-- scale -->
 - **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all. Impact depended on favourable conditions, or teammates compensated for gaps you had not closed.
 - **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Two facets that exceed your scope's expectations can carry one weaker one. Teammates would depend on you here without checking.
-- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects across the area, not in one facet alone. Teammates learned from you, or a problem stopped recurring because of you.
+- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects, either across the area or through exceptional impact in one facet while you met the rest of what the area expects of you. Teammates learned from you, or a problem stopped recurring because of you.
 
 <!-- callout -->
 Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: that happens when your next-scope impact is consistent in all three areas.
@@ -57,6 +57,12 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 
 If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope is raised at the [team check](#how-it-works/the-cycle) once you show next-scope impact consistently in all three areas. Falling short of a stretch is normal.
 
+## If you have a specialist agreement
+
+*Rate the area against your scope and your agreement together.*
+
+The stronger contribution you agreed is part of what Meets means for you in that area, so falling well short of it isn't Meets, even if the rest of the area went well. The responsibility you handed over isn't expected of you, but your part in it is: the estimates, risks and follow-through the teammate who took it on depended on. Say how the handover worked for them too. Exceptional depth belongs in your self-assessment whether or not it leads to a raise, so describe what it changed and who relied on it.
+
 ## If an area fell short
 
 *When an area falls short, say why, because each reason calls for a different response from the team.*
@@ -66,6 +72,8 @@ If you agreed a stretch, rate that area against your scope like every other area
 - **The chance was there and you didn't take it**: a growth area to plan for.
 - **You took the chance and found it hard**: a development need, where support is the right response.
 - **You stayed with it, and a cause outside your control stopped it**: this still counts. Say what you tried, what got in the way and what it left behind. If you stopped at the first setback, that is the second reason, not this one.
+
+If you agreed support with your team for a skill you are building, describe the progress you made and the support you had. The support itself doesn't change the rating; if the expectation for that skill needed to change, it should have been agreed during the cycle, before you assess against it.
 
 ## Common traps
 

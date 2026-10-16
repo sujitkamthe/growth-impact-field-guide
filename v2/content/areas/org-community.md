@@ -31,7 +31,7 @@ Giving back inside and outside Sahaj through sessions, events such as DevDay, wr
 <!-- band -->
 *What you contribute is your choice. Whether you contribute is not.*
 
-There is no required blog, talk or number of initiatives. The expectation is a contribution you keep up through the cycle and can point to, made in working time: your team makes room for it, so it doesn't spill into your evenings. Sahaj is flat: there is no separate team building culture and capability on everyone else's behalf, so if some people opt out, the people who stay in carry the load.
+There is no required blog, talk or number of initiatives, and the natural way to contribute is through what you're good at and what motivates you: a specialist often contributes through their speciality, such as a capability track, a talk or a shared tool. The expectation is a contribution you keep up through the cycle and can point to, made in working time. Your team makes room for it, so it doesn't spill into your evenings: someone on the team agrees with you which work moves to make that time. Sahaj is flat: there is no separate team building culture and capability on everyone else's behalf, so if some people opt out, the people who stay in carry the load.
 
 ## Examples at each scope
 
@@ -47,8 +47,10 @@ A low-profile fix that removes recurring friction for many people can be worth m
 
 ## How it is assessed
 
-*No sustained contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like.*
+*No sustained contribution beyond your delivery this cycle means Org & Community is below expectations, whatever your other areas look like, unless your team agreed there was no room.*
 
-If your project leaves no room, raise it during the cycle with the seniors on your team, or with your account lead if the cause is account-wide, such as a delivery crunch. Raised during the cycle, it can still be fixed; raised for the first time in your self-assessment, it's too late to change anything. If you raised it and nothing changed, you're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+If your project leaves no room, agree it with the seniors on your team, or with your account lead if the cause is account-wide, such as a new account being set up or a delivery crunch. If you know at the start of the cycle, record it in your doc when you agree your expectations; if it comes up later, raise it as soon as you know. Either way, agree what contribution is still possible, who will make time for it, and a date to look at the arrangement again. Raised for the first time in your self-assessment, it's too late to change anything.
+
+You're then rated on what was reasonably available to you, and the constraint is recorded in your doc. If an agreed deferral covered the whole cycle, Org & Community is recorded as not rated for that cycle, with the reason, and it doesn't count toward a raise.
 
 Like every area, Org & Community counts toward a raise in scope: you need consistent next-scope impact here as well as in the other two.
