@@ -919,22 +919,18 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .start-here li > a .icon { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .more > summary::after, .how-to-tell > summary::after { transition: none; } }
 
-/* Start: the title and the cycle's three tasks beside a thumbnail of the narrated tour, a still
-   from the film itself, with the two shorter films side by side under it. Both columns start at the
-   top, so the title lines up with the film. */
-.start-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 540px); gap: 32px 48px; align-items: start; }
+/* Start: the title, with the two shorter films under it, beside a thumbnail of the narrated tour,
+   a still from the film itself. Both columns start at the top, so the title lines up with the film;
+   on a phone the main film comes before the shorter ones. */
+.start-hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 28px 48px; align-items: start;
+    grid-template-areas: "text film" "more film";
+}
 .start-hero h1 { margin-top: 4px; }
-.start-actions { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; max-width: 520px; }
-.start-actions li { border-top: 1px solid var(--line); padding: 10px 0; }
-.start-actions li:last-child { border-bottom: 1px solid var(--line); }
-.start-actions li > a { display: flex; align-items: flex-start; gap: 8px; font-weight: 600; }
-.start-actions li > a .icon { margin-top: 0.22em; color: var(--muted); }
-.start-actions span { display: block; color: var(--text-2); font-size: 15px; line-height: 1.45; margin: 2px 0 0 26px; }
-.start-watch { display: grid; gap: 12px; }
-.start-watch .start-films { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.start-watch .start-films .film-link { justify-self: stretch; margin-top: 0; }
-.start-watch .film-link { gap: 10px; padding-right: 10px; }
-.start-watch .film-link-thumb { width: 76px; }
+.start-hero-text { grid-area: text; }
+.start-hero .tour-card { grid-area: film; }
+.start-hero .start-films { grid-area: more; justify-self: start; }
+.start-hero .start-films .film-link { justify-self: stretch; margin-top: 0; }
 .tour-card {
     position: relative; display: block; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden;
     color: #fff; text-decoration: none; box-shadow: 0 0 0 1px var(--line), 0 10px 30px rgba(20, 22, 50, 0.16);
@@ -954,8 +950,7 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .tour-card-text span { font-size: 14px; color: rgba(255, 255, 255, 0.85); line-height: 1.4; }
 .tour-card-time { position: absolute; right: 14px; bottom: 16px; z-index: 1; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.55); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .tour-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-@media (max-width: 900px) { .start-hero { grid-template-columns: 1fr; } }
-@media (max-width: 560px) { .start-watch .start-films { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .start-hero { grid-template-columns: 1fr; grid-template-areas: "text" "film" "more"; } }
 /* On a phone the description would wrap up under the play button, so the title stands alone. */
 @media (max-width: 560px) { .tour-card-text > span { display: none; } }
 @media (prefers-reduced-motion: reduce) { .tour-card img, .tour-card-play { transition: none; } }

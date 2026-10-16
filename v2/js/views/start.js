@@ -1,7 +1,6 @@
 // Start, the landing page: what the guide is and how to find your way in, before any expectations.
-// The cycle's three tasks sit under the title, beside the films. Below, it explains scopes and areas
-// beside the reach diagram, offers the four scopes as cards to find your own, then points to the
-// other pages worth knowing. The words come from home.md, looked
+// It explains scopes and areas beside the reach diagram, offers the four scopes as cards to find
+// your own, then sends readers with a task to the page for it. The words come from home.md, looked
 // up by heading; the diagram's labels come from How it works' Scopes list, so they match that page.
 
 import { esc, md, mdInline } from '../ui.js';
@@ -24,7 +23,6 @@ function taskItems(page, slug) {
         .join('');
 }
 
-// The other pages worth knowing, after the cycle's three tasks in the hero.
 const tasks = page => `<nav class="start-here" aria-labelledby="start-tasks-head">
     <h2 id="start-tasks-head">Where to go next</h2>
     <ul>${taskItems(page, 'where-to-go-next')}</ul>
@@ -56,9 +54,7 @@ export function render(content) {
                 <div class="start-hero-text">
                     <h1>${esc(page.headline)}</h1>
                     <p class="lede">${esc(page.lede)}</p>
-                    <ul class="start-actions" aria-label="Each cycle">${taskItems(page, 'each-cycle')}</ul>
                 </div>
-                <div class="start-watch">
                 <a class="tour-card" href="#tour">
                     <img src="assets/tour/thumbnail.jpeg" width="1920" height="1080" alt="">
                     <span class="tour-card-play" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
@@ -69,9 +65,8 @@ export function render(content) {
                     <span class="tour-card-time">${esc(film('guide').length)}</span>
                 </a>
                 <div class="start-films">
-                    ${filmLink(film('org'), 'about Org & Community')}
-                    ${filmLink(film('feedback'), 'about feedback')}
-                </div>
+                    ${filmLink(film('org'), 'about the Org & Community area')}
+                    ${filmLink(film('feedback'), 'about giving and asking for feedback')}
                 </div>
             </header>
             <section class="start-intro" aria-labelledby="start-intro-head">
