@@ -822,6 +822,11 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .handles-only .ex-detailed .has-detail { list-style: inherit; margin: 0 0 4px; }
 .handles-only .ex-detailed li { margin-top: 0; }
 .handles-only .ex-handle { font-weight: 400; }
+/* Scope pages' Concise keeps each expectation's sentence after its handle, so a handle such as
+   "Own a stream" never reads as a bare task; Detailed puts the handle over its bullets instead. */
+.scope-page.handles-only .ex-detailed .has-detail > .ex-sentence { display: inline; }
+.scope-page.handles-only .ex-handle { font-weight: 600; }
+.scope-page.handles-only .ex-detailed .has-detail { margin-bottom: 8px; }
 .sticky-bar .segmented { margin-left: auto; }
 .more .practice { margin: 8px 0 0; }
 .routes .fold > summary { font-size: 16px; color: var(--text); }

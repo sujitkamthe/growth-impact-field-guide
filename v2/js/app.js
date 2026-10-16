@@ -16,13 +16,15 @@ import * as glossary from './views/glossary.js';
 import * as tour from './views/tour.js';
 import * as specialisation from './views/specialisation.js';
 import * as feedback from './views/feedback.js';
+import * as agree from './views/agree.js';
 import { glossaryTerms, linkTerms } from './terms.js';
 
 const ROUTES = [
-    { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'principles', terms: true },
+    { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'how-it-works', terms: true },
     { pattern: /^how-it-works(?:\/([\w-]+))?$/, view: how, nav: 'how-it-works', terms: true },
-    { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'teammates', terms: true },
-    { pattern: /^feedback(?:\/([\w-]+))?$/, view: feedback, nav: 'teammates', terms: true },
+    { pattern: /^teammates(?:\/([\w-]+))?$/, view: teammates, nav: 'feedback', terms: true },
+    { pattern: /^feedback(?:\/([\w-]+))?$/, view: feedback, nav: 'feedback', terms: true },
+    { pattern: /^agree(?:\/([\w-]+))?$/, view: agree, nav: 'agree', terms: true },
     // Start is the landing page, at the empty address and #home (old #home/<section> links too).
     { pattern: /^(?:home(?:\/[\w-]+)?)?$/, view: start, nav: 'home' },
     { pattern: /^expectations$/, view: matrix, nav: 'expectations' },

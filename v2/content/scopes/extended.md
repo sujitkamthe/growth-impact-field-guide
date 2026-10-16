@@ -83,26 +83,19 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 ### Evidence
 
-- Streams, cross-cutting features or new work you shaped and coordinated, and how they went
-- Designs other people built their features on without needing you
+- Designs your teammates built their features on without needing you
 - Vague asks you reframed, and whether the team now brings ambiguous work to you
-- Times you pushed back with the client, and what changed as a result
-- Commitments you agreed or renegotiated for your stream, and how they held up
+- Commitments you agreed or renegotiated for your stream, and whether your stream met them
 
 ### Self-check
 
-- Is my impact visible in features I didn't build myself?
-- Do stakeholders come to me for thinking, or only for updates?
-- Have I shared enough context that my stream can move without me?
-- Do I push back on misaligned requirements, or accept them to avoid conflict?
-- When a date for my stream looked unrealistic, did I say so, or did the team absorb it?
+- Do the team and the client come to me for my thinking, or only for updates?
+- Do I push back on requirements that work against the client's goals, or accept them to avoid conflict?
 
 ### Not yet
 
-- Excellent work on your own features, with little effect on anyone else's
-- Contributes solutions in design discussions but leaves the framing to someone else
-- Acts as the hub everyone routes decisions through, so decisions stall when they are away
 - Agrees to every date the client asks for, and the stream makes up the difference in long hours
+- Sorts out the stream's dependencies only once they block someone
 
 ## People & Team
 
@@ -145,21 +138,18 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 
 ### Evidence
 
-- Someone whose judgment grew with your mentoring over the cycle, and what they now handle without you
-- Teammates' features that went better because you reviewed or paired, and whether they now seek you out
+- Someone whose judgment grew over the cycle through your mentoring, reviews or pairing, and what they now handle without you
 - Feedback you gave and followed up, and the decisions or behaviour that improved as a result
 - Discussions you facilitated that ended in a decision people acted on
 
 ### Self-check
 
-- Can I name someone who now handles a task or decision independently because of me?
 - Am I building independence, or dependence on me?
 
 ### Not yet
 
 - Answers questions without teaching the reasoning behind them
-- Helps by taking the work over, so the person doesn't grow
-- The go-to person for doing the work, rather than for making teammates better at it
+- Helps by taking the work over, so the teammate doesn't grow
 
 ## Org & Community
 
@@ -186,17 +176,15 @@ At Direct you take part in org work beyond your project, such as an event or an 
 
 - The initiative you drove through the cycle, what you did, and what changed or what got in the way
 - A talk, article, workshop or tool you contributed, and how people outside your project used it
-- A problem you raised, and what happened next
+- A decision or behaviour against Sahaj's values that you spoke up about, and what happened next
 
 ### Self-check
 
-- Would this initiative have moved without me?
-- Did anyone outside my project benefit?
+- Would the initiative have made the same progress without me?
 
 ### Not yet
 
 - Being one of many participants is described as driving
-- A talk or a post with no follow-through
 
 ### Ways to contribute
 
@@ -206,14 +194,11 @@ At Direct you take part in org work beyond your project, such as an event or an 
 
 #### Initiatives and capability
 
-- Owning part of an org initiative or capability track and carrying it through
-- Building or improving an internal tool that people beyond your project use
 - Mentoring through a programme and helping improve how it runs
 
 #### Community and external contribution
 
 - Running a community of practice or a regular learning forum
-- Writing a blog post or giving a conference talk about your work, and following up with the people it reached
 - Organising a DevDay and carrying it through, from choosing the speakers to following up afterwards
 
 ## Examples

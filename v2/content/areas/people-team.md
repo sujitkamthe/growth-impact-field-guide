@@ -28,7 +28,7 @@ Keeping people informed, driving discussions to decisions and handling disagreem
 
 *The rating is one judgment across all three facets, so a strong facet can't hide a missing one.*
 
-Like Client & Delivery, this area lists each scope's expectations by facet, and the rating is one judgment across all three: exceeding your scope's expectations in two can carry a weaker third, but a missing facet makes the area below expectations. A team that grows because of you but never hears hard feedback from you is missing a facet, and so is a team that gets clear feedback from you but would never come to you for help. Growing others doesn't have to mean one-to-one mentoring: a specialist often grows people in their own domain, through reviews, pairing or worked examples, and that counts when the people they help come to work without them.
+Like Client & Delivery, this area lists each scope's expectations by facet, and the rating is one judgment across all three ([Choosing a rating](#self-assessment/choosing-a-rating) says how). A team that grows because of you but never hears hard feedback from you is missing a facet, and so is a team that gets clear feedback from you but would never come to you for help. Growing others doesn't have to mean one-to-one mentoring: a specialist often grows people in their own domain, through reviews, pairing or worked examples, and that counts when the people they help come to work without them.
 
 ## Where does mentoring count?
 

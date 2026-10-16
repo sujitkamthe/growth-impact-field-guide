@@ -13,16 +13,16 @@ lede: Write it at the end of the cycle, in your expectations doc. Follow the thr
 ## The prompts
 
 <!-- group: For each area | Say what changed, then choose a rating | rating -->
-- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have an agreed focus, say what your greater contribution achieved.
+- **What changed because of you?**: name outcomes, not a list of activities. In Client & Delivery and People & Team, cover each facet and say which was strongest and which was weaker, because the rating weighs all three. In Org & Community, say how you chose to contribute and what it changed. If you have an [agreed focus](#specialisation/rating-an-agreed-focus), say what your greater contribution achieved.
 - **What did you take from the feedback?**: say what you did differently because of it, not only what you heard.
 - **Your rating**: Below, Meets or Exceeds, with a sentence on why.
 
 ## Choosing a rating
 
 <!-- scale -->
-- **Below expectations**: the area as a whole isn't yet shown consistently at your scope, or one facet isn't shown at all (with an agreed focus, the responsibilities you kept in it). Impact depended on favourable conditions, or teammates compensated for gaps you had not closed.
-- **Meets expectations**: you delivered what was agreed, consistently and across varied conditions. Two facets that exceed your scope's expectations can carry one weaker one. Teammates would depend on you here without checking.
-- **Exceeds expectations**: your impact was clearly stronger, broader or more durable than your scope expects, either across the area or through exceptional impact in one facet while you met the rest of what the area expects of you. Teammates learned from you, or a problem stopped recurring because of you.
+- **Below expectations**: you don't yet show your scope consistently in this area, or one facet shows only at the previous scope or not at all (with an agreed focus, judge the responsibilities you kept in it). Teammates covered the gap, or the impact depended on easy conditions.
+- **Meets expectations**: you show your scope consistently in this area, in hard weeks as well as easy ones, and teammates depend on you here without checking. One facet can be weaker, shown at your scope but not yet consistently, when the others clearly go beyond it. A single good instance isn't yet a pattern.
+- **Exceeds expectations**: your impact here was clearly stronger, broader or longer-lasting than your scope expects, across the area or through exceptional impact in one facet while you met the rest of the area. Teammates learned from you, or a problem stopped recurring because of you.
 
 <!-- callout -->
 Rate each area against your current scope. Next-scope work can be part of exceeding, but exceeding doesn't change your scope: your scope grows when your contribution consistently reaches the next scope in all three areas.
@@ -34,14 +34,14 @@ Exceeds in one area is a strong result, and the right moment to talk about a str
 <!-- group: At the team check | Talk it through with your teammates | team -->
 *Your teammates confirm, correct or add to what you wrote, and confirm your ratings.*
 
-You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing and feedback](#teammates) is their guide. Then look ahead together: where evidence is still missing, and what changes next cycle. If you still disagree after discussing it, the team's seniors make a judgement call, and if that doesn't settle it, the account lead decides, or, for an account lead's own doc, a founder or the region's managing director.
+You can present your doc, or your teammates can read it beforehand for context. Your teammates confirm, correct or add to what you wrote, and confirm the ratings; [Reviewing a teammate](#teammates) is their guide. Then look ahead together: where evidence is still missing, and what changes next cycle. If you still disagree after discussing it, see [Who reviews and decides](#how-it-works/who-reviews-and-decides).
 
 ## A worked example
 
 <!-- tips: If you need them -->
-*One area of a self-assessment, written by someone at Team scope.*
+*A self-assessment by someone at Team scope, against the doc on [Agree your expectations](#agree/a-finished-doc).*
 
-One area, written by someone at Team scope. It follows the same made-up situation as the [In practice](#scope/team) story; write yours in your own words.
+Written by someone at Team scope, at the end of the cycle whose doc is on [Agree your expectations](#agree/a-finished-doc). It follows the same made-up situation as the [In practice](#scope/team) story; write yours in your own words.
 
 > **Client & Delivery**
 >
@@ -49,19 +49,29 @@ One area, written by someone at Team scope. It follows the same made-up situatio
 >
 > **What did you take from the feedback?** A teammate said I made the integration decisions on my own at first. I started bringing options to the team before deciding, and the review practice came out of that.
 >
-> **Rating: Meets.** The review practice held across the cycle and the team now runs it without me, but it is new and hasn't yet been through a harder release.
+> **Rating: Meets.** The team ran the review practice all cycle and now runs it without me, but it is new and hasn't yet been through a harder release.
+>
+> **People & Team**: My newer teammate now designs contract tests on their own, and two teammates run the integration review. Feedback said I still answer questions faster than I explain them, so I'm pairing longer next cycle. **Rating: Meets.**
+>
+> **Org & Community**: We rebuilt how the office onboards engineers into testing, and the two teammates who built it with me ran it for the last three new joiners without me. **Rating: Exceeds.** It now runs without me and other offices have asked for it.
 
 ## If you agreed a stretch
 
 *Rate a stretched area against your scope like any other, then say how far you got.*
 
-If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, makes that area Exceeds. Your scope grows at the [team check](#how-it-works/the-cycle) once your contribution consistently reaches the next scope in all three areas. Falling short of a stretch is normal.
+If you agreed a stretch, rate that area against your scope like every other area, then say how far you got with it. A stretch you kept up through the cycle, so that the people around you now depend on you for it, counts toward Exceeds in that area. Your scope grows at the [team check](#how-it-works/the-cycle) once your contribution consistently reaches the next scope in all three areas. Falling short of a stretch is normal.
 
-## If you have an agreed focus
+## Your first cycle at Sahaj
 
-*The greater contribution you agreed is required, and doing it well can earn Exceeds.*
+*Assess your first cycle against what you agreed for it, while you were settling in.*
 
-Rate each area against your scope and your agreed focus together. The greater contribution is a responsibility you took on, not an optional stretch, so falling well short of it isn't Meets, even if your usual work went well. Doing it well can earn Exceeds when its impact is clearly beyond your current scope and you met the rest of what you agreed; agreeing the contribution doesn't earn a rating on its own. The responsibilities you took less of aren't expected of you, but your part in them is: the estimates, risks and follow-through the teammate who took them on depended on. Say how the arrangement worked for them too. If the team didn't give you the time or opportunity it agreed, say so, because your teammates take that into account.
+Your first cycle is rated like any other, against the doc you agreed for it. If that doc said the cycle was about settling in, such as learning the client's domain or how the team works, your teammates take that into account. A gap that remains becomes something to plan for in your next doc, not a surprise.
+
+## If you have no feedback notes
+
+*Say so, and ask for feedback before the team check.*
+
+If you have no notes, say so in your self-assessment, and before the team check ask two of the people you worked with for feedback on each area. A cycle without feedback is something the whole team looks at, because giving it is expected of everyone.
 
 ## If an area fell short
 

@@ -79,26 +79,19 @@ At Extended you shape work across several features; at Team you change how **the
 
 ### Evidence
 
-- Decisions the team made well without you, using principles or context you gave them
-- Architecture or design decisions the team still builds on
+- Decisions the team made well without you, building on principles, architecture or context you gave them
 - Practices or standards you built with the team rather than for it, and how you handed them over
-- Risks you raised that changed course, and how the client's trust in the team changed over the cycle
-- Commitments you agreed or renegotiated with the client, and how the team met them without long hours
+- Risks you raised that changed course, and commitments you agreed or renegotiated with the client that the team met without long hours
 
 ### Self-check
 
-- What have I done so the team can decide well without me?
 - Does the client trust the team, or does every decision still go through me?
 - Am I raising the bar for the whole team, or just doing the hardest work myself?
-- When the client pushed for a date the team didn't believe in, what did I do?
-- Have I built a practice, tool or standard the team chose to adopt, and does it still run without me maintaining it?
 
 ### Not yet
 
-- The single point of contact for every decision
-- Sets standards alone, and relies on enforcing them
-- Involved in many decisions and discussions, but owning few outcomes end to end
 - Tools or standards that solve your own problems, or that people use only when told to
+- Involved in many decisions and discussions, but owning few outcomes end to end
 - Accepts the dates and scope the client asks for, and leaves the team to absorb the difference
 
 ## People & Team
@@ -145,23 +138,18 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 
 ### Evidence
 
-- People who grew into new responsibilities over time, and what you did to help
-- Team rituals or forums for feedback and learning that you set up and handed to teammates to run
-- How the team's health held up under pressure, and what you changed when it didn't
-- Stakeholders who understand where the team is heading without having to ask you
+- People who grew into new responsibilities over time, and what you did to help, such as feedback or learning rituals you set up and handed to teammates to run
+- Whether the team kept a sustainable pace under pressure, and what you changed when it didn't
 - Decisions the team, the client or the client's teams changed because you persuaded them, and what convinced them
 
 ### Self-check
 
 - Am I growing people who can lead, or keeping the leading to myself?
 - Do I invest in the people who need it most, or only in the ones who ask?
-- Do the people already doing well on the team have a next challenge, or have they stopped growing?
-- Could the team keep its pace, and stay healthy, while I'm away?
 
 ### Not yet
 
 - Delegates tasks without transferring context or judgment
-- Mentors individuals while the team's overall capability stays flat
 - Tries to reach more people by adding meetings, rather than removing what slows the team down
 - Notices strain only once people are already burning out
 
@@ -193,7 +181,7 @@ At Extended you drive a piece of org work; at Team you **build a programme, foru
 
 ### Self-check
 
-- Could someone else run what I built if I stepped back?
+- Could someone else run what I built if I stepped back, or does it still wait on me?
 - Have I changed the cause of a recurring problem, or just raised it again?
 
 ### Not yet
@@ -209,10 +197,8 @@ At Extended you drive a piece of org work; at Team you **build a programme, foru
 
 #### Initiatives and capability
 
-- Building or rebuilding an org initiative or capability track, and handing it to people who now run it
 - Interviewing regularly, with feedback other interviewers can use
 - Redesigning part of hiring or onboarding for an office
-- Building an internal system many people rely on, with owners besides you
 - Contributing your team's expertise to proposals and demand conversations, where a client explores what work it may need next
 
 #### Community and external contribution
@@ -223,19 +209,19 @@ At Extended you drive a piece of org work; at Team you **build a programme, foru
 
 ## Ways to create impact
 
-There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one way; it is not a requirement. Whichever way you take, you still need impact in People & Team and Org & Community, though it shows up differently.
+There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one way; it is not a requirement. Whichever way you take, you still need impact in People & Team and Org & Community, though it looks different in each.
 
 ### Leading the team
 
-Your impact comes through the team's people, its delivery and the client's trust, often as the team's lead. The team's capability is the output, and your own hands-on work matters less each quarter. Supporting proposals and demand conversations often comes with leading the team.
+Your impact comes through the team's people, its delivery and the client's trust, often as the team's lead. The team's capability is the output, and your own hands-on work matters less each quarter.
 
 ### Platforms, tools and standards
 
-Your impact comes through practices, tools and standards the team chooses to adopt. Other teams often adopt them too, which adds to the impact; it becomes Wider when teams beyond your own align their direction to what you built, and it lasts without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself. This was the Amplifier persona in V1.
+Your impact comes through practices, tools and standards the team chooses to adopt. Other teams often adopt them too, which adds to the impact; the impact becomes Wider when teams beyond your own base their direction on what you built and keep doing so without you. Nobody is assigned to use them, so the bar on consulting and communication is higher: what you build has to solve a real problem and explain itself.
 
 ### Deep expertise
 
-You become the person the team relies on in a hard domain, and you share that expertise so teammates can learn it and you don't become a bottleneck. It is often what clients and proposals draw on too.
+You become the person the team relies on in a hard domain, and share what you know so you don't become a bottleneck; clients and proposals often draw on that expertise too.
 
 ## Examples
 

@@ -9,12 +9,12 @@ lede: The terms the guide uses, in plain words. Where a term first appears on a 
 ## Account
 
 <!-- matches: account leads, account lead -->
-Sahaj's work with one client, whether it has one team or several. The account lead looks after the client relationship and the account as a whole, and decides when a disagreement about someone's scope or rating remains after the team's seniors have made a judgement call.
+Sahaj's work with one client, whether it has one team or several. The account lead looks after the client relationship and the account as a whole.
 
 ## Agreed focus
 
 <!-- matches: agreed focus -->
-An agreement, at Extended scope and above, to take less of a particular responsibility, which a teammate who has room for it takes on, and make a greater contribution through depth you've already shown. The standards stay with everyone, and it never removes an area. It is written in your expectations doc.
+An agreement, from Extended scope, to take less of a particular responsibility and contribute more through a strength in return. See [Agreed focus](#specialisation).
 
 ## Area
 
@@ -38,32 +38,32 @@ A short doc you keep for each cycle, made from one template for every scope. It 
 ## Facet
 
 <!-- matches: facets, facet -->
-One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. All three count toward the area's one rating: exceeding your scope's expectations in two can carry a weaker third, but a facet not shown at your scope at all makes the area below expectations. With an agreed focus, a facet is judged against the responsibilities you kept in it.
+One of the three parts of Client & Delivery or of People & Team, such as consulting or growing others. How facets make up one rating is on [Self-assessment](#self-assessment/choosing-a-rating).
 
 ## Growing your scope
 
 <!-- matches: someone's scope grows, scope has grown, your scope grows, scope grows -->
-Your scope moving to the next one. It is decided at the team check once your contribution consistently reaches the next scope in all three areas, and the people around you depend on it. A stretch is the usual way there but isn't required, and the next cycle's doc is written at the new scope.
+Your scope moving to the next one, decided at the team check once your contribution consistently reaches the next scope in all three areas. See [Growing into the next scope](#how-it-works/growing-into-the-next-scope).
 
 ## Rating
 
 <!-- matches: ratings, rating -->
-How you did in one area at your scope: below, meets or exceeds expectations. Exceeds is judged against your current scope and doesn't change your scope. Your teammates confirm your ratings at the team check. Org & Community is recorded as not rated for a cycle only when an agreed deferral covered all of it.
+How you did in one area at your scope: below, meets or exceeds expectations, judged against your current scope. See [Choosing a rating](#self-assessment/choosing-a-rating).
 
 ## Scope
 
 <!-- matches: scopes -->
-How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope still includes the ones inside it, so your own work keeps counting as your scope grows. Yours is the one you show consistently across all three areas, agreed in your expectations doc, and it sets the same expectations in every area.
+How far your impact is expected to reach: [Direct](#scope/direct), [Extended](#scope/extended), [Team](#scope/team) or [Wider](#scope/wider). Each wider scope includes the ones inside it. Yours is the one you show consistently across all three areas.
 
 ## Seniors
 
 <!-- matches: seniors -->
-The person or people on a team who look after its people's growth. When the team can't agree on someone's scope or rating, they make a judgement call.
+The person or people on a team who look after its people's growth, and who help settle a disagreement about someone's scope or rating.
 
 ## Stretch
 
 <!-- matches: stretches, stretch -->
-Some of the next scope's responsibilities, added to your expectations for a cycle. It usually starts in one area. Someone who has been at the same scope for a long time agrees a development goal with their team, which can deepen their contribution or prepare them for the next scope.
+Some of the next scope's responsibilities, added to your expectations for a cycle. It usually starts in one area.
 
 ## Team check
 

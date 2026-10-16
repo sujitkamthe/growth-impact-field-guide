@@ -7,7 +7,7 @@ lede: The questions people ask most about how the guide works. For the model its
 
 ### Is this a checklist?
 
-No. The statements describe what impact looks like at each scope, and nobody is expected to tick every line. They are grouped in two ways. In Client & Delivery and People & Team the groups are facets. Every facet counts toward the area's one rating, but the lines under a facet are signs of what it looks like at your scope, and none of them is a requirement on its own. Exceeding your scope's expectations in two facets can carry a weaker third; a facet you don't show at your scope at all makes the area below expectations. In Org & Community the groups are ways to contribute, and you choose one or more. Within a facet or a way to contribute, the question in a team check is whether we would trust you with a problem of this scope, not whether you did each item.
+No. The lines on a scope page are signs of what impact looks like there, and none of them is a requirement on its own. At the team check, the question is whether we would trust you with a problem of this scope, not whether you did each item. [Self-assessment](#self-assessment/choosing-a-rating) says how each area is rated.
 
 ### What's the difference between Extended and Team?
 
@@ -33,15 +33,15 @@ No. Finishing your work on time is part of Client & Delivery, not all of it. The
 
 ### How do I move to the next scope?
 
-By sustaining impact at your scope across all three areas, then taking on some of the next scope's responsibilities, or a greater contribution through your strength, and keeping it up until the people around you depend on you for it. Strong next-scope impact in one area is rated as exceeding; your scope grows at the team check once your contribution consistently reaches the next scope in all three areas. Growing doesn't only mean moving scope, though: deepening your expertise at your current scope counts too. A stretch is the usual way to get there, but you don't need one on record. See [How it works](#how-it-works/growing-into-the-next-scope).
+By keeping up your scope in all three areas, then taking on some of the next scope's work, or a greater contribution through your strength, until the people around you depend on you for it. Deepening your expertise at your current scope counts as growth too. See [Growing into the next scope](#how-it-works/growing-into-the-next-scope).
 
 ### Do I have to be equally strong in all three areas?
 
-No. Your strength will vary by area, and the rating captures that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere. You can still grow by going deep in what you do best; see [Specialisation](#specialisation).
+No. Your strength will vary by area, and each area's rating shows that. Strength in one area doesn't balance out falling well short in another, though: the area that fell short is below expectations, whatever your strengths elsewhere. You can still grow by going deep in what you do best; see [Specialisation](#specialisation).
 
 ### Can I take less of some work to focus on my strength?
 
-Sometimes. At Extended scope and above, depth you've already shown can support an [agreed focus](#how-it-works/agreeing-a-focus): you take less of a particular responsibility, such as leading the client's planning or formal mentoring, a teammate who has room for it takes it on, and you agree a greater contribution through your strength instead. You can't step back from a whole area, and the standards stay with everyone, such as meeting the team's engineering standards, communicating risks and keeping your commitments.
+Sometimes, from Extended scope, through an [agreed focus](#specialisation): you take less of a particular responsibility, a teammate who has room for it takes it on, and you contribute more through your strength. You can't step back from a whole area, and the standards stay with everyone.
 
 ### I'm already strong in every area. What next?
 
@@ -55,11 +55,11 @@ Yes. At Team and Wider scope there are several ways to create impact, including 
 
 ### Is Org & Community really mandatory?
 
-Yes. You choose what to contribute, usually through what you're good at and what motivates you, and every scope expects you to contribute in at least one way. It happens in working time, and your team makes room for it. No sustained contribution beyond your delivery means Org & Community is below expectations, unless your team agreed there was no room; then you're rated on what was reasonably available to you, and if the agreement covered the whole cycle, the area isn't rated that cycle.
+Yes. You choose how you contribute, usually through what you're good at, and every scope expects a contribution you keep up through the cycle, in working time. If your project leaves no room, see [How it is assessed](#area/org-community).
 
 ### Can I skip work I don't enjoy?
 
-You can choose a different way to contribute, but not skip the area. Someone who doesn't enjoy writing can give a talk, interview or build a tool instead; agree the alternative with your team, so there's a contribution rather than a gap. Taking less of a whole responsibility, rather than skipping one activity, needs an [agreed focus](#how-it-works/agreeing-a-focus).
+You can choose a different way to contribute, but not skip the area. Someone who doesn't enjoy writing can give a talk, interview or build a tool instead; agree the alternative with your team, so there's a contribution rather than a gap. Taking less of a whole responsibility, rather than skipping one activity, needs an [agreed focus](#specialisation).
 
 ### Can I contribute beyond my scope?
 
@@ -71,7 +71,7 @@ Not by itself. A talk counts for its depth and for what it led to, such as peopl
 
 ### What if my project gives me no room to contribute or grow?
 
-Agree it with the seniors on your team, or with your account lead if the cause is account-wide, such as a new account being set up or a delivery crunch. If you know at the start of the cycle, record it in your doc then; if it comes up later, raise it as soon as you know. Agree what is still possible, who will make time for it and when to look at it again. Raised for the first time in your self-assessment, it's too late to change anything. You're rated on what was reasonably available to you, and the constraint is recorded in your doc.
+Agree it with the seniors on your team, or with your account lead if the cause is account-wide, as soon as you know; raised for the first time in your self-assessment, it's too late to change anything. [How it is assessed](#area/org-community) says what you agree and how you're rated.
 
 ## The process
 

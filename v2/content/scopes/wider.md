@@ -79,25 +79,20 @@ At Team you change how one team works; at Wider you shape direction **across tea
 
 ### Evidence
 
-- Roadmaps or strategic decisions you shaped, and how they played out over time
+- Roadmaps, strategic decisions or changes to how the client's organisation works that you shaped, and how they played out over time
 - Senior stakeholders who repeatedly seek your counsel on strategic questions
-- Changes in how the client's organisation works that are still in place
-- An account or proposal you shaped, how you shaped it, and how its teams and delivery held up
+- An account or proposal you shaped, how you shaped it, and how its teams delivered afterwards
 
 ### Self-check
 
-- Which of my decisions would be hard to reverse, and did I treat them that way?
-- Do senior clients seek my judgment, or my team's output?
-- Am I trusted for judgment, not just expertise?
+- Do senior stakeholders seek my judgment, or only my expertise and my team's output?
 - When client deadlines and the teams' pace pull apart, which one do my decisions protect?
 
 ### Not yet
 
-- Strategy lives in decks and doesn't change what teams do
 - The client relationship depends on you personally rather than on how the account is run
 - Decisions that sound right but don't survive real trade-offs
-- The account grows while its teams burn out or its delivery slips
-- Proposals that win work the teams then struggle to deliver
+- The account grows, or proposals win new work, while the teams burn out or their delivery slips
 
 ## People & Team
 
@@ -133,15 +128,13 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 
 ### Evidence
 
-- People you sponsored into new responsibilities, and where they are now
-- Mentors or leads who grew while working with you, and the people they now develop
+- People you sponsored into new responsibilities or developed as mentors and leads, where they are now, and the people they now develop
 - A practice or forum for growing people across teams that you set up and handed to people who now run it
 - Direction you set that several teams understood the same way and acted on
 
 ### Self-check
 
-- Am I building capability that will outlast me?
-- Are the people I develop now growing people themselves?
+- Am I building capability that will outlast me, or only growing the people I work with?
 
 ### Not yet
 
@@ -174,26 +167,23 @@ At Team you build programmes and tools that other people keep running; at Wider 
 
 ### Self-check
 
-- Have I set up what I shaped so it carries on without me?
-- Is what I designed used beyond my own office or account?
+- Does what I designed carry on beyond my own office or account, or only where I keep running it myself?
 
 ### Not yet
 
 - Recognised outside Sahaj far more than relied on inside it
 - Ideas that stay as ideas, without the effort to win over the people needed to make them happen
-- Innovating alone, without bringing along the people it affects
+- Innovating alone, without bringing along the people the change affects
 
 ### Ways to contribute
 
 #### Culture and organisational health
 
-- Addressing an organisation-level cultural problem and establishing practices that hold under delivery or commercial pressure
+- Fixing an organisation-level cultural problem with practices that people keep to under delivery or commercial pressure
 
 #### Initiatives and capability
 
-- Designing how Sahaj builds a capability across offices
 - Shaping how Sahaj hires or onboards, beyond one office
-- Setting up a model or programme that other offices or teams run, such as how mentoring works across Sahaj
 - Shaping proposals or pitches for new clients or other accounts, from framing the problem to the approach
 - Taking what you learned in Emerge into how Sahaj works, or shaping how the programme runs
 
@@ -205,7 +195,7 @@ At Team you build programmes and tools that other people keep running; at Wider 
 
 ## Ways to create impact
 
-There is more than one way to have impact at this scope, and most people combine several. The expectations above describe the impact, not the role: leading an account is one way, not a requirement. Whichever you take, the impact has to show up in all three areas.
+There is more than one way to have impact at this scope, and most people combine several. The expectations above describe the impact, not the role: leading an account is one way, not a requirement. Whichever you take, you need impact in all three areas.
 
 ### Leading an account
 
@@ -213,7 +203,7 @@ You shape Sahaj's relationship with a client by building it and growing the acco
 
 ### Technical direction
 
-You set direction the account, or teams across Sahaj, align to, and you protect Sahaj's technical reputation. Other teams using a tool or practice you built isn't enough on its own: it is Wider when it shapes how those teams decide and work, and lasts beyond your involvement.
+You set the direction the account, or teams across Sahaj, follow, and you protect Sahaj's technical reputation. Other teams using a tool or practice you built isn't enough on its own: the impact is Wider when the tool or practice shapes how those teams decide and work, and lasts beyond your involvement.
 
 ### Capability and culture
 
@@ -221,7 +211,7 @@ You design how Sahaj builds capability, hires, onboards and looks after its cult
 
 ### External thought leadership
 
-You shape how the industry thinks through writing, talks and open source. Visibility alone isn't impact, so look for what it led to: adoption, changed practice, stronger capability at Sahaj, reputation that brings work, or opportunities created. This was the Pioneer persona in V1.
+You shape how the industry thinks through writing, talks and open source. Visibility alone isn't impact: what counts is what the writing, talks or code led to, such as reputation that brings work to Sahaj.
 
 ## Examples
 

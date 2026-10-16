@@ -1,63 +1,63 @@
 ---
-title: Specialisation
-lede: Going deep and going broad both count. How specialists and all-rounders grow, and how both are recognised fairly.
+title: Agreed focus
+lede: Going deep and going broad both count. How to agree a focus on your strength, how it's rated, and how specialists and all-rounders are both recognised fairly.
 ---
 
 ## In short
 
-You can grow by going deep. You don't have to become a consultant, a delivery lead or a people lead to grow at Sahaj, at any scope.
+You can grow by going deep. You don't have to become a consultant, a delivery lead or a people lead to grow at Sahaj, at any scope, and within each area you already choose how you contribute.
 
-All three areas are part of what's expected of everyone, and within each you choose how you contribute, so a specialist usually contributes through their strength: growing people in their own domain, or building a capability other teams use. When your depth would do more with a different shape of work, an [agreed focus](#how-it-works/agreeing-a-focus), at Extended scope and above, lets you take less of some particular responsibilities and make a greater contribution through your strength instead. It rests on results you've already shown, not on naming what you'd rather not do, and it never removes an area.
+An agreed focus goes one step further. At Extended scope and above, you agree with your team to take less of a particular responsibility, a teammate who has room for it takes it on, and you make a greater contribution through your strength in return. It rests on results you've already shown, not on naming what you'd rather not do, and it never removes an area. Most people don't need one.
 
-Depth is recognised by what it changes and how far it reaches, not by the choice to specialise.
+## What you agree
 
-## Choosing how, and choosing your shape
-
-*You choose how you contribute in each area; taking less of a particular responsibility needs an agreed focus.*
-
-| Situation | What happens |
-|---|---|
-| You don't enjoy one activity, such as writing | You choose another way to contribute in the same area. No agreement is needed. |
-| You want to build up a strength | Agree opportunities and support with your team, while your other responsibilities continue. |
-| You've shown real depth in something, and it would do more if you took less of another responsibility | An agreed focus: a teammate who has room for it takes that responsibility on, and you agree a greater contribution through your strength. If your expertise is still growing, start with a trial for one cycle. |
-| You want to stop contributing in a whole area | The area stays part of what's expected of you. Agree a way to contribute that suits you better. |
-
-Wanting to grow a strength doesn't raise the bar by itself. The greater contribution comes with the agreed focus, because it is what makes the arrangement fair to the teammate who takes the responsibility on.
-
-## What an agreed focus includes
-
+<!-- group: Agreeing a focus | Propose it in your doc; your team agrees it | doc -->
 *Where you'll contribute most, what you'll take less of, the greater contribution you'll make, and who takes on the rest.*
 
-The standards stay with everyone; the responsibilities are what can change shape. Everyone keeps meeting the team's engineering standards in their own work, understanding the client's problem, making realistic commitments for their own work and working well with the people around them. What you can take less of is the broader responsibility: leading the architecture across the engagement, running discovery or client negotiations, coordinating the team's delivery, or formal mentoring. [How it works](#how-it-works/agreeing-a-focus) has the full list.
+- **Where you'll contribute most**, and the results you've already shown there, beyond what your scope normally expects. Interest or years of experience aren't enough on their own; if you're still building that expertise, agree a trial for one cycle, with support.
+- **The responsibilities you'll take less of**: specific ones, from the right-hand column below, never a whole area.
+- **The greater contribution you'll make in return**: the result, who it helps and how your teammates will recognise it, starting from the next scope's expectations for that strength, not every next-scope expectation. At Wider, agree the result directly.
+- **Who takes on what you take less of**: a named teammate who chooses to take it on and has room for it. Agree what work moves for both of you; their part counts toward their own growth.
 
-The greater contribution starts from the next scope's expectations for your strength, not from every next-scope expectation: someone whose focus is technical craft doesn't also take on next-scope consulting. Turn it into work your teammates will be able to recognise. For someone at Extended whose focus is reliability, that might be:
+<!-- more -->
+Your team agrees a focus when the greater contribution meets a real need and the arrangement is sustainable for the teammate taking on the work. An agreed focus starts at Extended because Direct is where you learn every part of the work, and a gap left there follows you into every later scope.
+
+## What stays with everyone
+
+*The standards stay with everyone; only the broader responsibilities can change shape.*
+
+| | What stays with everyone | What you can take less of |
+|---|---|---|
+| **Technical craft** | Work that meets the team's engineering standards, and understanding and explaining its technical risks | Technical ownership beyond your own work, such as leading the architecture across the engagement |
+| **Consulting** | Understanding the client's problem, questioning unclear or risky requests, and explaining the options in your own work | Leading discovery, workshops or stakeholder negotiations |
+| **Delivery ownership** | Realistic commitments for your own work, visible progress and risks, and following through when plans change | Coordinating the team's delivery, managing dependencies, or leading planning conversations with the client |
+| **People & Team** | Working respectfully, sharing context, and giving and acting on feedback | Formal mentoring, coaching several people, or organising how the team develops |
+| **Org & Community** | A contribution beyond your project, in a way you choose | Nothing: contributing stays expected of everyone |
+
+You stay accountable for your part of what you took less of. Someone who no longer leads the client's planning still gives the estimates and risks that planning depends on, and still keeps to what is agreed there.
+
+## A greater contribution, made concrete
+
+*Turn the greater contribution into a result your teammates will be able to recognise.*
+
+For someone at Extended whose focus is reliability, that might be:
 
 > Establish an approach to reliability that the whole team uses, help teammates apply it without me, and stop the recurring failures it was introduced to prevent.
 
-That is clearer than "work at Team scope in technology". At Wider, where there is no next scope, agree the result directly.
+That is clearer than "work at Team scope in technology". Depth counts by its effect: solving problems that would otherwise need outside experts, cutting significant cost or risk, letting Sahaj take on work it couldn't before, or technical decisions that prevent large problems later. The same applies to depth in consulting or delivery ownership.
 
-You stay accountable for your part of what you handed over. Someone who hands over leading the client's planning still gives the estimates and risks that planning depends on, and still keeps to what is agreed there.
+## Rating an agreed focus
 
-## What makes depth count
+<!-- group: Rating and growing | Judged against what you agreed | rating -->
+*The greater contribution is required, and doing it well can earn Exceeds.*
 
-*Depth counts by its effect, so agree what exceptional looks like before the cycle starts.*
-
-It is more than writing better code or knowing more frameworks. Exceptional depth looks like:
-
-- solving problems that would otherwise need outside experts
-- cutting significant cost or risk, such as infrastructure spend or a class of production incidents
-- letting Sahaj take on work it couldn't take on before
-- technical decisions that prevent large problems later
-
-The same applies to depth in consulting or delivery ownership, judged by the same kind of effect.
+Each area is rated against your scope and your agreed focus together. The greater contribution is a responsibility you took on, not an optional stretch, so falling well short of it isn't Meets, even if your usual work went well. Doing it well can earn Exceeds when its impact is clearly beyond your current scope and you met the rest of what you agreed; agreeing the contribution doesn't earn a rating on its own. The responsibilities you took less of aren't expected of you, but your part in them is. In your self-assessment, say how the arrangement worked for the teammate too, and if the team didn't give you the time or opportunity it agreed, say so. Look at the arrangement at each team check: whether the greater contribution is happening, and whether it is still sustainable for both of you.
 
 ## Growing your scope with a focus
 
 *Your scope grows when your agreed contribution consistently reaches the next scope, in all three areas.*
 
-Your scope reflects how far your contribution reaches, and with an agreed focus each area is judged against it. Expertise that improves work beyond your own is Extended. When the whole team relies on it and can work in your domain without you, it is Team. When teams beyond yours shape how they decide around it, it is Wider. Expertise kept to yourself stays at your own work, however deep it is.
-
-For someone whose focus is technical, moving from Extended to Team, the evidence might look like this:
+Expertise that improves work beyond your own is Extended. When the whole team relies on it and can work in your domain without you, it is Team. When teams beyond yours shape how they decide around it, it is Wider. Expertise kept to yourself stays at your own work, however deep it is. For someone whose focus is technical, moving from Extended to Team, the evidence might look like this:
 
 | Area | Evidence for Team |
 |---|---|
@@ -65,10 +65,11 @@ For someone whose focus is technical, moving from Extended to Team, the evidence
 | People & Team | Teammates apply your approach with their own judgment, without coming back to you each time, even if someone else on the team leads mentoring. |
 | Org & Community | You build or strengthen a capability, programme or tool beyond the project, and other people keep it going. |
 
-Answering questions helpfully is expected of everyone, but on its own it isn't Team-scope impact in People & Team. If your depth reaches further than your impact in the other areas, the depth is recognised in your assessment, and your scope grows once the rest reaches the next scope too.
+Answering questions helpfully is expected of everyone, but on its own it isn't Team-scope impact in People & Team. If your depth reaches further than your impact in the other areas, it is recognised in your assessment, and your scope grows once the rest reaches the next scope too.
 
-## Specialising without shifting the load
+## Fair to everyone on the team
 
+<!-- group: Fairness | Specialists and all-rounders, both recognised | team -->
 *When you take less of something, a teammate chooses to take it on, and it counts for them too.*
 
 Take a team of four:
@@ -80,33 +81,18 @@ Take a team of four:
 | C | Consulting | Understands the client's problem and shapes the solution |
 | D | All three | Resolves the conflicts between what is feasible, what was promised and what the client expects |
 
-Nothing is unfair about A, B and C specialising. It becomes unfair when D quietly takes on everything that falls between their specialities, and only the specialists' work is recognised. So one rule applies to everyone:
-
-<!-- callout -->
-When you take less of something, a teammate chooses to take it on, and it counts for them too.
-
-In practice:
-
-- **Taking it on is a choice.** A responsibility moves only to a teammate who agrees to take it and has room for it, and an all-rounder isn't the default person for every handover. Agree what work moves for both of you.
-- **Integration is impact.** Resolving trade-offs between technology, delivery and the client is consulting and delivery ownership impact, and People & Team impact when it keeps the team working together. D's teammates name it in D's evidence, not as ordinary teamwork.
-- **Support counts on both sides.** If a specialist's work needs a teammate to translate the problem or coordinate delivery, that support is part of the picture when the specialist's impact is judged, and part of the teammate's impact too.
-- **Enabling counts too.** If A's expertise makes D's work much easier, that counts in A's favour.
+Nothing is unfair about A, B and C specialising. It becomes unfair when D quietly takes on everything that falls between their specialities, and only the specialists' work is recognised. So an all-rounder isn't the default person for every handover, and resolving the trade-offs between technology, delivery and the client counts as D's own impact, named in D's evidence. Support counts on both sides: if a specialist's work needs a teammate to translate the problem or coordinate delivery, that is part of the teammate's impact too, and if A's expertise makes D's work much easier, that counts in A's favour.
 
 ## Recognising depth and breadth
 
 *Neither depth nor breadth earns more recognition automatically; what it changes does.*
 
-| Way | What exceptional looks like |
-|---|---|
-| **Depth** | Solving problems few others can, or bringing rare expertise that changes what the team or Sahaj can do |
-| **Breadth** | Handling complex, ambiguous work that spans technology, consulting and delivery, and making the trade-offs between them |
-| **Making others effective** | Expertise, tools, practices or guidance that make other people and teams substantially better |
+Your scope describes how far your impact reaches; your assessment records how much it changed. Exceptional depth, exceptional breadth and work that makes other people effective are all recorded there, whether or not your scope grows. Breadth deserves more recognition when combining strengths creates more value, such as settling the conflicts between what is feasible, promised and expected; depth deserves more when it solves problems or creates capability that others can't. How recognition relates to pay is decided outside this guide.
 
-These are not roles or a ranking, and people move between them. None needs to become another to be recognised as exceptional.
+## Three examples
 
-Your scope describes how far your impact reaches; your assessment records how much it changed. Exceptional depth, exceptional breadth and work that makes other people effective are all recorded there, whether or not your scope grows, because a change of scope isn't the only way Sahaj recognises what someone contributes. Breadth deserves more recognition when combining strengths creates more value, such as settling the conflicts between what is feasible, promised and expected; depth deserves more when it solves problems or creates capability that others can't. How recognition relates to pay is decided outside this guide.
-
-## How this works for three people
+<!-- tips: Examples -->
+*A specialist with an agreed focus, a consultant who is a weaker engineer, and someone who only delivers.*
 
 - **A deep technical specialist at Extended** agrees a focus: a teammate who wanted the experience takes on leading the client's planning, and the specialist builds the team's approach to reliability instead. They still give the estimates and risks planning depends on, grow teammates through reviews and pairing in their domain, and contribute to Sahaj through a capability track. Their scope grows as the team, then teams beyond it, rely on their expertise and learn it.
 - **A strong consultant who is a weaker engineer** still meets the team's engineering standards in their own work, so their framing turns into working software without someone rescuing it. They can agree a focus that hands a particular technical responsibility, such as leading the architecture, to a teammate, and contribute more through consulting instead. Their scope grows as clients and teams beyond their own act on the problems they frame.

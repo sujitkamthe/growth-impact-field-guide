@@ -72,24 +72,19 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 ### Evidence
 
-- Stories you took from vague requirements to production across the cycle, and the questions you routinely asked on the way
-- Requirement gaps you caught before they were built, often enough that the team now expects it of you
-- Risks you raised early as a habit, and what they changed
+- Work you took from a vague ask to production across the cycle, and the requirement gaps you caught on the way, before anyone built them
 - Reviews of your work that discuss trade-offs and improvements, because correctness, tests and maintainability are already there
 - Problems your changes caused after release that you followed up without being asked
 
 ### Self-check
 
-- Would the team hand me an unclear story and trust it to reach production without someone directing me?
 - Can I explain the business problem behind my work, not just the ticket?
-- Do my commitments hold, and when they don't, do people hear it from me first?
-- Would someone unfamiliar with my code understand it easily?
+- When I can't deliver what I committed to, do people hear it from me first, or find out when they ask?
 
 ### Not yet
 
 - Delivery is strong, but only when someone else has defined the work tightly
-- Asks that looked wrong were implemented without being questioned
-- Risks surface in stand-up on the day they become blockers
+- Risks are first mentioned in stand-up on the day they become blockers
 - Dates are accepted without question, then missed or met through long hours
 
 ## People & Team
@@ -126,21 +121,19 @@ A client asks the team to add a second payment provider to its checkout. Payment
 ### Evidence
 
 - Feedback you received, and what you have consistently done differently since
-- Teammates who come back to you to understand the reasoning
-- Newer teammates who ramped up faster with your help
+- Newer teammates who ramped up faster with your help, and teammates who come back to you to understand the reasoning behind an answer
 - A question or challenge you raised that changed a requirement, an acceptance criterion or a design
 
 ### Self-check
 
 - Do people have to ask me for status, or do they already know?
-- When I got difficult feedback this cycle, what did I actually change?
 - Do teammates come to me for help without being directed to?
 
 ### Not yet
 
 - Helps when asked, but doesn't offer help or share what they know otherwise
-- Feedback points out problems but rarely helps the other person understand the reasoning or decide better next time
-- Feedback is heard but nothing is different by the next cycle
+- Comments on peers' work point out problems but rarely help the author understand the reasoning or decide better next time
+- Feedback from teammates is heard, but nothing is different by the next cycle
 
 ## Org & Community
 
@@ -161,16 +154,15 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 - The way you chose to contribute and what you did across the cycle, with rough dates
 - An event, initiative or tool that exists, or works better, because you kept contributing
-- What the people it helped now do differently
+- What the people your contribution helped now do differently
 
 ### Self-check
 
 - If someone asked what I contributed beyond my project this cycle, could I answer in one sentence?
-- Was it sustained, or did it happen in the fortnight before assessment?
+- Did I keep my contribution up through the cycle, or did it happen in the fortnight before assessment?
 
 ### Not yet
 
-- Attending events or sessions is described as contributing to them
 - Commitments taken on beyond the project lapse without a word
 
 ### Ways to contribute
@@ -187,8 +179,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 #### Community and external contribution
 
-- Sharing what your team learned, through internal sessions, write-ups or a blog post
-- Giving a talk at a meetup or conference about a tool you built or a technique you learned
+- Sharing what your team learned, through internal sessions, write-ups, a blog post or a talk at a meetup or conference
 - Helping organise a DevDay, or speaking at one
 - Contributing to a community of practice
 
