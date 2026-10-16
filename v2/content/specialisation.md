@@ -34,6 +34,8 @@ The stronger contribution starts from the next scope's expectations for your str
 
 That is clearer than "work at Team scope in technology". At Wider, where there is no next scope, agree the outcome directly.
 
+An agreement is a direction, not a quarterly arrangement. You choose it because it's where you want to grow, so it usually holds for many cycles, long enough for the stronger contribution to build and for the teammate who took on the responsibility to grow into it. Change it when your direction changes or the team's work does, not to rebalance one quarter's workload.
+
 Whatever you hand over, some expectations stay with you: communicating progress and risks, treating people with respect, giving and acting on feedback, keeping your commitments, and doing your part of the responsibility you handed over. A specialist who hands over leading the client's planning still gives the estimates and risks that planning depends on, and still keeps to what is agreed there.
 
 ## What makes depth count
