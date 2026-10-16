@@ -27,7 +27,7 @@ export const CHAPTERS = [
     ] },
     { id: 'areas', title: 'Three areas', beats: [
         "At every scope, you have impact in the same three areas, and all three are part of what's expected of everyone.",
-        'Client and Delivery: building what the client needs, building it well, and owning what you commit to. That means agreeing realistic dates with the client, not only meeting them.',
+        'Client and Delivery: building what the client needs, building it well, and owning your commitments, including challenging requests that put quality or the team\'s pace at risk.',
         'People and Team: helping the people around you get better at what they do.',
         'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is expected of everyone.',
         "Each area has its own rating against your scope, so you can see where you're strong and where you need support.",
@@ -35,13 +35,13 @@ export const CHAPTERS = [
     { id: 'strengths', title: 'Your strengths', beats: [
         'Deciding your own growth also means you can grow through what you do best.',
         "All three areas stay part of what's expected of you, but within each you choose how you contribute.",
-        'When your team already relies on a strength of yours, you can agree to hand one responsibility to a teammate who accepts it.',
-        'In return, you agree a stronger contribution through that strength: what it will achieve, and who it will help.',
+        "When you've already shown real depth, you can agree a focus with your team: you take less of one responsibility, and a teammate who has room for it takes it on.",
+        'In return, you agree a greater contribution through that strength: what it will achieve, and who it will help.',
         "Your teammate chose to take it on, so it's never extra work quietly left with them, and it counts toward their growth too.",
     ] },
     { id: 'expectations', title: 'Agreeing expectations', beats: [
         'At the start of each cycle, you and your team discuss your expectations, align on them and capture them.',
-        'You note your scope, anything specific to your work, any agreement with your team, and where you want to grow.',
+        'You note your scope, anything specific to your work, any focus you agree with your team, and where you want to grow.',
         'Your teammates suggest changes until you all agree on what to expect from your work.',
     ] },
     { id: 'feedback', title: 'Along the way', beats: [
@@ -55,9 +55,9 @@ export const CHAPTERS = [
         'Then you discuss your self-assessment with your teammates at the team check. They add their observations, help correct anything you missed, and confirm the ratings.',
     ] },
     { id: 'growth', title: 'Growing your scope', beats: [
-        "You grow by taking on some of the next scope's work, usually as a stretch you agree with your team, and often through your strengths.",
+        "You grow by deepening what you do best, or by taking on some of the next scope's work, usually as a stretch you agree with your team.",
         'When you sustain that impact in one area, that area is rated as exceeding your current scope.',
-        'Your scope is raised at the team check when you consistently show next-scope impact in all three areas and people depend on you for it.',
+        'Your scope grows at the team check when your contribution consistently reaches the next scope in all three areas, and people depend on you for it.',
         "Then you agree your next challenge at your new scope. If you're already doing well, your team helps you find one, so you keep growing.",
     ] },
     { id: 'close', title: 'Getting started', beats: [

@@ -29,11 +29,11 @@ export const CHAPTERS = [
         'And it lasts through the cycle: a contribution you keep up, and can point to.',
     ] },
     { id: 'room', title: 'When there is no room', beats: [
-        'If your project leaves no room to contribute, agree it early with the seniors on your team or your account lead, at the start of the cycle if you already know.',
-        'Together you agree what is still possible, who will make the time for it, and when you will look at it again.',
+        "If your project leaves no time to contribute, raise that with your team's seniors or your account lead as soon as you know.",
+        'Together you agree what is still possible, what work needs to change, and when you will look at it again.',
     ] },
     { id: 'close', title: 'Your way in', beats: [
-        'Find your way to contribute, and Sahaj gets a little stronger because you are here.',
+        'Choose a contribution that interests you, talk about where it would help, and agree the time for it with your team.',
     ] },
 ];
 

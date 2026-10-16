@@ -1,4 +1,4 @@
-// The narrated 3D films (js/tour/): #tour plays the guide in three minutes, #tour/<film> another
+// The narrated 3D films (js/tour/): #tour plays How growth works at Sahaj, #tour/<film> another
 // film from js/tour/films.js. This view lays out the stage, caption and controls; js/tour/player.js
 // runs the timeline and js/tour/narrator.js the voice.
 import { filmAtRoute, filmMinutes } from '../tour/films.js';

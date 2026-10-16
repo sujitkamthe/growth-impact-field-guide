@@ -12,14 +12,14 @@ import * as org from './films/org/script.js';
 export const FILMS = [
     {
         id: 'guide',
-        title: 'The guide in three minutes',
+        title: 'How growth works at Sahaj',
         chapters: guide.CHAPTERS,
         voices: guide.VOICES,
         base: './',
         audio: 'audio/tour/',
         thumbnail: 'assets/tour/thumbnail.jpeg',
         route: 'tour',
-        length: '5:12',
+        length: '5:06',
         playLabel: 'Play the tour',
         // The end card's links; "Watch again" is always offered after them.
         end: [{ href: '#home', label: 'Find your scope' }],
@@ -41,7 +41,7 @@ export const FILMS = [
         area: 'org-community',
         end: [
             { href: '#area/org-community', label: 'Read Org & Community' },
-            { href: '#tour', label: 'Watch the guide in three minutes', quiet: true },
+            { href: '#tour', label: 'Watch How growth works at Sahaj', quiet: true },
         ],
     },
 ];

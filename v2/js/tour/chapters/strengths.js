@@ -2,16 +2,16 @@
 //
 // 1. "Deciding your own growth also means you can grow through what you do best."  The explorer leaves the fountain
 //    for the square's east edge and looks out to the market; Client & Delivery's name stays bright
-//    while the other two dim. Quest: "Agree where you go deep".
+//    while the other two dim. Quest: "Agree your focus".
 // 2. "All three areas stay part of what's expected of you..."  The other two names come back up as the explorer
 //    looks round at each district in turn.
-// 3. "When your team already relies on a strength of yours..."  The teammate who watched from the
+// 3. "When you've already shown real depth..."  The teammate who watched from the
 //    square's south side walks over; the explorer hands something over and they take it, then nod.
 //    The HUD's parchment card opens on the agreement, a line at a time.
 // 4. "In return, you take on a stronger contribution..."  The teammate heads back; the explorer turns
 //    to the market and gets to work, the market lit while it's shown (as in Areas, it isn't reach).
 // 5. "Your teammate chose to take it on..."  The explorer walks back to the
-//    fountain, the teammate nods from their spot, and the quest ticks: "Agreement made". Ends on
+//    fountain, the teammate nods from their spot, and the quest ticks: "Focus agreed". Ends on
 //    layout.states.afterAreas again, so Your quest starts exactly as it did after Areas.
 //
 // Starts and ends on layout.states.afterAreas. Everything is set from `time` alone.
@@ -36,9 +36,9 @@ const GARDEN = [-5.0, 23.9];
 const PULL = [[9.39, -4.41], [8, -6.2], [6.2, -10], [6.4, -16], [8, -22], [8.62, -24.24]];
 
 const LINES = [
-    'A strength your team relies on',
-    'One responsibility, accepted by a teammate',
-    'A stronger contribution through your strength',
+    'Depth you have already shown',
+    'Less of one responsibility, taken on by a teammate',
+    'A greater contribution in return',
 ];
 
 // The square, the two of them at its edge, and a look past the explorer to the market.
@@ -152,9 +152,9 @@ export default {
         // ---- HUD -------------------------------------------------------------------------------------
         world.hud.rows(areaSlots(['cd', 'pt', 'oc']), 1);          // as Areas left them; Your quest fades them
         if (t < at(0, 0.15)) world.hud.quest('Find the three areas', '3/3');
-        else if (t < at(4, 0.6)) world.hud.quest('Agree where you go deep', '0/1');
-        else world.hud.quest('Agreement made', '1/1');
+        else if (t < at(4, 0.6)) world.hud.quest('Agree your focus', '0/1');
+        else world.hud.quest('Focus agreed', '1/1');
         const lines = LINES.slice(0, t >= at(3, 0.15) ? 3 : t >= take ? 2 : 1);
-        world.hud.card(lines, span([2, 0.05], [4, 0.7]), { label: 'Specialist agreement' });
+        world.hud.card(lines, span([2, 0.05], [4, 0.7]), { label: 'Agreed focus' });
     },
 };

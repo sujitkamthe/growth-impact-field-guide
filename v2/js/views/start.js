@@ -57,7 +57,7 @@ export function render(content) {
                     <img src="assets/tour/thumbnail.jpeg" width="1920" height="1080" alt="">
                     <span class="tour-card-play" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></svg></span>
                     <span class="tour-card-text">
-                        <strong>Watch the guide in three minutes</strong>
+                        <strong>Watch How growth works at Sahaj</strong>
                         <span>Walk a valley under fog with an explorer: the principles, the scopes, the areas and a whole cycle</span>
                     </span>
                     <span class="tour-card-time">${esc(film('guide').length)}</span>

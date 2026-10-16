@@ -99,20 +99,20 @@
       "room": [
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/room-0.mp3",
-          "duration": 8.97,
-          "hash": "ffabf5a35418"
+          "duration": 7.29,
+          "hash": "cd550cd5f20d"
         },
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/room-1.mp3",
-          "duration": 6.31,
-          "hash": "018779542eae"
+          "duration": 6.26,
+          "hash": "40ba771ba95f"
         }
       ],
       "close": [
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/close-0.mp3",
-          "duration": 5.4,
-          "hash": "120b4ae3a4f6"
+          "duration": 6.7,
+          "hash": "daec4365e2d6"
         }
       ]
     },
@@ -203,20 +203,20 @@
       "room": [
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/room-0.mp3",
-          "duration": 10.29,
-          "hash": "c134c0a0642d"
+          "duration": 8.17,
+          "hash": "d64142f3b87e"
         },
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/room-1.mp3",
-          "duration": 7.14,
-          "hash": "76af41d9bdd9"
+          "duration": 7.15,
+          "hash": "5259e799475f"
         }
       ],
       "close": [
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/close-0.mp3",
-          "duration": 5.93,
-          "hash": "07086acfc040"
+          "duration": 7.68,
+          "hash": "f91d37f76204"
         }
       ]
     }
