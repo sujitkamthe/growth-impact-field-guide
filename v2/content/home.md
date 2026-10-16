@@ -22,6 +22,7 @@ Read the four scopes below and pick the one that sounds most like the impact of 
 - [Plan a stretch](#how-it-works/growing-into-the-next-scope): Take on some of the next scope's responsibilities
 - [Write your self-assessment](#self-assessment): Look back on the cycle and rate each area
 - [Review a teammate](#teammates): Review their expectations, give feedback through the cycle and take part in their team check
+- [Give feedback](#feedback): Cover all three areas, ask for more, and check in halfway through the cycle
 
 ## How growth happens
 

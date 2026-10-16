@@ -17,6 +17,7 @@ Start from the scope they chose, and work through these before the doc is agreed
 1. **Does the impact you've seen support the scope?**: say so plainly if you think it's too high or too low. A mismatch is corrected here, so the whole cycle is measured against the right scope.
 2. **Is anything specific to their work written down?**: expectations beyond the guide, such as what this client or team needs from them, go in their doc under the area they belong to.
 3. **Is any stretch concrete?**: everyone should be able to recognise when it's happening. If they have been at the same scope for a long time, or their scope is below what their experience suggests, check there is a stretch in all three areas.
+4. **Does any specialist agreement stand up?**: check that the strength is one the team already relies on, that the teammate named for the handed-over responsibility has accepted it, and that the stronger contribution is concrete enough to recognise at the team check. See [Specialist agreements](#how-it-works/specialist-agreements).
 
 <!-- more -->
 Add your inputs as comments and ask for changes where an expectation is missing or unclear. The doc is agreed when you and the person can both point to what's expected.
@@ -43,7 +44,13 @@ Constructive feedback has the same shape, and adds what you'd suggest trying ins
 >
 > When our new joiner asked you about the flaky checkout test on Monday, you fixed it yourself in ten minutes. It unblocked them, but they still don't know why it failed, and they were stuck on the same test again on Wednesday. Next time, could you pair with them on it, even if it takes longer? People & Team, growing others.
 
-Feedback they note down this way is what their self-assessment starts from.
+Feedback they note down this way is what their self-assessment starts from. Over the cycle, cover all three areas, not only the work they deliver, and give feedback to the people already doing well too; [Feedback](#feedback) explains how, with more examples.
+
+## The mid-cycle check
+
+*Halfway through the cycle, go through all three areas with the person whose expectations you reviewed.*
+
+Say what you've seen in each area so far, and where you haven't seen evidence yet, so a gap comes up while there's still time to close it rather than at the team check. Agree what needs to change, such as an opportunity or support, and who will arrange it. If an expectation changes, the person records it in their doc. The steps are on [Feedback](#feedback/the-mid-cycle-check).
 
 ## Taking part in the team check
 
@@ -63,18 +70,18 @@ If a self-assessment mentions work you didn't see, ask about it: "I didn't see t
 
 *Raise someone's scope once they show next-scope impact consistently in all three areas.*
 
-Raise someone's scope at the team check when the person shows next-scope impact consistently in all three areas and the people around them depend on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. First check they meet their current scope in all three areas, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds back a raise just as one in Client & Delivery does. Once it's raised, the next cycle's doc is written at the new scope.
+Raise someone's scope at the team check when the person shows next-scope impact consistently in all three areas and the people around them depend on it; a single strong instance isn't enough. It doesn't have to have started as an agreed stretch. First check they meet their current scope in all three areas, because the next scope builds on it, and remember that every area counts: a shortfall in Org & Community holds back a raise just as one in Client & Delivery does. Next-scope impact can come through a strength, but it has to be the person's own: work a teammate took on under a specialist agreement counts for the teammate. Once it's raised, the next cycle's doc is written at the new scope.
 
 ## Proposing a stretch
 
 <!-- tips: When it comes up -->
 *Suggest a stretch when you see someone already doing some of the next scope's work.*
 
-A stretch doesn't have to start with the person. If you see them already doing some of the next scope's work, or they have been at the same scope for a long time, suggest one when you review their expectations or as you look ahead at the team check. Name what you've seen, what taking it on would involve and what support they'll need. Usually they decide whether to take it on, and write it into their doc.
+A stretch doesn't have to start with the person. If you see them already doing some of the next scope's work, or they have been at the same scope for a long time, suggest one when you review their expectations or as you look ahead at the team check. People who are already doing well need a next challenge as much as anyone: ask what they're strong at and want to grow in, and suggest a responsibility they haven't had before. Name what you've seen, what taking it on would involve and what support they'll need. Usually they decide whether to take it on, and write it into their doc.
 
 Tell them what you've seen that makes you think they're ready. If the conversation starts to feel like criticism of their current work, go back to what you've seen them do well.
 
-When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: if there has been no opportunity, the team needs to make one; if support has been missing, give it; and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth has a plan.
+When someone has been at the same scope for a long time, or their scope is below what their experience suggests, a stretch is expected rather than optional. Find out why first: if there has been no opportunity, the team needs to make one; if support has been missing, give it; and sometimes nobody has asked them to stretch. Then set a stretch with them in all three areas, from the next scope, so their growth has a plan; someone with a specialist agreement can make it through their strength in each area.
 
 ## When you disagree
 

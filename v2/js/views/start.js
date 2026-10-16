@@ -12,7 +12,7 @@ import { film } from '../tour/films.js';
 import { filmLink } from './tour.js';
 
 // An icon for each task link, by where it goes.
-const TASK_ICONS = { principles: 'compass', 'how-it-works/the-cycle': 'doc', 'how-it-works/growing-into-the-next-scope': 'stretch', 'self-assessment': 'rating', teammates: 'check' };
+const TASK_ICONS = { principles: 'compass', 'how-it-works/the-cycle': 'doc', 'how-it-works/growing-into-the-next-scope': 'stretch', 'self-assessment': 'rating', teammates: 'check', feedback: 'feedback' };
 
 const sectionText = (page, slug) => page.sections.find(s => s.slug === slug)?.body || '';
 

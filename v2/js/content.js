@@ -7,7 +7,7 @@
 
 export const SCOPE_IDS = ['direct', 'extended', 'team', 'wider'];
 export const AREA_IDS = ['client-delivery', 'people-team', 'org-community'];
-const PAGE_IDS = ['home', 'principles', 'how-it-works', 'teammates', 'self-assessment', 'faq', 'glossary', 'specialisation'];
+const PAGE_IDS = ['home', 'principles', 'how-it-works', 'teammates', 'self-assessment', 'faq', 'glossary', 'specialisation', 'feedback'];
 
 export function slugify(text) {
     return text.toLowerCase().replace(/&/g, ' ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
