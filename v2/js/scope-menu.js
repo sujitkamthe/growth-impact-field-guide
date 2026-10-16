@@ -15,7 +15,7 @@ export function initScopeMenu(content, { onChange }) {
     const button = item.querySelector('[data-scope-button]');
     const panel = item.querySelector('#scope-menu');
 
-    panel.innerHTML = `<p class="scope-menu-note">Highlights a scope across the guide. The scope you're held to is the one agreed in your expectations doc.</p>
+    panel.innerHTML = `<p class="scope-menu-note">Highlights a scope across the guide.</p>
         <div class="scope-menu-options" role="radiogroup" aria-label="Explore a scope">
             ${content.scopes.map(s => `<button type="button" role="radio" data-scope="${s.id}">
                 ${scopeGlyph(s.order, { size: 22 })}

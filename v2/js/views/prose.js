@@ -22,6 +22,7 @@
 
 import { esc, md, mdInline, fold, bindFolds, openFoldAround } from '../ui.js';
 import { icon } from '../icons.js';
+import { sketch } from '../sketches.js';
 
 const ITEM = /^(\d+\.|-) \*\*(.+?)\*\*:?\s*(.*)$/;
 const NOTE = /^<!-- (scale|list|row|checks|note) -->$/;
@@ -186,11 +187,14 @@ export function renderProse(content, pageId, { bodies = {}, after = {}, open = n
         title: page.title,
         keepScroll: Boolean(open),
         html: `<section class="page narrow${worksheet ? ' worksheet' : ''}${isJourney ? ' journey' : ''}${page.flow === 'topics' ? ' topics' : ''}">
-            <header class="page-head">
-                ${worksheet ? '<p class="eyebrow">Worksheet</p>' : ''}
-                <h1>${esc(page.title)}${page.status === 'draft' ? ' <span class="draft-tag">Draft</span>' : ''}</h1>
-                <p class="lede">${esc(page.lede)}</p>
-                ${page.status === 'draft' ? `<p class="draft-note">${icon('info')}<span><strong>Work in progress, not finalised.</strong> This page is a view still being refined. It doesn't change the expectations set out elsewhere in the guide.</span></p>` : ''}
+            <header class="page-head${page.sketch ? ' has-sketch' : ''}">
+                <div class="page-head-text">
+                    ${worksheet ? '<p class="eyebrow">Worksheet</p>' : ''}
+                    <h1>${esc(page.title)}${page.status === 'draft' ? ' <span class="draft-tag">Draft</span>' : ''}</h1>
+                    <p class="lede">${esc(page.lede)}</p>
+                    ${page.status === 'draft' ? `<p class="draft-note">${icon('info')}<span><strong>Work in progress, not finalised.</strong> This page is a view still being refined. It doesn't change the expectations set out elsewhere in the guide.</span></p>` : ''}
+                </div>
+                ${sketch(page.sketch)}
                 ${lead}
             </header>
             ${sections}

@@ -1,6 +1,7 @@
 ---
 title: Principles
 lede: What we believe about growth and impact at Sahaj. The scopes, areas and expectations in the rest of the guide put them into practice.
+sketch: crossroads
 ---
 
 ## Our principles

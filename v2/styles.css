@@ -413,7 +413,7 @@ a.term:hover { text-decoration-style: solid; }
 /* Start, the landing page: how the guide works beside the reach diagram, the four scopes as
    cards to find your own, then the task links. Cards sit on white like the matrix, with no shadow. */
 .start .page-head { margin-bottom: 8px; }
-.start > section { margin-top: 56px; }
+.start > section { margin-top: 44px; }
 .start h2 { font-size: 23px; }
 .start-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 380px); gap: 24px 56px; align-items: center; }
 .start-intro p { color: var(--text-2); max-width: 62ch; }
@@ -426,16 +426,16 @@ a.term:hover { text-decoration-style: solid; }
 .start-scopes-hint { color: var(--text-2); max-width: 72ch; }
 .scope-cards { list-style: none; margin: 20px 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .scope-card {
-    display: flex; flex-direction: column; gap: 6px; height: 100%; padding: 20px;
+    display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 16px 18px;
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
     color: var(--text); text-decoration: none; transition: border-color 0.15s;
 }
 .scope-card:hover { border-color: var(--control); }
-.scope-card .glyph { margin-bottom: 8px; }
+.scope-card .glyph { margin-bottom: 6px; }
 .scope-card-name { font-size: 20px; font-weight: 600; }
 .scope-card-name .exploring-tag { vertical-align: 0.2em; margin-left: 4px; }
 .scope-card-mindset { color: var(--text-2); line-height: 1.45; }
-.scope-card-reach { color: var(--muted); font-size: 14px; margin-top: auto; padding-top: 8px; }
+.scope-card-reach { color: var(--muted); font-size: 14px; padding-top: 6px; }
 @media (max-width: 900px) {
     .start-intro { grid-template-columns: 1fr; }
     .start-intro .reach-figure { max-width: 320px; }
@@ -443,7 +443,7 @@ a.term:hover { text-decoration-style: solid; }
 }
 @media (max-width: 520px) { .scope-cards { grid-template-columns: 1fr; } }
 
-.start-here { margin-top: 56px; }
+.start-here { margin-top: 44px; }
 .start-here ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 24px; }
 .start-here li { border-top: 1px solid var(--line); padding: 10px 0 4px; }
 .start-here li > a { display: block; font-weight: 600; }
@@ -535,10 +535,13 @@ h1 .exploring-tag { vertical-align: 0.35em; margin-left: 6px; }
 .scope-head .mindset { margin-bottom: 12px; }
 .scope-head .lede p { margin-bottom: 8px; }
 /* Nature of impact: three short answers side by side, under the mindset. */
-.nature { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 28px; margin: 20px 0 24px; }
-.nature div { border-top: 2px solid var(--accent); padding-top: 10px; }
-.nature dt { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px; }
-.nature dd { margin: 0; font-size: 16px; line-height: 1.5; color: var(--text); }
+/* Reach, How and What lasts: three short sentences, read as sentences, so the emphasis the content
+   carries elsewhere is dropped here rather than breaking each one into bold and plain fragments. */
+.nature { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 32px; margin: 24px 0 28px; }
+.nature div { border-top: 1px solid var(--line); padding-top: 12px; }
+.nature dt { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.nature dd { margin: 0; font-size: 17px; line-height: 1.55; color: var(--text-2); }
+.nature dd strong { font-weight: inherit; }
 @media (max-width: 760px) { .nature { grid-template-columns: 1fr; gap: 14px; } }
 .cmp-nature { margin-bottom: 40px; }
 .cmp-nature h2 { font-size: 20px; }
@@ -678,8 +681,8 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .facet .plain-list { margin-bottom: 0; }
 .routes { margin: 24px 0 8px; }
 .routes h3 { font-size: 16px; margin-bottom: 0; }
-.route-groups { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 28px; }
-@media (max-width: 760px) { .route-groups { grid-template-columns: 1fr; } }
+/* As many columns as fit: three across an area page, one inside a scope's narrow area column. */
+.route-groups { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px 28px; }
 .mx-cell .facet-groups { gap: 8px; }
 .mx-cell .facet { border-left: 0; padding-left: 0; }
 .mx-cell .facet-label { font-size: 12px; }
@@ -916,8 +919,22 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .start-here li > a .icon { color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { .more > summary::after, .how-to-tell > summary::after { transition: none; } }
 
-/* Start: the title beside a thumbnail of the narrated tour, a still from the film itself. */
-.start-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 520px); gap: 24px 48px; align-items: center; }
+/* Start: the title and the cycle's three tasks beside a thumbnail of the narrated tour, a still
+   from the film itself, with the two shorter films side by side under it. Both columns start at the
+   top, so the title lines up with the film. */
+.start-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 540px); gap: 32px 48px; align-items: start; }
+.start-hero h1 { margin-top: 4px; }
+.start-actions { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 0; max-width: 520px; }
+.start-actions li { border-top: 1px solid var(--line); padding: 10px 0; }
+.start-actions li:last-child { border-bottom: 1px solid var(--line); }
+.start-actions li > a { display: flex; align-items: flex-start; gap: 8px; font-weight: 600; }
+.start-actions li > a .icon { margin-top: 0.22em; color: var(--muted); }
+.start-actions span { display: block; color: var(--text-2); font-size: 15px; line-height: 1.45; margin: 2px 0 0 26px; }
+.start-watch { display: grid; gap: 12px; }
+.start-watch .start-films { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.start-watch .start-films .film-link { justify-self: stretch; margin-top: 0; }
+.start-watch .film-link { gap: 10px; padding-right: 10px; }
+.start-watch .film-link-thumb { width: 76px; }
 .tour-card {
     position: relative; display: block; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden;
     color: #fff; text-decoration: none; box-shadow: 0 0 0 1px var(--line), 0 10px 30px rgba(20, 22, 50, 0.16);
@@ -938,6 +955,9 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
 .tour-card-time { position: absolute; right: 14px; bottom: 16px; z-index: 1; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, 0.55); font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .tour-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 @media (max-width: 900px) { .start-hero { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .start-watch .start-films { grid-template-columns: 1fr; } }
+/* On a phone the description would wrap up under the play button, so the title stands alone. */
+@media (max-width: 560px) { .tour-card-text > span { display: none; } }
 @media (prefers-reduced-motion: reduce) { .tour-card img, .tour-card-play { transition: none; } }
 
 /* A compact link to a narrated film (views/tour.js filmLink): under an area's summary, and under the
@@ -1077,3 +1097,25 @@ select:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color
     .guide-menu a span { display: none; }
 }
 .nav-links .guide-menu a { white-space: normal; }
+
+/* Page sketches (sketches.js): monochrome line drawings in the empty space beside a page's title,
+   never over its text. Worksheet and Principles heads are wider than their lede, so the sketch sits
+   inside the head to the right of it; plain narrow pages put it in the margin outside the column.
+   Each is hidden once that space runs out. */
+.page-head.has-sketch { position: relative; }
+.page-sketch { position: absolute; top: 0; pointer-events: none; opacity: 0.85; }
+.page-sketch svg { display: block; width: 100%; height: auto; overflow: visible; stroke-linecap: round; stroke-linejoin: round; }
+.page.narrow .page-sketch { left: calc(100% + 32px); width: 190px; }
+.page.narrow.worksheet .page-sketch { left: auto; right: 0; top: 12px; width: 190px; }
+.principles-page .page-sketch { right: 0; top: -4px; width: 250px; }
+.sk-ink { fill: none; stroke: var(--text-2); stroke-width: 1.5; }
+.sk-line { fill: none; stroke: var(--control); stroke-width: 1.2; }
+.sk-faint { fill: none; stroke: var(--control); stroke-width: 1.1; stroke-dasharray: 2 4; }
+.sk-far { fill: none; stroke: var(--control); stroke-width: 1; opacity: 0.5; }
+.sk-fill { fill: var(--bg); }
+.sk-dot { fill: var(--bg); stroke: var(--control); stroke-width: 1.2; }
+.sk-start { fill: var(--text-2); }
+@media (max-width: 1340px) { .page.narrow:not(.worksheet) .page-sketch { display: none; } }
+@media (max-width: 1010px) { .page.worksheet .page-sketch { display: none; } }
+@media (max-width: 980px) { .principles-page .page-sketch { display: none; } }
+@media print { .page-sketch { display: none; } }

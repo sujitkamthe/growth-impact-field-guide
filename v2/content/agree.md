@@ -1,6 +1,7 @@
 ---
 title: Set your expectations
 lede: At the start of each cycle, set your expectations together with your team, and write them in a one-page doc.
+sketch: notice-board
 ---
 
 ## Before you write

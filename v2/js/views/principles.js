@@ -4,6 +4,7 @@
 // "- **Name**: *Short line.* Full text" list; drawings are matched to principles in list order.
 
 import { esc, mdInline } from '../ui.js';
+import { sketch } from '../sketches.js';
 
 // Line drawings in the reach diagram's style: thin strokes in ink, with one shaded element as the
 // focus. Drawn on a 160 × 100 grid. Each shows its principle's idea rather than a symbol for it.
@@ -67,12 +68,15 @@ export function render(content) {
     return {
         title: page.title,
         html: `<section class="page principles-page">
-            <header class="page-head">
-                <h1>${esc(page.title)}</h1>
-                <p class="lede">${esc(page.lede)}</p>
+            <header class="page-head${page.sketch ? ' has-sketch' : ''}">
+                <div class="page-head-text">
+                    <h1>${esc(page.title)}</h1>
+                    <p class="lede">${esc(page.lede)}</p>
+                </div>
+                ${sketch(page.sketch)}
             </header>
             <ul class="principles" aria-label="Our principles">${principles(page).map(tile).join('')}</ul>
-            <p class="principles-next">See them in practice: <a href="#how-it-works">How it works</a> · <a href="#expectations">Expectations</a></p>
+            <p class="principles-next">See them in practice: <a href="#how-it-works">How it works</a> · <a href="#expectations">Scopes</a></p>
         </section>`,
         // Show less sits under the text it closes; the tile's summary still toggles it too.
         mount(root) {

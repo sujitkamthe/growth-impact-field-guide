@@ -1,6 +1,7 @@
 ---
 title: Agreed focus
 lede: Going deep and going broad both count. How to agree a focus on your strength, how it's rated, and how specialists and all-rounders are both recognised fairly.
+sketch: handover
 ---
 
 ## In short

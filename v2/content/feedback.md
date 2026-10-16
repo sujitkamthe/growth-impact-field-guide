@@ -2,6 +2,7 @@
 title: Feedback
 lede: Genuine, frequent and open, from anyone to anyone, whatever their seniority, and given for growth.
 flow: topics
+sketch: conversation
 ---
 
 ## Why it matters

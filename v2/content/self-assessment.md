@@ -1,6 +1,7 @@
 ---
 title: Self-assessment
 lede: Write it at the end of the cycle, in your expectations doc. Follow the three steps; the tips below are there if you need them.
+sketch: looking-back
 ---
 
 ## Before you start
