@@ -6,15 +6,15 @@
 export const CHAPTERS = [
     { id: 'arrival', title: 'Welcome', beats: [
         'Welcome to Sahaj. This guide explains how we think about growth and the impact of our work.',
-        "Whether you're new here or thinking about what to take on next, the guide helps you and your team agree on expectations.",
+        'It exists so that you know what is expected of you, and what you can expect of the people around you, from the start of each cycle rather than at the end of it.',
         "Let's start with the principles behind it.",
     ] },
     { id: 'principles', title: 'Principles', beats: [
         'Five principles shape how we approach growth at Sahaj.',
-        'Principle one: Growth is self-directed. You choose the direction, shape and pace of your growth.',
+        'Principle one: Growth is self-directed. You choose the direction, shape and pace of your growth, and you can grow through your strengths.',
         'Principle two: Clarity without hierarchy. Sahaj has no titles. We describe growth through the impact of your work and the responsibilities people trust you with.',
         'Principle three: Transparency and trust. Expectations are written down and open for discussion. Anyone on your team can review them.',
-        'Principle four: Feedback is a habit. Anyone can give or ask for feedback, whatever their scope, while the work is still fresh.',
+        'Principle four: Feedback is a habit. Anyone can give or ask for feedback, whatever their scope, and it covers all of your impact, not only the work you deliver.',
         'Principle five: Honest reflection. You look back at what happened and what you learned from feedback, including what was difficult.',
     ] },
     { id: 'scopes', title: 'How far you reach', beats: [
@@ -26,21 +26,21 @@ export const CHAPTERS = [
         'Each scope builds on the ones before it. Your own work and the help you give teammates still matter as your responsibilities grow.',
     ] },
     { id: 'areas', title: 'Three areas', beats: [
-        'At every scope, you have impact in the same three areas.',
-        'Client and Delivery: understanding what the client needs, building it well, and delivering it reliably.',
+        "At every scope, you have impact in the same three areas, and all three are part of everyone's job.",
+        'Client and Delivery: building what the client needs, building it well, and owning what you commit to. That means agreeing realistic dates with the client, not only meeting them.',
         'People and Team: helping the people around you get better at what they do.',
-        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute.',
-        "Each area has its own rating against your scope, so you can see where you're doing well and where you need support.",
+        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is part of the job.',
+        "Within each area you choose how you contribute, and you can go deep in what you do best. Each area has its own rating, so you can see where you're strong and where you need support.",
     ] },
     { id: 'expectations', title: 'Agreeing expectations', beats: [
         'At the start of each cycle, you write a short expectations doc to discuss with your team.',
-        'You note your scope, anything specific to your work, and where you want to grow.',
+        'You note your scope, anything specific to your work, and where you want to grow. If a strength of yours lets you hand one responsibility to a teammate, you agree that here too.',
         'Your teammates read it and suggest changes. Together, you agree on what to expect from your work.',
     ] },
     { id: 'feedback', title: 'Along the way', beats: [
-        'During the cycle, ask the people you work with for feedback while the work is fresh.',
+        'During the cycle, ask the people you work with for feedback on all of your impact, not only the work you deliver.',
         'A useful note says what they saw, what it changed, and which expectation it relates to.',
-        'Keep those notes as you go, so you have examples to look back on at the end of the cycle.',
+        'Keep those notes as you go. Halfway through, check all three areas with your reviewers, so nothing expected of you comes as a surprise at the end.',
     ] },
     { id: 'self-assessment', title: 'Looking back together', beats: [
         'At the end of the cycle, you look back one area at a time, starting from your notes.',
@@ -48,13 +48,13 @@ export const CHAPTERS = [
         'Then you discuss your self-assessment with your teammates at the team check. They add their observations, help correct anything you missed, and confirm the ratings.',
     ] },
     { id: 'growth', title: 'Growing your scope', beats: [
-        "You grow by taking on some of the next scope's work, usually as a stretch you agree with your team.",
+        "You grow by taking on some of the next scope's work, usually as a stretch you agree with your team, and often through your strengths.",
         'When you sustain that impact in one area, that area is rated as exceeding your current scope.',
         'Your scope is raised at the team check when you consistently show next-scope impact in all three areas and people depend on you for it.',
-        'You then agree expectations for the next cycle at your new scope.',
+        "Then you agree your next challenge at your new scope. If you're already doing well, your team helps you find one, so you keep growing.",
     ] },
     { id: 'close', title: 'Getting started', beats: [
-        'Start with the scope that reflects your work today, and talk with your team about where you want to grow.',
+        'Start with the scope that reflects your work today, and talk with your team about your strengths and where you want to grow.',
     ] },
 ];
 

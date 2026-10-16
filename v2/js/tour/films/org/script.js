@@ -8,7 +8,7 @@ export const CHAPTERS = [
     { id: 'together', title: 'Built by all of us', beats: [
         'Sahaj has no separate team that builds its culture and capability for everyone else.',
         'People like you build it, alongside their client work. That is the Org and Community area.',
-        'You choose how you contribute. Contributing is part of the work here, done in working time, with your team making room for it.',
+        'You choose how you contribute, often through what you are good at. Contributing is part of the work here, done in working time, with your team making room for it.',
     ] },
     { id: 'ways', title: 'Three ways to contribute', beats: [
         'There are three ways to contribute, and you can choose one or more.',
@@ -29,8 +29,8 @@ export const CHAPTERS = [
         'And it lasts through the cycle: a contribution you keep up, and can point to.',
     ] },
     { id: 'room', title: 'When there is no room', beats: [
-        'If your project leaves no room to contribute, say so early, to the seniors on your team or your account lead.',
-        'Raised during the cycle, it can still be fixed, and your team can make the room together.',
+        'If your project leaves no room to contribute, agree it early with the seniors on your team or your account lead, at the start of the cycle if you already know.',
+        'Together you agree what is still possible, who will make the time for it, and when you will look at it again.',
     ] },
     { id: 'close', title: 'Your way in', beats: [
         'Find your way to contribute, and Sahaj gets a little stronger because you are here.',
