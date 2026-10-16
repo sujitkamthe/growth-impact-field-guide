@@ -16,7 +16,7 @@ export const CHAPTERS = [
     ] },
     { id: 'give', title: 'The same day', beats: [
         "When a teammate's work goes well, tell them that day, while you both remember the moment.",
-        "Say what you saw, what it changed, and which expectation it relates to. 'Nice work' is kind, but it doesn't say what to do again.",
+        "Say what you saw and what it changed, and, if it helps, which area it belongs to. 'Nice work' is kind, but it doesn't say what to do again.",
     ] },
     { id: 'change', title: 'What should change', beats: [
         'When something should change, say so soon and in private, about the work, not the person, with one thing to try instead.',

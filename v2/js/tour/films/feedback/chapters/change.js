@@ -17,8 +17,8 @@ import { run, arrival, keepWorld, villageLife, facingTo, beatClock, camera, hour
 const NOTE = [
     'What I saw: you agreed the date before showing our estimate',
     'What it changed: long hours, or a missed date',
-    'Which expectation: Client & Delivery, delivery ownership',
     'Try next time: show both options and let the client choose',
+    'Area: Client & Delivery, delivery ownership',
 ];
 const RIVER = [9.6, -11.4];
 

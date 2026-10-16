@@ -4,7 +4,7 @@
 //    turns to the cart's shafts and pulls it away along the road and over the bridge, their colleague
 //    walking on ahead. The teammate who gave the showcase watches it go, then walks over to the
 //    explorer. The joiner heads off across the square to the notice board.
-// 2. "Say what you saw, what it changed, and which expectation..."  Close on the two of them: the
+// 2. "Say what you saw and what it changed..."  Close on the two of them: the
 //    explorer tells them, and the parchment card opens, labelled "Said the same day", on the three
 //    parts. The teammate nods.
 //
@@ -16,7 +16,7 @@ import { run, arrival, keepWorld, villageLife, bridgeLift, facingTo, beatClock, 
 const NOTE = [
     'What I saw: your fix halved the page load',
     'What it changed: the client noticed it in the showcase',
-    'Which expectation: Client & Delivery, technical craft',
+    'Area: Client & Delivery, technical craft',
 ];
 // a wider look that takes in the road to the bridge as the cart goes
 const CART_GOES = { target: [7.2, 0.8, -6.2], distance: 34, yaw: 14, pitch: 52, fov: 28 };

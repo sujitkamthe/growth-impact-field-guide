@@ -13,7 +13,7 @@ Ideas are places and actions in the village, never diagrams:
 - **Small and often**: two pairs of villagers, one at the market's workbench and one at the door of a house west of the square, turn to each other every few seconds; one talks with their hands, the other nods, and then the other way round. The exchanges carry on in the background of every chapter.
 - **A showcase**: at the head of the bridge road a teammate shows the client's two people the finished cart, loaded. When it ends, the client takes the cart's shafts and pulls it away over the bridge.
 - **In private**: a short walk out of the square to the riverbank east of the bridge, two people alone by the water.
-- **A note**: the HUD's parchment card, always in the guide's form: what I saw, what it changed, which expectation (and what to try instead, when something should change).
+- **A note**: the HUD's parchment card, always in the guide's form: what I saw, what it changed, what to try instead when something should change, and the area when it helps.
 - **The notes counter** counts the feedback the explorer has been given, as in the first film.
 - **The team check** is the team standing in a small circle between the notice board and the fountain, with the HUD's three area rows: two marked, Org & Community's slot still empty.
 
@@ -37,7 +37,7 @@ Early morning.
 ### 3. The same day (`give`)
 1. "When a teammate's work goes well, tell them that day, while you both remember the moment."
    The showcase ends: the client nods, steps round to the cart's shafts and pulls it away over the bridge, their colleague walking on ahead. The teammate who gave the showcase walks over to the explorer, and the joiner heads off across the square to the notice board.
-2. "Say what you saw, what it changed, and which expectation it relates to. 'Nice work' is kind, but it doesn't say what to do again."
+2. "Say what you saw and what it changed, and, if it helps, which area it belongs to. 'Nice work' is kind, but it doesn't say what to do again."
    The explorer tells them, and the parchment card opens, labelled "Said the same day": "What I saw: your fix halved the page load", "What it changed: the client noticed it in the showcase", "Which expectation: Client & Delivery, technical craft". The teammate nods. Behind them, the teammate who watched comes over and waits their turn.
 
 ### 4. What should change (`change`)
