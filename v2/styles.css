@@ -257,6 +257,16 @@ strong { font-weight: 600; }
    than as a link to another page. */
 a.term { color: inherit; text-decoration: underline dotted; text-decoration-thickness: 1px; text-underline-offset: 0.22em; }
 a.term:hover { text-decoration-style: solid; }
+/* A term's definition, shown in place under the term that was tapped (terms.js). */
+.term-pop {
+    position: absolute; z-index: 60; width: min(320px, calc(100vw - 32px)); padding: 12px 14px;
+    background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(20, 22, 50, 0.14); font-size: 15px; line-height: 1.5;
+}
+.term-pop p { margin: 0 0 8px; color: var(--text-2); }
+.term-pop .term-pop-title { margin-bottom: 2px; font-weight: 600; color: var(--text); }
+.term-pop-more { font-size: 14px; font-weight: 500; }
+@media print { .term-pop { display: none; } }
 .glossary { margin: 0; }
 .glossary-term { padding: 18px 0; border-top: 1px solid var(--line); scroll-margin-top: calc(var(--header-h) + 24px); }
 .glossary-term:last-child { border-bottom: 1px solid var(--line); }

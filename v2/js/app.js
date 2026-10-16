@@ -18,7 +18,7 @@ import * as tour from './views/tour.js';
 import * as specialisation from './views/specialisation.js';
 import * as feedback from './views/feedback.js';
 import * as agree from './views/agree.js';
-import { glossaryTerms, linkTerms } from './terms.js';
+import { glossaryTerms, linkTerms, bindTermDefinitions } from './terms.js';
 
 const ROUTES = [
     { pattern: /^principles(?:\/([\w-]+))?$/, view: principles, nav: 'principles', terms: true },
@@ -95,7 +95,7 @@ function render(content, { keep = false } = {}) {
     if (keep) window.scrollTo(0, scrollY);
     else if (!result.keepScroll) window.scrollTo(0, 0);
     // Reading pages link their glossary terms; lists of expectations stay unlinked.
-    if (route?.terms) linkTerms(app, glossaryTerms(content));
+    if (route?.terms) { linkTerms(app, glossaryTerms(content)); bindTermDefinitions(); }
     try {
         if (result.mount) result.mount(app);
     } catch (err) {
