@@ -50,11 +50,6 @@ Moving your scope to the next one. It is decided at the team check once you show
 <!-- matches: ratings, rating -->
 How you did in one area at your scope: below, meets or exceeds expectations. Exceeds is judged against your current scope and doesn't change your scope. Your teammates confirm your ratings at the team check. Org & Community is recorded as not rated for a cycle only when an agreed deferral covered all of it.
 
-## Reviewers
-
-<!-- matches: reviewers -->
-Anyone on your team who reviews your expectations, gives you feedback or takes part in your team check, whatever their scope.
-
 ## Scope
 
 <!-- matches: scopes -->

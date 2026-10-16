@@ -52,7 +52,7 @@ People differ in what they enjoy doing, and the guide leaves room for that: some
 
 Feedback in the moment covers what people see. It rarely covers what's missing, because nobody has a reason to comment on work someone hasn't done. The mid-cycle check closes that gap. It is a short conversation, not a rating, and the person whose doc it is arranges it:
 
-1. **What has each reviewer seen?**: in each area, the contribution they've noticed so far.
+1. **What has each teammate seen?**: in each area, the contribution they've noticed so far.
 2. **Where is evidence missing?**: an area, a facet or an agreed stretch that nobody has seen yet.
 3. **What needs to change?**: different opportunities, support or time, and who will arrange them.
 4. **Record what changed**: if an expectation changes, write it in the doc now, before the self-assessment measures against it.

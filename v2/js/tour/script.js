@@ -47,7 +47,7 @@ export const CHAPTERS = [
     { id: 'feedback', title: 'Along the way', beats: [
         'During the cycle, ask the people you work with for feedback on all of your impact, not only the work you deliver.',
         'A useful note says what they saw, what it changed, and which expectation it relates to.',
-        'Keep those notes as you go. Halfway through, check all three areas with your reviewers, so nothing expected of you comes as a surprise at the end.',
+        'Keep those notes as you go, so you have examples to look back on at the end of the cycle.',
     ] },
     { id: 'self-assessment', title: 'Looking back together', beats: [
         'At the end of the cycle, you look back one area at a time, starting from your notes.',

@@ -86,7 +86,7 @@ No one specialises at someone else's unacknowledged expense.
 In practice:
 
 - **Handovers are accepted, not assumed.** A responsibility moves only to a teammate who agrees to take it, and an all-rounder isn't the default person for every specialist's handover.
-- **Integration is impact.** Resolving trade-offs between technology, delivery and the client is consulting and delivery ownership impact, and People & Team impact when it keeps the team working together. D's reviewers name it in D's evidence, not as ordinary teamwork.
+- **Integration is impact.** Resolving trade-offs between technology, delivery and the client is consulting and delivery ownership impact, and People & Team impact when it keeps the team working together. D's teammates name it in D's evidence, not as ordinary teamwork.
 - **Support counts on both sides.** If a specialist's work needs a teammate to translate the problem or coordinate delivery, that support is part of the picture when the specialist's impact is judged, and part of the teammate's impact too.
 - **Enabling counts too.** If A's expertise makes D's work much easier, that counts in A's favour.
 

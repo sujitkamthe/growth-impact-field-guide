@@ -75,7 +75,7 @@ Noon in the square, straight on from Areas, and back to the same spot at the end
 Time passes: the sun moves across the sky over the chapter.
 1. Ask for feedback often: a montage-like glide following the explorer between the market, a house and the square; at each, a villager walks up and hands over a note (Interact). The HUD notes counter goes 1, 2, 3.
 2. Saw, changed, relates to: one note opens briefly as a small parchment card in the HUD with three short lines: "What I saw", "What it changed", "Which expectation".
-3. You keep every note, and check all three areas halfway through: the notes counter settles at 6.
+3. You keep every note: the notes counter settles at 6.
 
 ### 8. Around the fire (`self-assessment`)
 Dusk. A campfire in the square, the windmill silhouetted.
