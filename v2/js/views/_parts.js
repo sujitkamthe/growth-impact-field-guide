@@ -3,6 +3,7 @@
 
 import { esc, mdInline, list, storageGet, storageSet } from '../ui.js';
 import { iconLink } from '../icons.js';
+import { scopeGlyph } from '../diagram.js';
 
 // The viewer's own scope, remembered from the header's Explore a scope menu. Null until they choose one,
 // so a first visit never presents a default as if it were their agreed scope.
@@ -62,9 +63,14 @@ export const NATURE = [
     { key: 'lasts', label: 'What lasts' },
 ];
 
-export const natureOf = scope => `<dl class="nature" aria-label="Nature of impact at ${esc(scope.name)}">
-    ${NATURE.map(n => `<div><dt>${n.label}</dt><dd>${mdInline(scope[n.key])}</dd></div>`).join('')}
-</dl>`;
+// Reach, How and What lasts beside the reach rings with this scope's ring shaded, so how far the
+// impact reaches is seen before it is read. Each row is a label and one sentence.
+export const natureOf = (scope, total) => `<div class="nature">
+    ${scopeGlyph(scope.order, { size: 112, total })}
+    <dl aria-label="Nature of impact at ${esc(scope.name)}">
+        ${NATURE.map(n => `<div><dt>${n.label}</dt><dd>${mdInline(scope[n.key])}</dd></div>`).join('')}
+    </dl>
+</div>`;
 
 // What each kind of subgroup means, said on the page wherever it appears so nobody
 // has to infer whether a group is required.

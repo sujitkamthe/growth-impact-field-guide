@@ -91,7 +91,7 @@ export function render(content, [id, areaId]) {
                 <p class="eyebrow"><a class="back-link" href="#expectations">Expectations</a></p>
                 <h1>${esc(scope.name)}${savedScope(content)?.id === scope.id ? ` ${EXPLORING}` : ''}</h1>
                 <p class="mindset">${esc(scope.mindset)}</p>
-                ${natureOf(scope)}
+                ${natureOf(scope, content.scopes.length)}
                 <div class="lede">${md(scope.whatChanges)}</div>
                 ${next ? `<p>${iconLink(`#compare/${scope.id}/${next.id}`, `Compare with ${esc(next.name)}`, 'compare')}</p>` : ''}
             </header>

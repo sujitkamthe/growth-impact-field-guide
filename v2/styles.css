@@ -535,14 +535,25 @@ h1 .exploring-tag { vertical-align: 0.35em; margin-left: 6px; }
 .scope-head .mindset { margin-bottom: 12px; }
 .scope-head .lede p { margin-bottom: 8px; }
 /* Nature of impact: three short answers side by side, under the mindset. */
-/* Reach, How and What lasts: three short sentences, read as sentences, so the emphasis the content
-   carries elsewhere is dropped here rather than breaking each one into bold and plain fragments. */
-.nature { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 32px; margin: 24px 0 28px; }
-.nature div { border-top: 1px solid var(--line); padding-top: 12px; }
-.nature dt { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
-.nature dd { margin: 0; font-size: 17px; line-height: 1.55; color: var(--text-2); }
-.nature dd strong { font-weight: inherit; }
-@media (max-width: 760px) { .nature { grid-template-columns: 1fr; gap: 14px; } }
+/* Reach, How and What lasts: the reach rings beside three rows, each a label and one sentence, so
+   the labels line up and the block can be scanned down the left. */
+.nature {
+    display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 28px; align-items: center;
+    margin: 24px 0 28px; padding: 20px 24px; max-width: 880px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+}
+.nature .glyph { width: 112px; height: 112px; }
+.nature dl { margin: 0; display: grid; gap: 10px; }
+.nature dl > div { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 16px; align-items: baseline; }
+.nature dl > div + div { border-top: 1px solid var(--line); padding-top: 10px; }
+.nature dt { font-size: 14px; font-weight: 600; color: var(--muted); }
+.nature dd { margin: 0; font-size: 17px; line-height: 1.5; color: var(--text-2); }
+.nature dd strong { font-weight: 600; color: var(--text); }
+@media (max-width: 760px) {
+    .nature { grid-template-columns: 1fr; gap: 16px; padding: 16px; }
+    .nature .glyph { width: 72px; height: 72px; }
+    .nature dl > div { grid-template-columns: 1fr; gap: 2px; }
+}
 .cmp-nature { margin-bottom: 40px; }
 .cmp-nature h2 { font-size: 20px; }
 .cmp-nature .cmp-cols p:not(.cmp-scope) { margin: 0; color: var(--text); }
