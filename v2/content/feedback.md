@@ -7,7 +7,7 @@ lede: How to give feedback that covers all of someone's impact, through the whol
 
 *Feedback is how the expectations agreed at the start of the cycle stay in view until the team check.*
 
-An expectations doc agreed at the start of the cycle only helps if people hear, as the cycle goes on, how their work compares with it. When nobody says during the cycle that something is expected, it comes up for the first time in the self-assessment, when it's too late to change anything, and the team check becomes a debate about what was expected rather than a look at what happened. Feedback given when the moment happens is what prevents that, and giving it is part of everyone's job, whatever their scope.
+An expectations doc agreed at the start of the cycle only helps if people hear, as the cycle goes on, how their work compares with it. When nobody says during the cycle that something is expected, it comes up for the first time in the self-assessment, when it's too late to change anything, and the team check becomes a debate about what was expected rather than a look at what happened. Feedback given when the moment happens is what prevents that, and giving it is expected of everyone, whatever their scope.
 
 ## Cover all three areas
 
@@ -37,7 +37,7 @@ Each piece keeps the same form as in [Reviewing and feedback](#teammates/giving-
 
 It is easy to give strong performers less feedback, because nothing seems to need fixing. Without it they stop being stretched, and after a while they stop growing and lose interest in their work. Tell them specifically what their work changed, and talk with them about what would challenge them next: a responsibility they haven't had before, a harder problem, or a stretch into the next scope. Recognition and a next challenge go together, because recognition on its own doesn't keep someone growing.
 
-People who are strong in every area also tend to pick up whatever falls between other people's work. That is impact of their own, so name it in your feedback, and don't let it become their job by default.
+People who are strong in every area also tend to pick up whatever falls between other people's work. That is impact of their own, so name it in your feedback, and don't let it become their responsibility by default.
 
 ## When someone says no
 

@@ -35,14 +35,14 @@ Exceeds is judged against your current scope, and it doesn't change your scope: 
 
 - **Client & Delivery**: building what the client needs, building it well and owning what the team commits to deliver.
 - **People & Team**: helping the people around you become more effective.
-- **Org & Community**: contributing to Sahaj beyond your immediate delivery. You choose how, but contributing is part of the job.
+- **Org & Community**: contributing to Sahaj beyond your immediate delivery. You choose how, but contributing is expected of everyone.
 
 Client & Delivery and People & Team each have three [facets](#area/client-delivery), and all three count toward the area's one rating. The lines under a facet show what it looks like at your scope; they are signs to look for, and nobody ticks them off one by one. Org & Community has [ways to contribute](#area/org-community) instead: expectations shared by everyone at your scope, and ways to contribute that you choose from to meet them.
 
 <!-- callout -->
 Each area gets one rating, judged across its facets as a whole rather than counted. Exceeding your scope's expectations in two facets can carry a weaker third, but a facet you don't show at your scope at all makes the area below expectations.
 
-All three areas are part of everyone's job, and within each you choose how you contribute: someone who doesn't enjoy writing can give a talk or build a tool instead. What you can't choose is to leave an area, or a facet, to other people.
+All three areas are part of what's expected of everyone, and within each you choose how you contribute: someone who doesn't enjoy writing can give a talk or build a tool instead. What you can't choose is to leave an area, or a facet, to other people.
 
 Learning has no area of its own because it runs through all three: at every scope you keep your craft and judgment current, act on feedback, and adapt when the context changes.
 

@@ -26,7 +26,7 @@ Contributing to, driving and eventually designing the programmes and initiatives
 
 Giving back inside and outside Sahaj through sessions, events such as DevDay, writing, talks and open source.
 
-## Contribution is part of the job
+## Contributing is expected of everyone
 
 <!-- band -->
 *What you contribute is your choice. Whether you contribute is not.*

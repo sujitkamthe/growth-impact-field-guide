@@ -7,7 +7,7 @@ lede: Going deep and going broad both count. How specialists and all-rounders gr
 
 You can grow by going deep. You don't have to become a consultant, a delivery lead or a people lead to grow at Sahaj, at any scope.
 
-All three areas are part of everyone's job, and within each you choose how you contribute, so a specialist usually contributes through their strength: growing people in their own domain, or building a capability other teams use. When a strength the team already relies on would do more with a different split of the work, a [specialist agreement](#how-it-works/specialist-agreements), at Extended scope and above, lets you hand one responsibility to a teammate and agree a stronger contribution through your strength instead. You earn an agreement through a strength; you can't claim one by naming a weakness, and it never removes an area or a facet.
+All three areas are part of what's expected of everyone, and within each you choose how you contribute, so a specialist usually contributes through their strength: growing people in their own domain, or building a capability other teams use. When a strength the team already relies on would do more with a different split of the work, a [specialist agreement](#how-it-works/specialist-agreements), at Extended scope and above, lets you hand one responsibility to a teammate and agree a stronger contribution through your strength instead. You earn an agreement through a strength; you can't claim one by naming a weakness, and it never removes an area or a facet.
 
 Depth is recognised by what it changes and how far it reaches, not by the choice to specialise.
 
@@ -20,7 +20,7 @@ Depth is recognised by what it changes and how far it reaches, not by the choice
 | You don't enjoy one activity, such as writing | You choose another way to contribute in the same area. No agreement is needed. |
 | You want to build up a strength | Agree opportunities and support with your team, while your other responsibilities continue. |
 | You have a strength the team relies on, which would do more if you handed over one responsibility | A specialist agreement: a named teammate accepts the responsibility, and you agree a stronger contribution through your strength. |
-| You want to stop contributing in a whole area | The area stays part of the job. Agree a way to contribute that suits you better. |
+| You want to stop contributing in a whole area | The area stays part of what's expected of you. Agree a way to contribute that suits you better. |
 
 Wanting to grow a strength doesn't raise the bar by itself. The stronger contribution comes with the agreement, because it is what makes the handover fair to the teammate who takes the responsibility on.
 

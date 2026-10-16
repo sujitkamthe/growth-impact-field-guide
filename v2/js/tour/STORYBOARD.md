@@ -61,7 +61,7 @@ The explorer walks a path; each principle is a place discovered as the fog lifts
 ### 5. Your strengths (`strengths`)
 Noon in the square, straight on from Areas, and back to the same spot at the end, so Your quest starts as Areas left it.
 1. Deciding where to go deep, as a direction you keep: the explorer walks to the square's east edge and looks out to the market; Client & Delivery's name stays bright while the other two dim. Quest box: "Agree where you go deep".
-2. All three areas stay part of the job: the other two names come back up as the explorer looks round at each district in turn.
+2. All three areas stay part of what's expected: the other two names come back up as the explorer looks round at each district in turn.
 3. Handing one responsibility to a teammate who accepts it: the villager watching from the square's south side walks over; the explorer hands something over (Interact), they take it (Interact) and nod. A parchment card opens in the HUD, "Specialist agreement", its lines appearing as the narrator names them: a strength your team relies on, one responsibility accepted by a teammate.
 4. A stronger contribution in return: the teammate heads back; the explorer turns to the market and works, the market lit while it is shown (as in Areas, a moment's light, not reach). The card's third line: a stronger contribution through your strength.
 5. No one specialises at a teammate's unacknowledged expense: the explorer walks back to the fountain, the teammate nods from their spot, and the quest box ticks: "Agreement made".

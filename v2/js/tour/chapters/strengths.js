@@ -1,9 +1,9 @@
-// Chapter 5, Your strengths: going deep in what you do best, with every area still part of the job.
+// Chapter 5, Your strengths: going deep in what you do best, with every area still part of what's expected.
 //
 // 1. "Deciding your own growth includes deciding where to go deep."  The explorer leaves the fountain
 //    for the square's east edge and looks out to the market; Client & Delivery's name stays bright
 //    while the other two dim. Quest: "Agree where you go deep".
-// 2. "All three areas stay part of your job..."  The other two names come back up as the explorer
+// 2. "All three areas stay part of what's expected of you..."  The other two names come back up as the explorer
 //    looks round at each district in turn.
 // 3. "When your team already relies on a strength of yours..."  The teammate who watched from the
 //    square's south side walks over; the explorer hands something over and they take it, then nod.
@@ -133,7 +133,7 @@ export default {
         world.fog.set(reveals);
 
         // ---- District names: Client & Delivery stays bright as the explorer looks to it; the others dim,
-        // then come back up, because every area stays part of the job. All three are up at the end. -----
+        // then come back up, because every area stays part of what's expected. All three are up at the end. -----
         const dim = 0.75 * ease.inOut(span([0, 0.35], [0, 0.85])) * (1 - ease.inOut(span([1, 0.05], [1, 0.4])));
         const labels = group?.userData.labels;
         labels?.set('cd', 1);

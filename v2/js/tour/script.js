@@ -26,15 +26,15 @@ export const CHAPTERS = [
         'Each scope builds on the ones before it. Your own work and the help you give teammates still matter as your responsibilities grow.',
     ] },
     { id: 'areas', title: 'Three areas', beats: [
-        "At every scope, you have impact in the same three areas, and all three are part of everyone's job.",
+        "At every scope, you have impact in the same three areas, and all three are part of what's expected of everyone.",
         'Client and Delivery: building what the client needs, building it well, and owning what you commit to. That means agreeing realistic dates with the client, not only meeting them.',
         'People and Team: helping the people around you get better at what they do.',
-        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is part of the job.',
+        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is expected of everyone.',
         "Each area has its own rating against your scope, so you can see where you're strong and where you need support.",
     ] },
     { id: 'strengths', title: 'Your strengths', beats: [
         'Deciding your own growth includes choosing where to go deep: a direction you keep for many quarters, because it is where you want to grow.',
-        'All three areas stay part of your job, but within each you choose how you contribute, so you can lean on what you do best.',
+        "All three areas stay part of what's expected of you, but within each you choose how you contribute, so you can lean on what you do best.",
         'When your team already relies on a strength of yours, you can agree to hand one responsibility to a teammate who accepts it.',
         'In return, you take on a stronger contribution through that strength, one your teammates will be able to see.',
         "Nobody specialises at a teammate's unacknowledged expense. The agreement is written down, and it counts for both of you.",
