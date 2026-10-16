@@ -66,7 +66,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
   - **Question a date or estimate** I don't believe in, including one given on my behalf, before it becomes a promise
   - **Deliver what I committed to** when I said I would, or say early that I can't
   - **Adjust my plan** when priorities, estimates or requirements change, and tell the people affected
-- **Follow our delivery practices**: I follow **Sahaj's engineering and delivery practices**, such as writing tests first, pairing and releasing in small steps
+- **Follow our delivery practices**: I follow **Sahaj's engineering and delivery practices**, such as writing tests first, pairing and releasing in small steps, and know why each one helps, so I can adapt it when the context changes
   - Keep **the board, the build and my branches** up to date, so the team sees the real state of the work
   - Keep to the team's practices **when a deadline is close**, and say so when I think one should change
 

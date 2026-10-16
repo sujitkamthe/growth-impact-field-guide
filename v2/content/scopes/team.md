@@ -72,7 +72,7 @@ At Extended you shape work across several features; at Team you change how **the
 - **Drive systemic risks to a decision**: I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
   - Spot risks that affect **the whole engagement**, not only one stream
   - Raise them early **with the client and with Sahaj**, and drive each one to a clear decision or action
-- **Agree commitments the team can keep**: I agree **the team's commitments** with the client, and hold the team's position when a date, scope or quality target isn't safe
+- **Agree commitments the team can keep**: I agree **the team's commitments** with the client, at a pace the team can keep up, and hold the team's position when a date, scope or quality target isn't safe
   - Agree dates and scope **the team believes it can meet**, with the risks stated, rather than accepting the first date the client asks for
   - When pressure would mean **overpromising, cutting quality or long hours**, explain the consequences, recommend what to do instead and stay with it while the evidence supports it
   - **Go back to the client** when circumstances change, such as technical debt the team accepted for a deadline that now needs paying down
