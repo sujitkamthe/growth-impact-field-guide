@@ -38,11 +38,17 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - **Write clean, tested code**: I write **clean, tested, secure code** across the stack, applying sound design principles by default
   - **Write tests alongside code**, so changes are safe to make
   - Follow **secure coding practices** without being reminded
-  - Keep code **easy for the next person** to understand and change
+  - Keep code **easy for the next person** to understand and change, and **leave the code around my change better than I found it**, refactoring as I deliver without waiting to be asked
+  - **Explain why I chose an implementation**, including what I traded off, such as simplicity against performance
 - **Own changes in production**: I debug issues independently and **own how my changes behave in production**, including defects I introduce
-  - Check that my changes **work as intended once they are released**
+  - Check that my changes **work as intended once they are released**, using logs, metrics and alerts rather than waiting for someone to report a problem
   - **Debug issues on my own**, and ask for help once I have narrowed the problem down
   - **Fix the defects I introduce**, and find out what let them through
+- **Steer AI tools to a quality result**: I **use AI tools to deliver well-built work faster**, steering them to the result the work needs and owning everything they produce
+  - Settle **what the work must do and how we'll know it works** before asking an AI tool to build it, and correct the tool when its result drifts
+  - **Own every change I commit**, whether I wrote it or an AI tool generated it, and be able to explain why it works
+  - Check generated code **where it is most likely to fail**, such as permission boundaries, retries and concurrent requests, rather than accepting it because the tests pass
+  - Use AI tools to **learn as well as to produce**, asking for explanations and debugging problems myself often enough that I can still do it without them
 - **Keep learning**: I **keep learning** what my work needs, and improve how I work from what I learn
   - Learn **what the work needs next**, such as a new framework or part of the client's domain, without waiting to be taught
   - Try a better way of working when I find one, and **share it with the team**
@@ -52,23 +58,28 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - **Ask why**: I **ask why** behind the work, and connect my work to the feature and business context around it
   - Find out **what problem a piece of work solves** before I start it
   - Understand **how my work fits the feature** and what the client gains from it
+  - Understand **the constraints my work has to meet**, such as deadlines, cost and regulation
+  - **Say so** when a story or feature doesn't look like it will solve the problem behind it, and ask whether it's still needed
 - **Flag gaps early**: I **flag gaps**, contradictions and ambiguity early, and suggest alternatives when an ask looks wrong
   - Raise missing details, contradictions and unclear requirements **as soon as I notice them**
   - **Suggest an alternative** when an ask looks wrong, rather than building it as written
 
 #### Delivery ownership
 
-- **Take work from ask to production**: I **take work from an unclear ask to production on my own**, breaking it down and estimating sensibly
+- **Take work from ask to production**: I **take a story or a small feature from an unclear ask to production on my own**, breaking it down and estimating sensibly
   - Break unclear work into **small pieces** I can estimate and deliver
   - Take each piece **all the way to production**, not only to "code complete"
+  - **Check with the client or product owner** that the whole feature does what they needed, not only that each piece meets its acceptance criteria
   - Deliver **without a teammate guiding each step**, and ask for help once I'm genuinely stuck
 - **Deliver predictably**: I **deliver predictably**, keep progress visible, raise risks early and adjust plans when reality changes
   - **Question a date or estimate** I don't believe in, including one given on my behalf, before it becomes a promise
+  - Know **what my work depends on**, such as another team's API or a decision from the client, and follow it up before it blocks me
   - **Deliver what I committed to** when I said I would, or say early that I can't
   - **Adjust my plan** when priorities, estimates or requirements change, and tell the people affected
 - **Follow our delivery practices**: I follow **Sahaj's engineering and delivery practices**, such as writing tests first, pairing and releasing in small steps, and know why each one helps, so I can adapt it when the context changes
   - Keep **the board, the build and my branches** up to date, so the team sees the real state of the work
   - Keep to the team's practices **when a deadline is close**, and say so when I think one should change
+  - Follow **the client's rules on AI tools**, and never put the client's code or data into a tool the client hasn't approved
 
 ### Evidence
 
@@ -80,12 +91,14 @@ A client asks the team to add a second payment provider to its checkout. Payment
 
 - Can I explain the business problem behind my work, not just the ticket?
 - When I can't deliver what I committed to, do people hear it from me first, or find out when they ask?
+- Could I debug and change the code I shipped this month without an AI tool?
 
 ### Not yet
 
 - Delivery is strong, but only when someone else has defined the work tightly
 - Risks are first mentioned in stand-up on the day they become blockers
 - Dates are accepted without question, then missed or met through long hours
+- Commits generated code they can't explain, and learns how it works only when it fails in production
 
 ## People & Team
 

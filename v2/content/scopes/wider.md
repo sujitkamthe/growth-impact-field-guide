@@ -41,11 +41,13 @@ At Team you change how one team works; at Wider you shape direction **across tea
 
 - **Shape architecture beyond one team**: I shape long-term architecture **beyond one team**, making hard-to-reverse decisions responsibly
   - Shape architecture that **several teams, or a client's wider systems**, depend on
+  - Keep **the systems different teams build fitting together**, so they don't drift into designs that clash
   - Involve the people affected in decisions that are **hard to reverse**, weigh the options and record why we chose
   - Shape **the account's technical roadmap**, and help the client prioritise its larger technical initiatives
 - **Anticipate technology shifts**: I **anticipate technology and industry shifts**, and invest in Sahaj's long-term technical capability
   - Follow changes in technology and the industry, and judge **which ones matter to our clients**
   - Help Sahaj build **the skills it will need** before clients ask for them
+  - Build **Sahaj's capability in AI-assisted delivery**, such as practices, harnesses and training that teams across Sahaj adopt and keep using
 
 #### Consulting
 
@@ -58,6 +60,7 @@ At Team you change how one team works; at Wider you shape direction **across tea
 - **Change how the client's organisation works**: I **help the client change how its organisation works**, such as how its teams are structured or its engineering culture
   - Show the client's leaders **where structure or culture slows delivery**, with evidence
   - Work with them on the change **until their teams work the new way**
+  - Help the client decide **where AI belongs in their engineering organisation**, including their rules on data, code ownership and checking generated work
 - **Lead proposals**: I **lead proposals and demand conversations**, from framing the client's problem to the approach and team we propose
   - Frame **the client's problem** before proposing a solution
   - Propose **only what Sahaj's teams can deliver well**, so winning the work doesn't set them up to struggle
@@ -87,6 +90,7 @@ At Team you change how one team works; at Wider you shape direction **across tea
 
 - Do senior stakeholders seek my judgment, or only my expertise and my team's output?
 - When client deadlines and the teams' pace pull apart, which one do my decisions protect?
+- Will the architecture and direction I shaped still be right in several years?
 
 ### Not yet
 
@@ -184,12 +188,14 @@ At Team you build programmes and tools that other people keep running; at Wider 
 #### Initiatives and capability
 
 - Shaping how Sahaj hires or onboards, beyond one office
+- Changing how Sahaj hires and grows engineers as AI changes the work, such as interview problems that assess how a candidate frames a problem and checks a result before they write any code
 - Shaping proposals or pitches for new clients or other accounts, from framing the problem to the approach
 - Taking what you learned in Emerge into how Sahaj works, or shaping how the programme runs
 
 #### Community and external contribution
 
 - Leading Sahaj's thinking in a domain, inside and outside, in a way that changes how teams work or brings in work
+- Leading Sahaj's thinking on AI-assisted engineering, so teams across Sahaj and at its clients change how they deliver
 - Speaking at major industry conferences or publishing writing that changes how engineers in the industry work, or brings people or work to Sahaj
 - Shaping Sahaj's flagship DevDay so it changes how Sahaj is seen and brings in people, clients or work
 

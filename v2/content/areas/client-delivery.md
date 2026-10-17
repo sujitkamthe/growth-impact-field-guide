@@ -18,7 +18,7 @@ Clean, tested, maintainable engineering, from code and design to architecture, s
 
 ### Consulting
 
-Understanding the problem, removing ambiguity, proposing options and helping stakeholders decide what to build. Doing what is asked without questioning an unclear or risky ask is not consulting. Pushing back on what to build belongs here; pushing back on a date, scope or pace the team can't keep belongs to delivery ownership.
+Understanding the problem, removing ambiguity, proposing options and helping stakeholders decide what to build. Doing what is asked without questioning an unclear or risky ask is not consulting. Growing at Sahaj means moving from being given clarity to building it yourself: early on, teammates share the context and direction, and as you grow you are expected to build that clarity quickly on your own. Pushing back on what to build belongs here; pushing back on a date, scope or pace the team can't keep belongs to delivery ownership.
 
 ### Delivery ownership
 
@@ -31,6 +31,18 @@ Taking responsibility for commitments and outcomes, not only for finishing your 
 Combining technical craft, consulting and delivery in one area makes the guide easier to hold in your head, but it also makes it easier to hide a weak facet, so every scope lists its expectations by facet. When you assess this area, name each facet and say how strong it was; [Choosing a rating](#self-assessment/choosing-a-rating) says how the three make one rating.
 
 Consulting deserves particular care, because it is where self-assessment is least reliable. Almost everyone believes they consult well, so ask what changed because of how you framed a problem; the meetings you attended don't show that.
+
+## Working with AI tools
+
+*Whoever commits generated code owns it, and is expected to know why it works.*
+
+AI tools now write much of the code on many teams, which changes where the difference between engineers lies. When code is quick to produce, the scarcer contribution is deciding what the work must do, steering the tools toward it and showing that the result is safe in real use: under load, at a permission boundary or after a partial failure. A team that builds every request it receives can now build the wrong features faster and still look productive, so framing the problem and checking the outcome matter more at every scope. Each scope's technical craft expectations say how working with AI tools grows, from steering them to a well-built result on your own work at Direct to building Sahaj's capability at Wider. Where implementation depth is itself the hard part, such as security-critical or infrastructure code, the tools help less, and the specialist checking the risk needs stays in place.
+
+## When the client only wants execution
+
+*An engagement where the client has already decided what to build still has decisions to consult on every week.*
+
+Some clients bring Sahaj in to build what they have already decided, and it can seem that consulting has no place there. The work still raises questions only the team can answer: a requirement that contradicts another, a risk the client hasn't seen, an ask that would make the system fragile. Clarifying the requirement, raising the risk and proposing a sturdier alternative are all consulting, at every scope. The decision stays with the client: you remove ambiguity and make the trade-offs visible, so the client decides knowing them, even on small decisions. If you wait for a strategy workshop to show you can consult, you miss the chances that come up in everyday work.
 
 ## Holding your position
 

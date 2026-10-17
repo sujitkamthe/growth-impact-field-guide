@@ -41,12 +41,16 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 - **Design cross-cutting solutions**: I design solutions for **complex or cross-cutting requirements**, making deliberate trade-offs across performance, cost and reliability
   - Design how a requirement that **spans several features** fits across them, so the people building each part work from one design
-  - Weigh performance, cost and reliability **on purpose**, and explain why I chose the trade-off I did
+  - Decide whether to **build, buy or reuse** before designing something new
+  - Weigh performance, cost and reliability **on purpose**, and **write down why** I chose the trade-off I did, so the people who change the design later know the reasoning
   - Go through the design **with the people who will build on it** before they start
 - **Catch problems early**: I find edge cases, failure modes and technical debt in **the work I shape** before they cause problems
   - Look for edge cases and failure modes **while designing**, not after release
   - **Name the technical debt** a design creates, and agree with the team, and with the client where it affects them, when it will be paid down
   - Improve the **tests and monitoring** for the work I shape, so the next problem is caught sooner
+- **Share what works with AI tools**: I build **reusable instructions, prompts and skills for AI tools** that help the people on other features get well-built results from them
+  - Turn what works on my stream into **instructions, prompts or skills** my teammates reuse, such as the conventions and design decisions a tool needs to know
+  - Decide which parts of my stream's work **can safely be handed to AI tools**, based on whether a mistake in the result would be caught before release
 
 #### Consulting
 
@@ -54,6 +58,8 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - Separate **symptoms from root causes** before proposing a solution
   - Write the problem down in **words the client agrees with**
   - Offer the client **more than one option**, with what each costs and risks, so they decide knowing the trade-offs
+  - Use quick first versions to **test an idea before the client commits to it**, and make clear which work is a prototype and which the team will have to support, secure and maintain
+  - **Follow up the option the client chose** once it is in use, and go back to them when it isn't solving the problem
 - **Push back with reasons**: I **push back on misaligned or risky asks** and explain why, without losing the client's trust
   - **Say early** when an ask works against the client's goals or carries a risk they haven't seen
   - Explain my reasoning and **offer an alternative**, rather than only saying no
@@ -66,6 +72,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 - **Own a stream**: I **own a stream or epic** of work, including its dependencies on other features and its delivery risk
   - Own the stream **from start to finish**, so the team and client know to come to me about it
+  - Order the stream's work by **what matters most to the client's business**, and change the order when that changes
   - Track its **dependencies on other features and teams**, and sort them out before they block anyone
   - Raise its **delivery risks** early and drive each one to a decision
 - **Start up a new stream**: I **set up new streams** so the people on them can start delivering quickly
@@ -74,6 +81,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
   - Bring the people joining **up to speed** on the client and the problem
 - **Agree realistic commitments**: I agree **my stream's commitments** with the team and client, and make trade-offs between features, time and quality explicit
   - Agree dates and scope for **my stream** that the team believes it can meet, and say early when that changes
+  - Base those dates on **how long the work takes to check and release**, not only on how quickly AI tools can generate the code
   - Tell the team and client **what each choice gives up**, instead of absorbing it quietly
   - Resolve **mismatched expectations** with the people affected, such as a client expecting more than was agreed, instead of covering the gap with longer hours
 - **Hold the bar on delivery**: I **hold the bar on how my stream delivers**, and advocate for Sahaj's delivery approach
@@ -96,6 +104,7 @@ At Direct you deliver your own stories well; at Extended you shape work that **s
 
 - Agrees to every date the client asks for, and the stream makes up the difference in long hours
 - Sorts out the stream's dependencies only once they block someone
+- Hands the client options and builds the one they pick, without checking afterwards whether it solved their problem
 
 ## People & Team
 
@@ -113,9 +122,11 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
   - Meet the people I mentor **regularly through the cycle**, not only when they ask
   - Explain the **reasoning behind my advice**, so they can make the next call without me
   - Give them **harder work** as their judgment grows
+  - Make sure they **understand the code they ship**, especially newer teammates who can generate code faster than they can judge it
 - **Help without taking over**: I help teammates succeed **on their features**, without taking the work over
   - Review designs and pair with teammates **on features I'm not building**, when it helps them
   - Unblock them by showing how, and **leave the work in their hands**
+  - **Guide teammates through hard debugging** by showing how I narrow a problem down, rather than finding the fault for them
 
 #### Feedback and trust
 

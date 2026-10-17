@@ -41,6 +41,7 @@ At Extended you shape work across several features; at Team you change how **the
 
 - **Set the team's technical direction**: I shape **the team's technical direction and engineering bar**, with principles and standards the team uses to decide well without me
   - Set **the team's technical direction** together with the team, and write down the principles behind it
+  - Base the direction on **where the client's business is going**, and plan for the technical needs and risks the engagement will face before they arrive
   - Agree engineering standards the team uses to make good decisions **when I'm not in the room**
   - Update the principles and standards **as the team learns** what works
 - **Introduce practices the team adopts**: I introduce patterns, tools or practices **the team chooses to adopt**, preventing recurring technical debt and toil
@@ -51,9 +52,15 @@ At Extended you shape work across several features; at Team you change how **the
   - Become the person **the team and client turn to** in an area such as security, performance or the client's domain
   - Teach it through pairing, write-ups or sessions, **so teammates can work in the area without me**
 
+- **Set how the team works with AI tools**: I agree **how the team uses AI tools**, and build the shared harness that keeps their results to the team's standards
+  - Agree with the team **what it hands to AI tools**, how generated work is checked, and what context the tools are given
+  - Build **a harness the whole team uses**: the automated checks, instructions and shared context that catch a tool's mistakes before anyone reviews the work
+  - Judge the tools by **outcomes the client cares about**, such as rework, defects that reach production and time to a working release, not by how much code the team produces
+
 #### Consulting
 
 - **Align stakeholders**: I **align stakeholders** with conflicting priorities toward a shared direction, through explicit trade-offs between features, cost and quality
+  - Learn **what each stakeholder needs**, including needs they haven't stated, and who influences each decision
   - Bring stakeholders with conflicting priorities to **a direction they all agree to**
   - Make the **trade-offs between features, cost and quality** explicit, so they decide knowing them
   - Keep them aligned **as priorities change**, not only at the start
@@ -68,6 +75,7 @@ At Extended you shape work across several features; at Team you change how **the
 
 - **Improve how the team delivers**: I improve how **the whole team** plans and delivers, with practices the team keeps up without being made to
   - Find where **the team's planning and delivery** break down, and work with the team on the fixes
+  - **Balance the team's streams of work** against each other, so one stream's deadline doesn't quietly take people and time from the rest
   - The team keeps up the practices we agree **without being made to**
 - **Drive systemic risks to a decision**: I surface **systemic** client or delivery risks early and drive them to a clear decision or corrective action
   - Spot risks that affect **the whole engagement**, not only one stream
@@ -76,6 +84,7 @@ At Extended you shape work across several features; at Team you change how **the
   - Agree dates and scope **the team believes it can meet**, with the risks stated, rather than accepting the first date the client asks for
   - When pressure would mean **overpromising, cutting quality or long hours**, explain the consequences, recommend what to do instead and stay with it while the evidence supports it
   - **Go back to the client** when circumstances change, such as technical debt the team accepted for a deadline that now needs paying down
+  - **Reset the client's expectations** when AI tools lead them to expect faster delivery than the team can safely check and release
 
 ### Evidence
 
@@ -113,6 +122,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 - **Build mentoring into the team**: I build mentoring and learning **into how the team works**, and coach teammates to mentor
   - Make pairing, mentoring and learning part of **how the team plans its work**
   - **Coach teammates to mentor newer teammates**, so mentoring on the team doesn't depend on me
+  - Give newer teammates work that builds **the debugging and design judgment** AI tools can't give them
 
 #### Feedback and trust
 
