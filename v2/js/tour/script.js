@@ -6,7 +6,7 @@
 export const CHAPTERS = [
     { id: 'arrival', title: 'Welcome', beats: [
         'Welcome to Sahaj. This guide explains how we think about growth and the impact of our work.',
-        'It exists so that you know what is expected of you, and what you can expect of the people around you, from the start of each cycle rather than at the end of it.',
+        'It exists to help you plan your growth, and to agree what you and the people around you can expect of each other, from the start of each cycle, usually a quarter, rather than at the end of it.',
         "Let's start with the principles behind it.",
     ] },
     { id: 'principles', title: 'Principles', beats: [
