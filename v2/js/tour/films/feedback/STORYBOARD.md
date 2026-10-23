@@ -15,7 +15,7 @@ Ideas are places and actions in the village, never diagrams:
 - **In private**: a short walk out of the square to the riverbank east of the bridge, two people alone by the water.
 - **A note**: the HUD's parchment card, always in the guide's form: what I saw, what it changed, what to try instead when something should change, and the area when it helps.
 - **The notes counter** counts the feedback the explorer has been given, as in the first film.
-- **The team check** is the team standing in a small circle between the notice board and the fountain, with the HUD's three area rows: two marked, Org & Community's slot still empty.
+- **The team check** is the team standing in a small circle between the notice board and the fountain, with the HUD's three area rows: two marked, Building Sahaj's slot still empty.
 
 The cast, by villager index: 10 the new joiner, who arrives over the bridge; 4 the teammate who gives the showcase; 2 and 3 the client's people; 8 the teammate who watches the showcase and takes the explorer aside; 6 the planner, who runs the client's planning, at the hall's door; 5 a teammate reading the notice board; 0, 1, 7 and 9 the village's background pairs. The film's places, paths and shots are in `chapters/_feedback.js`.
 
@@ -54,7 +54,7 @@ Early morning.
 1. "There are no titles at Sahaj, so how long someone has been here is never a reason to stay quiet, in either direction. Say what you see to anyone, without fear."
    The camera rises from the riverbank over the village. At the notice board the new joiner turns to the older teammate reading beside them and tells them something; they nod. The explorer sets off for the hall.
 2. "It covers more than the code too: how someone works with the client, who grew because of them, and what they gave back to Sahaj."
-   The HUD's three area rows appear and fill one by one, Client & Delivery, People & Team, Org & Community, while the exchanges go on at the market, by the houses and at the notice board, where the teammate now answers the joiner. The teammate from the riverbank walks back towards the square; the explorer reaches the hall's door.
+   The HUD's three area rows appear and fill one by one, Client & Delivery, People & Team, Building Sahaj, while the exchanges go on at the market, by the houses and at the notice board, where the teammate now answers the joiner. The teammate from the riverbank walks back towards the square; the explorer reaches the hall's door.
 3. "Tell the people already doing well what their work changed, and ask what they'd like to take on next."
    At the hall's door, the planner. The explorer tells them what their work changed, then points out over the river; they both look, and the planner nods. Toast, labelled "Ask for more": "What would you like to take on next?"
 
@@ -68,6 +68,6 @@ Afternoon.
 ### 7. Looking ahead (`ahead`)
 Late afternoon into golden hour.
 1. "At each team check, look for what nobody has seen yet, such as an area with no feedback, and agree who will arrange an opportunity for it next cycle."
-   The team in its circle. The HUD's area rows show Client & Delivery and People & Team marked and Org & Community's slot still empty; toast, labelled "Team check": "Where is evidence missing?" The teammate from the riverbank speaks, the others nod, and the planner raises a hand to arrange it. Quest box: "Next cycle: an opportunity in Org & Community".
+   The team in its circle. The HUD's area rows show Client & Delivery and People & Team marked and Building Sahaj's slot still empty; toast, labelled "Team check": "Where is evidence missing?" The teammate from the riverbank speaks, the others nod, and the planner raises a hand to arrange it. Quest box: "Next cycle: an opportunity in Building Sahaj".
 2. "Make it weekly. This week, tell one teammate what you saw them do and what it changed, and ask another what you could do differently next time."
    The rows go, and the camera pulls up high over the village in golden light, the pairs still turning to each other. Quest box: "This week: tell one, ask one". The player's end card follows, with "Read about feedback" and "Watch How growth works at Sahaj".

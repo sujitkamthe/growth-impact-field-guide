@@ -3,9 +3,9 @@
 //
 // 1. "At each team check, look for what nobody has seen yet..."  Late afternoon. The team in its circle
 //    between the notice board and the fountain. The HUD's area rows show Client & Delivery and People &
-//    Team marked and Org & Community's slot still empty; toast, labelled "Team check": "Where is
+//    Team marked and Building Sahaj's slot still empty; toast, labelled "Team check": "Where is
 //    evidence missing?" The teammate from the riverbank speaks, the others nod, and the planner raises a
-//    hand to arrange it. Quest box: "Next cycle: an opportunity in Org & Community".
+//    hand to arrange it. Quest box: "Next cycle: an opportunity in Building Sahaj".
 // 2. "This week, tell one teammate what you saw them do and what it changed..."  The rows go; the
 //    circle carries on talking as the camera pulls up high over the village in golden light, pairs still
 //    turning to each other everywhere. Quest box: "This week: tell one, ask one". The player's end card
@@ -70,13 +70,13 @@ export default {
         // ---- HUD ------------------------------------------------------------------------------------------
         world.hud.notes(4);
         if (t < at(1, 0.14)) {
-            // the area rows: two marked, Org & Community's slot still empty; in, then out as the camera lifts
+            // the area rows: two marked, Building Sahaj's slot still empty; in, then out as the camera lifts
             const k = t < at(1, 0) ? seg(t, at(0, 0.06), at(0, 0.26)) : 0.25 * (1 - seg(t, at(1, 0), at(1, 0.12)));
             world.hud.rows(areaSlots(['cd', 'pt']), k);
         }
         world.hud.toast('Where is evidence missing?', seg(t, at(0, 0.05), at(0, 0.6)), { label: 'Team check' });
         if (t < at(0, 0.62)) world.hud.quest('Make feedback a habit', null);
-        else if (t < at(1, 0.2)) world.hud.quest('Next cycle: an opportunity in Org & Community', null);
+        else if (t < at(1, 0.2)) world.hud.quest('Next cycle: an opportunity in Building Sahaj', null);
         else world.hud.quest('This week: tell one, ask one', null);
     },
 };

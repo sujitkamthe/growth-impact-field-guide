@@ -95,7 +95,7 @@ function expectation(e) {
 export const expectationList = (items, cls = 'plain-list', view = 'concise') =>
     items.length ? `<ul class="${cls} ex-${view}">${items.map(expectation).join('')}</ul>` : '';
 
-// An area's expectations: labelled facet groups, or Org & Community's shared lines.
+// An area's expectations: labelled facet groups, or Building Sahaj's shared lines.
 export function expectationGroups(block, cls = 'plain-list', view = 'concise') {
     if (!block.facets.length) return expectationList(block.shared, cls, view);
     return `<div class="facet-groups">${block.facets.map(f => `<div class="facet">
@@ -103,7 +103,7 @@ export function expectationGroups(block, cls = 'plain-list', view = 'concise') {
     </div>`).join('')}</div>`;
 }
 
-// Org & Community's ways to contribute, each with this scope's examples.
+// Building Sahaj's ways to contribute, each with this scope's examples.
 export const routeGroups = (block, cls = 'plain-list secondary') => `<div class="route-groups">${block.routes.map(r => `<div class="facet">
         <p class="facet-label">${esc(r.title)}</p>${list(r.items, cls)}
     </div>`).join('')}</div>`;

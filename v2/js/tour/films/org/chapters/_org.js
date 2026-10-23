@@ -1,4 +1,4 @@
-// Shared pieces for the Org & Community film ("Building Sahaj together"): the film's own places, the
+// Shared pieces for the Building Sahaj film ("Building Sahaj together"): the film's own places, the
 // props its chapters build (a fingerpost for the three ways to contribute, the DevDay stage, the
 // workshop, the tool sheds, the broken bridge plank, a small fire, a mended fence rail), a person
 // "plan" runner that keeps every walk at a real pace, and a hook that tips a person forward for a
@@ -783,7 +783,7 @@ export const AFTER = {
 AFTER.room = AFTER.counts;
 
 // The world's own state for the whole film: Client & Delivery and People & Team banners up (as after
-// the guide's film), the landmarks found so far, Org & Community's banners up from DevDay (oc) and the
+// the guide's film), the landmarks found so far, Building Sahaj's banners up from DevDay (oc) and the
 // explorer's note on the board (note, pinned in Ways).
 export function keepWorld(world, oc = 1, { note = 1 } = {}) {
     world.props.noticeSheet.show(note);

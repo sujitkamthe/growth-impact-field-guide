@@ -65,7 +65,7 @@ export function render(content) {
                     <span class="tour-card-time">${esc(film('guide').length)}</span>
                 </a>
                 <div class="start-films">
-                    ${filmLink(film('org'), 'about the Org & Community area')}
+                    ${filmLink(film('org'), 'about the Building Sahaj area')}
                     ${filmLink(film('feedback'), 'about giving and asking for feedback')}
                 </div>
             </header>

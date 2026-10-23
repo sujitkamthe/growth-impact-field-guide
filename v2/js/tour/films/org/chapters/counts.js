@@ -1,14 +1,14 @@
 // Org film, chapter 4, What counts: the quiet fix weighs as much as the stage.
 //
-// 1. "What counts is what changed, not how visible it was."  The camera comes down beside the square:
+// 1. "What counts is meaningful impact, or a genuine attempt to create it, not just taking part in an activity."  The camera comes down beside the square:
 //    the DevDay stage, bright and crowded, on one side; the bridge on the other, where a villager
-//    catches a foot on a broken plank and stumbles. Toast "What changed, not how visible".
+//    catches a foot on a broken plank and stumbles. Toast "Impact, not just taking part".
 // 2. "A quiet fix that saves many people time every week can matter more than a big stage."  The
 //    explorer kneels on the bridge and lays a new plank; villagers cross it smoothly, and then the
 //    day speeds up: a time-lapse, the sun racing, people crossing again and again.
-// 3. "And it lasts through the cycle: a contribution you keep up, and can point to."  The season
+// 3. "And you work on it steadily through the cycle, with a result your teammates can see."  The season
 //    passes (the sun sweeps a day and a half): the bridge still in use, the tool shed still busy with
-//    its keepers. Quest "A contribution you keep up". It ends at dawn with the explorer back at their
+//    its keepers. Quest "Steady through the cycle". It ends at dawn with the explorer back at their
 //    plot.
 //
 // The time-lapse is a warped time (timeLapse in _org.js): everyone's walks and work run on it, so
@@ -158,8 +158,8 @@ export default {
         ]);
 
         // ---- HUD -----------------------------------------------------------------------------------------
-        world.hud.toast('What changed, not how visible', seg(t, at(0, 0.05), at(0, 0.95)), { label: 'What counts' });
+        world.hud.toast('Impact, not just taking part', seg(t, at(0, 0.05), at(0, 0.95)), { label: 'What counts' });
         // The previous chapter's quest gives way as this one opens, so the box names what's on screen.
-        world.hud.quest(t < at(0, 0.15) ? 'How far it reaches' : t < at(2, 0.1) ? 'What counts' : 'A contribution you keep up', t < at(0, 0.15) ? '4/4' : null);
+        world.hud.quest(t < at(0, 0.15) ? 'How far it reaches' : t < at(2, 0.1) ? 'What counts' : 'Steady through the cycle', t < at(0, 0.15) ? '4/4' : null);
     },
 };

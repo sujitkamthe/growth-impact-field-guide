@@ -6,7 +6,7 @@
 //    joiner telling one of the older villagers something, who nods. The explorer sets off for the hall.
 // 2. "It covers more than the code too..."  The HUD's three area rows appear and fill one by one as
 //    exchanges go on in each district: at the market's workbench (Client & Delivery), among the houses
-//    (People & Team), and at the notice board (Org & Community). The teammate from the riverbank walks
+//    (People & Team), and at the notice board (Building Sahaj). The teammate from the riverbank walks
 //    back towards the square; the explorer reaches the hall's door.
 // 3. "Tell the people already doing well what their work changed..."  At the hall's door, the teammate
 //    who runs the client's planning. The explorer tells them what their work changed, then points out

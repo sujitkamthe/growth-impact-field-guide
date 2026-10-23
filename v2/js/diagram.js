@@ -4,7 +4,7 @@
 import { esc } from './ui.js';
 
 // Clockwise from twelve o'clock: Client & Delivery on top, People & Team lower right,
-// Org & Community lower left.
+// Building Sahaj lower left.
 const SECTORS = { cd: [-60, 60], pt: [60, 180], oc: [180, 300] };
 const LABEL_ANGLE = { cd: 0, pt: 120, oc: 240 };
 
@@ -116,7 +116,7 @@ const AREA_ICONS = {
     cd: '<path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/>',
     // People & Team: two people.
     pt: '<circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.6"/><path d="M15.6 14.2c.5-.1.9-.2 1.4-.2 2.5 0 4.5 2 4.5 4.5"/>',
-    // Org & Community: people connected.
+    // Building Sahaj: people connected.
     oc: '<circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M10.9 6.9 6.1 16.1M13.1 6.9l4.8 9.2M7.2 18h9.6"/>',
 };
 

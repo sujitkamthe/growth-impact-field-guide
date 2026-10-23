@@ -36,9 +36,9 @@ Exceeds is judged against your current scope, and it doesn't change your scope: 
 
 - **Client & Delivery**: building what the client needs, building it well and owning what the team commits to deliver.
 - **People & Team**: helping the people around you become more effective.
-- **Org & Community**: contributing to Sahaj beyond your immediate delivery. You choose how, but contributing is expected of everyone.
+- **Building Sahaj**: contributing to Sahaj beyond your immediate delivery. You choose how, but contributing is expected of everyone.
 
-Client & Delivery and People & Team each have three [facets](#area/client-delivery), and all three count toward the area's one rating. The lines under a facet show what it looks like at your scope; they are signs to look for, and nobody ticks them off one by one. Org & Community has [ways to contribute](#area/org-community) instead: expectations shared by everyone at your scope, and ways to contribute that you choose from to meet them.
+Client & Delivery and People & Team each have three [facets](#area/client-delivery), and all three count toward the area's one rating. The lines under a facet show what it looks like at your scope; they are signs to look for, and nobody ticks them off one by one. Building Sahaj has [ways to contribute](#area/org-community) instead: expectations shared by everyone at your scope, and ways to contribute that you choose from to meet them.
 
 <!-- callout -->
 Each area gets one rating, judged across its facets as a whole. Your strengths can be uneven, but a facet you don't show at your scope makes the area below expectations.

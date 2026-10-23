@@ -130,7 +130,7 @@ export const houses = [
     { at: [1.8, 19.8], facing: 180, w: 3, d: 2, floors: 2, roof: 'brown' },
     { at: [-13.2, 12.6], facing: 90, w: 2, d: 1, floors: 1, roof: 'slate' },
     { at: [13.6, 21.6], facing: 225, w: 2, d: 2, floors: 1, roof: 'terracotta', stone: true },
-    // Org & Community: the hall on the square's north side
+    // Building Sahaj: the hall on the square's north side
     { at: [-2.4, -3.8], facing: 160, w: 3, d: 2, floors: 2, roof: 'slate', stone: true },
     // Client & Delivery (east): the mill and a store
     { at: [21, -19.4], facing: 270, w: 2, d: 2, floors: 2, roof: 'brown', stone: true, mill: true },
@@ -165,7 +165,7 @@ export const plots = [
 export const districts = {
     cd: { name: 'Client & Delivery', centre: [16, 2], banners: [[11.6, -4.6, 200], [17.4, -1.2, 250], [18.4, 7.4, 270], [11.6, 8.2, 160]] },
     pt: { name: 'People & Team', centre: [-3, 18], banners: [[-3.4, 14.6, 180], [5.6, 15.2, 180], [-10.8, 17, 120], [-1.6, 22.6, 180]] },
-    oc: { name: 'Org & Community', centre: [5, 4], banners: [[2.4, -0.8, 170], [9.6, -1.4, 200], [11.4, 9.2, 200], [-1.4, 9.6, 160]] },
+    oc: { name: 'Building Sahaj', centre: [5, 4], banners: [[2.4, -0.8, 170], [9.6, -1.4, 200], [11.4, 9.2, 200], [-1.4, 9.6, 160]] },
 };
 
 // Market stalls and other village props: [name, x, z, facing].
@@ -229,7 +229,7 @@ export const SHOTS = {
 
 // Each scope is a circle on the map: Direct round the explorer's own plot, Extended taking in the
 // neighbours' plots, the houses, the notice board and the square's fire, Team the whole village (its
-// three districts in three arcs: Org & Community north, Client & Delivery east, People & Team south
+// three districts in three arcs: Building Sahaj north, Client & Delivery east, People & Team south
 // and west), Wider the valley across the river. Each lies wholly inside the next. The fog is lifted
 // only as far as the explorer's own reach: Extended after Scopes, Team after Growth.
 export const SCOPE_RINGS = {

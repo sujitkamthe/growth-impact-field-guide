@@ -21,11 +21,11 @@ sketch: notice-board
 |---|---|---|
 | **Client & Delivery** | What this client and project need from you: a stream you'll own, a decision the client needs help with, a commitment you'll keep realistic | Payment releases have slipped twice because integrations are tested late. Work with the team on how we plan, test and review integrations, so the next two releases ship on the dates we agree with the client. |
 | **People & Team** | Who you'll help grow and how, or what the team needs from you, such as onboarding a new joiner | Pair with a newer teammate on contract tests until they can design them on their own, and hand the integration review to two teammates. |
-| **Org & Community** | How you'll contribute beyond your project, in a way you choose, and when you'll make the time | With two teammates, rebuild how the office onboards engineers into testing, and hand it over to them to run. |
+| **Building Sahaj** | How you'll contribute beyond your project, in a way you choose, and when you'll make the time | With two teammates, rebuild how the office onboards engineers into testing, and hand it over to them to run. |
 | **Growth** | A stretch into some of the next scope's work, or a strength you want to deepen; if this cycle is about settling in, say that | Deepen my integration testing practice to the point where another team on the account asks to use it. |
 
 <!-- more: When the ordinary doc doesn't fit -->
-The same person's self-assessment at the end of this cycle is on [Self-assessment](#self-assessment/a-worked-example). Two arrangements are for when the ordinary doc doesn't fit: if you've already shown real depth in a strength and want to make it your main contribution, see [Agreed focus](#specialisation); if your project leaves no room for Org & Community, see [How it is assessed](#area/org-community). Most docs need neither.
+The same person's self-assessment at the end of this cycle is on [Self-assessment](#self-assessment/a-worked-example). Two arrangements are for when the ordinary doc doesn't fit: if you've already shown real depth in a strength and want to make it your main contribution, see [Agreed focus](#specialisation); if your project leaves no room to help build Sahaj, see [How it is assessed](#area/org-community). Most docs need neither.
 
 ## Get it agreed
 

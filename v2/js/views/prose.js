@@ -26,7 +26,7 @@ import { sketch } from '../sketches.js';
 
 const ITEM = /^(\d+\.|-) \*\*(.+?)\*\*:?\s*(.*)$/;
 const NOTE = /^<!-- (scale|list|row|checks|note) -->$/;
-const AREA_KEY = { 'Client & Delivery': 'cd', 'People & Team': 'pt', 'Org & Community': 'oc' };
+const AREA_KEY = { 'Client & Delivery': 'cd', 'People & Team': 'pt', 'Building Sahaj': 'oc' };
 export const BAND = /^<!-- band -->\s*/;
 // "<!-- more -->" or "<!-- more: See a finished example -->": the label names what opens, so a
 // reader can tell whether they need it without opening it.

@@ -163,7 +163,7 @@ export default {
         const done = [1, 2, 3].filter(i => t >= at(i, 0.1)).length;
         if (t >= at(0, 0.2)) world.hud.quest('Choose one or more', `${done}/3`);
         else world.hud.quest('Contribute to the village', null);
-        world.hud.toast('Three ways to contribute', seg(t, at(0, 0.08), at(0, 0.95)), { label: 'Org & Community' });
+        world.hud.toast('Three ways to contribute', seg(t, at(0, 0.08), at(0, 0.95)), { label: 'Building Sahaj' });
         WAYS.forEach((way, i) => {
             const k = seg(t, at(i + 1, 0.02), at(i + 1, 0.6));
             if (k > 0 && k < 1) world.hud.toast(way.name, k, { label: 'Way to contribute' });

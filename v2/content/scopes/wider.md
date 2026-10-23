@@ -145,7 +145,7 @@ At Team you grow the people on your team; at Wider you grow **mentors and leader
 - Mentors the same few people they would have mentored anyway
 - Opportunities go to people already visible, rather than to people who are ready
 
-## Org & Community
+## Building Sahaj
 
 > I shape how Sahaj grows, how it works, or how it is seen.
 

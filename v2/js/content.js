@@ -1,7 +1,7 @@
 // Loads the markdown in content/ and turns its conventions into structured data.
 // Scope files: frontmatter + "## <Area name>" sections, each with a "> core" line, an optional
 // "### What changes" sentence and "### Expectations / Evidence / Self-check / Not yet" lists.
-// Expectations are grouped by "#### <facet>" in Client & Delivery and People & Team; Org & Community
+// Expectations are grouped by "#### <facet>" in Client & Delivery and People & Team; Building Sahaj
 // has shared expectations, and its "### Ways to contribute" are grouped by "#### <route>".
 // Each expectation is "- **Handle**: one sentence", with indented "- " bullets that unpack it.
 
@@ -9,6 +9,8 @@ import { versioned } from './build.js';
 
 export const SCOPE_IDS = ['direct', 'extended', 'team', 'wider'];
 export const AREA_IDS = ['client-delivery', 'people-team', 'org-community'];
+// Building Sahaj was named Org & Community; its id stays so links to it keep working.
+const AREA_HEADINGS = { 'building-sahaj': 'org-community' };
 const PAGE_IDS = ['home', 'principles', 'how-it-works', 'teammates', 'self-assessment', 'faq', 'glossary', 'specialisation', 'feedback', 'agree'];
 
 export function slugify(text) {
@@ -118,7 +120,8 @@ function parseScope(text) {
     const { sections } = splitSections(body, 2);
     const scope = { ...data, areas: {}, summary: '', whatChanges: '', practice: null, ways: null, examples: {} };
     for (const s of sections) {
-        if (AREA_IDS.includes(s.slug)) scope.areas[s.slug] = parseAreaBlock(s.body);
+        const areaId = AREA_HEADINGS[s.slug] ?? s.slug;
+        if (AREA_IDS.includes(areaId)) scope.areas[areaId] = parseAreaBlock(s.body);
         else if (s.slug === 'summary') scope.summary = s.body;
         else if (s.slug === 'what-changes') scope.whatChanges = s.body;
         else if (s.slug === 'in-practice') scope.practice = parsePractice(s.body);
@@ -133,7 +136,7 @@ function parseScope(text) {
 function parseArea(text) {
     const { data, body } = parseFrontmatter(text);
     const { sections } = splitSections(body, 2);
-    // Facets all count toward the rating; Org & Community's ways to contribute are chosen from.
+    // Facets all count toward the rating; Building Sahaj's ways to contribute are chosen from.
     const area = { ...data, summary: '', facets: [], groupKind: 'facets', groupIntro: '', sections: [] };
     for (const s of sections) {
         if (s.slug === 'summary') area.summary = s.body;

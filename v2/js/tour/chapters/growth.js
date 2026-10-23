@@ -8,7 +8,7 @@
 // 2. "Strong next-scope impact in one area is rated as exceeding."  The Team ring's Client & Delivery
 //    arc fills solid in teal and the HUD row reads Client & Delivery · Exceeds.
 // 3. "Once the people around you depend on that impact in all three areas..."  The explorer crosses to
-//    the square (Org & Community) and the people of all three districts turn to them; the blue and
+//    the square (Building Sahaj) and the people of all three districts turn to them; the blue and
 //    amber arcs fill, the Team ring becomes the explorer's own (Extended dims to an inner ring) and the
 //    fog lifts out to it and stays. Quest: "Your reach has grown".
 // 4. "Then a new season begins..."  Sunrise light sweeps the valley as the camera rises; the rings
@@ -25,7 +25,7 @@ import { keepWorld, valleyDay, villageDay, FIRE_SPOTS, facingTo } from './_share
 const FIRE = [1.2, 7.8];
 const LAKE_SHORE = [-11.8, 0.9];                         // where Self-assessment leaves villager 0
 const AT_STALL = { at: [12.8, 6.2], facing: 92 };        // Client & Delivery: at the red stall's front
-const TO_SQUARE = [[12.8, 6.2], [10.4, 4.4], [8.2, 2.4], [7.0, 1.0]];   // to Org & Community, by the fountain
+const TO_SQUARE = [[12.8, 6.2], [10.4, 4.4], [8.2, 2.4], [7.0, 1.0]];   // to Building Sahaj, by the fountain
 const LABEL_AT = { direct: 20, extended: 325, team: 52 };
 
 const RISE = { target: [2, 0, 8], distance: 118, yaw: 14, pitch: 58, fov: 28 };

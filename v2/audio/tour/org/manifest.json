@@ -21,8 +21,8 @@
         },
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/together-1.mp3",
-          "duration": 6.46,
-          "hash": "cc9e441a101b"
+          "duration": 6.31,
+          "hash": "bd7c88c7695a"
         },
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/together-2.mp3",
@@ -82,8 +82,8 @@
       "counts": [
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/counts-0.mp3",
-          "duration": 3.89,
-          "hash": "47b44568ec18"
+          "duration": 6.97,
+          "hash": "91f7ec06bc31"
         },
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/counts-1.mp3",
@@ -92,8 +92,8 @@
         },
         {
           "src": "audio/tour/org/en-GB-SoniaNeural/counts-2.mp3",
-          "duration": 5.24,
-          "hash": "43d4b79fb30e"
+          "duration": 5.17,
+          "hash": "38ae5d92c373"
         }
       ],
       "room": [
@@ -125,8 +125,8 @@
         },
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/together-1.mp3",
-          "duration": 7.28,
-          "hash": "2e7597453aca"
+          "duration": 6.97,
+          "hash": "d5f19fa99cb3"
         },
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/together-2.mp3",
@@ -186,8 +186,8 @@
       "counts": [
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/counts-0.mp3",
-          "duration": 4.52,
-          "hash": "53ee5adc56c0"
+          "duration": 7.65,
+          "hash": "70ebd7aeabf8"
         },
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/counts-1.mp3",
@@ -196,8 +196,8 @@
         },
         {
           "src": "audio/tour/org/en-IN-NeerjaExpressiveNeural/counts-2.mp3",
-          "duration": 6.3,
-          "hash": "fc031a0ee908"
+          "duration": 5.66,
+          "hash": "b680fbddaf4f"
         }
       ],
       "room": [

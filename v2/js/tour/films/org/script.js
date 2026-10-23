@@ -1,4 +1,4 @@
-// Narration for the second film, "Building Sahaj together": the Org & Community area and the ways
+// Narration for the second film, "Building Sahaj together": the Building Sahaj area and the ways
 // people contribute to it. One sentence per beat, in chapter order; the single source of the words
 // (the player shows each beat as a caption and plays its pre-rendered audio). Grounded in
 // v2/content/areas/org-community.md and each scope's ways to contribute. STORYBOARD.md beside this
@@ -7,7 +7,7 @@
 export const CHAPTERS = [
     { id: 'together', title: 'Built by all of us', beats: [
         'Sahaj has no separate team that builds its culture and capability for everyone else.',
-        'People like you build it, alongside their client work. That is the Org and Community area.',
+        'People like you build it, alongside their client work. That is the Building Sahaj area.',
         'You choose how you contribute, often through what you are good at. Contributing is part of the work here, done in working time, with your team making room for it.',
     ] },
     { id: 'ways', title: 'Three ways to contribute', beats: [
@@ -24,9 +24,9 @@ export const CHAPTERS = [
         'At Wider, you shape how Sahaj grows, how it works, or how it is seen, like designing how Sahaj builds a capability across offices.',
     ] },
     { id: 'counts', title: 'What counts', beats: [
-        'What counts is what changed, not how visible it was.',
+        'What counts is meaningful impact, or a genuine attempt to create it, not just taking part in an activity.',
         'A quiet fix that saves many people time every week can matter more than a big stage.',
-        'And it lasts through the cycle: a contribution you keep up, and can point to.',
+        'And you work on it steadily through the cycle, with a result your teammates can see.',
     ] },
     { id: 'room', title: 'When there is no room', beats: [
         "If your project leaves no time to contribute, raise that with your team's seniors or your account lead as soon as you know.",

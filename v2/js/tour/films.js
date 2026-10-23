@@ -41,7 +41,7 @@ export const FILMS = [
         // The area page that links to this film (views/area.js).
         area: 'org-community',
         end: [
-            { href: '#area/org-community', label: 'Read Org & Community' },
+            { href: '#area/org-community', label: 'Read Building Sahaj' },
             { href: '#tour', label: 'Watch How growth works at Sahaj', quiet: true },
         ],
     },

@@ -7,10 +7,11 @@
 //    "Area · Client & Delivery", and the cart hand loads the cart and pulls it off over the bridge.
 // 3. "People and Team..."  Over to the houses: blue banners and their name; the neighbour steps in to
 //    help at the garden while the explorer comes up the lane between the houses.
-// 4. "Org and Community..."  The square: amber banners and their name, villagers gathering.
-// 5. "Each area is rated on its own..."  The HUD shows the three areas, each with its own empty
-//    slot, marked one after another (no rating words), as the explorer joins the gathering and the
-//    camera settles over the square with all three names in view. Ends on layout.states.afterAreas.
+// 4. "Building Sahaj..."  The square: amber banners and their name, villagers gathering, as the
+//    explorer joins the gathering and the camera settles over the square with all three names in
+//    view. Ends on layout.states.afterAreas.
+//
+// From beat 2 the HUD lists the three areas, each row marked as its area is named (no rating words).
 
 import { beatClock, line, catchUp, stroll, follow, camera, turnTo, bearing, CAST, keepDiscovered, DISCOVERED, travel, buildSigns, buildDistrictLabels, areaSlots, AREA_NAMES } from './_shared.js';
 import { village } from './_cast.js';
@@ -75,7 +76,7 @@ export default {
 
         // ---- The explorer ----------------------------------------------------------------------
         const L = line(toSquare).total;
-        const leg = { points: toSquare, keys: catchUp(at(0, 0.42), at(4, 0.55), L, { head: 3.6, tail: line(lane).total }) };
+        const leg = { points: toSquare, keys: catchUp(at(0, 0.42), at(3, 0.7), L, { head: 3.6, tail: line(lane).total }) };
         follow(ex, [leg], t);
         if (t < leg.keys[0][0]) {
             // still at work in the wheat, then a turn for the gate
@@ -175,9 +176,8 @@ export default {
             [at(1, 0.92), MARKET],
             [at(2, 0.42), HOUSES],
             [at(2, 0.9), HOUSES],
-            [at(3, 0.42), SQUARE_MID],
-            [at(4, 0.0), SQUARE_MID],
-            [at(4, 0.85), 'square'],
+            [at(3, 0.35), SQUARE_MID],
+            [at(3, 0.95), 'square'],
         ]);
 
         // The market lies beyond the explorer's reach: it lights up while it is shown, then lets go.
@@ -197,10 +197,10 @@ export default {
         }
         if (t < at(0, 0.2)) world.hud.quest('How far you reach', '4/4');
         else world.hud.quest(QUEST, `${[1, 2, 3].filter(i => t >= at(i, 0.1)).length}/3`);
-        // each area judged on its own: three rows, each slot marked in turn
-        if (t >= at(4, 0.02)) {
-            const marked = ['cd', 'pt', 'oc'].filter((a, i) => t >= at(4, 0.3 + i * 0.16));
-            world.hud.rows(areaSlots(marked), seg(t, at(4, 0.02), at(4, 0.2)));
+        // the three areas as rows, each marked as it is named
+        if (t >= at(1, 0.02)) {
+            const marked = ['cd', 'pt', 'oc'].filter((a, i) => t >= at(i + 1, 0.3));
+            world.hud.rows(areaSlots(marked), seg(t, at(1, 0.02), at(1, 0.2)));
         }
     },
 };

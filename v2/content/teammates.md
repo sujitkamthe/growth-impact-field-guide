@@ -48,7 +48,7 @@ Then look ahead with them. Say where you haven't seen evidence yet, especially i
 *Someone's scope grows once their contribution consistently reaches the next scope in all three areas.*
 
 <!-- more: What to check first -->
-Use the rule in [Growing into the next scope](#how-it-works/growing-into-the-next-scope). Check first that they meet their current scope in all three areas, because the next scope builds on it, and count only their own work: work a teammate took on for them counts for the teammate. A shortfall in Org & Community holds them back just as one in Client & Delivery does.
+Use the rule in [Growing into the next scope](#how-it-works/growing-into-the-next-scope). Check first that they meet their current scope in all three areas, because the next scope builds on it, and count only their own work: work a teammate took on for them counts for the teammate. A shortfall in Building Sahaj holds them back just as one in Client & Delivery does.
 
 ## Proposing a stretch
 

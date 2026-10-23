@@ -163,7 +163,7 @@ At Extended you grow individuals; at Team you build growth, feedback and health 
 - Tries to reach more people by adding meetings, rather than removing what slows the team down
 - Notices strain only once people are already burning out
 
-## Org & Community
+## Building Sahaj
 
 > I build a programme, forum or tool Sahaj needs, and set it up so other people keep it running.
 
@@ -219,7 +219,7 @@ At Extended you drive a piece of org work; at Team you **build a programme, foru
 
 ## Ways to create impact
 
-There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one way; it is not a requirement. Whichever way you take, you still need impact in People & Team and Org & Community, though it looks different in each.
+There is more than one way to reach this scope, and the expectations above describe the impact, not the role. Leading the team is one way; it is not a requirement. Whichever way you take, you still need impact in People & Team and Building Sahaj, though it looks different in each.
 
 ### Leading the team
 

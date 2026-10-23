@@ -26,7 +26,7 @@ One valley, about 140 × 140 m, laid out so the story walks across it (`layout.j
 - **The village** (centre): three districts around a square.
   - Client & Delivery (east, by the river): market stalls, a workbench, a watermill, a cart, teal banners.
   - People & Team (south-west): timber houses with gardens where villagers gather, blue banners.
-  - Org & Community (centre): the square with a fountain and a **notice board**, amber banners.
+  - Building Sahaj (centre): the square with a fountain and a **notice board**, amber banners.
 - **The river** (north of the village) with a **bridge**, and beyond it **the wider valley**: a second hamlet, a windmill on a hill, tents, more fields, the map's edge still fogged.
 
 ## Chapters
@@ -55,16 +55,17 @@ The explorer walks a path; each principle is a place discovered as the fog lifts
 1. Three areas: the camera settles over the village square.
 2. Client & Delivery: glide east to the market and the watermill; teal banners unfurl; a villager loads the cart and it rolls off towards the bridge.
 3. People & Team: glide to the houses; blue banners unfurl; two villagers work together at a garden, one helping the other.
-4. Org & Community: glide to the square; amber banners unfurl around the fountain; villagers gather.
-5. Each area rated on its own: three small flags rise on poles in the square, one per area, in the area colours, to show each area is judged separately (no scores or numbers).
+4. Building Sahaj: glide to the square; amber banners unfurl around the fountain; villagers gather, and the explorer joins them as the camera settles over the square with all three names in view.
+
+From Client & Delivery on, the HUD lists the three areas, each row marked in its colour as its area is named (no rating words).
 
 ### 5. Your strengths (`strengths`)
 Noon in the square, straight on from Areas, and back to the same spot at the end, so Your quest starts as Areas left it.
 1. Growing through what you do best: the explorer walks to the square's east edge and looks out to the market; Client & Delivery's name stays bright while the other two dim. Quest box: "Agree your focus".
 2. All three areas stay part of what's expected: the other two names come back up as the explorer looks round at each district in turn.
-3. Agreeing a focus: taking less of one responsibility, which a teammate who has room for it takes on: the villager watching from the square's south side walks over; the explorer hands something over (Interact), they take it (Interact) and nod. A parchment card opens in the HUD, "Agreed focus", its lines appearing as the narrator names them: depth you have already shown, less of one responsibility, taken on by a teammate.
-4. A stronger contribution in return, named by what it achieves and who it helps: the teammate heads back; the explorer turns to the market and works, the market lit while it is shown (as in Areas, a moment's light, not reach). The card's third line: a greater contribution in return.
-5. The teammate chose to take it on, so it isn't extra work quietly left with them, and it counts toward their growth: the explorer walks back to the fountain, the teammate nods from their spot, and the quest box ticks: "Focus agreed".
+3. Agreeing a focus on a broad strength you already show, such as technology, consulting, delivery or growing people: the villager watching from the square's south side walks over; the explorer hands something over (Interact), they take it (Interact) and nod. A parchment card opens in the HUD, "Agreed focus", its lines appearing as the narrator names them: a strength you already show.
+4. The bar in that strength rises to the next scope's, and you still help build Sahaj through it: the teammate heads back; the explorer turns to the market and works, the market lit while it is shown (as in Areas, a moment's light, not reach), then sets off back to the fountain. The card's second line: the next scope's bar in it, still building Sahaj.
+5. You can choose to lead less in another area: the explorer reaches the fountain, the teammate nods from their spot, and the quest box ticks: "Focus agreed". The card's third line: leading less elsewhere, if you choose.
 
 ### 6. Your quest (`expectations`)
 1. A new cycle, a new quest: the explorer walks to the **notice board** and pins up a sheet (Interact). Quest box: "Write your expectations".
@@ -80,7 +81,7 @@ Time passes: the sun moves across the sky over the chapter.
 ### 8. Around the fire (`self-assessment`)
 Dusk. A campfire in the square, the windmill silhouetted.
 1. Look back one area at a time: the explorer sits by the fire (Idle) reading their notes; the HUD shows three area rows.
-2. Rate each area: the HUD rows fill in: Client & Delivery "Meets", People & Team "Exceeds", Org & Community "Meets".
+2. Rate each area: the HUD rows fill in: Client & Delivery "Meets", People & Team "Exceeds", Building Sahaj "Meets".
 3. Teammates confirm, correct or add: villagers come and stand around the fire; one by one they nod (a small dip) and one adds a note.
 
 ### 9. Further (`growth`)

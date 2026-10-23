@@ -72,7 +72,7 @@ export default {
   - `noticeSheet.show(k)` (0 hidden → 1 pinned to the board, rising from the hand) and `noticeSheet.write(k)` (0 blank → 1 four lines of writing).
   - `cart.place([x, z], facing)`, `cart.along(path, k)` (rolls along a path name or points, tilting with the ground; `paths.cartRoute` runs from the market over the bridge), `cart.load(k)` (crates appear one by one), `cart.show(on)`. By default it stands empty at `places.cart`.
   - `campfire.light(k)`: the evening fire in the square at `places.fire`, with log seats; k fades it in. The camp's own fire always burns.
-  - `ratingFlags.raise(i, k)`: the three flags by the fountain (0 Client & Delivery, 1 People & Team, 2 Org & Community) rise on their poles as k goes 0 → 1.
+  - `ratingFlags.raise(i, k)`: the three flags by the fountain (0 Client & Delivery, 1 People & Team, 2 Building Sahaj) rise on their poles as k goes 0 → 1.
   - `windmill`, `watermill`: their pivots (they turn by themselves with the clock).
 
 **Light**: `world.setTimeOfDay(hours)`, about 6 (sunrise) to 19 (dusk), up to 20 for night falling; moves the sun (east, south, west), its colour, the sky, the haze and the fog's tint, and lights the lanterns and windows from about 17. The shadow map is redrawn only when the sun moves, so a sun that sweeps every frame costs more; fine for one chapter.

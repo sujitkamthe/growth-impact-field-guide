@@ -162,7 +162,7 @@ At Direct you are a dependable teammate; at Extended **other people's** work and
 - Answers questions without teaching the reasoning behind them
 - Helps by taking the work over, so the teammate doesn't grow
 
-## Org & Community
+## Building Sahaj
 
 > I drive a piece of org work beyond my project, not just take part in it.
 

@@ -148,7 +148,7 @@ A client asks the team to add a second payment provider to its checkout. Payment
 - Comments on peers' work point out problems but rarely help the author understand the reasoning or decide better next time
 - Feedback from teammates is heard, but nothing is different by the next cycle
 
-## Org & Community
+## Building Sahaj
 
 > I contribute beyond my immediate delivery, in a way I've chosen.
 

@@ -3,7 +3,7 @@
 // 1. "Find your way to contribute, and Sahaj gets a little stronger because you are here."  The
 //    explorer walks on towards the village as the camera pulls up over it into golden hour: DevDay's
 //    lanterns lit in the square, the workshop and the tool shed busy, people on the mended bridge,
-//    villagers everywhere. The last toast asks Org & Community's question: "Is Sahaj stronger because
+//    villagers everywhere. The last toast asks Building Sahaj's question: "Is Sahaj stronger because
 //    you're here?" The player's end card follows.
 //
 // Starts where When there is no room ends.
@@ -59,6 +59,6 @@ export default {
 
         world.hud.quest('Room made together', null);
         // the area's question, held on screen to the end (the toast is fully shown for k 0.12..0.86)
-        world.hud.toast("Is Sahaj stronger because you're here?", 0.8 * ease.out(seg(t, at(0, 0.12), at(0, 0.4))), { label: 'Org & Community' });
+        world.hud.toast("Is Sahaj stronger because you're here?", 0.8 * ease.out(seg(t, at(0, 0.12), at(0, 0.4))), { label: 'Building Sahaj' });
     },
 };

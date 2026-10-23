@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- Dev only: previews one tour chapter in the 3D world on a simulated timeline (beat lengths
      estimated from the narration), with a scrubber. Open /v2/js/tour/preview.html?chapter=arrival
-     over HTTP. ?film=org previews the Org & Community film (films/org/).
+     over HTTP. ?film=org previews the Building Sahaj film (films/org/).
        ?t=12        start 12 s in          ?play=0     start paused
        ?theme=dark  dark theme HUD         ?reduced=1  reduced motion (beat end states)
        ?audio=1     beat lengths from the film's narration (default voice) instead of an estimate
@@ -59,7 +59,7 @@
 
     const q = new URLSearchParams(location.search);
     if (q.get('theme')) document.documentElement.setAttribute('data-theme', q.get('theme'));
-    // ?film=org previews the Org & Community film (films/org/); without it, the guide's film.
+    // ?film=org previews the Building Sahaj film (films/org/); without it, the guide's film.
     const film = q.get('film');
     const base = film ? `./films/${film}/` : './';
     const { CHAPTERS } = await import(`${base}script.js`);

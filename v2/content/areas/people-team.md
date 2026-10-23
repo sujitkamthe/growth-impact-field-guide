@@ -32,6 +32,6 @@ Like Client & Delivery, this area lists each scope's expectations by facet, and 
 
 ## Where does mentoring count?
 
-*Mentoring that grows out of your work counts here; mentoring through a Sahaj programme counts in Org & Community.*
+*Mentoring that grows out of your work counts here; mentoring through a Sahaj programme counts in Building Sahaj.*
 
-Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through a programme Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Org & Community, and so is designing or running the programme itself. Count each piece of work once.
+Mentoring can show up in two areas, so ask how it came about. Mentoring that grows out of your work belongs here in People & Team: the people on your team and, at wider scopes, the people you coach and sponsor beyond it, wherever they sit. Mentoring you volunteer for through a programme Sahaj runs, such as a capability track, is a contribution to that programme and belongs in Building Sahaj, and so is designing or running the programme itself. Count each piece of work once.

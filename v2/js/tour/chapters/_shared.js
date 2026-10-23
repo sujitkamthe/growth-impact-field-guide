@@ -300,7 +300,7 @@ export function buildSigns(world) {
 // scope, not yet theirs) or dimmed (an inner ring), and the Team ring has an arc per area, which
 // fills in the area's colour.
 export const AREA_GLOW = { cd: '#2fc4ad', pt: '#5b8fef', oc: '#e7a63e' };
-export const AREA_NAMES = { cd: 'Client & Delivery', pt: 'People & Team', oc: 'Org & Community' };
+export const AREA_NAMES = { cd: 'Client & Delivery', pt: 'People & Team', oc: 'Building Sahaj' };
 // Sahaj lavender and indigo: the line, its brighter core, the faint inner glow, and the explorer's own ring
 const RING = { line: '#c9cbf7', core: '#dcdcfb', fill: '#8d90e0', own: '#e3e4ff' };
 

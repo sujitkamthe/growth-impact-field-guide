@@ -28,16 +28,15 @@ export const CHAPTERS = [
     { id: 'areas', title: 'Three areas', beats: [
         "At every scope, you have impact in the same three areas, and all three are part of what's expected of everyone.",
         'Client and Delivery: building what the client needs, building it well, and owning your commitments, including challenging requests that put quality or the team\'s pace at risk.',
-        'People and Team: helping the people around you get better at what they do.',
-        'Org and Community: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is expected of everyone.',
-        "Each area has its own rating against your scope, so you can see where you're strong and where you need support.",
+        'People and Team: helping the people around you get better at what they do, and supporting and guiding them in their own growth.',
+        'Building Sahaj: contributing beyond your delivery work, through hiring, sharing knowledge or community events. You choose how to contribute, but contributing is expected of everyone.',
     ] },
     { id: 'strengths', title: 'Your strengths', beats: [
         'Deciding your own growth also means you can grow through what you do best.',
         "All three areas stay part of what's expected of you, but within each you choose how you contribute.",
-        "When you've already shown real depth, you can agree a focus with your team: you take less of one responsibility, and a teammate who has room for it takes it on.",
-        'In return, you agree a greater contribution through that strength: what it will achieve, and who it will help.',
-        "Your teammate chose to take it on, so it's never extra work quietly left with them, and it counts toward their growth too.",
+        'If you already make a greater impact through one broad strength, such as technology, consulting, delivery or growing people, you can agree a focus on it with your team.',
+        'Your bar in that strength then rises to what the next scope expects, and you still help build Sahaj through it.',
+        'You can choose to lead less in another area.',
     ] },
     { id: 'expectations', title: 'Agreeing expectations', beats: [
         'At the start of each cycle, you and your team discuss your expectations, align on them and capture them.',
@@ -58,7 +57,7 @@ export const CHAPTERS = [
         "You grow by deepening what you do best, or by taking on some of the next scope's work, usually as a stretch you agree with your team.",
         'When you sustain that impact in one area, that area is rated as exceeding your current scope.',
         'Your scope grows at the team check when your contribution consistently reaches the next scope in all three areas, and people depend on you for it.',
-        "Then you agree your next challenge at your new scope. If you're already doing well, your team helps you find one, so you keep growing.",
+        "Then you agree your next challenge at your new scope. If you're doing well but your scope hasn't grown yet, your team helps you find a new challenge too, so you keep growing.",
     ] },
     { id: 'close', title: 'Getting started', beats: [
         'Start with the scope that reflects your work today, and talk with your team about your strengths and where you want to grow.',

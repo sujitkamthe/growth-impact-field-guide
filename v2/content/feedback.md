@@ -52,7 +52,7 @@ No titles doesn't mean no difference in influence: someone may still arrange cli
 
 - **Client & Delivery**: how they built it, how they framed the problem with the client, and whether they kept its commitments realistic.
 - **People & Team**: who grew because of them, how they gave and acted on feedback, and how they kept people informed.
-- **Org & Community**: what they contributed beyond the project, and what it changed.
+- **Building Sahaj**: what they contributed beyond the project, and what it changed.
 
 <!-- more: See an example about delivery ownership -->
 > In Thursday's planning, the client asked for the reporting feature by the end of the month and you agreed straight away, although the estimate we had just made was six weeks. Now we either work long hours or miss the date. Next time, could you show them the estimate and the two options we have, a smaller first release or a later date, and let them choose?
@@ -102,7 +102,7 @@ Ask the teammate most likely to see it differently, not only the one who'll be k
 - **Someone you work alongside**: how you collaborate, your technical decisions and how you own your commitments.
 - **Someone who relies on your guidance or reviews**: whether they're building judgment of their own because of you.
 - **A client or colleague affected by your commitments**: how you consult, communicate and manage expectations.
-- **Someone from your Org & Community work**: how reliable you are, and what changed beyond your project.
+- **Someone you worked with on building Sahaj**: how reliable you are, and what changed beyond your project.
 
 <!-- more: Three questions to ask them, and a more structured round -->
 This is a spread of views, not a list to ask everyone; people should only comment on work they've seen, and can say they haven't seen enough. Three questions work well: What contribution of mine has helped you, and can you give an example? What could I change to make working with me more effective? Where could I contribute more, and what support would help? If your team runs a more structured round of feedback, agree its purpose and who will see the answers before anyone writes them.
@@ -118,7 +118,7 @@ This is a spread of views, not a list to ask everyone; people should only commen
 4. **Record what changed**: in the next cycle's doc.
 
 <!-- more: Agreed focus and deferrals at the team check -->
-Don't wait for the team check to find that nobody has talked about someone's People & Team or Org & Community contribution: in a one-to-one during the cycle, ask whose view is missing. Look at any agreed focus or Org & Community deferral here too: whether the greater contribution is happening, and whether the arrangement is still sustainable for the teammate who took on the work.
+Don't wait for the team check to find that nobody has talked about someone's People & Team or Building Sahaj contribution: in a one-to-one during the cycle, ask whose view is missing. Look at any agreed focus or Building Sahaj deferral here too: whether the greater contribution is happening, and whether the arrangement is still sustainable for the teammate who took on the work.
 
 ## When it feels difficult
 

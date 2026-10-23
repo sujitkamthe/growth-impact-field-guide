@@ -33,7 +33,7 @@ Your team agrees a focus when the greater contribution meets a real need and the
 | **Consulting** | Understanding the client's problem, questioning unclear or risky requests, and explaining the options in your own work | Leading discovery, workshops or stakeholder negotiations |
 | **Delivery ownership** | Realistic commitments for your own work, visible progress and risks, and following through when plans change | Coordinating the team's delivery, managing dependencies, or leading planning conversations with the client |
 | **People & Team** | Working respectfully, sharing context, and giving and acting on feedback | Formal mentoring, coaching several people, or organising how the team develops |
-| **Org & Community** | A contribution beyond your project, in a way you choose | Nothing: contributing stays expected of everyone |
+| **Building Sahaj** | A contribution beyond your project, in a way you choose | Nothing: contributing stays expected of everyone |
 
 You stay accountable for your part of what you took less of. Someone who no longer leads the client's planning still gives the estimates and risks that planning depends on, and still keeps to what is agreed there.
 
@@ -73,7 +73,7 @@ Expertise that improves work beyond your own is Extended. When the whole team re
 |---|---|
 | Client & Delivery | Your technical judgment improves how the whole team builds and decides, while you keep your own commitments realistic and visible. |
 | People & Team | Teammates apply your approach with their own judgment, without coming back to you each time, even if someone else on the team leads mentoring. |
-| Org & Community | You build or strengthen a capability, programme or tool beyond the project, and other people keep it going. |
+| Building Sahaj | You build or strengthen a capability, programme or tool beyond the project, and other people keep it going. |
 
 Answering questions helpfully is expected of everyone, but on its own it isn't Team-scope impact in People & Team. If your depth reaches further than your impact in the other areas, it is recognised in your assessment, and your scope grows once the rest reaches the next scope too.
 

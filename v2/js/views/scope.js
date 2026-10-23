@@ -1,5 +1,5 @@
 // One scope in depth. Deep-linkable to an area: #scope/<scope>/<area>.
-// Each area's expectations by facet (or, for Org & Community, shared expectations and ways to contribute)
+// Each area's expectations by facet (or, for Building Sahaj, shared expectations and ways to contribute)
 // come first, since that is what people open the page for. They open Concise, listing only each
 // expectation's handle, with a Concise | Detailed switch in the sticky bar (remembered in the
 // browser); ways to contribute, evidence, the illustration, examples and ways to create impact

@@ -18,7 +18,7 @@ An agreement, from Extended scope, to take less of a particular responsibility a
 
 ## Area
 
-One of the three areas of impact that every scope covers: [Client & Delivery](#area/client-delivery), [People & Team](#area/people-team) and [Org & Community](#area/org-community). Each area gets one rating.
+One of the three areas of impact that every scope covers: [Client & Delivery](#area/client-delivery), [People & Team](#area/people-team) and [Building Sahaj](#area/org-community). Each area gets one rating.
 
 ## Cycle
 
@@ -73,4 +73,4 @@ The conversation at the end of a cycle in which teammates confirm, correct or ad
 ## Ways to contribute
 
 <!-- matches: ways to contribute, way to contribute -->
-The three groups in Org & Community: culture and organisational health, initiatives and capability, and community and external contribution. Unlike facets, you choose one or more rather than showing all three.
+The three groups in Building Sahaj: culture and organisational health, initiatives and capability, and community and external contribution. Unlike facets, you choose one or more rather than showing all three.

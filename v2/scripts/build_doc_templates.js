@@ -31,7 +31,7 @@ const SCOPES = [['Direct', 'direct'], ['Extended', 'extended'], ['Team', 'team']
 const AREAS = [
     { name: 'Client & Delivery', color: '087A6B', hint: "Your client's priorities, and anything your project needs from you" },
     { name: 'People & Team', color: '315FAF', hint: 'What your team needs from you, such as onboarding or mentoring someone' },
-    { name: 'Org & Community', color: '95620B', hint: 'How you plan to contribute beyond your project' },
+    { name: 'Building Sahaj', color: '95620B', hint: 'How you plan to contribute beyond your project' },
 ];
 const INK = '18181B';
 const TEXT = '27272A';

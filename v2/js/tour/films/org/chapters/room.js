@@ -103,6 +103,6 @@ export default {
 
         // ---- HUD -----------------------------------------------------------------------------------------
         world.hud.toast('Raised early', seg(t, at(0, 0.48), at(1, 0.3)), { label: 'A note' });
-        world.hud.quest(t < at(1, 0.4) ? 'A contribution you keep up' : 'Room made together', null);
+        world.hud.quest(t < at(1, 0.4) ? 'Steady through the cycle' : 'Room made together', null);
     },
 };

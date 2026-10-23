@@ -1,10 +1,10 @@
 # Building Sahaj together: storyboard
 
-The second film, about the Org & Community area: the contributions people make beyond their own project. It plays in the same valley, with the same explorer, villagers, fog of war and game HUD as the guide's film (see `../../STORYBOARD.md` and `../../WORLD.md`), so it feels like another episode of the same game. About two minutes. The narration is in `script.js` beside this file; this file says what is on screen.
+The second film, about the Building Sahaj area: the contributions people make beyond their own project. It plays in the same valley, with the same explorer, villagers, fog of war and game HUD as the guide's film (see `../../STORYBOARD.md` and `../../WORLD.md`), so it feels like another episode of the same game. About two minutes. The narration is in `script.js` beside this file; this file says what is on screen.
 
 ## Look and feel
 
-Everything from the first film applies: a high three-quarter game camera, real walking, calm eased motion, the HUD (quest box, toasts), captions, and Sahaj indigo on the explorer and the HUD. Org & Community's colour in the guide is amber, so this film leans on amber: banners in the square, lanterns, the DevDay festival. The explorer starts at Extended reach, as at the end of the first film's middle chapters (the fog lifted to the Extended ring), and the film may lift it further in "How far it reaches".
+Everything from the first film applies: a high three-quarter game camera, real walking, calm eased motion, the HUD (quest box, toasts), captions, and Sahaj indigo on the explorer and the HUD. Building Sahaj's colour in the guide is amber, so this film leans on amber: banners in the square, lanterns, the DevDay festival. The explorer starts at Extended reach, as at the end of the first film's middle chapters (the fog lifted to the Extended ring), and the film may lift it further in "How far it reaches".
 
 Ideas are places and actions in the village, never diagrams:
 
@@ -35,9 +35,9 @@ Reuse the first film's lavender scope rings (from `chapters/_shared.js`), centre
 5. Wider: the camera lifts across the river: people in the hamlet beyond run the same kind of programme, copied from the village. Toast "Wider". The Wider ring glows; then the rings settle.
 
 ### 4. What counts (`counts`)
-1. The DevDay stage (bright, crowded) on one side and the bridge on the other. Toast "What changed, not how visible".
+1. The DevDay stage (bright, crowded) on one side and the bridge on the other. Toast "Impact, not just taking part".
 2. The quiet fix: a villager stumbles on the broken bridge plank; the explorer kneels and fixes it (Interact); then many villagers cross smoothly, quickly, again and again (time-lapse feel, the sun moving).
-3. The season passes (sun sweep): the fixed bridge still in use, the tool shed still running with its new keepers. Quest box "A contribution you keep up".
+3. The season passes (sun sweep): the fixed bridge still in use, the tool shed still running with its new keepers. Quest box "Steady through the cycle".
 
 ### 5. When there is no room (`room`)
 1. The explorer is busy at their crop field from dawn, the square's activity out of reach; they walk to a senior villager and talk (Interact); the HUD shows a small note "Raised early".

@@ -29,7 +29,7 @@ Your scope is agreed with your team from the impact you showed in your previous 
 
 ### Is delivering my work on time enough?
 
-No. Finishing your work on time is part of Client & Delivery, not all of it. The area also covers building the work well, framing the client's problem with them, and owning commitments: questioning a date you don't believe in, keeping the client's expectations realistic and going back to them when something changes. Beyond that area, every scope expects impact in People & Team and Org & Community too. See [Client & Delivery](#area/client-delivery).
+No. Finishing your work on time is part of Client & Delivery, not all of it. The area also covers building the work well, framing the client's problem with them, and owning commitments: questioning a date you don't believe in, keeping the client's expectations realistic and going back to them when something changes. Beyond that area, every scope expects impact in People & Team and Building Sahaj too. See [Client & Delivery](#area/client-delivery).
 
 ### How do I move to the next scope?
 
@@ -49,13 +49,13 @@ Talk with your team about a next challenge: a responsibility you haven't had bef
 
 ### Can I grow without leading a team?
 
-Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. Whichever way you take, you still need impact in People & Team and Org & Community.
+Yes. At Team and Wider scope there are several ways to create impact, including platforms and standards, deep expertise and external work. Whichever way you take, you still need impact in People & Team and Building Sahaj.
 
 ## Contribution
 
-### Is Org & Community really mandatory?
+### Is Building Sahaj really mandatory?
 
-Yes. You choose how you contribute, usually through what you're good at, and every scope expects a contribution you keep up through the cycle, in working time. If your project leaves no room, see [How it is assessed](#area/org-community).
+Yes. You choose how you contribute, usually through what you're good at, and every scope expects a contribution you work on steadily through the cycle, in working time. If your project leaves no room, see [How it is assessed](#area/org-community).
 
 ### Can I skip work I don't enjoy?
 

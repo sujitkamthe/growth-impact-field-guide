@@ -5,14 +5,15 @@
 //    while the other two dim. Quest: "Agree your focus".
 // 2. "All three areas stay part of what's expected of you..."  The other two names come back up as the explorer
 //    looks round at each district in turn.
-// 3. "When you've already shown real depth..."  The teammate who watched from the
-//    square's south side walks over; the explorer hands something over and they take it, then nod.
-//    The HUD's parchment card opens on the agreement, a line at a time.
-// 4. "In return, you take on a stronger contribution..."  The teammate heads back; the explorer turns
-//    to the market and gets to work, the market lit while it's shown (as in Areas, it isn't reach).
-// 5. "Your teammate chose to take it on..."  The explorer walks back to the
-//    fountain, the teammate nods from their spot, and the quest ticks: "Focus agreed". Ends on
-//    layout.states.afterAreas again, so Your quest starts exactly as it did after Areas.
+// 3. "If you already make a greater impact through one broad strength..."  The teammate who watched
+//    from the square's south side walks over; the explorer hands something over and they take it,
+//    then nod. The HUD's parchment card opens on the agreement, a line at a time.
+// 4. "Your bar in that strength then rises..."  The teammate heads back; the explorer turns to the
+//    market and gets to work, the market lit while it's shown (as in Areas, it isn't reach), and
+//    sets off back to the fountain in time to arrive at a walk.
+// 5. "You can choose to lead less in another area."  The explorer reaches the fountain, the teammate
+//    nods from their spot, and the quest ticks: "Focus agreed". Ends on layout.states.afterAreas
+//    again, so Your quest starts exactly as it did after Areas.
 //
 // Starts and ends on layout.states.afterAreas. Everything is set from `time` alone.
 
@@ -36,9 +37,9 @@ const GARDEN = [-5.0, 23.9];
 const PULL = [[9.39, -4.41], [8, -6.2], [6.2, -10], [6.4, -16], [8, -22], [8.62, -24.24]];
 
 const LINES = [
-    'Depth you have already shown',
-    'Less of one responsibility, taken on by a teammate',
-    'A greater contribution in return',
+    'A strength you already show',
+    "The next scope's bar in it, still building Sahaj",
+    'Leading less elsewhere, if you choose',
 ];
 
 // The square, the two of them at its edge, and a look past the explorer to the market.
@@ -78,7 +79,8 @@ export default {
         // ---- The explorer -----------------------------------------------------------------------------
         const outDur = pathLength(TO_EDGE) / PACE + 0.9;
         const out0 = at(0, 0.06), out1 = out0 + outDur;
-        const back0 = at(4, 0.06), back1 = Math.min(back0 + outDur, end);
+        // the last beat is short, so the walk back starts early enough to arrive at a walk
+        const back0 = Math.min(at(4, 0.06), end - outDur), back1 = Math.min(back0 + outDur, end);
         // the teammate's walk over, the handover, and their walk back
         const meetDur = pathLength(TO_MEET) / PACE + 0.45;
         const meet0 = Math.max(at(1, 0.55), at(2, 0) - meetDur * 0.6), meet1 = meet0 + meetDur;
@@ -154,7 +156,7 @@ export default {
         if (t < at(0, 0.15)) world.hud.quest('Find the three areas', '3/3');
         else if (t < at(4, 0.6)) world.hud.quest('Agree your focus', '0/1');
         else world.hud.quest('Focus agreed', '1/1');
-        const lines = LINES.slice(0, t >= at(3, 0.15) ? 3 : t >= take ? 2 : 1);
-        world.hud.card(lines, span([2, 0.05], [4, 0.7]), { label: 'Agreed focus' });
+        const lines = LINES.slice(0, t >= at(4, 0.05) ? 3 : t >= at(3, 0.15) ? 2 : 1);
+        world.hud.card(lines, span([2, 0.05], [4, 1]), { label: 'Agreed focus' });
     },
 };

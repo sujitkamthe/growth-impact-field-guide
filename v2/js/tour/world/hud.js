@@ -20,7 +20,7 @@ function ensureCss() {
 const AREA = {
     cd: { name: 'Client & Delivery', color: 'var(--cd, #087a6b)' },
     pt: { name: 'People & Team', color: 'var(--pt, #315faf)' },
-    oc: { name: 'Org & Community', color: 'var(--oc, #95620b)' },
+    oc: { name: 'Building Sahaj', color: 'var(--oc, #95620b)' },
 };
 
 const NOTE_ICON = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 1.8h5.6L12.6 5v9.2H4z"/><path d="M9.4 1.8V5h3.2M6 8h4.6M6 10.6h4.6"/></svg>';
