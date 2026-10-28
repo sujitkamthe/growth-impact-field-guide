@@ -4,9 +4,9 @@
 // The doc has one job: make a person's expectations visible, so the self-assessment
 // conversation can focus on growth instead of a debate about what was expected. It is not a
 // record for checking up on people, so it has no sign-offs, dates or approvals.
-// The expectations themselves live in the portal, so the doc notes the person's scope, adds
-// only what is specific to them or their team, and holds a short self-assessment. People keep feedback notes wherever they like; the doc
-// doesn't collect them. It stays minimal and plain, written like a doc someone would make
+// The expectations themselves live in the portal, so the doc notes the person's scope and adds
+// only what is specific to them or their team. It holds no self-assessment or ratings, and
+// people keep feedback notes wherever they like; the doc doesn't collect them. It stays minimal and plain, written like a doc someone would make
 // themselves rather than a form.
 //
 // Rerun this after changing the template and replace it in Drive (upload with
@@ -41,9 +41,8 @@ const LABEL_FILL = 'F7F7F8';
 const FONT = 'IBM Plex Sans';
 const WIDTH = 11906 - 2 * 1100; // A4 less the side margins
 
-// Building blocks. One table does the work: each area is a row, with what matters this cycle on
-// the left and, at the end, what happened beside it, so a self-assessment sits next to what it
-// looks back on. Tables survive conversion to Google Docs and make each place to write obvious;
+// Building blocks. One table does the work: each area is a row, with what matters this cycle
+// beside it. Tables survive conversion to Google Docs and make each place to write obvious;
 // hairlines and a soft label fill keep it light, and area colour appears only as a thin bar.
 
 const t = (text, opts = {}) => new TextRun({ text, ...opts });
@@ -88,27 +87,23 @@ function build() {
         ['Name', 'Cycle', 'Scope'].map(label => cell([small(label), gap(20)], { width: third })),
     480)]);
 
-    // Columns: the area, My expectations (at the start) and Self-assessment (at the end).
+    // Columns: the area and My expectations.
     const A = 2200;
-    const C = (WIDTH - A) / 2;
+    const C = WIDTH - A;
     const head = (title, hint, width) => cell([
         p(t(title, { bold: true, size: 19, color: INK }), { spacing: { after: 10 } }),
         ...(hint ? [p(muted(hint, { size: 16 }), { spacing: { after: 0 } })] : []),
     ], { width, fill: LABEL_FILL });
-    // The rating stays small at the foot of the self-assessment, so the page reads as reflection first.
-    const myView = p([muted('My rating:  ', { size: 16 }), ...['Below', 'Meets', 'Exceeds'].map(r => muted(`☐ ${r}    `, { size: 16 }))], { spacing: { before: 60, after: 0 } });
-    const page = table([A, C, C], [
-        row([head('', '', A), head('My expectations', 'Start of the cycle: what you will focus on, beyond what your scope expects', C), head('Self-assessment', 'End of the cycle: what changed because of you, with examples', C)]),
-        ...AREAS.map(a => row([nameCell(a.name, a.color, a.hint, A), cell(gap(900), { width: C }), cell([gap(900), myView], { width: C })], 1900)),
+    const page = table([A, C], [
+        row([head('', '', A), head('My expectations', 'What you will focus on this cycle, beyond what your scope expects', C)]),
+        ...AREAS.map(a => row([nameCell(a.name, a.color, a.hint, A), cell(gap(900), { width: C })], 1900)),
         row([
             nameCell('Agreements', INK, '', A),
             cell([p(muted('Any agreed focus (the strength you contribute most through, and the greater contribution you will make) or agreed deferral, each with a date to look at it again', { size: 16 })), gap(500)], { width: C }),
-            cell([p(muted('How each agreement worked, for you and for the teammate involved', { size: 16 })), gap(500)], { width: C }),
         ], 1300),
         row([
             nameCell('Growth', INK, '', A),
             cell([p(muted('Next-scope responsibilities you want to take on this cycle, if any', { size: 16 })), gap(700)], { width: C }),
-            cell([p(muted('How far you got with them, and what you want to take on next cycle', { size: 16 })), gap(700)], { width: C }),
         ], 1700),
     ]);
 
@@ -120,9 +115,9 @@ function build() {
             properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1000, bottom: 1000, left: 1100, right: 1100 } } },
             children: [
                 h1('Expectations'),
-                p(muted('Fill in My expectations at the start of the cycle and your self-assessment at the end. Keep your feedback notes wherever you usually keep notes; they don\'t go in this doc.'), { spacing: { after: 160 } }),
+                p(muted('Fill this in at the start of the cycle, and change it if what\'s expected of you changes during the cycle. Keep your feedback notes wherever you usually keep notes; they don\'t go in this doc.'), { spacing: { after: 160 } }),
                 details,
-                p([muted('Your scope\'s expectations are in the guide: '), ...scopeLinks, muted('. Write here only what goes beyond them for your work this cycle, such as what your client or team needs from you, and any agreement that changes them. Before you write your self-assessment, read '), link('how to write one', `${PORTAL}#self-assessment`), muted('.')], { spacing: { before: 140, after: 200 } }),
+                p([muted('Your scope\'s expectations are in the guide: '), ...scopeLinks, muted('. Write here only what goes beyond them for your work this cycle, such as what your client or team needs from you, and any agreement that changes them.')], { spacing: { before: 140, after: 200 } }),
                 page,
             ],
         }],
